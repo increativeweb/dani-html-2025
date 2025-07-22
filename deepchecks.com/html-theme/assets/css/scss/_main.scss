@@ -11643,16 +11643,22 @@ section.aws-landing-section {
     }
 }
 .video-banner-section {
-    padding-top: 70px;
     .video-content-block {
         .icw-video-block {
             max-width: 100%;
             @include border-radius(50px);
             position: relative;
             margin-bottom: 60px;
+            @media (max-width: 767px) {
+                margin-bottom: 30px;
+                @include border-radius(30px);
+            }
             img {
                 width: 100%;
-                @include border-radius(50px);
+                @include border-radius(50px); 
+                @media (max-width: 767px) {
+                    @include border-radius(30px);
+                }
             }
             .play-icon {
                 width: 100px;
@@ -11663,18 +11669,29 @@ section.aws-landing-section {
         }
         .video-content {
             text-align: center;
+            @media (max-width: 767px) {
+                text-align: left;
+            }
             .video-title {
                 font-weight: 800;
                 font-size: 36px;
+                @media (max-width: 767px) {
+                    font-size: 24px;
+                }
             }
             .video-meta {
                 margin: 24px 0;
                 @include flexbox;
                 @include align-items(center);
                 @include justify-content(center);
+                @include flex-wrap(wrap);
                 font-size: 14px;
                 font-weight: 500;
                 color: #545770;
+                @media (max-width: 767px) {
+                    @include justify-content(flex-start);
+                    margin: 12px 0;
+                }
                 span:not(:last-child) {
                     position: relative;
                     &::after {
@@ -11686,11 +11703,15 @@ section.aws-landing-section {
                         @include border-radius(50%);
                         margin: 0 16px;
                         margin-bottom: 1px;
+                        @media (max-width: 767px) {
+                            margin: 0 8px;
+                        }
                     }
                 }
             }
             .video-info {
-                
+                max-width: 1000px;
+                margin: 0 auto;
             }
         }
     }
