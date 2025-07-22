@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Video | Deepchecks</title>
+        <meta name="theme-color" content="#1e0052">
+        <meta charset="utf-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name='robots' content='noindex, nofollow' />
+        <meta name="description" content="Continuous validation for LLMs &amp; AI. Validate and monitor your data and models during training, production and new version releases." class="yoast-seo-meta-tag" />
+    
+        <link rel='stylesheet' id='style-main-css' href='assets/css/main.css' type='text/css' media='screen' />        
+        <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script> 
+
+        <link rel="icon" href="assets/favicons/favicon.png" sizes="32x32">
+        <link rel="icon" href="assets/favicons/apple-touch-icon.png" sizes="192x192">
+        <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+        <link rel="icon" href="upload/cropped-favicon-150x150.png" sizes="32x32" />
+        <link rel="icon" href="upload/cropped-favicon-300x300.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="upload/cropped-favicon-300x300.png" />
+        <meta name="msapplication-TileImage" content="upload/cropped-favicon-300x300.png" />   
+    </head>
+
+    <body>
+        <header class="main-header">
+            <div class="header-note">
+                <div class="container">
+                    <div class="note-text">
+                        <div class="d-inline-flex justify-content-center align-items-center text-left">What’s new <span class="line">|</span> <a href="https://deepchecks.com/deepchecks-new-major-release-evaluation-for-llm-based-apps/"><span class="text text-left">Deepchecks’ New Major Release: Evaluation for LLM-Based Apps! <span class="btn-icon"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25 9H14.75" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /><path d="M9.5 3.75L14.75 9L9.5 14.25" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span></span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav-wrap">
+                <nav class="navbar navbar-expand-xl navbar-light">
+                    <div class="container">
+                        <div class="header-first-block">
+                            <button class="sidebar-icon toggle-sidebar d-inline-block d-xl-none"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+                            <a class="header-logo" href="/" title="Deepchecks | Continuous Validation for Machine Learning" rel="home"><img src="https://deepchecks.com/wp-content/themes/deepchecks/assets/images/logo.svg" alt="Deepchecks" /></a>
+                            <div class="menu-list">
+                                <ul id="menu-header-menu-new-2024" class="mainMenu navbar-nav me-auto">
+                                    <li class="menu-item-has-children"><a href="/ml-monitoring/">Products</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/llm-evaluation/">LLM Evaluation</a></li>
+                                            <li><a href="/ml-monitoring/">ML Monitoring</a></li>
+                                            <li><a href="/open-source/">Open Source Testing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="/solutions/testing/">Solutions</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/solutions/testing/">Testing</a></li>
+                                            <li><a href="/solutions/ci-cd/">CI/CD</a></li>
+                                            <li><a href="/solutions/monitoring/">Monitoring</a></li>
+                                            <li><a href="/solutions/analysis/">Root Cause Analysis</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/pricing/">Pricing</a></li>
+                                    <li class="menu-item-has-children"><a href="/about/">Company</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/about/">About Us</a></li>
+                                            <li><a href="/careers/">Careers</a></li>
+                                            <li><a href="/contact-us/">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="/blog/">Resources</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/docs/">Docs</a></li>
+                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a target="_blank" rel="noopener" href="https://checks-demo.deepchecks.com/?check=Train+Test+Label+Drift+%28distribution%29">Checks Demo 🔗</a></li>
+                                            <li><a href="/llm-tools/">LLM Tools</a></li>
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                            <li><a href="/events/">Events</a></li>
+                                            <li><a href="/questions/">FAQs</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav navbar-nav-right">
+                                    <li class="nav-item"><a href="https://github.com/deepchecks/deepchecks" class="btn btn-dark-outline github-btn _ga-github-event _ga-hero-github-event" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open source ML Testing"><img class="btn-icon" src="https://deepchecks.comhttps://www.deepchecks.com//wp-content/uploads/2021/12/github-icon.svg" alt="[gitcount]" /><span class="review-text">3.2K</span></a></li>
+                                    <li class="nav-item"><a href="/llm-evaluation/" class="btn btn-primary  _ga-top-get-started-event " target="_parent">Try LLM Evaluation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="bg-overly"></div>
+        <main class="main-content-wrapper">
+            <section class="html-section video-content-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 order-2 order-md-1">
+                            <div class="main-title text-left">
+                                <h1 class="title">Creating Categorical Prompt Properties in Deepchecks</h1>
+                                <div class="video-date-time">
+                                    <span class="date"><svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="#9D60FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 2V6" stroke="#9D60FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 2V6" stroke="#9D60FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 10H21" stroke="#9D60FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>July 11, 2025</span> 
+                                    <span class="time text-purple"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>2:44 mins</span>                      
+                                </div>
+                            </div>
+                            <div class="card-content entry-content"> 
+                                <p>This hands-on demo walks you through creating <strong>categorical prompt properties</strong> in Deepchecks-enabling structured evaluation of your interactions. You'll see how to define categories, set clear guidelines, and use few-shot examples to steer the evaluation process. The video also covers how to use the UI to review, test, and refine your setup, ensuring that your evaluation logic aligns with your specific application goals.</p>
+                                <p>This functionality is especially useful for evaluation tasks where interactions need to be bucketed into clearly defined categories-such as sentiment analysis, quality grading, or intent detection. By combining structured labeling with guideline-driven consistency, Deepchecks makes it easy to analyze LLM interactions at scale and spot recurring issues or trends.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 text-center text-md-right order-1 order-md-2">
+                            <div class="play-video-block icw-video-block">
+                                <div class="play-iframe" data-ext="youtube" data-videosrc="https://www.youtube.com/embed/3CBijCMdfT0?si=pPCvtjmTsUTP0VHN">
+                                    <img src="upload/img-creating-categorical-prompt-properties.jpg" class="thumb wp-post-image" alt="Creating Categorical Prompt Properties in Deepchecks">                            
+                                    <span class="play-icon"><svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="47.5" cy="48.5" r="25.5" fill="#9d60fb"></circle><path d="M48 0.5C21.8 0.5 0.5 21.8 0.5 48C0.5 74.2 21.8 95.5 48 95.5C74.2 95.5 95.5 74.2 95.5 48C95.5 21.8 74.2 0.5 48 0.5ZM63.3 50.4L40.9 65.3C39 66.6 36.4 65.2 36.4 62.9V33.1C36.4 30.8 39 29.4 40.9 30.7L63.3 45.6C65 46.7 65 49.3 63.3 50.4Z" fill="white"></path></svg></span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="icw-sticky">
+            <div class="container">
+                <div class="speaker-sticky-info">
+                    <span class="close-sticky">×</span>
+                    <h2>
+                        <div class="strip-img"><img src="/wp-content/uploads/2025/06/post-deepchecks-nvidia.png" alt=""
+                                style="max-height:67px" />
+                            <div class="title"><small><span style="font-weight:800">New Partnership Announcement:</span>
+                                    Deepchecks <span class="text-purple">LLM Evaluation</span> is now available within
+                                    NVIDIA Enterprise AI Factory Validated Design</small></div>
+                        </div>
+                        <style>
+                            .icw-sticky .strip-img .title {
+                                margin-left: 50px;
+                                line-height: 1.5;
+                            }
+
+                            .icw-sticky .strip-img .title strong {
+                                text-transform: none;
+                                color: #fff;
+                                font-size: 14px;
+                            }
+
+                            @media(min-width:1200px) {
+                                .icw-sticky .speaker-sticky-info {
+                                    grid-template-columns: 1fr 0 auto;
+                                }
+                            }
+
+                            @media(max-width:1200px) {
+                                .icw-sticky .strip-img {
+                                    -ms-flex-wrap: wrap;
+                                    flex-wrap: wrap;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                    gap: 15px;
+                                }
+
+                                .icw-sticky .strip-img .title {
+                                    margin-left: 0px;
+                                }
+                            }
+
+                            #countdown {
+                                visibility: hidden !important;
+                                opacity: 0 !important;
+                            }
+                        </style>
+                        <style>
+                            body.postid-12023 .icw-sticky {
+                                display: none !important;
+                            }
+                        </style>
+                        <!--
+    <div class="strip-img"><img src="/wp-content/uploads/2025/06/event-24june2025.png" alt="Webinar Event" style="max-height:104px"/><div class="title">
+    <small>Deepchecks ORION: New SOTA for Evaluating <br class="d-none d-xl-block">Complex LLM Chains 🚀</small><strong>June 24<sup>th</sup>, 2025 &nbsp;&nbsp; 8:00 AM PST</strong></div></div>
+    <style>.icw-sticky .strip-img .title {margin-left: 50px;}@media(max-width:1200px){.icw-sticky .strip-img {-ms-flex-wrap:wrap;flex-wrap:wrap; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center}.icw-sticky .strip-img .title {margin-left: 0px;}}</style>
+    <style>body.postid-9884 .icw-sticky {display: none !important;}</style>
+    -->
+                    </h2>
+                    <div>
+                        <div id="deadline-message" class="hidden">-</div>
+                        <div id="countdown" class="timer-sticky">
+                            <div class="countdown-number">
+                                <div class="days countdown-time"></div>
+                                <span class="countdown-text">Days</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="hours countdown-time"></div>
+                                <span class="countdown-text">Hours</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="minutes countdown-time"></div>
+                                <span class="countdown-text">Minutes</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="seconds countdown-time"></div>
+                                <span class="countdown-text">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div><a href="/deepchecks-integrates-with-nvidia-enterprise-ai/" class="btn btn-primary  text-nowrap"
+                            target="_parent">Check It Now</a></div>
+                </div>
+            </div>
+        </div>
+    <script>
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+                total: t,
+                days: days,
+                hours: hours,
+                minutes: minutes,
+                seconds: seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var daysSpan = clock.querySelector(".days");
+            var hoursSpan = clock.querySelector(".hours");
+            var minutesSpan = clock.querySelector(".minutes");
+            var secondsSpan = clock.querySelector(".seconds");
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                if (t.total <= 0) {
+                    document.querySelector(".icw-sticky").className = "d-none";
+                    document.querySelector(".speaker-sticky-info").className = "speaker-sticky-info date-hidden";
+                    document.getElementById("countdown").className = "timer-sticky hidden";
+                    document.getElementById("deadline-message").className = "visible";
+                    clearInterval(timeinterval);
+                    return true;
+                }
+
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+                minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = "July 30, 2025 16:00:05 GMT"; // var deadline = "January 01 2018 00:00:00 GMT+0300"; 
+        // var deadline = new Date(Date.parse(new Date()) + 5 * 1000); // for endless timer
+        initializeClock("countdown", deadline);
+
+        jQuery(document).ready(function ($) {
+            $(".close-sticky").click(function (e) {
+                $(".icw-sticky").slideUp();
+                e.stopPropagation();
+            });
+        });
+    </script>
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer">
+            <img src="assets/images/logo-white.svg" alt="Deepchecks" class="footer-bg-logo" />
+            <div class="container">
+                <div class="footer-link-section">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-2 col-lg-1">
+                            <a href="/" title="Deepchecks | Continuous Validation for Machine Learning" rel="home" class="footer-logo wow fadeInUp"><img src="assets/images/logo-white.svg" alt="Deepchecks"></a>
+                        </div>
+                        <div class="col-md-10 col-lg-8">
+                            <div class="row gutters-5">
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-products-footer-container">
+                                        <ul id="menu-products-footer" class="menu">
+                                            <li class="footer-title"><a href="/deepchecks-hub/">Products</a></li>
+                                            <li><a href="/solutions/llm-evaluation/">LLM Evaluation</a></li>
+                                            <li><a href="/deepchecks-hub/">Deepchecks Hub</a></li>
+                                            <li><a href="/open-source/">Open Source</a></li>
+                                            <li><a href="/pricing/">Pricing</a></li>
+                                            <li><a href="/book-demo/">Book a Demo</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-solutions-footer-container">
+                                        <ul id="menu-solutions-footer" class="menu">
+                                            <li class="footer-title"><a href="/solutions/testing/">Solutions</a></li>
+                                            <li><a href="/solutions/testing/">Testing</a></li>
+                                            <li><a href="/solutions/ci-cd/">CI/CD</a></li>
+                                            <li><a href="/solutions/monitoring/">Monitoring</a></li>
+                                            <li><a href="/solutions/analysis/">Root Cause Analysis</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">                                    
+                                    <div class="menu-company-footer-container">
+                                        <ul id="menu-company-footer" class="menu">
+                                            <li class="footer-title"><a href="/about/">Company</a></li>
+                                            <li><a href="/about/">About Us</a></li>
+                                            <li><a href="/careers/">Careers</a></li>
+                                            <li><a href="/contact-us/">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-resources-footer-container">
+                                        <ul id="menu-resources-footer" class="menu">
+                                            <li class="footer-title"><a href="/blog/">Resources</a></li>
+                                            <li><a href="/docs/">Docs</a></li>
+                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a target="_blank" rel="noopener" href="https://checks-demo.deepchecks.com/?check=Train+Test+Label+Drift+%28distribution%29">Checks Demo 🔗</a></li>
+                                            <li><a href="/llm-tools/">LLM Tools</a></li>
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                            <li><a href="/events/">Events</a></li>
+                                            <li><a href="/questions/">FAQs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-3">
+                            <ul class="social-icon">
+                                <li><a href="https://github.com/deepchecks/deepchecks" target="_blank" title="GitHub" data-bs-toggle="tooltip"><img src="assets/images/github.svg" alt="github" /></a></li>
+                                <li><a href="https://www.linkedin.com/company/deepchecks/" target="_blank" title="LinkedIn" data-bs-toggle="tooltip"><img src="assets/images/linkedin.svg" alt="linkedin" /></a></li>
+                                <li><a href="https://twitter.com/deepchecks" target="_blank" title="Twitter" data-bs-toggle="tooltip"><img src="assets/images/twitter.svg" alt="twitter" /></a></li>
+                                <li><a href="https://www.facebook.com/deepchecks/" target="_blank" title="Facebook" data-bs-toggle="tooltip"><img src="assets/images/facbook.svg" alt="Facebook" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul id="menu-footer-menu" class="footer-links">
+                                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                                <li><a href="/cookies-policy/">Cookies Policy</a></li>
+                                <li><a href="/terms-and-conditions/">Terms &#038; Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                            <p>© 2024 Deepchecks AI. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a href="#top" class="back-to-top"><em class="icon-arrow-up"></em></a>
+        <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="assets/js/all-jquery.js"></script>       
+        <script type="text/javascript" src="assets/js/main.js"></script> 
+        <div class="modal icw-modal modal-hbspt fade" id="popup-llm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-size-hbspt modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"><small>FREE TRIAL FOR DEEPCHECKS' LLM EVALUATION SOLUTION</small><strong>Fill Out Your Details Here</strong></h2>
+                        <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-with-slider-labels" id="llm_hubspotFormContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>@media (min-width: 768px) {body #popup-llm .modal-title small {font-size: 14px;}}@media (max-width: 1199px) {body #popup-llm .modal-title small {font-size: 12px;}}@media (max-width: 767px) {body #popup-llm .modal-title small {font-size: 8px;}}</style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var formContainer = document.getElementById('llm_hubspotFormContainer');
+                function initializeHubSpotForm() {
+                    if (typeof hbspt !== 'undefined') {
+                        hbspt.forms.create({target: '#llm_hubspotFormContainer',css: '', region: "na1", portalId: "8338627", formId: "f7da1fc3-958c-444a-b11a-2ed8f1b716a3", css: " ", redirectUrl: "/thank-you/#llm-evaluation", locale: "en", translations: {en: { submitText: "Submit" } }, onFormReady: function ($form, ctx) { hubspot_labels(); }});
+                    }
+                }
+                initializeHubSpotForm();
+                jQuery('#popup-llm').on('hidden.bs.modal', function () {
+                    if (typeof hbspt !== 'undefined' && typeof hbspt.forms !== 'undefined' && typeof hbspt.forms[0] !== 'undefined') { hbspt.forms[0].destroy(); } initializeHubSpotForm();
+                });
+            });
+        </script>
+        <!-- aws sagemaker from-->
+        <div class="modal icw-modal modal-hbspt fade" id="popup-aws-sagemaker" tabindex="-1" aria-labelledby="aswModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-size-hbspt modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"><small style="max-width: 400px;margin: 0 auto 5px">Deepchecks is Now Available Natively Within AWS Sagemaker</small><strong>Want to learn more?</strong></h2>
+                        <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-with-slider-labels" id="aws_sagemaker_hubspotFormContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var awsformContainer = document.getElementById('aws_sagemaker_hubspotFormContainer');
+                function initializeHubSpotForm2() {
+                    if (typeof hbspt !== 'undefined') {
+                        hbspt.forms.create({target: '#aws_sagemaker_hubspotFormContainer',css: '', region: "na1", portalId: "8338627", formId: "f5373b39-1618-4678-b5de-dec5adcf4ecb", css: " ", redirectUrl: "/thank-you/#aws-sagemaker", locale: "en", translations: {en: { submitText: "Submit" } }, onFormReady: function ($form, ctx) { hubspot_labels(); }});
+                    }
+                }
+                initializeHubSpotForm2();
+                jQuery('#popup-aws-sagemaker').on('hidden.bs.modal', function () {
+                    if (typeof hbspt !== 'undefined' && typeof hbspt.forms !== 'undefined' && typeof hbspt.forms[0] !== 'undefined') {
+                        hbspt.forms[0].destroy(); 
+                    } 
+                    awsformContainer.innerHTML = '';initializeHubSpotForm2();
+                });
+            });
+        </script>
+    </body>
+</html>

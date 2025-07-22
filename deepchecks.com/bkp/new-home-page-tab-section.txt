@@ -1,0 +1,248 @@
+<section class="html-section img-content-section img-code-section ">
+                <div class="container">
+                    <div class="main-title mb-3 mb-md-5">
+                        <div class="top-title" style="color: #7D7E8E; font-weight: 700;">SOTA small language models & Agentic workflows</div>
+                        <h2>Swarm of Evaluation Agents</h2>
+                        <div class="sort-info">The algorithmic backbone of Deepchecks is a set of small language models (SLMs) & multi-step NLP pipelines, that work <br class="d-none d-xl-block">together as a swarm using Mixture of Experts (MoE) techniques to simulate an intelligent, human, annotator. </div>
+                    </div>
+                    <div class="tab-section">
+                        <div class="icw-tab-block">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-superior-accuracy-tab" data-toggle="tab" data-target="#nav-superior-accuracy" type="button" role="tab" aria-controls="nav-superior-accuracy" aria-selected="true">Superior Accuracy</button>
+                                <button class="nav-link" id="nav-customizable-llm-evaluators-tab" data-toggle="tab" data-target="#nav-customizable-llm-evaluators" type="button" role="tab" aria-controls="nav-customizable-llm-evaluators" aria-selected="false">Customizable LLM Evaluators</button>
+                                <button class="nav-link" id="nav-evaluate-agents-tab" data-toggle="tab" data-target="#nav-evaluate-agents" type="button" role="tab" aria-controls="nav-evaluate-agents" aria-selected="false">Evaluate Agents with Agents</button>
+                            </div>
+                            <div class="content-block">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="nav-superior-accuracy" role="tabpanel" aria-labelledby="nav-superior-accuracy-tab">
+                                                <div class="tab-details">
+                                                    <div class="row progress-tab-slider-section">                                 
+                                                        <div class="col-lg-5 progress-bar-block">
+                                                            <div class="item item-progress0 active-progress"><span data-slick-index="0" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Superior Accuracy</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item item-progress1"><span data-slick-index="1" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Customizable LLM Evaluators</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item item-progress2"><span data-slick-index="2" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Evaluate Agents with Agents</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>  
+                                                        <div class="col-lg-7 text-center">
+                                                            <div class="progress-tab-slider single-item">
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Superior Accuracy"></div>
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Customizable LLM Evaluators"></div>
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Evaluate Agents with Agents"></div>
+                                                            </div>
+                                                        </div>    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-customizable-llm-evaluators" role="tabpanel" aria-labelledby="nav-customizable-llm-evaluators-tab">
+                                                <div class="tab-details">
+                                                    <div class="row progress-tab-slider-section">                                 
+                                                        <div class="col-lg-5 progress-bar-block">
+                                                            <div class="item item-progress0 active-progress"><span data-slick-index="0" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Superior Accuracy</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item item-progress1"><span data-slick-index="1" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Customizable LLM Evaluators</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item item-progress2"><span data-slick-index="2" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Evaluate Agents with Agents</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>  
+                                                        <div class="col-lg-7 text-center">
+                                                            <div class="progress-tab-slider single-item">
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Superior Accuracy"></div>
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Customizable LLM Evaluators"></div>
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Evaluate Agents with Agents"></div>
+                                                            </div>
+                                                        </div>    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-evaluate-agents" role="tabpanel" aria-labelledby="nav-evaluate-agents-tab">
+                                                <div class="tab-details">
+                                                    <div class="row progress-tab-slider-section">                                 
+                                                        <div class="col-lg-5 progress-bar-block">
+                                                            <div class="item item-progress0 active-progress"><span data-slick-index="0" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Superior Accuracy</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item item-progress1"><span data-slick-index="1" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Customizable LLM Evaluators</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item item-progress2"><span data-slick-index="2" class="progressBarj"></span>
+                                                                <div class="card-progress">
+                                                                    <h3>Evaluate Agents with Agents</h3>
+                                                                    <div class="card-info">
+                                                                        <div class="sort-info">Unparalleled accuracy for groundedness, retrieval relevance, and more (backed up by studies that can be sent upon request).</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>  
+                                                        <div class="col-lg-7 text-center">
+                                                            <div class="progress-tab-slider single-item">
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Superior Accuracy"></div>
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Customizable LLM Evaluators"></div>
+                                                                <div class="slider-image slick-slide"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/img-tab-superior-accuracy.svg" alt="Evaluate Agents with Agents"></div>
+                                                            </div>
+                                                        </div>    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        function initProgressSlider($section) {
+                            const $slider = $section.find('.progress-tab-slider');
+                            const $items = $section.find('.item');
+                            let percentTime = 0;
+                            let tick;
+                            let progressIndex = 0;
+                            const intervalSpeed = 20;
+                            const progressSpeedFactor = 1 / 5.1;
+
+                            // Prevent double init
+                            if (!$slider.hasClass('slick-initialized')) {
+                                $slider.slick({
+                                    infinite: true,
+                                    dots: false,
+                                    autoplay: false,
+                                    speed: 1000,
+                                    arrows: false,
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+                                    accessibility: false
+                                });
+                            }
+
+                            // Set up progress bars
+                            $section.find('.progressBarj').each(function (index) {
+                                if (!$(this).find('.inProgressj').length) {
+                                    $(this).html(`<div class="inProgressj inProgressj${index}"></div>`);
+                                }
+                            });
+
+                            function resetProgress() {
+                                clearInterval(tick);
+                                $section.find('.inProgressj').css({ height: '0%' });
+                                $items.removeClass('active-progress');
+                                $items.find('.card-info').slideUp();
+                            }
+
+                            function startProgress() {
+                                resetProgress();
+                                percentTime = 0;
+                                tick = setInterval(runProgress, intervalSpeed);
+                            }
+
+                            function runProgress() {
+                                const $currentSlide = $slider.find(`.slick-slide[data-slick-index="${progressIndex}"]`);
+                                if ($currentSlide.attr('aria-hidden') === "true") {
+                                    progressIndex = $slider.find('.slick-slide[aria-hidden="false"]').data('slickIndex');
+                                    startProgress();
+                                    return;
+                                }
+
+                                percentTime += progressSpeedFactor;
+                                $section.find(`.inProgressj${progressIndex}`).css({ height: `${percentTime}%` });
+                                $section.find(`.item-progress${progressIndex}`).addClass('active-progress')
+                                    .find('.card-info').slideDown();
+
+                                if (percentTime >= 100) {
+                                    $slider.slick('slickNext');
+                                    const totalSlides = $slider.find('.slick-slide').not('.slick-cloned').length;
+                                    progressIndex = (progressIndex + 1) % totalSlides;
+                                    startProgress();
+                                }
+                            }
+
+                            // Click to navigate manually
+                            $items.off('click').on('click', function () {
+                                if (!$(this).hasClass('active-progress')) {
+                                    clearInterval(tick);
+                                    progressIndex = $(this).find('[data-slick-index]').data('slickIndex');
+                                    $slider.slick('slickGoTo', progressIndex);
+                                    startProgress();
+                                }
+                            });
+
+                            // Start progress initially
+                            startProgress();
+
+                            // Store interval ID so it can be cleared on tab change
+                            $section.data('progressInterval', tick);
+                        }
+
+                        function destroyProgressTimers() {
+                            $('.progress-tab-slider-section').each(function () {
+                                const tick = $(this).data('progressInterval');
+                                if (tick) {
+                                    clearInterval(tick);
+                                }
+                            });
+                        }
+
+                        $(document).ready(function () {
+                            // Initialize first tab
+                            initProgressSlider($('.tab-pane.active .progress-tab-slider-section'));
+
+                            // On Bootstrap tab switch
+                            $('button[data-toggle="tab"]').on('shown.bs.tab', function () {
+                                destroyProgressTimers(); // stop any existing timers
+                                const targetPane = $($(this).data('target'));
+                                setTimeout(() => {
+                                    initProgressSlider(targetPane.find('.progress-tab-slider-section'));
+                                }, 10); // slight delay to ensure DOM rendered
+                            });
+                        });
+                    </script>
+                </div>
+            </section>
