@@ -11614,6 +11614,7 @@ section.aws-landing-section {
                 .post-thumb-img {
                     position: relative;
                     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                    @include border-radius(30px 30px 0 0);
                     .play-icon {
                         position: absolute;
                         top: 50%;
@@ -11641,8 +11642,33 @@ section.aws-landing-section {
         }
     }
 }
+.video-banner-section {
+    padding-top: 70px;
+    .main-video-post {
+        .post-thumb-img {
+            position: relative;
+            @include border-radius(50px);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            display: block;
+            img {
+                width: 100%;
+                @include border-radius(50px);
+            }
+            .play-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 44px;
+                aspect-ratio: 1/1;
+                @include transform(translate(-50%, -50%));
+                @include transition(0.3s, ease-in-out);
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            }
+        }
+    }
+}
 .video-content-section {
-    padding: 100px 0;
+    padding: 70px 0;
     @media (max-width: 992px) {
         padding: 50px 0;
     }
