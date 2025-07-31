@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Case Studies | Deepchecks</title>
+        <meta name="theme-color" content="#1e0052">
+        <meta charset="utf-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name='robots' content='noindex, nofollow' />
+        <meta name="description" content="Continuous validation for LLMs &amp; AI. Validate and monitor your data and models during training, production and new version releases." class="yoast-seo-meta-tag" />
+    
+        <link rel='stylesheet' id='style-main-css' href='assets/css/main.css' type='text/css' media='screen' />        
+        <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script> 
+
+        <link rel="icon" href="assets/favicons/favicon.png" sizes="32x32">
+        <link rel="icon" href="assets/favicons/apple-touch-icon.png" sizes="192x192">
+        <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+        <link rel="icon" href="upload/cropped-favicon-150x150.png" sizes="32x32" />
+        <link rel="icon" href="upload/cropped-favicon-300x300.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="upload/cropped-favicon-300x300.png" />
+        <meta name="msapplication-TileImage" content="upload/cropped-favicon-300x300.png" />  
+        <style>
+            .blog-header-section {
+                background: #17003E;
+            }                
+            @media (min-width: 991px) {
+                .blog-header-section h1 {
+                    max-width: 100%;
+                }
+            }
+        </style> 
+    </head>
+
+    <body class="single single-post body-wrapper-bg">
+        <header class="main-header">
+            <div class="header-note">
+                <div class="container">
+                    <div class="note-text">
+                        <div class="d-inline-flex justify-content-center align-items-center text-left">What’s new <span class="line">|</span> <a href="https://deepchecks.com/deepchecks-new-major-release-evaluation-for-llm-based-apps/"><span class="text text-left">Deepchecks’ New Major Release: Evaluation for LLM-Based Apps! <span class="btn-icon"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25 9H14.75" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /><path d="M9.5 3.75L14.75 9L9.5 14.25" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span></span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav-wrap">
+                <nav class="navbar navbar-expand-xl navbar-light">
+                    <div class="container">
+                        <div class="header-first-block">
+                            <button class="sidebar-icon toggle-sidebar d-inline-block d-xl-none"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+                            <a class="header-logo" href="/" title="Deepchecks | Continuous Validation for Machine Learning" rel="home"><img src="https://deepchecks.com/wp-content/themes/deepchecks/assets/images/logo.svg" alt="Deepchecks" /></a>
+                            <div class="menu-list">
+                                <ul id="menu-header-menu-new-2024" class="mainMenu navbar-nav me-auto">
+                                    <li class="menu-item-has-children"><a href="/ml-monitoring/">Products</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/llm-evaluation/">LLM Evaluation</a></li>
+                                            <li><a href="/ml-monitoring/">ML Monitoring</a></li>
+                                            <li><a href="/open-source/">Open Source Testing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="/solutions/testing/">Solutions</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/solutions/testing/">Testing</a></li>
+                                            <li><a href="/solutions/ci-cd/">CI/CD</a></li>
+                                            <li><a href="/solutions/monitoring/">Monitoring</a></li>
+                                            <li><a href="/solutions/analysis/">Root Cause Analysis</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/pricing/">Pricing</a></li>
+                                    <li class="menu-item-has-children"><a href="/about/">Company</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/about/">About Us</a></li>
+                                            <li><a href="/careers/">Careers</a></li>
+                                            <li><a href="/contact-us/">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="/blog/">Resources</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/docs/">Docs</a></li>
+                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a target="_blank" rel="noopener" href="https://checks-demo.deepchecks.com/?check=Train+Test+Label+Drift+%28distribution%29">Checks Demo 🔗</a></li>
+                                            <li><a href="/llm-tools/">LLM Tools</a></li>
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                            <li><a href="/events/">Events</a></li>
+                                            <li><a href="/questions/">FAQs</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav navbar-nav-right">
+                                    <li class="nav-item"><a href="https://github.com/deepchecks/deepchecks" class="btn btn-dark-outline github-btn _ga-github-event _ga-hero-github-event" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open source ML Testing"><img class="btn-icon" src="https://www.deepchecks.com//wp-content/uploads/2021/12/github-icon.svg" alt="[gitcount]" /><span class="review-text">3.2K</span></a></li>
+                                    <li class="nav-item"><a href="/llm-evaluation/" class="btn btn-primary  _ga-top-get-started-event " target="_parent">Try LLM Evaluation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="bg-overly"></div>
+        <main class="main-content-wrapper">
+            <section class="page-header-section blog-header-section">
+                <div class="container">
+                    <div class="main-title text-center wow fadeInUp">
+                        <h1>Continuous Validation of a Leading Transportation Platform’s GenAI Pipeline with Deepchecks</h1>
+                        <div class="post-meta d-md-inline-flex justify-content-between">
+                            <img alt="Deepchecks" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks
+                            <span><span>|</span> March 12, 2023 </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <div class="container blog-content-section">
+                <div class="card-column">
+                    <div class="col-post-left">
+                        <div class="sidebar position-sticky">        
+                            <nav id="navbar-blog" class="widget-area single-nav">
+                                <div class="widget-title" data-toggle="collapse" data-target="#blog-item" aria-expanded="true"> Table of Contents</div>
+                                <div class="navbar-list collapse show" id="blog-item" style="">
+                                    <nav class="nav-item">
+                                        <a class="nav-link" href="#post-item-1">Customer Overview</a>
+                                        <a class="nav-link" href="#post-item-2">The Challenge</a>
+                                        <a class="nav-link" href="#post-item-3">The Solution</a>
+                                        <a class="nav-link" href="#post-item-4">The Results</a>
+                                    </nav>
+                                </div>
+                            </nav>
+                            <div class="widget-block d-none d-lg-block">
+                                <div class="widget-title">Subscribe to the newsletter</div>
+                                <div class="icw-hubspot-form-shortcode ">
+                                    <div class="form-with-slider-labels">
+                                        <script data-hubspot-rendered="true">
+                                            hbspt.forms.create({
+                                                region: "na1",
+                                                portalId: "8338627",
+                                                formId: "2bcb106c-1919-468e-b98f-43da09f47453",
+                                                css: " ",
+                                                redirectUrl: "/thank-you/",
+                                                locale: "en",
+                                                translations: {
+                                                    en: {
+                                                        submitText: "Subscribe"
+                                                    }
+                                                },
+                                                onFormReady: function ($form, ctx) {
+                                                    hubspot_labels();
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="widget-block share-block d-none d-lg-block">
+                                <div class="widget-title">Share</div>
+                                <div class="share-btns">
+                                    <div>
+                                        <a onclick="window.open('http://www.facebook.com/sharer.php?u=https://deepchecks.com/moe-llms-cost-efficiency-performance-expert-network','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=https://deepchecks.com/moe-llms-cost-efficiency-performance-expert-network" title="Share on Facebook" data-bs-toggle="tooltip"><img src="https://deepchecks.com/wp-content/themes/deepchecks/assets/images/facbook-purple.svg" alt="Facebook"></a>
+                                    </div>
+                                    <div class="pl-3 pr-3">
+                                        <a onclick="window.open('http://twitter.com/share?url=https://deepchecks.com/moe-llms-cost-efficiency-performance-expert-network&amp;text=Exploring%20MoE%20in%20LLMs:%20Cutting%20Costs%20and%20Boosting%20Performance%20with%20Expert%20Network','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=https://deepchecks.com/moe-llms-cost-efficiency-performance-expert-network&amp;text=Exploring%20MoE%20in%20LLMs:%20Cutting%20Costs%20and%20Boosting%20Performance%20with%20Expert%20Network" title="Share on Twitter" data-bs-toggle="tooltip"><img src="https://deepchecks.com/wp-content/themes/deepchecks/assets/images/twitter-purple.svg" alt="Twitter"></a>
+                                    </div>
+                                    <div>
+                                        <a onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=https://deepchecks.com/moe-llms-cost-efficiency-performance-expert-network','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://deepchecks.com/moe-llms-cost-efficiency-performance-expert-network" title="Share on LinkedIn" data-bs-toggle="tooltip"><img src="https://deepchecks.com/wp-content/themes/deepchecks/assets/images/linkedin-purple.svg" alt="LinkedIn"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-post-right">
+                        <div class="single-contnet">
+        
+                            <div class="entry-content">
+                                <div class="post-sticky-contents">
+                                    <div class="post-sticky-content mb-4 mb-lg-5">
+                                        <h2 id="post-item-1">Customer Overview</h2>
+                                        <div>
+                                            <p>A <strong>large, globally operating technology company in the transportation sector</strong> is leveraging Generative AI to enhance internal data processing workflows. With a strong focus on urban mobility, the company processes complex, high-volume data streams to power critical services used by millions of end users.</p>
+                                        </div>
+                                    </div>
+                                    <div class="post-sticky-content mb-4 mb-lg-5">
+                                        <h2 id="post-item-2">The Challenge</h2>
+                                        <div>
+                                            <p>To maintain and enhance the accuracy of its public transit data, the company developed an internal Generative AI (GenAI) agent designed to process and classify transportation-related information. The agent has two modules:</p>
+                                            <ol>
+                                                <li><strong>Scraper Module:</strong> Extracting relevant information from a myriad of transportation data sources.</li>
+                                                <li><strong>Classifier Module: </strong> Categorizing the extracted data based on the level of interference to transportation services, classified as high, medium, or low.</li>
+                                            </ol>
+                                            <p>The company sought to evaluate the performance and reliability of this GenAI pipeline, caring about the bottom line results – the quality of the data feeding into their main app.</p>
+                                        </div>
+                                    </div>
+                                    <div class="post-sticky-content mb-4 mb-lg-5">
+                                        <h2 id="post-item-3">The Solution</h2>
+                                        <div>
+                                            <p>The company partnered with Deepchecks to assess and enhance their GenAI pipeline. The evaluation focused on data extraction accuracy and classification reliability.</p>
+                                            <p>The team utilized Deepchecks’ customizable automatic annotation to adapt the platform to their use cases’ intricacies. They streamlined the data labeling process and replaced time-consuming and tedious manual work. The company used Deepchecks' built-in properties, such as Instruction Fulfillment and Expected Output Similarity, powered by Claude-Sonnet-3.7 through Amazon Bedrock, particularly to evaluate the scraper module's output quality.</p>
+                                            <p>Specialized properties such as "Extraction Faithfulness," "Extraction Coverage," and "Structural Validity" were added to comprehensively assess the data extraction quality.</p>
+                                            <div class="post-newsletter-subscribe">
+                                                <div class="sub-title">Open source package for ml validation</div>
+                                                <h2 class="h2-title mb-3">Build Test Suites for ML Models & Data with Deepchecks</h2>
+                                                <div class="post-btns">
+                                                    <a href="#" class="btn btn-sm btn-warning">Get Started</a>
+                                                    <a href="#" class="btn btn-sm btn-secondary"><img class="btn-icon" src="https://www.deepchecks.com//wp-content/uploads/2021/12/github-icon.svg" alt="Github">Our Github</a>
+                                                </div>
+                                            </div>
+                                            <p>Furthermore, The team utilized categorical properties to segment interactions based on various aspects, such as language, facilitating more granular analysis. They also incorporated additional steps like "thinking" and "severity" into the classifier module, allowing for more detailed property calculations and insights.</p>
+                                            <p>To monitor the pipeline's performance in production and detect degradations in a timely manner, The company used Deepchecks production monitoring capabilities. These helped ensure pipeline accuracy over time and detect deviations.</p>
+                                            <p>Given their robust and highly productionized GenAI applications, they were selected as beta customers for Deepchecks' upcoming production environment root-cause analysis features that also leverage AWS Bedrock LLMs.</p>
+                                        </div>
+                                    </div>
+                                    <div class="post-sticky-content mb-4 mb-lg-5">
+                                        <h2 id="post-item-4">The Results</h2>
+                                        <div>
+                                            <p>The collaboration yielded significant results:</p>
+                                            <ul>
+                                                <li><strong>Enhanced Visibility:</strong> The customer’s data science team gained full visibility into their GenAI pipeline, enabling comprehensive monitoring and analysis.</li>
+                                                <li><strong>Proactive Drift Management:</strong> The implemented drift detection mechanisms allowed for early identification and resolution of data inconsistencies in production.</li>
+                                                <li><strong>Informed Pipeline Optimization:</strong> The insights derived from Deepchecks' evaluations served as a foundation for continuous pipeline improvements. Deepchecks helped the team quickly identify interaction segments failing due to low Groundedness or incorrectly avoided answers. Deepchecks’ automatic properties enabled efficient validation of the mitigations that they developed, and verifying that system performance was improved.</li>
+                                                <li><strong>Increased Confidence</strong> The company’s confidence in their GenAI pipeline has significantly increased following the integration of Deepchecks' monitoring tools. As one of their data scientists noted, "Before Deepchecks, we had limited visibility into our pipeline's performance. Now, we can proactively monitor and address issues as they arise." This enhanced oversight has not only improved operational efficiency but also provided the team with the assurance that their application is robust and reliable. The ability to detect data drift and monitor key metrics in real-time has transformed their approach from reactive to proactive, ensuring the continued success of their transport app.</li>
+                                            </ul>
+                                            <p>Through this partnership, the company reinforced its commitment to leveraging AI agents to provide accurate and efficient mobility services.</p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+            <section class="blog-section">
+                <div class="container">
+                    <div class="main-title wow fadeInUp" data-wow-delay="0.2s"><h2>Recent Case Studies</h2></div>
+                    <div class="post-list home-post-list post-slider wow fadeInUp" data-wow-delay="0.4s">			
+                        <div class="blog-item">
+                            <div class="slide-blog-post">
+                                <a class="post-thumb-img" href="deepchecks-evaluation-global-pharma-ai-platform.html">
+                                    <img src="upload/img-case-study.jpg" class="thumb" alt="Deepchecks Powers Evaluation for a Global Pharma’s Internal AI Platform">
+                                </a>
+                                <div class="blog-post-inner">
+                                    <div class="post-date d-flex justify-content-between"> 
+                                        July 29, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> 2 mins</span>
+                                    </div>
+                                    <div class="post-title"><a href="deepchecks-evaluation-global-pharma-ai-platform.html" class="stretched-link">Deepchecks Powers Evaluation for a Global Pharma’s Internal AI Platform</a></div>
+                                    <div class="post-meta"><img alt="Deepchecks" src="upload/avatar.png"> Deepchecks</div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="blog-item">
+                            <div class="slide-blog-post">
+                                <a class="post-thumb-img" href="lovehoney-ai-customer-service-deepchecks-journey.html">
+                                    <img src="upload/img-case-study.jpg" class="thumb" alt="Lovehoney Group’s Journey to Ai-Enhanced Customer Service with Deepchecks" />
+                                </a>
+                                <div class="blog-post-inner">
+                                    <div class="post-date d-flex justify-content-between">
+                                        July 29, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> 2 mins</span>
+                                    </div>
+                                    <div class="post-title"><a href="lovehoney-ai-customer-service-deepchecks-journey.html" class="stretched-link">Lovehoney Group’s Journey to Ai-Enhanced Customer Service with Deepchecks</a></div>
+                                    <div class="post-meta"><img alt="Deepchecks" src="upload/avatar.png"> Deepchecks</div>
+                                </div>
+                            </div>
+                        </div>
+			        </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER SECTION -->
+        <footer class="main-footer">
+            <img src="assets/images/logo-white.svg" alt="Deepchecks" class="footer-bg-logo" />
+            <div class="container">
+                <div class="footer-link-section">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-2 col-lg-1">
+                            <a href="/" title="Deepchecks | Continuous Validation for Machine Learning" rel="home" class="footer-logo wow fadeInUp"><img src="assets/images/logo-white.svg" alt="Deepchecks"></a>
+                        </div>
+                        <div class="col-md-10 col-lg-8">
+                            <div class="row gutters-5">
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-products-footer-container">
+                                        <ul id="menu-products-footer" class="menu">
+                                            <li class="footer-title"><a href="/deepchecks-hub/">Products</a></li>
+                                            <li><a href="/solutions/llm-evaluation/">LLM Evaluation</a></li>
+                                            <li><a href="/deepchecks-hub/">Deepchecks Hub</a></li>
+                                            <li><a href="/open-source/">Open Source</a></li>
+                                            <li><a href="/pricing/">Pricing</a></li>
+                                            <li><a href="/book-demo/">Book a Demo</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-solutions-footer-container">
+                                        <ul id="menu-solutions-footer" class="menu">
+                                            <li class="footer-title"><a href="/solutions/testing/">Solutions</a></li>
+                                            <li><a href="/solutions/testing/">Testing</a></li>
+                                            <li><a href="/solutions/ci-cd/">CI/CD</a></li>
+                                            <li><a href="/solutions/monitoring/">Monitoring</a></li>
+                                            <li><a href="/solutions/analysis/">Root Cause Analysis</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">                                    
+                                    <div class="menu-company-footer-container">
+                                        <ul id="menu-company-footer" class="menu">
+                                            <li class="footer-title"><a href="/about/">Company</a></li>
+                                            <li><a href="/about/">About Us</a></li>
+                                            <li><a href="/careers/">Careers</a></li>
+                                            <li><a href="/contact-us/">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-resources-footer-container">
+                                        <ul id="menu-resources-footer" class="menu">
+                                            <li class="footer-title"><a href="/blog/">Resources</a></li>
+                                            <li><a href="/docs/">Docs</a></li>
+                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a target="_blank" rel="noopener" href="https://checks-demo.deepchecks.com/?check=Train+Test+Label+Drift+%28distribution%29">Checks Demo 🔗</a></li>
+                                            <li><a href="/llm-tools/">LLM Tools</a></li>
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                            <li><a href="/events/">Events</a></li>
+                                            <li><a href="/questions/">FAQs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-3">
+                            <ul class="social-icon">
+                                <li><a href="https://github.com/deepchecks/deepchecks" target="_blank" title="GitHub" data-bs-toggle="tooltip"><img src="assets/images/github.svg" alt="github" /></a></li>
+                                <li><a href="https://www.linkedin.com/company/deepchecks/" target="_blank" title="LinkedIn" data-bs-toggle="tooltip"><img src="assets/images/linkedin.svg" alt="linkedin" /></a></li>
+                                <li><a href="https://twitter.com/deepchecks" target="_blank" title="Twitter" data-bs-toggle="tooltip"><img src="assets/images/twitter.svg" alt="twitter" /></a></li>
+                                <li><a href="https://www.facebook.com/deepchecks/" target="_blank" title="Facebook" data-bs-toggle="tooltip"><img src="assets/images/facbook.svg" alt="Facebook" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul id="menu-footer-menu" class="footer-links">
+                                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                                <li><a href="/cookies-policy/">Cookies Policy</a></li>
+                                <li><a href="/terms-and-conditions/">Terms &#038; Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                            <p>© 2024 Deepchecks AI. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a href="#top" class="back-to-top"><em class="icon-arrow-up"></em></a>
+        <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="assets/js/all-jquery.js"></script>       
+        <script type="text/javascript" src="assets/js/main.js"></script> 
+        <div class="modal icw-modal modal-hbspt fade" id="popup-llm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-size-hbspt modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"><small>FREE TRIAL FOR DEEPCHECKS' LLM EVALUATION SOLUTION</small><strong>Fill Out Your Details Here</strong></h2>
+                        <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-with-slider-labels" id="llm_hubspotFormContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>@media (min-width: 768px) {body #popup-llm .modal-title small {font-size: 14px;}}@media (max-width: 1199px) {body #popup-llm .modal-title small {font-size: 12px;}}@media (max-width: 767px) {body #popup-llm .modal-title small {font-size: 8px;}}</style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var formContainer = document.getElementById('llm_hubspotFormContainer');
+                function initializeHubSpotForm() {
+                    if (typeof hbspt !== 'undefined') {
+                        hbspt.forms.create({target: '#llm_hubspotFormContainer',css: '', region: "na1", portalId: "8338627", formId: "f7da1fc3-958c-444a-b11a-2ed8f1b716a3", css: " ", redirectUrl: "/thank-you/#llm-evaluation", locale: "en", translations: {en: { submitText: "Submit" } }, onFormReady: function ($form, ctx) { hubspot_labels(); }});
+                    }
+                }
+                initializeHubSpotForm();
+                jQuery('#popup-llm').on('hidden.bs.modal', function () {
+                    if (typeof hbspt !== 'undefined' && typeof hbspt.forms !== 'undefined' && typeof hbspt.forms[0] !== 'undefined') { hbspt.forms[0].destroy(); } initializeHubSpotForm();
+                });
+            });
+        </script>
+        <!-- aws sagemaker from-->
+        <div class="modal icw-modal modal-hbspt fade" id="popup-aws-sagemaker" tabindex="-1" aria-labelledby="aswModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-size-hbspt modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"><small style="max-width: 400px;margin: 0 auto 5px">Deepchecks is Now Available Natively Within AWS Sagemaker</small><strong>Want to learn more?</strong></h2>
+                        <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-with-slider-labels" id="aws_sagemaker_hubspotFormContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var awsformContainer = document.getElementById('aws_sagemaker_hubspotFormContainer');
+                function initializeHubSpotForm2() {
+                    if (typeof hbspt !== 'undefined') {
+                        hbspt.forms.create({target: '#aws_sagemaker_hubspotFormContainer',css: '', region: "na1", portalId: "8338627", formId: "f5373b39-1618-4678-b5de-dec5adcf4ecb", css: " ", redirectUrl: "/thank-you/#aws-sagemaker", locale: "en", translations: {en: { submitText: "Submit" } }, onFormReady: function ($form, ctx) { hubspot_labels(); }});
+                    }
+                }
+                initializeHubSpotForm2();
+                jQuery('#popup-aws-sagemaker').on('hidden.bs.modal', function () {
+                    if (typeof hbspt !== 'undefined' && typeof hbspt.forms !== 'undefined' && typeof hbspt.forms[0] !== 'undefined') {
+                        hbspt.forms[0].destroy(); 
+                    } 
+                    awsformContainer.innerHTML = '';initializeHubSpotForm2();
+                });
+            });
+        </script>
+    </body>
+</html>
