@@ -5333,7 +5333,41 @@ body.single-post {
             font-size: 20px;
             margin-bottom: 20px;
         }
-     
+        &.case-study-widget {
+            border: 1px solid #ECECEC;
+            @include border-radius(10px);
+            padding: 25px;
+            box-shadow: -2px -2px 4px #fff,2px 2px 4px 0 rgb(206, 212, 217);
+            .widget-title {
+                padding: 0;
+                margin-bottom: 0;
+                line-height: 1;
+            }
+            .widget-info {
+                padding-top: 15px;
+                hr {
+                    border: none;
+                    border-bottom: 2px solid rgba(#000, 0.01);
+                    margin: 15px 0;
+                }
+                p {
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                    color: rgba(#000, 0.5);
+                }
+                strong {
+                    font-size: 24px;
+                }
+                span {
+                    display: block;
+                    color: rgba(#000, 0.5);
+                    font-size: 15px;
+                    &:not(:last-child) {
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
     }
 }
 
