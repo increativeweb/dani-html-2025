@@ -1,0 +1,48 @@
+// logical imports
+// @import '_utilities/fonts';
+@import '_utilities/variables';
+@import '_utilities/mixins';
+
+// // physical imports - partials
+@import '_partials/footer';
+@import '_partials/globals';
+@import '_partials/header';
+@import '_partials/menu';
+@import '_partials/404';
+@import '_partials/forms';
+@import '_partials/article';
+@import '_partials/qodo-styles';
+
+// physical imports - pages
+@import '_pages/home';
+@import '_pages/about';
+@import '_pages/contact';
+@import '_pages/blog';
+@import '_pages/careers';
+@import '_pages/glossary';
+@import '_pages/blogpost';
+@import '_pages/attribution';
+@import '_pages/ide';
+@import '_pages/integrations';
+@import "_pages/product";
+@import "_pages/cms-page";
+@import "_pages/feature-page";
+@import "_pages/resources";
+@import "_pages/qa";
+@import "_pages/webinar";
+@import "_pages/pr-pages";
+
+// physical imports - components
+@import '_components/article-card';
+@import '_components/team-card';
+@import '_components/angel-card';
+@import '_components/home-code';
+@import '_components/resources-card';
+
+@import '_partials/code-snippet';
+
+input[type='file']::file-selector-button {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
