@@ -5405,6 +5405,53 @@ body.single-post {
             }
         }
     }
+    .nav-info {
+        padding: 25px 20px;
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .link {  
+            @include inline-flex;
+            @include align-items(center);
+            color: $purple;
+            gap: 8px;
+            line-height: 1;
+            margin-bottom: 24px;
+            .icon-download {
+                background: url('data:image/svg+xml; utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 17.5H2.5M15 9.16667L10 14.1667M10 14.1667L5 9.16667M10 14.1667V2.5" stroke="rgb(157 96 251)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+            }
+            &:hover, &:focus {
+                color: #000000;
+                .icon-download {
+                    filter: brightness(0);
+                }
+            }
+        }
+        .share-btns {
+            margin-bottom: 0;
+        }
+    }
+    .other-link-block {
+        ul {
+            li {
+                border-top: 1px solid #ECECEC;
+                padding: 12px 20px;
+                a {
+                    color: #000000;
+                    font-size: 18px;
+                    font-weight: 700;
+                    &:hover, &:focus {
+                        color: $purple;
+                    }
+                }
+            }
+        }
+    }
     .navbar-list{
         border-top: 1px solid #ECECEC;
         @media (min-width:992px) {
