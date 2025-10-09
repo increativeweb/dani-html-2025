@@ -5407,6 +5407,9 @@ body.single-post {
     }
     .nav-info {
         padding: 25px 20px;
+        @media (max-width: 903px) {
+            border-bottom: 1px solid #ECECEC;
+        }
         h3 {
             font-size: 20px;
             font-weight: 600;
@@ -5434,6 +5437,12 @@ body.single-post {
         }
         .share-btns {
             margin-bottom: 0;
+        }
+    }
+    .nav-info + .widget-title {
+        display: none;
+        @media (max-width:903px) {
+            display: flex;
         }
     }
     .other-link-block {

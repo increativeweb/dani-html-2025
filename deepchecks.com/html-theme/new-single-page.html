@@ -116,10 +116,11 @@
 											<a href="#" title="Share on Twitter" data-bs-toggle="tooltip"><img src="assets/images/icon-twitter-black.svg" alt="Twitter"></a>
 										</div>
 										<div>
-											<a href="#" title="Link" data-bs-toggle="tooltip"><img src="assets/images/icon-link-black.svg" alt="Link"></a>
+											<a href="#" title="Copy Link" id="copyLinkBtn" data-bs-toggle="tooltip"><img src="assets/images/icon-link-black.svg" alt="Link"></a>
 										</div>
 									</div>
 								</div>
+								<div class="widget-title" data-toggle="collapse" data-target="#blog-item" aria-expanded="true">Table of Contents</div>
 								<div class="navbar-list collapse" id="blog-item">
 									<nav class="nav-item"><a class="nav-link" href="#post-item-1">Introduction</a>
 										<a class="nav-link" href="#post-item-2">Understanding LLM Evaluation</a>
@@ -144,195 +145,61 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="widget-block d-none d-lg-block">
-								<div class="widget-title">Subscribe to the newsletter</div>
-								<div class="icw-hubspot-form-shortcode ">
-									<div class="form-with-slider-labels">
-										<script>
-											hbspt.forms.create({
-												region: "na1",
-												portalId: "8338627",
-												formId: "2bcb106c-1919-468e-b98f-43da09f47453",
-												css: " ",
-												redirectUrl: "/thank-you/",
-												locale: "en",
-												translations: {
-													en: {
-														submitText: "Subscribe"
-													}
-												},
-												onFormReady: function ($form, ctx) {
-													hubspot_labels();
-												}
-											});
-										</script>
-									</div>
-								</div>
-							</div>
-
-							<div class="widget-block share-block d-none d-lg-block">
-								<div class="widget-title">Share</div>
-								<div class="share-btns">
-									<div>
-										<a href="#" title="Share on Facebook" data-bs-toggle="tooltip"><img src="assets/images/facbook-purple.svg" alt="Facebook"></a>
-									</div>
-									<div class="pl-3 pr-3">
-										<a href="#" title="Share on Twitter" data-bs-toggle="tooltip"><img src="assets/images/twitter-purple.svg" alt="Twitter"></a>
-									</div>
-									<div>
-										<a href="#" title="Share on LinkedIn" data-bs-toggle="tooltip"><img src="assets/images/linkedin-purple.svg" alt="LinkedIn"></a>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="col-post-right">
 						<div class="single-contnet">
-
 							<div class="entry-content">
-								<div class="highlight">If you would like to contribute your own blog post, feel free to
-									reach out to us via <a style="color: #9d60fb;"
-										href="mail:blog@deepchecks.com">blog@deepchecks.com</a>. We typically pay a symbolic
-									fee for content that’s accepted by our reviewers.</div>
+								<div class="highlight">If you would like to contribute your own blog post, feel free to reach out to us via <a style="color: #9d60fb;" href="mail:blog@deepchecks.com">blog@deepchecks.com</a>. We typically pay a symbolic fee for content that’s accepted by our reviewers.</div>
 								<div class="post-sticky-contents">
 									<div class="post-sticky-content mb-4 mb-lg-5">
 										<h2 id="post-item-1">Introduction</h2>
 										<div>
-											<p>Large Language Models (LLMs) have emerged as pivotal technologies in the
-												rapidly evolving landscape of artificial intelligence, revolutionizing how
-												we interact with digital systems-captivating the imagination of researchers,
-												developers, businesses, and society. From automating customer service to
-												enhancing natural language understanding and generating human-like text, the
-												applications of LLMs span an increasingly broad and diverse range of fields.
-												This exponential growth in LLM applications underscores a burgeoning
-												interest in these technologies, not only for their potential to streamline
-												and enhance various processes but also for their ability to drive innovation
-												in areas previously unimagined.</p>
-											<p>However, the remarkable capabilities of LLMs come with significant
-												responsibilities. As these models become more integral to our digital
-												infrastructure, a critical question looms: How can we ensure their
-												responsible and effective deployment? The answer lies in evaluation.
-												Evaluating LLMs is crucial for ensuring their performance, safety, and
-												responsible deployment. It involves a comprehensive assessment of the
-												models&#8217; ability to understand and generate language accurately,
-												adherence to ethical standards, and potential impacts on users and
-												societies. Without thorough evaluation, deploying LLMs risks perpetuating
-												biases, generating misleading information, or causing harm.</p>
-											<p>The evaluation of LLMs also holds a pivotal position within the broader
-												context of AI development and deployment. The need for robust evaluation
-												frameworks becomes increasingly critical as AI technologies become more
-												complex and their applications more widespread. These frameworks ensure that
-												AI systems meet the highest standards of quality and ethics and help
-												identify areas for improvement, thereby driving the continuous advancement
-												of AI technologies.</p>
+											<p>Large Language Models (LLMs) have emerged as pivotal technologies in the rapidly evolving landscape of artificial intelligence, revolutionizing how we interact with digital systems-captivating the imagination of researchers, developers, businesses, and society. From automating customer service to enhancing natural language understanding and generating human-like text, the applications of LLMs span an increasingly broad and diverse range of fields. This exponential growth in LLM applications underscores a burgeoning interest in these technologies, not only for their potential to streamline and enhance various processes but also for their ability to drive innovation in areas previously unimagined.</p>
+											<p>However, the remarkable capabilities of LLMs come with significant responsibilities. As these models become more integral to our digital infrastructure, a critical question looms: How can we ensure their responsible and effective deployment? The answer lies in evaluation. Evaluating LLMs is crucial for ensuring their performance, safety, and responsible deployment. It involves a comprehensive assessment of the models&#8217; ability to understand and generate language accurately, adherence to ethical standards, and potential impacts on users and societies. Without thorough evaluation, deploying LLMs risks perpetuating biases, generating misleading information, or causing harm.</p>
+											<p>The evaluation of LLMs also holds a pivotal position within the broader context of AI development and deployment. The need for robust evaluation frameworks becomes increasingly critical as AI technologies become more complex and their applications more widespread. These frameworks ensure that AI systems meet the highest standards of quality and ethics and help identify areas for improvement, thereby driving the continuous advancement of AI technologies.</p>
 											<div id="attachment_7699" style="width: 710px" class="wp-caption aligncenter">
-												<img aria-describedby="caption-attachment-7699" fetchpriority="high"
-													decoding="async" class="size-full wp-image-7699"
-													src="/wp-content/uploads/2024/04/img-advancement-ai-technologies.jpg"
-													alt="LLM Evaluation: When Should I Start?" width="700" height="467"
-													srcset="/wp-content/uploads/2024/04/img-advancement-ai-technologies.jpg 700w, /wp-content/uploads/2024/04/img-advancement-ai-technologies-300x200.jpg 300w"
-													sizes="(max-width: 700px) 100vw, 700px" />
-												<p id="caption-attachment-7699" class="wp-caption-text">Photo by <a
-														href="https://www.pexels.com/photo/white-and-red-track-field-3905827/"
-														target="_blank" rel="noopener">Markus Spiske</a></p>
+												<img src="https://deepchecks.com/wp-content/uploads/2024/04/img-advancement-ai-technologies.jpg" alt="LLM Evaluation: When Should I Start?" />
+												<p class="wp-caption-text">Photo by <a href="https://www.pexels.com/photo/white-and-red-track-field-3905827/" target="_blank" rel="noopener">Markus Spiske</a></p>
 											</div>
-											<p>Given the expanding role of LLMs and the complex challenges associated with
-												their development and deployment, a key question arises: &#8220;When should
-												I start evaluating my LLM?&#8221; Addressing this question is essential for
-												anyone developing, deploying, or studying LLMs. This article explores the
-												timing of LLM evaluation, offering insights into when and how evaluations
-												should be conducted to maximize their benefits and ensure the responsible
-												use of these powerful AI tools. Through this exploration, we seek to provide
-												guidance that will help stakeholders navigate the intricacies of LLM
-												evaluation, ensuring that these technologies are developed and deployed
-												effectively, ethically, and safely.</p>
+											<p>Given the expanding role of LLMs and the complex challenges associated with their development and deployment, a key question arises: &#8220;When should I start evaluating my LLM?&#8221; Addressing this question is essential for anyone developing, deploying, or studying LLMs. This article explores the timing of LLM evaluation, offering insights into when and how evaluations should be conducted to maximize their benefits and ensure the responsible use of these powerful AI tools. Through this exploration, we seek to provide guidance that will help stakeholders navigate the intricacies of LLM evaluation, ensuring that these technologies are developed and deployed effectively, ethically, and safely.</p>
 										</div>
 									</div>
 									<div class="post-sticky-content mb-4 mb-lg-5">
 										<h2 id="post-item-2">Understanding LLM Evaluation</h2>
 										<div>
-											<p><a href="https://deepchecks.com/glossary/llm-evaluation/">LLM evaluation</a>
-												refers to the systematic process of assessing language models&#8217;
-												performance, reliability, fairness, and safety. This process is pivotal for
-												understanding how well an LLM fulfills its intended purpose and aligns with
-												ethical standards. The primary objectives of LLM evaluation include:</p>
+											<p><a href="https://deepchecks.com/glossary/llm-evaluation/">LLM evaluation</a> refers to the systematic process of assessing language models&#8217; performance, reliability, fairness, and safety. This process is pivotal for understanding how well an LLM fulfills its intended purpose and aligns with ethical standards. The primary objectives of LLM evaluation include:</p>
 											<ul>
-												<li>Ensuring the model&#8217;s outputs are accurate, relevant, and free from
-													biases.</li>
-												<li>Verifying its ability to understand and generate language across various
-													contexts.</li>
+												<li>Ensuring the model&#8217;s outputs are accurate, relevant, and free from biases.</li>
+												<li>Verifying its ability to understand and generate language across various contexts.</li>
 												<li>Assessing its performance on specific tasks it was designed for.</li>
 											</ul>
-											<p>It is worth noting that there is a significant difference between evaluating
-												an LLM itself and evaluating an LLM application. These differences primarily
-												revolve around the evaluation process&#8217; focus, scope, and objectives.
+											<p>It is worth noting that there is a significant difference between evaluating an LLM itself and evaluating an LLM application. These differences primarily revolve around the evaluation process&#8217; focus, scope, and objectives.
 											</p>
 											<h3>Evaluating an LLM:</h3>
 											<ul>
-												<li><strong>Focus:</strong> Assesses the core capabilities and limitations
-													of the language model itself, such as its ability to generate text,
-													translate languages, understand prompts, etc.</li>
-												<li><strong>Metrics:</strong> Employs benchmarks, human evaluation, and
-													automated metrics to measure tasks like fluency, coherence, factual
-													accuracy, fairness, and bias.</li>
-												<li><strong>Purpose:</strong> Guides development, identifies improvement
-													areas, and ensures the LLM functions as intended, regardless of its
-													specific application.</li>
+												<li><strong>Focus:</strong> Assesses the core capabilities and limitations of the language model itself, such as its ability to generate text, translate languages, understand prompts, etc.</li>
+												<li><strong>Metrics:</strong> Employs benchmarks, human evaluation, and automated metrics to measure tasks like fluency, coherence, factual accuracy, fairness, and bias.</li>
+												<li><strong>Purpose:</strong> Guides development, identifies improvement areas, and ensures the LLM functions as intended, regardless of its specific application.</li>
 											</ul>
-											<p>Evaluating an LLM is akin to assessing a chef&#8217;s raw skills and
-												potential within the confines of a kitchen. This evaluation is centered on
-												observing how the chef handles various ingredients, their proficiency with
-												kitchen tools such as knives, and their ability to make basic kitchen
-												recipes, such as simple sauces. The metrics used in this context focus on
-												the chef&#8217;s technical abilities: the precision of their vegetable
-												chopping, the consistency and flavor of their sauces, and the fundamental
-												taste profiles they can create from essential ingredients. The primary focus
-												here is on the chef&#8217;s underlying abilities and technical expertise.
+											<p>Evaluating an LLM is akin to assessing a chef&#8217;s raw skills and potential within the confines of a kitchen. This evaluation is centered on observing how the chef handles various ingredients, their proficiency with kitchen tools such as knives, and their ability to make basic kitchen recipes, such as simple sauces. The metrics used in this context focus on the chef&#8217;s technical abilities: the precision of their vegetable chopping, the consistency and flavor of their sauces, and the fundamental taste profiles they can create from essential ingredients. The primary focus here is on the chef&#8217;s underlying abilities and technical expertise.
 											</p>
 											<h3>Evaluating an LLM application:</h3>
 											<ul>
-												<li><strong>Focus:</strong> Measures the performance and effectiveness of
-													the LLM within the context of its specific application. For example,
-													evaluating a chatbot involves assessing its ability to understand user
-													queries, provide relevant responses, and achieve its intended user
-													experience goals.</li>
-												<li><strong>Metrics:</strong> Combines LLM-specific metrics with
-													application-specific measures like task success rate, user satisfaction,
-													and engagement.</li>
-												<li><strong>Purpose:</strong> Determines if the application meets its
-													intended goals and delivers value to users, considering the LLM&#8217;s
-													performance and the overall user experience.</li>
+												<li><strong>Focus:</strong> Measures the performance and effectiveness of the LLM within the context of its specific application. For example, evaluating a chatbot involves assessing its ability to understand user queries, provide relevant responses, and achieve its intended user experience goals.</li>
+												<li><strong>Metrics:</strong> Combines LLM-specific metrics with application-specific measures like task success rate, user satisfaction, and engagement.</li>
+												<li><strong>Purpose:</strong> Determines if the application meets its intended goals and delivers value to users, considering the LLM&#8217;s performance and the overall user experience.</li>
 											</ul>
-											<p>In contrast, evaluating an LLM application is analogous to judging the
-												chef&#8217;s ability to prepare a full meal, culminating in the final dish
-												and the overall dining experience. This evaluation considers the harmonious
-												combination of flavors, the dish&#8217;s presentation, and how well the meal
-												meets the diner&#8217;s expectations. The metrics shift to encompass overall
-												taste, presentation, customer satisfaction, and the meal&#8217;s adherence
-												to specific dietary restrictions. The focus broadens to include
-												functionality, impact, and user experience within a specific context.</p>
+											<p>In contrast, evaluating an LLM application is analogous to judging the chef&#8217;s ability to prepare a full meal, culminating in the final dish and the overall dining experience. This evaluation considers the harmonious combination of flavors, the dish&#8217;s presentation, and how well the meal meets the diner&#8217;s expectations. The metrics shift to encompass overall taste, presentation, customer satisfaction, and the meal&#8217;s adherence to specific dietary restrictions. The focus broadens to include functionality, impact, and user experience within a specific context.</p>
 											<div id="attachment_7700" style="width: 710px" class="wp-caption aligncenter">
-												<img aria-describedby="caption-attachment-7700" decoding="async"
-													class="size-full wp-image-7700"
-													src="/wp-content/uploads/2024/04/img-evaluating-llm-application.jpg"
-													alt="Evaluating an LLM application" width="700" height="468"
-													srcset="/wp-content/uploads/2024/04/img-evaluating-llm-application.jpg 700w, /wp-content/uploads/2024/04/img-evaluating-llm-application-300x201.jpg 300w"
-													sizes="(max-width: 700px) 100vw, 700px" />
-												<p id="caption-attachment-7700" class="wp-caption-text">Photo by <a
-														href="https://www.pexels.com/photo/chef-preparing-vegetable-dish-on-tree-slab-1267320/"
-														target="_blank" rel="noopener">ELEVATE</a></p>
+												<img src="https://deepchecks.com/wp-content/uploads/2024/04/img-evaluating-llm-application.jpg" alt="Evaluating an LLM application" />
+												<p id="caption-attachment-7700" class="wp-caption-text">Photo by <a href="https://www.pexels.com/photo/chef-preparing-vegetable-dish-on-tree-slab-1267320/" target="_blank" rel="noopener">ELEVATE</a></p>
 											</div>
 											<h3>Key differences:</h3>
 											<ul>
-												<li><strong>Level of abstraction:</strong> LLM evaluation focuses on
-													individual ingredients and techniques, while application evaluation
-													looks at the final product and its impact.</li>
-												<li><strong>Metrics:</strong> LLM evaluation uses technical measures, while
-													application evaluation includes subjective elements like user
-													satisfaction.</li>
-												<li><strong>Purpose:</strong> LLM evaluation identifies potential and areas
-													for improvement, while application evaluation assesses real-world
-													effectiveness and value.</li>
+												<li><strong>Level of abstraction:</strong> LLM evaluation focuses on individual ingredients and techniques, while application evaluation looks at the final product and its impact.</li>
+												<li><strong>Metrics:</strong> LLM evaluation uses technical measures, while application evaluation includes subjective elements like user satisfaction.</li>
+												<li><strong>Purpose:</strong> LLM evaluation identifies potential and areas for improvement, while application evaluation assesses real-world effectiveness and value.</li>
 											</ul>
 										</div>
 									</div>
@@ -341,97 +208,33 @@
 										<div>
 											<p>The evaluation of LLMs incorporates a variety of methods, such as:</p>
 											<h3>1. Human Evaluation:</h3>
-											<p>This approach involves people assessing the LLM&#8217;s text for quality,
-												relevance, and coherence, aiming to gauge user satisfaction and how well the
-												model meets interaction expectations. Evaluators engage with the LLM,
-												testing if it can mimic human communication convincingly. They examine the
-												text&#8217;s coherence, fluency, and accuracy, comparing it against outputs
-												from other models or human writers to evaluate its performance. This process
-												includes domain experts or potential users reviewing the model&#8217;s
-												outputs and incorporating their subjective opinions into preference-based
-												evaluations.</p>
+											<p>This approach involves people assessing the LLM&#8217;s text for quality, relevance, and coherence, aiming to gauge user satisfaction and how well the model meets interaction expectations. Evaluators engage with the LLM, testing if it can mimic human communication convincingly. They examine the text&#8217;s coherence, fluency, and accuracy, comparing it against outputs from other models or human writers to evaluate its performance. This process includes domain experts or potential users reviewing the model&#8217;s outputs and incorporating their subjective opinions into preference-based evaluations.</p>
 											<h3>2. Benchmarking:</h3>
-											<p>Benchmarking is an evaluation method that tests the performance of your LLM
-												against established, standardized datasets and tasks. Think <a
-													href="https://edvoy.com/articles/sat-vs-gre/" target="_blank"
-													rel="noopener">GRE/SAT</a> for LLMs as it involves using standardized
-												tests to measure your LLM&#8217;s capabilities against predefined criteria.
-												Here&#8217;s a streamlined approach:</p>
+											<p>Benchmarking is an evaluation method that tests the performance of your LLM against established, standardized datasets and tasks. Think <a href="https://edvoy.com/articles/sat-vs-gre/" target="_blank" rel="noopener">GRE/SAT</a> for LLMs as it involves using standardized tests to measure your LLM&#8217;s capabilities against predefined criteria. Here&#8217;s a streamlined approach:</p>
 											<ul>
-												<li>Choose benchmarks that align with your LLM&#8217;s goals and the skills
-													you wish to assess. Popular benchmarks include <a
-														href="https://github.com/nyu-mll/GLUE-baselines" target="_blank"
-														rel="noopener">GLUE</a> for language understanding, <a
-														href="https://rajpurkar.github.io/SQuAD-explorer/" target="_blank"
-														rel="noopener">SQuAD</a> for question answering, and <a
-														href="https://github.com/rowanz/hellaswag" target="_blank"
-														rel="noopener">HellaSwag</a> for reasoning. These benchmarks act
-													like standardized tests, providing a consistent way to measure LLM
-													performance across specific tasks.</li>
-												<li>Execute the benchmark tests by supplying your LLM with the required
-													prompts, text snippets, or questions, and then evaluate its responses.
-													This process is akin to taking an exam, where your LLM&#8217;s answers
-													are graded against established standards.</li>
-												<li>Evaluate your LLM&#8217;s performance by comparing it to other models
-													and human benchmarks. This comparison helps identify your LLM&#8217;s
-													strengths and areas for improvement, offering insights into its
-													accuracy, fluency, and coherence.</li>
+												<li>Choose benchmarks that align with your LLM&#8217;s goals and the skills you wish to assess. Popular benchmarks include <a href="https://github.com/nyu-mll/GLUE-baselines" target="_blank" rel="noopener">GLUE</a> for language understanding, <a href="https://rajpurkar.github.io/SQuAD-explorer/" target="_blank" rel="noopener">SQuAD</a> for question answering, and <a href="https://github.com/rowanz/hellaswag" target="_blank" rel="noopener">HellaSwag</a> for reasoning. These benchmarks act like standardized tests, providing a consistent way to measure LLM performance across specific tasks.</li>
+												<li>Execute the benchmark tests by supplying your LLM with the required prompts, text snippets, or questions, and then evaluate its responses. This process is akin to taking an exam, where your LLM&#8217;s answers are graded against established standards.</li>
+												<li>Evaluate your LLM&#8217;s performance by comparing it to other models and human benchmarks. This comparison helps identify your LLM&#8217;s strengths and areas for improvement, offering insights into its accuracy, fluency, and coherence.</li>
 											</ul>
-											<p>Each benchmark is paired with its unique dataset and set of tasks; choosing
-												the right benchmark is crucial based on your specific objectives and the
-												intended use case of your LLM. However, it&#8217;s important to recognize
-												that no benchmark can fully encapsulate every facet of LLM performance or
-												perfectly suit every unique application. There&#8217;s also a risk that
-												models excel in benchmark settings without necessarily translating that
-												success to practical, real-world scenarios. Despite these limitations,
-												benchmarks are invaluable for offering a standardized method for comparison
-												that reduces bias, ensures results can be replicated for verification, and
-												facilitates a comprehensive assessment by testing a wide range of LLM
-												capabilities. For instance, benchmark scores for a range of open-source LLMs
-												are available on Hugging Face, as illustrated below:</p>
+											<p>Each benchmark is paired with its unique dataset and set of tasks; choosing the right benchmark is crucial based on your specific objectives and the intended use case of your LLM. However, it&#8217;s important to recognize that no benchmark can fully encapsulate every facet of LLM performance or perfectly suit every unique application. There&#8217;s also a risk that models excel in benchmark settings without necessarily translating that success to practical, real-world scenarios. Despite these limitations, benchmarks are invaluable for offering a standardized method for comparison that reduces bias, ensures results can be replicated for verification, and facilitates a comprehensive assessment by testing a wide range of LLM capabilities. For instance, benchmark scores for a range of open-source LLMs are available on Hugging Face, as illustrated below:</p>
 											<div id="attachment_7701" style="width: 710px" class="wp-caption aligncenter">
-												<img aria-describedby="caption-attachment-7701" decoding="async"
-													class="size-full wp-image-7701"
-													src="/wp-content/uploads/2024/04/img-huggingface-open-llm-leaderboard.jpg"
-													alt="HuggingFace Open LLM Leaderboard" width="700" height="346"
-													srcset="/wp-content/uploads/2024/04/img-huggingface-open-llm-leaderboard.jpg 700w, /wp-content/uploads/2024/04/img-huggingface-open-llm-leaderboard-300x148.jpg 300w"
-													sizes="(max-width: 700px) 100vw, 700px" />
-												<p id="caption-attachment-7701" class="wp-caption-text"><a
-														href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard"
-														target="_blank" rel="noopener">HuggingFace Open LLM Leaderboard</a>
-												</p>
+												<img src="https://deepchecks.com/wp-content/uploads/2024/04/img-huggingface-open-llm-leaderboard.jpg" alt="HuggingFace Open LLM Leaderboard" />
+												<p id="caption-attachment-7701" class="wp-caption-text"><a href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard" target="_blank" rel="noopener">HuggingFace Open LLM Leaderboard</a></p>
 											</div>
 											<h3>3. System Evaluation:</h3>
-											<p>System evaluation of LLMs involves a comprehensive analysis of the
-												model&#8217;s internal components and its interaction with the broader
-												system in which it operates. This process is designed to measure the
-												efficiency, performance, and overall effectiveness of the LLM in a specific
-												context, focusing on several key areas:</p>
+											<p>System evaluation of LLMs involves a comprehensive analysis of the model&#8217;s internal components and its interaction with the broader system in which it operates. This process is designed to measure the efficiency, performance, and overall effectiveness of the LLM in a specific context, focusing on several key areas:</p>
 											<ul>
-												<li><strong>Prompt and Context Efficiency:</strong> This aspect examines how
-													well the system handles inputs (prompts and context), ensuring the LLM
-													generates relevant and accurate outputs. It measures the model&#8217;s
-													ability to interpret and respond to prompts effectively, a crucial
-													factor for user-centric applications.</li>
+												<li><strong>Prompt and Context Efficiency:</strong> This aspect examines how well the system handles inputs (prompts and context), ensuring the LLM generates relevant and accurate outputs. It measures the model&#8217;s ability to interpret and respond to prompts effectively, a crucial factor for user-centric applications.</li>
 												<li><strong>Model Performance Metrics:</strong>
 													<ul class="pt-3 pb-0">
-														<li><strong>Model Perplexity:</strong> Assesses the model&#8217;s
-															predictability and understanding, with lower perplexity
-															indicating better performance.</li>
-														<li><strong>Retrieval Relevancy:</strong> Measures the relevance of
-															the information the LLM retrieves, ensuring it aligns with user
-															queries and needs.</li>
+														<li><strong>Model Perplexity:</strong> Assesses the model&#8217;s predictability and understanding, with lower perplexity indicating better performance.</li>
+														<li><strong>Retrieval Relevancy:</strong> Measures the relevance of the information the LLM retrieves, ensuring it aligns with user queries and needs.</li>
 													</ul>
 												</li>
 												<li><strong>Integration and System Compatibility:</strong>
 													<ul class="pt-3 pb-0">
-														<li><strong>Integration:</strong> Evaluate the ease with which the
-															LLM integrates into existing systems, considering compatibility
-															with other components and infrastructure.</li>
-														<li><strong>Interoperability:</strong> Looks at the LLM&#8217;s
-															ability to function across different environments and with
-															various data formats, ensuring smooth operation within diverse
-															ecosystems.</li>
+														<li><strong>Integration:</strong> Evaluate the ease with which the LLM integrates into existing systems, considering compatibility with other components and infrastructure.</li>
+														<li><strong>Interoperability:</strong> Looks at the LLM&#8217;s ability to function across different environments and with various data formats, ensuring smooth operation within diverse ecosystems.</li>
 													</ul>
 												</li>
 												<li><strong>Performance and Scalability:</strong>
@@ -496,21 +299,13 @@
 													href="https://www.lakera.ai/blog/adversarial-machine-learning"><b>this
 														article</b></a> to understand more.</p>
 											<div class="post-newsletter-subscribe">
-												<div class="sub-title">Deepchecks For LLM EVALUATION</div>
-												<h2 class="h2-title mb-3">LLM Evaluation: When Should I Start?</h2>
-												<div class="mb-2">
-													<ul class="ul-check-list is-light grid-columns-3">
-														<li>Version Comparison</li>
-														<li>AI-Assisted Annotations</li>
-														<li>CI/CD for LLMs</li>
-														<li>LLM Monitoring</li>
-													</ul>
-												</div>
-												<div class="post-btns">
-													<a href="/llm-evaluation/" class="btn btn-secondary">TRY LLM
-														EVALUATION</a>
-												</div>
-											</div>
+                                                <div class="sub-title">LLM Evaluation</div>
+                                                <h2 class="h2-title mb-3">The Definitive Guide to LLM Evaluation</h2>
+                                                <div class="post-btns">
+                                                    <a href="#" class="btn btn-sm btn-warning">Get Started</a>
+                                                    <a href="#" class="btn btn-sm btn-secondary"><img class="btn-icon" src="https://www.deepchecks.com//wp-content/uploads/2021/12/github-icon.svg" alt="Github">Our Github</a>
+                                                </div>
+                                            </div>
 										</div>
 									</div>
 									<div class="post-sticky-content mb-4 mb-lg-5">
@@ -1015,45 +810,11 @@
 									</div>
 								</div>
 								<div class="post-newsletter-subscribe">
-									<div class="sub-title">Deepchecks For LLM EVALUATION</div>
-									<h2 class="h2-title mb-3">LLM Evaluation: When Should I Start?</h2>
-									<div class="mb-2">
-										<ul class="ul-check-list is-light grid-columns-3">
-											<li>Version Comparison</li>
-											<li>AI-Assisted Annotations</li>
-											<li>CI/CD for LLMs</li>
-											<li>LLM Monitoring</li>
-										</ul>
-									</div>
+									<div class="sub-title">LLM Evaluation</div>
+									<h2 class="h2-title mb-3">The Definitive Guide to LLM Evaluation</h2>
 									<div class="post-btns">
-										<a href="/llm-evaluation/" class="btn btn-secondary">TRY LLM EVALUATION</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="widget-block share-block mt-5 mb-0 d-block d-md-none">
-								<div class="widget-title">Share</div>
-								<div class="share-btns">
-									<div>
-										<a onClick="window.open('http://www.facebook.com/sharer.php?u=https://deepchecks.com/llm-evaluation-when-should-i-start','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-											href="http://www.facebook.com/sharer.php?u=https://deepchecks.com/llm-evaluation-when-should-i-start"
-											title="Share on Facebook" data-bs-toggle="tooltip"><img
-												src="/wp-content/themes/deepchecks/assets/images/facbook-purple.svg"
-												alt="Facebook"></a>
-									</div>
-									<div class="pl-3 pr-3">
-										<a onClick="window.open('http://twitter.com/share?url=https://deepchecks.com/llm-evaluation-when-should-i-start&amp;text=LLM%20Evaluation:%20When%20Should%20I%20Start?','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;"
-											href="http://twitter.com/share?url=https://deepchecks.com/llm-evaluation-when-should-i-start&amp;text=LLM%20Evaluation:%20When%20Should%20I%20Start?"
-											title="Share on Twitter" data-bs-toggle="tooltip">
-											<img src="/wp-content/themes/deepchecks/assets/images/twitter-purple.svg"
-												alt="Twitter"></a>
-									</div>
-									<div>
-										<a onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=https://deepchecks.com/llm-evaluation-when-should-i-start','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;"
-											href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://deepchecks.com/llm-evaluation-when-should-i-start"
-											title="Share on LinkedIn" data-bs-toggle="tooltip"><img
-												src="/wp-content/themes/deepchecks/assets/images/linkedin-purple.svg"
-												alt="LinkedIn"></a>
+										<a href="#" class="btn btn-sm btn-warning">Get Started</a>
+										<a href="#" class="btn btn-sm btn-secondary"><img class="btn-icon" src="https://www.deepchecks.com//wp-content/uploads/2021/12/github-icon.svg" alt="Github">Our Github</a>
 									</div>
 								</div>
 							</div>
@@ -1072,98 +833,48 @@
 					<div class="post-list home-post-list post-slider wow fadeInUp" data-wow-delay="0.4s">
 						<div class="blog-item">
 							<div class="slide-blog-post">
-								<a class="post-thumb-img" href="/build-high-performance-rag-pipelines-scale/" tabindex="-1">
-									<img src="/wp-content/uploads/2025/10/post-how-to-build-high‑performance-rag-pipelines-that-scale-400x180.jpg"
-										class="thumb-img wp-post-image"
-										alt="How to Build High‑Performance RAG Pipelines That Scale" decoding="async"
-										srcset="/wp-content/uploads/2025/10/post-how-to-build-high‑performance-rag-pipelines-that-scale-400x180.jpg 400w, /wp-content/uploads/2025/10/post-how-to-build-high‑performance-rag-pipelines-that-scale-300x135.jpg 300w, /wp-content/uploads/2025/10/post-how-to-build-high‑performance-rag-pipelines-that-scale-768x346.jpg 768w, /wp-content/uploads/2025/10/post-how-to-build-high‑performance-rag-pipelines-that-scale.jpg 800w"
-										sizes="(max-width: 400px) 100vw, 400px" /> </a>
+								<a class="post-thumb-img" href="https://deepchecks.com//build-high-performance-rag-pipelines-scale/" tabindex="-1">
+									<img src="https://deepchecks.com//wp-content/uploads/2025/10/post-how-to-build-high‑performance-rag-pipelines-that-scale-400x180.jpg" class="thumb-img wp-post-image" alt="How to Build High‑Performance RAG Pipelines That Scale" /> 
+								</a>
 								<div class="blog-post-inner">
 									<div class="post-date d-flex justify-content-between">
-										October 02, 2025 <span
-											class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg
-												class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z"
-													stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round"
-													stroke-linejoin="round" />
-											</svg>
-											15 mins</span>
+										October 02, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 15 mins</span>
 									</div>
-									<div class="post-title"><a href="/build-high-performance-rag-pipelines-scale/"
-											class="stretched-link">How to Build High‑Performance RAG Pipelines That
-											Scale</a></div>
+									<div class="post-title"><a href="https://deepchecks.com//build-high-performance-rag-pipelines-scale/" class="stretched-link">How to Build High‑Performance RAG Pipelines That Scale</a></div>
 									<div class="post-meta">
-										<img alt="Deepchecks Community Blog"
-											src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png">
-										Deepchecks Community Blog
+										<img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="blog-item">
 							<div class="slide-blog-post">
-								<a class="post-thumb-img" href="/llm-evaluation-framework-steps-components/" tabindex="-1">
-									<img src="/wp-content/uploads/2024/12/post-how-build-llm-evaluation-framework-steps-components-400x180.jpg"
-										class="thumb-img wp-post-image"
-										alt="How to Build an LLM Evaluation Framework: Steps and Components"
-										decoding="async"
-										srcset="/wp-content/uploads/2024/12/post-how-build-llm-evaluation-framework-steps-components-400x180.jpg 400w, /wp-content/uploads/2024/12/post-how-build-llm-evaluation-framework-steps-components-300x135.jpg 300w, /wp-content/uploads/2024/12/post-how-build-llm-evaluation-framework-steps-components-768x346.jpg 768w, /wp-content/uploads/2024/12/post-how-build-llm-evaluation-framework-steps-components.jpg 800w"
-										sizes="(max-width: 400px) 100vw, 400px" /> </a>
+								<a class="post-thumb-img" href="https://deepchecks.com/llm-evaluation-framework-steps-components/" tabindex="-1">
+									<img src="https://deepchecks.com/wp-content/uploads/2024/12/post-how-build-llm-evaluation-framework-steps-components-400x180.jpg" class="thumb-img wp-post-image" alt="How to Build an LLM Evaluation Framework: Steps and Components" /> 
+								</a>
 								<div class="blog-post-inner">
 									<div class="post-date d-flex justify-content-between">
-										September 29, 2025 <span
-											class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg
-												class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z"
-													stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round"
-													stroke-linejoin="round" />
-											</svg>
-											20 mins</span>
+										September 29, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 20 mins</span>
 									</div>
-									<div class="post-title"><a href="/llm-evaluation-framework-steps-components/"
-											class="stretched-link">How to Build an LLM Evaluation Framework in 2025: Steps
-											and Components</a></div>
+									<div class="post-title"><a href="https://deepchecks.com/llm-evaluation-framework-steps-components/" class="stretched-link">How to Build an LLM Evaluation Framework in 2025: Steps and Components</a></div>
 									<div class="post-meta">
-										<img alt="Deepchecks Community Blog"
-											src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png">
-										Deepchecks Community Blog
+										<img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="blog-item">
 							<div class="slide-blog-post">
-								<a class="post-thumb-img" href="/evaluating-rag-pipelines/" tabindex="-1">
-									<img src="/wp-content/uploads/2025/09/post-evaluating-rag-pipelines-metrics-frameworks-optimization-strategies-400x180.jpg"
-										class="thumb-img wp-post-image"
-										alt="Evaluating RAG Pipelines: Metrics, Frameworks, and Optimization Strategies"
-										decoding="async"
-										srcset="/wp-content/uploads/2025/09/post-evaluating-rag-pipelines-metrics-frameworks-optimization-strategies-400x180.jpg 400w, /wp-content/uploads/2025/09/post-evaluating-rag-pipelines-metrics-frameworks-optimization-strategies-300x135.jpg 300w, /wp-content/uploads/2025/09/post-evaluating-rag-pipelines-metrics-frameworks-optimization-strategies-768x346.jpg 768w, /wp-content/uploads/2025/09/post-evaluating-rag-pipelines-metrics-frameworks-optimization-strategies.jpg 800w"
-										sizes="(max-width: 400px) 100vw, 400px" /> </a>
+								<a class="post-thumb-img" href="https://deepchecks.com/evaluating-rag-pipelines/" tabindex="-1">
+									<img src="https://deepchecks.com/wp-content/uploads/2025/09/post-evaluating-rag-pipelines-metrics-frameworks-optimization-strategies-400x180.jpg" class="thumb-img wp-post-image" alt="Evaluating RAG Pipelines: Metrics, Frameworks, and Optimization Strategies" /> 
+								</a>
 								<div class="blog-post-inner">
 									<div class="post-date d-flex justify-content-between">
-										September 25, 2025 <span
-											class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg
-												class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z"
-													stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round"
-													stroke-linejoin="round" />
-											</svg>
-											7 mins</span>
+										September 25, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 7 mins</span>
 									</div>
-									<div class="post-title"><a href="/evaluating-rag-pipelines/"
-											class="stretched-link">Evaluating RAG Pipelines: Metrics, Frameworks, and
-											Optimization Strategies</a></div>
+									<div class="post-title"><a href="https://deepchecks.com/evaluating-rag-pipelines/" class="stretched-link">Evaluating RAG Pipelines: Metrics, Frameworks, and Optimization Strategies</a></div>
 									<div class="post-meta">
-										<img alt="Deepchecks Community Blog"
-											src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png">
-										Deepchecks Community Blog
+										<img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog
 									</div>
 								</div>
 							</div>
@@ -1262,62 +973,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            function getTimeRemaining(endtime) {
-                var t = Date.parse(endtime) - Date.parse(new Date());
-                var seconds = Math.floor((t / 1000) % 60);
-                var minutes = Math.floor((t / 1000 / 60) % 60);
-                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-                var days = Math.floor(t / (1000 * 60 * 60 * 24));
-                return {
-                    total: t,
-                    days: days,
-                    hours: hours,
-                    minutes: minutes,
-                    seconds: seconds
-                };
-            }
-
-            function initializeClock(id, endtime) {
-                var clock = document.getElementById(id);
-                var daysSpan = clock.querySelector(".days");
-                var hoursSpan = clock.querySelector(".hours");
-                var minutesSpan = clock.querySelector(".minutes");
-                var secondsSpan = clock.querySelector(".seconds");
-
-                function updateClock() {
-                    var t = getTimeRemaining(endtime);
-
-                    if (t.total <= 0) {
-                        document.querySelector(".icw-sticky").className = "d-none";
-                        document.querySelector(".speaker-sticky-info").className = "speaker-sticky-info date-hidden";
-                        document.getElementById("countdown").className = "timer-sticky hidden";
-                        document.getElementById("deadline-message").className = "visible";
-                        clearInterval(timeinterval);
-                        return true;
-                    }
-
-                    daysSpan.innerHTML = t.days;
-                    hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
-                    minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
-                    secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
-                }
-
-                updateClock();
-                var timeinterval = setInterval(updateClock, 1000);
-            }
-
-            var deadline = "July 30, 2025 16:00:05 GMT"; // var deadline = "January 01 2018 00:00:00 GMT+0300"; 
-            // var deadline = new Date(Date.parse(new Date()) + 5 * 1000); // for endless timer
-            initializeClock("countdown", deadline);
-
-            jQuery(document).ready(function ($) {
-                $(".close-sticky").click(function (e) {
-                    $(".icw-sticky").slideUp();
-                    e.stopPropagation();
-                });
-            });
-        </script>
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
             <img src="assets/images/logo-white.svg" alt="Deepchecks" class="footer-bg-logo" />
@@ -1469,6 +1124,26 @@
                 });
             });
         </script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const copyBtn = document.getElementById('copyLinkBtn');
+				const tooltip = new bootstrap.Tooltip(copyBtn);
+
+				copyBtn.addEventListener('click', function () {
+					const pageUrl = window.location.href;
+
+					navigator.clipboard.writeText(pageUrl).then(() => {
+						copyBtn.setAttribute('data-original-title', 'Copied!');
+						tooltip.show();
+
+						setTimeout(() => {
+							tooltip.hide();
+							copyBtn.setAttribute('data-original-title', 'Copy link');
+						}, 1500);
+					});
+				});
+			});
+		</script>
 	</body>
 
 </html>
