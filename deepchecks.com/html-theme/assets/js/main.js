@@ -461,9 +461,9 @@ jQuery(document).ready(function($) {
 
     if ($('.play-iframe').length){
         $('.play-iframe').click(function(ev){	
-            videourl = $(this).data('videosrc')+"?autoplay=1&cc_load_policy=1&api=1&muted=1&rel=0&enablejsapi=1";
+            videourl = $(this).data('videosrc')+"?api=1&autoplay=1&muted=1&rel=0&enablejsapi=1";
             if($(this).data('ext') == 'mp4'){
-                video = '<div class="video-wrap"><video class="embed-responsive-item" controls autoplay playsinline controlsList="nodownload" oncontextmenu="return false;"><source src="'+videourl+'" type="video/mp4"></video></div>';
+                video = '<div class="video-wrap"><video class="embed-responsive-item w-100" controls autoplay playsinline controlsList="nodownload" oncontextmenu="return false;"><source src="'+videourl+'" type="video/mp4"></video></div>';
             } else {
                 video = '<div class="video-wrap"><iframe class="embed-responsive-item play-in_iframe" allow="autoplay" src="'+videourl+'" controls="0" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe></div>';
             }
@@ -498,20 +498,25 @@ jQuery(document).ready(function($) {
 
     if ($('.is-hover-play').length){
         $('.is-hover-play').each(function() {
-            var lottieAnimation = $(this)[0]; // Get the DOM element
-    
-            // Pause the animation initially
-            lottieAnimation.pause();
-    
-            // Play animation on hover
-            $(this).hover(function() {
-                lottieAnimation.setDirection(1); // Set forward direction
-                lottieAnimation.play(); // Play the animation
-            }, function() {
-                lottieAnimation.setDirection(-1); // Set reverse direction
-                lottieAnimation.play(); // Pause the animation
-            });
+            var lottieAnimation = $(this)[0]; 
+            if (window.matchMedia('(max-width: 992px)').matches) {
+                // Autoplay with loop
+                lottieAnimation.loop = true;
+                lottieAnimation.autoplay = true;
+                lottieAnimation.setDirection(1);
+                lottieAnimation.play();
+            } else {
+                lottieAnimation.pause();
+                $(this).hover(function() {
+                    lottieAnimation.setDirection(1);
+                    lottieAnimation.play();
+                }, function() {
+                    lottieAnimation.setDirection(-1);
+                    lottieAnimation.play();
+                });
+            }
         });
+        
     }
 });
 
@@ -559,9 +564,9 @@ jQuery(document).on('show.bs.modal','.modal-hbspt', function () {
 function hubspot_labels() {
     //turn autocomplete off for forms on all browsers, except Chrome
     jQuery('form').attr('autocomplete','off');
-    jQuery('input, .hs-input').attr('autocomplete','off');
+    jQuery('.hbspt-form input, .hs-input').attr('autocomplete','off');
 
-    jQuery('input, .hs-input').prop('readonly', true);
+    jQuery('.hbspt-form input, .hs-input').prop('readonly', true);
 
     //turn autocomplete off for forms for Chrome 
     //based on a browser bug noted here: https://bugs.chromium.org/p/chromium/issues/detail?id=370363#c7

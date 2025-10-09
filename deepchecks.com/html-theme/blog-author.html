@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Blog Author | Deepchecks</title>
+        <meta name="theme-color" content="#1e0052">
+        <meta charset="utf-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name='robots' content='noindex, nofollow' />
+        <meta name="description" content="Continuous validation for LLMs &amp; AI. Validate and monitor your data and models during training, production and new version releases." class="yoast-seo-meta-tag" />
+    
+        <link rel='stylesheet' id='style-main-css' href='assets/css/main.css' type='text/css' media='screen' />        
+        <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script> 
+
+        <link rel="icon" href="assets/favicons/favicon.png" sizes="32x32">
+        <link rel="icon" href="assets/favicons/apple-touch-icon.png" sizes="192x192">
+        <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+        <link rel="icon" href="upload/cropped-favicon-150x150.png" sizes="32x32" />
+        <link rel="icon" href="upload/cropped-favicon-300x300.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="upload/cropped-favicon-300x300.png" />
+        <meta name="msapplication-TileImage" content="upload/cropped-favicon-300x300.png" />   
+    </head>
+
+	<body class="body-wrapper-bg">
+        <header class="main-header">
+            <div class="header-note">
+                <div class="container">
+                    <div class="note-text">
+                        <div class="d-inline-flex justify-content-center align-items-center text-left">What’s new <span class="line">|</span> <a href="https://deepchecks.com/deepchecks-new-major-release-evaluation-for-llm-based-apps/"><span class="text text-left">Deepchecks’ New Major Release: Evaluation for LLM-Based Apps! <span class="btn-icon"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25 9H14.75" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /><path d="M9.5 3.75L14.75 9L9.5 14.25" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span></span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav-wrap">
+                <nav class="navbar navbar-expand-xl navbar-light">
+                    <div class="container">
+                        <div class="header-first-block">
+                            <button class="sidebar-icon toggle-sidebar d-inline-block d-xl-none"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+                            <a class="header-logo" href="/" title="Deepchecks | Continuous Validation for Machine Learning" rel="home"><img src="https://deepchecks.com/wp-content/themes/deepchecks/assets/images/logo.svg" alt="Deepchecks" /></a>
+                            <div class="menu-list">
+                                <ul id="menu-header-menu-new-2024" class="mainMenu navbar-nav me-auto">
+                                    <li class="menu-item-has-children"><a href="/ml-monitoring/">Products</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/llm-evaluation/">LLM Evaluation</a></li>
+                                            <li><a href="/ml-monitoring/">ML Monitoring</a></li>
+                                            <li><a href="/open-source/">Open Source Testing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="/solutions/testing/">Solutions</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/solutions/testing/">Testing</a></li>
+                                            <li><a href="/solutions/ci-cd/">CI/CD</a></li>
+                                            <li><a href="/solutions/monitoring/">Monitoring</a></li>
+                                            <li><a href="/solutions/analysis/">Root Cause Analysis</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/pricing/">Pricing</a></li>
+                                    <li class="menu-item-has-children"><a href="/about/">Company</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/about/">About Us</a></li>
+                                            <li><a href="/careers/">Careers</a></li>
+                                            <li><a href="/contact-us/">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="/blog/">Resources</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/docs/">Docs</a></li>
+                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a target="_blank" rel="noopener" href="https://checks-demo.deepchecks.com/?check=Train+Test+Label+Drift+%28distribution%29">Checks Demo 🔗</a></li>
+                                            <li><a href="/llm-tools/">LLM Tools</a></li>
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                            <li><a href="/events/">Events</a></li>
+                                            <li><a href="/questions/">FAQs</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav navbar-nav-right">
+                                    <li class="nav-item"><a href="https://github.com/deepchecks/deepchecks" class="btn btn-dark-outline github-btn _ga-github-event _ga-hero-github-event" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open source ML Testing"><img class="btn-icon" src="https://www.deepchecks.com//wp-content/uploads/2021/12/github-icon.svg" alt="[gitcount]" /><span class="review-text">3.2K</span></a></li>
+                                    <li class="nav-item"><a href="/llm-evaluation/" class="btn btn-primary  _ga-top-get-started-event " target="_parent">Try LLM Evaluation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="bg-overly"></div>
+        <main class="main-content-wrapper">
+            <section class="page-header-section purple-header-section">
+                <div class="container">
+                    <div class="author-info-block">
+                        <div class="author-img">
+                            <img src="upload/img-author-john-doe.jpg" alt="John Doe" />
+                        </div>
+                        <div class="author-info">
+                            <h1 class="h2">John Doe</h1>
+                            <div class="designation">Content Operations Specialist</div>
+                            <div class="sort-info">John is a Content Operations Specialist at ClickUp. She is constantly tinkering with AI and is closely tracking the evolving landscape of AI technology and its impact on productivity. When he isn’t working, you'll likely find him enjoying a long drive or discovering new cuisines.</div>
+                            <div class="share-btns">
+                                <div class="pr-3">
+                                    <a href="#" title="Share on LinkedIn" data-bs-toggle="tooltip"><img src="assets/images/linkedin.svg" alt="LinkedIn"></a>
+                                </div>
+                                <div>
+                                    <a href="#" title="Share on Twitter" data-bs-toggle="tooltip"><img src="assets/images/twitter.svg" alt="Twitter"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <div class="post-list">
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a class="post-thumb-img" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">
+                            <img src="https://www.deepchecks.com/wp-content/uploads/2025/10/post-orchestrating-multi-step-llm-chains-best-practices-for-complex-workflows-400x180.jpg" class="thumb wp-post-image" alt="Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows" /> 
+                        </a>
+                        <div class="blog-post-inner">
+                            <div class="post-date d-flex justify-content-between">
+                                October 09, 2025 <span class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z" stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 8 mins</span>
+                            </div>
+                            <div class="post-title">
+                                <a class="stretched-link" href="https://www.deepchecks.com/orchestrating-multi-step-llm-chains-best-practices/">Orchestrating Multi-Step LLM Chains: Best Practices for Complex Workflows</a>
+                            </div>
+                            <a href="#" class="post-meta"><img alt="Deepchecks Community Blog" src="https://deepchecks.com/wp-content/uploads/2022/04/avatar-96x96.png"> Deepchecks Community Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="html-section pt-0">
+                <div class="container">
+                    <div class="main-title text-center mb-5">
+                        <h2>Featured Authors</h2>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-sm-6 col-lg-4">
+                            <a href="#" class="author-card">
+                                <div class="author-img">
+                                    <img src="upload/img-author-john-doe.jpg" alt="Name Surname">
+                                </div>
+                                <div class="author-info">
+                                    <div class="name">Name <strong>Surname</strong></div>
+                                    <div class="designation">Head of Content</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <a href="#" class="author-card">
+                                <div class="author-img">
+                                    <img src="upload/img-author-john-doe.jpg" alt="Name Surname">
+                                </div>
+                                <div class="author-info">
+                                    <div class="name">Name <strong>Surname</strong></div>
+                                    <div class="designation">Head of Content</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <a href="#" class="author-card">
+                                <div class="author-img">
+                                    <img src="upload/img-author-john-doe.jpg" alt="Name Surname">
+                                </div>
+                                <div class="author-info">
+                                    <div class="name">Name <strong>Surname</strong></div>
+                                    <div class="designation">Head of Content</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER SECTION -->
+        <footer class="main-footer">
+            <img src="assets/images/logo-white.svg" alt="Deepchecks" class="footer-bg-logo" />
+            <div class="container">
+                <div class="footer-link-section">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-2 col-lg-1">
+                            <a href="/" title="Deepchecks | Continuous Validation for Machine Learning" rel="home" class="footer-logo wow fadeInUp"><img src="assets/images/logo-white.svg" alt="Deepchecks"></a>
+                        </div>
+                        <div class="col-md-10 col-lg-8">
+                            <div class="row gutters-5">
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-products-footer-container">
+                                        <ul id="menu-products-footer" class="menu">
+                                            <li class="footer-title"><a href="/deepchecks-hub/">Products</a></li>
+                                            <li><a href="/solutions/llm-evaluation/">LLM Evaluation</a></li>
+                                            <li><a href="/deepchecks-hub/">Deepchecks Hub</a></li>
+                                            <li><a href="/open-source/">Open Source</a></li>
+                                            <li><a href="/pricing/">Pricing</a></li>
+                                            <li><a href="/book-demo/">Book a Demo</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-solutions-footer-container">
+                                        <ul id="menu-solutions-footer" class="menu">
+                                            <li class="footer-title"><a href="/solutions/testing/">Solutions</a></li>
+                                            <li><a href="/solutions/testing/">Testing</a></li>
+                                            <li><a href="/solutions/ci-cd/">CI/CD</a></li>
+                                            <li><a href="/solutions/monitoring/">Monitoring</a></li>
+                                            <li><a href="/solutions/analysis/">Root Cause Analysis</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">                                    
+                                    <div class="menu-company-footer-container">
+                                        <ul id="menu-company-footer" class="menu">
+                                            <li class="footer-title"><a href="/about/">Company</a></li>
+                                            <li><a href="/about/">About Us</a></li>
+                                            <li><a href="/careers/">Careers</a></li>
+                                            <li><a href="/contact-us/">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 widget widget_nav_menu">
+                                    <div class="menu-resources-footer-container">
+                                        <ul id="menu-resources-footer" class="menu">
+                                            <li class="footer-title"><a href="/blog/">Resources</a></li>
+                                            <li><a href="/docs/">Docs</a></li>
+                                            <li><a href="/blog/">Blog</a></li>
+                                            <li><a target="_blank" rel="noopener" href="https://checks-demo.deepchecks.com/?check=Train+Test+Label+Drift+%28distribution%29">Checks Demo 🔗</a></li>
+                                            <li><a href="/llm-tools/">LLM Tools</a></li>
+                                            <li><a href="/glossary/">Glossary</a></li>
+                                            <li><a href="/events/">Events</a></li>
+                                            <li><a href="/questions/">FAQs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-3">
+                            <ul class="social-icon">
+                                <li><a href="https://github.com/deepchecks/deepchecks" target="_blank" title="GitHub" data-bs-toggle="tooltip"><img src="assets/images/github.svg" alt="github" /></a></li>
+                                <li><a href="https://www.linkedin.com/company/deepchecks/" target="_blank" title="LinkedIn" data-bs-toggle="tooltip"><img src="assets/images/linkedin.svg" alt="linkedin" /></a></li>
+                                <li><a href="https://twitter.com/deepchecks" target="_blank" title="Twitter" data-bs-toggle="tooltip"><img src="assets/images/twitter.svg" alt="twitter" /></a></li>
+                                <li><a href="https://www.facebook.com/deepchecks/" target="_blank" title="Facebook" data-bs-toggle="tooltip"><img src="assets/images/facbook.svg" alt="Facebook" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul id="menu-footer-menu" class="footer-links">
+                                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                                <li><a href="/cookies-policy/">Cookies Policy</a></li>
+                                <li><a href="/terms-and-conditions/">Terms &#038; Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                            <p>© 2024 Deepchecks AI. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a href="#top" class="back-to-top"><em class="icon-arrow-up"></em></a>
+        <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js" id="icw-bootstrap-bundle-js"></script>
+        <script type="text/javascript" src="assets/js/glightbox.min.js" id="icw-glightbox-js"></script>
+        <script type="text/javascript" src="assets/js/all-jquery.js" id="all-jquery-js"></script>
+        <script type="text/javascript" src="assets/js/main.js?v10" id="script-main-js"></script>
+    </body>
+
+</html>
