@@ -1,0 +1,59 @@
+.main-header {
+    position: fixed;
+    width: 100%;
+    &.fixed-header {
+        .navbar {
+            transition: background-color 0.2s, ease-in-out;
+            background-color: rgba(0, 0, 0, 0.60) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    }
+    .navbar {
+        width: 92%;
+        margin: 8px auto;
+        padding: 15px 16px;
+        @include border-radius(12px);
+        background-color: transparent;
+        .navbar-brand {
+            padding: 0;
+            img {
+                width: 100%;
+                max-height: 26px;
+            }
+        }
+        .menu-sidebar {
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+        .navbar-collapse {
+            .main-menu {
+                width: 100%;
+                @include justify-content(center);
+                li {
+                    padding: 0 16px;
+                    a {
+                        color: #cecece;
+                        text-decoration: none;
+                        font-size: 16px;
+	                    @include transition(0.2s, ease-in-out);
+                        &:hover, &:focus {
+                            color: $white;
+                        }
+                    }
+                    &.current-menu-item {
+                        a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .right-menu {
+                margin-left: auto;
+                @include flexbox;
+                white-space: nowrap;
+            }
+        }
+    }
+}
