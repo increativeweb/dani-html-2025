@@ -15,6 +15,9 @@
         padding: 15px 16px;
         @include border-radius(12px);
         background-color: transparent;
+        @media (max-width: 992px) {
+            padding: 15px 0;
+        }
         .navbar-brand {
             padding: 0;
             img {
@@ -25,6 +28,33 @@
         .menu-sidebar {
             @media (min-width: 992px) {
                 display: none;
+            }
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            z-index: 10;
+            &.is-visible {
+                span:nth-child(1) {
+                    @include transform(rotate(-45deg) translate(-5px, 5px));
+                }
+                span:nth-child(2) {
+                    @include opacity(0);
+                    visibility: hidden;
+                }
+                span:nth-child(3) {
+                    @include transform(rotate(45deg) translate(-6px, -6.5px));
+                }
+            }
+            span {
+                width: 24px;
+                height: 2px;
+                margin: 6px 0;
+                background-color: #f1f1f1;
+                @include border-radius(4px);
+                display: block;
+                @include transition(0.4s, ease-in-out);
             }
         }
         .navbar-collapse {
