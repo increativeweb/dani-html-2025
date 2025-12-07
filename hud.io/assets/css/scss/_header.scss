@@ -1,6 +1,7 @@
 .main-header {
     position: fixed;
     width: 100%;
+    z-index: 999;
     &.fixed-header {
         .navbar {
             transition: background-color 0.2s, ease-in-out;
