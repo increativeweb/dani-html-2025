@@ -30,3 +30,25 @@ jQuery(document).ready(function($) {
     });
 
 });
+
+var main = new Splide("#hero-img-slider", {
+    type: "loop",
+    pagination: false,
+    arrows: false,
+    autoWidth: true,
+    gap: '15px'
+});
+
+var thumbnails = new Splide("#thumbnail-info-slider", {
+    type: "slide",
+    direction: "ttb",
+    height: "100%",
+    perPage: 3,
+    wheel: false,
+    arrows: false,
+    isNavigation: true,
+});
+
+main.sync(thumbnails);
+main.mount();
+thumbnails.mount();

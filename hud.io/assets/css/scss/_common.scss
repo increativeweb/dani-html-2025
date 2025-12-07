@@ -272,3 +272,65 @@ img {
         }
     }
 }
+
+// Heading CSS
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+    line-height: 1.2;
+}
+h1, .h1 {
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 1;
+    @media (min-width: 1440px) { 
+        font-size: 56px;
+    }
+    @media (min-width: 1920px) { 
+        font-size: 80px;
+    }    
+    @media (max-width: 1200px) { 
+        font-size: 52px;
+    }
+    &.font-sm {
+        font-size: 54px;
+        @media (max-width: 992px) { 
+            font-size: 42px;
+        }
+        @media (max-width: 767px) { 
+            font-size: 40px;
+        }
+    }
+}
+h2, .h2 {
+    font-size: 44px;
+    font-weight: 500;
+    @media (max-width: 992px) { 
+        font-size: 36px;
+    }
+    @media (max-width: 767px) { 
+        font-size: 28px;
+    }
+    &.font-sm {
+        font-size: 30px;
+        @media (max-width: 767px) { 
+            font-size: 20px;
+        }
+    }
+}
+h3, .h3 {
+    font-size: 22px;
+    font-weight: 400;
+    @media (max-width: 992px) { 
+        font-size: 20px;
+    }
+}
+h4, .h4 {
+    font-size: 22px;
+    font-weight: 500;
+    @media (max-width: 1200px) { 
+        font-size: 18px;
+    }
+}
+h5, .h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
