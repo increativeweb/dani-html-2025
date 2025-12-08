@@ -1,0 +1,311 @@
+.page-wrapper {
+    background-color: var(--black);
+    color: var(--text-white);
+    background-image: url(../images/img-top-bg-vector.svg);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+
+.main-content-wrapper {
+    min-height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+}
+
+// Main Section CSS
+.theme-section,
+.main-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 75vh;
+
+    @media (max-width: 1200px) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &.bg-none:not(.bg-custom) {
+        background-image: none !important;
+    }
+
+    &.is-light {
+        *:not(a, a > *) {
+            color: #fff;
+        }
+
+        .section-title {
+            *:not(a, a > *) {
+                color: #fff;
+            }
+
+            a:not(.btn) {
+                color: $primary;
+
+                &:hover,
+                &:focus {
+                    color: $black;
+                }
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: $white;
+            }
+
+            .sort-info {
+                color: $white !important;
+            }
+        }
+
+        .text-color {
+            color: $white !important;
+        }
+    }
+
+    &.bg-custom {
+        background-color: var(--gs-bg, #fff) !important;
+    }
+
+    &.is-custom {
+        *:not(a) {
+            color: var(--gs-text, #fff);
+        }
+
+        .section-title {
+            *:not(a) {
+                color: var(--gs-text, #fff);
+            }
+        }
+    }
+
+    &.section-title-mw-400 {
+        .section-title {
+            max-width: 400px;
+        }
+    }
+
+    &.section-title-mw-500 {
+        .section-title {
+            max-width: 520px;
+        }
+    }
+
+    &.section-title-mw-560 {
+        .section-title {
+            max-width: 560px;
+        }
+    }
+
+    &.section-title-mw-600 {
+        .section-title {
+            max-width: 600px;
+        }
+    }
+
+    &.section-title-mw-700 {
+        .section-title {
+            max-width: 700px;
+        }
+    }
+
+    &.section-title-mw-800 {
+        .section-title {
+            max-width: 800px;
+        }
+    }
+
+    &.section-title-mw-90 {
+        .section-title {
+            max-width: 90%;
+        }
+    }
+
+    @media (max-width:767px) {
+        &.m-container-full {
+            .container {
+                max-width: 100%;
+            }
+        }
+
+        &.m-text-center .section-title {
+            text-align: center !important;
+        }
+
+        &.m-row-column-reverse {
+            &>.container>.row {
+                @include flex-direction(column-reverse);
+            }
+        }
+
+        &.bg-none-m {
+            background-image: none !important;
+        }
+
+        &.b-radius-dark,
+        &.b-radius-light {
+            @include border-radius(0 0 24px 24px);
+        }
+    }
+
+    &.full-width-section {
+        max-width: 100%;
+        margin: 0 6vw;
+
+        &.with-border {
+            border-top: 1px solid #D4D6E5;
+            border-bottom: 1px solid #D4D6E5;
+        }
+
+        @media (max-width: 1400px) {
+            margin: 0 2vw;
+        }
+
+        @media (max-width: 992px) {
+            margin: 0;
+        }
+
+        .full-content-block {
+            &.with-border {
+                border-top: 1px solid #D4D6E5;
+                border-bottom: 1px solid #D4D6E5;
+            }
+
+            .section-title {
+                padding-top: 100px;
+                padding-bottom: 100px;
+
+                @media (max-width: 992px) {
+                    padding-top: 72px;
+                    padding-bottom: 0;
+                }
+
+                @media (max-width: 767px) {
+                    padding-top: 50.08px;
+                }
+            }
+        }
+    }
+}
+
+// Section Title CSS
+.section-title {
+    margin-bottom: 40px;
+
+    @media (max-width: 992px) {
+        margin-bottom: 30px;
+    }
+
+    &.text-center {
+        margin: 0 auto 40px;
+
+        @media (max-width: 992px) {
+            margin: 0 auto 30px;
+        }
+    }
+
+    &.sticky-title {
+        position: sticky;
+        top: 150px;
+    }
+
+    &.d-flex {
+        @include align-items(flex-start);
+        gap: 70px;
+
+        @media (max-width: 992px) {
+            @include flex-direction(column);
+            gap: 20px;
+        }
+
+        &>* {
+            flex: 1;
+            margin-bottom: 0 !important;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .sort-info {
+            margin-top: 6px;
+
+            p {
+                max-width: 650px;
+
+                @media (max-width: 992px) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .tag-line {
+        font-size: 16px;
+        font-weight: 500;
+        color: $primary;
+        margin-bottom: 8px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        margin-bottom: 15px;
+        color: $primary;
+    }
+
+    .sort-info {
+
+        // margin-bottom: 30px;  
+        h3 {
+            font-family: $bodyfont;
+            font-weight: 400;
+        }
+
+        h4 {
+            margin-bottom: 15.008px;
+            font-family: $bodyfont;
+        }
+
+        img {
+            margin-top: 30px;
+        }
+
+        a {
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+    }
+
+    .categories-list {
+        margin-top: 20px;
+    }
+
+    .action {
+        margin-top: 30px;
+
+        @media (max-width: 767px) {
+            margin-top: 24px;
+
+            .btn {
+                // width: 100%;
+            }
+        }
+    }
+}
+
+.page-header {
+    padding: 90px 0;
+
+    .page-title {
+        h1 {
+            color: $primary;
+        }
+    }
+}
