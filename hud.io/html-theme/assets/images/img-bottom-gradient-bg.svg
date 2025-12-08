@@ -1,0 +1,33 @@
+<svg width="355" height="353" viewBox="0 0 355 353" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_745_3789)">
+<g filter="url(#filter0_f_745_3789)">
+<ellipse cx="107.708" cy="87.8912" rx="107.708" ry="87.8912" transform="matrix(0.974172 0.225809 0.225809 -0.974172 -82 336.242)" fill="#F9BFF9"/>
+</g>
+<g filter="url(#filter1_f_745_3789)">
+<ellipse cx="168.668" cy="125.155" rx="168.668" ry="125.155" transform="matrix(0.974172 0.225809 0.225809 -0.974172 -7.09326 430.845)" fill="#4CC2EF"/>
+</g>
+<g filter="url(#filter2_f_745_3789)">
+<ellipse cx="124.985" cy="94.1624" rx="124.985" ry="94.1624" transform="matrix(0.974172 0.225809 0.225809 -0.974172 256 328.461)" fill="#733BD2"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_745_3789" x="-190.182" y="59.7627" width="465.909" height="430.36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="63.0743" result="effect1_foregroundBlur_745_3789"/>
+</filter>
+<filter id="filter1_f_745_3789" x="-107.42" y="93.0937" width="585.799" height="507.831" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="63.0743" result="effect1_foregroundBlur_745_3789"/>
+</filter>
+<filter id="filter2_f_745_3789" x="149.251" y="42.8052" width="499.537" height="444.296" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="63.0743" result="effect1_foregroundBlur_745_3789"/>
+</filter>
+<clipPath id="clip0_745_3789">
+<rect width="353" height="355" fill="white" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 0)"/>
+</clipPath>
+</defs>
+</svg>

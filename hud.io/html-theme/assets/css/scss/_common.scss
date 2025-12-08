@@ -37,8 +37,8 @@ section {
 
 body {
     margin: 0;
-    // background-color: var(--white);
-    color: var(--text-black);
+    background-color: var(--black);
+    color: var(--text-white);
     font-family: 'PP Neue Montreal', Arial, sans-serif;
     font-size: 1rem;
     font-weight: 500;
@@ -66,6 +66,7 @@ body {
         background-position: 50% 0;
         background-repeat: no-repeat;
         background-size: 110%;
+        z-index: -1;
     }
 }
 
@@ -384,38 +385,19 @@ img {
     @include inline-flex;
     @include align-items(center);
     @include justify-content(center);
-    @include border-radius(8px);
-    border: 1px solid transparent;
+    @include border-radius(0.5rem);
+    border: 0.1rem solid transparent;
     transition: background-color .2s;
-    min-height: 44px;
-    min-width: 100px;
+    min-height: 2.75rem;
+    min-width: 6.25rem;
     font-weight: 500;
-    font-size: 1.05rem;
+    font-size: 1rem;
     padding: .75rem 1.6rem;
     line-height: 1;
-
-    .icw-icon {
-        margin-right: 10px;
-        @include transition(0.1s, ease-in-out);
-    }
-
-    .icon-arrow {
-        background: url('data:image/svg+xml,<svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5.36364 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
-        width: 4px;
-        height: 8px;
-        @include inline-flex;
-        margin-left: 10px;
-        @include transition(0.1s, ease-in-out);
-        margin-top: 1px;
-    }
-
+    gap: 10px;
     &:hover,
     &:focus {
         opacity: 0.8;
-
-        .icon-arrow {
-            @include transform(translateX(5px));
-        }
     }
 
     &.btn-sm {
@@ -432,9 +414,17 @@ img {
     }
 
     &.btn-outline-primary {
-        color: var(--purple) !important;
-        border-color: var(purple-2) !important;
-        background-color: var(purple-2) !important;
+        z-index: 1;
+        color: var(--white) !important;
+        border: 1px solid transparent;
+        background-image: linear-gradient(var(--black), var(--black)), linear-gradient(174deg,var(--white),#f9baf9 52%,#9470fd);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        &:hover, &:focus {
+            opacity: 1;
+            background-size: 600% 100%;
+            background-position: 0% 0;
+        }
     }
 
     &.btn-white {
@@ -448,89 +438,24 @@ img {
         border-color: var(--black) !important;
         background-color: var(--black) !important;
     }
-}
 
-.btn-link-arrow {
-    display: block;
-    @include border-radius(0);
-    position: relative;
-    box-shadow: none;
-    text-decoration: none;
-    @include inline-flex;
-    @include justify-content(stretch);
-    @include align-items(center);
-    @include flex-wrap(nowrap);
-    position: relative;
-    text-align: center;
-    padding: 0 18.4px 0 0;
-    text-decoration: none;
-    border: none;
-    background-color: transparent;
-    transition: all 0.3s, background-size 0.2s linear 0.15s;
-    color: $black;
-    font-size: 15px;
-    font-weight: 600;
-
-    svg {
-        line-height: 1;
-        width: 24px;
-        height: 24px;
-        margin-top: 0px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        @include transform(translateY(-50%));
-        fill: none;
-        stroke: $black;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 1px;
-        stroke-dasharray: 7.95 30;
-        stroke-dashoffset: var(--stroke-dashoffset, 46);
-        transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
-    }
-
-    &::before {
-        content: '';
-        position: relative;
-        display: inline-block;
-        background: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25863 1.08123L4.24607 1.5007C4.27622 1.74427 4.47864 1.9323 4.72378 1.94445L9.36068 1.69416L0.769123 10.943C0.584853 11.1414 0.616683 11.4481 0.786714 11.606L1.0782 11.8768C1.27252 12.0573 1.55646 12.0439 1.74073 11.8456L10.3323 2.59672L10.4482 7.26203C10.4864 7.51313 10.6807 7.69364 10.934 7.71331L11.3433 7.66239C11.5965 7.68206 11.8192 7.44237 11.804 7.16648L11.6412 0.733062C11.6336 0.448903 11.4312 0.26087 11.1554 0.281782L4.7193 0.585317C4.44304 0.590443 4.22038 0.830136 4.25863 1.08123Z" fill="black"/></svg>') no-repeat center right;
-        @include transition(0.3s, ease-in-out);
-        background-size: 10.4px !important;
-        width: 17.6px;
-        height: 10.4px;
-        position: absolute;
-        top: 50%;
-        @include transform(translateY(-50%));
-        right: 0;
-        transition: opacity 0.3s .15s;
-    }
-
-    &.text-white {
+    &.btn-link-arrow {
+        background-color: transparent;
+        border-color: transparent;
         color: $white;
-
-        svg {
-            stroke: $white;
+        padding: .75rem 0;
+        .icon-arrow {
+            background: url('../images/icons/icon-arrow-up.svg') no-repeat center center;
+            background-size: contain !important;
+            width: 12px;
+            height: 12px;
+	        @include transition(0.2s, ease-in-out);
         }
-
-        &::before {
-            background: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25863 1.08123L4.24607 1.5007C4.27622 1.74427 4.47864 1.9323 4.72378 1.94445L9.36068 1.69416L0.769123 10.943C0.584853 11.1414 0.616683 11.4481 0.786714 11.606L1.0782 11.8768C1.27252 12.0573 1.55646 12.0439 1.74073 11.8456L10.3323 2.59672L10.4482 7.26203C10.4864 7.51313 10.6807 7.69364 10.934 7.71331L11.3433 7.66239C11.5965 7.68206 11.8192 7.44237 11.804 7.16648L11.6412 0.733062C11.6336 0.448903 11.4312 0.26087 11.1554 0.281782L4.7193 0.585317C4.44304 0.590443 4.22038 0.830136 4.25863 1.08123Z" fill="white"/></svg>') no-repeat center right;
-        }
-    }
-
-    &:hover,
-    &:focus {
-        background-size: 0% 1px;
-        transition-delay: 0s;
-        --stroke-dashoffset: 26;
-        --stroke-duration: .3s;
-        --stroke-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
-        --stroke-delay: .195s;
-        color: $primary;
-
-        &::before {
-            opacity: 0;
-            transition-delay: 0s;
+        &:hover, &:focus {
+            .icon-arrow {            
+                @include transform(rotate(45deg));
+                opacity: 0.75;
+            }
         }
     }
 }
@@ -999,38 +924,51 @@ h5,
 
 h1,
 .h1 {
-    font-size: 45px;
-    font-weight: 700;
-    line-height: 1.2;
-
-    @media (max-width: 1400px) {
-        font-size: 36px;
+    font-size: 3.375rem;
+    font-weight: 500;
+    line-height: 1;
+    @media (min-width: 1440px) { 
+        font-size: 3.5rem;
     }
-
-    @media (max-width: 767px) {
-        font-size: 30px;
+    @media (min-width: 1920px) { 
+        font-size: 5rem;
+    }    
+    @media (max-width: 1200px) { 
+        font-size: 3.25rem;
+    }
+    &.font-sm {
+        font-size: 3.375rem;
+        @media (max-width: 992px) { 
+            font-size: 2.625rem;
+        }
+        @media (max-width: 767px) { 
+            font-size: 2.5rem;
+        }
     }
 }
 
 h2,
 .h2 {
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 3.4rem;
+    font-weight: 500;
     line-height: 1.1;
 
-    @media (max-width: 1200px) {
-        font-size: 28px;
+    @media (max-width: 992px) {
+        font-size: 2.75rem;
     }
 
     @media (max-width: 767px) {
-        font-size: 24px;
+        font-size: 2.25rem;
+    }
+    @media (max-width: 479px) {
+        font-size: 3rem;
     }
 }
 
 h3,
 .h3 {
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 500;
 
     @media (max-width: 1200px) {
         font-size: 24px;
