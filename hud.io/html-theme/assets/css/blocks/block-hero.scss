@@ -17,7 +17,7 @@
         }
         .sort-info {
             font-size: 1.1rem;
-            color: #f1f1f1;
+            color: var(--text-white);
         }
         .action {
             margin-top: 1.875rem;
@@ -62,7 +62,7 @@
                 .title {
                     font-size: 1rem;
                     line-height: 1.3;
-                    color: #f1f1f1;
+                    color: var(--text-white);
                 }
                 p {
                     font-size: 0.938rem;
@@ -74,7 +74,7 @@
             border: none !important;
             &.is-active {
                 .slide-thumb-info {
-                    background-color: #1d2428;
+                    background-color: var(--blue-gray);
                     background-image: linear-gradient(rgba(65, 147, 188, 0), rgba(65, 147, 188, 0.161));
                     &::before {
                         animation-name: progressBar;
@@ -96,7 +96,7 @@
             background-position: top left;
             background-size: cover !important;
             border-radius: 1.063rem;
-            border: 0.063rem solid #aa80fd;
+            border: 0.063rem solid var(--purple-3);
             padding: 0.938rem 0.938rem 0.938rem 0;
             margin-left: 3.75rem;
             @media (max-width: 1200px) {
@@ -119,6 +119,9 @@
                     margin-left: 1.5rem !important;
                 }
             }
+            .splide__pagination {
+                bottom: -55px;
+            }
             .splide__track {
                 // border-radius: 0.938rem;
                 z-index: 1;
@@ -139,7 +142,7 @@
                     .title {
                         font-size: 1.5rem;
                         line-height: 1.3;
-                        color: #f1f1f1;
+                        color: var(--text-white);
                         margin-bottom: 0.2rem;
                         @media (max-width: 767px) {                            
                             font-size: 1.125rem;

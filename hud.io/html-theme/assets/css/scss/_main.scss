@@ -234,7 +234,6 @@
 
         .sort-info {
             margin-top: 6px;
-
             p {
                 max-width: 650px;
 
@@ -255,11 +254,12 @@
     h1,
     h2,
     h3 {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     .sort-info {
 
+        font-size: 1.2rem;
         // margin-bottom: 30px;  
         h3 {
             font-family: $bodyfont;
@@ -305,5 +305,18 @@
         h1 {
             color: $primary;
         }
+    }
+}
+.bg-gradient-block {
+    background-image: url('../images/img-full-bg-gradient.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 3rem 0;
+    @media (max-width: 992px) {
+        padding: 1rem;
+    }
+    .inner-section {
+        border-radius: 20px;
+        overflow: hidden;
     }
 }

@@ -76,6 +76,29 @@ jQuery(document).ready(function ($) {
 
 });
 
+// Splide Slider
+if ($('.splide:not(.splide-js)').length) {
+    $('.splide:not(.splide-js)').each(function() {
+        new Splide(this).mount();
+        $(this).addClass('icw_splide-with-data'); // Mark as initialized
+    });
+}
+
+// Video Player
+if ($('.play-iframe').length){
+    $('.play-iframe').click(function(ev){	
+        videourl = $(this).data('videosrc')+"?api=1&autoplay=1&muted=1&rel=0&enablejsapi=1";
+        if($(this).data('ext') == 'mp4'){
+            video = '<div class="video-wrap"><video class="embed-responsive-item w-100" controls autoplay playsinline controlsList="nodownload" oncontextmenu="return false;"><source src="'+videourl+'" type="video/mp4"></video></div>';
+        } else {
+            video = '<div class="video-wrap"><iframe class="embed-responsive-item play-in_iframe" allow="autoplay" src="'+videourl+'" controls="0" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>';
+        }  
+        
+        $(this).parents('.media-block').html(video);
+        ev.preventDefault();
+    });
+}
+
 
 (function () {
     const navbar = document.querySelector(".navbar");
