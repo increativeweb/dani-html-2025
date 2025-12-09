@@ -6,19 +6,19 @@ var $ = jQuery.noConflict();
 jQuery(document).ready(function ($) {
     $('[data-bs-toggle="tooltip"]').tooltip(); 
     if ($('.main-header').length) {
-        if (jQuery(this).scrollTop() > 50) {
-            $(".main-header").addClass("fixed-header");
-        } else {
-            $(".main-header").removeClass("fixed-header");
-        }
+        // if (jQuery(this).scrollTop() > 50) {
+        //     $(".main-header").addClass("fixed-header");
+        // } else {
+        //     $(".main-header").removeClass("fixed-header");
+        // }
 
-        $(window).scroll(function () {
-            if (jQuery(this).scrollTop() > 50) {
-                $(".main-header").addClass("fixed-header");
-            } else {
-                $(".main-header").removeClass("fixed-header");
-            }
-        });
+        // $(window).scroll(function () {
+        //     if (jQuery(this).scrollTop() > 50) {
+        //         $(".main-header").addClass("fixed-header");
+        //     } else {
+        //         $(".main-header").removeClass("fixed-header");
+        //     }
+        // });
         $('.navbar-toggler').on('click',function(){
             $(".main-header").toggleClass('is-visible');
             $(".bg-overlay").toggleClass('is-visible');
@@ -76,38 +76,6 @@ jQuery(document).ready(function ($) {
 
 });
 
-if($('.hero-header-section').length) {
-    var main = new Splide("#hero-img-slider", {
-        type: "loop",
-        pagination: false,
-        arrows: false,
-        autoWidth: true,
-        rewind: false,
-        gap: '15px',
-        isNavigation: false,
-        autoplay: true,
-        interval: 5000,
-        breakpoints: {
-            992: {
-                autoWidth: false,
-            },
-        }
-    });
-
-    var thumbnails = new Splide("#thumbnail-info-slider", {
-        type: "slide",
-        direction: "ttb",
-        height: "100%",
-        perPage: 3,
-        wheel: false,
-        arrows: false,
-        isNavigation: true,
-    });
-
-    main.sync(thumbnails);
-    main.mount();
-    thumbnails.mount();
-}
 
 (function () {
     const navbar = document.querySelector(".navbar");

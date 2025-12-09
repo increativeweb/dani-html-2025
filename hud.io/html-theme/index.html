@@ -15,6 +15,7 @@
     <link rel='stylesheet' id='icw-splide-css' href='assets/css/splide.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />
     <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+    <script type="text/javascript" src="assets/js/splide.min.js" id="icw-splide-js"></script>
 
 </head>
 
@@ -50,8 +51,8 @@
         <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
     </header>
     <main id="main-content" class="main-content-wrapper">
-        <link rel='stylesheet' href='assets/css/block-hero.css' type='text/css' media='all' />
-        <section data-theme="dark" class="theme-section hero-header-section">
+        <link rel='stylesheet' href='assets/css/blocks/block-hero.css' type='text/css' media='all' />
+        <section data-theme="dark" class="theme-section hero-section">
             <div class="container">
                 <div class="row g-xl-5">
                     <div class="col-lg-5 col-xl-6">
@@ -150,18 +151,54 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    if(jQuery('.hero-section').length) {
+                        var main = new Splide("#hero-img-slider", {
+                            type: "loop",
+                            pagination: false,
+                            arrows: false,
+                            autoWidth: true,
+                            rewind: false,
+                            gap: '15px',
+                            padding: '0.938rem',
+                            isNavigation: false,
+                            autoplay: true,
+                            interval: 5000,
+                            breakpoints: {
+                                992: {
+                                    autoWidth: false,
+                                    pagination: true,
+                                },
+                            }
+                        });
+
+                        var thumbnails = new Splide("#thumbnail-info-slider", {
+                            type: "slide",
+                            direction: "ttb",
+                            height: "100%",
+                            perPage: 3,
+                            wheel: false,
+                            arrows: false,
+                            isNavigation: true,
+                        });
+
+                        main.sync(thumbnails);
+                        main.mount();
+                        thumbnails.mount();
+                    }
+                </script>
             </div>
         </section>
-        <link rel='stylesheet' href='assets/css/block-image-content-card.css' type='text/css' media='all' />
-        <section data-theme="dark" class="theme-section bg-black">
+        <link rel='stylesheet' href='assets/css/blocks/block-morden-card.css' type='text/css' media='all' />
+        <section data-theme="dark" class="theme-section morden-card-section">
             <div class="container">
                 <div class="section-title text-center">
                     <h2>Production aware by design</h2>
                 </div>
-                <div class="image-content-blocks">
+                <div class="morden-card-blocks">
                     <div class="row">
                         <div class="col-12">
-                            <div class="image-content-card br-bg-card">
+                            <div class="morden-card br-bg-card">
                                 <div class="card-content">
                                     <h3>Function-level data</h3>
                                     <div class="sort-info">Hud was built with a fresh new approach by a team of OS internals experts to follow the behavior of each function, so whatever code the AI agent is reasoning over - it has ubiquitous production data.</div>
@@ -171,21 +208,20 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-lg-6">
-                            <div class="image-content-card flex-column br-bg-card">
+                        <div class="col-lg-6 with-arrow">
+                            <div class="morden-card flex-column br-bg-card">
                                 <div class="card-content">
                                     <h3>Connecting business-to-code in runtime</h3>
                                     <div class="sort-info">Hud connects business-level symptoms to function-level root causes in real-time. Hud detects performance degradations and errors at the endpoint level (HTTP, Queues, etc) - coupled with the root cause in the code that led to them.</div>
                                 </div>
+                                <span class="arrow-line"><img src="uploads/img-arrow.svg" alt="Hud.io"></span>
                                 <div class="card-image">
                                     <picture><img src="uploads/img-connecting-business-code-in-runtime.png" alt="Connecting business-to-code in runtime"></picture>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="image-content-card flex-column center-bg-card">
+                            <div class="morden-card flex-column  center-bg-card">
                                 <div class="card-image">
                                     <picture><img src="uploads/img-automatic-post-deployment-monitoring.png" alt="Automatic post-deployment monitoring"></picture>
                                 </div>
@@ -195,10 +231,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-12">
-                            <div class="image-content-card center-bg-card">
+                            <div class="morden-card center-bg-card">
                                 <div class="card-image">
                                     <picture><img src="uploads/img-zero-configuration.png" alt="Zero configuration"></picture>
                                 </div>
@@ -221,7 +255,6 @@
         dsddsds
     </footer>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" id="bootstrap-js"></script>
-    <script type="text/javascript" src="assets/js/splide.min.js" id="icw-main-js"></script>
     <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>
 </body>
 
