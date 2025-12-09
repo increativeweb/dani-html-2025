@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
         // });
         $('.navbar-toggler').on('click',function(){
             $(".main-header").toggleClass('is-visible');
-            $(".bg-overlay").toggleClass('is-visible');
+            $('body').toggleClass('overflow-hidden');
             $(this).toggleClass('is-visible');
         });
     }
