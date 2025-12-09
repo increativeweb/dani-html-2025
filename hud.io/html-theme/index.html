@@ -166,7 +166,6 @@
                             interval: 5000,
                             breakpoints: {
                                 992: {
-                                    autoWidth: false,
                                     pagination: true,
                                 },
                             }
@@ -255,7 +254,7 @@
                             <h2>Trusted by engineers. <br>Human & artificial alike.</h2>
                             <div class="sort-info">Hud runs on millions of services across massive production environments, with negligible overhead.</div>
                         </div>
-                        <div class="splide testimonial-splide" data-splide='{"type": "loop","perPage": 3,"perMove": 1,"pagination": false,"arrows": true, "gap": "30px", "padding": "1rem", "breakpoints": { "992": {"perPage": 2}, "767": {"perPage": 1, "autoWidth": "true", "focus": "center","gap": "20px"}}}'>
+                        <div class="splide testimonial-splide" data-splide='{"type": "loop","perPage": 3,"perMove": 1,"pagination": false,"arrows": true, "gap": "30px", "padding": "1rem", "classes": {"pagination": "splide__pagination is-dark"}, "breakpoints": { "992": {"perPage": 2, "arrows": false, "pagination": true}, "767": {"perPage": 1, "autoWidth": "true", "gap": "20px"}}}'>
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">                                                                
@@ -362,7 +361,7 @@
                     </div>
                 </section>
                 <link rel='stylesheet' href='assets/css/blocks/block-video.css' type='text/css' media='all' />
-                <section class="theme-section video-section bg-white pt-0">
+                <section class="theme-section video-section bg-white pt-0 pb-5">
                     <div class="container">
                         <div class="section-title text-center">
                             <h2>See Hud in action</h2>
@@ -378,6 +377,67 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <link rel='stylesheet' href='assets/css/blocks/block-logo-slider.css' type='text/css' media='all' />
+                <section class="theme-section logo-slider-section pt-3 bg-white">
+                    <div class="container">
+                        <div class="splide splide-js logo-slider">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="logo-item"><picture><img src="uploads/logo-item4.svg" alt="Hud.io" /></picture></div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="logo-item"><picture><img src="uploads/logo-python.svg" alt="Hud.io" /></picture></div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="logo-item"><picture><img src="uploads/logo-item3.svg" alt="Hud.io" /></picture></div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="logo-item"><picture><img src="uploads/logo-java.svg" alt="Hud.io" /></picture></div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="logo-item"><picture><img src="uploads/logo-go.svg" alt="Hud.io" /></picture></div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="logo-item"><picture><img src="uploads/logo-visual-studio.svg" alt="Hud.io" /></picture></div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="logo-item"><picture><img src="uploads/logo-item2.svg" alt="Hud.io" /></picture></div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="logo-item"><picture><img src="uploads/logo-item1.png" alt="Hud.io" /></picture></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <script>
+                            if (jQuery('.logo-slider').length) {
+                                var splideOptions = {
+                                    perPage: 7,
+                                    autoWidth: true,
+                                    pagination: false,
+                                    arrows: false,
+                                    gap: 35,
+                                    type: 'loop',
+                                    focus: 'center',
+                                    autoScroll: {
+                                        speed: 1
+                                    },
+                                    breakpoints: {
+                                        767: {
+                                            perPage: 3,
+                                            arrows: false,
+                                            gap: 30,
+                                        },
+                                    },
+                                };
+                                if (jQuery('.logo-slider').length) { 
+                                    new Splide('.logo-slider', splideOptions).mount(window.splide.Extensions);
+                                }
+                            }
+                        </script>
                     </div>
                 </section>
             </div>

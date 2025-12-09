@@ -84,6 +84,7 @@ if ($('.splide:not(.splide-js)').length) {
     });
 }
 
+
 // Video Player
 if ($('.play-iframe').length){
     $('.play-iframe').click(function(ev){	

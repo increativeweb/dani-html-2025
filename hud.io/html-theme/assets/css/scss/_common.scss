@@ -842,6 +842,18 @@ img {
             }
         }
     }
+    &.is-dark {
+        li {
+            .splide__pagination__page {
+                background: rgba($black, 0.4);
+                &.is-active {
+                    background: $black;
+                    border-color: $black;
+                    width: 20px;
+                }
+            }
+        }
+    }
 }
 .splide__arrows {
     .splide__arrow {
@@ -924,10 +936,7 @@ h2,
     }
 
     @media (max-width: 767px) {
-        font-size: 2.25rem;
-    }
-    @media (max-width: 479px) {
-        font-size: 3rem;
+        font-size: 2rem !important;
     }
 }
 

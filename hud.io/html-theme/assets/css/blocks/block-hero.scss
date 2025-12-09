@@ -118,6 +118,14 @@
                 @media (min-width: 992px) {
                     margin-left: 1.5rem !important;
                 }
+                @media (max-width: 992px) {
+                    .splide__slide {
+                        opacity: 0.5;
+                        &.is-active {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
             .splide__pagination {
                 bottom: -55px;
@@ -127,6 +135,7 @@
                 z-index: 1;
                 @media (max-width: 992px) {
                     border-top-left-radius: 0;
+                    margin: 0 -15px;
                 }
             }
             .slide-thumb-info {
@@ -164,7 +173,11 @@
                 border-radius: 0.938rem;
                 overflow: hidden;
                 @media (max-width: 992px) {
-                    width: 100%;
+                    width: 600px;
+                    max-width: 100%;
+                }
+                @media (max-width: 575px) {
+                    width: 280px;
                     max-width: 100%;
                 }
                 img {
