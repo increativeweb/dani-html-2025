@@ -1,6 +1,22 @@
 @import '../scss/config';
 
 .scroll-content-blocks {
+    grid-column-gap: 6rem;
+    grid-row-gap: 4rem;
+    grid-template-rows: auto;
+    grid-template-columns: .6fr 1fr;
+    grid-auto-columns: 1fr;
+    align-items: stretch;
+    display: grid;
+    position: relative;
+    .content-block, .content-media-block {
+        grid-area: span 1 / span 1 / span 1 / span 1;
+    }
+    .content-block {
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+    }
     .scroll-content {
         @include flexbox;
         @include flex-direction (column);
@@ -10,34 +26,47 @@
             height: 100vh;
         }
     }
+    .section-title {
+        h3 {
+            margin-bottom: 1.5rem;
+        }
+        .sort-info {
+            color: rgba(255,255,255,0.65);
+        }
+    }
 }
 .content-media-block {
     @include flexbox;
     @include flex-direction (column);
     @include justify-content (center);
     @include align-items(center);
-    height: 100vh;
+    max-height: 100vh;
     position: sticky;
     top: 0;
-    .content-media {
-        width: 100%;
-    }
-    .content-video {
+    place-self: auto;
+    .content-media {        
         background-color: #262f40;
         background-image: linear-gradient(174deg, #eabefd, #eabefd 51%, #002ac2);
         border-radius: 14px;
-        margin-top: 0;
-        margin-bottom: 0;
         padding: 0.1rem;
+        width: 100%;
+        position: absolute;
+        opacity: 0;
+        &.active {
+            opacity: 1;
+        }
+    }
+    .content-video {
+        border-radius: 14px;
+        justify-content: center;
+        align-items: flex-start;
+        display: flex;
+        overflow: hidden;
         .media-block {
-            border-radius: 14px;
-            @include flexbox;
-            @include justify-content (center);
-            @include align-items(flex-start);
-            overflow: hidden;
             width: 100%;
+            height: 100%;
             &.ratio-4x3 {
-                --bs-aspect-ratio: 66%;
+                --bs-aspect-ratio: 60%;
             }
             video {
                 width: 100%;
