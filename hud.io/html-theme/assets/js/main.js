@@ -84,7 +84,6 @@ if ($('.splide:not(.splide-js)').length) {
     });
 }
 
-
 // Video Player
 if ($('.play-iframe').length){
     $('.play-iframe').click(function(ev){	
@@ -99,6 +98,21 @@ if ($('.play-iframe').length){
         ev.preventDefault();
     });
 }
+
+// Play Video on Observer
+const videos = document.querySelectorAll(".media-block video");
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const video = entry.target;
+
+        if (entry.intersectionRatio >= 0.5) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+}, { threshold: [0.5] });
+videos.forEach((video) => observer.observe(video));
 
 
 (function () {

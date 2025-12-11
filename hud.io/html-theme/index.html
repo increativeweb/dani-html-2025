@@ -189,9 +189,9 @@
             </div>
         </section>
         <link rel='stylesheet' href='assets/css/blocks/block-scroll-content.css' type='text/css' media='all' />
-        <section class="theme-section scroll-content-section p-0">
+        <section class="theme-section scroll-content-section p-lg-0">
             <div class="container">
-                <div class="section-title text-center">
+                <div class="section-title text-lg-center">
                     <h2>Where code meets reality</h2>
                     <div class="sort-info">Install once. No config. Zero maintenance.</div>
                 </div>
@@ -241,8 +241,8 @@
                         </div>
                         <div class="content-media" data-id="scrollContent3">
                             <div class="section-title d-block d-lg-none">
-                                <h3>Automatic production issue detection</h3>
-                                <div class="sort-info">Without needing any configuration, Hud detects errors and performance degradations in production, connecting the service-level issues with the function-level root causes, and collects all relevant forensic data needed resolve them.</div>
+                                <h3>Quickly solve production issues with AI</h3>
+                                <div class="sort-info">Hud’s context is perfect for your favorite agent to quickly understand the impact, consider different solutions and assess their risk. Paste the data or use Hud’s MCP server to save countless debugging hours.</div>
                             </div>
                             <div class="content-video">
                                 <div class="media-block ratio ratio-4x3">
@@ -256,6 +256,9 @@
                 <script>
                     jQuery(function ($) {
                         function activateMediaOnScroll() {
+                            if ($(window).width() < 992) {
+                                return; // do nothing
+                            }
                             const triggerPoint = window.innerHeight * 0.80;
                             $(".scroll-content").each(function () {
                                 const sectionTop = $(this).offset().top - $(window).scrollTop();

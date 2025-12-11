@@ -9,6 +9,9 @@
     align-items: stretch;
     display: grid;
     position: relative;
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+    }
     .content-block, .content-media-block {
         grid-area: span 1 / span 1 / span 1 / span 1;
     }
@@ -16,14 +19,17 @@
         flex-direction: column;
         align-items: flex-start;
         display: flex;
-    }
-    .scroll-content {
-        @include flexbox;
-        @include flex-direction (column);
-        @include justify-content (center);
-        @include align-items(flex-start);
-        @media (min-width: 992px) {
-            height: 100vh;
+        @media (max-width: 992px) {
+            display: none;
+        }
+        .scroll-content {
+            @include flexbox;
+            @include flex-direction (column);
+            @include justify-content (center);
+            @include align-items(flex-start);
+            @media (min-width: 992px) {
+                height: 100vh;
+            }
         }
     }
     .section-title {
@@ -40,20 +46,27 @@
     @include flex-direction (column);
     @include justify-content (center);
     @include align-items(center);
-    max-height: 100vh;
-    position: sticky;
-    top: 0;
-    place-self: auto;
-    .content-media {        
-        background-color: #262f40;
-        background-image: linear-gradient(174deg, #eabefd, #eabefd 51%, #002ac2);
-        border-radius: 14px;
-        padding: 0.1rem;
-        width: 100%;
-        position: absolute;
-        opacity: 0;
-        &.active {
-            opacity: 1;
+    @media (min-width: 992px) {
+        max-height: 100vh;
+        position: sticky;
+        top: 0;
+        place-self: auto;
+    }   
+    .content-media {    
+        @media (min-width: 992px) {
+            background-color: #262f40;
+            background-image: linear-gradient(174deg, #eabefd, #eabefd 51%, #002ac2);
+            border-radius: 14px;
+            padding: 0.1rem;
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+            &.active {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 992px) {
+            margin-top: 3rem;
         }
     }
     .content-video {
@@ -62,6 +75,13 @@
         align-items: flex-start;
         display: flex;
         overflow: hidden;
+        @media (max-width: 992px) {
+            background-color: #262f40;
+            background-image: linear-gradient(174deg, #eabefd, #eabefd 51%, #002ac2);
+            border-radius: 14px;
+            padding: 0.1rem;
+            margin-top: 30px;
+        }
         .media-block {
             width: 100%;
             height: 100%;
