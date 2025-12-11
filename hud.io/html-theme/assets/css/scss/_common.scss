@@ -352,8 +352,8 @@ img {
 
 .container,
 .container-fluid {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 
     @media (min-width: 1550px) {
         // max-width: 1550px;
@@ -856,8 +856,8 @@ img {
 }
 .splide__arrows {
     .splide__arrow {
-        background: url('data:image/svg+xml,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.516 1.58984C6.49457 1.58984 1.59006 6.49436 1.59006 12.5157C1.59006 18.5371 6.49457 23.4416 12.516 23.4416C18.5373 23.4416 23.4419 18.5371 23.4419 12.5157C23.4419 6.49436 18.5373 1.58984 12.516 1.58984ZM11.1077 17.6631L9.55382 16.1092L13.1472 12.5157L9.55382 8.92234L11.1077 7.36843L16.255 12.5157L11.1077 17.6631Z" fill="black"></path></svg>') no-repeat center center;
-        background-size: contain;
+        background: $black url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z" fill="white"/></svg>') no-repeat center center;
+        background-size: 16px;
         bottom: -30px;
         top: auto;
         left: calc(50% - 100px);
@@ -868,7 +868,8 @@ img {
         @include transform(unset);
         @include transition(0.3s,ease-in-out);
         &:hover, &:focus {
-            opacity: 0.7;
+            opacity: 0.8;
+            background-position: calc(100% + 1px) center;
         }
 
         &.splide__arrow--prev {
