@@ -32,14 +32,14 @@
         background-image: none !important;
     }
 
-    &.is-light {
+    &.is-dark {
         *:not(a, a > *) {
-            color: #fff;
+            color: $black;
         }
 
         .section-title {
             *:not(a, a > *) {
-                color: #fff;
+                color: $black;
             }
 
             a:not(.btn) {
@@ -54,16 +54,16 @@
             h1,
             h2,
             h3 {
-                color: $white;
+                color: $black;
             }
 
             .sort-info {
-                color: $white !important;
+                color: $black !important;
             }
         }
 
         .text-color {
-            color: $white !important;
+            color: $black !important;
         }
     }
 
@@ -262,6 +262,7 @@
     .sort-info {
 
         font-size: 1.2rem;
+        color: var(--text-white);
         // margin-bottom: 30px;  
         h3 {
             font-family: $bodyfont;

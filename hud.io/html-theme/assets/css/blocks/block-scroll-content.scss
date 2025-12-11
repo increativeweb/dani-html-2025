@@ -1,0 +1,50 @@
+@import '../scss/config';
+
+.scroll-content-blocks {
+    .scroll-content {
+        @include flexbox;
+        @include flex-direction (column);
+        @include justify-content (center);
+        @include align-items(flex-start);
+        @media (min-width: 992px) {
+            height: 100vh;
+        }
+    }
+}
+.content-media-block {
+    @include flexbox;
+    @include flex-direction (column);
+    @include justify-content (center);
+    @include align-items(center);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    .content-media {
+        width: 100%;
+    }
+    .content-video {
+        background-color: #262f40;
+        background-image: linear-gradient(174deg, #eabefd, #eabefd 51%, #002ac2);
+        border-radius: 14px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0.1rem;
+        .media-block {
+            border-radius: 14px;
+            @include flexbox;
+            @include justify-content (center);
+            @include align-items(flex-start);
+            overflow: hidden;
+            width: 100%;
+            &.ratio-4x3 {
+                --bs-aspect-ratio: 66%;
+            }
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 14px;
+            }
+        }
+    }
+}

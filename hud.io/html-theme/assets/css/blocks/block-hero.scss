@@ -118,14 +118,6 @@
                 @media (min-width: 992px) {
                     margin-left: 1.5rem !important;
                 }
-                @media (max-width: 992px) {
-                    .splide__slide {
-                        opacity: 0.5;
-                        &.is-active {
-                            opacity: 1;
-                        }
-                    }
-                }
             }
             .splide__pagination {
                 bottom: -55px;
