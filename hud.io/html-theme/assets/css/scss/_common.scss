@@ -441,13 +441,12 @@ img {
         z-index: 1;
         color: var(--white) !important;
         border: 1px solid transparent;
-        background-image: linear-gradient(var(--black), var(--black)), linear-gradient(174deg,var(--white),#f9baf9 52%,#9470fd);
+        background-image: linear-gradient(rgba(9, 9, 11, 0.86), rgba(9, 9, 11, 0.86)), linear-gradient(174deg,var(--white),#f9baf9 52%,#9470fd);
         background-origin: border-box;
         background-clip: padding-box, border-box;
         &:hover, &:focus {
             opacity: 1;
-            background-size: 600% 100%;
-            background-position: 0% 0;
+            background-image: linear-gradient(rgba(9, 9, 11, 1), rgba(9, 9, 11, 1)), linear-gradient(174deg,var(--white),#f9baf9 52%,#9470fd);
         }
     }
 
