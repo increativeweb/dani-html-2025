@@ -66,6 +66,7 @@
                             <div class="action">
                                 <a href="#" target="_blank" class="btn btn-white">Book a demo</a>
                                 <a href="#" target="_blank" class="btn btn-outline-primary">Start free</a>
+                                <a href="#" target="_blank" class="btn btn-link">Log in</a>
                             </div>
                         </div>
                         <div class="hero-thumb-slider-block">
@@ -560,7 +561,7 @@
                         <div class="section-title text-center">
                             <h2>Related articles</h2>
                         </div>
-                        <div class="splide post-splide" data-splide='{"type": "slide","perPage": 3,"perMove": 1,"pagination": true,"arrows": false, "gap": "30px", "padding": "1rem", "classes": {"pagination": "splide__pagination is-dark"}, "breakpoints": { "992": {"perPage": 2}, "767": {"perPage": 1, "autoWidth": "true", "gap": "20px"}}}'>
+                        <div class="splide post-splide" data-splide='{"type": "slide","perPage": 4,"perMove": 1,"pagination": true,"arrows": false, "gap": "20px", "padding": "1rem", "classes": {"pagination": "splide__pagination is-dark"}, "breakpoints": { "1200": {"perPage": 3}, "992": {"perPage": 2}, "767": {"perPage": 1, "autoWidth": "true", "gap": "20px"}}}'>
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">                                                                
@@ -623,9 +624,40 @@
                                             </div>
                                         </div> 
                                     </li>
+                                    <li class="splide__slide">
+                                        <div class="post-card">
+                                            <div class="card-img ratio ratio-4x3">
+                                                <picture><img src="uploads/post-bringing-production-reality-ide.jpg" alt="Bringing Production Reality to Your IDE"></picture>
+                                            </div>
+                                            <div class="card-body">
+                                                <h2 class="card-title"><a href="blog-details.html" class="stretched-link">Bringing Production Reality to Your IDE</a></h2>
+                                                <div class="sort-info">For decades IDEs have shown us what code looks like; Hudders finally show us what code does.</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <a href="#" class="user-info">
+                                                    <div class="user-img"><picture><img src="uploads/img-user-may-walter.jpeg" alt="May Walter"></picture></div>
+                                                    <div class="info">
+                                                        <span class="name">May Walter</span>
+                                                    </div>
+                                                </a>
+                                                <div class="date">July 8, 2025</div>
+                                            </div>
+                                        </div> 
+                                    </li>
                                 </ul>
                             </div>
                         </div>
+                        <script>
+                            var splide = new Splide('.post-splide');
+
+                            splide.on('mounted', function () {
+                                if (splide.length <= 4) {
+                                    splide.destroy(true);
+                                }
+                            });
+
+                            splide.mount();
+                        </script>
                     </div>
                 </section>
             </div>

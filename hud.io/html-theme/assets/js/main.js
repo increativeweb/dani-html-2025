@@ -26,6 +26,10 @@ jQuery(document).ready(function ($) {
         });
     }
     if ($('li.menu-item-has-children').length) {
+        $("li.menu-item-has-children").each(function () {
+            const link = $(this).find("> a"); // select direct <a>
+            link.wrap("<span></span>");       // wrap it inside <span>
+        });
         $("li.menu-item-has-children > a, li.menu-item-has-children > span").after('<i class="arrow"></i>');
     }
     $('li.menu-item-has-children .arrow').on('click', function (event) {

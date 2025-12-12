@@ -19,7 +19,9 @@
     &.is-visible {
         .navbar-container {
             .navbar-collapse {
-                height: calc(100vh - 70px);
+                @media (max-width: 992px) {
+                    height: calc(100vh - 70px);
+                }
 
                 .mainMenu {
                     @include transform(translateY(0));
@@ -85,7 +87,11 @@
                     width: 100%;
                     height: calc(100% - 100px);
                     @include justify-content(center);
-
+                    overflow: hidden;
+                    overflow-y: auto;
+                    @media (max-height: 700px) and (orientation: landscape) {
+                        @include justify-content(flex-start);
+                    }
                     li {
                         width: 100%;
                         @include justify-content(center);
