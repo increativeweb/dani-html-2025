@@ -16,6 +16,7 @@
         .category {
             font-size: 1.25rem;
             margin-bottom: 1.8rem;
+            @include flexbox;
             @media (max-width: 1200px) {
                 margin-bottom: 1.5rem;
             }

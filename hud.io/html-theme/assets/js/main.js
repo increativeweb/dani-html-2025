@@ -30,12 +30,12 @@ jQuery(document).ready(function ($) {
             const link = $(this).find("> a"); // select direct <a>
             link.wrap("<span></span>");       // wrap it inside <span>
         });
-        $("li.menu-item-has-children > a, li.menu-item-has-children > span").after('<i class="arrow"></i>');
+        $("li.menu-item-has-children > span").append('<i class="arrow"></i>');
     }
     $('li.menu-item-has-children .arrow').on('click', function (event) {
         event.preventDefault();
         $(this).toggleClass('is-active');
-        $(this).parent().find('.sub-menu').first().slideToggle(300);
+        $(this).parents().find('.sub-menu').first().slideToggle(300);
 
     });
 

@@ -54,7 +54,7 @@
         <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
     </header>
     <main id="main-content" class="main-content-wrapper">       
-        <section data-theme="dark" class="theme-section py-5">
+        <section data-theme="dark" class="theme-section page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -64,42 +64,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    if(jQuery('.hero-section').length) {
-                        var main = new Splide("#hero-img-slider", {
-                            type: "loop",
-                            pagination: false,
-                            arrows: false,
-                            autoWidth: true,
-                            rewind: false,
-                            gap: '15px',
-                            padding: '0.938rem',
-                            isNavigation: false,
-                            autoplay: true,
-                            interval: 5000,
-                            breakpoints: {
-                                992: {
-                                    pagination: true,
-                                },
-                            }
-                        });
-
-                        var thumbnails = new Splide("#thumbnail-info-slider", {
-                            type: "slide",
-                            direction: "ttb",
-                            height: "100%",
-                            perPage: 3,
-                            wheel: false,
-                            arrows: false,
-                            isNavigation: true,
-                            pagination: false,
-                        });
-
-                        main.sync(thumbnails);
-                        main.mount();
-                        thumbnails.mount();
-                    }
-                </script>
             </div>
         </section>
         <link rel='stylesheet' href='assets/css/blocks/block-pricing-card.css' type='text/css' media='all' />

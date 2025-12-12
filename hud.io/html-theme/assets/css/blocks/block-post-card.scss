@@ -52,10 +52,10 @@
                 }
             }
             &:hover, &:focus {
-                border-color: var(--purple);
+                border-color: var(--black);
                 svg {
                     path {
-                        fill: var(--purple);
+                        fill: var(--black);
                     }
                 }
             }
@@ -120,13 +120,17 @@
         }
         .card-title {
             font-size: 1.2rem !important;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 0.5rem;
             line-height: 1.4;
             @include transition(0.3s, ease-in-out);
             a {
                 color: var(--white);
                 text-decoration: none;
+                background-image: linear-gradient(to right, var(--white) 0%, var(--white) 100%);
+                background-position: 0 100%;
+                background-repeat: no-repeat;
+                background-size: 0 1px;
                 @include transition(0.3s, ease-in-out);
             }
         }
@@ -164,7 +168,9 @@
         }
         .card-body {
             .card-title {
-                opacity: 0.7;
+                a {
+                    background-size: 100% 1px;
+                }
             }
         }
     }
@@ -178,6 +184,7 @@
                 color: var(--text-black);
                 a {
                     color: var(--text-black);
+                    background-image: linear-gradient(to right, var(--text-black) 0%, var(--text-black) 100%);
                 }
             }
             .sort-info {
@@ -205,13 +212,23 @@
         }
         &:hover, &:focus {
             border-color: var(--black);
+            .card-body {
+                .card-title {
+                    a {
+                        background-size: 100% 1px;
+                    }
+                }
+            }
         }
     }
 }
 .related-post-section {   
-    .splide__track {
-        margin: 0 -1.5rem;
-        border-radius: 15px 0 0 15px;
+    .splide__track {        
+        border-radius: 15px;
+        @media (max-width: 767px) {
+            border-radius: 15px 0 0 15px;
+            margin: 0 -1.5rem;
+        }
     } 
     .splide__slide {
         .post-card {
@@ -336,17 +353,10 @@
     .single-content {
         scroll-margin-top: 80px;
         scroll-margin-bottom: 100px;
-    }
-    .post-sticky-content {
-        margin-bottom: 2rem;
-        @media (min-width: 768px) {        
-            padding-top: 100px;
+        h2[id], 
+        h3[id] {
+            padding-top: 130px;
             margin-top: -100px;
-        }
-        &:first-child {
-            h2 {
-                margin-top: 0;
-            }
         }
     }
 }
@@ -392,7 +402,11 @@
                     margin-bottom: 1rem;
                 }
                 &:hover, &:focus, &.active {
-                    color: var(--purple);
+                    color: var(--black);
+                }
+                &.active {
+                    font-weight: 500;
+                    color: var(--black);
                 }
             }
         }

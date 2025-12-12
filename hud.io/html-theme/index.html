@@ -561,7 +561,7 @@
                         <div class="section-title text-center">
                             <h2>Related articles</h2>
                         </div>
-                        <div class="splide post-splide" data-splide='{"type": "slide","perPage": 4,"perMove": 1,"pagination": true,"arrows": false, "gap": "20px", "padding": "1rem", "classes": {"pagination": "splide__pagination is-dark"}, "breakpoints": { "1200": {"perPage": 3}, "992": {"perPage": 2}, "767": {"perPage": 1, "autoWidth": "true", "gap": "20px"}}}'>
+                        <div class="splide post-splide splide-js">
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">                                                                
@@ -648,15 +648,50 @@
                             </div>
                         </div>
                         <script>
-                            var splide = new Splide('.post-splide');
+                            if(jQuery('.post-splide').length) {
+                                const slider = new Splide('.post-splide', {
+                                type: 'slide',
+                                    perPage: 4,
+                                    perMove: 1,
+                                    pagination: true,
+                                    arrows: false, 
+                                    gap: '20px', 
+                                    classes: {
+                                        pagination: 'splide__pagination is-dark'
+                                    }, 
+                                    breakpoints: { 
+                                        1200: {
+                                            perPage: 3,
+                                        }, 
+                                        992: {
+                                            perPage: 2
+                                        }, 
+                                        767: {
+                                            perPage: 1, 
+                                            autoWidth: true, 
+                                            padding: '1.5rem'
+                                        }
+                                    }
+                                });
 
-                            splide.on('mounted', function () {
-                                if (splide.length <= 4) {
-                                    splide.destroy(true);
-                                }
-                            });
+                                slider.on('mounted', function () {
+                                    const slideCount = slider.length; // total slides
+                                    if (window.innerWidth > 1400) {
+                                        if (slideCount <= 4) {
+                                            // Disable all movement
+                                            slider.options = {
+                                                arrows: false,
+                                                pagination: false,
+                                                drag: false,
+                                                keyboard: false,
+                                                flickPower: 0,
+                                            };
+                                        }
+                                    }
+                                });
 
-                            splide.mount();
+                                slider.mount();
+                            }
                         </script>
                     </div>
                 </section>

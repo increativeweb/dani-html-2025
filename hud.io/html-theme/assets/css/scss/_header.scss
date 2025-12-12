@@ -162,7 +162,7 @@
     .navbar.navbar--light {
         color: #000;
 
-        ul li.menu-item-has-children>a::after {
+        ul li.menu-item-has-children>span>a::after {
             @media (min-width: 992px) {
                 background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="rgb(0 0 0)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4 7 4 4 4-4"></path></svg>') no-repeat center center;
             }
@@ -280,7 +280,7 @@
                 &.menu-item-has-children {
                     position: relative;
 
-                    &>a {
+                    & > span > a {
                         @include flexbox;
                         @include align-items(center);
 
@@ -352,54 +352,21 @@
 
                             &::before,
                             &::after {
-                                border-left: 5px solid transparent;
-                                border-right: 5px solid transparent;
-                                border-bottom: 5px solid var(--white);
-                                top: -5px;
+                                border-left: 8px solid transparent;
+                                border-right: 8px solid transparent;
+                                border-bottom: 8px solid var(--white);
+                                top: -8px;
                                 content: '';
                                 right: calc(50% - 3px);
                                 position: absolute;
                             }
 
                             &::before {
-                                border-left: 6px solid transparent;
-                                border-right: 6px solid transparent;
-                                border-bottom: 6px solid var(--white);
-                                top: -6px;
+                                border-left: 9px solid transparent;
+                                border-right: 9px solid transparent;
+                                border-bottom: 9px solid var(--white);
+                                top: -9px;
                                 right: calc(50% - 4px);
-                            }
-
-                            &>.menu-item-has-children {
-                                @media (min-width: 990px) {
-                                    &::after {
-                                        content: none
-                                    }
-
-                                    &>a {
-                                        display: flex !important;
-                                        @include align-items(center);
-                                        @include justify-content(space-between);
-
-                                        &::after {
-                                            display: inline-block;
-                                        }
-                                    }
-                                }
-
-                                &:hover,
-                                &:focus {
-                                    &>a {
-                                        background: #F7F6FD;
-
-                                        &::after {
-                                            @include transform(rotate(270deg))
-                                        }
-                                    }
-
-                                    .sub-menu {
-                                        opacity: 1;
-                                    }
-                                }
                             }
                         }
 
@@ -411,7 +378,9 @@
 
                         li {
                             padding: 0 8px;
-
+                            &:not(:last-child) {
+                                margin-bottom: 5px;
+                            }
                             a:not(.btn) {
                                 display: block;
                                 font-weight: 500;
@@ -420,26 +389,32 @@
                                 margin: 0;
                                 height: auto;
                                 @include border-radius(5px);
-
+                                color: var(--white) !important;
                                 @media (max-width: 992px) {
                                     font-size: 1.3rem;
                                 }
-                            }
 
-                            &:hover,
-                            &:focus {
-                                &>a {
-                                    // background: var(--white);
-                                    color: var(--purple) !important;
-                                    box-shadow: none;
+                                &:hover,
+                                &:focus {
+                                    @media (min-width: 992px) {
+                                        background: rgba(255, 255, 255, 0.12);                                   
+                                        box-shadow: none;
+                                    }
+                                    @media (max-width: 992px) {
+                                        color: rgba(255, 255, 255, 0.7) !important;
+                                    }
                                 }
                             }
 
                             &.current-menu-item {
                                 &>a {
-                                    // background: var(--white);
-                                    color: var(--purple) !important;
-                                    box-shadow: none;
+                                    @media (min-width: 992px) {
+                                        background: rgba(255, 255, 255, 0.12);                                   
+                                        box-shadow: none;
+                                    }
+                                    @media (max-width: 992px) {
+                                        color: rgba(255, 255, 255, 0.7) !important;
+                                    }
                                 }
                             }
                         }
@@ -454,7 +429,7 @@
                                 }
                             }
 
-                            &>a {
+                            &>span>a {
                                 @media (min-width: 992px) {
                                     &::after {
                                         @include transform(rotate(180deg));
