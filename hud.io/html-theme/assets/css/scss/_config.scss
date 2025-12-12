@@ -24,12 +24,13 @@
 }
 
 /* Variables */
+/*
 $bodyfont: "Ppneuemontreal", sans-serif;
 $bodyfontsize: 16px;
 $bodyfontcolor: #000000;
 $bodybg: #ffffff;
 $black: #111214;
-$white: #ffffff;
+var(--white): #ffffff;
 
 $primary: #2A396D;
 $secondary: #35C6F4;
@@ -40,7 +41,7 @@ $gray: #F2F6FF;
 $lightblue: #EEEDF4;
 $lightpurple: #3a005c;
 $lightgray: #F4F4F4;
-
+*/
 /* Mixins */
 @mixin border-radius($radius) {
   border-radius: $radius;

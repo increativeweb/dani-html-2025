@@ -1,0 +1,92 @@
+@import '../scss/config';
+
+.pricing-card-section {
+    .pricing-card {
+        @include flexbox;
+        @include flex-direction(column);
+        height: 100%;
+        padding: 2rem;
+        background: var(--white);
+        color: var(--text-black);
+        border: 1px solid #434547;
+        @include border-radius(10px);
+        @media (max-width: 1200px) {
+            padding: 1.2rem;
+        }
+        .category {
+            font-size: 1.25rem;
+            margin-bottom: 1.8rem;
+            @media (max-width: 1200px) {
+                margin-bottom: 1.5rem;
+            }
+            .label {
+                display: inline-block;
+                color: var(--dark-purple);
+                text-transform: none;
+                background-image: linear-gradient(170deg, #fadffa 1%, #f9baf9 31%, #c795fb 100%, #ba8bfc 100%, #9470fd);
+                border-radius: 4px;
+                padding: 4px 8px;
+                font-size: .9rem;
+                font-weight: 500;
+                margin-left: 0.5rem;
+            }
+        }
+        .price {
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+            @media (max-width: 1200px) {
+                margin-bottom: 1.5rem;
+                font-size: 1.8rem;
+            }
+        }
+        .action {
+            margin-bottom: 2rem;
+            @media (max-width: 1200px) {
+                margin-bottom: 1.5rem;
+            }
+            .btn {
+                width: 100%;
+                font-weight: 400;
+                font-size: 1.05rem;
+            }
+        }
+        .info {            
+            font-size: .95rem;
+        }
+        .feature-lists {
+            li {
+                color: #818282;
+                font-size: .95rem;
+                position: relative;
+                padding-left: 1.5rem;
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+                strong {
+                    color: var(--text-black);
+                }
+                .icon-info {
+                    background: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3.61987" y="4.11987" width="15.7603" height="15.7603" rx="7.88013" stroke="rgb(148 148 148)"></rect><path d="M9.15601 15.8965V14.465H11.0859V11.4959H9.36808V10.0644H12.6765V14.465H14.3519V15.8965H9.15601ZM11.807 9.14182C11.5171 9.14182 11.2839 9.06759 11.1071 8.91914C10.9375 8.77068 10.8526 8.56921 10.8526 8.31472C10.8526 8.06022 10.9375 7.85875 11.1071 7.71029C11.2839 7.56184 11.5171 7.48761 11.807 7.48761C12.0968 7.48761 12.3266 7.56184 12.4962 7.71029C12.673 7.85875 12.7613 8.06022 12.7613 8.31472C12.7613 8.56921 12.673 8.77068 12.4962 8.91914C12.3266 9.06759 12.0968 9.14182 11.807 9.14182Z" fill="rgb(148 148 148)"></path></svg>') no-repeat center center;
+                    background-size: contain;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    display: inline-block;
+                    float: right;
+                    margin-top: -2px;
+                }
+                &::before {
+                    content: '';
+                    background: url('data:image/svg+xml,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6.5L8.73123 14.5L5 11.0517" stroke="rgb(60, 102, 197)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>') no-repeat center center;
+                    background-size: contain;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

@@ -26,12 +26,12 @@ jQuery(document).ready(function ($) {
         });
     }
     if ($('li.menu-item-has-children').length) {
-        $("li.menu-item-has-children > span").append('<i class="arrow"></i>');
+        $("li.menu-item-has-children > a, li.menu-item-has-children > span").after('<i class="arrow"></i>');
     }
     $('li.menu-item-has-children .arrow').on('click', function (event) {
         event.preventDefault();
         $(this).toggleClass('is-active');
-        $(this).parents().find('.sub-menu').first().slideToggle(300);
+        $(this).parent().find('.sub-menu').first().slideToggle(300);
 
     });
 
@@ -84,6 +84,30 @@ if ($('.splide:not(.splide-js)').length) {
     });
 }
 
+// Collapse
+if ($('.collapse-item').length) {
+    $(document).on("click", ".collapse-item .collapse-title", function () {
+        var $this = $(this).closest(".collapse-item");
+        
+        if ($this.hasClass("is-open")) {
+            $this.removeClass("is-open");
+            $this.find(".collapse-body").stop(true, true).slideUp(300); // Slide up with a smooth animation (300ms)
+        } else {
+            $(".collapse-item").removeClass("is-open");
+            $(".collapse-item").find(".collapse-body").stop(true, true).slideUp(300); // Slide up other items smoothly
+            $this.addClass("is-open");
+            $this.find(".collapse-body").stop(true, true).slideDown(300); // Slide down with a smooth animation (300ms)
+            
+            // var collapsetop = $this.find(".collapse-title");
+            // $('html, body').animate({
+            //     scrollTop: collapsetop.offset().top - 115
+            // }, 300); // Smooth scroll to the item
+        }
+        return false;
+    });
+}
+
+
 // Video Player
 if ($('.play-iframe').length){
     $('.play-iframe').click(function(ev){	
@@ -98,21 +122,6 @@ if ($('.play-iframe').length){
         ev.preventDefault();
     });
 }
-
-// Play Video on Observer
-const videos = document.querySelectorAll(".media-block video");
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        const video = entry.target;
-
-        if (entry.intersectionRatio >= 0.5) {
-            video.play();
-        } else {
-            video.pause();
-        }
-    });
-}, { threshold: [0.5] });
-videos.forEach((video) => observer.observe(video));
 
 
 (function () {

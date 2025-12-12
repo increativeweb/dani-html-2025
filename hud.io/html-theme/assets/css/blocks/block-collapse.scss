@@ -1,0 +1,66 @@
+@import '../scss/config';
+
+.collapse-block {
+    max-width: 770px;
+    margin: 0 auto;
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+    .collapse-item {
+        border-top: 1px solid var(--black);
+        border-bottom: 1px solid var(--black);
+        padding: 1.25rem 0;
+        .collapse-title {
+            @include flexbox;
+            @include align-items(center);
+            gap: 15px;
+            @include border-radius(0);
+            border: none;
+            background: transparent;
+            font-size: 1.2rem;
+            width: 100%;
+            padding: 0;
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0;
+                font-weight: 500;
+                line-height: 1.4;
+                @include transition(0.3s, ease-in-out);
+            }
+            .collapse-btn {
+                background: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z" fill="rgb(148, 148, 148)"></path></svg>');
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                margin-left: auto;
+                @include transition(0.3s, ease-in-out);
+            }
+            &:hover, &:focus {
+                h3 {
+                    color: var(--gray);
+                }
+                .collapse-btn {
+                    opacity: 0.5;
+                }
+            }
+        }
+        .collapse-body {
+            padding-top: 1.25rem;
+            .card-content {
+                font-size: 1rem;
+                max-width: 640px;
+                line-height: 1.5;
+                & > * {                    
+                    color: #434547;
+                }
+            }
+        }
+        &.is-open {
+            .collapse-title {
+                .collapse-btn {
+                    @include transform(rotate(180deg));
+                }
+            }
+        }
+    }
+}

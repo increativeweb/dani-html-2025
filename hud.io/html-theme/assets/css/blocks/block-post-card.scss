@@ -16,7 +16,17 @@
     .info {
         .name {
             font-size: .9rem;
+            color: var(--text-white);
+            text-underline-offset: 4px;
             @include transition(0.3s, ease-in-out);
+        }
+    }
+    &:hover, &:focus {
+        .info {
+            .name {
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -26,17 +36,17 @@
     gap: 10px;
     li {
         a {
-            width: 50px;
+            width: 42px;
             aspect-ratio: 1 / 1;
             @include inline-flex;
             @include align-items(center);
             @include justify-content(center);
-            border: 1px solid rgba($black, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             @include border-radius(8px);
             @include transition(0.3s, ease-in-out);
             svg {
-                width: 20px;
-                height: 20px;
+                width: 18px;
+                height: 18px;
                 path {
                     @include transition(0.3s, ease-in-out);
                 }
@@ -78,7 +88,7 @@
     @include flexbox;
     @include flex-direction(column);
     height: 100%;
-    color: $white;
+    color: var(--white);
     background-color: #1d1e20;
     border: 1px solid #2b2b2b;
     border-radius: 15px;
@@ -115,7 +125,7 @@
             line-height: 1.4;
             @include transition(0.3s, ease-in-out);
             a {
-                color: $white;
+                color: var(--white);
                 text-decoration: none;
                 @include transition(0.3s, ease-in-out);
             }
@@ -146,11 +156,11 @@
         }
     }
     &:hover, &:focus {
-        border-color: rgba($white, 0.2);
+        border-color: rgba(255, 255, 255, 0.2);
         .card-img {
-            img {
-                @include transform(scale(1.02));
-            }
+            // img {
+            //     @include transform(scale(1.02));
+            // }
         }
         .card-body {
             .card-title {
@@ -162,12 +172,12 @@
 .is-dark {
     .post-card {
         border: 1px solid #dadada;
-        background: $white;
+        background: var(--white);
         .card-body {
             .card-title {
-                color: $black;
+                color: var(--text-black);
                 a {
-                    color: $black;
+                    color: var(--text-black);
                 }
             }
             .sort-info {
@@ -185,13 +195,16 @@
             a.user-info {
                 .info {
                     .name {
-                        color: $black;
+                        color: var(--text-black);
                     }
                 }
             }
             .date {
                 color: #818282;
             }
+        }
+        &:hover, &:focus {
+            border-color: var(--black);
         }
     }
 }
@@ -232,7 +245,7 @@
                 @include transition(0.3s, ease-in-out);
             }
             &:hover, &:focus {
-                color: $white;
+                color: var(--white);
                 .icon-back {
                     @include transform(translateX(-5px));
                 }
@@ -260,7 +273,7 @@
             .info {
                 .name {
                     color: #818282;
-                    
+                    text-underline-offset: 4px;                    
                 }
             }
         }        
@@ -268,7 +281,8 @@
             &:hover, &:focus {
                 .info {
                     .name {
-                        color: $black;
+                        color: var(--text-black);
+                        text-decoration: underline;
                     }
                 }
             }
@@ -286,7 +300,7 @@
     }
     hr {
         margin: 2rem 0;
-        border-color: $black;
+        border-color: var(--text-black);
         opacity: 1;
         z-index: 2;
         position: relative;
@@ -298,7 +312,7 @@
 .blog-content-section {
     padding-top: 19rem;
     margin-top: -26rem;
-    background: $white;
+    background: var(--white);
     @media (max-width: 1200px) {
         padding-top: 22rem;
     }
@@ -343,7 +357,7 @@
         @include border-radius(0.5rem);
         .nav-title {
             font-size: 1.2rem;
-            border-bottom: 1px solid rgba($black, 0.2);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             padding-bottom: 0.8rem;
             margin-bottom: 0.8rem;
         }
@@ -390,7 +404,7 @@
     @include border-radius(0.5rem);
     .share-title {
         font-size: 1.2rem;
-        border-bottom: 1px solid rgba($black, 0.2);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         padding-bottom: 0.8rem;
         margin-bottom: 1rem;
     }
