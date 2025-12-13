@@ -482,23 +482,33 @@
                                     pagination: false,
                                     arrows: true, 
                                     gap: '20px', 
+                                    padding: '1px',
+                                    updateOnMove : true,
                                     classes: {
                                         pagination: 'splide__pagination is-dark',
                                     }, 
+                                    mediaQuery: 'max',
                                     breakpoints: { 
                                         992: {
                                             perPage: 2, 
                                             arrows: false, 
-                                            pagination: true
+                                            pagination: true,
+                                            autoWidth: true, 
+                                            padding: '15px'
                                         }, 
                                         767: {
                                             perPage: 1, 
-                                            autoWidth: true, 
-                                            gap: '20px',
+                                            focus: 'center',
+                                            gap: '15px', 
                                         }
                                     }
                                 });
                                 testimonialSlider.mount();
+
+                                
+                                jQuery(window).on('resize', function () {
+                                    testimonialSlider.refresh();
+                                });
                             }
                         </script>
                     </div>
@@ -598,8 +608,8 @@
                                                 <picture><img src="uploads/post-ai-trenches.jpg" alt="AI in the Trenches: What We're Really Learning About Coding with Machines"></picture>
                                             </div>
                                             <div class="card-body">
-                                                <h2 class="card-title"><a href="blog-details.html" class="stretched-link">AI in the Trenches: What We're Really Learning About Coding with Machines</a></h2>
-                                                <div class="sort-info">May Walter reflects on the real lessons from InfoQ’s “AI in the Trenches” panel - where the future of software development is already unfolding.</div>
+                                                <h2 class="card-title"><a href="blog-details.html" class="stretched-link">test</a></h2>
+                                                <div class="sort-info"></div>
                                             </div>
                                             <div class="card-footer">
                                                 <a href="#" class="user-info">
@@ -693,15 +703,15 @@
                                         },
                                         992: {
                                             perPage: 2,
-                                            padding: '1.5rem',
+                                            padding: '0.75rem',
+                                            autoWidth: true,
                                             gap: '1rem'
                                         },
                                         767: {
                                             perPage: 1,
-                                            autoWidth: true,
                                             drag: true,
                                         }
-                                    }
+                                    },
                                 });
 
                                 slider.on('mounted', function () {
@@ -721,6 +731,15 @@
                                 });
 
                                 slider.mount();
+                                function handleContainerResize() {
+                                    // Your code to resize the container
+                                    
+                                    // Then, refresh the splide instance
+                                    slider.refresh();
+                                }
+                                jQuery(window).on('resize', function () {
+                                    handleContainerResize()
+                                })
                             }
                         </script>
                     </div>

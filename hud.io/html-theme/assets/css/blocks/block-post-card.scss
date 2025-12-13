@@ -133,6 +133,9 @@ a.user-info {
             margin-bottom: 0.5rem;
             line-height: 1.4;
             @include transition(0.3s, ease-in-out);
+            @media (max-width: 992px) {
+                font-size: 1.1rem !important;
+            }
             a {
                 color: var(--white);
                 text-decoration: none;
@@ -231,7 +234,7 @@ a.user-info {
         }
     }
 }
-.related-post-section {   
+.post-splide {   
     .splide__track {        
         border-radius: 15px;
         @media (max-width: 992px) {
@@ -242,7 +245,12 @@ a.user-info {
     .splide__slide {
         .post-card {
             @media (max-width: 992px) {
+                min-width: 300px;
                 max-width: 300px;
+            }
+            @media (max-width: 767px) {
+                min-width: 280px;
+                max-width: 280px;
             }
         }
     }
