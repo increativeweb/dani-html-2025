@@ -236,7 +236,7 @@ a.user-info {
         border-radius: 15px;
         @media (max-width: 992px) {
             border-radius: 15px 0 0 15px;
-            margin: 0 -1.5rem;
+            margin: 0 -0.75rem;
         }
     } 
     .splide__slide {
@@ -374,19 +374,33 @@ a.user-info {
     background: rgba(91,91,91,0.05);
     padding: 1.5rem;
     @include border-radius(0.8rem);
+    @media (max-width: 767px) {
+        padding: 1.2rem;
+    }
     .title {
         margin-bottom: 1.7rem;
         font-size: 1.6rem;
-        font-weight: 500
+        font-weight: 500;
+        @media (max-width: 767px) {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
     }
     .author-block {
         @include flexbox;
         gap: 30px;
+        @media (max-width: 767px) {
+            gap: 20px;
+        }
         .author-img {
+            min-width: 80px;
             max-width: 80px;
-            width: 100%;
             aspect-ratio: 1 / 1;
-            overflow: hidden;      
+            overflow: hidden;   
+            @media (max-width: 767px) {
+                min-width: 60px;
+                max-width: 60px;
+            }   
             img {
                 width: 100%;
                 @include border-radius(50%);  
@@ -396,6 +410,9 @@ a.user-info {
             .name {
                 font-size: 1.3rem;
                 font-weight: 500;
+                @media (max-width: 767px) {
+                    font-size: 1.2rem;
+                }
             }
             .designation {
                 color: rgba(0, 0, 0, 0.6);
@@ -404,6 +421,9 @@ a.user-info {
             }
             .sort-info {
                 font-size: 1.1rem;
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                }
             }
         }
     }
@@ -469,6 +489,9 @@ a.user-info {
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         padding-bottom: 0.8rem;
         margin-bottom: 1rem;
+    }
+    @media (max-width: 1200px) {
+        margin-top: 2rem;
     }
 }
 .author-list-block {
