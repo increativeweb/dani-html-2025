@@ -432,3 +432,35 @@ a.user-info {
         margin-bottom: 1rem;
     }
 }
+.author-list-block {
+    max-width: 45rem;
+    margin: 0 auto;
+}
+.author-card {
+    @include flexbox;
+    @include align-items(center);
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    @include border-radius(0.2rem);
+    padding: 0.8rem;
+    .author-img {
+        width: 60px;
+        aspect-ratio: 1 / 1;
+        @include border-radius(50%);
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .info {
+        .name {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .designation {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.65);
+            margin-top: 0.2rem;
+        }
+    }
+}
