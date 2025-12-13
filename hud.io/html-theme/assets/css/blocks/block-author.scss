@@ -1,0 +1,84 @@
+@import '../scss/config';
+
+.page-header {
+    &.author-page-header {
+        padding-top: 7rem; 
+        padding-bottom: 7rem;
+        @media (max-width: 1200px) {
+            padding-top: 4.375rem;
+            padding-bottom: 4.375rem;
+        }
+
+        @media (max-width: 767px) {
+            padding-top: 3.125rem; 
+            padding-bottom: 3.125rem;
+        }
+        .author-info-block {
+            @include flexbox;
+            @include align-items(flex-start);
+            gap: 70px;
+            @media (max-width: 992px) {
+                gap: 30px;
+            }            
+            @media (max-width: 767px) {
+                @include flex-direction(column);
+            }
+            .author-img {
+                min-width: 300px;
+                max-width: 300px;
+                @media (max-width: 992px) {
+                    min-width: 250px;
+                    max-width: 250px;
+                }
+                @media (max-width: 767px) {
+                    min-width: 150px;
+                    max-width: 150px;
+                }
+                img {
+                    @include border-radius(0.5rem);
+                }
+            }
+        }
+        .author-info {
+            h1 {
+                margin-bottom: 1.2rem;
+            }
+            .designation {
+                margin-bottom: 1.2rem;
+                font-size: 1.5rem;
+                @media (max-width: 767px) {
+                    font-size: 1.2rem;
+                }
+            }
+            .sort-info {
+                font-size: 1.2rem;
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                }
+            }
+            .share-btns {
+                @include flexbox;
+                @include align-items(center);
+                gap: 1rem;
+                margin-top: 1.5rem;
+                .social-btn {
+                    width: 2rem;
+                    height: 2rem;
+                    flex: none;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+                    @include border-radius(0.3rem);
+                    svg {
+                        width: 14px;
+                        height: 14px;
+                    }
+                    &:hover, &:focus {
+                        border-color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+}

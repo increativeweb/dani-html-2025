@@ -857,6 +857,9 @@ h1,
     @media (max-width: 1200px) { 
         font-size: 3.25rem;
     }
+    @media (max-width: 767px) { 
+        font-size: 2.75rem;
+    }
     &.font-sm {
         font-size: 3.375rem;
         @media (max-width: 992px) { 

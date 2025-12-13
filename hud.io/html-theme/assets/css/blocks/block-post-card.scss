@@ -21,6 +21,8 @@
             @include transition(0.3s, ease-in-out);
         }
     }
+}
+a.user-info {
     &:hover, &:focus {
         .info {
             .name {
@@ -79,6 +81,13 @@
                         }
                     }
                 }
+            }
+        }
+        &.author-post-list {
+            max-width: 100%;
+            .row > .col:first-child {
+                flex: unset;
+                max-width: unset;
             }
         }
     }
@@ -225,14 +234,14 @@
 .related-post-section {   
     .splide__track {        
         border-radius: 15px;
-        @media (max-width: 767px) {
+        @media (max-width: 992px) {
             border-radius: 15px 0 0 15px;
             margin: 0 -1.5rem;
         }
     } 
     .splide__slide {
         .post-card {
-            @media (max-width: 767px) {
+            @media (max-width: 992px) {
                 max-width: 300px;
             }
         }

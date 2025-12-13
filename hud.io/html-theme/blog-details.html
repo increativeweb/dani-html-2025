@@ -127,7 +127,7 @@
                                 <li>What’s our regression frequency?</li>
                                 <li>How fast do we recover when things break?</li>
                             </ol>
-                            <h2>What’s Actually Missing</h2>
+                            <h2><a href="#">What’s Actually Missing</a></h2>
                             <p>Models are already powerful enough for most of what we need. What’s missing is context. AI still struggles to reason about live systems - how they perform under load, how they degrade, how they recover. Until agents can see the world their code runs in - not just the codebase but its live behavior - they’re still guessing.</p>
                             <p>That’s the next frontier: making AI production-aware. Connecting it directly to the signals that describe how systems actually behave in reality. That’s when we move from “AI that codes” to “AI that understands.”</p>
                             <h2>The Shift Is Already Here</h2>
@@ -157,14 +157,15 @@
                             // Generate Nav Items (H2 + H3)
                             $(".single-content h2, .single-content h3").each(function () {
                                 const tag = $(this);
-                                const text = tag.text().trim();
                                 const isH3 = tag.is("h3");
 
-                                // Create ID
+                                // ✅ Get text from <a> if exists, else from heading
+                                const linkEl = tag.find("a");
+                                const text = linkEl.length ? linkEl.text().trim() : tag.text().trim();
+
                                 const id = "post-item-" + index;
                                 tag.attr("id", id);
 
-                                // Generate nav link
                                 nav.append(`
                                     <a class="nav-link ${isH3 ? "sub-heading" : ""}" href="#${id}">
                                         ${text}
@@ -174,27 +175,24 @@
                                 index++;
                             });
 
-                            // Scroll Spy: Activate when heading hits 50% of screen
+                            // Scroll Spy (activate at 50% viewport)
                             function activateOnScroll() {
                                 const scrollPos = $(window).scrollTop();
                                 const winH = $(window).height();
-                                const triggerLine = scrollPos + winH * 0.5; // 50% of viewport
+                                const triggerLine = scrollPos + winH * 0.2;
 
                                 let currentActive = null;
 
                                 $(".single-content h2, .single-content h3").each(function () {
-                                    const id = $(this).attr("id");
                                     const top = $(this).offset().top;
-
-                                    // Check if heading is above trigger point
                                     if (top <= triggerLine) {
-                                        currentActive = id;
+                                        currentActive = $(this).attr("id");
                                     }
                                 });
 
                                 if (currentActive) {
                                     $(".nav-link").removeClass("active");
-                                    $('.nav-link[href="#' + currentActive + '"]').addClass("active");
+                                    $(`.nav-link[href="#${currentActive}"]`).addClass("active");
                                 }
                             }
 
@@ -202,6 +200,7 @@
                             activateOnScroll();
 
                         });
+
                     </script>
                 </div>
             </div>
@@ -298,28 +297,31 @@
                     </div>
                 </div>
                 <script>
-                    if(jQuery('.post-splide').length) {
+                    if (jQuery('.post-splide').length) {
                         const slider = new Splide('.post-splide', {
-                        type: 'slide',
+                            type: 'slide',
                             perPage: 4,
                             perMove: 1,
                             pagination: true,
-                            arrows: false, 
-                            gap: '20px', 
+                            arrows: false,
+                            gap: '20px',
                             classes: {
                                 pagination: 'splide__pagination is-dark'
-                            }, 
-                            breakpoints: { 
+                            },
+                            breakpoints: {
                                 1200: {
                                     perPage: 3,
-                                }, 
+                                },
                                 992: {
-                                    perPage: 2
-                                }, 
+                                    perPage: 2,
+                                    padding: '1.5rem',
+                                    gap: '1rem',                                    
+                                    autoWidth: true,
+                                },
                                 767: {
-                                    perPage: 1, 
-                                    autoWidth: true, 
-                                    padding: '1.5rem'
+                                    perPage: 1,
+                                    autoWidth: true,
+                                    drag: true,
                                 }
                             }
                         });
