@@ -2,11 +2,11 @@
 
 .testimonial-section {
     .testimonial-splide {
+        padding-bottom: 1rem;
         @media (max-width: 992px) {
-            margin: 0 -15px;
+            margin: 0 -0.75rem;
         }
         .splide__track {
-            padding: 1rem 0;
             @include border-radius(8px);
         }
         .splide__pagination { 
@@ -32,7 +32,6 @@
         @include align-items(center);
         gap: 20px;
         padding: 1.88rem 1.25rem;
-        box-shadow: 0 0 10px 3px #0000001a;
         color: var(--text-black);
         @include border-radius(8px);
         @media (max-width: 767px) {

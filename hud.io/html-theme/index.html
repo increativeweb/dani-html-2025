@@ -369,7 +369,7 @@
                             <h2>Trusted by engineers. <br>Human & artificial alike.</h2>
                             <div class="sort-info">Hud runs on millions of services across massive production environments, with negligible overhead.</div>
                         </div>
-                        <div class="splide testimonial-splide" data-splide='{"type": "loop","perPage": 3,"perMove": 1,"pagination": false,"arrows": true, "gap": "30px", "padding": "1rem", "classes": {"pagination": "splide__pagination is-dark"}, "breakpoints": { "992": {"perPage": 2, "arrows": false, "pagination": true}, "767": {"perPage": 1, "autoWidth": "true", "gap": "20px"}}}'>
+                        <div class="splide testimonial-splide splide-js">
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">                                                                
@@ -473,6 +473,34 @@
                                 </ul>
                             </div>
                         </div>
+                        <script>
+                            if (jQuery('.testimonial-splide').length) {
+                                const testimonialSlider = new Splide('.testimonial-splide', {
+                                    type: 'loop',
+                                    perPage: 3,
+                                    perMove: 1,
+                                    pagination: false,
+                                    arrows: true, 
+                                    gap: '20px', 
+                                    classes: {
+                                        pagination: 'splide__pagination is-dark',
+                                    }, 
+                                    breakpoints: { 
+                                        992: {
+                                            perPage: 2, 
+                                            arrows: false, 
+                                            pagination: true
+                                        }, 
+                                        767: {
+                                            perPage: 1, 
+                                            autoWidth: true, 
+                                            gap: '20px',
+                                        }
+                                    }
+                                });
+                                testimonialSlider.mount();
+                            }
+                        </script>
                     </div>
                 </section>
                 <link rel='stylesheet' href='assets/css/blocks/block-video.css' type='text/css' media='all' />
