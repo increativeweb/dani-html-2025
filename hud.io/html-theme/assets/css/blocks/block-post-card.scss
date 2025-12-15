@@ -377,70 +377,12 @@ a.user-info {
         }
     }
 }
-.about-author-block {
-    margin-top: 2rem;
-    background: rgba(91,91,91,0.05);
-    padding: 1.5rem;
-    @include border-radius(0.8rem);
-    @media (max-width: 767px) {
-        padding: 1.2rem;
-    }
-    .title {
-        margin-bottom: 1.7rem;
-        font-size: 1.6rem;
-        font-weight: 500;
-        @media (max-width: 767px) {
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-    }
-    .author-block {
-        @include flexbox;
-        gap: 30px;
-        @media (max-width: 767px) {
-            gap: 20px;
-        }
-        .author-img {
-            min-width: 80px;
-            max-width: 80px;
-            aspect-ratio: 1 / 1;
-            overflow: hidden;   
-            @media (max-width: 767px) {
-                min-width: 60px;
-                max-width: 60px;
-            }   
-            img {
-                width: 100%;
-                @include border-radius(50%);  
-            }
-        }
-        .author-info {
-            .name {
-                font-size: 1.3rem;
-                font-weight: 500;
-                @media (max-width: 767px) {
-                    font-size: 1.2rem;
-                }
-            }
-            .designation {
-                color: rgba(0, 0, 0, 0.6);
-                font-size: 1rem;
-                margin: 0.5rem 0;
-            }
-            .sort-info {
-                font-size: 1.1rem;
-                @media (max-width: 767px) {
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-}
 .post-sidebar {    
     .single-nav {
         background: rgba(#5b5b5b, 0.05);
         padding: 1.2rem;
         @include border-radius(0.5rem);
+        color: var(--text-black);
         .nav-title {
             font-size: 1.2rem;
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -492,6 +434,7 @@ a.user-info {
     background: rgba(#5b5b5b, 0.05);
     padding: 1.2rem;
     @include border-radius(0.5rem);
+    color: var(--text-black);
     .share-title {
         font-size: 1.2rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -500,6 +443,78 @@ a.user-info {
     }
     @media (max-width: 1200px) {
         margin-top: 2rem;
+    }
+}
+
+.about-author-block {
+    margin-top: 2rem;
+    background: #1a1a1a url('../../images/img-center-gradient-bg.svg') no-repeat;   
+    background-position: 220% 70%;
+    background-size: cover;
+    padding: 1.5rem;
+    @include border-radius(0.8rem);
+    color: var(--text-white);
+    @media (max-width: 767px) {
+        padding: 1.2rem;
+    }
+    .title {
+        margin-bottom: 1.7rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        @media (max-width: 767px) {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+    }
+    .author-block {
+        @include flexbox;
+        gap: 30px;
+        @media (max-width: 767px) {
+            gap: 20px;
+        }   
+        .author-img {
+            min-width: 80px;
+            max-width: 80px;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;   
+            @media (max-width: 767px) {
+                min-width: 60px;
+                max-width: 60px;
+            }   
+            img {
+                width: 100%;
+                @include border-radius(50%);  
+            }
+        }
+        .author-info {
+            .name {
+                font-size: 1.3rem;
+                font-weight: 500;
+                a {
+                    text-decoration: none;
+                    text-underline-offset: 5px;
+                    @include transition(0.3s, ease-in-out);
+                    color: var(--text-white);
+                    &:hover, &:focus {
+                        text-decoration: underline;
+                    }
+                }
+                @media (max-width: 767px) {
+                    font-size: 1.2rem;
+                }
+            }
+            .designation {
+                font-size: 1rem;
+                margin: 0.5rem 0;
+                opacity: 0.7;
+            }
+            .sort-info {
+                font-size: 1.1rem;
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }
 .author-list-block {
@@ -513,6 +528,9 @@ a.user-info {
     background-color: rgba(255, 255, 255, 0.2);
     @include border-radius(0.2rem);
     padding: 0.8rem;
+    text-decoration: none;
+    color: var(--text-white) !important;
+    @include transition(0.3s, ease-in-out);
     .author-img {
         width: 60px;
         aspect-ratio: 1 / 1;
@@ -526,11 +544,20 @@ a.user-info {
         .name {
             font-size: 1.2rem;
             font-weight: 500;
+            text-underline-offset: 5px;
         }
         .designation {
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.65);
+            opacity: 0.6;
             margin-top: 0.2rem;
+        }
+    }
+    &:hover, &:focus {
+        @include transform(translateY(-5px));
+        .info {
+            .name {
+                text-decoration: underline;
+            }
         }
     }
 }

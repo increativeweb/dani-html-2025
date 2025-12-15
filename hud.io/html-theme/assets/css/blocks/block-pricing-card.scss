@@ -61,8 +61,14 @@
                 font-size: .95rem;
                 position: relative;
                 padding-left: 1.5rem;
+                @include flexbox;
+                @include align-items(flex-start);
+                gap: 1rem;
                 &:not(:last-child) {
                     margin-bottom: 1rem;
+                }
+                & > * {
+                    margin-bottom: 0;
                 }
                 strong {
                     color: var(--text-black);
@@ -75,6 +81,7 @@
                     display: inline-block;
                     float: right;
                     margin-top: -2px;
+                    margin-left: auto;
                 }
                 &::before {
                     content: '';
