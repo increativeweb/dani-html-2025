@@ -1,37 +1,5 @@
 @import '../scss/config';
    
-.user-info {
-    @include flexbox;
-    @include align-items(center);
-    gap: 0.5rem;
-    text-decoration: none;
-    z-index: 5;
-    position: relative;
-    .user-img {
-        aspect-ratio: 1 / 1;
-        max-width: 30px;
-        @include border-radius(50%);
-        overflow: hidden;
-    }
-    .info {
-        .name {
-            font-size: .9rem;
-            color: var(--text-white);
-            text-underline-offset: 4px;
-            @include transition(0.3s, ease-in-out);
-        }
-    }
-}
-a.user-info {
-    &:hover, &:focus {
-        .info {
-            .name {
-                color: rgba(255, 255, 255, 0.7);
-                text-decoration: underline;
-            }
-        }
-    }
-}
 .social-lists {
     @include flexbox;
     @include align-items(center);
