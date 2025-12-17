@@ -752,7 +752,7 @@
             margin-bottom: 2rem;
         }
         @media (max-width: 767px) {
-            gap: 20px;
+            gap: 1rem;
             @include flex-direction(column);
         }
 
@@ -763,8 +763,8 @@
             overflow: hidden;
 
             @media (max-width: 767px) {
-                min-width: 60px;
-                max-width: 60px;
+                min-width: 64px;
+                max-width: 64px;
             }
 
             img {
