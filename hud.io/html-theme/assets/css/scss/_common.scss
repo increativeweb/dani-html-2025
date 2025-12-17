@@ -1220,3 +1220,29 @@ a.user-info {
         }
     }
 }
+
+.icw-loading:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid var(--black);
+    border-color: var(--black) transparent var(--black) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    -webkit-animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
