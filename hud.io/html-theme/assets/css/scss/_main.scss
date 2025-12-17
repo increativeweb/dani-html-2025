@@ -472,14 +472,14 @@
 
     .user-img {
         aspect-ratio: 1 / 1;
-        max-width: 24px;
+        max-width: 36px;
         @include border-radius(50%);
         overflow: hidden;
     }
 
     .name {
 
-        font-size: 0.75rem;
+        font-size: 1rem;
         color: var(--text-white);
         text-underline-offset: 4px;
         @include transition(0.3s, ease-in-out);
@@ -525,6 +525,20 @@ a.user-info {
 }
 
 // Blog Single
+.single {
+    .main-content-wrapper {
+        .container {
+            max-width: 65.3rem;
+            margin: 0 auto;
+            @media (max-width: 1200px) {
+                max-width: 57rem;
+            }
+            @media (max-width: 992px) {
+                max-width: 100%;
+            }
+        }
+    }
+}
 .single-content {
     line-height: 1.4;
     color: var(--text-black);
@@ -830,6 +844,9 @@ a.user-info {
 .single-header {
     .back-link {
         margin-bottom: 1rem;
+        @media (max-width: 767px) {
+            margin-bottom: 1.25rem;
+        }
         a {
             @include flexbox;
             @include align-items(center);
