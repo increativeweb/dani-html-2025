@@ -988,3 +988,103 @@ a.user-info {
         }
     }
 }
+
+// Cookies Bar
+#cookiescript_injected {
+    width: 92.5% !important;
+    max-width: 85rem;
+    margin: 0 auto 1rem !important;
+    background-color: rgba(32, 34, 36, 0.66) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid #302e31;
+    @include border-radius(0.5rem);
+    @include box-shadow(none !important);
+    padding: 1rem !important;
+    font-family: 'Ppneuemontreal', Arial, sans-serif !important;
+    @media (max-width: 992px) {
+        width: calc(100% - 2rem) !important;
+        text-align: center;
+    }
+    #cookiescript_description {
+        font-size: 1rem;
+        font-weight: 500;
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+        a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-white);
+            text-decoration: underline;
+            &:hover, &:focus {
+                color: #0ffee6;
+            }
+            @media (max-width: 992px) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+    #cookiescript_toppart {
+        @include flex-wrap(wrap);
+        gap: 1rem;
+        #cookiescript_leftpart {
+            max-width: unset;
+            @media (max-width: 992px) {
+                width: 100%;
+                @include align-items(center);
+            }
+        }
+        #cookiescript_rightpart {
+            min-width: unset;
+            @media (max-width: 992px) {
+                width: 100%;
+                @include align-items(center);
+            }
+        }
+    }
+    #cookiescript_buttons {
+        @include justify-content(flex-end);
+        gap: 1rem;
+        @media (max-width: 1024px) {
+            @include flex-direction(unset);
+        }
+        @media (max-width: 992px) {
+            @include justify-content(center);
+        }
+        & > div[role=button] {
+            @include border-radius(0.5rem);
+            min-height: 2.75rem;
+            @include inline-flex;
+            @include align-items(center);
+            @include justify-content(center);
+            font-weight: 500;
+            font-size: 0.875rem;
+            text-transform: capitalize;
+            line-height: 1;
+            padding: 0 2rem;
+            letter-spacing: 0;
+            flex-grow: unset;
+            margin: 0;
+            min-width: 8.125rem;
+        }
+        #cookiescript_accept {
+            color: var(--text-black);
+            border-color: var(--white);
+            background-color: var(--white);
+            &:hover, &:focus {
+                opacity: 0.9;
+            }
+        }
+        #cookiescript_reject {
+            color: var(--text-white);
+            border-color: #434547;
+            background-color: #292b2e;
+            &:hover, &:focus {
+                background-color: #202327;
+            }
+        }
+    }
+    #cookiescript_copyright, .cookiescript_pre_header {
+        display: none !important;
+    }
+}
