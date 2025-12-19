@@ -1044,10 +1044,8 @@ a.user-info {
     }
     #cookiescript_buttons {
         @include justify-content(flex-end);
+        @include flex-direction(row-reverse !important);
         gap: 1rem;
-        @media (max-width: 1024px) {
-            @include flex-direction(unset);
-        }
         @media (max-width: 992px) {
             @include justify-content(center);
         }
@@ -1061,7 +1059,7 @@ a.user-info {
             font-size: 0.875rem;
             text-transform: capitalize;
             line-height: 1;
-            padding: 0 2rem;
+            padding: 0 2.5rem;
             letter-spacing: 0;
             flex-grow: unset;
             margin: 0;
