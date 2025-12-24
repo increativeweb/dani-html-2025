@@ -1,0 +1,47 @@
+:root {
+  --text-black: #111214;
+  --text-white: #f1f1f1;
+
+  --white: white;
+  --black: #111214;
+  --gray: #5b5b5b;
+  --dark-gray: #292b2e;
+
+  --purple: #7654fc;
+  --purple-2: #b65aff;
+  --purple-3: #aa80fd;
+
+  --dark-purple: #3a005c;
+  --blue-gray: #1d2428;
+  --turquoise: #0ffee6;
+
+  --success-green: #027a48;
+  --error-red: #eb2010;
+  --error-red-light: #ffe0dd;
+  --success-green-light: #ecfdf3;
+}
+
+/* Import Fonts */
+@font-face {
+  font-family: Ppneuemontreal;
+  src: url('../fonts/PPNeueMontreal-Regular.woff2')format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Ppneuemontreal;
+  src: url('../fonts/PPNeueMontreal-Medium.woff2')format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Ppneuemontreal;
+  src: url('../fonts/PPNeueMontreal-SemiBold.woff2')format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap
+}
