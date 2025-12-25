@@ -919,6 +919,16 @@ img {
     }
 }
 
+.outside-right {
+    .media-block {
+        width: 50vw;
+        max-width: unset;
+        img {
+            margin-left: 10%;
+        }
+    }
+}
+
 // Slider Pagination
 .splide__pagination {
     bottom: -25px;
@@ -1030,7 +1040,6 @@ h1,
     @media (max-width: 767px) {
         font-size: 2.5rem;
     }
-
     &.font-sm {
         font-size: 3.375rem;
 
@@ -1055,6 +1064,16 @@ h2,
 
     @media (max-width: 767px) {
         font-size: 2rem !important;
+    }
+    &.font-lg {
+        font-size: 4.5rem;
+        @media (max-width: 992px) {
+            font-size: 2.75rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 2rem !important;
+        }
     }
 }
 
@@ -1181,6 +1200,10 @@ h5,
     background-repeat: no-repeat;
     background-size: cover;
     // background-position: center;
+}
+.bg-transprent {
+    background-color: transparent;
+    background-image: none;
 }
 
 .bg-gradient-block {

@@ -27,7 +27,7 @@
     <link rel='stylesheet' href='blocks/testimonials/style.css'  type='text/css' media='all' />
 </head>
 
-<body class="dark">
+<body class="home dark ">
     <div class="announcement-bar">
         <div class="container">
             <a href="#">Read the Monday.com success story<span class="icon-arrow"></span></a>
@@ -61,14 +61,42 @@
         <!-- <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div> -->
     </header>
     <main id="main-content" class="main-content-wrapper">
-        <section data-theme="dark" class="page-header theme-section pt-large pb-medium ">
+        <section data-theme="dark" class="theme-section hero-section default gs-is-dark is-dark">
             <div class="container">
                 <div class="row g-xl-5 align-items-center">
-                    <div class="col-12">
-                        <div class="section-title lg-section-title text-center">
-                            <h1>Bringing production intelligence <br class="d-none d-lg-block">to AI coding agents.</h1>
+                    <div class="col-lg-5 col-xl-6">
+                        <div class="hero-title text-left">
+                            <div class="tag-line">THE FIRST</div>
+                            <h1 class="title">Runtime Code Sensor</h1>
                             <div class="sort-info">
-                                <p class="font-lg">So they can ship with confidence.</p>
+                                <p>Hud is a new way to understand how code behaves in production, <br class="d-none d-xl-block">detecting errors and latency issues with the deep forensic context <br class="d-none d-xl-block">needed to fix them with AI.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-xl-6">                        
+                        <div class="media-block">
+                            <picture>
+                                <img decoding="async" src="uploads/img-hero-about.png" alt="Detection with Root Cause">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section data-theme="dark" class="theme-section pb-0 gs-is-dark is-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">                        
+                        <div class="section-title text-left">
+                            <h2 class="title">Will we ever trust AI <br class="d-none d-xl-block">to ship production <br class="d-none d-xl-block">code?</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-title text-left">
+                            <div class="sort-info">
+                                <p class="text-color-secondary">Engineering teams are under pressure to move faster, ship more, and use AI to do it. But even with the best tools, production still breaks in unexpected ways. Too often, we hear about issues from users before we see them ourselves. Debugging can take hours, often pulling your most senior engineers away from important new work.</p>
+                                <p class="text-color-secondary">AI should make this better, but when AI writes code without understanding how production behaves, it often makes things worse. Teams want to spend time building new products, not chasing stability issues or reviewing AI’s risky pull requests. Hud changes this. It gives both engineers and AI real visibility into how code behaves in production, so they can detect problems earlier, find the real root cause instantly, and fix them safely.</p>
                             </div>
                         </div>
                     </div>
@@ -76,56 +104,84 @@
             </div>
         </section>
 
-        <section data-theme="dark" class="theme-section icw-sections bg-transprent p-medium default pb-0 m-p-medium gs-is-light is-light">
-            <div class="acf-innerblocks-container"> 
-                <section data-theme="light" class="theme-section content-card-section bg-lightgray default gs-is-light is-light">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">                        
-                                <div class="section-title text-left">
-                                    <h2>Our mission <br><strong>drives us.</strong></h2>
+        <section data-theme="dark" class="theme-section morden-card-section section-title-mw-90 default gs-is-dark">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2 class="title ">The Hud difference</h2>
+                    <div class="sort-info">
+                        <p class="text-color-secondary">Hud is fundamentally different from legacy observability, APMs, and error trackers. It is based on the Runtime Code Sensor, a lightweight component that installs in minutes and runs alongside your code with negligible footprint.</p>
+                        <h3>See code in a different way</h3>
+                    </div>
+                </div>
+                <div class="morden-card-blocks">
+                    <div class="row">
+                        <div class="position-relative col-12 scroll-animate">
+                            <div class="morden-card  br-bg-card flex-lg-row">
+                                <div class="card-content">
+                                    <h3>Ubiquity</h3>
                                     <div class="sort-info">
-                                        <p><strong>We believe AI should understand and reason over production as well as it ships code.</strong></p>
-                                        <p>That's the gap we're closing - so engineering teams can move faster, ship with confidence, and focus on what they're actually building. Hud is how we make that real.</p>
+                                        <p>Hud lives with every piece of code - if it runs in production, Hud knows how it behaves, whether it’s failing, and whether it’s getting better or worse over time.</p>
                                     </div>
+                                    <div class="action"></div>
+                                </div>
+                                <div class="card-image">
+                                    <picture><img src="uploads/img-ubiquity.png" alt="Ubiquity"></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative col-lg-6 scroll-animate">
+                            <div class="morden-card  br-bg-card flex-lg-column">
+                                <div class="card-content">
+                                    <h3><span style="display:inline-block;max-width:80%">Dynamic depth / lower cost</span></h3>
+                                    <div class="sort-info">
+                                        <p>Hud continuously captures lightweight signals about runtime behavior, and when something goes wrong, it automatically collects the forensic context needed to understand and resolve the root cause.</p>
+                                    </div>
+                                    <div class="action"></div>
+                                </div>
+                                <div class="card-image">
+                                    <picture><img src="uploads/img-dynamic-depth-lower-cost.png" alt="Dynamic depth / lower cost"></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative col-lg-6 scroll-animate">
+                            <div class="morden-card  center-bg-card flex-lg-column flex-lg-column-reverse">
+                                <div class="card-content">
+                                    <h3><span class="text-nowrap">Built for AI consumption</span></h3>
+                                    <div class="sort-info">
+                                        <p>Hud’s data model was designed so AI agents can reason over any piece of code with real production context  - enabling safe, confident AI-generated changes.</p>
+                                    </div>
+                                    <div class="action"></div>
+                                </div>
+                                <div class="card-image">
+                                    <picture><img src="uploads/img-built-ai-consumption.png" alt="Built for AI consumption"></picture>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
-        </section>
-
-        <section data-theme="dark" class="theme-section stand-line-section section-title-mw-90 default gs-is-dark">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2 class="title">The road here</h2>
                 </div>
 
-
             </div>
         </section>
-        <section data-theme="light" class="theme-section bg-lightgray default gs-is-light is-light overflow-hidden">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="section-title">
-                            <h2>Who we are</h2>
+
+        <div data-theme="light"
+            class="theme-section icw-sections bg-gradient p-medium default pb-0 m-p-medium gs-is-light is-light">
+            <div class="acf-innerblocks-container">
+                <section data-theme="light" class="theme-section section-title-mw-880 testimonial-section  default gs-is-light is-light">
+                    <div class="container">
+                        <div class="section-title text-center">
+                            <h2 class="title ">Under the Hood</h2>
                             <div class="sort-info">
-                                <p class="font-lg">We're engineers with deep expertise in runtime <br class="d-none d-lg-block">internals and OS reverse engineering - building <br class="d-none d-lg-block">the bridge between production reality and the AI <br class="d-none d-lg-block">agents writing code.</p>
+                                <p>Hud’s architecture is built around its Runtime Code Sensor - a lightweight SDK-level component that runs alongside application code at the function-level and operates within existing permissions and access controls. The sensor collects aggregated data during normal operation, and deeper forensic data when issues occur, such as errors and performance regressions. All information is processed securely within the user’s environment and sent through the secure protocols to Hud’s core logic, which performs cross-instance correlation and version analysis to identify systemic or environment-specific issues - without requiring direct access to source code or sensitive data.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 outside-right">
                         <div class="media-block">
-                            <img src="uploads/img-who-we-are.png" alt="Who we are">
+                            <picture>
+                                <img src="uploads/img-about-under-hood.png" alt="Under the Hood">
+                            </picture>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
-        <div data-theme="light" class="theme-section bg-lightgray p-medium default gs-is-light is-light">
-            
         </div>
     </main>
     <footer class="main-footer">

@@ -249,6 +249,10 @@
             margin-bottom: 0.5rem;
             display: inline-block;
         }
+        .font-lg {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
     }
 
     .categories-list {
@@ -267,6 +271,27 @@
 
     & *:last-child {
         margin-bottom: 0px !important;
+    }
+    &.lg-section-title {
+        h1 {
+            font-size: 4.375rem;
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            @media (max-width: 992px) {
+                font-size: 2.625rem;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 2.25rem;
+            }
+        }
+        .sort-info {
+            .font-lg {
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
     }
 }
 
@@ -914,6 +939,79 @@ a.user-info {
                     }
                 }
 
+            }
+        }
+    }
+}
+
+.content-card-section {
+    background-image: url('../images/img-tl-vector.svg'), url('../images/img-br-vector.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    padding: 10.625rem 8.438rem;
+    background-size: contain;
+    @include border-radius(0.75rem);
+    @media (max-width: 1200px) {
+        padding: 7rem 3.5rem;
+    }
+    @media (max-width: 992px) {
+        padding: 4.375rem 2rem;
+    }
+    @media (max-width: 767px) {
+        padding: 2.5rem 0;
+        background-size: 130%, 100%;
+        .container {
+            padding-left: 1.375rem;
+            padding-right: 1.375rem;
+        }
+    }
+    .section-title {
+        margin-bottom: 0;
+        width: 100%;
+        @include flexbox;
+        @include justify-content(space-between);
+        gap: 2rem;
+        @media (max-width: 992px) {
+            @include flex-direction(column);
+        }
+        h2 {
+            font-size: 4.5rem;
+            letter-spacing: -0.03em;
+            font-weight: 400;
+            margin-bottom: 0;
+            @media (max-width: 1200px) {
+                font-size: 3.5rem;
+            }
+            @media (max-width: 992px) {
+                font-size: 2.75rem;
+            }
+            strong {
+                font-weight: 600;
+            }
+        }
+        .sort-info {
+            font-size: 1.25rem;
+            font-weight: 500;
+            max-width: 31.875rem;            
+            letter-spacing: -0.01em;
+            @media (max-width: 1200px) {
+                max-width: 27rem;       
+            }
+            @media (max-width: 992px) {
+                max-width: 100%;     
+                font-size: 1.125rem;       
+            }
+            strong {
+                font-size: 2rem;
+                font-weight: 500;
+                letter-spacing: -0.02em;
+                line-height: 1.2;
+                @media (max-width: 1200px) {
+                    font-size: 1.7rem;
+                }
+                @media (max-width: 992px) {
+                    font-size: 1.5rem;
+                }
             }
         }
     }
