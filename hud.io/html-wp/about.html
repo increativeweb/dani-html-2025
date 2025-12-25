@@ -23,8 +23,7 @@
     <meta name="msapplication-TileImage" content="uploads/cropped-favicon-270x270.jpg" />
     <link rel='stylesheet' href='blocks/hero/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='blocks/modern/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='blocks/process/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='blocks/testimonials/style.css'  type='text/css' media='all' />
+    <link rel='stylesheet' href='blocks/history/style.css' type='text/css' media='all' />
 </head>
 
 <body class="dark">
@@ -96,13 +95,80 @@
             </div>
         </section>
 
-        <section data-theme="dark" class="theme-section stand-line-section section-title-mw-90 default gs-is-dark">
+        <section data-theme="dark" class="theme-section history-section section-title-mw-90 default gs-is-dark">
             <div class="container">
                 <div class="section-title text-center">
                     <h2 class="title">The road here</h2>
                 </div>
-
-
+                <div class="splide history-slider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="history-card">
+                                    <span class="history-year">2002</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-aws.svg" alt="AWS" /></div>
+                                        <div class="info">Accessible infrastructure</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card">
+                                    <span class="history-year">2005</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-git.svg" alt="Git" /></div>
+                                        <div class="info">Code has a home</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card">
+                                    <span class="history-year">2013</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-docker.svg" alt="Docker" /></div>
+                                        <div class="info">Deployment packages are predictable.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card">
+                                    <span class="history-year">2015</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-kubernetes.svg" alt="Kubernetes" /></div>
+                                        <div class="info">Scale is manageable</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card">
+                                    <span class="history-year">2022</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-github-copilot.svg" alt="GitHub Copilot" /></div>
+                                        <div class="info">Writing code got faster.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card">
+                                    <span class="history-year">2023</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-cursor.svg" alt="Cursor" /></div>
+                                        <div class="info">Accessible infrastructure</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card is-current">
+                                    <span class="history-year">2025</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-hud.svg" alt="Hud" /></div>
+                                        <div class="info">Production is visible to engineers and agents.</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         <section data-theme="light" class="theme-section bg-lightgray default gs-is-light is-light overflow-hidden">
@@ -122,11 +188,48 @@
                         </div>
                     </div>
                 </div>
+                <div class="icon-card-block">
+                    <div class="section-title">
+                        <h3>What we stand for</h3>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="icon-card">
+                                <div class="card-img">
+                                    <img src="uploads/icon-depth.svg" alt="Depth">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Depth</h4>
+                                    <div class="sort-info">without the complexity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-card">
+                                <div class="card-img">
+                                    <img src="uploads/icon-visibility.svg" alt="Visibility">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Visibility</h4>
+                                    <div class="sort-info">without digging</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-card">
+                                <div class="card-img">
+                                    <img src="uploads/icon-built.svg" alt="Built">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Built</h4>
+                                    <div class="sort-info">for what’s next</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <div data-theme="light" class="theme-section bg-lightgray p-medium default gs-is-light is-light">
-            
-        </div>
     </main>
     <footer class="main-footer">
         <div class="container-fluid">
@@ -170,8 +273,7 @@
     <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>
     <script type="text/javascript" src="assets/js/post-details.js" id="post-details-js"></script>
     <script type="text/javascript" src="blocks/hero/script.js" id="acf-hero-view-script-js" defer="defer" data-wp-strategy="defer"></script>
-    <script type="text/javascript" src="blocks/process/script.js" id="acf-process-script-js"></script>
-    <script type="text/javascript" src="blocks/testimonials/script.js" id="acf-testimonials-view-script-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript" src="blocks/history/script.js" id="acf-history-script-js" defer="defer" data-wp-strategy="defer"></script>
 </body>
 
 </html>
