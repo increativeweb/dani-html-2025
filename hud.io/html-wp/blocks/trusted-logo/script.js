@@ -14,7 +14,7 @@
             767: {
                 perPage: 3,
                 arrows: false,
-                gap: 30,
+                gap: 60,
             },
         },
     };
