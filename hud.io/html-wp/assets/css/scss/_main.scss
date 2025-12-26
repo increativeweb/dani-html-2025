@@ -1056,3 +1056,32 @@ a.user-info {
         }
     }
 }
+
+.with-bg-glow-animation {
+    position: relative;
+    padding-bottom: 18rem;
+    z-index: 1;
+    @media (max-width: 992px) {
+        padding-bottom: 15rem;
+    }
+    @media (max-width: 767px) {
+        padding-bottom: 10rem;
+    }
+    .bg-glow {
+        width: 40rem;
+        height: 32rem;
+        background: linear-gradient(141.76deg, #FFFFFF -8.43%, #F9BAF9 27.33%, #9470FD 91.21%);
+        filter: blur(169.866px);
+        position: absolute;
+        top: 10%;
+        left: 0;
+        z-index: -1;
+        @media (max-width: 767px) {
+            width: 30rem;
+            height: 40rem;
+            top: 20%;
+            left: 0 !important;
+            right: 0 !important;
+        }
+    }
+}

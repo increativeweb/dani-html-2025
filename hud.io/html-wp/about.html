@@ -59,7 +59,7 @@
         </nav>
         <!-- <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div> -->
     </header>
-    <main id="main-content" class="main-content-wrapper">
+    <main id="main-content" class="main-content-wrapper overflow-hidden">
         <section data-theme="dark" class="page-header theme-section pt-large pb-medium ">
             <div class="container">
                 <div class="row g-xl-5 align-items-center">
@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <section data-theme="dark" class="theme-section icw-sections bg-transprent p-medium default pb-0 m-p-medium gs-is-light is-light">
+        <section data-theme="dark" class="theme-section icw-sections bg-transprent p-medium default m-p-medium gs-is-light is-light">
             <div class="acf-innerblocks-container"> 
                 <section data-theme="light" class="theme-section content-card-section bg-lightgray default gs-is-light is-light">
                     <div class="container">
@@ -95,7 +95,7 @@
             </div>
         </section>
 
-        <section data-theme="dark" class="theme-section history-section section-title-mw-90 default gs-is-dark">
+        <section data-theme="dark" class="theme-section history-section with-bg-glow-animation section-title-mw-90 default gs-is-dark">
             <div class="container">
                 <div class="section-title text-center">
                     <h2 class="title">The road here</h2>
@@ -170,7 +170,41 @@
                     </div>
                 </div>
             </div>
+            <div class="bg-glow"></div>
         </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                const tokenBgCursor = document.querySelector('.bg-glow');
+                const triggerCursor = document.querySelector('.with-bg-glow-animation');
+
+                if (!tokenBgCursor || !triggerCursor) return;
+
+                triggerCursor.addEventListener('mousemove', (e) => {
+                    const rect = triggerCursor.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const width = rect.width;
+
+                    // Convert to percentage (limit to 60%)
+                    let percent = (x / width) * 100;
+                    percent = Math.max(0, Math.min(percent, 60));
+
+                    tokenBgCursor.style.left  = percent + '%';
+                    tokenBgCursor.style.right = percent + '%';
+                });
+
+                triggerCursor.addEventListener('mouseenter', () => {
+                    tokenBgCursor.classList.remove('hide');
+                });
+
+                triggerCursor.addEventListener('mouseleave', () => {
+                    tokenBgCursor.classList.add('hide');
+                });
+
+            });
+        </script>
+
+
         <section data-theme="light" class="theme-section bg-lightgray default gs-is-light is-light overflow-hidden">
             <div class="container">
                 <div class="row align-items-center">
