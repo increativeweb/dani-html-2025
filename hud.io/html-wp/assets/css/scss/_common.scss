@@ -945,9 +945,14 @@ img {
 }
 
 .outside-right {
-    .media-block {
+    .media-block:not(.splide__slide .media-block) {
         width: 50vw;
         max-width: unset;
+        @media (max-width: 767px) {
+            width: auto;
+            margin-left: -3.5rem;
+            margin-right: -3.5rem;
+        }
     }
 }
 
