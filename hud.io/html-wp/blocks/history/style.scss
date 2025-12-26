@@ -23,6 +23,21 @@
                 height: 100%;
             }
         }
+        .splide__arrows {
+            .splide__arrow {
+                filter: invert(1);
+                bottom: auto;
+                top: 60%;
+                &--prev {
+                    left: -35px;
+                    right: auto;
+                }
+                &--next {
+                    left: auto;
+                    right: -35px;
+                }
+            }
+        }
         @media (max-width: 767px) {              
             max-width: 260px;
             margin: 0 auto;

@@ -125,4 +125,5 @@ wp.domReady(function () {
             testimonialSlider.refresh();
         });
     }
+    
 });
