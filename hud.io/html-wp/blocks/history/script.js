@@ -28,7 +28,7 @@ if (jQuery('.history-slider').length) {
                 pagination: false,
             };
 
-            // slider.refresh(); // 🔑 REQUIRED
+            slider.refresh(); // 🔑 REQUIRED
         }
     });
 

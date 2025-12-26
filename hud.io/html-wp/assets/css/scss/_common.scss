@@ -549,7 +549,25 @@ img {
     padding: .75rem 1.6rem;
     line-height: 1;
     gap: 10px;
-
+    small {
+        display: block;
+        font-size: 12px;
+    }
+    & > span:not(.icon-arrow) {
+        @include inline-flex;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        gap: 0.5rem;
+        & > span {            
+            @include inline-flex;
+            @include align-items(center);
+            gap: 10px;
+        }
+    }
+    &.btn-mw-lg {
+        min-width: 16rem;
+        @include justify-content(flex-start);
+    }
     &:hover,
     &:focus {
         opacity: 0.8;
@@ -603,6 +621,12 @@ img {
         color: var(--black) !important;
         border-color: var(--white) !important;
         background-color: var(--white) !important;
+        &.btn-link-arrow {
+            padding: .75rem 1rem;
+            .icon-arrow {
+                filter: invert(1);
+            }
+        }
     }
 
     &.btn-dark {
@@ -639,6 +663,7 @@ img {
             width: 12px;
             height: 12px;
             @include transition(0.2s, ease-in-out);
+            display: inline-block;
         }
 
         &:hover,
