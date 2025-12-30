@@ -1,0 +1,14 @@
+@import '../../assets/css/scss/mixins';
+
+.theme-section.icw-sections .acf-innerblocks-container {
+    overflow: hidden;
+}
+
+.job-content-block {
+    padding: 3rem 2rem;
+    @include border-radius(1rem);
+    border: 1px solid transparent;
+    background-image: linear-gradient(rgba(42, 42, 42, 1), rgba(42, 42, 42, 1)), linear-gradient(174deg, var(--white), #f9baf9 52%, #9470fd);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
