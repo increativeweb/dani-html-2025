@@ -12,11 +12,10 @@ if (jQuery('.image-gallery-slider').length) {
         breakpoints: {
             1200: {
                 perPage: 2,
-                padding: '15px'
             },
             767: {
                 perPage: 1,
-                gap: '15px',
+                gap: '12px',
             }
         }
     });
