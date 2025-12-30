@@ -54,10 +54,10 @@
         <!-- <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div> -->
     </header>
     <main class="main-content-wrapper">
-        <section data-theme="dark" class="page-header single-header pt-medium pb-medium m-pb-medium">
+        <section data-theme="dark" class="page-header single-header story-header pt-medium pb-medium m-pb-medium">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
+                <div class="story-header-block">
+                    <div class="title-block">
                         <div class="back-link"><a href="glossary.html"><span class="icon-back"></span>Customer Story</a></div>
                         <div class="blog-header-title">
                             <h1 class="h2 post-title font-sm">How Monday.com Built a Repeatable Playbook for Complex Performance Issues at scale</h1>
@@ -80,83 +80,118 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="post-image outside-img">
-                            <img src="uploads/img-monday-story.png" alt="How Monday.com Built a Repeatable Playbook for Complex Performance Issues at scale">
-                        </div>
+                    <div class="post-image">
+                        <img src="uploads/img-monday-story.png" alt="How Monday.com Built a Repeatable Playbook for Complex Performance Issues at scale">
                     </div>
                 </div>
             </div>
         </section>
-        <section data-theme="light" class="theme-section blog-content-section pt-medium is-light">
+        <section data-theme="light" class="theme-section blog-content-section story-content-section pt-medium is-light">
             <div class="container container-small">
                 <div class="row-blog-content">
                     <div class="col-sidebar">
                         <div class="post-sidebar position-sticky">
-                            <nav class="single-nav">
-                                <div class="nav-title" data-toggle="collapse" data-target="#blog-item"
-                                    aria-expanded="true">Table of Contents</div>
+                            <nav class="single-nav story-nav">
+                                <div class="nav-title" data-toggle="collapse" data-target="#blog-item" aria-expanded="true">In this story</div>
                                 <div class="navbar-list collapse show" id="blog-item">
                                     <nav class="nav-item">
-                                        <a class="nav-link " href="#post-item-1">The Setup: Smooth Onboarding with Immediate Context</a>
-                                        <a class="nav-link " href="#post-item-2">The Real Test: Finding Performance Opportunities</a>
-                                        <a class="nav-link " href="#post-item-3">Prioritization That Actually Makes Sense</a>
-                                        <a class="nav-link " href="#post-item-4">From Discovery to Implementation</a>
-                                        <a class="nav-link " href="#post-item-5">Room for Improvement</a>
-                                        <a class="nav-link " href="#post-item-6">The Bottom Line</a>
+                                        <a class="nav-link" href="#post-item-1">Company Snapshot</a>
+                                        <a class="nav-link" href="#post-item-2">The Challenge</a>
+                                        <a class="nav-link" href="#post-item-3">The Solution</a>
+                                        <a class="nav-link" href="#post-item-4">How Monday Engineers Use Runtime Intelligence</a>
+                                        <a class="nav-link" href="#post-item-5">The Results</a>
+                                        <a class="nav-link" href="#post-item-6">Conclusion</a>
                                     </nav>
                                 </div>
+                                <hr>
+                                <div class="action">
+                                    <a href="#" class="btn btn-dark">Contact sales</a>
+                                </div>
                             </nav>
-                            <div class="share-socials">
-                                <div class="share-title">Share post on</div>
-                                <ul class="social-links">
-                                    <li><a href="#!" title="Share on LinkedIn" data-bs-toggle="tooltip" onClick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.hud.io%2Fblog%2Fthe-missing-context-why-ai-coding-agents-need-production-intelligence%2F&title=The Missing Context: Why AI Coding Agents Need Production Intelligence','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.91125 14.9887H1.04603V5.52096H4.03583V14.9887H3.91125ZM2.54093 4.27521C1.54433 4.27521 0.796875 3.40319 0.796875 2.53116C0.796875 1.53456 1.54433 0.787109 2.54093 0.787109C3.53753 0.787109 4.28498 1.53456 4.28498 2.53116C4.1604 3.40319 3.41295 4.27521 2.54093 4.27521ZM14.9984 14.9887H12.0086V10.3794C12.0086 9.25822 12.0086 7.88789 10.5137 7.88789C9.01883 7.88789 8.76968 9.13364 8.76968 10.3794V15.1132H5.77988V5.52096H8.64511V6.76671C9.01883 6.01926 10.0154 5.27181 11.3858 5.27181C14.3756 5.27181 14.8739 7.26501 14.8739 9.75652V14.9887H14.9984Z" fill="#0B0B0E" /></svg></a></li>
-                                    <li><a href="#!" title="Share on Reddit" data-bs-toggle="tooltip" onClick="window.open('https://www.reddit.com/submit?url=https%3A%2F%2Fwww.hud.io%2Fblog%2Fthe-missing-context-why-ai-coding-agents-need-production-intelligence%2F&title=The Missing Context: Why AI Coding Agents Need Production Intelligence','Reddit','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;"><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6996 7.64315C17.4631 6.5701 16.4832 5.87435 15.5112 6.08896C15.1799 6.16183 14.8945 6.33252 14.669 6.5661C13.3607 5.61582 11.5745 4.98796 9.57969 4.86918L10.5347 0.892377L13.3677 1.57015C13.4146 2.34475 14.0562 2.95863 14.8426 2.95863C15.6289 2.95863 16.3215 2.29585 16.3215 1.47933C16.3215 0.662805 15.6589 0 14.8426 0C14.2508 0 13.7409 0.348371 13.5054 0.85146L10.4319 0.115781C10.1904 0.0578863 9.94792 0.206624 9.88904 0.448187L8.83226 4.84922C6.60695 4.8612 4.59919 5.50502 3.15822 6.53615C3.08737 6.47027 3.01154 6.40937 2.92871 6.35547C2.08948 5.81944 0.929921 6.13588 0.339166 7.0612C-0.251589 7.98752 -0.0510116 9.17237 0.788219 9.7084C0.838114 9.74035 0.88901 9.76828 0.940901 9.79423C0.906972 10.0009 0.889008 10.2115 0.889008 10.4241C0.889008 13.5035 4.47246 16 8.89315 16C13.3138 16 16.8973 13.5035 16.8973 10.4241C16.8973 10.2085 16.8783 9.99588 16.8434 9.78726C17.5249 9.39098 17.8962 8.52755 17.7016 7.64315H17.6996ZM4.7888 9.13244C4.7888 8.43072 5.35759 7.86175 6.05912 7.86175C6.76064 7.86175 7.32945 8.43072 7.32945 9.13244C7.32945 9.83417 6.76064 10.4031 6.05912 10.4031C5.35759 10.4031 4.7888 9.83417 4.7888 9.13244ZM11.8439 13.1442C11.4538 13.4985 10.376 14.325 8.79835 14.34C8.78438 14.34 8.76939 14.34 8.75542 14.34C7.15679 14.34 6.0651 13.5055 5.66694 13.1442C5.53921 13.0284 5.53023 12.8307 5.64599 12.704C5.76174 12.5762 5.95933 12.5672 6.08606 12.683C6.43233 12.9984 7.38931 13.7301 8.79236 13.7171C10.1565 13.7042 11.0875 12.9905 11.4248 12.684C11.5525 12.5682 11.7491 12.5772 11.8649 12.705C11.9806 12.8327 11.9717 13.0294 11.8439 13.1452V13.1442ZM11.6903 10.4031C10.9887 10.4031 10.4199 9.83417 10.4199 9.13244C10.4199 8.43072 10.9887 7.86175 11.6903 7.86175C12.3918 7.86175 12.9606 8.43072 12.9606 9.13244C12.9606 9.83417 12.3918 10.4031 11.6903 10.4031Z" fill="#383D38" /></svg></a></li>
-                                    <li><a href="#!" title="Share on Twitter" data-bs-toggle="tooltip" onClick="window.open('http://twitter.com/share?url=https%3A%2F%2Fwww.hud.io%2Fblog%2Fthe-missing-context-why-ai-coding-agents-need-production-intelligence%2F&amp;text=The%20Missing%20Context:%20Why%20AI%20Coding%20Agents%20Need%20Production%20Intelligence','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=https%3A%2F%2Fwww.hud.io%2Fblog%2Fthe-missing-context-why-ai-coding-agents-need-production-intelligence%2F&amp;text=The%20Missing%20Context:%20Why%20AI%20Coding%20Agents%20Need%20Production%20Intelligence"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.2295 10.1013L2.939 15.0003H0.5625L6.1195 8.65234L7.2295 10.1013Z" fill="#0B0B0E" /><path d="M8.52734 5.494L12.4558 1H14.8308L9.62734 6.951L8.52734 5.494Z" fill="#0B0B0E" /><path d="M15.7458 15H10.9663L0.257812 1H5.15831L15.7458 15ZM11.6218 13.5785H12.9378L4.44331 2.347H3.03131L11.6218 13.5785Z" fill="#0B0B0E" /></svg></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                     <div class="col-content">
                         <div class="single-content">
-                            <h2 id="post-item-1">The Setup: Smooth Onboarding with Immediate Context</h2>
-                            <p>One of our customers was already using Augment as their coding agent, so we decided to put Hud's MCP integration through its paces. The onboarding process was refreshingly straightforward, and I immediately appreciated how Hud provided context about my application right from the start.</p>
-                            <p>Data-driven insights are what get me excited about any tool, and Hud delivered on that front immediately.</p>                            
-                            <h2 id="post-item-2">The Real Test: Finding Performance Opportunities</h2>
-                            <p>Here's where things got interesting. I asked Augment to find performance opportunities in our production environment, and the integration between Augment and Hud worked seamlessly.</p>
-                            <p>Augment was able to query Hud's data at multiple levels:</p>
-                            <ul>
-                                <li>High-level analysis: Identifying long-running endpoints that were obvious candidates for optimization</li>
-                                <li>Function-level insights: Pinpointing specific bottlenecks within those endpoints</li>
-                            </ul>
-                            <p>This dual-layer approach gave us a comprehensive view of where performance issues were hiding.</p>
-                            <h2 id="post-item-3">Prioritization That Actually Makes Sense</h2>
-                            <p>What really stood out was how Augment ranked the opportunities. Instead of just listing potential issues, it prioritized them based on:</p>
-                            <p>Augment was able to query Hud's data at multiple levels:</p>
-                            <ul>
-                                <li>Production usage patterns: How frequently these endpoints were being called</li>
-                                <li>Expected impact: The potential performance gains from each optimization</li>
-                            </ul>
-                            <p>This level of clarity was something I hadn't experienced with other agents so far (including Sonnet 4). It meant we could focus our efforts where they would have the most impact.</p>
-                            <h2 id="post-item-4">From Discovery to Implementation</h2>
-                            <p>With clear priorities in hand, I moved forward to fix the top issue. The process was smooth, and I was able to get to a working PR quickly.</p>
-                            <p>Hud's context engine visualizations were particularly helpful during this phase. They allowed me to monitor our progress in real-time and adjust my prompts accordingly. It was like having a performance dashboard that actually helped you make better decisions.</p>
-                            <h2 id="post-item-5">Room for Improvement</h2>
-                            <p>There was one feature I found myself missing: the ability to set granular permissions for the auto-agent mode. While fully manual mode can be tiring, I wanted the ability to approve MCP actions automatically in certain scenarios. I'm confident this is on their roadmap.</p>
-                            <h2 id="post-item-6">The Bottom Line</h2>
-                            <p>This experience transformed how I think about performance optimization. Instead of it being a time-consuming investigation, hunting for performance opportunities has become my new between-meetings hobby. The combination of Augment's intelligent analysis and Hud's comprehensive data made what used to be a tedious process into something genuinely enjoyable.</p>
-                            <p>The integration between these tools represents a new paradigm in development workflow-one where AI agents can access real production data to provide actionable insights, and developers can act on those insights with confidence.</p>
-                            <p>Ready to discover your own performance opportunities? The combination of intelligent coding agents and comprehensive observability data might just be the productivity boost your team needs.</p>
-
-                            <div class="d-block d-lg-none">
-                                <div class="share-socials">
-                                    <div class="share-title">Share post on</div>
-                                    <ul class="social-links">
-                                        <li><a href="#!" title="Share on LinkedIn" data-bs-toggle="tooltip" onClick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.hud.io%2Fblog%2Fthe-missing-context-why-ai-coding-agents-need-production-intelligence%2F&title=The Missing Context: Why AI Coding Agents Need Production Intelligence','Linkedin','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.91125 14.9887H1.04603V5.52096H4.03583V14.9887H3.91125ZM2.54093 4.27521C1.54433 4.27521 0.796875 3.40319 0.796875 2.53116C0.796875 1.53456 1.54433 0.787109 2.54093 0.787109C3.53753 0.787109 4.28498 1.53456 4.28498 2.53116C4.1604 3.40319 3.41295 4.27521 2.54093 4.27521ZM14.9984 14.9887H12.0086V10.3794C12.0086 9.25822 12.0086 7.88789 10.5137 7.88789C9.01883 7.88789 8.76968 9.13364 8.76968 10.3794V15.1132H5.77988V5.52096H8.64511V6.76671C9.01883 6.01926 10.0154 5.27181 11.3858 5.27181C14.3756 5.27181 14.8739 7.26501 14.8739 9.75652V14.9887H14.9984Z" fill="#0B0B0E" /></svg></a></li>
-                                        <li><a href="#!" title="Share on Reddit" data-bs-toggle="tooltip" onClick="window.open('https://www.reddit.com/submit?url=https%3A%2F%2Fwww.hud.io%2Fblog%2Fthe-missing-context-why-ai-coding-agents-need-production-intelligence%2F&title=The Missing Context: Why AI Coding Agents Need Production Intelligence','Reddit','width=863,height=500,left='+(screen.availWidth/2-431)+',top='+(screen.availHeight/2-250)+''); return false;"><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6996 7.64315C17.4631 6.5701 16.4832 5.87435 15.5112 6.08896C15.1799 6.16183 14.8945 6.33252 14.669 6.5661C13.3607 5.61582 11.5745 4.98796 9.57969 4.86918L10.5347 0.892377L13.3677 1.57015C13.4146 2.34475 14.0562 2.95863 14.8426 2.95863C15.6289 2.95863 16.3215 2.29585 16.3215 1.47933C16.3215 0.662805 15.6589 0 14.8426 0C14.2508 0 13.7409 0.348371 13.5054 0.85146L10.4319 0.115781C10.1904 0.0578863 9.94792 0.206624 9.88904 0.448187L8.83226 4.84922C6.60695 4.8612 4.59919 5.50502 3.15822 6.53615C3.08737 6.47027 3.01154 6.40937 2.92871 6.35547C2.08948 5.81944 0.929921 6.13588 0.339166 7.0612C-0.251589 7.98752 -0.0510116 9.17237 0.788219 9.7084C0.838114 9.74035 0.88901 9.76828 0.940901 9.79423C0.906972 10.0009 0.889008 10.2115 0.889008 10.4241C0.889008 13.5035 4.47246 16 8.89315 16C13.3138 16 16.8973 13.5035 16.8973 10.4241C16.8973 10.2085 16.8783 9.99588 16.8434 9.78726C17.5249 9.39098 17.8962 8.52755 17.7016 7.64315H17.6996ZM4.7888 9.13244C4.7888 8.43072 5.35759 7.86175 6.05912 7.86175C6.76064 7.86175 7.32945 8.43072 7.32945 9.13244C7.32945 9.83417 6.76064 10.4031 6.05912 10.4031C5.35759 10.4031 4.7888 9.83417 4.7888 9.13244ZM11.8439 13.1442C11.4538 13.4985 10.376 14.325 8.79835 14.34C8.78438 14.34 8.76939 14.34 8.75542 14.34C7.15679 14.34 6.0651 13.5055 5.66694 13.1442C5.53921 13.0284 5.53023 12.8307 5.64599 12.704C5.76174 12.5762 5.95933 12.5672 6.08606 12.683C6.43233 12.9984 7.38931 13.7301 8.79236 13.7171C10.1565 13.7042 11.0875 12.9905 11.4248 12.684C11.5525 12.5682 11.7491 12.5772 11.8649 12.705C11.9806 12.8327 11.9717 13.0294 11.8439 13.1452V13.1442ZM11.6903 10.4031C10.9887 10.4031 10.4199 9.83417 10.4199 9.13244C10.4199 8.43072 10.9887 7.86175 11.6903 7.86175C12.3918 7.86175 12.9606 8.43072 12.9606 9.13244C12.9606 9.83417 12.3918 10.4031 11.6903 10.4031Z" fill="#383D38" /></svg></a></li>
-                                        <li><a href="#!" title="Share on Twitter" data-bs-toggle="tooltip" onClick="window.open('http://twitter.com/share?url=https%3A%2F%2Fwww.hud.io%2Fblog%2Fthe-missing-context-why-ai-coding-agents-need-production-intelligence%2F&amp;text=The%20Missing%20Context:%20Why%20AI%20Coding%20Agents%20Need%20Production%20Intelligence','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=https%3A%2F%2Fwww.hud.io%2Fblog%2Fthe-missing-context-why-ai-coding-agents-need-production-intelligence%2F&amp;text=The%20Missing%20Context:%20Why%20AI%20Coding%20Agents%20Need%20Production%20Intelligence"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.2295 10.1013L2.939 15.0003H0.5625L6.1195 8.65234L7.2295 10.1013Z" fill="#0B0B0E" /><path d="M8.52734 5.494L12.4558 1H14.8308L9.62734 6.951L8.52734 5.494Z" fill="#0B0B0E" /><path d="M15.7458 15H10.9663L0.257812 1H5.15831L15.7458 15ZM11.6218 13.5785H12.9378L4.44331 2.347H3.03131L11.6218 13.5785Z" fill="#0B0B0E" /></svg></a></li>
-                                    </ul>
-                                </div>
+                            <h2 id="post-item-1">Company Snapshot</h2>
+                            <p>Monday.com provides a customizable Work Operating System designed to help organizations plan, run, and track work across the business. Through no-code and low-code tools, Monday enables teams to build workflows, apps, and automations tailored to their needs.</p>
+                            <p>At the heart of Monday.com's platform sits the Automations Service - a high-throughput, distributed system that processes millions of customer-defined workflows across SQS consumers. Engineered for flexibility, responsiveness, and high performance, it evolved into an environment where real-time function-level execution data would meaningfully impact engineering speed and operations.</p>                            
+                            <h2 id="post-item-2">The Challenge</h2>
+                            <p>The Automations team manages one of Monday.com's most powerful and widely used capabilities: a distributed automation engine that executes millions of customer-defined workflows. The system's flexibility is its strength - but it also means performance can vary significantly across different automations and customer accounts. Over time, performance outliers emerged: specific automations taking much longer than others, intermittent CPU spikes, behaviors visible only under certain traffic patterns.</p>
+                            <p>Investigating these issues was complex - requiring deep system understanding, cross-tool drilling (Datadog, Redis, database queries), and often missing key context due to sampling or incomplete traces. These investigations could take days, and there was no repeatable playbook for getting to root cause quickly.</p>
+                            <blockquote class="bg-white">
+                                <p><i>“An alert tells us that something is wrong, but not why it happens. In a complex system like ours, there are so many influencing parameters and different paths to investigate - the infrastructure, specific flow parameters, the database, and more - each living in a different place. Understanding where the issue came from usually takes most of the time while tackling a bug or incident. And systematically gathering and serving this context to our coding agents is complicated too - there's a lot of noise in the data, and it's hard to tell upfront which context will be relevant to solve the issue.”</i></p>
+                                <p><strong>Moshik Eilon<br>Group Tech Lead at monday.com</strong></p>
+                            </blockquote>
+                            <blockquote class="bg-gradient">
+                                <strong>The team already had robust monitoring but wanted to complement it with a way to</strong>
+                                <ul class="mb-0">
+                                    <li><strong>Automatically detect</strong> and understand the root cause of performance spikes</li>
+                                    <li><strong>Save debugging time</strong> by bringing the engineer to the function level</li>
+                                    <li><strong>Easily compare</strong> gradual rollout versions with the baseline, both in the real production environment</li>
+                                </ul>
+                            </blockquote>
+                            <p>In short, they sought visibility that matched the sophistication of the system itself.</p>
+                            <h2 id="post-item-3">The Solution - Function-Level Runtime Intelligence</h2>
+                            <p>Monday.com's engineering team evaluated approaches that could provide deeper production visibility without adding operational overhead or requiring complex setup. They needed a product that could surface the deep data they need during specific behaviors - performance degradations and CPU spikes.</p>
+                            <p>Monday.com chose Hud's lightweight Runtime Code Sensor, enabling the team to move quickly while maintaining clarity in highly dynamic systems.</p>
+                            <blockquote class="bg-white">
+                                <p><i>“We get functional observability without paying for ingested spans on everything. The fact that we get it for every function - not only for high-level endpoints like traditional APMs - helps us get it out of the box without manually opting in. We just get all of this information for all functions, regardless of how granular they are, even for underlying packages.”</i></p>
+                                <p><strong>Moshik Eilon<br>Group Tech Lead at monday.com</strong></p>
+                            </blockquote>
+                            <p>Hud’s technology captures minimal data during normal operation, but when an error or a performance degradation occurs - it gathers the deep forensic data needed to understand exactly what happened - data that can be used by engineers or by AI coding agents, to resolve the issue. It integrates directly with Monday.com’s IDEs to present the data where the engineers and agents work, with Slack, through MCP for natural inquiry, and has a complete web product to see all the issues and their root causes.</p>
+                            <blockquote class="bg-white">
+                                <p><i>“Hud eliminated our voodoo incidents - mysterious CPU spikes that required custom profiling tools and days of investigation. Now engineers ask Cursor 'why is this endpoint slow?' and get immediate, deployment-correlated answers. AI-powered root cause analysis turned days of drilling through tools into minutes.”</i></p>
+                                <p><strong>Moshik Eilon<br>Group Tech Lead at monday.com</strong></p>
+                            </blockquote>
+                            <h2 id="post-item-4">How Monday Engineers Use Runtime Intelligence</h2>
+                            <h3>Automations Group</h3>
+                            <p><strong>Earlier visibility into performance degradations in noisy environments</strong></p>
+                            <p>During a routine gradual rollout, the team saw the value of production runtime context immediately. One of the high-volume SQS consumers was slower in the new version. With function-level visibility in place, the team received a clear signal just 14 minutes after deployment without needing to configure anything, identifying the precise function contributing to the slowdown, coupled with forensic details needed to understand and resolve the issue with a coding agent.</p>
+                            <p>What previously could have taken a long time to discover and would have required a broad investigation, now became an early, actionable alert with what is needed to resolve the issue.</p>
+                            <blockquote class="bg-white">
+                                <p><i>“We saw the regression within 14 minutes and had the exact function and execution context we needed. Before Hud, this would've meant hours of hypothesis-driven debugging across multiple tools”</i></p>
+                                <p><strong>Moshik Eilon<br>Group Tech Lead at monday.com</strong></p>
+                            </blockquote>
+                            <p><strong>Understanding bottlenecks with precise execution timing</strong></p>
+                            <p>In another instance, the team identified unexpectedly long lock durations tied to redlock usage. The extended timing was not intuitive from metrics alone, but looking at function-level data for this time frame made the behavior clear within moments. The solution was quick to follow.</p>
+                            <p><strong>Clarity during endpoint behavior analysis</strong></p>
+                            <p>When certain endpoints displayed intermittent failures, runtime intelligence provided an exact view of which functions were the root cause of the flows that resulted in an error. Having this information readily available helped the team quickly understand and resolve those errors, using AI coding agents that could use the context to operate with runtime context.</p>
+                            <p><strong>Using runtime data to guide refactoring decisions</strong></p>
+                            <p>Beyond incident response, the team leveraged runtime context to identify code that was no longer being executed in production. For instance, when considering whether to modernize and get a better understanding of a legacy module, engineers could now verify what parts of it were actually used in reality - and whether it could safely be simplified or removed.This execution-based perspective gave the team confidence to prioritize refactoring efforts based on actual usage patterns rather than assumptions, supporting cleaner, more maintainable code over time.</p>                            
+                            <blockquote class="bg-gradient" id="post-item-5">
+                                <h2 class="mt-0">The Results</h2>
+                                <p>The Automation group at Monday.com strengthened its ability to understand and act on key production issues such as errors and performance degradations. While the platform was already highly observable, the addition of Hud's runtime code sensor and function-level intelligence provided a whole new level of actionable insight - with minimal operational overhead and no need to write logs or configure monitors:</p>
+                                <p><strong>Operational benefits</strong></p>
+                                <ul>
+                                    <li>Earlier detection of performance degradations</li>
+                                    <li>Clear root causes for behaviors visible only under real traffic</li>
+                                    <li>Safer and better controlled gradual roll-out of new versions</li>
+                                </ul>
+                                <p><strong>Engineering workflow benefits</strong></p>
+                                <ul>
+                                    <li>Faster, more focused production issue investigations grounded in concrete execution data</li>
+                                    <li>Reduced reliance on broad hypothesis-driven exploration</li>
+                                    <li>Deeper understanding of service execution behavior across pods and flows</li>
+                                    <li>Better-informed refactoring, modernization and cleanup efforts guided by actual runtime context.</li>
+                                </ul>
+                                <p><strong>Organizational benefits</strong></p>
+                                <ul>
+                                    <li>A stronger foundation for scaling platform reliability as the system evolves</li>
+                                    <li>Insights that support ongoing innovation in key services</li>
+                                    <li>New opportunities for AI-assisted engineering workflows built on structured runtime context</li>
+                                </ul>
+                                <p>This evolution reflects Monday.com’s continued commitment to engineering excellence - delivering meaningful impact on visibility and operational intelligence consistent with the sophistication, scale, and ambition of its systems.</p>
+                            </blockquote>
+                            <h2 id="post-item-6">Conclusion</h2>
+                            <p>Monday.com's Automations team operates one of the most dynamic and high-scale components of the WorkOS platform. As customer adoption and system complexity increased, the team recognized the need to complement their existing observability practices with precise, function-level runtime context.</p>
+                            <p>By incorporating this level of runtime data, the team transformed complex, time-intensive investigations into a repeatable playbook - reducing debugging cycles from days to minutes and enabling engineers to resolve performance issues with confidence.</p>
+                            <p>This evolution reflects how modern engineering organizations scale: not just by building sophisticated systems, but by building the visibility infrastructure that makes those systems debuggable, maintainable, and continuously improvable.</p>
+                        </div>
+                        <div class="content-bottom mt-4">
+                            <div class="section-title mb-0">
+                                <h3>Have questions?</h2>
+                                <div class="sort-info"><p class="text-size-regular">Book a custom introduction to our learning platform.</p></div>
+                                <div class="action mt-3"><a href="#" class="btn btn-dark">Book a demo</a></div>
                             </div>
                         </div>
                     </div>
@@ -168,8 +203,7 @@
                 <div class="section-title mb-0 text-center">
                     <h2 class="h1">See code in a new way</h2>
                     <div class="sort-info">The runtime code sensor.</div>
-                    <div class="action"><a href="https://www.hud.io/book-a-demo/" class="btn btn-dark">Book a demo</a>
-                    </div>
+                    <div class="action"><a href="https://www.hud.io/book-a-demo/" class="btn btn-dark">Book a demo</a></div>
                 </div>
             </div>
         </section>

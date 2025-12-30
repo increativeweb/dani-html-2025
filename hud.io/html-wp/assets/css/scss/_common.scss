@@ -528,6 +528,22 @@ img {
         --bs-gutter-x: 30px;
     }
 }
+.g-50 {
+    @media (min-width: 992px) {
+        --bs-gutter-y: 50px;
+        --bs-gutter-x: 50px;
+    }
+
+    @media (min-width: 1400px) {
+        --bs-gutter-y: 100px;
+        --bs-gutter-x: 100px;
+    }
+
+    @media (max-width: 992px) {
+        --bs-gutter-y: 30px;
+        --bs-gutter-x: 30px;
+    }
+}
 
 .g-15 {
     --bs-gutter-y: 30px;
