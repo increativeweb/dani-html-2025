@@ -6,6 +6,7 @@ if (jQuery('.image-gallery-slider').length) {
         pagination: false,
         autoWidth: true,
         arrows: true,
+        focus: 'center',
         gap: '20px',
         mediaQuery: 'max',
         autoplay: true,

@@ -60,20 +60,19 @@
                     border-color: #0FFEE6;
                 }
             }
-            &:not(.active) {
-                span {
-                    cursor: default; 
-                    color: #626161; 
-                    pointer-events: none;
-                    background: #303030;
-                    border-color: #303030;
-                }
-            }
             &:hover, &:focus {
                 span {
                     color: var(--text-black); 
                     background: #0FFEE6;
                     border-color: #0FFEE6;
+                }
+            }
+            &:not(.active) {
+                span {
+                    cursor: not-allowed; 
+                    color: #626161; 
+                    background: #303030;
+                    border-color: #303030;
                 }
             }
             span {
