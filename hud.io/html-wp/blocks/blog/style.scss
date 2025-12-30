@@ -442,7 +442,7 @@
         @include align-items(center);
         @include flex-wrap(wrap);
         gap: 2rem;
-        @media (max-width: 992px) {
+        @media (max-width: 767px) {
             @include flex-direction(column);
             @include align-items(flex-start);
         }
@@ -479,11 +479,11 @@
             margin-top: 2rem;
         }
         &.outside-img {
-            @media (min-width: 992px) {
-                width: 49vw;                            
-                img {
-                    margin-right: -3rem;
-                }
+            @media (min-width: 992px) and (max-width: 1920px) {
+                width: 49vw;
+            }      
+            img {
+                margin-right: -3rem;
             }
             @media (max-width: 992px) {
                 margin-bottom: -5rem;
@@ -491,6 +491,7 @@
                     max-width: 600px;
                     width: 100%;
                     margin: 0 auto;
+                    margin-right: 0
                 }
             }
         }
