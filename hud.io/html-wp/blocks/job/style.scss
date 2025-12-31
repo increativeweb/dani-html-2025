@@ -120,3 +120,111 @@
         }
     }
 }
+
+.job-header {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 400px;
+        bottom: -50%;
+        right: -15%;
+        background: #733BD2;
+        filter: blur(150px);
+        z-index: -1;
+        @media (max-width: 1200px) {
+            width: 500px;
+            height: 300px;
+        }
+    }
+    .blog-header-title {
+        max-width: 44.5rem;
+        .tag-line {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .post-title {
+            margin-bottom: 2rem;
+            font-size: 4rem;
+            line-height: 1.2;
+            @media (max-width: 992px) {
+                font-size: 2.75rem !important;
+            }
+        }
+        .job-meta-block {
+            @include flexbox;
+            @include flex-wrap(wrap);
+            gap: 4rem;
+            .job-info {
+                .title {
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    line-height: 1;
+                    color: #BABABA;
+                    margin-bottom: 0.25rem;
+                }
+                .info {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
+.job-content-section {
+    .row-blog-content {
+        display: block;
+        .col-content {
+            max-width: 43.75rem;
+        }
+    }
+    .single-content {
+        h2, h3 {
+            margin-top: 5rem;
+            margin-bottom: 1.25rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            @media (max-width: 767px) {
+                font-size: 2rem !important;
+            }
+            &:first-child {
+                margin-top: 0;
+                padding-top: 0;
+            }
+        }
+        ul {
+            li {
+                font-size: 1.25rem;
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .content-bottom {
+        margin-top: 5rem;
+        .title {
+            letter-spacing: -0.03em;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        a {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text-black);
+            text-decoration: none;
+            text-underline-offset: 4px;
+            margin-top: 0.25rem;
+            display: inline-block;
+            @include transition(0.2s, ease-in-out);
+            &:hover, &:focus {
+                opacity: 0.7;
+                text-decoration: underline;
+            }
+        }
+    }
+}
