@@ -60,29 +60,29 @@
                     <div class="title-block">
                         <div class="back-link d-none d-md-block"><a href="#"><span class="icon-back"></span>Customer Story</a></div>
                         <div class="blog-header-title">
-                            <h1 class="h2 post-title font-sm">How Monday.com Built a Repeatable Playbook for Complex Performance Issues at scale</h1>
+                            <h1 class="h2 post-title font-sm">How Guardz Turned Silent Job Bottlenecks into Same-Day Fixes</h1>
                             <div class="sort-info">
-                                <p>Monday.com's Automations team needed a systematic way to investigate performance outliers and CPU spikes in their high-volume distributed system. With Hud's function-level runtime intelligence, complex investigations that previously required days and deep system expertise now follow a repeatable playbook - from detection to root cause to resolution that can be acted on easily and immediately.</p>
+                                <p>As Guardz scaled, background jobs executed continuously under real production workloads, with performance characteristics that only emerged at runtime. When some of those jobs began slowing down, the challenge wasn’t detecting the regression, it was understanding the root cause clearly enough to fix it. Fast.</p>
                             </div>
                             <div class="story-meta-block">
                                 <div class="story-info">
-                                    <div class="title">14 <small>minutes</small></div>
-                                    <div class="info">Time to identify performance regression post-deployment</div>
+                                    <div class="title">Days → Hours</div>
+                                    <div class="info">Investigation time</div>
                                 </div>
                                 <div class="story-info">
-                                    <div class="title">Full <small>production coverage</small></div>
-                                    <div class="info">No sampling limits, no added instrumentation</div>
+                                    <div class="title">&lt; 1 Day</div>
+                                    <div class="info">Detection → Root cause → Fix</div>
                                 </div>
                                 <div class="story-info">
-                                    <div class="title">Zero</div>
-                                    <div class="info">“Voodoo incidents”</div>
+                                    <div class="title">No added logs or redeploys</div>
+                                    <div class="info">100% Runtime Coverage</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="post-image">
                         <div class="back-link d-block d-md-none"><a href="#"><span class="icon-back"></span>Customer Story</a></div>
-                        <img src="uploads/img-monday-story.png" alt="How Monday.com Built a Repeatable Playbook for Complex Performance Issues at scale">
+                        <img src="uploads/img-guardz-story.png" alt="How Guardz Turned Silent Job Bottlenecks into Same-Day Fixes">
                     </div>
                 </div>
             </div>
@@ -114,80 +114,81 @@
                     <div class="col-content">
                         <div class="single-content">
                             <h2 id="post-item-1">Company Snapshot</h2>
-                            <p>Monday.com provides a customizable Work Operating System designed to help organizations plan, run, and track work across the business. Through no-code and low-code tools, Monday enables teams to build workflows, apps, and automations tailored to their needs.</p>
-                            <p>At the heart of Monday.com's platform sits the Automations Service - a high-throughput, distributed system that processes millions of customer-defined workflows across SQS consumers. Engineered for flexibility, responsiveness, and high performance, it evolved into an environment where real-time function-level execution data would meaningfully impact engineering speed and operations.</p>                            
+                            <p>Guardz is a cybersecurity platform built for MSPs, helping protect SMB environments through continuous monitoring, integrations, and automation. As the platform scaled rapidly, Guardz’s backend evolved into a system with multiple background jobs, third-party PSA integrations, and high-frequency workflows executing continuously in production.</p>
+                            <p>In this environment, correctness wasn’t the challenge - sustaining predictable, explainable behavior across complex production jobs at scale was.</p>                            
                             <h2 id="post-item-2">The Challenge</h2>
-                            <p>The Automations team manages one of Monday.com's most powerful and widely used capabilities: a distributed automation engine that executes millions of customer-defined workflows. The system's flexibility is its strength - but it also means performance can vary significantly across different automations and customer accounts. Over time, performance outliers emerged: specific automations taking much longer than others, intermittent CPU spikes, behaviors visible only under certain traffic patterns.</p>
-                            <p>Investigating these issues was complex - requiring deep system understanding, cross-tool drilling (Datadog, Redis, database queries), and often missing key context due to sampling or incomplete traces. These investigations could take days, and there was no repeatable playbook for getting to root cause quickly.</p>
+                            <p>As Guardz scaled, background jobs became a critical part of the platform’s operational backbone, syncing data with PSA systems, processing integrations, and powering customer-facing workflows.</p>
+                            <p>The problem wasn’t that jobs failed. It was that <strong>some jobs quietly became expensive.</strong></p>
                             <blockquote class="bg-white">
-                                <p><i>“An alert tells us that something is wrong, but not why it happens. In a complex system like ours, there are so many influencing parameters and different paths to investigate - the infrastructure, specific flow parameters, the database, and more - each living in a different place. Understanding where the issue came from usually takes most of the time while tackling a bug or incident. And systematically gathering and serving this context to our coding agents is complicated too - there's a lot of noise in the data, and it's hard to tell upfront which context will be relevant to solve the issue.”</i></p>
-                                <p><strong>Moshik Eilon<br>Group Tech Lead at monday.com</strong></p>
+                                <p><i>“Our existing stack could show that a job was slow - but not what inside it was responsible. Investigations meant adding logs, redeploying, and chasing theories across tools - often taking days and still ending with uncertainty.”</i></p>
+                                <p><strong>Peri Fishgold<br>Software Engineer at Guarz</strong></p>
                             </blockquote>
+                            <p>Guardz needed a way to turn job performance regressions into <strong>decisive engineering work</strong> - without slowing delivery or increasing operational overhead.</p>
+                            <p>One critical example was a ticket sync job worker. The team knew something was wrong, but every existing signal stopped at the same place: the job was slow. It was difficult to pin-point causality, and adding logs just led to adding more logs., often across multiple iterations turning each investigation into a multi-day guessing exercise. Investigations became hypothesis-driven and time-consuming-especially when the issue only appeared under real production traffic.</p>
+                            <blockquote class="bg-white">
+                                <p><i>“What changed wasn’t just how fast we debugged - it was who could debug. Problems that used to require deep system knowledge became explainable to the whole team, directly from production.”</i></p>
+                                <p><strong>Tal Doron<br>Software Engineering Manager at Guarz</strong></p>
+                            </blockquote>
+                            <h2 id="post-item-3">The Solution - Function-Level Runtime Intelligence</h2>
+                            <p>Guardz introduced Hud’s Runtime Code Sensor to <strong>pinpoint where time and resources were actually spent inside production jobs</strong>, without adding logs, breakpoints, or configuration overhead.</p>
+                            <p>Hud captures lightweight execution data continuously, and automatically escalates to gathering deep forensic context when performance degradations or errors occur. This allows the team to directly look at specific situations and execution paths that lead to the slowdowns, instead of spending time on finding them.</p>
+                            <h2 id="post-item-4">How Guardz Engineers Used Hud in Practice</h2>
+                            <strong>Isolating the Job Bottleneck</strong>
+                            <p>When the same ticket sync job worker spiked again, Hud immediately surfaced which function dominated execution time. One function - updateTicket - was being invoked hundreds of thousands of times within a single job run.</p>
                             <blockquote class="bg-gradient">
-                                <strong>The team already had robust monitoring but wanted to complement it with a way to</strong>
+                                <strong>Instead of guessing:</strong>
                                 <ul class="mb-0">
-                                    <li><strong>Automatically detect</strong> and understand the root cause of performance spikes</li>
-                                    <li><strong>Save debugging time</strong> by bringing the engineer to the function level</li>
-                                    <li><strong>Easily compare</strong> gradual rollout versions with the baseline, both in the real production environment</li>
+                                    <li>Engineers immediately saw the function that was invoked an excessive amount of times</li>
+                                    <li>They identified that the function was executing inside an unintended loop</li>
+                                    <li>They correlated the behavior with specific production executions</li>
                                 </ul>
                             </blockquote>
-                            <p>In short, they sought visibility that matched the sophistication of the system itself.</p>
-                            <h2 id="post-item-3">The Solution - Function-Level Runtime Intelligence</h2>
-                            <p>Monday.com's engineering team evaluated approaches that could provide deeper production visibility without adding operational overhead or requiring complex setup. They needed a product that could surface the deep data they need during specific behaviors - performance degradations and CPU spikes.</p>
-                            <p>Monday.com chose Hud's lightweight Runtime Code Sensor, enabling the team to move quickly while maintaining clarity in highly dynamic systems.</p>
+                            <strong>Fixing with Confidence</strong>
+                            <p>Once the root cause was clear, the fix itself was straightforward. The team adjusted the function’s usage pattern, deployed the change, and immediately observed the impact in production-job durations dropped back to expected levels.</p>
+                            <p>The full cycle-from detection to resolution-took less than a day.</p>
                             <blockquote class="bg-white">
-                                <p><i>“We get functional observability without paying for ingested spans on everything. The fact that we get it for every function - not only for high-level endpoints like traditional APMs - helps us get it out of the box without manually opting in. We just get all of this information for all functions, regardless of how granular they are, even for underlying packages.”</i></p>
-                                <p><strong>Moshik Eilon<br>Group Tech Lead at monday.com</strong></p>
+                                <p><i>“Once we saw the execution path, there was nothing left to investigate. We fixed it and moved on.”</i></p>
+                                <p><strong>Peri Fishgold<br>Software Engineer at Guarz</strong></p>
                             </blockquote>
-                            <p>Hud’s technology captures minimal data during normal operation, but when an error or a performance degradation occurs - it gathers the deep forensic data needed to understand exactly what happened - data that can be used by engineers or by AI coding agents, to resolve the issue. It integrates directly with Monday.com’s IDEs to present the data where the engineers and agents work, with Slack, through MCP for natural inquiry, and has a complete web product to see all the issues and their root causes.</p>
+                            <strong>How Guardz Uses Hud with Agentic Workflows</strong>
+                            <p>Hud’s Runtime Code Sensor gave Guardz function-level execution data directly from production - but the real shift came from how that data was used.</p>
+                            <p>Instead of assembling context manually, engineers used Hud’s MCP to ask a precise, targeted question: <strong>recursively inspect functions called by the sync ticket job worker to identify bottlenecks and performance issues.</strong></p>
+                            <p>That query surfaced the specific function dominating execution time, along with its invocation pattern. With the root cause clear, the workflow shifted from exploration to execution, engineers moved directly from identifying the problem to fixing it, with confidence the change addressed the real issue.</p>
                             <blockquote class="bg-white">
-                                <p><i>“Hud eliminated our voodoo incidents - mysterious CPU spikes that required custom profiling tools and days of investigation. Now engineers ask Cursor 'why is this endpoint slow?' and get immediate, deployment-correlated answers. AI-powered root cause analysis turned days of drilling through tools into minutes.”</i></p>
-                                <p><strong>Moshik Eilon<br>Group Tech Lead at monday.com</strong></p>
-                            </blockquote>
-                            <h2 id="post-item-4">How Monday Engineers Use Runtime Intelligence</h2>
-                            <h3>Automations Group</h3>
-                            <p><strong>Earlier visibility into performance degradations in noisy environments</strong></p>
-                            <p>During a routine gradual rollout, the team saw the value of production runtime context immediately. One of the high-volume SQS consumers was slower in the new version. With function-level visibility in place, the team received a clear signal just 14 minutes after deployment without needing to configure anything, identifying the precise function contributing to the slowdown, coupled with forensic details needed to understand and resolve the issue with a coding agent.</p>
-                            <p>What previously could have taken a long time to discover and would have required a broad investigation, now became an early, actionable alert with what is needed to resolve the issue.</p>
-                            <blockquote class="bg-white">
-                                <p><i>“We saw the regression within 14 minutes and had the exact function and execution context we needed. Before Hud, this would've meant hours of hypothesis-driven debugging across multiple tools”</i></p>
-                                <p><strong>Moshik Eilon<br>Group Tech Lead at monday.com</strong></p>
-                            </blockquote>
-                            <p><strong>Understanding bottlenecks with precise execution timing</strong></p>
-                            <p>In another instance, the team identified unexpectedly long lock durations tied to redlock usage. The extended timing was not intuitive from metrics alone, but looking at function-level data for this time frame made the behavior clear within moments. The solution was quick to follow.</p>
-                            <p><strong>Clarity during endpoint behavior analysis</strong></p>
-                            <p>When certain endpoints displayed intermittent failures, runtime intelligence provided an exact view of which functions were the root cause of the flows that resulted in an error. Having this information readily available helped the team quickly understand and resolve those errors, using AI coding agents that could use the context to operate with runtime context.</p>
-                            <p><strong>Using runtime data to guide refactoring decisions</strong></p>
-                            <p>Beyond incident response, the team leveraged runtime context to identify code that was no longer being executed in production. For instance, when considering whether to modernize and get a better understanding of a legacy module, engineers could now verify what parts of it were actually used in reality - and whether it could safely be simplified or removed.This execution-based perspective gave the team confidence to prioritize refactoring efforts based on actual usage patterns rather than assumptions, supporting cleaner, more maintainable code over time.</p>    
+                                <p><i>“What mattered to me was making this repeatable. We don’t want production issues to depend on who’s available or who remembers the system best, they need to be explainable every time.”</i></p>
+                                <p><strong>Tal Doron<br>Software Engineering Manager</strong></p>
+                            </blockquote>                            
                             <div id="post-item-5"></div>                        
                             <blockquote class="bg-gradient">
                                 <h2 class="mt-0">The Results</h2>
-                                <p>The Automation group at Monday.com strengthened its ability to understand and act on key production issues such as errors and performance degradations. While the platform was already highly observable, the addition of Hud's runtime code sensor and function-level intelligence provided a whole new level of actionable insight - with minimal operational overhead and no need to write logs or configure monitors:</p>
-                                <p><strong>Operational benefits</strong></p>
+                                <p><strong>Operational impact</strong></p>
                                 <ul>
-                                    <li>Earlier detection of performance degradations</li>
-                                    <li>Clear root causes for behaviors visible only under real traffic</li>
-                                    <li>Safer and better controlled gradual roll-out of new versions</li>
+                                    <li>Bottlenecks identified directly in production</li>
+                                    <li>Clear attribution of performance issues to specific functions</li>
+                                    <li>Faster validation of fixes without additional instrumentation</li>
                                 </ul>
-                                <p><strong>Engineering workflow benefits</strong></p>
+                                <p><strong>Engineering workflow impact</strong></p>
                                 <ul>
-                                    <li>Faster, more focused production issue investigations grounded in concrete execution data</li>
-                                    <li>Reduced reliance on broad hypothesis-driven exploration</li>
-                                    <li>Deeper understanding of service execution behavior across pods and flows</li>
-                                    <li>Better-informed refactoring, modernization and cleanup efforts guided by actual runtime context.</li>
+                                    <li>Investigation time reduced from days to hours</li>
+                                    <li>No need to redeploy just to add logs</li>
+                                    <li>Less reliance on intuition and tribal knowledge</li>
                                 </ul>
-                                <p><strong>Organizational benefits</strong></p>
+                                <p><strong>Organizational impact</strong></p>
                                 <ul>
-                                    <li>A stronger foundation for scaling platform reliability as the system evolves</li>
-                                    <li>Insights that support ongoing innovation in key services</li>
-                                    <li>New opportunities for AI-assisted engineering workflows built on structured runtime context</li>
+                                    <li>Easier onboarding to complex job flows</li>
+                                    <li>Reduced dependence on a small number of “system experts”</li>
+                                    <li>A shared, explainable understanding of how critical jobs actually run</li>
                                 </ul>
-                                <p>This evolution reflects Monday.com’s continued commitment to engineering excellence - delivering meaningful impact on visibility and operational intelligence consistent with the sophistication, scale, and ambition of its systems.</p>
                             </blockquote>
                             <h2 id="post-item-6">Conclusion</h2>
-                            <p>Monday.com's Automations team operates one of the most dynamic and high-scale components of the WorkOS platform. As customer adoption and system complexity increased, the team recognized the need to complement their existing observability practices with precise, function-level runtime context.</p>
-                            <p>By incorporating this level of runtime data, the team transformed complex, time-intensive investigations into a repeatable playbook - reducing debugging cycles from days to minutes and enabling engineers to resolve performance issues with confidence.</p>
-                            <p>This evolution reflects how modern engineering organizations scale: not just by building sophisticated systems, but by building the visibility infrastructure that makes those systems debuggable, maintainable, and continuously improvable.</p>
+                            <p>For Guardz, Hud didn’t just add context - it changed how engineers approach production problems from the first signal to the final fix.</p>
+                            <p>Performance regressions in critical jobs are no longer opaque, slow, or risky to investigate. Engineers can move directly from detection to explanation to fix, grounded in real production execution - without adding logs, redeploying, or guessing.</p>
+                            <p>This shift compressed the full debugging cycle from days to less than a day, reduced reliance on a small set of experts, and gave the team confidence to move faster without accumulating hidden operational debt.</p>                            
+                            <blockquote class="bg-white">
+                                <p><i>“AI helps us move faster only when it’s grounded in reality. Having accurate runtime context means our engineers, and our AI workflows, can reason about real production behavior and act on it safely.”</i></p>
+                                <p><strong>Alon Lavi<br>Co-founder & CTO at Guardz</strong></p>
+                            </blockquote>   
+                            <p>As Guardz continues to scale its platform and integrations,Runtime context is now part of Guardz’s everyday engineering workflow - guiding what gets investigated, what gets fixed, and how confidently changes ship to production - turning complex production behavior into something engineers can reason about, act on, and trust.</p>                         
                         </div>
                         <div class="content-bottom mt-4">
                             <div class="section-title mb-0">
