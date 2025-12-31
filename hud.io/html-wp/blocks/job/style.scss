@@ -5,10 +5,118 @@
 }
 
 .job-content-block {
-    padding: 3rem 2rem;
-    @include border-radius(1rem);
-    border: 1px solid transparent;
-    background-image: linear-gradient(rgba(42, 42, 42, 1), rgba(42, 42, 42, 1)), linear-gradient(174deg, var(--white), #f9baf9 52%, #9470fd);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    @media (min-width: 768px) {
+        padding: 3rem 2rem;
+        @include border-radius(1rem);
+        border: 1px solid transparent;
+        background-image: linear-gradient(rgba(42, 42, 42, 1), rgba(42, 42, 42, 1)), linear-gradient(142deg, #FFFFFF -8%, #F9BAF9 27%, #9470FD 91%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+    }
+    .job-card-block {
+        margin-top: 2.5rem;
+    }
+    .content-bottom {
+        text-align: right;
+        margin-top: 4.5rem;
+        font-size: 1.25rem;
+        color: #B5B6B6;
+        @media (max-width: 767px) {
+            text-align: left;
+            margin-top: 2.5rem;
+        }
+        a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-top: 0.75rem;
+            display: inline-block;
+            text-decoration: none;
+            text-underline-offset: 6px;
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.job-card {
+    @include flexbox;
+    padding: 2.5rem 0;
+    text-decoration: none;
+    @media (min-width: 768px) {
+        border-bottom: 1px solid #8C8C8C;
+        @include align-items(flex-end);
+    }
+    @media (max-width: 767px) {
+        @include flex-direction(column);
+        min-height: 13.25rem;
+        padding: 1.25rem;
+        @include border-radius(1rem);
+        border: 1px solid transparent;
+        background-image: linear-gradient(rgba(42, 42, 42, 1), rgba(42, 42, 42, 1)), linear-gradient(142deg, #FFFFFF -8%, #F9BAF9 27%, #9470FD 91%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        margin-bottom: 1.25rem;
+    }
+    .location {
+        @include inline-flex;
+        @include align-items(center);
+        gap: 0.25rem;
+        line-height: 1;
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #B5B6B6;
+        margin-bottom: 1rem;
+        .icon-location {
+            background: url('data:image/svg+xml,<svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.6001 8.09997C15.6001 13.9333 8.1001 18.9333 8.1001 18.9333C8.1001 18.9333 0.600098 13.9333 0.600098 8.09997C0.600098 6.11085 1.39027 4.2032 2.7968 2.79667C4.20332 1.39015 6.11097 0.599976 8.1001 0.599976C10.0892 0.599976 11.9969 1.39015 13.4034 2.79667C14.8099 4.2032 15.6001 6.11085 15.6001 8.09997Z" stroke="rgb(181 182 182)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.1001 10.6C9.48081 10.6 10.6001 9.48069 10.6001 8.09997C10.6001 6.71926 9.48081 5.59998 8.1001 5.59998C6.71939 5.59998 5.6001 6.71926 5.6001 8.09997C5.6001 9.48069 6.71939 10.6 8.1001 10.6Z" stroke="rgb(181 182 182)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+            background-size: contain;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-top: -2px;
+        }
+    }
+    .card-body {
+        h3 {
+            margin-bottom: 0;
+            font-size: 2rem;
+            color: var(--white);
+            @include transition(0.2s, ease-in-out);
+            @media (max-width: 767px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .card-footer {
+        .btn {
+            min-height: auto;
+            position: unset;
+            @include transition(0.2s, ease-in-out);            
+            @media (min-width: 768px) {
+                padding: 0;
+            }
+            .icon-arrow {
+                background: url('data:image/svg+xml,<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.833008 5.50004H10.1663M10.1663 5.50004L5.49967 0.833374M10.1663 5.50004L5.49967 10.1667" stroke="rgb(170, 128, 253)" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                @include transition(0.2s, ease-in-out);  
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    &:hover, &:focus {
+        border-color: var(--purple-3);
+        .card-body {
+            h3 {
+                opacity: 0.8;
+            }
+        }
+        .card-footer {
+            .btn {
+                color: var(--purple-3);
+                opacity: 1;
+                .icon-arrow {
+                    @include transform(translateX(5px));
+                    filter: unset;
+                }
+            }
+        }
+    }
 }
