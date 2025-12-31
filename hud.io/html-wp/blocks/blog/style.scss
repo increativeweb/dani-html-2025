@@ -456,6 +456,9 @@
                 @include align-items(center);
                 gap: 0.5rem;
                 margin-bottom: 0.5rem;
+                &.title-medium {
+                    font-size: 1.5rem;
+                }
                 small {
                     font-size: 0.875rem;
                 }
