@@ -133,24 +133,24 @@
                             <p>Guardz introduced Hud’s Runtime Code Sensor to <strong>pinpoint where time and resources were actually spent inside production jobs</strong>, without adding logs, breakpoints, or configuration overhead.</p>
                             <p>Hud captures lightweight execution data continuously, and automatically escalates to gathering deep forensic context when performance degradations or errors occur. This allows the team to directly look at specific situations and execution paths that lead to the slowdowns, instead of spending time on finding them.</p>
                             <h2 id="post-item-4">How Guardz Engineers Used Hud in Practice</h2>
-                            <strong>Isolating the Job Bottleneck</strong>
+                            <p><strong>Isolating the Job Bottleneck</strong></p>
                             <p>When the same ticket sync job worker spiked again, Hud immediately surfaced which function dominated execution time. One function - updateTicket - was being invoked hundreds of thousands of times within a single job run.</p>
                             <blockquote class="bg-gradient">
-                                <strong>Instead of guessing:</strong>
+                                <p><strong>Instead of guessing:</strong></p>
                                 <ul class="mb-0">
                                     <li>Engineers immediately saw the function that was invoked an excessive amount of times</li>
                                     <li>They identified that the function was executing inside an unintended loop</li>
                                     <li>They correlated the behavior with specific production executions</li>
                                 </ul>
                             </blockquote>
-                            <strong>Fixing with Confidence</strong>
+                            <p><strong>Fixing with Confidence</strong></p>
                             <p>Once the root cause was clear, the fix itself was straightforward. The team adjusted the function’s usage pattern, deployed the change, and immediately observed the impact in production-job durations dropped back to expected levels.</p>
                             <p>The full cycle-from detection to resolution-took less than a day.</p>
                             <blockquote class="bg-white">
                                 <p><i>“Once we saw the execution path, there was nothing left to investigate. We fixed it and moved on.”</i></p>
                                 <p><strong>Peri Fishgold<br>Software Engineer at Guarz</strong></p>
                             </blockquote>
-                            <strong>How Guardz Uses Hud with Agentic Workflows</strong>
+                            <p><strong>How Guardz Uses Hud with Agentic Workflows</strong></p>
                             <p>Hud’s Runtime Code Sensor gave Guardz function-level execution data directly from production - but the real shift came from how that data was used.</p>
                             <p>Instead of assembling context manually, engineers used Hud’s MCP to ask a precise, targeted question: <strong>recursively inspect functions called by the sync ticket job worker to identify bottlenecks and performance issues.</strong></p>
                             <p>That query surfaced the specific function dominating execution time, along with its invocation pattern. With the root cause clear, the workflow shifted from exploration to execution, engineers moved directly from identifying the problem to fixing it, with confidence the change addressed the real issue.</p>
