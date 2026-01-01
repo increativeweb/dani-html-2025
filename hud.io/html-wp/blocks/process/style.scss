@@ -148,6 +148,7 @@
         position: sticky;
         top: 0;
         place-self: auto;
+        transition: max-height 0.6s ease;
     }
 
     .content-media {
