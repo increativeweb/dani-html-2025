@@ -1312,7 +1312,7 @@ a.user-info {
             }
             span {
                 display: inline-block;
-                @include transition(0.5s, ease-in-out);
+                @include transition(1.5s, ease-in-out);
                 &.logo {
                     img {
                         max-height: 2.5rem;
