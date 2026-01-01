@@ -1315,7 +1315,7 @@ a.user-info {
                 @include transition(0.5s, ease-in-out);
                 &.logo {
                     img {
-                        max-height: 2.5px;
+                        max-height: 2.5rem;
                         margin-top: -0.625rem;
                     }
                 }
