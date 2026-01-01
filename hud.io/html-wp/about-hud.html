@@ -266,13 +266,10 @@
                     </section>
                     <script>
                         document.addEventListener('DOMContentLoaded', () => {
-
                             const section = document.querySelector('.animation-title-section');
                             if (!section) return;
-
                             const title = section.querySelector('.section-title h2');
                             if (!title) return;
-
                             const observer = new IntersectionObserver(
                                 ([entry]) => {
                                     if (entry.isIntersecting) {
@@ -287,9 +284,7 @@
                                     rootMargin: '-50% 0px -50% 0px'
                                 }
                             );
-
                             observer.observe(section);
-
                         });
                     </script>
                 </div>
