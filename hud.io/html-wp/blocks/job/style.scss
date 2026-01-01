@@ -204,6 +204,12 @@
                 }
             }
         }
+        .text-size-large { 
+            font-size: 1.5rem !important;
+            @media (max-width: 767px) {
+                font-size: 1.125rem !important;
+            }
+        }
     }
     .content-bottom {
         margin-top: 5rem;

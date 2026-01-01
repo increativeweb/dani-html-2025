@@ -7,11 +7,7 @@
     color: inherit !important;
     fill: currentColor !important;
 }
-.has-announcement-bar {
-    .main-header {
-        top: 2.563rem;
-    }
-}
+
 .main-header {
     position: sticky;
     z-index: 99;
@@ -21,15 +17,15 @@
     margin: 0 auto;
     top: 0;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         width: calc(100% - 2rem);
     }
 
     &.is-visible {
         .navbar-container {
             .navbar-collapse {
-                @media (max-width: 992px) {
-                    height: calc(100vh - 70px);
+                @media (max-width: 991px) {
+                    height: calc(100vh - 100px);
 
                     .btn-link-arrow {
                         .icon-arrow {
@@ -247,8 +243,8 @@
         border-radius: 13px;
         padding: 1rem 2%;
 
-        @media (max-width: 992px) {
-            padding: 1rem;
+        @media (max-width: 991px) {
+            padding: 0.75rem;
         }
 
 
@@ -263,7 +259,7 @@
             }
 
             li {
-                @media (max-width: 992px) {
+                @media (max-width: 991px) {
                     padding-top: 1rem;
                     padding-bottom: 1rem;
                 }
@@ -282,7 +278,7 @@
                     padding: .5rem 1rem;
                     transition: color .2s;
 
-                    @media (max-width: 992px) {
+                    @media (max-width: 991px) {
                         font-size: 2rem;
                         padding: 0 1rem;
                         color: var(--white) !important;
@@ -349,13 +345,13 @@
                             bottom: -12px;
                         }
 
-                        @media (max-width: 992px) {
+                        @media (max-width: 991px) {
                             @include justify-content(center);
                         }
                     }
 
                     .arrow {
-                        @media (min-width: 992px) {
+                        @media (min-width: 991px) {
                             display: none;
                         }
 
@@ -437,7 +433,7 @@
                                 @include border-radius(5px);
                                 color: var(--white) !important;
 
-                                @media (max-width: 992px) {
+                                @media (max-width: 991px) {
                                     font-size: 1.3rem;
                                 }
 
@@ -448,7 +444,7 @@
                                         box-shadow: none;
                                     }
 
-                                    @media (max-width: 992px) {
+                                    @media (max-width: 991px) {
                                         color: rgba(255, 255, 255, 0.7) !important;
                                     }
                                 }
@@ -461,7 +457,7 @@
                                         box-shadow: none;
                                     }
 
-                                    @media (max-width: 992px) {
+                                    @media (max-width: 991px) {
                                         color: rgba(255, 255, 255, 0.7) !important;
                                     }
                                 }
@@ -568,7 +564,7 @@
     -webkit-backdrop-filter: blur(8px);
     color: #000;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         width: calc(100% - 2rem);
     }
 
