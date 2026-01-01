@@ -18,6 +18,23 @@
     }
 }
 
+
+@media (max-width: 479px) {
+    .scroll-content-section {
+        .section-title.text-center {
+            text-align: left !important;
+
+            h2.title {
+                text-align: left !important;
+                padding-left: 0;
+                padding-right: 0;
+                font-size: 3rem !important;
+                line-height: 1;
+            }
+        }
+    }
+}
+
 .scroll-content-blocks {
     grid-column-gap: 7rem;
     grid-row-gap: 4rem;
@@ -36,9 +53,11 @@
         grid-column-gap: 5rem;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         grid-template-columns: 1fr;
     }
+
+
 
     .content-block,
     .content-media-block {
@@ -50,7 +69,12 @@
         align-items: flex-start;
         display: flex;
 
-        @media (max-width: 992px) {
+        @media (min-width: 1024px) and (max-width: 1366px) {
+            // iPad
+            max-width: 18.938rem;
+        }
+
+        @media (max-width: 991px) {
             display: none;
         }
 
@@ -62,6 +86,9 @@
 
             @media (min-width: 992px) {
                 height: 100vh;
+                &:first-child {
+                    height: 70vh;
+                }
             }
 
             // &.active {
@@ -78,9 +105,15 @@
             color: white;
             font-size: 2rem;
             line-height: 1.1;
+            font-weight: 500;
 
-            @media screen and (max-width: 991px) {
+            @media (max-width: 991px) {
                 font-size: 1.5rem;
+            }
+
+            @media (max-width: 479px) {
+                font-size: 1.6rem;
+                line-height: 1.1;
             }
         }
 
@@ -94,6 +127,10 @@
 
             @media screen and (min-width: 1920px) {
                 font-size: 1.2rem;
+            }
+
+            @media (max-width: 479px) {
+                font-size: 1.1rem;
             }
         }
     }
@@ -129,8 +166,10 @@
             }
         }
 
-        @media (max-width: 992px) {
-            margin-top: 3rem;
+        @media (max-width: 991px) {
+            &:not(:first-child) {
+                margin-top: 3rem;
+            }
         }
     }
 
@@ -141,12 +180,16 @@
         display: flex;
         overflow: hidden;
 
-        @media (max-width: 992px) {
+        @media (max-width: 991px) {
             background-color: #262f40;
             background-image: linear-gradient(174deg, #eabefd, #eabefd 51%, #002ac2);
             border-radius: 14px;
             padding: 0.1rem;
             margin-top: 30px;
+        }
+
+        @media (max-width: 479px) {
+            margin-top: 4rem;
         }
 
         .media-block {

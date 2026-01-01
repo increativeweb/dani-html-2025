@@ -1,44 +1,78 @@
 jQuery(function ($) {
-    let activeID = null; // track currently active video
+
+    let activeID = null;
+    let activeVideo = null;
+
     function activateMediaOnScroll() {
         if ($(window).width() < 992) return;
-        const triggerPoint = window.innerHeight * 0.80;
+
+        const triggerPoint = window.innerHeight * 0.8;
+
         $(".scroll-content").each(function () {
-            const sectionTop = $(this).offset().top - $(window).scrollTop();
-            if (sectionTop < triggerPoint && sectionTop > -($(this).height() / 2)) {
-                const id = $(this).attr("id");
+            const $section = $(this);
+            const sectionTop = $section.offset().top - $(window).scrollTop();
+            const sectionHeight = $section.outerHeight();
+            const id = $section.attr("id");
+
+            if (
+                sectionTop < triggerPoint &&
+                sectionTop > -(sectionHeight / 2)
+            ) {
                 if (activeID === id) return;
+
                 activeID = id;
 
-                // Pause ALL videos first
-                $(".content-media video").each(function () {
-                    this.pause();
-                });
+                // âœ… Pause ONLY the previously active video
+                if (activeVideo && !activeVideo.paused) {
+                    activeVideo.pause();
+                }
 
-                // Activate the correct media box
-                $(".content-media").removeClass("active");
-                $(".scroll-content").removeClass("active");
-                const activeMedia = $('.content-media[data-id="' + id + '"]').addClass("active");
-                $('.scroll-content[id="' + id + '"]').addClass("active");
+                // Toggle active classes
+                $(".content-media, .scroll-content").removeClass("active");
+                const $activeMedia = $('.content-media[data-id="' + id + '"]').addClass("active");
+                $section.addClass("active");
 
-                // Play the matched video
-                const video = activeMedia.find("video").get(0);
-                if (video) {
-                    video.currentTime = 0;
-                    // Safe play with async handling
-                    video.play().catch(err => {
-                        console.warn("Play interrupted", err);
+                const video = $activeMedia.find("video").get(0);
+                if (!video) return;
+
+                activeVideo = video;
+                video.currentTime = 0;
+
+                // âœ… Safe async play
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // AbortError is expected during fast scroll
                     });
-                    // console.log(id);
                 }
             }
         });
     }
-    // Debounce for smoother behavior
+
+    // âœ… Debounced scroll handler
     let scrollTimeout;
     $(window).on("scroll", function () {
         clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(activateMediaOnScroll, 50);
+        scrollTimeout = setTimeout(activateMediaOnScroll, 80);
     });
+
     activateMediaOnScroll();
+
+    function initMediaObserver() {
+        if ($(window).width() <= 992) return;
+        const mediaBlock = $('.content-media-block')[0];
+        if (!mediaBlock) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                mediaBlock.style.maxHeight = entry.isIntersecting ? '100vh' : '70vh';
+            },
+            {
+                root: null,
+                threshold: 0,
+                rootMargin: '-20% 0px -80% 0px'
+            }
+        );
+        observer.observe(mediaBlock);
+    }
+    initMediaObserver();
 });
