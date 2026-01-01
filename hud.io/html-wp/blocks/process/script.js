@@ -49,20 +49,21 @@ jQuery(function ($) {
         });
     }
 
-    // âœ… Debounced scroll handler
-    let scrollTimeout;
-    $(window).on("scroll", function () {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(activateMediaOnScroll, 80);
-    });
-
-    activateMediaOnScroll();
-
+    let observer = null;
     function initMediaObserver() {
-        if ($(window).width() <= 992) return;
+        if ($(window).width() <= 992) {
+            if (observer) {
+                observer.disconnect();
+                observer = null;
+            }
+            $('.content-media-block').css('max-height', '');
+            return;
+        }
+        if (observer) return;
         const mediaBlock = $('.content-media-block')[0];
         if (!mediaBlock) return;
-        const observer = new IntersectionObserver(
+
+        observer = new IntersectionObserver(
             ([entry]) => {
                 mediaBlock.style.maxHeight = entry.isIntersecting ? '100vh' : '70vh';
             },
@@ -75,4 +76,5 @@ jQuery(function ($) {
         observer.observe(mediaBlock);
     }
     initMediaObserver();
+    $(window).on('resize', initMediaObserver);
 });
