@@ -2195,3 +2195,44 @@ body #cookiescript_injected {
         max-width: 300px;
     }
 }
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+    background: linear-gradient(85.55deg, #E0BFF2 6.46%, #F8E1E9 95.32%);
+    text-align: center;
+    padding: 0.75rem 2rem; 
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    a {
+        min-height: auto;
+        padding: 0;
+        color: var(--text-black);
+        font-weight: 500;
+        font-size: 0.875rem;
+        text-decoration: none;
+        @include inline-flex;
+        @include align-items(center);
+        gap: 0.25rem;
+        @include transition(0.2s, ease-in-out);
+        .icon-arrow {
+            background: url('../images/icons/icon-arrow-up.svg') no-repeat center center;
+            background-size: contain !important;
+            filter: invert(1);
+            width: 0.525rem;
+            height: 0.525rem;
+            display: inline-block;
+            @include transition(0.2s, ease-in-out);
+        }
+        &:hover, &:focus {
+            text-decoration: underline;
+            opacity: 0.75;
+            .icon-arrow {
+                @include transform(rotate(45deg));
+            }
+        }
+    }
+}

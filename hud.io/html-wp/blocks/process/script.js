@@ -22,7 +22,7 @@ jQuery(function ($) {
 
                 activeID = id;
 
-                // âœ… Pause ONLY the previously active video
+                // ✅ Pause ONLY the previously active video
                 if (activeVideo && !activeVideo.paused) {
                     activeVideo.pause();
                 }
@@ -38,7 +38,7 @@ jQuery(function ($) {
                 activeVideo = video;
                 video.currentTime = 0;
 
-                // âœ… Safe async play
+                // ✅ Safe async play
                 const playPromise = video.play();
                 if (playPromise !== undefined) {
                     playPromise.catch(() => {
@@ -49,32 +49,13 @@ jQuery(function ($) {
         });
     }
 
-    let observer = null;
-    function initMediaObserver() {
-        if ($(window).width() <= 992) {
-            if (observer) {
-                observer.disconnect();
-                observer = null;
-            }
-            $('.content-media-block').css('max-height', '');
-            return;
-        }
-        if (observer) return;
-        const mediaBlock = $('.content-media-block')[0];
-        if (!mediaBlock) return;
+    // ✅ Debounced scroll handler
+    let scrollTimeout;
+    $(window).on("scroll", function () {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(activateMediaOnScroll, 80);
+    });
 
-        observer = new IntersectionObserver(
-            ([entry]) => {
-                mediaBlock.style.maxHeight = entry.isIntersecting ? '100vh' : '70vh';
-            },
-            {
-                root: null,
-                threshold: 0,
-                rootMargin: '-20% 0px -80% 0px'
-            }
-        );
-        observer.observe(mediaBlock);
-    }
-    initMediaObserver();
-    $(window).on('resize', initMediaObserver);
+    activateMediaOnScroll();
+
 });

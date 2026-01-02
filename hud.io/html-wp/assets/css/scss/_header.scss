@@ -7,7 +7,11 @@
     color: inherit !important;
     fill: currentColor !important;
 }
-
+.has-announcement-bar {
+    .main-header {
+        top: 2.563rem;
+    }
+}
 .main-header {
     position: sticky;
     z-index: 99;
@@ -373,40 +377,28 @@
                     .sub-menu {
                         @media (min-width: 992px) {
                             position: absolute;
-                            top: calc(100% + 8px);
-                            left: 50%;
+                            top: 0;
                             display: block;
-                            min-width: 240px;
+                            min-width: 200px;
                             padding: 10px 0;
                             opacity: 0;
                             pointer-events: none;
                             @include transition(0.05s, ease-in-out);
-                            @include transform(rotateX(-20deg) translateX(-50%));
+                            @include transform(rotateX(-20deg) translateZ(0) translate3d(0, 37px, 0));
                             @include border-radius(8px);
                             z-index: 9;
-                            @include box-shadow(0px 4px 6px rgba(0, 0, 0, 0.04));
+                            box-shadow: 0 8px 26px -4px hsla(0deg, 0%, 8%, 0.15), 0 8px 9px -5px hsla(0deg, 0%, 8%, 0.06);
                             border: 1px solid transparent;
-                            background-image: linear-gradient(var(--black), var(--black)), linear-gradient(174deg, var(--white), #f9baf9 52%, #9470fd);
-                            background-origin: border-box;
-                            background-clip: padding-box, border-box;
-
-                            &::before,
-                            &::after {
-                                border-left: 8px solid transparent;
-                                border-right: 8px solid transparent;
-                                border-bottom: 8px solid var(--white);
-                                top: -8px;
-                                content: '';
-                                right: calc(50% - 3px);
-                                position: absolute;
-                            }
-
+                            background: var(--white);
                             &::before {
-                                border-left: 9px solid transparent;
-                                border-right: 9px solid transparent;
-                                border-bottom: 9px solid var(--white);
-                                top: -9px;
-                                right: calc(50% - 4px);
+                                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l256 0c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z" fill="white"/></svg>');
+                                position: absolute;
+                                top: 0;
+                                left: 28px;
+                                right: auto;
+                                width: 18px;
+                                height: 18px;
+                                transition: top 0.1 ease;
                             }
                         }
 
@@ -426,12 +418,13 @@
                             a:not(.btn) {
                                 display: block;
                                 font-weight: 500;
-                                padding: 8px;
+                                padding: 10px 15px;
                                 font-size: 14px;
+                                line-height: 1;
                                 margin: 0;
                                 height: auto;
                                 @include border-radius(5px);
-                                color: var(--white) !important;
+                                color: var(--text-black) !important;
 
                                 @media (max-width: 991px) {
                                     font-size: 1.3rem;
@@ -440,7 +433,7 @@
                                 &:hover,
                                 &:focus {
                                     @media (min-width: 992px) {
-                                        background: rgba(255, 255, 255, 0.12);
+                                        background: #EBEDF0 !important;
                                         box-shadow: none;
                                     }
 
@@ -488,7 +481,10 @@
                                 opacity: 1;
                                 pointer-events: auto;
                                 visibility: visible;
-                                @include transform(rotateX(0deg) translate3d(-50%, 0, 0));
+                                @include transform(rotateX(0deg) translateZ(0) translate3d(0, 37px, 5px));
+                                &::before {
+                                    top: -15px;
+                                }
                             }
                         }
                     }

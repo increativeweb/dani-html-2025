@@ -29,6 +29,11 @@
 </head>
 
 <body class="home dark ">
+    <div class="announcement-bar">
+        <div class="container">
+            <a href="#">Read the Monday.com success story<span class="icon-arrow"></span></a>
+        </div>
+    </div>
     <header class="main-header">
         <nav class="navbar navbar-expand-md">
             <div class="navbar-container">
@@ -38,7 +43,17 @@
                 <div class="collapse navbar-collapse" id="navbarMenu">
                     <ul id="menu-mainmenu" class="navbar-nav mainMenu">
                         <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="blog.html">Blog</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item-object-post current-menu-item current_page_parent"><a href="#" aria-current="page">Blog</a></li>
+                                <li><a target="_blank" href="#">Docs</a></li>
+                                <li class="menu-item-object-glossary"><a href="#">Glossary</a></li>
+                                <li class="menu-item-object-resource"><a href="#">Webinars</a></li>
+                                <li><a href="#">AI Tools Wizard</a></li>
+                            </ul>
+                        
+                        </li>
                         <li><a target="_blank" href="https://docs.hud.io/">Docs</a></li>
                         <li><a href="book-a-demo.html">Book a demo</a></li>
                     </ul>
