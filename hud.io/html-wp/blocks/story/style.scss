@@ -1,0 +1,62 @@
+@import '../../assets/css/scss/mixins';
+
+.theme-section.icw-sections .acf-innerblocks-container {
+    overflow: hidden;
+}
+.story-card-block {
+    & > .row {
+        & > .col {
+            &:first-child {
+                width: 100%;
+                .story-card {
+                    @include flex-direction(row-reverse);
+                    & > * {
+                        flex: 1 1 0;
+                    }
+                    .card-img {
+                        &.ratio-16x9 {
+                            --bs-aspect-ratio: 82%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.story-card {
+    @include flexbox;
+    @include flex-direction(column);
+    height: 100%;
+    @include border-radius(14px);
+    background: var(--white);
+    overflow: hidden;
+    .card-img {
+
+    }
+    .card-body {
+        padding: 2rem;
+        @include flexbox;
+        @include flex-direction(column);
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .card-info {
+            color: #818282;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 500;
+            flex: 1 1 auto;
+        }
+        .action {
+            border-top: 1px solid #818282;
+            @include flexbox;
+            @include justify-content(space-between);
+            @include align-items(center);
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+        }
+    }
+}
