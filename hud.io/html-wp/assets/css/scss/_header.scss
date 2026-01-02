@@ -433,7 +433,7 @@
                                 &:hover,
                                 &:focus {
                                     @media (min-width: 992px) {
-                                        background: #EBEDF0 !important;
+                                        background: #F8E1E9 !important;
                                         box-shadow: none;
                                     }
 
@@ -446,7 +446,7 @@
                             &.current-menu-item {
                                 &>a {
                                     @media (min-width: 992px) {
-                                        background: rgba(255, 255, 255, 0.12);
+                                        background: #F8E1E9 !important;
                                         box-shadow: none;
                                     }
 
