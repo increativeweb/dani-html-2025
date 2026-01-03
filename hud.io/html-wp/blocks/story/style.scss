@@ -4,18 +4,30 @@
     overflow: hidden;
 }
 .story-card-block {
+    max-width: 994px;
+    margin: 0 auto;
     & > .row {
         & > .col {
             &:first-child {
                 width: 100%;
                 .story-card {
                     @include flex-direction(row-reverse);
+                    @media (max-width: 767px) {
+                        @include flex-direction(column);
+                    }
                     & > * {
                         flex: 1 1 0;
+                        min-width: 50%;
+                        @media (max-width: 767px) {
+                            flex: unset;
+                            min-width: 100%;
+                        }
                     }
                     .card-img {
-                        &.ratio-16x9 {
-                            --bs-aspect-ratio: 82%;
+                        @media (min-width: 767px) {
+                            &.ratio-16x9 {
+                                --bs-aspect-ratio: 82%;
+                            }
                         }
                     }
                 }
@@ -30,17 +42,25 @@
     @include border-radius(14px);
     background: var(--white);
     overflow: hidden;
+    position: relative;
     .card-img {
-
+        overflow: hidden;
+        img {
+            @include transition(0.2s, ease-in-out);
+        }
     }
     .card-body {
         padding: 2rem;
         @include flexbox;
         @include flex-direction(column);
+        @media (max-width: 767px) {
+            padding: 1rem;
+        }
         .card-title {
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 1rem;
+            @include transition(0.2s, ease-in-out);
         }
         .card-info {
             color: #818282;
@@ -48,6 +68,9 @@
             line-height: 1.7;
             font-weight: 500;
             flex: 1 1 auto;
+            @media (max-width: 767px) {
+                line-height: 1.4;
+            }
         }
         .action {
             border-top: 1px solid #818282;
@@ -57,6 +80,49 @@
             gap: 1rem;
             margin-top: 1rem;
             padding-top: 0.75rem;
+            a {
+                color: var(--text-black);
+                font-weight: 500;
+                text-decoration: none;
+                line-height: 1;
+                @include transition(0.2s, ease-in-out);
+                &.link-arrow {
+                    .icon-arrow {
+                        background: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.79172 0.312993C7.59114 0.513319 7.47858 0.784972 7.47858 1.06826C7.47858 1.35155 7.59125 1.62331 7.79159 1.82365L11.3095 5.34161L1.06842 5.34161C0.785134 5.34161 0.513469 5.45418 0.31303 5.65462C0.112705 5.85495 0.000150075 6.1266 2.04679e-05 6.41001C0.00014674 6.69343 0.112688 6.96507 0.31303 7.16541C0.513482 7.36586 0.785134 7.47842 1.06842 7.47842L11.3095 7.47842L7.79159 10.9964C7.52171 11.2663 7.41623 11.6596 7.515 12.0282C7.61378 12.3969 7.90173 12.6848 8.2704 12.7836C8.63905 12.8824 9.03236 12.7769 9.30225 12.507L14.6439 7.16534C14.8444 6.96514 14.9571 6.69336 14.9569 6.40995C14.9569 6.12666 14.8445 5.85487 14.6441 5.65469L9.30238 0.312996C9.10218 0.112544 8.8304 0.000115719 8.54698 -1.38139e-05C8.26369 -1.37718e-05 7.99203 0.112557 7.79185 0.312993L7.79172 0.312993Z" fill="rgb(118, 84, 252)"/></svg>') no-repeat center center;
+                        background-size: contain;
+                        width: 12px;
+                        height: 12px;
+                        display: inline-block;
+                        margin-bottom: -2px;
+                        margin-left: 5px;
+                        @include transition(0.2s, ease-in-out);
+                        filter: brightness(0) invert(0);
+                    }
+                }
+            }
+        }
+    }
+    &:hover, &:focus {
+        .card-img {
+            img {
+                @include transform(scale(1.05));
+            }
+        }
+        .card-body {
+            .card-title {
+                color: var(--purple);
+            }
+            .action {
+                a {
+                    color: var(--purple);
+                    &.link-arrow {
+                        .icon-arrow {
+                            @include transform(translateX(5px));
+                            filter: unset;
+                        }
+                    }
+                }
+            }
         }
     }
 }
