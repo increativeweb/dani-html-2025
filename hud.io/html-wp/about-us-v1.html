@@ -23,16 +23,15 @@
     <meta name="msapplication-TileImage" content="uploads/cropped-favicon-270x270.jpg" />
     <link rel='stylesheet' href='blocks/hero/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='blocks/modern/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='blocks/process/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='blocks/testimonials/style.css'  type='text/css' media='all' />
+    <link rel='stylesheet' href='blocks/history/style.css' type='text/css' media='all' />
 </head>
 
-<body class="home dark ">
-    <div class="announcement-bar">
+<body class="dark">
+    <!-- <div class="announcement-bar">
         <div class="container">
             <a href="#">Read the Monday.com success story<span class="icon-arrow"></span></a>
         </div>
-    </div>
+    </div> -->
     <header class="main-header">
         <nav class="navbar navbar-expand-md">
             <div class="navbar-container">
@@ -61,126 +60,268 @@
         <!-- <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div> -->
     </header>
     <main id="main-content" class="main-content-wrapper">
-        <section data-theme="dark" class="theme-section hero-section default gs-is-dark is-dark">
+        <section class="page-header theme-section pt-medium pb-medium section-title-mw-940 ph-title-medium pt-large pb-large m-pt-medium m-pb-medium">
             <div class="container">
-                <div class="row g-xl-5 align-items-center">
-                    <div class="col-lg-5 col-xl-6">
-                        <div class="hero-title text-left">
-                            <div class="tag-line">THE FIRST</div>
-                            <h1 class="title">Runtime Code Sensor</h1>
-                            <div class="sort-info">
-                                <p>Hud is a new way to understand how code behaves in production, <br class="d-none d-xl-block">detecting errors and latency issues with the deep forensic context <br class="d-none d-xl-block">needed to fix them with AI.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-xl-6">                        
-                        <div class="media-block">
-                            <picture>
-                                <img decoding="async" src="uploads/img-hero-about.png" alt="Detection with Root Cause">
-                            </picture>
-                        </div>
-                    </div>
+                <div class="section-title my-0 p-0 text-center">
+                    <h1>Bringing production intelligence to AI coding agents.</h1>
+                    <div class="sort-info">So they can ship with confidence.</div>
                 </div>
             </div>
         </section>
-
-        <section data-theme="dark" class="theme-section pb-0 gs-is-dark is-dark">
+        <section data-theme="dark" class="theme-section content-section bg-lightgray bg-gradient-tb py-xl-xxlarge-- default m-medium mt-0 mb-0 m-m-15 gs-is-dark is-light container-medium sg-border-radius-small">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">                        
-                        <div class="section-title text-left">
-                            <h2 class="title">Will we ever trust AI <br class="d-none d-xl-block">to ship production <br class="d-none d-xl-block">code?</h2>
+                <div class="row g-4 gx-35 row-gap ">    
+                    <!-- LEFT COLUMN -->
+                    <div class="col-img col-md-6 col-lg-6 col-content-sticky">    
+                        <div class="section-title mb-4 text-left">
+                            <h2 class="title h-large">
+                                <span class="font-normal">Our mission</span><br>
+                                <strong class="font-bold">drives us.</strong>
+                            </h2>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="section-title text-left">
+                    </div>    
+                    <!-- RIGHT COLUMN -->
+                    <div class="col-info col-md-6 col-lg-6">    
+                        <div class="section-title text-left"> 
                             <div class="sort-info">
-                                <p class="text-color-secondary">Engineering teams are under pressure to move faster, ship more, and use AI to do it. But even with the best tools, production still breaks in unexpected ways. Too often, we hear about issues from users before we see them ourselves. Debugging can take hours, often pulling your most senior engineers away from important new work.</p>
-                                <p class="text-color-secondary">AI should make this better, but when AI writes code without understanding how production behaves, it often makes things worse. Teams want to spend time building new products, not chasing stability issues or reviewing AI’s risky pull requests. Hud changes this. It gives both engineers and AI real visibility into how code behaves in production, so they can detect problems earlier, find the real root cause instantly, and fix them safely.</p>
+                                <blockquote>
+                                    <p>We believe AI should understand and reason over production as well as it ships code.</p>
+                                </blockquote>
+                                <p class="mw-95 m-mw-100">That&#8217;s the gap we&#8217;re closing &#8211; so engineering teams can move faster, ship with confidence, and focus on what they&#8217;re actually building. Hud is how we make that real.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section data-theme="dark" class="theme-section morden-card-section section-title-mw-90 default gs-is-dark">
+        </section>    
+        <section data-theme="dark" class="theme-section history-section  with-bg-glow-animation default pb-xlarge m-pb-large gs-is-dark is-dark container-fluid">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2 class="title ">The Hud difference</h2>
-                    <div class="sort-info">
-                        <p class="text-color-secondary">Hud is fundamentally different from legacy observability, APMs, and error trackers. It is based on the Runtime Code Sensor, a lightweight component that installs in minutes and runs alongside your code with negligible footprint.</p>
-                        <h3>See code in a different way</h3>
+                    <h2 class="title ">The road here</h2>
+                </div>
+                <div class="splide splide-js history-slider" data-desktop-perpage="7">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="history-card ">
+                                    <span class="history-year">2002</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-aws.svg" alt="AWS" /></div>
+                                        <div class="info">Accessible infrastructure</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card ">
+                                    <span class="history-year">2005</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-git.svg" alt="Git" /></div>
+                                        <div class="info">Code has a home</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card ">
+                                    <span class="history-year">2013</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-docker.svg" alt="Docker" /></div>
+                                        <div class="info">Deployment packages are predictable.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card ">
+                                    <span class="history-year">2015</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-kubernetes.svg" alt="kubernetes" /></div>
+                                        <div class="info">Scale is manageable</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card ">
+                                    <span class="history-year">2022</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-github-copilot.svg" alt="Github-copilot" /></div>
+                                        <div class="info">Writing code got faster.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card ">
+                                    <span class="history-year">2023</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-cursor.svg" alt="cursor" /></div>
+                                        <div class="info">Accessible infrastructure</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="history-card is-current">
+                                    <span class="history-year">2025</span>
+                                    <div class="history-info">
+                                        <div class="logo-img"><img src="uploads/logo-hud.svg" alt="Hud Software Platforms Ltd."  /></div>
+                                        <div class="info">Production is visible to engineers and agents.</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="morden-card-blocks">
-                    <div class="row">
-                        <div class="position-relative col-12 scroll-animate">
-                            <div class="morden-card  br-bg-card flex-lg-row">
-                                <div class="card-content">
-                                    <h3>Ubiquity</h3>
-                                    <div class="sort-info">
-                                        <p>Hud lives with every piece of code - if it runs in production, Hud knows how it behaves, whether it’s failing, and whether it’s getting better or worse over time.</p>
-                                    </div>
-                                    <div class="action"></div>
-                                </div>
-                                <div class="card-image">
-                                    <picture><img src="uploads/img-ubiquity.png" alt="Ubiquity"></picture>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative col-lg-6 scroll-animate">
-                            <div class="morden-card  br-bg-card flex-lg-column">
-                                <div class="card-content">
-                                    <h3><span style="display:inline-block;max-width:80%">Dynamic depth / lower cost</span></h3>
-                                    <div class="sort-info">
-                                        <p>Hud continuously captures lightweight signals about runtime behavior, and when something goes wrong, it automatically collects the forensic context needed to understand and resolve the root cause.</p>
-                                    </div>
-                                    <div class="action"></div>
-                                </div>
-                                <div class="card-image">
-                                    <picture><img src="uploads/img-dynamic-depth-lower-cost.png" alt="Dynamic depth / lower cost"></picture>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative col-lg-6 scroll-animate">
-                            <div class="morden-card  center-bg-card flex-lg-column flex-lg-column-reverse">
-                                <div class="card-content">
-                                    <h3><span class="text-nowrap">Built for AI consumption</span></h3>
-                                    <div class="sort-info">
-                                        <p>Hud’s data model was designed so AI agents can reason over any piece of code with real production context  - enabling safe, confident AI-generated changes.</p>
-                                    </div>
-                                    <div class="action"></div>
-                                </div>
-                                <div class="card-image">
-                                    <picture><img src="uploads/img-built-ai-consumption.png" alt="Built for AI consumption"></picture>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    
             </div>
-        </section>
-
-        <div data-theme="light"
-            class="theme-section icw-sections bg-gradient p-medium default pb-0 m-p-medium gs-is-light is-light">
+            <div class="bg-glow"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const tokenBgCursor = document.querySelector('.bg-glow');
+                    const triggerCursor = document.querySelector('.with-bg-glow-animation');
+                    if (window.innerWidth < 992) return;
+                    if (!tokenBgCursor || !triggerCursor) return;
+                    triggerCursor.addEventListener('mousemove', (e) => {
+                        const rect = triggerCursor.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const width = rect.width;
+                        // Convert to percentage (limit to 60%)
+                        let percent = (x / width) * 100;
+                        percent = Math.max(0, Math.min(percent, 60));
+                        if (window.innerWidth < 1500) {
+                            percent = Math.max(0, Math.min(percent, 50));
+                        } if (window.innerWidth < 1200) {
+                            percent = Math.max(0, Math.min(percent, 30));
+                        }
+                        tokenBgCursor.style.left = percent + '%';
+                        tokenBgCursor.style.right = percent + '%';
+                    });
+                    triggerCursor.addEventListener('mouseenter', () => {
+                        tokenBgCursor.classList.remove('hide');
+                    });
+                    triggerCursor.addEventListener('mouseleave', () => {
+                        tokenBgCursor.classList.add('hide');
+                    });
+                });
+            </script>
+        </section>    
+        <div data-theme="light" class="theme-section icw-sections bg-lightgray bg-glow-b p-0 default gs-is-light is-light">
             <div class="acf-innerblocks-container">
-                <section data-theme="light" class="theme-section section-title-mw-880 testimonial-section  default gs-is-light is-light">
+                <section data-theme="light" class="theme-section content-section  col-outside-right default pb-medium gs-is-light is-light">
                     <div class="container">
-                        <div class="section-title text-center">
-                            <h2 class="title ">Under the Hood</h2>
-                            <div class="sort-info">
-                                <p>Hud’s architecture is built around its Runtime Code Sensor - a lightweight SDK-level component that runs alongside application code at the function-level and operates within existing permissions and access controls. The sensor collects aggregated data during normal operation, and deeper forensic data when issues occur, such as errors and performance regressions. All information is processed securely within the user’s environment and sent through the secure protocols to Hud’s core logic, which performs cross-instance correlation and version analysis to identify systemic or environment-specific issues - without requiring direct access to source code or sensitive data.</p>
-                            </div>
-                        </div>
-                        <div class="media-block">
-                            <picture>
-                                <img src="uploads/img-about-under-hood.png" alt="Under the Hood">
-                            </picture>
+                        <div class="row g-4 gx-35 row-gap align-items-center">    
+                            <!-- LEFT COLUMN -->
+                            <div class="col-img col-md-6 col-lg-6 order-2">
+                                <!-- <div class="media-block">
+                                    <img src="uploads/img-who-we-are.webp" alt="Who we are" />
+                                </div> -->
+                                <div class="masonry-grid">
+                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-2.jpg" alt=""></div>
+                                    <div class="ratio ratio-1x1"><img src="uploads/img-gallery-5.jpg" alt=""></div>
+                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-3.jpg" alt=""></div>
+                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-4.jpg" alt=""></div>
+                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-7.jpg" alt=""></div>
+                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-6.jpg" alt=""></div>
+                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-1.jpg" alt=""></div>
+                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-2.jpg" alt=""></div>
+                                </div>
+                            </div>    
+                            <!-- RIGHT COLUMN -->
+                            <div class="col-info col-md-6 col-lg-6 order-1">    
+                                <div class="section-title text-left">    
+                                    <h2 class="title ">Who we are </h2>    
+                                    <div class="sort-info">
+                                        <p>We&#8217;re engineers with deep expertise in runtime <br class="d-none d-lg-block">internals and OS reverse engineering &#8211; building <br class="d-none d-lg-block">the bridge between production reality and the AI <br class="d-none d-lg-block">agents writing code.</p>
+                                    </div>
+                                </div>    
+                            </div>    
                         </div>
                     </div>
-                </section>
+                    <style>
+                        .masonry-grid {
+                            column-count: 3;
+                            column-gap: 10px;
+                        }
+                        .masonry-grid div {
+
+                            margin-bottom: 10px;
+                        }
+                        .masonry-grid img {
+                            width: 100%;
+                            display: block;
+                            border-radius: 12px;
+                            break-inside: avoid;
+                            object-fit: cover;
+                        }
+
+                        /* Tablet */
+                        @media (max-width: 991px) {
+                            .masonry-grid {
+                                column-count: 2;
+                            }
+                        }
+
+                        /* Mobile */
+                        @media (max-width: 575px) {
+                            .masonry-grid {
+                                column-count: 1;
+                            }
+                        }
+
+                        @media (min-width: 992px) {
+                            .col-outside-right .media-block, .col-outside-right .masonry-grid {
+                                width: 55vw;
+                                max-width: unset;
+                                margin-left: -5vw;
+                            }
+                        }    
+                        @media (max-width: 767px) {
+                            .col-outside-right .media-block, .col-outside-right .masonry-grid {
+                                margin-top: 30px;
+                            }
+                        }
+                    </style>
+                </section>    
+                <section data-theme="light" class="theme-section html-code-section  pt-0 m-pt-0 gs-is-light is-light">
+                    <div class="container">
+                        <div class="section-title text-left">
+                            <h3 class="title ">What we stand for</h3>
+                        </div>
+                        <div class="html-code">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="icon-card">
+                                        <div class="card-img">
+                                            <img src="uploads/icon-depth.svg" alt="Depth">
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Depth</h4>
+                                            <div class="sort-info">without the complexity</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="icon-card">
+                                        <div class="card-img">
+                                            <img src="uploads/icon-visibility.svg" alt="Visibility">
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Visibility</h4>
+                                            <div class="sort-info">without digging</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="icon-card">
+                                        <div class="card-img">
+                                            <img src="uploads/icon-built.svg" alt="Built">
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Built</h4>
+                                            <div class="sort-info">for what’s next</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>    
             </div>
         </div>
     </main>
@@ -226,8 +367,7 @@
     <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>
     <script type="text/javascript" src="assets/js/post-details.js" id="post-details-js"></script>
     <script type="text/javascript" src="blocks/hero/script.js" id="acf-hero-view-script-js" defer="defer" data-wp-strategy="defer"></script>
-    <script type="text/javascript" src="blocks/process/script.js" id="acf-process-script-js"></script>
-    <script type="text/javascript" src="blocks/testimonials/script.js" id="acf-testimonials-view-script-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript" src="blocks/history/script.js" id="acf-history-script-js" defer="defer" data-wp-strategy="defer"></script>
 </body>
 
 </html>
