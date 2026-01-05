@@ -24,6 +24,7 @@
     <link rel='stylesheet' href='blocks/hero/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='blocks/modern/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='blocks/history/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='blocks/custom-masonry-grid/style.css' type='text/css' media='all' />
 </head>
 
 <body class="dark">
@@ -208,18 +209,24 @@
                         <div class="row g-4 gx-35 row-gap align-items-center">    
                             <!-- LEFT COLUMN -->
                             <div class="col-img col-md-6 col-lg-6 order-2">
-                                <!-- <div class="media-block">
+                                <div class="media-block d-block d-md-none">
                                     <img src="uploads/img-who-we-are.webp" alt="Who we are" />
-                                </div> -->
-                                <div class="masonry-grid">
-                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-2.jpg" alt=""></div>
-                                    <div class="ratio ratio-1x1"><img src="uploads/img-gallery-5.jpg" alt=""></div>
-                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-3.jpg" alt=""></div>
-                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-4.jpg" alt=""></div>
-                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-7.jpg" alt=""></div>
-                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-6.jpg" alt=""></div>
-                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-1.jpg" alt=""></div>
-                                    <div class="ratio ratio-4x3"><img src="uploads/img-gallery-2.jpg" alt=""></div>
+                                </div>
+                                <div class="custom-masonry-grid">
+                                    <div class="grid-row first-row">
+                                        <div><img src="uploads/img-gallery-2.jpg" class="glightbox" alt=""></div>
+                                        <div><img src="uploads/img-gallery-3.jpg" class="glightbox" alt=""></div>
+                                        <div><img src="uploads/img-gallery-6.jpg" class="glightbox" alt=""></div>
+                                    </div>
+                                    <div class="grid-row second-row">
+                                        <div><img src="uploads/img-gallery-5.jpg" class="glightbox" alt=""></div>
+                                        <div><img src="uploads/img-gallery-4.jpg" class="glightbox" alt=""></div>
+                                        <div><img src="uploads/img-gallery-1.jpg" class="glightbox" alt=""></div>
+                                    </div>
+                                    <div class="grid-row third-row">
+                                        <div><img src="uploads/img-gallery-7.jpg" class="glightbox" alt=""></div>
+                                        <div><img src="uploads/img-gallery-2.jpg" class="glightbox" alt=""></div>
+                                    </div>
                                 </div>
                             </div>    
                             <!-- RIGHT COLUMN -->
@@ -233,46 +240,16 @@
                             </div>    
                         </div>
                     </div>
-                    <style>
-                        .masonry-grid {
-                            column-count: 3;
-                            column-gap: 10px;
-                        }
-                        .masonry-grid div {
-
-                            margin-bottom: 10px;
-                        }
-                        .masonry-grid img {
-                            width: 100%;
-                            display: block;
-                            border-radius: 12px;
-                            break-inside: avoid;
-                            object-fit: cover;
-                        }
-
-                        /* Tablet */
-                        @media (max-width: 991px) {
-                            .masonry-grid {
-                                column-count: 2;
-                            }
-                        }
-
-                        /* Mobile */
-                        @media (max-width: 575px) {
-                            .masonry-grid {
-                                column-count: 1;
-                            }
-                        }
-
+                    <style> 
                         @media (min-width: 992px) {
-                            .col-outside-right .media-block, .col-outside-right .masonry-grid {
+                            .col-outside-right .media-block, .col-outside-right .custom-masonry-grid {
                                 width: 55vw;
                                 max-width: unset;
                                 margin-left: -5vw;
                             }
                         }    
                         @media (max-width: 767px) {
-                            .col-outside-right .media-block, .col-outside-right .masonry-grid {
+                            .col-outside-right .media-block, .col-outside-right .custom-masonry-grid {
                                 margin-top: 30px;
                             }
                         }
