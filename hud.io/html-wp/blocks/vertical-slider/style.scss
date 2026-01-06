@@ -11,23 +11,25 @@
 }
 
 .vertical-slider-block {
-    max-height: 700px;
+    max-height: 43.75rem;
     overflow: hidden;
-    margin-top: -80px;
+    margin-top: -5rem;
     @include flexbox;
-    gap: 20px;
+    gap: 1.25rem;
+
     @media (max-width: 991px) {
         margin-top: 0;
         margin: 0 -1rem 3.125rem;
         @include flex-direction(column);
     }
+
     .vertical-splide {
-        @media (max-width: 991px) {
-            
-        }
+        @media (max-width: 991px) {}
+
         .media-block {
-            max-width: 240px;
+            max-width: 15rem;
             aspect-ratio: 1 / 1;
+
             img {
                 object-fit: cover;
                 object-position: center;
