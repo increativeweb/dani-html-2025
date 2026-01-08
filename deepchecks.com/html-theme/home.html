@@ -1643,7 +1643,7 @@
                     formId: 'eb71ea82-e543-4407-a650-abfd6eee03f0',
                     locale: 'en',
                     translations: { en: { submitText: 'Next' } },
-
+                    onFormReady: function ($form, ctx) { hubspot_labels(); },
                     onFormSubmit: function ($form) {
                         // Capture step-1 values
                         window.step1Data = {};
@@ -1671,6 +1671,7 @@
                             translations: { en: { submitText: 'Submit' } },
 
                             onFormReady: function ($form2) {
+                                hubspot_labels();
                                 // Inject step-1 values
                                 Object.keys(window.step1Data).forEach(key => {
                                     const field = $form2.find(`[name="${key}"]`);
