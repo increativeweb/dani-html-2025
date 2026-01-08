@@ -1626,11 +1626,15 @@
     </script> -->
     <script>
         window.step1Data = {};
+
         document.addEventListener('DOMContentLoaded', function () {
 
-            function initStep1Form() {
+            function initHubSpotMultiStepForm() {
                 if (typeof hbspt === 'undefined') return;
 
+                // -------------------
+                // STEP 1 FORM
+                // -------------------
                 hbspt.forms.create({
                     css: '',
                     target: '#llmnov25_hubspotFormContainer',
@@ -1638,76 +1642,73 @@
                     portalId: '8338627',
                     formId: 'eb71ea82-e543-4407-a650-abfd6eee03f0',
                     locale: 'en',
-                    translations: { en: { submitText: 'Submit' } },
+                    translations: { en: { submitText: 'Next' } },
 
                     onFormSubmit: function ($form) {
-                        // ✅ Capture Step-1 values
+                        // Capture step-1 values
+                        window.step1Data = {};
                         $form.serializeArray().forEach(field => {
-                            step1Data[field.name] = field.value;
+                            window.step1Data[field.name] = field.value;
                         });
 
-                        // console.log('Step-1 Data:', step1Data);
-                        $form.find('input[type="submit"]')
-                            .prop('disabled', true)
-                            .val('Submitting...');
-                        // ✅ Switch UI
+                        console.log('Step-1 Data:', window.step1Data);
+
+                        // Switch UI
                         document.getElementById('llmnov25_hubspotFormContainer').style.display = 'none';
                         document.getElementById('llmnov25_hubspotFormContainer2').style.display = 'block';
 
-                        // ✅ Load Step-2
-                        initStep2Form();
+                        // -------------------
+                        // STEP 2 FORM
+                        // -------------------
+                        hbspt.forms.create({
+                            css: '',
+                            target: '#llmnov25_hubspotFormContainer2',
+                            region: 'na1',
+                            portalId: '8338627',
+                            formId: 'c986c4af-a768-4bc3-8de8-cca89741ce21',
+                            locale: 'en',
+                            // redirectUrl: '/thank-you/#llm-25',
+                            translations: { en: { submitText: 'Submit' } },
 
-                        // ❌ STOP HubSpot submit
-                        return false;
-                    }
-                });
-            }
-            function initStep2Form() {
-                hbspt.forms.create({
-                    css: '',
-                    target: '#llmnov25_hubspotFormContainer2',
-                    region: 'na1',
-                    portalId: '8338627',
-                    formId: 'c986c4af-a768-4bc3-8de8-cca89741ce21',
-                    locale: 'en',
-                    // redirectUrl: "/thank-you/#llm-25",
-                    translations: { en: { submitText: 'Submit' } },
+                            onFormReady: function ($form2) {
+                                // Inject step-1 values
+                                Object.keys(window.step1Data).forEach(key => {
+                                    const field = $form2.find(`[name="${key}"]`);
+                                    if (field.length) {
+                                        field.val(window.step1Data[key]);
+                                    }
+                                });
+                            },
 
-                    onFormReady: function ($form) {
-                        // ✅ Inject step-1 values into hidden fields
-                        Object.keys(step1Data).forEach(key => {
-                            const field = $form.find(`[name="${key}"]`);
-                            if (field.length) {
-                                field.val(step1Data[key]);
+                            onFormSubmit: function ($form2) {
+                                // Combine all values (optional logging / analytics)
+                                const finalData = { ...window.step1Data };
+                                $form2.serializeArray().forEach(field => {
+                                    finalData[field.name] = field.value;
+                                });
+                                return false;
+                                console.log('FINAL SUBMIT DATA:', finalData);
+                                // ✅ allow HubSpot submit
                             }
                         });
-                    },
 
-                    onFormSubmit: function ($form) {
-                        // ✅ Combine all values
-                        const finalData = { ...step1Data };
-                        $form.serializeArray().forEach(field => {
-                            finalData[field.name] = field.value;
-                        });
-                        return false;
-                        // console.log('FINAL SUBMIT DATA:', finalData);
-                        $form.find('input[type="submit"]')
-                            .prop('disabled', true)
-                            .val('Submitting...');
-                        // ✅ HubSpot submits normally
+                        return false; // ❌ stop step-1 submit
                     }
                 });
             }
-            initStep1Form();
-            jQuery('#popup-llmnov25').on('hidden.bs.modal', function () {
-                if (typeof hbspt !== 'undefined' && typeof hbspt.forms !== 'undefined' && typeof hbspt.forms[0] !== 'undefined') { hbspt.forms[0].destroy(); }
 
+            initHubSpotMultiStepForm();
+
+            // Cleanup on modal close
+            jQuery('#popup-llmnov25').on('hidden.bs.modal', function () {
+                if (typeof hbspt !== 'undefined' && hbspt.forms && hbspt.forms[0]) {
+                    hbspt.forms[0].destroy();
+                }
             });
 
         });
-
-
     </script>
+
 
 
     <style>
