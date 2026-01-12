@@ -1,0 +1,48 @@
+.main-header {
+    .theme-container {
+        max-width: 82.75rem;
+    }
+
+    .navbar {
+        padding: 1.125rem 0;
+
+        .theme-container {
+            @include flexbox;
+            @include align-items(center);
+
+            .navbar-brand {
+                img {
+                    max-height: 2.813rem;
+                }
+            }
+
+            .navbar-collapse {
+                margin-left: auto;
+
+            }
+
+            .mainMenu {
+                @include flexbox;
+                @include align-items(center);
+                gap: 3rem;
+
+                li {
+                    a {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        color: var(--text-black);
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .nav-right {
+                margin-left: 2.5rem;
+            }
+
+            .navbar-toggler {
+                display: none;
+            }
+        }
+    }
+}
