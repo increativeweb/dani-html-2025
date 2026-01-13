@@ -21,6 +21,8 @@
     <link rel='stylesheet' id='icw-glightbox-css' href='assets/css/glightbox.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />
     <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+        id="icw-lottie-js"></script>
     <link rel="icon" href="uploads/cropped-favicon-32x32.jpg" sizes="32x32" />
     <link rel="icon" href="uploads/cropped-favicon-192x192.jpg" sizes="192x192" />
     <link rel="apple-touch-icon" href="uploads/cropped-favicon-180x180.jpg" />
@@ -40,11 +42,12 @@
                         <li><a href="#">How It Works</a></li>
                     </ul>
                     <div class="mobile-bottom-menu">
-                        <a href="#" class="btn btn-dark is-hover">Book a demo</a>
+                        <lottie-player src="uploads/bg-footer.json" background="transparent" loop
+                            autoplay></lottie-player>
                     </div>
                 </div>
                 <div class="nav-right">
-                    <a href="#" class="btn btn-dark is-hover">Book a demo</a>
+                    <a href="#" class="btn btn-dark">Book a demo</a>
                     <button class="navbar-toggler" type="button"><span></span><span></span><span></span></button>
                 </div>
             </div>
@@ -69,22 +72,36 @@
         </section>
     </main>
     <footer class="main-footer">
-        <div class="theme-container">
-            <div class="footer-top-content">
-                <div class="footer-info-block">
-                    <a href="index.html" class="footer-logo"><img src="assets/images/logo.svg" alt=""></a>
-                    <div class="social-list-block">
-                        <ul class="social-list">
-                            <li><a href="#"><i class="icw-icon icw-icon-facebook"></i></a></li>
-                            <li><a href="#"><i class="icw-icon icw-icon-youtube"></i></a></li>
-                            <li><a href="#"><i class="icw-icon icw-icon-instagram"></i></a></li>
-                            <li><a href="#"><i class="icw-icon icw-icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icw-icon icw-icon-linkedin"></i></a></li>
+        <div class="footer-animation-block">
+            <lottie-player src="uploads/bg-footer.json" background="transparent" loop autoplay></lottie-player>
+        </div>
+        <div class="main-footer-content">
+            <div class="theme-container">
+                <div class="footer-top-content">
+                    <div class="footer-info-block">
+                        <a href="index.html" class="footer-logo"><img src="assets/images/logo.svg" alt=""></a>
+                        <div class="social-list-block">
+                            <ul class="social-list">
+                                <li><a href="#"><i class="icw-icon icw-icon-facebook"></i></a></li>
+                                <li><a href="#"><i class="icw-icon icw-icon-youtube"></i></a></li>
+                                <li><a href="#"><i class="icw-icon icw-icon-instagram"></i></a></li>
+                                <li><a href="#"><i class="icw-icon icw-icon-twitter"></i></a></li>
+                                <li><a href="#"><i class="icw-icon icw-icon-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-main-menu">
+                        <ul class="footer-menu-list">
+                            <li><a href="#">The Problem</a></li>
+                            <li><a href="#">The Solution</a></li>
+                            <li><a href="#">How It Works</a></li>
+                            <li><a href="#" class="btn btn-dark">Book a demo</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
     </footer>
     <!-- <div class="design-by d-none"><a href="https://increativeweb.com" target="_blank" rel="noopener">Website Design &
             Development <strong>InCreativeWeb.com</strong></a></div>

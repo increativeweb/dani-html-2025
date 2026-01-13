@@ -39,7 +39,7 @@ body {
     margin: 0;
     background-color: var(--white);
     color: var(--text-black);
-    font-family: var(--font-family-poppins);
+    font-family: var(--font-family-body);
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     font-weight: 400;
     line-height: 1.3;
@@ -101,50 +101,53 @@ body ::selection {
     font-size: clamp(0.625rem, 1.5vw, 0.75rem);
 }
 
-// Padding CSS
+.overflow-hidden {
+    overflow: hidden !important;
+}
 
+// Padding CSS
 .p-0 {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .pt-0 {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 
 .pb-0 {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
 }
 
 .pl-0 {
-    padding-left: 0;
+    padding-left: 0 !important;
 }
 
 .pr-0 {
-    padding-right: 0;
+    padding-right: 0 !important;
 }
 
 .p-xxl {
-    padding: 9.25rem;
+    padding: 9.25rem !important;
 }
 
 .p-xl {
-    padding: 6rem;
+    padding: 6rem !important;
 }
 
 .p-lg {
-    padding: 5rem;
+    padding: 5rem !important;
 }
 
 .p-md {
-    padding: 3rem;
+    padding: 3rem !important;
 }
 
 .p-sm {
-    padding: 2rem;
+    padding: 2rem !important;
 }
 
 .p-xs {
-    padding: 1rem;
+    padding: 1rem !important;
 }
 
 .p-50 {
@@ -599,16 +602,30 @@ h6,
     gap: 10px;
     text-transform: uppercase;
     letter-spacing: 0.09em;
-    transform: translateY(0);
-    transition: transform 0.2s cubic-bezier(.5, 2.5, .7, .7), box-shadow 0.2s cubic-bezier(.5, 2.5, .7, .7), background-color 0.2s cubic-bezier(.5, 2.5, .7, .7);
+    @include transform(translateY(0));
+    box-shadow: rgba(0, 0, 0, 0) 0px 4px 0px 0px;
+    transition: transform 0.2s cubic-bezier(.5, 2.5, .7, .7), box-shadow 0.2s cubic-bezier(.5, 2.5, .7, .7), all 0.2s ease-in-out;
+
+    &::before {
+        content: "";
+        @include border-radius(6.25rem);
+        width: 100%;
+        height: 100%;
+        transition: bottom .3s cubic-bezier(.5, 2.5, .7, .7);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 
     &:hover,
     &:focus {
+        box-shadow: rgb(0, 0, 0) 0px 4px 0px 0px;
+        @include transform(translateY(-0.25rem));
+
         &::before {
-            transform: scale(1);
+            bottom: calc(-1 * 0.25rem * 1.1);
         }
     }
-
 
     &.btn-dark {
         background-color: var(--black);
@@ -623,6 +640,20 @@ h6,
         }
     }
 
+    &.btn-white {
+        background-color: var(--white);
+        color: var(--text-black);
+        border-color: var(--white);
+
+        &:hover,
+        &:focus {
+            color: var(--text-black);
+            background-color: var(--yellow);
+            border-color: var(--yellow);
+            box-shadow: rgba(255, 255, 255, 0.5) 0px 4px 0px 0px;
+        }
+    }
+
     &.btn-green {
         background-color: var(--black);
         color: var(--white);
@@ -631,17 +662,6 @@ h6,
         &:focus {
             background-color: var(--dark-green);
             color: var(--white);
-        }
-    }
-
-    &.is-hover {
-
-        &:hover,
-        &:focus {
-            -webkit-box-shadow: 0 0.188rem 0 0 #000;
-            box-shadow: 0 0.188rem 0 0 #000;
-            -webkit-transform: translate3d(0, -0.25rem, 0);
-            transform: translate3d(0, -0.25rem, 0);
         }
     }
 }
@@ -968,6 +988,8 @@ h6,
         background-image: url('data:image/svg+xml,<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.9297 0C18.0343 0 18.9297 0.895431 18.9297 2V16.9297C18.9297 18.0343 18.0343 18.9297 16.9297 18.9297H2C0.895431 18.9297 0 18.0343 0 16.9297V2C0 0.895431 0.895431 0 2 0H16.9297ZM2.91504 7.19238V16.2266H5.72559V7.19238H2.91504ZM12.8701 6.96875C11.5055 6.96889 10.5889 7.71695 10.2129 8.42676H10.1748V7.19238H7.4834V16.2266H10.2891V11.7559C10.2891 10.577 10.5127 9.43658 11.9746 9.43652C13.4113 9.43652 13.4326 10.7841 13.4326 11.832V16.2266H16.2383V11.2744C16.2383 8.84056 15.7096 6.96875 12.8701 6.96875ZM4.31836 2.70508C3.41834 2.70508 2.69141 3.43201 2.69141 4.33203C2.69149 5.23198 3.41839 5.95898 4.31836 5.95898C5.21826 5.9589 5.94523 5.23193 5.94531 4.33203C5.94531 3.43206 5.21831 2.70516 4.31836 2.70508Z" fill="rgb(57, 191, 151)"/></svg>');
     }
 }
+
+
 
 // Video & Image Background CSS
 .media-bg-block {
