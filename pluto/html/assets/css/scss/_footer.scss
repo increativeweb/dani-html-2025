@@ -1,0 +1,43 @@
+.main-footer {
+    background: var(--yellow);
+    padding: 3.75rem 0;
+
+    .theme-container {
+        max-width: 83.75rem;
+    }
+
+    .footer-top-content {
+        @include flexbox;
+        @include justify-content(space-between);
+        gap: 2rem;
+
+        .footer-logo {
+            img {
+                max-height: 3.5rem;
+            }
+        }
+
+        .social-list-block {
+            margin-top: 3.125rem;
+        }
+
+        .social-list {
+            @include flexbox;
+            @include align-items(center);
+            gap: 1.25rem;
+
+            li {
+                a {
+                    filter: brightness(0);
+
+                    @include transition(0.1s, ease-in-out);
+
+                    &:hover,
+                    &:focus {
+                        filter: brightness(1);
+                    }
+                }
+            }
+        }
+    }
+}
