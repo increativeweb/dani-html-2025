@@ -13,8 +13,15 @@ jQuery(document).ready(function ($) {
         });
     }
 
-});
 
+});
+/* AOS Animation - Init */
+// try {
+//     wow.init();
+// } catch (e) {
+//     //
+// };
+new WOW().init();
 (function () {
     const navbar = document.querySelector('.navbar');
     const mainHeader = document.querySelector('.main-header');

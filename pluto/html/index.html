@@ -16,17 +16,19 @@
         href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap"
         rel="stylesheet">
 
-
     <link rel='stylesheet' id='splide-css' href='assets/css/splide.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-glightbox-css' href='assets/css/glightbox.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />
     <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
     <script type="text/javascript" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
         id="icw-lottie-js"></script>
     <link rel="icon" href="uploads/cropped-favicon-32x32.jpg" sizes="32x32" />
     <link rel="icon" href="uploads/cropped-favicon-192x192.jpg" sizes="192x192" />
     <link rel="apple-touch-icon" href="uploads/cropped-favicon-180x180.jpg" />
     <meta name="msapplication-TileImage" content="uploads/cropped-favicon-270x270.jpg" />
+
+    <link rel="stylesheet" href="blocks/hero/hero.css">
 </head>
 
 <body>
@@ -56,20 +58,31 @@
         </nav>
     </header>
     <main class="main-content-wrapper">
-        <section class="theme-section page-header ph-title-large bg-darkPink pb-xxl section-title-mw-900">
+        <section class="theme-section hero-page bg-darkPink pb-xxl section-title-mw-900">
             <div class="theme-container">
                 <div class="section-title text-center">
-                    <div class="tag-line">About us</div>
-                    <h1 class="text-xxl">We secure <br>what people <br>build with AI</h1>
-                    <div class="sort-info">
+                    <div class="tag-line wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                        data-wow-delay="0.2s">
+                        About us
+                    </div>
+                    <h1 class="text-xxl wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                        data-wow-delay="0.2s">
+                        We secure <br>what people <br>build with AI
+                    </h1>
+                    <div class="sort-info wow animate__animated animate__bounceBox" data-wow-duration="1s"
+                        data-wow-delay="0.6s">
                         <p>AI tools let everyone build — fast. <br>Security teams were forced to either block everything
                             or accept the risk.</p>
                         <p>Pluto offers a third way: let people build, while security stays in control.</p>
                     </div>
                 </div>
             </div>
-            <div class="media-bg-block">
-                <img src="uploads/img-home-bg-full.svg" alt="">
+        </section>
+        <section class="theme-section hero-bottom-section">
+            <div class="theme-container">
+                <div class="image-block">
+                    <img src="uploads/img-monkey.svg" alt="">
+                </div>
             </div>
         </section>
     </main>
@@ -122,7 +135,9 @@
         </svg></span> -->
     <script type="text/javascript" src="assets/js/splide.min.js" id="splide-js"></script>
     <script type="text/javascript" src="assets/js/glightbox.min.js" id="icw-glightbox-js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>
+    <script type="text/javascript" src="blocks/hero/script.js" id="icw-hero-js"></script>
 </body>
 
 </html>
