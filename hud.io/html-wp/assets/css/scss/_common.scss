@@ -715,6 +715,13 @@ img {
         }
     }
 
+    &.btn-pink {
+        background-color: #F9BFF9 !important;
+        border-color: #F9BFF9 !important;
+        color: var(--text-black) !important;
+
+    }
+
     &.btn-white {
         color: var(--black) !important;
         border-color: var(--white) !important;
@@ -2191,6 +2198,7 @@ body #cookiescript_injected {
         max-width: 300px;
     }
 }
+
 .announcement-bar {
     position: fixed;
     top: 0;
@@ -2199,10 +2207,11 @@ body #cookiescript_injected {
     z-index: 1100;
     background: linear-gradient(85.55deg, #E0BFF2 6.46%, #F8E1E9 95.32%);
     text-align: center;
-    padding: 0.75rem 2rem; 
+    padding: 0.75rem 2rem;
     line-height: 1.1;
     display: flex;
     align-items: center;
+
     a {
         min-height: auto;
         padding: 0;
@@ -2214,6 +2223,7 @@ body #cookiescript_injected {
         @include align-items(center);
         gap: 0.25rem;
         @include transition(0.2s, ease-in-out);
+
         .icon-arrow {
             background: url('../images/icons/icon-arrow-up.svg') no-repeat center center;
             background-size: contain !important;
@@ -2223,9 +2233,12 @@ body #cookiescript_injected {
             display: inline-block;
             @include transition(0.2s, ease-in-out);
         }
-        &:hover, &:focus {
+
+        &:hover,
+        &:focus {
             text-decoration: underline;
             opacity: 0.75;
+
             .icon-arrow {
                 @include transform(rotate(45deg));
             }
