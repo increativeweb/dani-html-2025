@@ -46,18 +46,17 @@ if (jQuery('.testimonials-vertical-slider').length) {
         pagination: false,
         updateOnMove: true,
 
-        classes: {
-            pagination: 'splide__pagination is-dark',
-        },
+        // classes: {
+        //     pagination: 'splide__pagination is-dark',
+        // },
 
         mediaQuery: 'max',
         breakpoints: {
-            992: {
-                // pagination: true
-            },
             767: {
-                // gap: '15px',
-            }
+                pagination: true,
+                arrows: false,
+                direction: 'ltr',
+            },
         }
     });
 
