@@ -61,6 +61,13 @@
     <main class="main-content-wrapper">
         <section class="theme-section page-header single-header">
             <div class="theme-container">
+                <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">4 Ways to Improve Data Security With
+                            Databricks Unity Catalog</li>
+                    </ol>
+                </nav>
                 <div class="blog-header-title">
                     <div class="post-content-detail">
                         <div class="post-meta-info">
@@ -72,8 +79,7 @@
                         </div>
                         <div class="post-info">
                             <div class="user-info"><span class="user-img"><img src="uploads/img-no-user.jpg"
-                                        alt=""></span><span class="name">Robert
-                                    Stevens</span></div>
+                                        alt=""></span><span class="name"><a href="#">Robert Stevens</a></span></div>
                             <div class="date-time"><span>December 6, 2023</span><span>・</span>
                                 <span>5 minutes</span>
                             </div>
@@ -85,9 +91,116 @@
                 </div>
             </div>
         </section>
-        <section class="theme-section blog-section with-top-curve bg-light-yellow">
+        <section class="theme-section blog-content-section with-top-curve bg-light-yellow pt-0">
             <div class="theme-container">
-
+                <div class="row-blog-content">
+                    <div class="col-sidebar">
+                        <div class="post-sidebar position-sticky">
+                            <div class="share-socials">
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="icw-icon icw-icon-twitter-red"></i></a></li>
+                                    <li><a href="#"><i class="icw-icon icw-icon-instagram-red"></i></a></li>
+                                    <li><a href="#"><i class="icw-icon icw-icon-facebook-red"></i></a></li>
+                                </ul>
+                            </div>
+                            <nav class="single-nav">
+                                <div class="nav-title">Table of contents</div>
+                                <div class="navbar-list">
+                                    <nav class="nav-item">
+                                        <a class="nav-link" href="#post-item-1">Centralize Access Control Across All
+                                            Data Assets</a>
+                                        <a class="nav-link" href="#post-item-2">Why this matters</a>
+                                        <a class="nav-link" href="#post-item-3">Secure Data Sharing Without Data
+                                            Copies</a>
+                                        <a class="nav-link" href="#post-item-4">Secure Data Sharing Without Data
+                                            Copies</a>
+                                        <a class="nav-link active" href="#post-item-6">Securely Sharing Information
+                                            Without Duplicating</a>
+                                    </nav>
+                                </div>
+                                <div class="post-form">
+                                    <div class="post-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.8462 7C17.0769 7 16.3846 7.38462 16 8C15.6154 7.38462 14.9231 7 14.1538 7C12.9231 7 12 8 12 9.23077C12 11.3846 16 14.6923 16 14.6923C16 14.6923 20 11.3846 20 9.23077C20 8 19.0769 7 17.8462 7Z"
+                                                stroke="#111013" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M6 11L1 13.9V31H31V13.9L26 11" stroke="#111013" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M6 16.7V1H26V16.6" stroke="#111013" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M1 13.8999L31 30.9999" stroke="#111013" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M31.0001 13.8999L15.6001 22.1999" stroke="#111013" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <p class="post-form__title">Subscribe to get the latest updates, insights, and
+                                        product news from Pluto.</p>
+                                    <div class="form"></div>
+                                    <p class="post-form__info">By subscribing, you accept our Privacy Policy.</p>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-content">
+                        <div class="single-content">
+                            <p>Modern data platforms are more powerful than ever—but with that power comes
+                                responsibility. As organizations scale analytics, AI, and machine learning workloads,
+                                data security and governance quickly become critical challenges.</p>
+                            <p>Unity Catalog was designed to solve exactly this problem. It provides a centralized
+                                governance layer for data and AI assets across the <a href="#">Databricks platform</a>
+                            </p>
+                            <p>Below are four practical ways Unity Catalog helps you significantly improve data
+                                security, without slowing teams down.</p>
+                            <h2 id="post-item-1">Centralize Access Control Across All Data Assets</h2>
+                            <p>One of the biggest security risks in data platforms is fragmented permissions. Different
+                                tools, schemas, and environments often have their own access rules—making it easy to
+                                lose control.</p>
+                            <p><strong>Unity Catalog introduces a single access control model for:</strong></p>
+                            <ul>
+                                <li>Tables and views</li>
+                                <li>Files and external locations</li>
+                                <li>Machine learning models</li>
+                                <li>Functions and notebooks</li>
+                            </ul>
+                            <img src="uploads/img-post-inner.jpg"
+                                alt="Centralize Access Control Across All Data Assets">
+                            <h3>Why this matters</h3>
+                            <p>Instead of <a href="#">managing permissions</a> in multiple places, you define them once,
+                                at the catalog or schema level.</p>
+                            <p><strong>Benefits:</strong></p>
+                            <ul>
+                                <li>Fewer misconfigurations</li>
+                                <li>Clear ownership and accountability</li>
+                                <li>Faster onboarding and offboarding</li>
+                            </ul>
+                            <blockquote>
+                                <p>Security improves when access rules are simple, visible, and consistent.</p>
+                            </blockquote>
+                            <h2 id="post-item-2">Secure Data Sharing Without Data Copies</h2>
+                            <p>Sharing data externally is often a security nightmare—files get exported, duplicated, and
+                                stored in uncontrolled environments.</p>
+                            <p>Unity Catalog enables secure data sharing using built-in mechanisms (like Delta Sharing),
+                                without moving or copying data.</p>
+                            <p><strong>Key advantages</strong></p>
+                            <ul>
+                                <li>No data duplication</li>
+                                <li>Real-time access control</li>
+                                <li>Immediate revocation when needed</li>
+                            </ul>
+                        </div>
+                        <div class="post-navigation">
+                            <div class="share-socials">
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="icw-icon icw-icon-twitter-red"></i></a></li>
+                                    <li><a href="#"><i class="icw-icon icw-icon-instagram-red"></i></a></li>
+                                    <li><a href="#"><i class="icw-icon icw-icon-facebook-red"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
