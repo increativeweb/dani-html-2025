@@ -69,6 +69,48 @@
             max-width: 55rem;
         }
     }
+
+    &.with-top-curve {
+        padding-top: 1rem !important;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -8.5rem;
+            left: 0;
+            width: 100%;
+            height: 16.875rem;
+            clip-path: ellipse(60% 100% at bottom);
+            background-color: var(--light-yellow);
+            z-index: -1;
+
+            @media (max-width: 992px) {
+                top: -6rem;
+                left: 0;
+                width: 100%;
+                height: 12rem;
+            }
+
+            @media (max-width: 767px) {
+                top: -3.5rem;
+                left: 0;
+                width: 100%;
+                height: 5rem;
+            }
+        }
+    }
+
+    &.theme-section:has(+ .with-top-curve) {
+        padding-bottom: 12rem;
+
+        @media (max-width: 992px) {
+            padding-bottom: 9rem;
+        }
+
+        @media (max-width: 767px) {
+            padding-bottom: 5rem;
+        }
+    }
 }
 
 // Section Title CSS
@@ -166,16 +208,105 @@
 }
 
 .page-header {
+    background-color: var(--dark-pink);
+    background-image: url('../images/img-bg-plus-vector.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 5.5rem;
+
     .section-title {
         margin: 0 auto;
+        text-align: center;
 
         .tag-line {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--red);
+            font-weight: 800;
+            font-size: 1.5rem;
+
+            @media (max-width: 767px) {
+                margin-bottom: 1rem;
+                font-size: 0.875rem;
+
+            }
         }
 
         h1,
         h2 {
-            margin-bottom: 2.75rem;
+            margin-bottom: 1.5rem;
+
+            @media (max-width: 767px) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .sort-info {
+            font-weight: 300;
+            font-size: 1.5rem;
+
+            @media (max-width: 767px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &.with-vector {
+        @media (max-width: 992px) {
+            overflow: hidden;
+        }
+
+        &::before {
+            content: '';
+            background-image: url('../images/img-sm-ball-vector.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 50%;
+            left: -5.125rem;
+            width: 8.625rem;
+            height: 8.625rem;
+            display: inline-block;
+            z-index: -1;
+
+            @media (max-width: 992px) {
+                width: 6rem;
+                height: 6rem;
+                left: -4.125rem;
+                top: 40%;
+            }
+
+            @media (max-width: 992px) {
+                width: 3.75rem;
+                height: 3.75rem;
+                top: 30%;
+                left: -2.125rem;
+            }
+        }
+
+        &::after {
+            content: '';
+            background-image: url('data:image/svg+xml,<svg width="225" height="100" viewBox="0 0 225 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M274.502 0.984486C246.226 6.02176 254.651 53.2741 226.375 58.3113C198.1 63.3486 189.675 16.0963 161.408 21.1384C133.133 26.1757 141.558 73.428 113.282 78.4653C85.0066 83.5025 76.5819 36.2503 48.3064 41.2875C20.0309 46.3248 28.4508 93.5859 0.175318 98.6231" stroke="rgb(250, 103, 58)" stroke-width="2" stroke-miterlimit="10" /> </svg> ');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            top: 5rem;
+            right: 0;
+            width: 12.188rem;
+            height: 13.75rem;
+            display: inline-block;
+            z-index: -1;
+
+            @media (max-width: 992px) {
+                top: 1rem;
+                right: -3rem;
+            }
+
+            @media (max-width: 767px) {
+                top: 1rem;
+                right: -8rem;
+            }
         }
     }
 }

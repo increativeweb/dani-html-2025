@@ -430,6 +430,18 @@ body ::selection {
     }
 }
 
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
 .clear {
     clear: both;
 }
@@ -513,9 +525,9 @@ img {
     }
 
     &.theme-container-lg {
-        max-width: 83.313rem;
+        max-width: 83rem;
 
-        @media (max-width: 83.2rem) {
+        @media (max-width: 82.9rem) {
             padding-right: 1rem;
             padding-left: 1rem;
         }
@@ -728,7 +740,7 @@ h6,
     }
 }
 
-.bg-lightYellow {
+.bg-light-yellow {
     background-color: var(--light-yellow) !important;
 }
 
@@ -1015,7 +1027,54 @@ h6,
     }
 }
 
+// Vector
+.star-vector {
+    position: absolute;
+    top: 27%;
+    left: 16.5%;
+    z-index: 0;
+    background-image: url('data:image/svg+xml,<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M26.2464 50.1914C25.8364 51.2414 25.1364 51.2514 24.6964 50.2114L18.2664 35.0814C17.8264 34.0414 16.6064 32.8314 15.5664 32.4014L0.796352 26.2914C-0.253648 25.8614 -0.263626 25.1114 0.756374 24.6214L15.4163 17.6814C16.4363 17.2014 17.6664 15.9614 18.1364 14.9314L24.6563 0.761364C25.1263 -0.268636 25.8664 -0.248637 26.3064 0.791363L32.4964 15.7314C32.9264 16.7814 34.1364 17.9914 35.1764 18.4214L50.2263 24.7014C51.2663 25.1414 51.2564 25.8314 50.2064 26.2314L35.0064 32.1114C33.9464 32.5214 32.7464 33.7114 32.3364 34.7714L26.2664 50.1914H26.2464Z" fill="black" /> </svg> ');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 3.125rem;
+    height: 3.125rem;
+    display: inline-block;
 
+    @media (max-width: 992px) {
+        width: 1rem;
+        height: 1rem;
+        top: 72%;
+        left: 1.5rem;
+    }
+}
+
+.box-vector {
+    position: absolute;
+    top: -8%;
+    right: 8%;
+    z-index: 0;
+    background-image: url('../images/img-square-vector.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 9.5rem;
+    height: 9rem;
+    display: inline-block;
+
+    @media (max-width: 992px) {
+        width: 7.5rem;
+        height: 7rem;
+        top: -6%;
+    }
+
+    @media (max-width: 992px) {
+        width: 3.125rem;
+        height: 3rem;
+        top: -1.5%;
+        right: 0;
+    }
+}
 
 // Video & Image Background CSS
 .media-bg-block {
