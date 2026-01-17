@@ -1,0 +1,98 @@
+@import "../../assets/css/scss/mixins";
+
+.info-list-cards {
+    margin-top: 4.5rem;
+
+    @media (max-width: 992px) {
+        margin-top: 2.5rem;
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 1.5rem;
+    }
+
+    .info-list-card {
+        @include flexbox;
+        @include flex-direction(column);
+        height: 100%;
+        gap: 1.875rem;
+        position: relative;
+        @include transition(0.2s, ease-in-out);
+        border: 1px solid transparent;
+
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+
+        .card-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            flex: none;
+            line-height: 0.7;
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(center);
+            background: var(--dark-pink);
+            border-radius: 1rem;
+
+            img {
+                width: 2rem;
+            }
+        }
+
+        .card-content {
+            .card-title {
+                font-size: clamp(1.125rem, 4.5vw, 1.375rem);
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+
+                @media (max-width: 767px) {
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    color: var(--text-black);
+                    text-decoration: none;
+                    @include transition(0.2s, ease-in-out);
+                }
+            }
+
+            .card-info {
+                font-size: clamp(0.875rem, 4.5vw, 1.25rem);
+            }
+        }
+
+        &:has(a:hover),
+        &:has(a:focus) {
+
+            .card-title {
+                a {
+                    color: var(--blue);
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &.with-bg {
+            padding: 1.875rem;
+            background-color: var(--lightblue);
+
+            @media (max-width: 992px) {
+                padding: 1.25rem;
+            }
+        }
+
+        &.is-icon-left-card {
+            @include flex-direction(row);
+
+            @media (max-width: 767px) {
+                gap: 0.75rem;
+            }
+        }
+
+        &.is-center {
+            text-align: center;
+            @include align-items(center);
+        }
+    }
+}

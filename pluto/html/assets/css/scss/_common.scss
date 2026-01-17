@@ -86,11 +86,11 @@ body ::selection {
 }
 
 .text-xl {
-    font-size: clamp(1rem, 4.5vw, 2rem);
+    font-size: clamp(1.2rem, 4.5vw, 2rem);
 }
 
 .text-lg {
-    font-size: clamp(0.875rem, 4.5vw, 1.5rem);
+    font-size: clamp(1rem, 4.5vw, 1.5rem);
 }
 
 .text-md {
