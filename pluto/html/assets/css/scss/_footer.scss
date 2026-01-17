@@ -128,10 +128,6 @@
                     @include align-items(center);
                     gap: 1.5rem;
 
-                    @media (min-width: 992px) {
-                        margin-top: 1rem;
-                    }
-
                     @media (max-width: 767px) {
                         gap: 0.75rem;
                     }
