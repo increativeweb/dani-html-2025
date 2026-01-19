@@ -53,8 +53,8 @@ if (jQuery('.testimonials-vertical-slider').length) {
         mediaQuery: 'max',
         breakpoints: {
             767: {
-                pagination: true,
-                arrows: false,
+                pagination: false,
+                arrows: true,
                 direction: 'ltr',
             },
         }

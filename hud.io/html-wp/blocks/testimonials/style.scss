@@ -178,6 +178,16 @@
                 height: var(--h-mini-tablet)
             }
 
+            @media (max-width: 767px) {
+                top: auto;
+                bottom: -1.5rem;
+                @include flex-direction(row);
+                width: 100%;
+                height: auto;
+                padding: 0.5rem;
+                background: transparent;
+            }
+
             .splide__arrow {
                 background: #F9BFF9 url('data:image/svg+xml,<svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5.22461 0.0822754C5.41864 -0.0457782 5.68269 -0.0240219 5.85352 0.146729L10.8535 5.14673C11.0487 5.34195 11.0487 5.65849 10.8535 5.85376C10.6583 6.04902 10.3417 6.04902 10.1465 5.85376L5.5 1.20728L0.853516 5.85376C0.658254 6.04902 0.341746 6.04902 0.146484 5.85376C-0.0486929 5.65849 -0.0487495 5.34196 0.146484 5.14673L5.14648 0.146729L5.22461 0.0822754Z" fill="rgb(41 43 46)" /> </svg> ') no-repeat center center;
                 background-size: 0.75rem;
@@ -189,13 +199,18 @@
                 left: unset;
                 right: unset;
 
-                &--next {
-                    transform: scaleY(-1);
-                }
-
                 @media (max-width: 767px) {
                     width: 1.75rem;
                     height: 1.75rem;
+                    transform: rotate(270deg);
+                }
+
+                &--next {
+                    transform: scaleY(-1);
+
+                    @media (max-width: 767px) {
+                        transform: rotate(90deg) scaleX(-1);
+                    }
                 }
             }
         }
