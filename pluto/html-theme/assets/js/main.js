@@ -5,9 +5,9 @@ var $ = jQuery.noConflict();
 
 jQuery(document).ready(function ($) {
 
-    if ($('.main-header').length) {
+    if ($('.site-header').length) {
         $('.navbar-toggler').on('click', function () {
-            $(".main-header").toggleClass('is-visible');
+            $(".site-header").toggleClass('is-visible');
             $('body').toggleClass('overflow-hidden');
             $(this).toggleClass('is-visible');
         });
@@ -21,10 +21,10 @@ jQuery(document).ready(function ($) {
 // } catch (e) {
 //     //
 // };
-new WOW().init();
+// new WOW().init();
 (function () {
     const navbar = document.querySelector('.navbar');
-    const mainHeader = document.querySelector('.main-header');
+    const mainHeader = document.querySelector('.site-header');
     if (!navbar) return;
 
     let last = 0;
