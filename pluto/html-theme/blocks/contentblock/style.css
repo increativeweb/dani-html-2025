@@ -1,0 +1,1 @@
+.content-section .content-row{display:grid;grid-template-columns:repeat(2, 1fr);gap:7rem}@media (max-width: 1200px){.content-section .content-row{gap:5rem}}@media (max-width: 992px){.content-section .content-row{gap:2rem}}@media (max-width: 767px){.content-section .content-row{grid-template-columns:100%}}

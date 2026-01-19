@@ -1,0 +1,21 @@
+@import '../../assets/css/scss/mixins';
+
+.content-section {
+    .content-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7rem;
+
+        @media (max-width: 1200px) {
+            gap: 5rem;
+        }
+
+        @media (max-width: 992px) {
+            gap: 2rem;
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 100%;
+        }
+    }
+}
