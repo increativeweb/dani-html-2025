@@ -314,6 +314,7 @@
             height: 8.625rem;
             display: inline-block;
             z-index: -1;
+            animation: block_hero_floating_r 6s linear .3s infinite;
 
             @media (max-width: 992px) {
                 width: 6rem;
@@ -343,6 +344,7 @@
             height: 13.75rem;
             display: inline-block;
             z-index: -1;
+            animation: block_hero_floating_r 6s linear .3s infinite;
 
             @media (max-width: 992px) {
                 top: 1rem;
