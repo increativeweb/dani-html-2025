@@ -273,7 +273,7 @@
 
 .site-header {
     position: fixed;
-    height: 51px;
+    height: 60px;
     top: 0;
     left: 0;
     z-index: 99;
@@ -284,7 +284,7 @@
     }
 
     .container {
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         background-color: var(--black);
         border-radius: 0 0 25px 25px;
 
@@ -296,6 +296,16 @@
         @media (min-width: 1820px) {
             padding: 0 46px 0 66px;
         }
+    }
+
+    &.scroll-up:not(.is-visible) {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    &.scroll-down {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
     }
 
     &.scroll-header {
@@ -317,10 +327,37 @@
         }
     }
 
+    &.is-visible {
+        @include border-radius(0 !important);
+
+        .container {
+            border-radius: 0;
+        }
+
+        .site-header__main-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .main-menu__list {
+            li {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     &__logo {
         max-width: 111px;
-        top: 3px;
-        position: absolute;
+        top: 0;
+        position: relative;
+        display: inline-block;
+        line-height: 0.7;
 
         @media (min-width: 992px) {
             top: 0;
@@ -344,9 +381,60 @@
 
     &__main-menu {
         gap: 48px;
+
+        .btn {
+            @media (max-width: 992px) {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                margin: 1rem;
+                /* width: auto; */
+                max-width: max-content;
+            }
+        }
+
+        @media (max-width: 992px) {
+            @include flexbox;
+            @include flex-direction(column);
+            position: absolute;
+            top: 3.75rem;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            width: 100%;
+            max-width: 45rem;
+            margin: 0 auto;
+            height: 100vh;
+            max-height: calc(100vh - 3.75rem);
+            padding-top: 0;
+            padding-right: 0 !important;
+            background-color: var(--black);
+            z-index: -1;
+            overflow: hidden;
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            align-items: center !important;
+            gap: 1rem;
+
+            @media (max-width: 767px) {
+                max-width: 540px;
+            }
+
+            @media (max-width: 575px) {
+                max-width: 100%;
+            }
+        }
     }
 
     &__menu {
+        @media (max-width: 992px) {
+            height: calc(100% - 3.75rem);
+            width: 100%;
+            @include flexbox;
+        }
+
         ul {
             display: inline-flex;
             align-items: center;
@@ -354,6 +442,26 @@
             list-style: none;
             margin: 0;
             padding: 0;
+
+            @media (max-width: 992px) {
+                @include flex-direction(column);
+                height: auto;
+                overflow: hidden;
+                overflow-y: auto;
+                padding: 2rem 1rem;
+                flex: 1 1 auto;
+                gap: 3rem;
+                justify-content: center !important;
+
+            }
+
+            li {
+                @media (max-width: 992px) {
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+            }
         }
 
         a {
@@ -366,6 +474,12 @@
             /* 166.667% */
             text-transform: capitalize;
 
+            @media (max-width: 992px) {
+                color: var(--text-white);
+                font-size: 28px;
+                font-family: var(--font-family-heading);
+            }
+
             &:hover {
                 color: var(--yellow);
             }
@@ -373,9 +487,23 @@
     }
 
     .btn-secondary_black {
+        border-bottom: 0;
+        transition-property: color, background-color, border-color, box-shadow;
+
         &:hover {
             background-color: var(--yellow);
             color: var(--text-black);
+            box-shadow: var(--black) 0px 4px 0px 0px;
+        }
+
+        @media (max-width: 992px) {
+            background-color: var(--white);
+            color: var(--text-black);
+
+            &:hover,
+            &:focus {
+                box-shadow: rgba(255, 255, 255, 0.7) 0px 4px 0px 0px;
+            }
         }
     }
 
@@ -392,13 +520,14 @@
         z-index: 10;
         width: 1.5rem;
         height: 1.5rem;
+        margin-right: 20px;
 
         &.is-visible {
             span {
                 display: none;
             }
 
-            background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="rgb(0 0 0)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M15.5 8.5L8.5 15.5" stroke="rgb(0 0 0)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M15.5 15.5L8.5 8.5" stroke="rgb(0 0 0)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M15.5 8.5L8.5 15.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M15.5 15.5L8.5 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg>');
             background-size: 1.5rem;
             background-repeat: no-repeat;
 
@@ -408,7 +537,7 @@
             width: 1.25rem;
             height: 0.125rem;
             margin-bottom: 0.313rem;
-            background-color: #111013;
+            background-color: var(--text-white);
             @include border-radius(0.125rem);
             display: block;
             @include transition(0.2s, ease-in-out);

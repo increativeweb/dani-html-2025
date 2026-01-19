@@ -23,13 +23,12 @@ jQuery(document).ready(function ($) {
 // };
 // new WOW().init();
 (function () {
-    const navbar = document.querySelector('.navbar');
     const mainHeader = document.querySelector('.site-header');
-    if (!navbar) return;
+    if (!mainHeader) return;
 
     let last = 0;
     const delta = 5;
-    const headerHeight = navbar.offsetHeight;
+    const headerHeight = mainHeader.offsetHeight;
 
     function update() {
         const scrollTop = window.scrollY;
@@ -50,7 +49,7 @@ jQuery(document).ready(function ($) {
         }
 
         /* Dark navbar */
-        navbar.classList.toggle('navbar--dark', scrollTop >= 50);
+        mainHeader.classList.toggle('navbar--dark', scrollTop >= 50);
     }
 
     window.addEventListener('scroll', update, { passive: true });
