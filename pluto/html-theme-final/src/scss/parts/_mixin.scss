@@ -1,0 +1,142 @@
+@use "sass:map";
+@use "sass:math";
+
+@mixin h1 {
+    font-size: 24px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 45px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 72px;
+    }
+    @media (max-height: 900px) and (min-width: 1024px) {
+        font-size: 64px;
+    }
+    @media (max-height: 768px) and (min-width: 1024px) {
+        font-size: 51px;
+    }
+}
+
+@mixin h2 {
+    font-size: 80px;
+}
+
+@mixin h3 {
+    font-size: 60px;
+}
+
+@mixin h4 {
+    font-size: 40px;
+}
+
+@mixin h5 {
+    font-size: 32px;
+}
+
+@mixin h6 {
+    font-size: 24px;
+}
+
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+@mixin paragraph {
+    font-family: $font-primary;
+    font-weight: normal;
+    font-style: normal;
+    color: $color-dark;
+    font-size: 14px;
+    line-height: normal;
+}
+
+@mixin clamp($clamp){
+    display: -webkit-box;
+    -webkit-line-clamp: #{$clamp};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin custom-scrollbar {
+    overflow: auto;
+	
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+	
+    &::-webkit-scrollbar-track {
+        border-radius: 3px;
+        background: $color-white;
+    }
+	
+    &::-webkit-scrollbar-thumb {
+        transition: background-color .15s;
+        border-radius: 3px;
+        background: $color-dark;
+    }
+	
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba($color-dark, .8);
+    }
+	
+    &::-webkit-scrollbar-thumb:active {
+        background: rgba($color-dark, .9);
+    }
+}
+
+
+// ==============================
+// Responsive font size mixin
+// ==============================
+
+// default font scale bounding
+$font-lock-min: "sm" !default;
+$font-lock-max: "xl" !default;
+
+// responsive font-size
+@mixin responsive-font-size(
+    $min,
+    $max: null,
+    $lock-min: $font-lock-min,
+    $lock-max: $font-lock-max
+) {
+    & {
+        font-size: $min;
+    }
+    
+    @if $max {
+        @media (min-width: map.get($grid-breakpoints, $lock-min)) and (max-width: map.get($grid-breakpoints, $lock-max)) {
+            & {
+                font-size: calc(
+                    #{$min} +
+                    #{strip-unit($max) - strip-unit($min)} *
+                    (100vw - #{map.get($grid-breakpoints, $lock-min)}) /
+                    #{strip-unit(map.get($grid-breakpoints, $lock-max)) - strip-unit(map.get($grid-breakpoints, $lock-min))}
+                );
+            }
+        }
+        
+        @media (min-width: map.get($grid-breakpoints, $lock-max)) {
+            & {
+                font-size: $max;
+            }
+        }
+    }
+}
+
+// strip units helper function
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return math.div($number, $number * 0 + 1);
+    }
+    
+    @return $number;
+}

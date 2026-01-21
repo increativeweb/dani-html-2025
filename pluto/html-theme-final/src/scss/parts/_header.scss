@@ -1,0 +1,99 @@
+.site-header {
+    position: fixed;
+    height: 51px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+        height: 92px;
+    }
+
+    .container {
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        background-color: rgba($color-light-dark, 1);
+        border-radius: 0 0 25px 25px;
+
+        @include media-breakpoint-up(lg) {
+            border-radius: 0 0 45px 45px;
+            background-color: rgba($color-light-dark, 0);
+        }
+        @include media-breakpoint-up(xxl) {
+            padding: 0 46px 0 66px;
+        }
+    }
+
+    &.scroll-header {
+        .container {
+            background-color: rgba($color-light-dark, 1);
+        }
+        .site-header__menu a {
+            color: $color-white;
+            
+            &:hover {
+                color: $color-yellow;
+            }
+        }
+        .btn-secondary_black {
+            background-color: $color-white;
+            color: $color-dark;
+        }
+    }
+    &__logo {
+        max-width: 111px;
+        top: 3px;
+        position: absolute;
+
+        @include media-breakpoint-up(lg) {
+            top: 0;
+            position: relative;
+            max-width: 148px;
+            display: block;
+        }
+    }
+
+    &__link {
+        color: $color-light-green;
+        text-align: center;
+        font-size: 13.054px;
+        font-weight: 700;
+        line-height: 21.756px; /* 166.667% */
+        letter-spacing: 1.175px;
+        text-transform: uppercase;
+        gap: 9px;
+    }
+    &__main-menu {
+        gap: 48px;
+    }
+    &__menu {
+        ul {
+            display: inline-flex;
+            align-items: center;
+            gap: 48px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px; /* 166.667% */
+            text-transform: capitalize;
+
+            &:hover {
+                color: $color-yellow;
+            }
+        }
+    }
+    .btn-secondary_black {
+        &:hover {
+            background-color: $color-yellow;
+            color: $color-dark;
+        }
+    }
+}

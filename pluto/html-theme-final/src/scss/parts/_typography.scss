@@ -1,0 +1,148 @@
+body {
+    @include paragraph;
+    @include custom-scrollbar;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    margin: 0;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $font-title;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    margin: 0;
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
+
+h5 {
+    @include h5;
+}
+
+h6 {
+    @include h6;
+}
+
+.h1 {
+    @include h1;
+}
+
+.h2 {
+    @include h2;
+}
+
+.h3 {
+    @include h3;
+}
+
+.h4 {
+    @include h4;
+}
+
+.h5 {
+    @include h5;
+}
+
+.h6 {
+    @include h6;
+}
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        
+        .h1#{$infix} {
+            @include h1;
+        }
+        .h2#{$infix} {
+            @include h2;
+        }
+        .h3#{$infix} {
+            @include h3;
+        }
+        .h4#{$infix} {
+            @include h4;
+        }
+        .h5#{$infix} {
+            @include h5;
+        }
+        .h6#{$infix} {
+            @include h6;
+        }
+    }
+}
+
+
+strong, b, .font-weight-bold {
+    font-weight: bold;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.font-weight-800 {
+    font-weight: 800;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.color-white {
+    color: $color-white;
+}
+
+.color-dark {
+    color: $color-dark;
+}
+
+.bg-white {
+    background-color: $color-white;
+}
+
+.bg-dark {
+    background-color: $color-dark;
+}

@@ -1,0 +1,47 @@
+@import 'parts/mixin';
+@import 'parts/variables';
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+html :where(.wp-block) {
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.block-editor-block-list__layout {
+    overflow: hidden;
+	
+    .block-editor-block-list__block {
+        position: initial;
+    }
+}
+
+.acf-block-preview {
+    min-width: 1200px;
+    @include paragraph;
+}
+
+:where(.acf-block-preview) {
+    @import 'parts/normalize';
+    @import 'bootstrap/bootstrap';
+    @import 'parts/global';
+    @import 'parts/typography';
+    @import 'parts/button';
+}
+
+section[disabled] {
+    position: relative;
+    filter: grayscale(1);
+    opacity: .3;
+	
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+}
