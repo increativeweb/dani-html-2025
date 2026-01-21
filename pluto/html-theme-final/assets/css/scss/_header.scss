@@ -1,6 +1,6 @@
 .site-header {
     @media (max-width: 992px) {
-        height: 60px;
+        height: 3.75rem;
     }
 
     &.scroll-up:not(.is-visible) {
@@ -206,7 +206,7 @@
 
                 @media (max-width: 992px) {
                     color: var(--text-black);
-                    font-size: 28px;
+                    font-size: 1.75rem;
                     font-family: var(--font-family-heading);
                 }
             }
@@ -226,7 +226,7 @@
         z-index: 10;
         width: 1.5rem;
         height: 1.5rem;
-        margin-right: 20px;
+        margin-right: 1.25rem;
 
         &.is-visible {
             span {
