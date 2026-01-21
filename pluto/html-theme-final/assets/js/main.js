@@ -15,13 +15,12 @@ jQuery(document).ready(function ($) {
 
 
 });
-/* AOS Animation - Init */
+/* WOW Animation - Init */
 // try {
 //     wow.init();
 // } catch (e) {
 //     //
 // };
-// new WOW().init();
 (function () {
     const mainHeader = document.querySelector('.site-header');
     if (!mainHeader) return;
@@ -49,7 +48,7 @@ jQuery(document).ready(function ($) {
         }
 
         /* Dark navbar */
-        mainHeader.classList.toggle('navbar--dark', scrollTop >= 50);
+        // mainHeader.classList.toggle('navbar--dark', scrollTop >= 50);
     }
 
     window.addEventListener('scroll', update, { passive: true });
