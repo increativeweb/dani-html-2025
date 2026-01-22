@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#FFFF78">
-    <script type="text/javascript" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    <script type="text/javascript" src="//unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
         id="icw-lottie-js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!-- connect to domain of font files -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
     <!-- optionally increase loading priority -->
     <link rel="preload" as="style"
-        href=https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap />
+        href=//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap />
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap" />
+        href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap" />
 
     <title>Pluto</title>
     <meta name='robots' content='noindex, nofollow' />
@@ -24,7 +24,12 @@
     <link rel='stylesheet' id='wp-rock-style-css' href='style.css' type='text/css' media='all' />
     <link rel='stylesheet' id='wp-rock_style-css' href='assets/public/css/frontend.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='icw-about-css' href='assets/css/about.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='icw-wow-css' href='assets/css/animate.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='icw-about-hero-css' href='assets/public/css/block-hero-about.css' type='text/css' />
+    <link rel='stylesheet' id='icw-about-counter-css' href='assets/public/css/block-counter-about.css'
+        type='text/css' />
+    <link rel='stylesheet' id='icw-about-counter-css' href='assets/public/css/block-our-story-about.css'
+        type='text/css' />
 
 </head>
 
@@ -87,16 +92,16 @@
                 <span class="circle-sm-vector"></span>
                 <div class="theme-container">
                     <div class="section-title text-center">
-                        <div class="tag-line wow animate__animated animate__fadeInUp" data-wow-duration="1s"
-                            data-wow-delay="0.2s">
+                        <div class="tag-line wow animate__animated animate__fadeInUp"
+                            style="--animate-duration: 1s; --animate-delay: 0.1s;">
                             About us
                         </div>
-                        <h1 class="wow animate__animated animate__fadeInUp" data-wow-duration="1s"
-                            data-wow-delay="0.2s">
+                        <h1 class="wow animate__animated animate__fadeInUp"
+                            style="--animate-duration: 1s; --animate-delay: 0.2s;">
                             We secure <br>what people <br>build with AI
                         </h1>
-                        <div class="sort-info wow animate__animated animate__bounceBox" data-wow-duration="1s"
-                            data-wow-delay="0.6s">
+                        <div class="sort-info wow animate__animated animate__bounceBox"
+                            style="--animate-duration: 1s; --animate-delay: 1s;">
                             <p>AI tools let everyone build — fast. <br>Security teams were forced to either block
                                 everything
                                 or accept the risk.</p>
@@ -105,47 +110,61 @@
                     </div>
                 </div>
             </section>
-            <section class="theme-section counter-section bg-darkPink">
+            <section class="counter-section bg-darkPink">
                 <div class="theme-container">
                     <div class="section-title text-center">
-                        <h2>At a glance</h2>
-                        <div class="sort-info">
+                        <h2 class="wow animate__animated animate__fadeInUp"
+                            style="--animate-duration: 1s; --animate-delay: 0.3s;">At a glance</h2>
+                        <div class="sort-info wow animate__animated animate__fadeInUp"
+                            style="--animate-duration: 1s; --animate-delay: 0.6s;">
                             <p>Numbers that speak</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="counter-card is-left-rotated" style="--bg-card-color: #DCE6DE">
-                                <div class="card-content">
-                                    <h3 class="counter count-number" data-countto="10" data-duration="2500">
-                                        <span>0</span>
-                                    </h3>
-                                    <div class="card-info">Lorem Ipsum</div>
+                    <div class="counter-slider-block">
+                        <div class="swiper counter-swiper-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="counter-card wow animate__animated animate__fadeInUp"
+                                        style="--bg-card-color: #ffffff; --animate-duration: 1s; --animate-delay: 1s;">
+                                        <div class="card-content">
+                                            <h3 class="counter count-number" data-countto="10" data-duration="2500">
+                                                <span>0</span>
+                                            </h3>
+                                            <div class="card-info">Lorem Ipsum</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="counter-card wow animate__animated animate__fadeInUp"
+                                        style="--bg-card-color: #ffcbcb; --animate-duration: 1s; --animate-delay: 1.3s;">
+                                        <div class="card-content">
+                                            <h3 class="counter count-number" data-countto="99" data-duration="2500">
+                                                <span>0</span>%
+                                            </h3>
+                                            <div class="card-info">Lorem Ipsum</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="counter-card wow animate__animated animate__fadeInUp"
+                                        style="--bg-card-color: #c1f174; --animate-duration: 1s; --animate-delay: 1.6s;">
+                                        <div class="card-content">
+                                            <h3 class="counter count-number" data-countto="20" data-duration="2500">
+                                                <span>0</span>+
+                                            </h3>
+                                            <div class="card-info">Lorem Ipsum</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="counter-card" style="--bg-card-color: #ffcbcb">
-                                <div class="card-content">
-                                    <h3 class="counter count-number" data-countto="99" data-duration="2500">
-                                        <span>0</span>%
-                                    </h3>
-                                    <div class="card-info">Lorem Ipsum</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="counter-card is-right-rotated" style="--bg-card-color: #c1f174">
-                                <div class="card-content">
-                                    <h3 class="counter count-number" data-countto="20" data-duration="2500">
-                                        <span>0</span>+
-                                    </h3>
-                                    <div class="card-info">Lorem Ipsum</div>
-                                </div>
-                            </div>
+                            <span class="swiper-pagination"></span>
                         </div>
                     </div>
                 </div>
+                <span class="element element-1"></span>
+                <span class="element element-2"></span>
+                <span class="element element-3"></span>
+                <span class="element element-4"></span>
             </section>
             <section class="theme-section our-story-section bg-light-yellow">
                 <div class="theme-container">
@@ -155,6 +174,15 @@
                             <p>Pluto was built to help teams make sense of large volumes of operational data.</p>
                             <p>What started as a response to real-world monitoring challenges quickly evolved into a
                                 platform designed for scale, reliability, and clarity.</p>
+                        </div>
+                    </div>
+                    <div class="story-slider-block">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -311,8 +339,9 @@
     </div><!-- .wrapper -->
 
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="assets/public/js/frontend.js"></script>
+    <script type="text/javascript" src="assets/js/wow.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/about.js"></script>
 </body>
