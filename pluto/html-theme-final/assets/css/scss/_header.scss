@@ -15,26 +15,34 @@
 
     &.scroll-header {
         .container {
-            background: var(--dark-pink);
+            background-color: var(--black);
         }
 
-        .site-header__main-menu {
-            a {
-                color: var(--text-black);
-            }
-
-            .btn {
-                box-shadow: rgba(255, 255, 255, 0) 0px 4px 0px 0px;
-                background-color: var(--black);
+        @media (min-width: 991px) {
+            .site-header__menu a {
                 color: var(--text-white);
 
-                &:hover,
-                &:focus {
-                    background-color: var(--yellow);
-                    color: var(--text-black);
-                    box-shadow: rgba(0, 0, 0, 1) 0px 4px 0px 0px;
+                &:hover {
+                    color: var(--yellow);
                 }
             }
+        }
+
+
+        .btn-secondary_black {
+            background-color: var(--white);
+            color: var(--text-black);
+
+            &:hover,
+            &:focus {
+                box-shadow: rgba(255, 255, 255, 0.7) 0px 4px 0px 0px;
+                background-color: var(--yellow);
+                color: var(--text-black);
+            }
+        }
+
+        .navbar-toggler {
+            filter: invert(1)
         }
     }
 
@@ -55,12 +63,29 @@
             li {
                 opacity: 1;
                 transform: translateY(0);
+
+                a {
+                    color: var(--text-black);
+                }
             }
         }
 
         .btn {
             opacity: 1;
             transform: translateY(0);
+            background-color: var(--black);
+            color: var(--text-white);
+
+            &:hover,
+            &:focus {
+                box-shadow: rgba(0, 0, 0, 1) 0px 4px 0px 0px;
+                background-color: var(--yellow);
+                color: var(--text-black);
+            }
+        }
+
+        .navbar-toggler {
+            filter: invert(0);
         }
     }
 

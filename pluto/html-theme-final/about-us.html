@@ -28,7 +28,9 @@
     <link rel='stylesheet' id='icw-about-hero-css' href='assets/public/css/block-hero-about.css' type='text/css' />
     <link rel='stylesheet' id='icw-about-counter-css' href='assets/public/css/block-counter-about.css'
         type='text/css' />
-    <link rel='stylesheet' id='icw-about-counter-css' href='assets/public/css/block-our-story-about.css'
+    <link rel='stylesheet' id='icw-about-story-css' href='assets/public/css/block-our-story-about.css'
+        type='text/css' />
+    <link rel='stylesheet' id='icw-about-info-card-css' href='assets/public/css/block-info-card-about.css'
         type='text/css' />
 
 </head>
@@ -92,16 +94,16 @@
                 <span class="circle-sm-vector"></span>
                 <div class="theme-container">
                     <div class="section-title text-center">
-                        <div class="tag-line wow animate__animated animate__fadeInUp"
-                            style="--animate-duration: 1s; --animate-delay: 0.1s;">
+                        <div class="tag-line wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.1s">
                             About us
                         </div>
-                        <h1 class="wow animate__animated animate__fadeInUp"
-                            style="--animate-duration: 1s; --animate-delay: 0.2s;">
+                        <h1 class="wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.2s">
                             We secure <br>what people <br>build with AI
                         </h1>
-                        <div class="sort-info wow animate__animated animate__bounceBox"
-                            style="--animate-duration: 1s; --animate-delay: 1s;">
+                        <div class="sort-info wow animate__animated animate__bounceBox" data-wow-duration="1s"
+                            data-wow-delay="1s">
                             <p>AI tools let everyone build — fast. <br>Security teams were forced to either block
                                 everything
                                 or accept the risk.</p>
@@ -113,10 +115,10 @@
             <section class="counter-section bg-darkPink">
                 <div class="theme-container">
                     <div class="section-title text-center">
-                        <h2 class="wow animate__animated animate__fadeInUp"
-                            style="--animate-duration: 1s; --animate-delay: 0.3s;">At a glance</h2>
-                        <div class="sort-info wow animate__animated animate__fadeInUp"
-                            style="--animate-duration: 1s; --animate-delay: 0.6s;">
+                        <h2 class="wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.1s">At a glance</h2>
+                        <div class="sort-info wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.2s">
                             <p>Numbers that speak</p>
                         </div>
                     </div>
@@ -125,7 +127,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="counter-card wow animate__animated animate__fadeInUp"
-                                        style="--bg-card-color: #ffffff; --animate-duration: 1s; --animate-delay: 1s;">
+                                        data-wow-duration="1s" data-wow-delay="0.3s" style="--bg-card-color: #ffffff;">
                                         <div class="card-content">
                                             <h3 class="counter count-number" data-countto="10" data-duration="2500">
                                                 <span>0</span>
@@ -136,7 +138,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="counter-card wow animate__animated animate__fadeInUp"
-                                        style="--bg-card-color: #ffcbcb; --animate-duration: 1s; --animate-delay: 1.3s;">
+                                        data-wow-duration="1s" data-wow-delay="0.4s" style="--bg-card-color: #ffcbcb;">
                                         <div class="card-content">
                                             <h3 class="counter count-number" data-countto="99" data-duration="2500">
                                                 <span>0</span>%
@@ -147,7 +149,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="counter-card wow animate__animated animate__fadeInUp"
-                                        style="--bg-card-color: #c1f174; --animate-duration: 1s; --animate-delay: 1.6s;">
+                                        data-wow-duration="1s" data-wow-delay="0.5s" style="--bg-card-color: #c1f174;">
                                         <div class="card-content">
                                             <h3 class="counter count-number" data-countto="20" data-duration="2500">
                                                 <span>0</span>+
@@ -157,7 +159,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span class="swiper-pagination"></span>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -166,39 +168,72 @@
                 <span class="element element-3"></span>
                 <span class="element element-4"></span>
             </section>
-            <section class="theme-section our-story-section bg-light-yellow">
+            <section class="about-our-story-section bg-light-yellow">
                 <div class="theme-container">
                     <div class="section-title">
-                        <h2>Our Story</h2>
-                        <div class="sort-info">
+                        <h2 class="wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.1s">Our Story</h2>
+                        <div class="sort-info wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.2s">
                             <p>Pluto was built to help teams make sense of large volumes of operational data.</p>
                             <p>What started as a response to real-world monitoring challenges quickly evolved into a
                                 platform designed for scale, reliability, and clarity.</p>
                         </div>
                     </div>
-                    <div class="story-slider-block">
-                        <div class="swiper">
+                    <div class="story-slider-block wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                        data-wow-delay="0.3s">
+                        <div class="swiper story-swiper-slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">Slide 1</div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="uploads/img-story-slide-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="uploads/img-story-slide-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="uploads/img-story-slide-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="uploads/img-story-slide-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="uploads/img-story-slide-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-block">
+                                        <img src="uploads/img-story-slide-3.jpg" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="theme-section bg-darkPink info-card-section">
+            <section class="about-info-card-section bg-darkPink">
                 <div class="theme-container">
                     <div class="section-title text-center">
-                        <h2>Values</h2>
-                        <div class="sort-info">
+                        <h2 class="wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.1s">Values</h2>
+                        <div class="sort-info wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.2s">
                             <p>Built for real-world security</p>
                         </div>
                     </div>
                     <div class="card-block">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="info-card" style="--bg-card-color: #DCE6DE">
+                                <div class="info-card wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                                    data-wow-delay="0.1s" style="--bg-card-color: #ffcbcb">
                                     <div class="card-content">
                                         <h3 class="card-title">Enable, don’t block</h3>
                                         <div class="card-info">Security should unlock progress, not stop it.</div>
@@ -206,32 +241,38 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="info-card" style="--bg-card-color: #ffcbcb">
+                                <div class="info-card wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                                    data-wow-delay="0.2s" style="--bg-card-color: #C1F174">
                                     <div class="card-content">
-                                        <h3 class="card-title">Enable, don’t block</h3>
-                                        <div class="card-info">Security should unlock progress, not stop it.</div>
+                                        <h3 class="card-title">Visibility over guesswork</h3>
+                                        <div class="card-info">You can’t protect what you can’t see.</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="info-card" style="--bg-card-color: #c1f174">
+                                <div class="info-card wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                                    data-wow-delay="0.3s" style="--bg-card-color: #DCE6DE">
                                     <div class="card-content">
-                                        <h3 class="card-title">Enable, don’t block</h3>
-                                        <div class="card-info">Security should unlock progress, not stop it.</div>
+                                        <h3 class="card-title">Builders first, always</h3>
+                                        <div class="card-info">If builders hate your product, it won’t work.</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="info-card" style="--bg-card-color: #c1f174">
+                                <div class="info-card wow animate__animated animate__fadeInUp" data-wow-duration="1s"
+                                    data-wow-delay="0.4s" style="--bg-card-color: #39BF97">
                                     <div class="card-content">
-                                        <h3 class="card-title">Enable, don’t block</h3>
-                                        <div class="card-info">Security should unlock progress, not stop it.</div>
+                                        <h3 class="card-title">Secure by default</h3>
+                                        <div class="card-info">Strong guardrails should be invisible, not painful.</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <span class="element element-1"></span>
+                <span class="element element-2"></span>
+                <span class="element element-3"></span>
             </section>
         </div><!-- end of <main> -->
 
@@ -343,7 +384,9 @@
     <script type="text/javascript" src="assets/public/js/frontend.js"></script>
     <script type="text/javascript" src="assets/js/wow.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="assets/js/about.js"></script>
+    <script type="text/javascript" src="assets/js/block-hero-about.js"></script>
+    <script type="text/javascript" src="assets/js/block-counter-about.js"></script>
+    <script type="text/javascript" src="assets/js/block-story-about.js"></script>
 </body>
 
 </html>

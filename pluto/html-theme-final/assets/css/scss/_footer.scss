@@ -110,6 +110,11 @@
         }
     }
 
+    .site-footer__container {
+        z-index: 10;
+        position: relative;
+    }
+
     a {
         text-decoration: none;
         @include transition(0.1s, ease-in-out)

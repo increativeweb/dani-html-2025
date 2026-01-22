@@ -1,24 +1,87 @@
 @import "../../../assets/css/scss/mixins";
 
-.our-story-section {
+.about-our-story-section {
     background-image: url('../../../assets/images/img-bg-plus-dark-vector.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 6rem 0;
+
+    @media (max-width: 767px) {
+        padding: 4rem 0;
+
+    }
 
     .section-title {
         max-width: 900px;
         margin: 0 auto 4.5rem;
+
+        @media (max-width: 767px) {
+            text-align: center;
+        }
 
         h2 {
             font-size: clamp(1.75rem, 4.5vw, 3.438rem);
         }
 
         .sort-info {
-            font-size: clamp(1rem, 4.5vw, 1.5rem);
+            font-size: clamp(1rem, 3.5vw, 1.5rem);
             @include flexbox;
             gap: 3.5rem;
             font-weight: 300;
+
+            &>* {
+                flex: 1;
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 992px) {
+                gap: 2.5rem;
+            }
+
+            @media (max-width: 767px) {
+                @include flex-direction(column);
+                gap: 1.5rem;
+                @include align-items(center);
+            }
+        }
+    }
+
+    .story-slider-block {
+        .story-swiper-slider {
+            overflow: visible;
+
+            .swiper-wrapper {
+                transition-timing-function: linear;
+                margin-bottom: 1rem;
+
+                .swiper-slide {
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+
+        .image-block {
+            img {
+                box-shadow: 0.75rem 0.75rem 0px #000000;
+                border-radius: 1.25rem;
+                height: auto;
+                width: auto;
+                max-height: 26rem;
+                display: block;
+                object-fit: contain;
+
+                @media (max-width: 992px) {
+                    max-height: 20rem;
+                }
+
+                @media (max-width: 767px) {
+                    max-height: 7.5rem;
+                    border-radius: 0.75rem;
+                    box-shadow: 0.5rem 0.5rem 0px #000000;
+                }
+            }
         }
     }
 }
