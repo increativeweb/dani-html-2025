@@ -6,7 +6,7 @@
     overflow: visible;
 
     @media (max-width: 767px) {
-        padding: 7rem 0 3.125rem;
+        padding: 4rem 0 3.125rem;
 
     }
 
@@ -28,6 +28,10 @@
 
         @media (max-width: 767px) {
             clip-path: polygon(100% 45%, 100% 0%, 0% 0%);
+        }
+
+        @media (max-width: 575px) {
+            clip-path: polygon(100% 25%, 100% 0%, 0% 0%);
         }
     }
 
@@ -54,6 +58,10 @@
                 width: 3.875rem;
                 height: 3.875rem;
                 top: 2%;
+            }
+
+            @media (max-width: 575px) {
+                top: 1%;
             }
         }
 
