@@ -2,7 +2,7 @@
 
 .counter-section {
     position: relative;
-    margin-top: -1px;
+    margin-top: -3px;
     padding: 9rem 0 12rem;
     z-index: 1;
 
@@ -17,17 +17,18 @@
         background-image: url('../../../assets/images/img-wave.svg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: top center;
+        background-position: 0 top;
         position: absolute;
-        top: 0;
+        top: -2px;
         left: 0;
         width: 100%;
         height: 6.25rem;
         z-index: -1;
+        transition: background-position 6s ease;
 
         @media (max-width: 767px) {
-            background-size: 200%;
-            height: 2.25rem;
+            background-size: 150%;
+            height: 1.25rem;
         }
     }
 
@@ -37,18 +38,30 @@
         background-image: url('../../../assets/images/img-wave.svg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom center;
+        background-position: 0 bottom;
         position: absolute;
-        bottom: -2px;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 6.25rem;
         transform: rotate(180deg);
         z-index: -1;
+        transition: background-position 6s ease;
 
         @media (max-width: 767px) {
-            background-size: 200%;
+            background-size: 150%;
             height: 4.25rem;
+            bottom: -2px;
+        }
+    }
+
+    &.is-animated {
+        &::before {
+            background-position: 100% top;
+        }
+
+        &::after {
+            background-position: 100% bottom;
         }
     }
 
@@ -65,7 +78,7 @@
     .counter-slider-block {
         margin: 0 -1rem;
 
-        @media (min-width: 991px) {
+        @media (min-width: 768px) {
             margin: 0 -1.7rem;
         }
 
@@ -75,7 +88,7 @@
                 overflow: visible;
             }
 
-            @media (min-width: 991px) {
+            @media (min-width: 768px) {
                 .splide__list {
                     padding: 0 1.7rem 0.75rem !important;
                     gap: 2rem;

@@ -25,6 +25,7 @@
     <link rel='stylesheet' id='wp-rock_style-css' href='assets/public/css/frontend.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-blog-css' href='assets/css/blog.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='icw-wow-css' href='assets/css/animate.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='acf-block-block-footer-cta-css' href='assets/public/css/block-footer-cta.css'
         type='text/css' media='all' />
     <link rel='stylesheet' id='acf-block-block-quote-css' href='assets/public/css/block-quote.css' type='text/css'
@@ -58,13 +59,13 @@
         <header id="site-header" class="site-header js-site-header">
             <div class="container h-100">
                 <div class="row justify-content-between align-items-center h-100">
-                    <div class="col col-6 col-lg-3">
-                        <a href="http://pluto.local/" class="site-header__logo">
-                            <img src="http://pluto.local/wp-content/uploads/2025/11/footer-logo.svg"
-                                class="responsive-media" alt="" decoding="async" /> </a>
+                    <div class="col col-6 col-lg-3 d-flex">
+                        <a href="index.html" class="site-header__logo">
+                            <img src="uploads/logo.svg" class="responsive-media" alt="" decoding="async" /> </a>
                     </div>
-                    <div class="site-header__main-menu col col-6 col-lg-9 d-flex justify-content-end text-left pl-0">
-                        <nav class="site-header__menu d-none d-lg-flex">
+                    <div
+                        class="site-header__main-menu col col-6 col-lg-9 d-flex align-items-center justify-content-end text-left pl-0">
+                        <nav class="site-header__menu">
                             <ul id="menu-main-menu"
                                 class="main-menu__list list-reset d-flex justify-content-between align-items-center js-menu-wrapper">
                                 <li id="menu-item-73"
@@ -78,15 +79,15 @@
                                         href="#how-it-works">How it works</a></li>
                                 <li id="menu-item-217"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a
-                                        href="http://pluto.local/about-us/">About Us</a></li>
+                                        href="about-us.html">About Us</a></li>
                                 <li id="menu-item-216"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a
-                                        href="http://pluto.local/blog/">Blog</a></li>
+                                        href="blog.html">Blog</a></li>
                             </ul>
-                        </nav> <a href="/" class="btn btn-secondary_black d-none d-lg-block" target="_self"
-                            rel="noopener">
+                        </nav>
+                        <a href="/" class="btn btn-secondary_black" target="_self" rel="noopener">
                             Book a demo </a>
-                        <a href="/" class="site-header__link d-flex d-lg-none justify-content-end" target="_self"
+                        <!-- <a href="/" class="site-header__link d-flex d-lg-none justify-content-end" target="_self"
                             rel="noopener">
                             Book a demo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none">
@@ -95,7 +96,7 @@
                                     d="M8.58921 14.5892C8.36233 14.8161 8.36233 15.1839 8.58921 15.4108C8.81608 15.6377 9.18392 15.6377 9.41079 15.4108L9 15L8.58921 14.5892ZM15.5809 9C15.5809 8.67915 15.3208 8.41905 15 8.41905L9.77147 8.41905C9.45062 8.41905 9.19052 8.67915 9.19052 9C9.19052 9.32085 9.45062 9.58095 9.77147 9.58095H14.4191V14.2285C14.4191 14.5494 14.6792 14.8095 15 14.8095C15.3208 14.8095 15.5809 14.5494 15.5809 14.2285L15.5809 9ZM9 15L9.41079 15.4108L15.4108 9.41079L15 9L14.5892 8.58921L8.58921 14.5892L9 15Z"
                                     fill="#39BF97" />
                             </svg>
-                        </a>
+                        </a> -->
                     </div>
                     <button class="navbar-toggler" type="button"><span></span><span></span><span></span></button>
                 </div>
@@ -288,7 +289,8 @@
                         </div>
                     </div>
                     <div class="block-hero__monkey-container-content">
-                        <h1 class="block-hero__title text-center">
+                        <h1 class="block-hero__title text-center wow animate__animated animate__fadeInUp"
+                            data-wow-duration="1s" data-wow-delay="0.1s">
                             Let Your<br />
                             People Build
                         </h1>
@@ -500,63 +502,54 @@
                         <ul class="block-logos__list">
                             <li class="block-logos__item logo-1">
                                 <img fetchpriority="high" decoding="async" width="300" height="233"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38811-1-300x233.png"
-                                    class="block-logos__img" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/group-38811-1-300x233.png 300w, http://pluto.local/wp-content/uploads/2025/12/group-38811-1.png 486w"
+                                    src="uploads/2025/12/group-38811-1-300x233.png" class="block-logos__img" alt=""
+                                    srcset="uploads/2025/12/group-38811-1-300x233.png 300w, uploads/2025/12/group-38811-1.png 486w"
                                     sizes="(max-width: 300px) 100vw, 300px" />
                             </li>
                             <li class="block-logos__item logo-2">
                                 <img decoding="async" width="184" height="300"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38816-184x300.png"
-                                    class="block-logos__img" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/group-38816-184x300.png 184w, http://pluto.local/wp-content/uploads/2025/12/group-38816.png 284w"
+                                    src="uploads/2025/12/group-38816-184x300.png" class="block-logos__img" alt=""
+                                    srcset="uploads/2025/12/group-38816-184x300.png 184w, uploads/2025/12/group-38816.png 284w"
                                     sizes="(max-width: 184px) 100vw, 184px" />
                             </li>
                             <li class="block-logos__item logo-3">
-                                <img decoding="async" width="295" height="295"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38815.png"
+                                <img decoding="async" width="295" height="295" src="uploads/2025/12/group-38815.png"
                                     class="block-logos__img" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/group-38815.png 295w, http://pluto.local/wp-content/uploads/2025/12/group-38815-150x150.png 150w"
+                                    srcset="uploads/2025/12/group-38815.png 295w, uploads/2025/12/group-38815-150x150.png 150w"
                                     sizes="(max-width: 295px) 100vw, 295px" />
                             </li>
                             <li class="block-logos__item logo-4">
                                 <img loading="lazy" decoding="async" width="300" height="235"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38818-300x235.png"
-                                    class="block-logos__img" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/group-38818-300x235.png 300w, http://pluto.local/wp-content/uploads/2025/12/group-38818.png 358w"
+                                    src="uploads/2025/12/group-38818-300x235.png" class="block-logos__img" alt=""
+                                    srcset="uploads/2025/12/group-38818-300x235.png 300w, uploads/2025/12/group-38818.png 358w"
                                     sizes="auto, (max-width: 300px) 100vw, 300px" />
                             </li>
                             <li class="block-logos__item logo-5">
                                 <img loading="lazy" decoding="async" width="278" height="257"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38813.png"
-                                    class="block-logos__img" alt="" />
+                                    src="uploads/2025/12/group-38813.png" class="block-logos__img" alt="" />
                             </li>
                             <li class="block-logos__item logo-6">
                                 <img loading="lazy" decoding="async" width="300" height="274"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38817-300x274.png"
-                                    class="block-logos__img" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/group-38817-300x274.png 300w, http://pluto.local/wp-content/uploads/2025/12/group-38817.png 347w"
+                                    src="uploads/2025/12/group-38817-300x274.png" class="block-logos__img" alt=""
+                                    srcset="uploads/2025/12/group-38817-300x274.png 300w, uploads/2025/12/group-38817.png 347w"
                                     sizes="auto, (max-width: 300px) 100vw, 300px" />
                             </li>
                             <li class="block-logos__item logo-7">
                                 <img loading="lazy" decoding="async" width="300" height="206"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38809-300x206.png"
-                                    class="block-logos__img" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/group-38809-300x206.png 300w, http://pluto.local/wp-content/uploads/2025/12/group-38809.png 412w"
+                                    src="uploads/2025/12/group-38809-300x206.png" class="block-logos__img" alt=""
+                                    srcset="uploads/2025/12/group-38809-300x206.png 300w, uploads/2025/12/group-38809.png 412w"
                                     sizes="auto, (max-width: 300px) 100vw, 300px" />
                             </li>
                             <li class="block-logos__item logo-8">
                                 <img loading="lazy" decoding="async" width="300" height="100"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38819-300x100.png"
-                                    class="block-logos__img" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/group-38819-300x100.png 300w, http://pluto.local/wp-content/uploads/2025/12/group-38819.png 404w"
+                                    src="uploads/2025/12/group-38819-300x100.png" class="block-logos__img" alt=""
+                                    srcset="uploads/2025/12/group-38819-300x100.png 300w, uploads/2025/12/group-38819.png 404w"
                                     sizes="auto, (max-width: 300px) 100vw, 300px" />
                             </li>
                             <li class="block-logos__item logo-9">
                                 <img loading="lazy" decoding="async" width="300" height="173"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/group-38814-300x173.png"
-                                    class="block-logos__img" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/group-38814-300x173.png 300w, http://pluto.local/wp-content/uploads/2025/12/group-38814.png 352w"
+                                    src="uploads/2025/12/group-38814-300x173.png" class="block-logos__img" alt=""
+                                    srcset="uploads/2025/12/group-38814-300x173.png 300w, uploads/2025/12/group-38814.png 352w"
                                     sizes="auto, (max-width: 300px) 100vw, 300px" />
                             </li>
                         </ul>
@@ -589,9 +582,8 @@
                                 </div>
                                 <figure class="block-options__option-image">
                                     <img loading="lazy" decoding="async" width="300" height="201"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/group-17737-300x201.jpg"
-                                        class="block-options__img" alt=""
-                                        srcset="http://pluto.local/wp-content/uploads/2025/12/group-17737-300x201.jpg 300w, http://pluto.local/wp-content/uploads/2025/12/group-17737.jpg 351w"
+                                        src="uploads/2025/12/group-17737-300x201.jpg" class="block-options__img" alt=""
+                                        srcset="uploads/2025/12/group-17737-300x201.jpg 300w, uploads/2025/12/group-17737.jpg 351w"
                                         sizes="auto, (max-width: 300px) 100vw, 300px" />
                                 </figure>
 
@@ -608,9 +600,8 @@
                                 </div>
                                 <figure class="block-options__option-image">
                                     <img loading="lazy" decoding="async" width="300" height="214"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/group-17739-300x214.jpg"
-                                        class="block-options__img" alt=""
-                                        srcset="http://pluto.local/wp-content/uploads/2025/12/group-17739-300x214.jpg 300w, http://pluto.local/wp-content/uploads/2025/12/group-17739.jpg 414w"
+                                        src="uploads/2025/12/group-17739-300x214.jpg" class="block-options__img" alt=""
+                                        srcset="uploads/2025/12/group-17739-300x214.jpg 300w, uploads/2025/12/group-17739.jpg 414w"
                                         sizes="auto, (max-width: 300px) 100vw, 300px" />
                                 </figure>
 
@@ -621,8 +612,7 @@
                                 </div>
                             </div>
                             <div class="block-options__monkey-element">
-                                <img decoding="async" src="http://pluto.local/wp-content/uploads/2025/12/monkey-el.svg"
-                                    alt="Monkey-element" />
+                                <img decoding="async" src="uploads/2025/12/monkey-el.svg" alt="Monkey-element" />
                             </div>
                         </div>
 
@@ -706,9 +696,9 @@
                                         <div class="swiper-slide block-cards-slider__carousel-image-area">
                                             <div class="swiper-slide block-cards-slider__carousel-image-inner">
                                                 <img loading="lazy" decoding="async" width="573" height="362"
-                                                    src="http://pluto.local/wp-content/uploads/2025/12/23.jpg"
+                                                    src="uploads/2025/12/23.jpg"
                                                     class="block-cards-slider__carousel-img" alt=""
-                                                    srcset="http://pluto.local/wp-content/uploads/2025/12/23.jpg 573w, http://pluto.local/wp-content/uploads/2025/12/23-300x190.jpg 300w"
+                                                    srcset="uploads/2025/12/23.jpg 573w, uploads/2025/12/23-300x190.jpg 300w"
                                                     sizes="auto, (max-width: 573px) 100vw, 573px" />
                                                 <div class="decor-element element-0-1">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63"
@@ -789,9 +779,9 @@
                                         <div class="swiper-slide block-cards-slider__carousel-image-area">
                                             <div class="swiper-slide block-cards-slider__carousel-image-inner">
                                                 <img loading="lazy" decoding="async" width="573" height="362"
-                                                    src="http://pluto.local/wp-content/uploads/2025/12/24.jpg"
+                                                    src="uploads/2025/12/24.jpg"
                                                     class="block-cards-slider__carousel-img" alt=""
-                                                    srcset="http://pluto.local/wp-content/uploads/2025/12/24.jpg 573w, http://pluto.local/wp-content/uploads/2025/12/24-300x190.jpg 300w"
+                                                    srcset="uploads/2025/12/24.jpg 573w, uploads/2025/12/24-300x190.jpg 300w"
                                                     sizes="auto, (max-width: 573px) 100vw, 573px" />
                                                 <div class="decor-element element-1-1">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="61" height="56"
@@ -888,9 +878,9 @@
                                         <div class="swiper-slide block-cards-slider__carousel-image-area">
                                             <div class="swiper-slide block-cards-slider__carousel-image-inner">
                                                 <img loading="lazy" decoding="async" width="573" height="362"
-                                                    src="http://pluto.local/wp-content/uploads/2025/12/25.jpg"
+                                                    src="uploads/2025/12/25.jpg"
                                                     class="block-cards-slider__carousel-img" alt=""
-                                                    srcset="http://pluto.local/wp-content/uploads/2025/12/25.jpg 573w, http://pluto.local/wp-content/uploads/2025/12/25-300x190.jpg 300w"
+                                                    srcset="uploads/2025/12/25.jpg 573w, uploads/2025/12/25-300x190.jpg 300w"
                                                     sizes="auto, (max-width: 573px) 100vw, 573px" />
                                                 <div class="decor-element element-2-1">
                                                     <svg class="d-lg-none" xmlns="http://www.w3.org/2000/svg"
@@ -1112,9 +1102,9 @@
                                                         </svg>
                                                     </div>
                                                     <img loading="lazy" decoding="async" width="573" height="362"
-                                                        src="http://pluto.local/wp-content/uploads/2025/12/23.jpg"
+                                                        src="uploads/2025/12/23.jpg"
                                                         class="block-cards-slider__carousel-img" alt=""
-                                                        srcset="http://pluto.local/wp-content/uploads/2025/12/23.jpg 573w, http://pluto.local/wp-content/uploads/2025/12/23-300x190.jpg 300w"
+                                                        srcset="uploads/2025/12/23.jpg 573w, uploads/2025/12/23-300x190.jpg 300w"
                                                         sizes="auto, (max-width: 573px) 100vw, 573px" />
                                                 </div>
                                             </div>
@@ -1209,9 +1199,9 @@
                                                         </svg>
                                                     </div>
                                                     <img loading="lazy" decoding="async" width="573" height="362"
-                                                        src="http://pluto.local/wp-content/uploads/2025/12/24.jpg"
+                                                        src="uploads/2025/12/24.jpg"
                                                         class="block-cards-slider__carousel-img" alt=""
-                                                        srcset="http://pluto.local/wp-content/uploads/2025/12/24.jpg 573w, http://pluto.local/wp-content/uploads/2025/12/24-300x190.jpg 300w"
+                                                        srcset="uploads/2025/12/24.jpg 573w, uploads/2025/12/24-300x190.jpg 300w"
                                                         sizes="auto, (max-width: 573px) 100vw, 573px" />
                                                 </div>
                                             </div>
@@ -1299,9 +1289,9 @@
                                                         </svg>
                                                     </div>
                                                     <img loading="lazy" decoding="async" width="573" height="362"
-                                                        src="http://pluto.local/wp-content/uploads/2025/12/25.jpg"
+                                                        src="uploads/2025/12/25.jpg"
                                                         class="block-cards-slider__carousel-img" alt=""
-                                                        srcset="http://pluto.local/wp-content/uploads/2025/12/25.jpg 573w, http://pluto.local/wp-content/uploads/2025/12/25-300x190.jpg 300w"
+                                                        srcset="uploads/2025/12/25.jpg 573w, uploads/2025/12/25-300x190.jpg 300w"
                                                         sizes="auto, (max-width: 573px) 100vw, 573px" />
                                                 </div>
                                             </div>
@@ -1341,14 +1331,13 @@
 
                             <div class="block-secure__info-figure">
                                 <img loading="lazy" decoding="async" width="2472" height="1278"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/info-inage-fixed.png"
-                                    class="block-secure__info-image-d" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/info-inage-fixed.png 2472w, http://pluto.local/wp-content/uploads/2025/12/info-inage-fixed-300x155.png 300w, http://pluto.local/wp-content/uploads/2025/12/info-inage-fixed-1024x529.png 1024w, http://pluto.local/wp-content/uploads/2025/12/info-inage-fixed-768x397.png 768w, http://pluto.local/wp-content/uploads/2025/12/info-inage-fixed-1536x794.png 1536w, http://pluto.local/wp-content/uploads/2025/12/info-inage-fixed-2048x1059.png 2048w"
+                                    src="uploads/2025/12/info-inage-fixed.png" class="block-secure__info-image-d" alt=""
+                                    srcset="uploads/2025/12/info-inage-fixed.png 2472w, uploads/2025/12/info-inage-fixed-300x155.png 300w, uploads/2025/12/info-inage-fixed-1024x529.png 1024w, uploads/2025/12/info-inage-fixed-768x397.png 768w, uploads/2025/12/info-inage-fixed-1536x794.png 1536w, uploads/2025/12/info-inage-fixed-2048x1059.png 2048w"
                                     sizes="auto, (max-width: 2472px) 100vw, 2472px" /> <img loading="lazy"
                                     decoding="async" width="600" height="640"
-                                    src="http://pluto.local/wp-content/uploads/2025/12/info-inage-m-fixed.png"
-                                    class="block-secure__info-image-m" alt=""
-                                    srcset="http://pluto.local/wp-content/uploads/2025/12/info-inage-m-fixed.png 600w, http://pluto.local/wp-content/uploads/2025/12/info-inage-m-fixed-281x300.png 281w"
+                                    src="uploads/2025/12/info-inage-m-fixed.png" class="block-secure__info-image-m"
+                                    alt=""
+                                    srcset="uploads/2025/12/info-inage-m-fixed.png 600w, uploads/2025/12/info-inage-m-fixed-281x300.png 281w"
                                     sizes="auto, (max-width: 600px) 100vw, 600px" />
                             </div>
                         </div>
@@ -1358,44 +1347,44 @@
                             <div class="block-secure__logos-wrap">
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="168" height="41"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/base-44.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/base-44.png" class="attachment-medium size-medium"
+                                        alt="" /> </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="180" height="31"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/lovable.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/lovable.png" class="attachment-medium size-medium"
+                                        alt="" /> </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="193" height="70"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/replit.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/replit.png" class="attachment-medium size-medium" alt="" />
+                                </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="191" height="41"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/jetbrains.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/jetbrains.png" class="attachment-medium size-medium"
+                                        alt="" /> </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="193" height="70"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/replit.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/replit.png" class="attachment-medium size-medium" alt="" />
+                                </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="168" height="41"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/base-44.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/base-44.png" class="attachment-medium size-medium"
+                                        alt="" /> </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="180" height="31"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/lovable.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/lovable.png" class="attachment-medium size-medium"
+                                        alt="" /> </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="180" height="31"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/lovable.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/lovable.png" class="attachment-medium size-medium"
+                                        alt="" /> </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="193" height="70"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/replit.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/replit.png" class="attachment-medium size-medium" alt="" />
+                                </a>
                                 <a href="#" class="block-secure__logo-link" target="_blank" rel="noopener">
                                     <img loading="lazy" decoding="async" width="168" height="41"
-                                        src="http://pluto.local/wp-content/uploads/2025/12/base-44.png"
-                                        class="attachment-medium size-medium" alt="" /> </a>
+                                        src="uploads/2025/12/base-44.png" class="attachment-medium size-medium"
+                                        alt="" /> </a>
                             </div>
                             <div class="block-secure__logos-form">
                                 <form id="wow_form" class="wow-form"><input name="wow" type="input"
@@ -1434,9 +1423,9 @@
                                         Pluto Security </div>
                                     <figure class="block-posts__item-figure">
                                         <img loading="lazy" decoding="async" width="848" height="444"
-                                            src="http://pluto.local/wp-content/uploads/2025/12/9f9e6d8a-bef6-4663-98e8-8b9c500c476e-1600x819-1.webp"
+                                            src="uploads/2025/12/9f9e6d8a-bef6-4663-98e8-8b9c500c476e-1600x819-1.webp"
                                             class="block-posts__item-img" alt=""
-                                            srcset="http://pluto.local/wp-content/uploads/2025/12/9f9e6d8a-bef6-4663-98e8-8b9c500c476e-1600x819-1.webp 848w, http://pluto.local/wp-content/uploads/2025/12/9f9e6d8a-bef6-4663-98e8-8b9c500c476e-1600x819-1-300x157.webp 300w, http://pluto.local/wp-content/uploads/2025/12/9f9e6d8a-bef6-4663-98e8-8b9c500c476e-1600x819-1-768x402.webp 768w"
+                                            srcset="uploads/2025/12/9f9e6d8a-bef6-4663-98e8-8b9c500c476e-1600x819-1.webp 848w, uploads/2025/12/9f9e6d8a-bef6-4663-98e8-8b9c500c476e-1600x819-1-300x157.webp 300w, uploads/2025/12/9f9e6d8a-bef6-4663-98e8-8b9c500c476e-1600x819-1-768x402.webp 768w"
                                             sizes="auto, (max-width: 848px) 100vw, 848px" />
                                     </figure>
                                     <div class="block-posts__item-content">
@@ -1464,9 +1453,9 @@
                                         Pluto Security </div>
                                     <figure class="block-posts__item-figure">
                                         <img loading="lazy" decoding="async" width="770" height="444"
-                                            src="http://pluto.local/wp-content/uploads/2025/12/ff78243a-f21f-4e91-bc1f-b58dfa8297d1-770x616-1.webp"
+                                            src="uploads/2025/12/ff78243a-f21f-4e91-bc1f-b58dfa8297d1-770x616-1.webp"
                                             class="block-posts__item-img" alt=""
-                                            srcset="http://pluto.local/wp-content/uploads/2025/12/ff78243a-f21f-4e91-bc1f-b58dfa8297d1-770x616-1.webp 770w, http://pluto.local/wp-content/uploads/2025/12/ff78243a-f21f-4e91-bc1f-b58dfa8297d1-770x616-1-300x173.webp 300w, http://pluto.local/wp-content/uploads/2025/12/ff78243a-f21f-4e91-bc1f-b58dfa8297d1-770x616-1-768x443.webp 768w"
+                                            srcset="uploads/2025/12/ff78243a-f21f-4e91-bc1f-b58dfa8297d1-770x616-1.webp 770w, uploads/2025/12/ff78243a-f21f-4e91-bc1f-b58dfa8297d1-770x616-1-300x173.webp 300w, uploads/2025/12/ff78243a-f21f-4e91-bc1f-b58dfa8297d1-770x616-1-768x443.webp 768w"
                                             sizes="auto, (max-width: 770px) 100vw, 770px" />
                                     </figure>
                                     <div class="block-posts__item-content">
@@ -1493,9 +1482,9 @@
                                         Pluto Security </div>
                                     <figure class="block-posts__item-figure">
                                         <img loading="lazy" decoding="async" width="848" height="444"
-                                            src="http://pluto.local/wp-content/uploads/2025/12/14bfa51f-ef1c-4e85-aab3-31f42c1df708-1076x478-1.webp"
+                                            src="uploads/2025/12/14bfa51f-ef1c-4e85-aab3-31f42c1df708-1076x478-1.webp"
                                             class="block-posts__item-img" alt=""
-                                            srcset="http://pluto.local/wp-content/uploads/2025/12/14bfa51f-ef1c-4e85-aab3-31f42c1df708-1076x478-1.webp 848w, http://pluto.local/wp-content/uploads/2025/12/14bfa51f-ef1c-4e85-aab3-31f42c1df708-1076x478-1-300x157.webp 300w, http://pluto.local/wp-content/uploads/2025/12/14bfa51f-ef1c-4e85-aab3-31f42c1df708-1076x478-1-768x402.webp 768w"
+                                            srcset="uploads/2025/12/14bfa51f-ef1c-4e85-aab3-31f42c1df708-1076x478-1.webp 848w, uploads/2025/12/14bfa51f-ef1c-4e85-aab3-31f42c1df708-1076x478-1-300x157.webp 300w, uploads/2025/12/14bfa51f-ef1c-4e85-aab3-31f42c1df708-1076x478-1-768x402.webp 768w"
                                             sizes="auto, (max-width: 848px) 100vw, 848px" />
                                     </figure>
                                     <div class="block-posts__item-content">
@@ -1553,9 +1542,9 @@
                                             <div class="block-toolbox__carousel-img-top-area"></div>
                                             <figure class="block-toolbox__carousel-img-wrapper">
                                                 <img loading="lazy" decoding="async" width="586" height="336"
-                                                    src="http://pluto.local/wp-content/uploads/2025/12/Subtract.jpg"
+                                                    src="uploads/2025/12/Subtract.jpg"
                                                     class="block-toolbox__carousel-img" alt=""
-                                                    srcset="http://pluto.local/wp-content/uploads/2025/12/Subtract.jpg 586w, http://pluto.local/wp-content/uploads/2025/12/Subtract-300x172.jpg 300w"
+                                                    srcset="uploads/2025/12/Subtract.jpg 586w, uploads/2025/12/Subtract-300x172.jpg 300w"
                                                     sizes="auto, (max-width: 586px) 100vw, 586px" />
                                             </figure>
                                             <div class="block-toolbox__carousel-img-bottom-area"></div>
@@ -1804,83 +1793,91 @@
         </div><!-- end of <main> -->
 
 
-        <footer id="site-footer" class="site-footer site-footer__color-yellow">
-            <div class="container site-footer__container">
-                <div class="site-footer__wrapper">
-                    <div class="site-footer__top-wrapper">
-                        <div class="site-footer__info">
-                            <div class="site-footer__logo">
-                                <a href="http://pluto.local/">
-                                    <img src="http://pluto.local/wp-content/uploads/2025/11/footer-logo.svg"
-                                        class="attachment-full size-full" alt="Pluto" decoding="async" loading="lazy" />
-                                </a>
+        <footer id="site-footer" class="site-footer">
+            <div class="site-footer__color-yellow">
+                <div class="container site-footer__container">
+                    <div class="site-footer__wrapper">
+                        <div class="site-footer__top-wrapper">
+                            <div class="site-footer__info">
+                                <div class="site-footer__logo">
+                                    <a href="http://pluto.local/">
+                                        <img src="uploads/footer-logo.svg" class="attachment-full size-full" alt="Pluto"
+                                            decoding="async" loading="lazy" />
+                                    </a>
+                                </div>
+                                <div class="site-footer__socials">
+                                    <a href="https://facebook.com" class="site-footer__social-link" target="_blank"
+                                        rel="noopener">
+                                        <img src="uploads/facebook.svg" alt="" />
+                                    </a>
+                                    <a href="https://youtube.com" class="site-footer__social-link" target="_blank"
+                                        rel="noopener">
+                                        <img src="uploads/youtube.svg" alt="" />
+                                    </a>
+                                    <a href="https://instagram.com" class="site-footer__social-link" target="_blank"
+                                        rel="noopener">
+                                        <img src="uploads/instagram.svg" alt="" />
+                                    </a>
+                                    <a href="https://x.com" class="site-footer__social-link" target="_blank"
+                                        rel="noopener">
+                                        <img src="uploads/x.svg" alt="" />
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/plutosecurity/"
+                                        class="site-footer__social-link" target="_blank" rel="noopener">
+                                        <img src="uploads/linkedin.svg" alt="" />
+                                    </a>
+                                </div>
                             </div>
-                            <div class="site-footer__socials">
-                                <a href="https://facebook.com" class="site-footer__social-link" target="_blank"
-                                    rel="noopener">
-                                    <img src="http://pluto.local/wp-content/uploads/2025/11/facebook.svg" alt="" />
-                                </a>
-                                <a href="https://youtube.com" class="site-footer__social-link" target="_blank"
-                                    rel="noopener">
-                                    <img src="http://pluto.local/wp-content/uploads/2025/11/youtube.svg" alt="" />
-                                </a>
-                                <a href="https://instagram.com" class="site-footer__social-link" target="_blank"
-                                    rel="noopener">
-                                    <img src="http://pluto.local/wp-content/uploads/2025/11/instagram.svg" alt="" />
-                                </a>
-                                <a href="https://x.com" class="site-footer__social-link" target="_blank" rel="noopener">
-                                    <img src="http://pluto.local/wp-content/uploads/2025/12/x.svg" alt="" />
-                                </a>
-                                <a href="https://www.linkedin.com/company/plutosecurity/"
-                                    class="site-footer__social-link" target="_blank" rel="noopener">
-                                    <img src="http://pluto.local/wp-content/uploads/2025/12/linkedin.svg" alt="" />
-                                </a>
+
+                            <div class="site-footer__menu">
+                                <ul id="footer-menu" class="footer-menu">
+                                    <li id="menu-item-214"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214">
+                                        <a href="http://pluto.local/blog/">Blog</a>
+                                    </li>
+                                    <li id="menu-item-215"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215">
+                                        <a href="http://pluto.local/about-us/">About Us</a>
+                                    </li>
+                                    <li id="menu-item-7"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a
+                                            href="#problem">The problem</a></li>
+                                    <li id="menu-item-8"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a
+                                            href="#solution">the solution</a></li>
+                                    <li id="menu-item-9"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a
+                                            href="#how-it-works">how it works</a></li>
+                                    <li id="menu-item-10"
+                                        class="btn btn-secondary_yellow menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
+                                        <a href="#">book a demo</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="site-footer__menu">
-                            <ul id="footer-menu" class="footer-menu">
-                                <li id="menu-item-214"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214"><a
-                                        href="http://pluto.local/blog/">Blog</a></li>
-                                <li id="menu-item-215"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a
-                                        href="http://pluto.local/about-us/">About Us</a></li>
-                                <li id="menu-item-7"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a
-                                        href="#problem">The problem</a></li>
-                                <li id="menu-item-8"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a
-                                        href="#solution">the solution</a></li>
-                                <li id="menu-item-9"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a
-                                        href="#how-it-works">how it works</a></li>
-                                <li id="menu-item-10"
-                                    class="btn btn-secondary_yellow menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
-                                    <a href="#">book a demo</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                        <div class="site-footer__bottom-wrapper">
+                            <div class="site-footer__copyright">
+                                <p>© 2026 Pluto Security. All rights reserved.</p>
+                            </div>
 
-                    <div class="site-footer__bottom-wrapper">
-                        <div class="site-footer__copyright">
-                            <p>© 2026 Pluto Security. All rights reserved.</p>
-                        </div>
-
-                        <div class="site-footer__policies">
-                            <ul id="footer-policies-menu" class="footer-policies-menu">
-                                <li id="menu-item-177"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a
-                                        href="http://pluto.local/cookies-notice/">Cookies Notice</a></li>
-                                <li id="menu-item-170"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a
-                                        href="http://pluto.local/terms-of-use/">Terms of Use</a></li>
-                                <li id="menu-item-166"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-166">
-                                    <a rel="privacy-policy" href="http://pluto.local/privacy-policy/">Privacy Policy</a>
-                                </li>
-                            </ul>
+                            <div class="site-footer__policies">
+                                <ul id="footer-policies-menu" class="footer-policies-menu">
+                                    <li id="menu-item-177"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177">
+                                        <a href="http://pluto.local/cookies-notice/">Cookies Notice</a>
+                                    </li>
+                                    <li id="menu-item-170"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170">
+                                        <a href="http://pluto.local/terms-of-use/">Terms of Use</a>
+                                    </li>
+                                    <li id="menu-item-166"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-166">
+                                        <a rel="privacy-policy" href="http://pluto.local/privacy-policy/">Privacy
+                                            Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1894,6 +1891,7 @@
 
     <script type="text/javascript" src="assets/public/js/frontend.js" id="frontend_js-js"></script>
     <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>
+    <script type="text/javascript" src="assets/js/wow.min.js" id="wow-js"></script>
     <script type="text/javascript" src="assets/js/post-single.js" id="post-single-js"></script>
     <script type="text/javascript" src="assets/public/js/js-block-hero.js" id="block-acf-block-hero-js"></script>
     <script type="text/javascript" src="assets/public/js/js-block-numbers.js" id="block-acf-block-numbers-js"></script>

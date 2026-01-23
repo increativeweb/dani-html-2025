@@ -69,7 +69,6 @@ const observer = new IntersectionObserver(
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-animated');
-                observer.unobserve(entry.target); // remove if only once
             } else {
                 entry.target.classList.remove('is-animated');
             }
@@ -77,10 +76,10 @@ const observer = new IntersectionObserver(
     },
     {
         root: null,
-        // Trigger when TOP of element reaches 50% viewport
+        // Top of element reaches middle of viewport
         rootMargin: '-30% 0px -30% 0px',
         threshold: 0
     }
 );
 
-animatedSections.forEach(section => observer.observe(section));
+animatedSections.forEach(el => observer.observe(el));
