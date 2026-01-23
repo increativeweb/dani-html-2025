@@ -25,6 +25,7 @@
     <link rel='stylesheet' id='wp-rock_style-css' href='assets/public/css/frontend.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-wow-css' href='assets/css/animate.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='icw-splide-css' href='assets/css/splide.css' type='text/css' media='all' />
     <link rel='stylesheet' id='icw-about-hero-css' href='assets/public/css/block-hero-about.css' type='text/css' />
     <link rel='stylesheet' id='icw-about-counter-css' href='assets/public/css/block-counter-about.css'
         type='text/css' />
@@ -123,43 +124,47 @@
                         </div>
                     </div>
                     <div class="counter-slider-block">
-                        <div class="swiper counter-swiper-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="counter-card wow animate__animated animate__fadeInUp"
-                                        data-wow-duration="1s" data-wow-delay="0.3s" style="--bg-card-color: #ffffff;">
-                                        <div class="card-content">
-                                            <h3 class="counter count-number" data-countto="10" data-duration="2500">
-                                                <span>0</span>
-                                            </h3>
-                                            <div class="card-info">Lorem Ipsum</div>
+                        <div class="splide counter-splide splide-js">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="counter-card wow animate__animated animate__fadeInUp"
+                                            data-wow-duration="1s" data-wow-delay="0.3s"
+                                            style="--bg-card-color: #ffffff;">
+                                            <div class="card-content">
+                                                <h3 class="counter count-number" data-countto="10" data-duration="2500">
+                                                    <span>0</span>
+                                                </h3>
+                                                <div class="card-info">Lorem Ipsum</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="counter-card wow animate__animated animate__fadeInUp"
-                                        data-wow-duration="1s" data-wow-delay="0.4s" style="--bg-card-color: #ffcbcb;">
-                                        <div class="card-content">
-                                            <h3 class="counter count-number" data-countto="99" data-duration="2500">
-                                                <span>0</span>%
-                                            </h3>
-                                            <div class="card-info">Lorem Ipsum</div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="counter-card wow animate__animated animate__fadeInUp"
+                                            data-wow-duration="1s" data-wow-delay="0.4s"
+                                            style="--bg-card-color: #ffcbcb;">
+                                            <div class="card-content">
+                                                <h3 class="counter count-number" data-countto="99" data-duration="2500">
+                                                    <span>0</span>%
+                                                </h3>
+                                                <div class="card-info">Lorem Ipsum</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="counter-card wow animate__animated animate__fadeInUp"
-                                        data-wow-duration="1s" data-wow-delay="0.5s" style="--bg-card-color: #c1f174;">
-                                        <div class="card-content">
-                                            <h3 class="counter count-number" data-countto="20" data-duration="2500">
-                                                <span>0</span>+
-                                            </h3>
-                                            <div class="card-info">Lorem Ipsum</div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="counter-card wow animate__animated animate__fadeInUp"
+                                            data-wow-duration="1s" data-wow-delay="0.5s"
+                                            style="--bg-card-color: #c1f174;">
+                                            <div class="card-content">
+                                                <h3 class="counter count-number" data-countto="20" data-duration="2500">
+                                                    <span>0</span>+
+                                                </h3>
+                                                <div class="card-info">Lorem Ipsum</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -182,38 +187,25 @@
                     </div>
                     <div class="story-slider-block wow animate__animated animate__fadeInUp" data-wow-duration="1s"
                         data-wow-delay="0.3s">
-                        <div class="swiper story-swiper-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="image-block">
-                                        <img src="uploads/img-story-slide-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="image-block">
-                                        <img src="uploads/img-story-slide-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="image-block">
-                                        <img src="uploads/img-story-slide-3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="image-block">
-                                        <img src="uploads/img-story-slide-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="image-block">
-                                        <img src="uploads/img-story-slide-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="image-block">
-                                        <img src="uploads/img-story-slide-3.jpg" alt="">
-                                    </div>
-                                </div>
+                        <div class="splide splide-js story-slider" id="story-slider">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="image-block">
+                                            <img src="uploads/img-story-slide-1.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="image-block">
+                                            <img src="uploads/img-story-slide-2.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="image-block">
+                                            <img src="uploads/img-story-slide-3.jpg" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -380,8 +372,8 @@
     </div><!-- .wrapper -->
 
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="assets/public/js/frontend.js"></script>
+    <script type="text/javascript" src="assets/js/splide.min.js"></script>
     <script type="text/javascript" src="assets/js/wow.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/block-hero-about.js"></script>

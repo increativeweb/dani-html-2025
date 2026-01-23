@@ -19,19 +19,27 @@
         height: 150px;
         background: #fdf2d4;
         border-top: 1px solid #fdf2d4;
-        clip-path: polygon(100% 94%, 100% 0%, 0% 0%);
+        clip-path: polygon(100% 0%, 100% 0%, 0% 0%);
         z-index: -1;
+        transition: clip-path 1s ease-in-out;
+    }
 
-        @media (max-width: 1200px) {
-            clip-path: polygon(100% 75%, 100% 0%, 0% 0%);
-        }
 
-        @media (max-width: 767px) {
-            clip-path: polygon(100% 45%, 100% 0%, 0% 0%);
-        }
+    &.is-animated {
+        &::before {
+            clip-path: polygon(100% 94%, 100% 0%, 0% 0%);
 
-        @media (max-width: 575px) {
-            clip-path: polygon(100% 25%, 100% 0%, 0% 0%);
+            @media (max-width: 1200px) {
+                clip-path: polygon(100% 75%, 100% 0%, 0% 0%);
+            }
+
+            @media (max-width: 767px) {
+                clip-path: polygon(100% 45%, 100% 0%, 0% 0%);
+            }
+
+            @media (max-width: 575px) {
+                clip-path: polygon(100% 25%, 100% 0%, 0% 0%);
+            }
         }
     }
 

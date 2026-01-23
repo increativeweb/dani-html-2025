@@ -69,40 +69,18 @@
             margin: 0 -1.7rem;
         }
 
-        .counter-swiper-slider {
-            overflow: visible;
+        .counter-splide {
+
+            .splide__track {
+                overflow: visible;
+            }
 
             @media (min-width: 991px) {
-                padding: 1.5rem 1.7rem;
-            }
+                .splide__list {
+                    padding: 0 1.7rem 0.75rem !important;
+                    gap: 2rem;
 
-            .swiper-pagination {
-                bottom: -2rem;
-
-                &-bullet {
-                    width: 0.938rem;
-                    height: 0.938rem;
-                    background-color: var(--white);
-                    border: 1px solid var(--black);
-                    opacity: 1;
-
-                    &-active {
-                        background-color: transparent;
-                    }
-                }
-            }
-
-            .swiper-wrapper {
-                transition-timing-function: linear;
-
-                @media (min-width: 991px) {
-                    grid-gap: 2.5rem;
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                }
-
-                .swiper-slide {
-                    @media (min-width: 991px) {
+                    .splide__slide {
                         flex: 1;
 
                         &:nth-child(1) {
@@ -131,6 +109,24 @@
                     }
                 }
             }
+
+            .splide__pagination {
+                bottom: -1.5rem;
+
+                &__page {
+                    width: 0.938rem;
+                    height: 0.938rem;
+                    background-color: var(--white);
+                    border: 1px solid var(--black);
+                    opacity: 1;
+                    transform: scale(1);
+
+                    &.is-active {
+                        background-color: transparent;
+                    }
+                }
+            }
+
         }
     }
 
@@ -142,6 +138,10 @@
         background-position: center;
         background-repeat: no-repeat;
         z-index: 3;
+
+        @media (max-width: 767px) {
+            animation: vector_floating_r 1s linear .3s infinite;
+        }
 
         &.element-1 {
             width: 4.375rem;
@@ -222,7 +222,6 @@
     padding: 3.125rem 2.5rem 1.875rem;
     text-align: center;
     position: relative;
-    margin-bottom: 3rem;
 
     @media (max-width: 1200px) {
         background-size: contain;
@@ -235,7 +234,7 @@
 
     @media (max-width: 767px) {
         box-shadow: 0.5rem 0.5rem 0px #000000;
-        // max-width: 17.5rem;
+        min-width: 17.5rem;
         width: 100%;
     }
 
