@@ -7,7 +7,7 @@
     z-index: 1;
 
     @media (max-width: 767px) {
-        padding: 5rem 0 6rem;
+        padding: 8rem 0;
 
     }
 
@@ -17,19 +17,14 @@
         background-image: url('../../../assets/images/img-wave.svg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 0 top;
+        background-position: 0 bottom;
         position: absolute;
-        top: -2px;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 6.25rem;
+        height: 5.25rem;
         z-index: -1;
         transition: background-position 6s ease;
-
-        @media (max-width: 767px) {
-            background-size: 150%;
-            height: 1.25rem;
-        }
     }
 
     &::after {
@@ -38,30 +33,24 @@
         background-image: url('../../../assets/images/img-wave.svg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 0 bottom;
+        background-position: 0 top;
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 6.25rem;
+        height: 5.25rem;
         transform: rotate(180deg);
         z-index: -1;
         transition: background-position 6s ease;
-
-        @media (max-width: 767px) {
-            background-size: 150%;
-            height: 4.25rem;
-            bottom: -2px;
-        }
     }
 
     &.is-animated {
         &::before {
-            background-position: 100% top;
+            background-position: 100% bottom;
         }
 
         &::after {
-            background-position: 100% bottom;
+            background-position: 100% top;
         }
     }
 
@@ -164,14 +153,13 @@
             background-image: url('data:image/svg+xml;utf8,<svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.0386 41.1269C27.9915 51.9571 25.3898 70.493 42.7411 67.7539C47.9106 66.9378 52.8086 64.4261 56.4872 60.7035C68.8304 48.2127 52.2406 39.5201 41.0839 36.4878M32.0386 41.1269C28.939 52.5314 19.9249 69.6129 6.98523 55.6647M32.0386 41.1269C31.5135 42.5321 31.0127 44.067 30.5767 45.6684M32.0386 41.1269C31.6452 42.5743 31.1566 44.1131 30.5767 45.6684M41.0839 36.4878C52.4884 39.5874 69.5698 48.6016 55.6217 61.5412C52.363 64.5643 48.2828 66.6568 43.9264 67.5397C27.6425 70.8399 27.5776 56.683 30.5767 45.6684M41.0839 36.4878C52.1545 40.6248 71.2771 43.2512 67.497 24.5999C66.6141 20.2434 64.3125 16.1208 61.2894 12.8621C49.992 0.68418 41.687 12.1594 37.698 22.8584M6.98523 55.6647C3.96216 52.406 1.86967 48.3257 0.986755 43.9693C-2.79333 25.3179 16.3289 27.9446 27.3995 32.0816C15.995 28.9819 -1.08646 19.9678 12.8617 7.02815C16.1203 4.00508 19.9919 1.87001 24.3483 0.987094C40.6322 -2.31315 40.697 11.8438 37.698 22.8584M6.98523 55.6647C18.2826 67.8426 26.5877 56.3674 30.5767 45.6684M37.698 22.8584C37.262 24.4598 36.7612 25.9947 36.2361 27.3999C36.6295 25.9525 37.1181 24.4137 37.698 22.8584Z" stroke="black"/></svg>');
 
             @media (max-width: 992px) {
-                top: 10%;
                 left: 5%;
             }
 
             @media (max-width: 767px) {
                 width: 2rem;
                 height: 2rem;
-                top: 7%;
+                top: 14%;
                 left: -1%;
             }
         }

@@ -8,7 +8,7 @@
     will-change: background-position;
     transition: background-position 0.5s ease;
     padding-bottom: 3.5rem;
-
+    margin-bottom: -6px;
 
     @media (max-width: 767px) {
         background-image: url('../../../assets/images/img-home-bg-m-full.svg'), linear-gradient(0deg, rgba(255, 255, 120, 1) 20%, rgba(255, 184, 159, 1) 20%);

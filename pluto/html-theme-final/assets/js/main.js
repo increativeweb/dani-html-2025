@@ -17,13 +17,7 @@ jQuery(document).ready(function ($) {
 });
 /* WOW Animation - Init */
 try {
-    new WOW({
-        boxClass: 'wow',
-        animateClass: 'animated',
-        offset: 80,       // trigger before element fully enters viewport
-        mobile: true,
-        live: true
-    }).init();
+    new WOW().init();
 
 } catch (e) {
     //

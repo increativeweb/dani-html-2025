@@ -579,3 +579,16 @@ a.btn {
         }
     }
 }
+
+
+.block-secure__logo-link {
+    box-shadow: transparent 0px 4px 0px 0px;
+    transform: translateY(0);
+    transition: transform 0.2s cubic-bezier(0.5, 2.5, 0.7, 0.7), box-shadow 0.2s cubic-bezier(0.5, 2.5, 0.7, 0.7), all 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        transform: translateY(-0.25rem);
+        box-shadow: rgba(0, 0, 0, 1) 0px 4px 0px 0px;
+    }
+}
