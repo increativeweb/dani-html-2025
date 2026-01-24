@@ -970,3 +970,51 @@ a.btn {
         }
     }
 }
+
+// glightbox
+.glightbox-container {
+    .goverlay {
+        background: rgba(255, 184, 159, 0.9);
+        backdrop-filter: blur(4px);
+    }
+
+    .gslide-image {
+        @include border-radius(0.75rem);
+
+        img {
+            @include border-radius(0.75rem)
+        }
+    }
+
+    .gbtn {
+        transition: transform 0.2s cubic-bezier(0.5, 2.5, 0.7, 0.7), box-shadow 0.2s cubic-bezier(0.5, 2.5, 0.7, 0.7), all 0.2s ease-in-out;
+
+        &.gclose {
+
+            transform: translateY(0);
+
+            &:hover,
+            &:focus {
+                transform: translateY(-0.25rem);
+            }
+        }
+
+        &.gnext {
+            transform: translateX(0);
+
+            &:hover:not(.disabled),
+            &:focus:not(.disabled) {
+                transform: translateX(0.25rem);
+            }
+        }
+
+        &.gprev {
+            transform: translateX(0);
+
+            &:hover:not(.disabled),
+            &:focus:not(.disabled) {
+                transform: translateX(-0.25rem);
+            }
+        }
+    }
+}
