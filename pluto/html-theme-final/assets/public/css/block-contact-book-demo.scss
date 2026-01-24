@@ -5,10 +5,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 7rem 0 5rem;
 
     .section-title {
         h1 {
-            font-size: ;
+            font-size: clamp(1.75rem, 6.5vw, 3.438rem);
         }
     }
 }
