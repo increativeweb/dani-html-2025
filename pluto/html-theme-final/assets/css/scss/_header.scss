@@ -116,7 +116,7 @@
         }
 
         .navbar-toggler {
-            filter: invert(0);
+            filter: invert(0) !important;
         }
     }
 
@@ -124,6 +124,10 @@
         .container {
             background: var(--black);
             max-width: 100%;
+
+            .navbar-toggler {
+                filter: invert(1);
+            }
         }
     }
 
@@ -304,10 +308,6 @@
             display: block;
             @include transition(0.2s, ease-in-out);
             margin-left: auto;
-
-            @media (max-width: 992px) {
-                background-color: var(--white);
-            }
 
             &:nth-child(3) {
                 width: 0.625rem;
