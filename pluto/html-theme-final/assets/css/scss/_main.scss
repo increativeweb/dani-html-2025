@@ -321,10 +321,7 @@
 
     .post-card {
         border: none;
-
-        @media (max-width: 767px) {
-            border-radius: 12px;
-        }
+        border-radius: 12px;
 
         .card-img {
             @media (max-width: 767px) {
