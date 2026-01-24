@@ -1,0 +1,127 @@
+// General Input CSS
+
+.hbspt-form {
+    fieldset {
+        max-width: 100%;
+    }
+
+    .form-columns-1 {
+        max-width: 100%;
+
+        .input {
+            margin-right: 0 !important;
+        }
+
+        .hs-input {
+            width: 100% !important;
+        }
+    }
+
+    .hs-form-field {
+        margin-bottom: 1.25rem;
+
+        label {
+            color: var(--text-black);
+            font-size: clamp(0.75rem, 4.5vw, 0.875rem);
+            font-weight: 600;
+            line-height: 1;
+            display: block;
+            margin-bottom: 0.75rem;
+
+            .hs-form-required {
+                color: var(--red);
+            }
+        }
+
+        .hs-input {
+            border: 1px solid var(--black);
+            @include border-radius(2.5rem);
+            height: 3.5rem;
+            color: var(--text-black);
+            font-size: clamp(0.875rem, 4.5vw, 1.25rem);
+            font-weight: 400;
+            padding: 0 20px;
+            line-height: 1;
+            width: 100%;
+
+            @media (max-width: 992px) {
+                height: 54px;
+            }
+
+            @media (max-width: 767px) {
+                height: 48px;
+            }
+
+            &::placeholder {
+                color: var(--gray);
+            }
+
+            &.error {
+                border-color: var(--red);
+            }
+
+            &:focus {
+                outline: 4px solid #FFB89F;
+            }
+        }
+
+        textarea.hs-input {
+            height: auto;
+            padding: 20px;
+        }
+
+        .hs-error-msgs {
+            line-height: 1;
+        }
+
+        .hs-error-msg {
+            font-size: 12px;
+            color: var(--error-red);
+            opacity: 1;
+            margin-bottom: 0;
+        }
+    }
+
+    .hs-submit {
+        margin-top: 20px;
+
+        .hs-button {
+            position: relative;
+            white-space: nowrap;
+            @include inline-flex;
+            @include align-items(center);
+            @include justify-content(center);
+            @include border-radius(6.25rem);
+            text-decoration: none !important;
+            border: 0.1rem solid transparent;
+            min-height: 3.375rem;
+            min-width: 100%;
+            font-weight: 700;
+            font-size: 1.125rem;
+            padding: 1rem 1.938rem;
+            line-height: 1;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            @include transform(translateY(0));
+            box-shadow: rgba(0, 0, 0, 0) 0px 4px 0px 0px;
+            transition: transform 0.2s cubic-bezier(.5, 2.5, .7, .7), box-shadow 0.2s cubic-bezier(.5, 2.5, .7, .7), all 0.2s ease-in-out;
+            background-color: var(--black);
+            color: var(--text-white);
+            border-color: var(--black);
+
+            &:hover,
+            &:focus {
+                color: var(--text-black);
+                background-color: var(--yellow);
+                border-color: var(--yellow);
+                box-shadow: rgb(0, 0, 0) 0px 4px 0px 0px;
+                @include transform(translateY(-0.25rem));
+            }
+        }
+    }
+
+    .hs_error_rollup {
+        display: none;
+    }
+}

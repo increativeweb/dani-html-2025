@@ -1,6 +1,6 @@
 @import "../../../assets/css/scss/mixins";
 
-.content-section {
+.book-demo-content-section {
     background-image: url('../../../assets/images/img-bg-plus-dark-vector.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +9,158 @@
 
     .section-title {
         h1 {
-            font-size: clamp(1.75rem, 6.5vw, 3.438rem);
+            font-size: clamp(1.5rem, 6.5vw, 2.625rem);
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
+
+        .sort-info {
+            font-size: clamp(1rem, 3.5vw, 1.5rem);
+            font-weight: 300;
+        }
+
+        .info-list-cards {
+            margin-top: 4.5rem;
+
+            @media (max-width: 992px) {
+                margin-top: 2.5rem;
+            }
+
+            @media (max-width: 767px) {
+                margin-top: 1.5rem;
+            }
+
+            .info-list-card {
+                @include flexbox;
+                @include flex-direction(row);
+                height: 100%;
+                gap: 1.875rem;
+                position: relative;
+                @include transition(0.2s, ease-in-out);
+                border: 1px solid transparent;
+
+                &:not(:last-child) {
+                    margin-bottom: 2.5rem;
+                }
+
+                .card-icon {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    flex: none;
+                    line-height: 0.7;
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+                    background: var(--dark-pink);
+                    border-radius: 1rem;
+
+                    img {
+                        width: 2rem;
+                    }
+                }
+
+                .card-content {
+                    .card-title {
+                        font-size: clamp(1.125rem, 4.5vw, 1.375rem);
+                        font-weight: 500;
+                        margin-bottom: 1.5rem;
+
+                        @media (max-width: 767px) {
+                            margin-bottom: 1rem;
+                        }
+
+                        a {
+                            color: var(--text-black);
+                            text-decoration: none;
+                            @include transition(0.2s, ease-in-out);
+                        }
+                    }
+
+                    .card-info {
+                        font-size: clamp(0.875rem, 4.5vw, 1.25rem);
+                    }
+                }
+
+                &:has(a:hover),
+                &:has(a:focus) {
+
+                    .card-title {
+                        a {
+                            color: var(--blue);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .icw-form-block {
+        .form-content {
+            .title {
+                font-size: clamp(1.125rem, 6.5vw, 1.375rem);
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+}
+
+.trusted-logo-section {
+    .section-title {
+        margin-bottom: 2.5rem;
+
+        h2 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            font-family: var(--font-family-body);
+        }
+    }
+
+    .logo-slider {
+        -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(10%, #000), color-stop(90%, #000), to(transparent));
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+        mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(10%, #000), color-stop(90%, #000), to(transparent));
+        mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+
+        .logo-item {
+            position: relative;
+            @include transition(0.2s, ease-in-out);
+
+            .logo-img {
+                img {
+                    max-height: 2.813rem;
+                    width: 100%;
+                }
+            }
+
+            a {
+                position: unset;
+                opacity: 0.7;
+                visibility: hidden;
+                font-weight: 500;
+                font-size: 0.875rem;
+                gap: 0.375rem;
+                @include transition(0.2s, ease-in-out);
+
+                .icon-arrow {
+                    width: 0.525rem;
+                    height: 0.525rem;
+                    margin-top: 0.188rem;
+                }
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                a {
+                    visibility: visible;
+                }
+            }
         }
     }
 }
