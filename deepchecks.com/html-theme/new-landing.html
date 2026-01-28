@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Continuous Validation of LLMs &amp; AI | Deepchecks</title>
+    <meta name="theme-color" content="#1e0052">
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name='robots' content='noindex, nofollow' />
+    <meta name="description"
+        content="Continuous validation for LLMs &amp; AI. Validate and monitor your data and models during training, production and new version releases."
+        class="yoast-seo-meta-tag" />
+
+    <link rel='stylesheet' id='style-main-css' href='assets/css/main.css' type='text/css' media='screen' />
+    <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+
+    <link rel="icon" href="assets/favicons/favicon.png" sizes="32x32">
+    <link rel="icon" href="assets/favicons/apple-touch-icon.png" sizes="192x192">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="icon" href="upload/cropped-favicon-150x150.png" sizes="32x32" />
+    <link rel="icon" href="upload/cropped-favicon-300x300.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="upload/cropped-favicon-300x300.png" />
+    <meta name="msapplication-TileImage" content="upload/cropped-favicon-300x300.png" />
+</head>
+
+<body>
+    <header class="main-header d-none">
+        <div class="header-note">
+            <div class="container">
+                <div class="note-text">
+                    <div class="d-inline-flex justify-content-center align-items-center text-left">What’s new <span
+                            class="line">|</span> <a
+                            href="https://deepchecks.com/deepchecks-new-major-release-evaluation-for-llm-based-apps/"><span
+                                class="text text-left">Deepchecks’ New Major Release: Evaluation for LLM-Based Apps!
+                                <span class="btn-icon"><svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.25 9H14.75" stroke="white" stroke-width="1.7" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9.5 3.75L14.75 9L9.5 14.25" stroke="white" stroke-width="1.7"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span></span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav-wrap">
+            <nav class="navbar navbar-expand-xl navbar-light">
+                <div class="container">
+                    <div class="header-first-block">
+                        <button class="sidebar-icon toggle-sidebar d-inline-block d-xl-none"><span
+                                class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+                        <a class="header-logo" href="/" title="Deepchecks | Continuous Validation for Machine Learning"
+                            rel="home"><img
+                                src="https://deepchecks.com/wp-content/themes/deepchecks/assets/images/logo.svg"
+                                alt="Deepchecks" /></a>
+                        <div class="menu-list">
+                            <ul id="menu-header-menu-new-2024" class="mainMenu navbar-nav me-auto">
+                                <li class="menu-item-has-children"><a href="/ml-monitoring/">Products</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/llm-evaluation/">LLM Evaluation</a></li>
+                                        <li><a href="/ml-monitoring/">ML Monitoring</a></li>
+                                        <li><a href="/open-source/">Open Source Testing</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="/solutions/testing/">Solutions</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/solutions/testing/">Testing</a></li>
+                                        <li><a href="/solutions/ci-cd/">CI/CD</a></li>
+                                        <li><a href="/solutions/monitoring/">Monitoring</a></li>
+                                        <li><a href="/solutions/analysis/">Root Cause Analysis</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/pricing/">Pricing</a></li>
+                                <li class="menu-item-has-children"><a href="/about/">Company</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/about/">About Us</a></li>
+                                        <li><a href="/careers/">Careers</a></li>
+                                        <li><a href="/contact-us/">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="/blog/">Resources</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/docs/">Docs</a></li>
+                                        <li><a href="/blog/">Blog</a></li>
+                                        <li><a target="_blank" rel="noopener"
+                                                href="https://checks-demo.deepchecks.com/?check=Train+Test+Label+Drift+%28distribution%29">Checks
+                                                Demo 🔗</a></li>
+                                        <li><a href="/llm-tools/">LLM Tools</a></li>
+                                        <li><a href="/glossary/">Glossary</a></li>
+                                        <li><a href="/events/">Events</a></li>
+                                        <li><a href="/questions/">FAQs</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav navbar-nav-right">
+                                <li class="nav-item"><a href="https://github.com/deepchecks/deepchecks"
+                                        class="btn btn-dark-outline github-btn _ga-github-event _ga-hero-github-event"
+                                        target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Open source ML Testing"><img class="btn-icon"
+                                            src="https://deepchecks.comupload/github-icon.svg" alt="[gitcount]" /><span
+                                            class="review-text">3.2K</span></a></li>
+                                <li class="nav-item"><a href="/llm-evaluation/"
+                                        class="btn btn-primary  _ga-top-get-started-event " target="_parent">Try LLM
+                                        Evaluation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="bg-overly"></div>
+    <main class="main-content-wrapper mb-0">
+        <section class="html-section p-0">
+            <div class="container-fluid p-0">
+                <div class="full-width-two-col-block">
+                    <div class="content-block">
+                        <div class="main-title d-none d-lg-block">
+                            <div class="icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.68253 4.93748C3.12378 7.93186 1.6454 14.0952 1.26771 16.5937C1.12821 17.5169 1.82996 18.3662 2.76265 18.3744C2.76859 18.3745 2.77453 18.3745 2.7804 18.3745C3.37734 18.3749 3.97428 18.1385 4.42778 17.6813C5.3319 16.7697 6.80346 16.7663 7.71184 17.6735L7.73528 17.6969C8.64059 18.601 10.1062 18.601 11.0116 17.6969L11.0427 17.6657C11.948 16.7616 13.4137 16.7616 14.319 17.6657L14.3502 17.6969C15.2555 18.601 16.7211 18.601 17.6265 17.6969L17.6577 17.6657C18.563 16.7616 20.0286 16.7616 20.934 17.6657L20.9651 17.6969C21.8705 18.601 23.3361 18.601 24.2414 17.6969L24.2725 17.6657C25.1779 16.7616 26.6435 16.7616 27.5488 17.6657L27.58 17.6969C28.0328 18.149 28.6263 18.3749 29.2197 18.3745C29.2255 18.3745 29.2315 18.3745 29.2375 18.3744C30.1701 18.3662 30.8718 17.5169 30.7323 16.5937C30.3547 14.0952 28.8763 7.93186 23.3175 4.93748"
+                                        stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M3.89844 22.9375L4.67937 26.0301C5.38019 28.8055 7.87675 30.75 10.7392 30.75H21.2532C24.1157 30.75 26.6122 28.8055 27.3131 26.0301L28.1256 22.8125"
+                                        stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M16 23.375V25.75" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M21.75 23.375L21.4375 25.75" stroke="white" stroke-width="2"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10.1875 23.375L10.5 25.75" stroke="white" stroke-width="2"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M12.875 4.375C12.875 2.64913 14.2741 1.25 16 1.25C17.7259 1.25 19.125 2.64913 19.125 4.375C19.125 6.10088 17.7259 7.5 16 7.5C14.2741 7.5 12.875 6.10088 12.875 4.375Z"
+                                        stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h1>Hope you <i>enjoyed</i> the cupcakes</h1>
+                            <div class="sort-info">Release high-quality LLM apps quickly without compromising on
+                                testing. Never be held back by the complex and subjective nature of LLM
+                                interactions.
+                            </div>
+                        </div>
+                        <div class="logo-slider-section p-0">
+                            <h2 class="h5 text-lg-center">Trusted by AI teams</h2>
+                            <div class="logo-sliders logo-mask-slider logo-sliders-sm">
+                                <div class="logo-slider auto-slider">
+                                    <div class="logo-item"><span><img src="upload/logo-highrise.svg"
+                                                alt="Highrise" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-mit.svg"
+                                                alt="Massachusetts Institute of Technology" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-anthem.svg"
+                                                alt="Anthem Inc" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-america-first.svg"
+                                                alt="America First Credit Union" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-booking.svg"
+                                                alt="Booking.com" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-wix.svg" alt="Wix" /></span>
+                                    </div>
+                                    <div class="logo-item"><span><img src="upload/logo-aws.svg"
+                                                alt="Amazon Web Services" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-auxmoney.svg"
+                                                alt="auxmoney GmbH" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-gigaverse.svg"
+                                                alt="Gigaverse" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-bravado.svg?v1"
+                                                alt="Bravado Inc" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-takeda.svg"
+                                                alt="Takeda Pharmaceutical" /></span></div>
+                                </div>
+                                <div aria-hidden="true" class="logo-slider auto-slider">
+                                    <div class="logo-item"><span><img src="upload/logo-highrise.svg"
+                                                alt="Highrise" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-mit.svg"
+                                                alt="Massachusetts Institute of Technology" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-anthem.svg"
+                                                alt="Anthem Inc" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-america-first.svg"
+                                                alt="America First Credit Union" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-booking.svg"
+                                                alt="Booking.com" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-wix.svg" alt="Wix" /></span>
+                                    </div>
+                                    <div class="logo-item"><span><img src="upload/logo-aws.svg"
+                                                alt="Amazon Web Services" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-auxmoney.svg"
+                                                alt="auxmoney GmbH" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-gigaverse.svg"
+                                                alt="Gigaverse" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-bravado.svg?v1"
+                                                alt="Bravado Inc" /></span></div>
+                                    <div class="logo-item"><span><img src="upload/logo-takeda.svg"
+                                                alt="Takeda Pharmaceutical" /></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-block">
+                        <div class="logo text-lg-center"><a href="https://www.deepchecks.com/"><img
+                                    src="assets/images/logo.svg" alt="Deepchecks"></a></div>
+                        <div class="form-content">
+                            <div class="icw-hubspot-form-shortcode ">
+                                <div class="form-with-slider-labels">
+                                    <script data-hubspot-rendered="true">
+                                        hbspt.forms.create({
+                                            region: "na1",
+                                            portalId: "8338627",
+                                            formId: "3306aff7-bca7-4643-a507-ef76a79ae0ce",
+                                            css: " ",
+                                            locale: "en",
+                                            translations: {
+                                                en: {
+                                                    submitText: "Book a meeting"
+                                                }
+                                            },
+                                            onFormReady: function ($form, ctx) {
+                                                hubspot_labels();
+
+                                                const $btn = $form.find('input[type="submit"]');
+
+                                                if ($btn.length) {
+                                                    $btn.replaceWith(`<button type="submit" class="hs-button btn btn-primary btn-svg">Book a meeting<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button>`);
+                                                }
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                                <div class="note">No spam. One thoughtful follow-up.</div>
+                            </div>
+                            <div class="main-title d-block d-lg-none">
+                                <h1>Hope you <i>enjoyed</i> the cupcakes<span class="icon"><svg width="26" height="26"
+                                            viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_3289_2474)">
+                                                <mask id="mask0_3289_2474" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26">
+                                                    <path
+                                                        d="M4.39498 3.08368e-05L25.952 4.39283L21.5592 25.9498L0.00217634 21.557L4.39498 3.08368e-05Z"
+                                                        fill="white" />
+                                                </mask>
+                                                <g mask="url(#mask0_3289_2474)">
+                                                    <path
+                                                        d="M9.56471 4.51809C5.40898 5.77219 3.56699 9.7212 2.96958 11.3525C2.74887 11.9552 3.10501 12.6238 3.7322 12.7573C3.73619 12.7582 3.74019 12.759 3.74415 12.7598C4.14623 12.842 4.5808 12.7647 4.94907 12.519C5.68327 12.029 6.67507 12.2287 7.16247 12.9645L7.17505 12.9835C7.6608 13.7169 8.64808 13.9181 9.38215 13.4332L9.4074 13.4165C10.1414 12.9318 11.1287 13.1329 11.6145 13.8663L11.6312 13.8915C12.117 14.6249 13.1043 14.8261 13.8383 14.3413L13.8636 14.3246C14.5976 13.8398 15.5849 14.041 16.0707 14.7744L16.0874 14.7996C16.5732 15.533 17.5605 15.7342 18.2945 15.2494L18.3197 15.2327C19.0538 14.7479 20.0411 14.9491 20.5268 15.6824L20.5435 15.7077C20.7865 16.0744 21.1553 16.308 21.5551 16.3892C21.5591 16.39 21.5631 16.3909 21.5671 16.3916C22.1965 16.5142 22.7858 16.0383 22.8186 15.3972C22.9071 13.6623 22.7573 9.30738 19.4237 6.52711"
+                                                        stroke="#9D60FB" stroke-width="2" stroke-miterlimit="10"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M3.87151 15.9877L3.97306 18.1782C4.06417 20.1441 5.47906 21.7967 7.40736 22.1897L14.4902 23.633C16.4185 24.0259 18.3673 23.0587 19.2204 21.2853L20.2094 19.2292"
+                                                        stroke="#9D60FB" stroke-width="2" stroke-miterlimit="10"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M11.961 17.9432L11.635 19.5431" stroke="#9D60FB"
+                                                        stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M15.8356 18.7325L15.2991 20.2895" stroke="#9D60FB"
+                                                        stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M8.04695 17.1452L7.93144 18.7881" stroke="#9D60FB"
+                                                        stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M12.4624 4.71471C12.6993 3.55207 13.8339 2.8016 14.9966 3.03852C16.1592 3.27544 16.9097 4.41004 16.6728 5.57268C16.4358 6.73533 15.3012 7.48579 14.1386 7.24887C12.976 7.01195 12.2255 5.87736 12.4624 4.71471Z"
+                                                        stroke="#9D60FB" stroke-width="2" stroke-miterlimit="10"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_3289_2474">
+                                                    <rect width="22" height="22" fill="white"
+                                                        transform="translate(4.3928) rotate(11.5178)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </span>
+                                </h1>
+                                <div class="sort-info">Release high-quality LLM apps quickly without compromising on
+                                    testing. Never be held back by the complex and subjective nature of LLM
+                                    interactions.
+                                </div>
+                            </div>
+                            <div class="user-info-block">
+                                <div class="user-info">
+                                    <div class="user-img">
+                                        <img src="upload/img-neal-harow.jpg" alt="Neal Harow">
+                                    </div>
+                                    <div class="name-info">
+                                        <div class="user-name">Neal Harow</div>
+                                        <div class="user-position">Head of Global Enterprise GTM</div>
+                                    </div>
+                                </div>
+                                <div class="icon-list-block">
+                                    <ul>
+                                        <li>
+                                            <span class="icon-img"><img src="upload/icon-automated-llm.svg"
+                                                    alt=""></span> Automated LLM scoring + evaluation metrics
+                                        </li>
+                                        <li>
+                                            <span class="icon-img"><img src="upload/icon-version-comparion.svg"
+                                                    alt=""></span> Version comparison across prompts/models/retrieval
+                                        </li>
+                                        <li>
+                                            <span class="icon-img"><img src="upload/icon-reliability-guardrails.svg"
+                                                    alt=""></span> Production monitoring + reliability guardrails
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer d-none">
+        <img src="assets/images/logo-white.svg" alt="Deepchecks" class="footer-bg-logo" />
+        <div class="container">
+            <div class="footer-link-section">
+                <div class="row">
+                    <div class="col-sm-6 col-md-2 col-lg-1">
+                        <a href="/" title="Deepchecks | Continuous Validation for Machine Learning" rel="home"
+                            class="footer-logo wow fadeInUp"><img src="assets/images/logo-white.svg"
+                                alt="Deepchecks"></a>
+                    </div>
+                    <div class="col-md-10 col-lg-8">
+                        <div class="row gutters-5">
+                            <div class="col-6 col-md-3 widget widget_nav_menu">
+                                <div class="menu-products-footer-container">
+                                    <ul id="menu-products-footer" class="menu">
+                                        <li class="footer-title"><a href="/deepchecks-hub/">Products</a></li>
+                                        <li><a href="/solutions/llm-evaluation/">LLM Evaluation</a></li>
+                                        <li><a href="/deepchecks-hub/">Deepchecks Hub</a></li>
+                                        <li><a href="/open-source/">Open Source</a></li>
+                                        <li><a href="/pricing/">Pricing</a></li>
+                                        <li><a href="/book-demo/">Book a Demo</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 widget widget_nav_menu">
+                                <div class="menu-solutions-footer-container">
+                                    <ul id="menu-solutions-footer" class="menu">
+                                        <li class="footer-title"><a href="/solutions/testing/">Solutions</a></li>
+                                        <li><a href="/solutions/testing/">Testing</a></li>
+                                        <li><a href="/solutions/ci-cd/">CI/CD</a></li>
+                                        <li><a href="/solutions/monitoring/">Monitoring</a></li>
+                                        <li><a href="/solutions/analysis/">Root Cause Analysis</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 widget widget_nav_menu">
+                                <div class="menu-company-footer-container">
+                                    <ul id="menu-company-footer" class="menu">
+                                        <li class="footer-title"><a href="/about/">Company</a></li>
+                                        <li><a href="/about/">About Us</a></li>
+                                        <li><a href="/careers/">Careers</a></li>
+                                        <li><a href="/contact-us/">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 widget widget_nav_menu">
+                                <div class="menu-resources-footer-container">
+                                    <ul id="menu-resources-footer" class="menu">
+                                        <li class="footer-title"><a href="/blog/">Resources</a></li>
+                                        <li><a href="/docs/">Docs</a></li>
+                                        <li><a href="/blog/">Blog</a></li>
+                                        <li><a target="_blank" rel="noopener"
+                                                href="https://checks-demo.deepchecks.com/?check=Train+Test+Label+Drift+%28distribution%29">Checks
+                                                Demo 🔗</a></li>
+                                        <li><a href="/llm-tools/">LLM Tools</a></li>
+                                        <li><a href="/glossary/">Glossary</a></li>
+                                        <li><a href="/events/">Events</a></li>
+                                        <li><a href="/questions/">FAQs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3">
+                        <ul class="social-icon">
+                            <li><a href="https://github.com/deepchecks/deepchecks" target="_blank" title="GitHub"
+                                    data-bs-toggle="tooltip"><img src="assets/images/github.svg" alt="github" /></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/company/deepchecks/" target="_blank" title="LinkedIn"
+                                    data-bs-toggle="tooltip"><img src="assets/images/linkedin.svg" alt="linkedin" /></a>
+                            </li>
+                            <li><a href="https://twitter.com/deepchecks" target="_blank" title="Twitter"
+                                    data-bs-toggle="tooltip"><img src="assets/images/twitter.svg" alt="twitter" /></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/deepchecks/" target="_blank" title="Facebook"
+                                    data-bs-toggle="tooltip"><img src="assets/images/facbook.svg" alt="Facebook" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul id="menu-footer-menu" class="footer-links">
+                            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                            <li><a href="/cookies-policy/">Cookies Policy</a></li>
+                            <li><a href="/terms-and-conditions/">Terms &#038; Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <p>© 2024 Deepchecks AI. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal icw-modal modal-hbspt fade" id="popup-llm" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-size-hbspt modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><small>FREE TRIAL FOR DEEPCHECKS' LLM EVALUATION
+                            SOLUTION</small><strong>Fill Out Your Details Here</strong></h2>
+                    <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-with-slider-labels" id="llm_hubspotFormContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @media (min-width: 768px) {
+            body #popup-llm .modal-title small {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            body #popup-llm .modal-title small {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body #popup-llm .modal-title small {
+                font-size: 8px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var formContainer = document.getElementById('llm_hubspotFormContainer');
+            function initializeHubSpotForm() {
+                if (typeof hbspt !== 'undefined') { hbspt.forms.create({ target: '#llm_hubspotFormContainer', css: '', region: "na1", portalId: "8338627", formId: "f7da1fc3-958c-444a-b11a-2ed8f1b716a3", css: " ", redirectUrl: "/thank-you/#llm-evaluation", locale: "en", translations: { en: { submitText: "Submit" } }, onFormReady: function ($form, ctx) { hubspot_labels(); } }); }
+            }
+            initializeHubSpotForm();
+            jQuery('#popup-llm').on('hidden.bs.modal', function () {
+                if (typeof hbspt !== 'undefined' && typeof hbspt.forms !== 'undefined' && typeof hbspt.forms[0] !== 'undefined') { hbspt.forms[0].destroy(); } initializeHubSpotForm();
+            });
+        });
+    </script>
+    <a href="#top" class="back-to-top"><em class="icon-arrow-up"></em></a>
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/all-jquery.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+        $(".collapse-item .collapse-title").click(function () {
+            if ($(this).closest(".collapse-item").hasClass("is-open")) {
+                $(this).closest(".collapse-item").stop(true, true).removeClass("is-open");
+                $(this).closest(".collapse-item").find(".collapse-body").stop(true, true).hide("fast");
+            } else {
+                $(".collapse-item").removeClass("is-open");
+                $(".collapse-item").find(".collapse-body").stop(true, true).hide();
+                $(this).closest(".collapse-item").stop(true, true).addClass("is-open");
+                $(this).closest(".collapse-item").find(".collapse-body").stop(true, true).slideDown("fast");
+            }
+            return false;
+        });
+    </script>
+</body>
+
+</html>
