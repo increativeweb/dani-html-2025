@@ -14504,6 +14504,7 @@ a.author-card {
             @include align-items(center);
             gap: 24px;
             width: 100%;
+            margin-bottom: 8px;
 
             @media (max-width: 992px) {
                 @include flex-direction(row-reverse);
