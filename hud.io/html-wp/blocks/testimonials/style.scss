@@ -549,25 +549,23 @@
     */
 
     .btn-bordar-animation {
-        background: linear-gradient(rgba(9, 9, 11, 0.86), rgba(9, 9, 11, 0.86)), linear-gradient(105deg, var(--white), #f9baf9, #9470fd, #f9baf9, #f9baf9, #9470fd, #f9baf9, var(--white), #f9baf9, #9470fd, #f9baf9, var(--white));
-
+        background: linear-gradient(#F9BFF9, #F9BFF9), linear-gradient(105deg, var(--white), #f9baf9, #9470fd, #f9baf9, #f9baf9, #9470fd, #f9baf9, var(--white), #f9baf9, #9470fd, #f9baf9, var(--white));
         background-size: 100% 100%, 300% 300%;
-        animation: rainbow 4s linear infinite;
-        color: #fff;
+        animation: bg-border-animation 4s linear infinite;
+        color: var(--btn-bg-color) !important;
         background-origin: border-box;
         background-clip: padding-box, border-box;
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         transition: all 0.3s ease-in-out;
 
         &:hover,
         &:focus {
-            opacity: 1;
-            background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
-            color: #000 !important;
+            background: linear-gradient(#F9BFF9, #F9BFF9);
+            opacity: 0.8;
         }
     }
 
-    @keyframes rainbow {
+    @keyframes bg-border-animation {
         0% {
             background-position: 0% 50%;
         }
