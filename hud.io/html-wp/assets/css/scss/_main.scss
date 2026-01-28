@@ -499,9 +499,20 @@
 
 // Pricing Page
 .pricing-section {
-    background-image: url('../images/img-bg-pricing-card.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        background-image: url('../images/img-bg-pricing-card.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 3rem;
+        z-index: -1;
+    }
 
     .pricing-card-block {
         display: grid;
