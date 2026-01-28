@@ -22,6 +22,8 @@
     <link rel="icon" href="uploads/cropped-favicon-192x192.jpg" sizes="192x192" />
     <link rel="apple-touch-icon" href="uploads/cropped-favicon-180x180.jpg" />
     <meta name="msapplication-TileImage" content="uploads/cropped-favicon-270x270.jpg" />
+    <link rel='stylesheet' href='blocks/faq/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='blocks/trusted-logo/style.css' type='text/css' media='all' />
 </head>
 
 <body class="page dark pricing">
@@ -97,8 +99,8 @@
         <section data-theme="dark" class="theme-section html-code-section pricing-section gs-is-dark is-dark">
             <div class="container">
                 <div class="html-code">
-                    <div class="row g-3">
-                        <div class="col-md-6 col-lg-4">
+                    <div class="pricing-card-block">
+                        <div class="col-card">
                             <div class="pricing-card">
                                 <div class="pricing-info">
                                     <div class="category">Core</div>
@@ -136,7 +138,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-card">
                             <div class="pricing-card">
                                 <div class="pricing-info">
                                     <div class="category">Enterprise</div>
@@ -169,6 +171,69 @@
             </div>
         </section>
 
+        <section data-theme="dark"
+            class="theme-section trusted-logo-section  pt-15 pb-large m-pt-15 m-pb-medium gs-is-dark trusted-logo-slider-full">
+            <div class="container">
+                <div class="section-title text-left">
+                    <h2 class="title ">TRUSTED BY</h2>
+                </div>
+                <div class="splide splide-js logo-slider slide-mask" data-desktop-perpage="7" data-autoscroll="1">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="logo-item">
+                                    <div class="logo-img"><img src="uploads/logo-monday.svg" alt="monday" /></div>
+                                    <a href="/customer-story/how-monday-com-built-a-repeatable-playbook-for-complex-performance-issues-at-scale/"
+                                        target="" class="btn btn-link-arrow">Read story<span
+                                            class="icon-arrow"></span></a>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="logo-item">
+                                    <div class="logo-img"><img src="uploads/logo-axonius-1.svg" alt="axonius" /></div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="logo-item">
+                                    <div class="logo-img"><img src="uploads/logo-appsflyer-1.svg"
+                                            alt="logo-appsflyer" /></div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="logo-item">
+                                    <div class="logo-img"><img src="uploads/logo-lemonade-1.svg" alt="lemonade" /></div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="logo-item">
+                                    <div class="logo-img"><img src="uploads/logo-cyera.svg" alt="Cyera" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="logo-item">
+                                    <div class="logo-img"><img src="uploads/logo-drata.svg" alt="drata" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="logo-item">
+                                    <div class="logo-img"><img src="uploads/logo-guardz.svg" alt="guardz" /></div><a
+                                        href="/case-study/how-guardz-turned-silent-job-bottlenecks-into-same-day-fixes/"
+                                        target="" class="btn btn-link-arrow">Read story<span
+                                            class="icon-arrow"></span></a>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="logo-item">
+                                    <div class="logo-img"><img src="uploads/logo-au10tix.svg" alt="AU10ntix" /></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div data-theme="light" class="theme-section icw-sections bg-gradient p-medium default pb-0 m-p-15 gs-is-light">
             <div class="acf-innerblocks-container">
@@ -436,14 +501,13 @@
                 <div class="col-sm-6">
                     <div class="logo-img-block">
                         <picture title="AICPA SOC2" data-bs-toggle="tooltip"><img
-                                src="https://whizzhost.com/demo/hud/wp-content/uploads/2025/12/footer-logo-aicpa.svg"
-                                alt="AICPA SOC2" /></picture>
+                                src="https://whizzhost.com/demo/huduploads/footer-logo-aicpa.svg" alt="AICPA SOC2" />
+                        </picture>
                         <picture title="ISO-27001" data-bs-toggle="tooltip"><img
-                                src="https://whizzhost.com/demo/hud/wp-content/uploads/2025/12/footer-logo-iso-27001.svg"
-                                alt="ISO-27001" /></picture>
+                                src="https://whizzhost.com/demo/huduploads/footer-logo-iso-27001.svg" alt="ISO-27001" />
+                        </picture>
                         <picture title="GDPR" data-bs-toggle="tooltip"><img
-                                src="https://whizzhost.com/demo/hud/wp-content/uploads/2025/12/footer-logo-gdpr.svg"
-                                alt="GDPR" /></picture>
+                                src="https://whizzhost.com/demo/huduploads/footer-logo-gdpr.svg" alt="GDPR" /></picture>
                     </div>
                 </div>
             </div>
@@ -492,11 +556,6 @@
     <script type="text/javascript" src="assets/js/glightbox.min.js" id="icw-glightbox-js"></script>
     <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>
     <script type="text/javascript" src="assets/js/post-details.js" id="post-details-js"></script>
-    <script type="text/javascript" src="blocks/hero/script.js" id="acf-hero-view-script-js" defer="defer"
-        data-wp-strategy="defer"></script>
-    <script type="text/javascript" src="blocks/process/script.js" id="acf-process-script-js"></script>
-    <script type="text/javascript" src="blocks/testimonials/script.js" id="acf-testimonials-view-script-js"
-        defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript" src="blocks/trusted-logo/script.js" id="acf-trusted-logo-script-js" defer="defer"
         data-wp-strategy="defer"></script>
 </body>
