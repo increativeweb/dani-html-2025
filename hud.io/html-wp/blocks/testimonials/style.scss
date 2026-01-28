@@ -259,8 +259,8 @@
 
         @media (min-width: 992px) {
             .splide__slide.is-active .client-logo-block .btn-border-base {
-                transition: 0.4s ease !important;
-                animation: icw-bounce-y 1s cubic-bezier(0.25, 1, 0.5, 1);
+                // transition: 0.4s ease !important;
+                // animation: icw-bounce-y 1s cubic-bezier(0.25, 1, 0.5, 1);
             }
         }
 
@@ -556,8 +556,8 @@
         color: #fff;
         background-origin: border-box;
         background-clip: padding-box, border-box;
-        border: 2px solid transparent;
-        transition: all 0.2s ease-in-out;
+        border: 1px solid transparent;
+        transition: all 0.3s ease-in-out;
 
         &:hover,
         &:focus {
