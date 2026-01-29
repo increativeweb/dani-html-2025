@@ -3,7 +3,7 @@ import { equalHeights } from '../parts/helpers';
 
 const initBlockPosts = () => {
     const blocks = document.querySelectorAll('.block-posts');
-  
+
     if (!blocks.length) return;
 
     const updateNavPosition = (block: Element, index: number, total: number) => {
@@ -108,4 +108,4 @@ if (window.acf) {
     window.acf?.addAction('render_block_preview', initBlockPosts);
 }
 
-export {};
+export { };

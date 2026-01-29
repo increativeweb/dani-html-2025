@@ -14561,13 +14561,15 @@ a.author-card {
                 li {
                     padding: 24px 0;
                     font-size: 18px;
+                    font-weight: 500;
                     @include flexbox;
-                    @include align-items(flex-start);
+                    @include align-items(center);
                     gap: 12px;
                     line-height: 1.2;
 
                     @media (max-width: 767px) {
                         font-size: 16px;
+                        @include align-items(flex-start);
                     }
 
                     &:not(:last-child) {
@@ -14666,6 +14668,11 @@ a.author-card {
                         width: 100%;
                         font-size: 14px;
                         letter-spacing: -0.02em;
+
+                        @media (max-width: 767px) {
+                            min-height: 42px;
+                            border-radius: 8px;
+                        }
                     }
                 }
             }
