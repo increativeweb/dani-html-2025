@@ -267,112 +267,148 @@
 }
 
 .block-posts {
-    .block-posts__wrap {
-        @media (min-width: 992px) {
-            background-size: cover;
-        }
-    }
+    overflow: visible;
+    background: #fff1e4;
+    border-top: 1px solid rgba(#000000, 1);
+    border-bottom: 1px solid rgba(#000000, 1);
+    margin: 6.25rem 0;
 
     @media (max-width: 992px) {
-        .block-posts__carousel {
-            padding: 0 0 40px;
+        border-top: 1px solid rgba(#000000, 0.32);
+        border-bottom: 1px solid rgba(#000000, 0.32);
+    }
+
+    .block-posts__wrap {
+        background-image: none;
+        height: 100%;
+
+        &::before {
+            content: '';
+            background-image: url('../images/img-top-blog-post-bg-desktop.svg');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 100% 100%;
+            display: block;
+            width: 62.5rem;
+            height: 8.125rem;
+            position: absolute;
+            top: -1.938rem;
+            left: calc(50% - 31.25rem);
+
+            @media (max-width: 1200px) {
+                width: 56.25rem;
+                height: 7.5rem;
+                top: -1.75rem;
+                left: calc(50% - 28.125rem);
+            }
+
+            @media (max-width: 992px) {
+                background-image: url('../images/img-top-blog-post-bg.svg');
+                background-size: 100%;
+                width: 31.25rem;
+                height: 5.313rem;
+                top: -3.25rem;
+                left: calc(50% - 15.625rem);
+            }
+
+            @media (max-width: 575px) {
+                width: 21.875rem;
+                height: 3.75rem;
+                top: -2.25rem;
+                left: calc(50% - 10.938rem);
+            }
+
+        }
+
+        &::after {
+            content: '';
+            background-image: url('../images/img-bottom-blog-post-bg-desktop.svg');
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: 100% 100%;
+            display: block;
+            width: 62.5rem;
+            height: 8.125rem;
+            position: absolute;
+            bottom: -1.938rem;
+            left: calc(50% - 31.25rem);
+
+            @media (max-width: 1200px) {
+                width: 56.25rem;
+                height: 7.5rem;
+                bottom: -1.75rem;
+                left: calc(50% - 28.125rem);
+            }
+
+            @media (max-width: 992px) {
+                background-image: url('../images/img-bottom-blog-post-bg.svg');
+                width: 31.25rem;
+                height: 6.563rem;
+                bottom: -3.938rem;
+                left: calc(50% - 15.625rem);
+            }
+
+            @media (max-width: 575px) {
+                width: 21.875rem;
+                height: 4.688rem;
+                bottom: -2.813rem;
+                left: calc(50% - 10.938rem);
+            }
+        }
+
+        .block-posts__title {
+            padding-bottom: 3.125rem;
+            line-height: normal;
+            z-index: 2;
+            margin-top: -0.188rem;
+
+            @media (max-width: 992px) {
+                margin-top: -1.625rem;
+            }
+
+            @media (max-width: 575px) {
+                margin-top: -1.375rem;
+                padding-bottom: 1.875rem;
+            }
         }
 
         .block-posts__carousel-wrap {
-            max-width: 600px;
-            width: 100%;
-            margin: 20px auto;
-        }
-    }
+            padding: 1.875rem 3.438rem;
 
-    @media (min-width: 992px) {
-        background-size: cover;
+            @media (max-width: 1200px) {
+                padding: 0.938rem 3.438rem 3.125rem;
 
-        .block-posts__wrap {
-            height: 800px;
-        }
-
-        .block-posts__carousel {
-            margin: 0px auto;
-            padding-bottom: 40px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .block-posts__wrap {
-            height: 850px;
-        }
-
-        .block-posts__carousel {
-            margin: 30px auto;
-        }
-    }
-
-
-    @media (max-width: 767px) {
-        .block-posts__carousel {
-            padding: 0 0 35px;
-        }
-
-        .block-posts__carousel-wrap {
-            margin: 10px auto 30px;
-        }
-    }
-
-    .post-card {
-        border: none;
-        border-radius: 12px;
-
-        .card-img {
-            @media (max-width: 767px) {
-                max-height: 150px;
+                .block-posts__carousel {
+                    padding: 0 0 3.125rem;
+                }
             }
-        }
 
-        .card-body {
             @media (max-width: 992px) {
-                padding: 1rem;
+                max-width: 100%;
+                margin: 1.5rem 0 3.125rem;
+                padding: 0;
             }
 
-            .post-meta {
-                @media (max-width: 992px) {
-                    margin-bottom: 0.5rem;
-                }
+            @media (max-width: 575px) {
+                margin: 1.5rem 0 1.875rem;
             }
 
-            .card-title {
-                @media (max-width: 1200px) {
-                    font-size: 1rem;
-                }
-
-                @media (max-width: 992px) {
-                    font-size: 0.875rem;
-                }
-
-                @media (max-width: 767px) {
-                    font-size: 0.75rem;
-                }
-
-                @media (max-width: 992px) {
-                    -webkit-line-clamp: 2;
-                }
-            }
-
-            .card-info {
-                display: -webkit-box;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
+            .post-card {
+                @include border-radius(0px);
             }
         }
 
-        .card-action {
+        .block-posts__button {
+            z-index: 2;
+            margin-bottom: 0.188rem;
+
             @media (max-width: 992px) {
-                padding: 0 1rem 1rem;
+                margin-bottom: -2.188rem;
             }
 
+            @media (max-width: 575px) {
+                margin-bottom: -2rem;
+            }
         }
-
     }
 }
