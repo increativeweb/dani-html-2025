@@ -13,6 +13,19 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    $('.hash-item > a').on('click', function (e) {
+        if (this.hash && this.hash !== '#') {
+            // e.preventDefault();
+            // Hide header if visible
+            $('body').removeClass('overflow-hidden');
+            $('.site-header').removeClass('is-visible');
+            $('.site-header .navbar-toggler').removeClass('is-visible');
+            const target = $(this.hash);
+            if (target.length) {
+                $('html, body').animate({ scrollTop: target.offset().top }, 300);
+            }
+        }
+    });
 
 });
 /* WOW Animation - Init */
@@ -22,6 +35,7 @@ try {
 } catch (e) {
     //
 };
+
 (function () {
     const mainHeader = document.querySelector('.site-header');
     if (!mainHeader) return;
@@ -57,7 +71,6 @@ try {
 })();
 
 const animatedSections = document.querySelectorAll('section');
-
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach(entry => {
@@ -75,5 +88,27 @@ const observer = new IntersectionObserver(
         threshold: 0
     }
 );
-
 animatedSections.forEach(el => observer.observe(el));
+
+
+// Disable right-click on IMG, SVG, and Lottie
+document.addEventListener('contextmenu', function (e) {
+
+    const target = e.target;
+
+    const imgEl = target.tagName === 'IMG' ? target : null;
+    const svgEl = target.closest && target.closest('svg');
+    const lottieEl = target.closest && target.closest('lottie-player');
+
+    const el = imgEl || svgEl || lottieEl;
+
+    if (el) {
+        e.preventDefault();
+
+        el.classList.add('icw-zigzag-effect');
+
+        setTimeout(() => {
+            el.classList.remove('icw-zigzag-effect');
+        }, 500); // match animation duration
+    }
+});

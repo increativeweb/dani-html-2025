@@ -1,13 +1,10 @@
 (function ($) {
 	$doc = $(document);
-
 	$doc.ready(function () {
-
 		/**
 		 * Retrieve posts
 		 */
 		function get_posts($params) {
-
 			$container = $('#container-async');
 			$content = $container.find('.content');
 			$status = $container.find('.status');
@@ -21,14 +18,12 @@
 			if ($params.page === 1 && $pager.length) {
 				$pager.removeAttr('disabled').html('More articles');
 			}
-
 			if ($pager.length) {
 				$method = 'infscr';
 			}
 			else {
 				$method = 'pager';
 			}
-
 			/**
 			 * Do AJAX
 			 */
@@ -59,7 +54,6 @@
 						 */
 						else {
 							$content.append(data.content);
-
 							if (data.next !== 0) {
 								$pager.attr('href', '#page-' + data.next);
 							}
@@ -88,24 +82,13 @@
 					else {
 						$status.html(data.message);
 					}
-
-					/*console.log(data);
-					console.log(textStatus);
-					console.log(XMLHttpRequest);*/
 				},
 				error: function (MLHttpRequest, textStatus, errorThrown) {
-
 					$status.html(textStatus);
-
-					/*console.log(MLHttpRequest);
-					console.log(textStatus);
-					console.log(errorThrown);*/
 				},
 				complete: function (data, textStatus) {
-
 					msg = textStatus;
 					if (textStatus === 'success') {
-						// msg = data.responseJSON.message;
 						msg = data.responseJSON.message;
 					}
 					$status.html(msg);
@@ -113,23 +96,38 @@
 						$content.html('<div class="post-card-col text-center pt-50 pb-50 w-100"><div class="alert alert-danger">No posts found</div></div>');
 					}
 					$('.q-loader').removeClass('show');
-					// $('.post-search').removeClass('active');
-					// console.log('q remove');
-
-
-					/*console.log(data);
-					console.log(textStatus);*/
 				}
 			});
 		}
+		//change query string params
+		function updateQueryParam(key, value) {
+			const url = new URL(window.location.href);
+			if (value) {
+				url.searchParams.set(key, value);
+			} else {
+				url.searchParams.delete(key);
+			}
+
+			window.history.pushState({}, '', url);
+		}
+		/**
+		 * Show all posts on page load and query string category wise manage
+		 */
+		const queryParams = new URLSearchParams(window.location.search);
+		const urlGetTerm = queryParams.get("cat");
+
 		$active = {};
 		/**
 		 * Bind get_posts to tag cloud and navigation
 		 */
 		$(document).on('click', '#container-async a[data-filter], #container-async .pagination a', function (event) {
 			if (event.preventDefault) { event.preventDefault(); }
-
 			$this = $(this);
+			
+			var term = $this.data('term');
+			if (urlGetTerm){
+			updateQueryParam('cat', term === 'all-terms' ? null : term);
+			}
 
 			/**
 			 * Set filter active
@@ -137,7 +135,6 @@
 			if ($this.data('filter')) {
 				$page = 1;
 				$pager = $('.infscr-pager a').attr('href', '#page-2');
-
 				/**
 				 * If all terms, then deactivate all other
 				 */
@@ -155,26 +152,14 @@
 				// Toggle current active
 				$this.parent('li').toggleClass('active');
 
-				/**
-				 * Get All Active Terms
-				 */
 				$active = {};
 				$terms = $this.closest('ul').find('.active');
-				// console.log($terms.length);
 				if ($terms.length) {
 					$.each($terms, function (index, term) {
-
 						$a = $(term).find('a');
 						$tax = $a.data('filter');
 						$slug = $a.data('term');
-
-						if ($tax in $active) {
-							$active[$tax].push($slug);
-						}
-						else {
-							$active[$tax] = [];
-							$active[$tax].push($slug);
-						}
+						$active = $slug;
 					});
 				} else {
 					$('a[data-term="all-terms"]').trigger('click');
@@ -191,86 +176,58 @@
 			if ($(this).data('infscr') === 'load') {
 				$(this).html('<span class="arrow-icon icw-loading"></span> Load articles');
 			}
-
+			let $activeEl = $('.nav-filter .active a');
+			let active    = $activeEl.data('term') || 'all-terms';
 			$params = {
 				'page': $page,
-				'terms': $active,
+				'terms': active,
 				'qty': $this.closest('#container-async').data('paged'),
-				'postnotin': $this.closest('#container-async').data('post_not_in'),
 				'q': $('#q').val()
 			};
 
 			// Run query
 			get_posts($params);
 		});
+
+		// when click on category so particular category change and scroll up
 		$(document).on('click','.post-category',function(e){
 			e.preventDefault();
-			console.log('ajajajjajajjaj');
 			var href = $(this).attr('href');
 			var term = href.replace("#", "");
-			console.log(term);
 			$('.nav-filter li a[href="#' + term + '"]').attr("id",term);
 			var targetLink = $('.nav-filter li a[href="#' + term + '"]');
-			console.log(targetLink);
 			if (targetLink.length) {
 				targetLink.trigger('click');
 				document.getElementById('container-async')?.scrollIntoView({ behavior: 'smooth' });
 			}
 		})
-		const queryParams = new URLSearchParams(window.location.search);
-		const term = queryParams.get("cat");
-		if (term) {
-			console.log(term);
-			$('.nav-filter li a[href="#' + term + '"]').attr("id",term);
-			var targetLink = $('.nav-filter li a[href="#' + term + '"]');
-			console.log(targetLink);
-			if (targetLink.length) {
-				targetLink.trigger('click');
-			}
-		}
-		
-
+	
 		let typingTimer;
 		$("#q").on("keyup", function (event) {
 			$('.q-loader').addClass('show');
-			// console.log('q change');
 			clearTimeout(typingTimer);
 			typingTimer = setTimeout(function () {
 				$active = {};
 				$terms = $('ul.nav-filter').find('.active');
-
 				if ($terms.length) {
 					$.each($terms, function (index, term) {
-
 						$a = $(term).find('a');
 						$tax = $a.data('filter');
 						$slug = $a.data('term');
-
-						if ($tax in $active) {
-							$active[$tax].push($slug);
-						}
-						else {
-							$active[$tax] = [];
-							$active[$tax].push($slug);
-						}
+						$active = $slug;
 					});
 				}
-
 				$params = {
 					'page': 1,
 					'terms': $active,
-					'qty': $this.closest('#container-async').data('paged'),
-					'postnotin': $this.closest('#container-async').data('post_not_in'),
+					'qty': $(this).closest('#container-async').data('paged'),
 					'q': $('#q').val()
 				};
-
 				$('.q-loader').removeClass('show');
 				// Run query
 				get_posts($params);
 			}, 700);
 		});
-
-
 		// $('.q-search').click(function(event){
 		$(".q-search").on("click", function (event) {
 			// console.log("q-search event start");
@@ -296,11 +253,17 @@
 				$(this).closest('.post-search').removeClass('active');
 			}
 		});
+		
+		if (!urlGetTerm) {
+			$('a[data-term="all-terms"]').trigger('click');
+		}
 
-
-		/**
-		 * Show all posts on page load
-		 */
-		// $('a[data-term="all-terms"]').trigger('click');
+		if (urlGetTerm) {
+			$('.nav-filter li a[href="#' + urlGetTerm + '"]').attr("id",urlGetTerm);
+			var targetLink = $('.nav-filter li a[href="#' + urlGetTerm + '"]');
+			if (targetLink.length) {
+				targetLink.trigger('click');
+			}
+		}
 	});
 })(jQuery);
