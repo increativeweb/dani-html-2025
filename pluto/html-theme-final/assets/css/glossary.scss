@@ -60,7 +60,7 @@ body.glossary {
             }
 
             &.element-2 {
-                background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDA3IiBoZWlnaHQ9IjQwNyIgdmlld0JveD0iMCAwIDQwNyA0MDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjIwMy40MyIgY3k9IjIwMy40MyIgcj0iMTQ4LjUxIiBmaWxsPSIjRkZGRjc4IiBzdHJva2U9ImJsYWNrIi8+CjxjaXJjbGUgY3g9IjIwMy40MTIiIGN5PSIyMDMuMTYyIiByPSIxNDguNTEiIHRyYW5zZm9ybT0icm90YXRlKC0xMC43MTAxIDIwMy40MTIgMjAzLjE2MikiIGZpbGw9IiNGRkZGNzgiIHN0cm9rZT0iYmxhY2siLz4KPHBhdGggZD0iTTYyLjkwNDMgMjUxLjQ0N0MxMDQuNjY0IDMxNi41MSAxODIuODQ0IDM1My4zNDggMjYzLjQ0MyAzMzguNzc0QzI1My4zMzcgMzQzLjE5NSAyNDIuNTggMzQ2LjU1NyAyMzEuMjgxIDM0OC42OTRDMTU3LjgxOSAzNjIuNTg4IDg2Ljc2MzYgMzE5Ljk5IDYyLjkwNDMgMjUxLjQ0N1oiIGZpbGw9ImJsYWNrIi8+CjxjaXJjbGUgY3g9IjIwMy40MTIiIGN5PSIyMDMuMTYyIiByPSIxNDguNTEiIHRyYW5zZm9ybT0icm90YXRlKC0xMC43MTAxIDIwMy40MTIgMjAzLjE2MikiIHN0cm9rZT0iYmxhY2siLz4KPHBhdGggZD0iTTMyOC42NDMgMTI1LjU2NkMzNTkuMzg0IDEyMy42NDYgMzc5LjkgMTI4LjAyNSAzODMuOTI3IDEzOS4zNDdMMzg0LjAyOCAxMzkuNjQ0QzM5Mi4zMzUgMTY1LjA3NiAzMTUuNTY0IDIxNS4zMzQgMjEyLjAxNiAyNTIuMTYxQzEwOC40NjcgMjg4Ljk4NyAxNy4yMDA3IDI5OC40OTEgNy41ODQwNyAyNzMuNTI1TDcuNDc0NyAyNzMuMjNDMi43MDQ3NyAyNTkuODE4IDIyLjAzMTMgMjM5LjM1IDU2LjcwMTMgMjE3LjU3MUw1Ny4yODgyIDIyMC4wMUM1NS42MTI3IDIyMS4wNjggNTMuOTczOCAyMjIuMTIzIDUyLjM3MzEgMjIzLjE3M0MzNi45MDI2IDIzMy4zMjYgMjUuMDg3MSAyNDMuMDI2IDE3LjcyMzcgMjUxLjY1NkMxMC4yMjgxIDI2MC40NDEgNy45MjgwMyAyNjcuNDA4IDkuNzE0OTMgMjcyLjQzM0MxMS41MDIyIDI3Ny40NTggMTcuNjg1NiAyODEuNDA4IDI5LjA0NSAyODMuNDg3QzQwLjIwNDEgMjg1LjUyOSA1NS40OTA3IDI4NS41OTEgNzMuODk3NSAyODMuNjk1QzExMC42NzQgMjc5LjkwNyAxNTkuMzY2IDI2OC4zNjMgMjExLjIxOSAyNDkuOTIxQzI2My4wNzEgMjMxLjQ4IDMwOC4xMiAyMDkuNjg2IDMzOS4wMjkgMTg5LjQwMkMzNTQuNSAxNzkuMjUgMzY2LjMxNSAxNjkuNTQ5IDM3My42NzggMTYwLjkyQzM4MS4xNzMgMTUyLjEzNSAzODMuNDc0IDE0NS4xNjggMzgxLjY4OCAxNDAuMTQzQzM3OS45MDEgMTM1LjExOCAzNzMuNzE2IDEzMS4xNjggMzYyLjM1NyAxMjkuMDg4QzM1My44NDMgMTI3LjUzIDM0Mi45MjggMTI3LjEyNiAzMzAuMDU4IDEyNy44NjNMMzI4LjY2NyAxMjUuNTcyTDMyOC42NDMgMTI1LjU2NloiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=');
+                background-image: url('../../src/images/bock-secure-ball-yellow.svg');
                 width: 405px;
                 height: 405px;
                 right: -150px;
@@ -509,7 +509,7 @@ body.glossary {
                 height: 46px;
                 flex: none;
                 border-radius: 14px;
-                transition: all 0.3s ease-in-out;
+                transition: all 0.1s ease-in-out;
 
                 @media (max-width: 992px) {
                     width: 32px;
@@ -539,7 +539,7 @@ body.glossary {
                     font-weight: 600;
                     line-height: 1.3;
                     padding-top: 3px;
-                    transition: all 0.3s ease-in-out;
+                    transition: all 0.2s ease-in-out;
 
                     @media (max-width: 992px) {
                         display: none;
@@ -549,7 +549,7 @@ body.glossary {
 
             &:hover {
                 .icon {
-                    background-position: center left;
+                    background-position: calc(100% - 22px) center;
                 }
 
                 .glossary-nav-title {
