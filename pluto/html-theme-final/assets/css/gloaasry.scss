@@ -202,6 +202,44 @@ body.glossary .page-header {
 
         }
     }
+
+    &.mobile-alphabet-block {
+        @media (max-width: 992px) {
+            background-image: none;
+            background-color: transparent;
+            padding: 0;
+            max-width: 100%;
+            border: none;
+            margin-top: 0;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            .alphabet {
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                gap: 12px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 0.4rem;
+                margin: 0 -1rem;
+
+                li {
+                    &:first-child {
+                        padding-left: 1rem;
+                    }
+
+                    &:last-child {
+                        padding-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .glossary-item-block {
