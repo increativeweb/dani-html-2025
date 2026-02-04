@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Regular.woff') format('woff'),
+    url('../fonts/GeneralSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Medium.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Medium.woff') format('woff'),
+    url('../fonts/GeneralSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Semibold.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Semibold.woff') format('woff'),
+    url('../fonts/GeneralSans-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+
+  --primary: #0371EE;
+  --skyblue: #87BFF3;
+  --bottlegreen: #12D3DD;
+
+  --dark: #090A0C;
+  --dark900: #1c1e21;
+  --dark800: #111419;
+  --dark700: #181C21;
+  --dark300: #65717F;
+  --dark200: #8996A4;
+  --dark100: #B0BAC6;
+
+  --gray600: #dadde1;
+  --gray500: #606770;
+  --gray400: #3E4751;
+  --gray75: #C8D0D9;
+  --gray50: #EBEDF0;
+  --gray: #F7F8F9;
+}

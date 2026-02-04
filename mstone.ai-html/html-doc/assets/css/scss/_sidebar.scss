@@ -1,0 +1,124 @@
+.main-sidebar {
+    width: 19.375rem;
+    border-right: 1px solid var(--gray600);
+    display: block;
+    height: 100vh;
+    max-height: calc(100vh - 4rem);
+    position: sticky;
+    top: 4rem;
+
+    @media (max-width: 992px) {
+        position: fixed;
+        left: 0;
+        top: 4rem;
+        z-index: 100;
+        transform: translateX(-100%);
+        @include transition(0.3s, ease-in-out);
+
+        &.is-visible {
+            transform: translateX(0);
+        }
+    }
+
+    .sidebar-inner-block {
+        height: 100%;
+
+        @media (max-width: 992px) {}
+
+        .sidebar-menu {
+            overflow: hidden;
+            overflow-y: auto;
+            scrollbar-gutter: stable;
+            padding: .5rem 0 .5rem .5rem;
+            height: 100%;
+            &::-webkit-scrollbar {
+                width: 0.25rem;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgba(#6E6E6E, 0.5);
+                border-radius: 0.25rem;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgba(#6E6E6E, 0.9);
+            }
+            &>li {
+                margin-top: .25rem;
+    
+                &.menu-title {
+                    margin-top: 1rem;
+
+                    &>span {
+                        padding: 0 0.75rem;
+                        display: inline-block;
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                        color: var(--gray500);
+                        text-transform: uppercase;
+                        letter-spacing: 0.03rem;
+                    }
+                }
+
+                &.menu-list-collapsed {
+                    position: relative;
+                    .collapse-arrow {
+                        background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuNzQyNjcgNC45NzMxMkw4LjgwNTYyIDguMDIzNUw1Ljc2MTkzIDExLjA5MzFMNi43MDQ4OCAxMi4wMzAxTDEwLjY5MjMgOC4wMTc1Nkw2LjY3OTcxIDQuMDMwMTZMNS43NDI2NyA0Ljk3MzEyWiIgZmlsbD0iYmxhY2siIGZpbGwtb3BhY2l0eT0iMC41Ii8+Cjwvc3ZnPgo=') no-repeat center center;
+                        background-size: contain;
+                        display: block;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        flex: none;
+                        cursor: pointer;
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        @include transition(0.2s, ease-in-out);
+                    }
+                    .collapse-menu-block {
+                        margin-top: 0.25rem;
+                        padding-left: 0.75rem;
+                        display: none;
+                    }
+                    &.active {
+                        .collapse-arrow { 
+                            @include transform(rotate(90deg))
+                        }
+                    }
+                }
+
+                a {
+                    @include flexbox();
+                    @include align-items(center);
+                    padding: 0.75rem;
+                    @include border-radius(0.25rem);
+                    color: var(--gray500);
+                    font-size: 0.938rem;
+                    font-weight: 500;
+                    text-decoration: none;
+                    @include transition(0.2s, ease-in-out);
+                    gap: .5rem;
+                    line-height: 1;
+
+                    .icon {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        flex: none;
+                        display: inline-flex;
+                        @include align-items(center);
+                        @include justify-content(center);
+                    }
+
+                    &:hover, &:focus, &.active {
+                        background-color: rgba(0, 0, 0, 0.05);
+                        color: var(--dark);
+                    }
+                }
+            }
+        }
+    }
+}
