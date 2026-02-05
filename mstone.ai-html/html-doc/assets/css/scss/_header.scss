@@ -46,9 +46,6 @@
                     }
                 }
                 .nav-menu {
-                    @media (max-width: 992px) {
-                        display: none;
-                    }
                     .mainMenu {
                         li {
                             &.current-menu-item {
@@ -198,7 +195,7 @@
                                 @include align-items(center);
                                 @include transition(0.2s, ease-in-out);
                                 @include border-radius(0.25rem);
-
+                                color: var(--dark900) !important;
                                 &.user-info {
                                     @include flexbox;
                                     @include align-items(center);
@@ -254,7 +251,9 @@
 
             .nav-menu {
                 margin-left: 1rem;
-
+                @media (max-width: 992px) {
+                    display: none;
+                }
                 .mainMenu {
                     @include flexbox;
                     @include align-items(center);
@@ -297,7 +296,6 @@
                 padding: 0px;
                 background-color: transparent;
                 z-index: 10;
-                margin-left: 15px;
                 height: 25px;
                 width: 25px;
 

@@ -87,7 +87,7 @@ a {
     }
 
     &:focus-visible {
-        outline: 3px solid var(--bottlegreen) !important;
+        outline: 2px solid var(--primary) !important;
         @include border-radius(12px);
     }
 }

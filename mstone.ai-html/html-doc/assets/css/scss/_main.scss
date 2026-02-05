@@ -11,14 +11,25 @@
             width: 100%;
             max-width: calc(100% - 19.375rem);
             flex-grow: 1;
+            @media (max-width: 992px) {
+                max-width: 100%;
+            } 
             .main-content {
                 max-width: 1320px;
                 margin: 0 auto;
                 padding: 1rem;
                 display: grid;
                 grid-template-columns: auto 330px;
+                @media (max-width: 992px) {
+                    grid-template-columns: 100%;
+                } 
                 .content-block {
                     
+                }
+                .table-of-contents {
+                    @media (max-width: 992px) {
+                        display: none;
+                    }
                 }
             }
         }
