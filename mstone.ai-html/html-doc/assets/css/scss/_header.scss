@@ -45,14 +45,14 @@
             }
 
             .nav-right {
-                width: 100%;
-                max-width: 12.5rem;
                 margin-left: auto;
                 @include flexbox;
                 @include align-items(center);
                 gap: 1rem;
 
                 .search-form {
+                    width: 100%;
+                    max-width: 12.5rem;
                     .input-group {
                         position: relative;
                         @include flexbox;

@@ -23,7 +23,16 @@ jQuery(document).ready(function ($) {
         });
     }
 });
+const $logoBlock = $('.site-logo-block');
+if ($logoBlock.length) {
+    $(window).on('scroll', function() {
+        const logoBlockTop = $logoBlock.offset().top;
+        const windowBottom = $(window).scrollTop() + $(window).height();
 
+        // Toggle class based on footer visibility
+        $logoBlock.toggleClass('is-animate', windowBottom >= logoBlockTop);
+    });
+}
 if ($('.main-sidebar').length) {
     $(document).on('click', '.menu-list-collapsed .collapse-title', function (e) {
         e.preventDefault();
