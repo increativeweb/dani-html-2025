@@ -10,6 +10,17 @@ jQuery(document).ready(function ($) {
             $('body').toggleClass('overflow-hidden');
             $(this).toggleClass('is-visible');
         });
+        $('.menu-item-has-children').on('click', function (e) {
+            e.stopPropagation(); 
+
+            $(this).find('.sub-menu').toggleClass('is-open');
+        });
+        $('.sub-menu').on('click', function (e) {
+            e.stopPropagation();
+        });
+        $(document).on('click', function () {
+            $('.sub-menu').removeClass('is-open');
+        });
     }
 });
 
