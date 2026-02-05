@@ -51,6 +51,17 @@ jQuery(document).ready(function ($) {
             $(this).parents('.main-sidebar').find('.main-menu').addClass('is-open');
         });
     }
+    if($('.table-of-contents-block').length) {
+        $(document).on('click', '.table-of-contents-block .collapse-title', function (e) {
+            e.preventDefault();
+
+            var $this = $(this).closest('.table-of-contents');
+            var $toc_list = $this.find('.table-of-content-list');
+
+            $this.toggleClass('active');
+            $toc_list.stop(true, true).slideToggle(300);
+        });
+    }
 });
 
 const $logoBlock = $('.site-logo-block');
@@ -63,3 +74,82 @@ if ($logoBlock.length) {
         $logoBlock.toggleClass('is-animate', windowBottom >= logoBlockTop);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const content = document.querySelector('.content-block');
+    if (!content) return;
+
+    const tocLists = document.querySelectorAll('.table-of-content-list');
+    const headings = content.querySelectorAll('h2, h3');
+
+    // 👉 Build TOC HTML once
+    const tocFragment = document.createDocumentFragment();
+
+    headings.forEach(heading => {
+
+        // Generate ID
+        if (!heading.id) {
+            heading.id = heading.textContent
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/(^-|-$)/g, '');
+        }
+
+        // Add anchor link
+        if (!heading.querySelector('.anchor-link')) {
+            const anchor = document.createElement('a');
+            anchor.href = `#${heading.id}`;
+            anchor.textContent = '#';
+            anchor.className = 'anchor-link';
+            heading.appendChild(anchor);
+        }
+
+        // Create TOC item
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+
+        a.href = `#${heading.id}`;
+        a.textContent = heading.childNodes[0].textContent.trim();
+
+        if (heading.tagName === 'H3') {
+            li.classList.add('sub-heading');
+        }
+
+        li.appendChild(a);
+        tocFragment.appendChild(li);
+    });
+
+    // 👉 Clone TOC into all containers
+    tocLists.forEach(list => {
+        list.innerHTML = '';
+        list.appendChild(tocFragment.cloneNode(true));
+    });
+
+    // ScrollSpy
+    window.addEventListener('scroll', () => {
+
+        let current = '';
+
+        headings.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            if (scrollY >= sectionTop) {
+                current = section.id;
+            }
+        });
+
+        tocLists.forEach(list => {
+            list.querySelectorAll('a').forEach(link => {
+                link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === `#${current}`
+                );
+            });
+        });
+
+    });
+
+});
+
+
+
