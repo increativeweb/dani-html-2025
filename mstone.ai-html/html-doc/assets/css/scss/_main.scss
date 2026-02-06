@@ -180,6 +180,19 @@
             }
         }
     }
+    blockquote {
+        background: rgba(84, 199, 236, 0.15);
+        border-left: 0.313rem solid #4cb3d4;
+        margin: 0 0 1rem;
+        padding: 1rem;
+        @include border-radius(0.4rem);
+        @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.102));
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
     h2[id],
     h3[id] {
         scroll-margin-top: 5rem;
