@@ -2,20 +2,20 @@
 .main-footer {
     z-index: 2;
     position: relative;
-    padding: 100px 0 0;
+    padding: 6.25rem 0 0;
     background: var(--dark);
     overflow: hidden;
 
     @media (max-width: 992px) {
-        padding: 70px 0 0;
+        padding: 4.375rem 0 0;
     }
 
     @media (max-width: 767px) {
-        padding: 50px 0 0;
+        padding: 3.125rem 0 0;
     }
 
     .container {
-        max-width: 1320px;
+        max-width: 82.5rem;
         margin: 0 auto;
     }
 
@@ -43,14 +43,14 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            max-height: 48px;
+            max-height: 3rem;
 
             @media (max-width: 992px) {
-                max-height: 38px;
+                max-height: 2.375rem;
             }
 
             @media (max-width: 767px) {
-                max-height: 28px;
+                max-height: 1.75rem;
             }
         }
 
@@ -63,28 +63,28 @@
     .social-list {
         @include flexbox;
         @include align-items(center);
-        gap: 8px;
-        margin-top: 30px;
+        gap: 0.5rem;
+        margin-top: 1.875rem;
 
         @media (max-width: 992px) {
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
         }
 
         li {
             a {
-                width: 56px;
-                height: 56px;
+                width: 3.5rem;
+                height: 3.5rem;
                 flex: none;
                 @include flexbox;
                 @include align-items(center);
                 @include justify-content(center);
                 border: 1px solid var(--gray400);
-                @include border-radius(12px);
+                @include border-radius(0.75rem);
                 @include transition(0.1s, ease-in-out);
 
                 @media (max-width: 767px) {
-                    width: 48px;
-                    height: 48px;
+                    width: 3rem;
+                    height: 3rem;
                 }
 
                 &:hover,
@@ -101,7 +101,7 @@
 
         @media (max-width: 575px) {
             @include justify-content(unset);
-            gap: 0 100px;
+            gap: 0 6.25rem;
             flex-wrap: wrap;
         }
     }
@@ -109,14 +109,14 @@
     .footer-menu {
         @media (max-width: 575px) {
             &:last-child {
-                margin-top: 40px;
+                margin-top: 2.5rem;
                 flex-basis: 100%;
             }
         }
 
         li {
             line-height: 1;
-            margin-bottom: 25px;
+            margin-bottom: 1.563rem;
 
             &:last-child {
                 margin-bottom: 0;
@@ -125,7 +125,7 @@
             a {
                 @include inline-flex;
                 color: var(--white);
-                font-size: 14px;
+                font-size: 0.875rem;
                 font-weight: 600;
                 @include transition(0.1s, ease-in-out);
 
@@ -146,32 +146,32 @@
 
     .footer-logos {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 30px;
-        margin-top: 30px;
+        padding-top: 1.875rem;
+        margin-top: 1.875rem;
 
         @media (min-width: 992px) {
-            margin-top: 50px;
-            padding-top: 50px;
+            margin-top: 3.125rem;
+            padding-top: 3.125rem;
         }
 
         &__container {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 1.875rem;
             align-items: center;
 
             @media (min-width: 992px) {
-                gap: 65px;
+                gap: 4.063rem;
                 justify-content: space-between;
             }
         }
     }
 
     .footer-form {
-        margin-top: 84px;
+        margin-top: 5.25rem;
 
         &__container {
-            max-width: 536px;
+            max-width: 33.5rem;
 
             @media (max-width: 576px) {
                 display: flex;
@@ -181,19 +181,19 @@
 
         &__title {
             color: #ffffff;
-            margin: 0 0 28px;
+            margin: 0 0 1.75rem;
 
             @media (max-width: 767px) {
-                font-size: 24px;
-                line-height: 30px;
+                font-size: 1.5rem;
+                line-height: 1.875rem;
             }
         }
 
         &__info {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
             color: #ffffff;
-            margin-top: 14px;
+            margin-top: 0.875rem;
         }
 
         .hbspt-form {
@@ -207,7 +207,7 @@
 
                 @media (min-width: 577px) {
                     display: flex;
-                    gap: 8px;
+                    gap: 0.5rem;
                     justify-content: space-between;
                 }
             }
@@ -217,52 +217,52 @@
                 flex-grow: 1;
 
                 label {
-                    font-size: 14px;
-                    line-height: 20px;
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
                     color: #ffffff;
-                    margin-bottom: 7px;
+                    margin-bottom: 0.438rem;
                     font-weight: 400;
                     display: inline-block;
 
                     @media (min-width: 768px) {
-                        font-size: 16px;
-                        line-height: 24px;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
                     }
                 }
 
                 input {
                     background-color: transparent;
-                    border-radius: 12px;
+                    border-radius: 0.75rem;
                     border: 1px solid #65717F;
                     color: #ffffff;
-                    height: 64px;
+                    height: 4rem;
                     width: 100%;
-                    font-size: 14px;
+                    font-size: 0.875rem;
                     font-weight: 400;
-                    padding: 0 20px;
+                    padding: 0 1.25rem;
                     line-height: 1;
                     &.error {
                         border-color: #f36161;
                     }
                     @media (max-width: 992px) {
-                        height: 54px;
+                        height: 3.375rem;
                     }
 
                     @media (max-width: 767px) {
-                        height: 48px;
+                        height: 3rem;
                     }
                 }
             }
 
             .hs-submit {
-                margin: 34px 0 0;
+                margin: 2.125rem 0 0;
 
                 @media (max-width: 992px) {
-                    margin: 29px 0 0;
+                    margin: 1.813rem 0 0;
                 }
 
                 @media (max-width: 576px) {
-                    margin: 15px 0 0;
+                    margin: 1rem 0 0;
                     order: 1;
                 }
 
@@ -274,64 +274,64 @@
                         @include flexbox;
                         @include align-items(center);
                         @include justify-content(center);
-                        width: 56px;
-                        height: 56px;
+                        width: 3.5rem;
+                        height: 3.5rem;
                         border: 1px solid transparent;
                         background-color: #090A0C;
                         background-image: url('data:image/svg+xml,<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 6.99997H9.086L6.793 9.29297C6.69749 9.38522 6.62131 9.49556 6.5689 9.61757C6.51649 9.73957 6.4889 9.87079 6.48775 10.0036C6.4866 10.1363 6.5119 10.268 6.56218 10.3909C6.61246 10.5138 6.68671 10.6255 6.7806 10.7194C6.8745 10.8133 6.98615 10.8875 7.10905 10.9378C7.23194 10.9881 7.36362 11.0134 7.4964 11.0122C7.62918 11.0111 7.7604 10.9835 7.8824 10.9311C8.00441 10.8787 8.11475 10.8025 8.207 10.707L12.207 6.70697C12.3001 6.61408 12.374 6.50373 12.4244 6.38224C12.4748 6.26075 12.5008 6.1305 12.5008 5.99897C12.5008 5.86743 12.4748 5.73719 12.4244 5.6157C12.374 5.49421 12.3001 5.38386 12.207 5.29097L8.207 1.29097C8.01923 1.10346 7.76466 0.998226 7.49929 0.998413C7.23393 0.998601 6.97951 1.1042 6.792 1.29197C6.60449 1.47974 6.49926 1.73431 6.49944 1.99968C6.49963 2.26504 6.60523 2.51946 6.793 2.70697L9.086 4.99997H1.5C1.23478 4.99997 0.98043 5.10533 0.792893 5.29286C0.605357 5.4804 0.5 5.73475 0.5 5.99997C0.5 6.26519 0.605357 6.51954 0.792893 6.70708C0.98043 6.89461 1.23478 6.99997 1.5 6.99997Z" fill="white"/></svg>');
-                        background-size: 12px;
-                        background-position: 22px center;
+                        background-size: 0.75rem;
+                        background-position: 1.375rem center;
                         background-repeat: no-repeat;
-                        @include box-shadow(0px 2px 2px rgba(11, 32, 55, 0.37));
-                        @include border-radius(12px);
+                        @include box-shadow(0 0.125rem 0.125rem rgba(11, 32, 55, 0.37));
+                        @include border-radius(0.75rem);
                         position: absolute;
                         transition: all 0.3s cubic-bezier(0.65, 0, 0.076, 1);
                         left: 0.25rem;
                         top: 0.25rem;
                         z-index: 1;
                         @media (max-width: 992px) {
-                            width: 46px;
-                            height: 46px;
-                            background-position: 16px center;
+                            width: 2.875rem;
+                            height: 2.875rem;
+                            background-position: 1rem center;
                         }
 
                         @media (max-width: 767px) {
-                            width: 40px;
-                            height: 40px;
-                            background-position: 14px center;
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            background-position: 0.875rem center;
                         }
                     }
 
                     .hs-button {
-                        min-height: 64px;
+                        min-height: 4rem;
                         font-weight: 600;
-                        font-size: 14px;
+                        font-size: 0.875rem;
                         position: relative;
-                        border: 4px solid #ffffff;
+                        border: 0.25rem solid #ffffff;
                         @include inline-flex;
                         @include align-items(center);
                         @include justify-content(center);
                         line-height: 1;
                         @include border-radius(1rem);
-                        padding: 4px;
+                        padding: 0.25rem;
                         white-space: nowrap;
                         background-color: #ffffff;
                         background-image: url(../images/icons/icon-black-arrow.svg);
-                        background-position: -2px 0;
+                        background-position: -0.125rem 0;
                         background-repeat: no-repeat;
-                        background-size: 59px !important;
+                        background-size: 3.688rem !important;
                         color: #090A0C;
-                        padding: 0 20px 0 75px;
+                        padding: 0 1.25rem 0 4.688rem;
                         transition: background-color 0.3s ease-in-out;
                         cursor: pointer;
                         @media (max-width: 992px) {
-                            min-height: 54px;
-                            background-size: 49px !important;
+                            min-height: 3.375rem;
+                            background-size: 3.063rem !important;
                         }
 
                         @media (max-width: 767px) {
-                            min-height: 48px;
-                            background-size: 43px !important;
+                            min-height: 3rem;
+                            background-size: 2.688rem !important;
                         }
 
                         &:hover,
@@ -344,7 +344,7 @@
             }
 
             .hs-error-msgs {
-                margin-top: 10px;
+                margin-top: 0.625rem;
 
                 .hs-error-msg {
                     color: #f36161;
@@ -359,12 +359,12 @@
 
     .copyright-block {
         border-top: 1px solid rgba(#fff, 0.1);
-        margin-top: 50px;
-        padding: 50px 0;
+        margin-top: 3.125rem;
+        padding: 3.125rem 0;
 
         @media (max-width: 992px) {
-            margin-top: 30px;
-            padding: 30px 0;
+            margin-top: 1.875rem;
+            padding: 1.875rem 0;
         }
         .copyright-row {
             @include flexbox;
@@ -377,15 +377,15 @@
 
         .copyright-text {
             color: var(--white);
-            font-size: 14px;
+            font-size: 0.875rem;
 
             @media (max-width: 992px) {
                 text-align: center;
-                margin-top: 25px;
+                margin-top: 1.563rem;
             }
 
             @media (max-width: 767px) {
-                font-size: 12px;
+                font-size: 0.75rem;
             }
         }
     }
@@ -394,30 +394,30 @@
         @include flexbox;
         @include align-items(center);
         @include justify-content(flex-end);
-        gap: 25px;
+        gap: 1.563rem;
 
         @media (max-width: 992px) {
             @include justify-content(center);
         }
 
         @media (max-width: 767px) {
-            gap: 15px;
+            gap: 1rem;
         }
 
         li {
             a {
                 @include inline-flex;
                 color: var(--white);
-                font-size: 12px;
+                font-size: 0.75rem;
                 font-weight: 500;
                 @include transition(0.1s, ease-in-out);
                 text-transform: uppercase;
                 text-decoration: underline;
-                text-underline-offset: 4px;
+                text-underline-offset: 0.25rem;
                 text-decoration-color: rgba(#fff, 0.3);
 
                 @media (max-width: 767px) {
-                    font-size: 10px;
+                    font-size: 0.625rem;
                 }
 
                 &:hover,
@@ -437,7 +437,7 @@
     }
 
     .site-logo-block {
-        padding: 0px 20px;
+        padding: 0 1.25rem;
         overflow: hidden;
         opacity: 0;
         pointer-events: none;
@@ -459,7 +459,7 @@
 @keyframes slide-up {
     from {
         opacity: 0;
-        transform: translateY(150px);
+        transform: translateY(9.375rem);
     }
 
     to {
