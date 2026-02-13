@@ -83,6 +83,9 @@ ul {
 .bg-gray {
     background-color: #F4F5F7 !important;
 }
+.bg-lightgray {
+    background-color: #FBFBFB !important;
+}
 
 .bg-white {
     background-color: #fff !important;
@@ -1052,10 +1055,6 @@ img {
     .container-sm,
     .container-xl {
         max-width: 1305px;
-    }
-    
-    .container-lg {
-        max-width: 1600px;
     }
 }
 

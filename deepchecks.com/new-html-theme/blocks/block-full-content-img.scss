@@ -1,0 +1,48 @@
+.content-img-section {
+    .with-border-block {
+        background: url('../assets/images/img-bg-cross-line.png') no-repeat top left, linear-gradient(180.27deg, rgba(#FAEEFC, 1) 0.25%, #fff 28.92%); 
+        background-size: auto;
+        border-width: 0px 1px;
+        border-style: solid;
+        border-color: #DEE0E9;
+        padding: 90px 135px 0px;
+        .main-title {
+            h2 {
+                font-size: 40px;
+                font-weight: 500;
+            }
+            .sort-info {
+                font-size: 20px;
+                color: #303245;
+            }
+        }
+    }
+    .action {
+        margin-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .with-icon-list {
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+        .icon-list {
+            li {
+                font-size: 20px;
+                font-weight: 700;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+                span {
+                    display: inline-block;
+                    margin-right: 10px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        flex: none;
+                    }
+                }
+            }
+        }
+    }
+}

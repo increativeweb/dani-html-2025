@@ -1,0 +1,52 @@
+.counter-section {
+    background: #FBFBFB;
+    border-top: 1px solid #DEE0E9;
+    .bg-line-gradient-block {
+        background: url('../assets/images/img-bg-line.png') no-repeat top left, linear-gradient(239.05deg, #9D60FB -0.54%, #E582BF 86.6%);
+        padding: 100px 200px 150px;
+        border-radius: 30px;
+        color: #fff;
+        .main-title {
+            .sort-info {
+                max-width: 970px;
+                margin: 0 auto;
+                & > * {
+                    font-size: 20px;
+                }
+            }
+        }
+        .icon-content-item {
+            .card-item {
+                background: transparent;
+                padding: 0;
+                .card-icon {
+                    width: 80px;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 8px;
+                }
+                .sort-info {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .counter-block {
+        max-width: 1170px;
+        margin: -140px auto 0;
+        .counter-box {
+            box-shadow: 0px 13.7273px 45.7575px 9.1515px rgba(123, 140, 149, 0.25);
+            .count-number {
+                font-size: 72px;
+                color: #303245;    
+                font-weight: 800;            
+            }
+            .sort-info {
+                color: #303245;
+                font-size: 18px;
+            }
+        }
+    }
+}

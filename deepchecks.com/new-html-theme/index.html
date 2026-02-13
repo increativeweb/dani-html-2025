@@ -27,8 +27,11 @@
 
         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
 
+        <link rel='stylesheet' id='style-main-dc-css' href='assets/css/main-dc.css' type='text/css' media='screen' />
         <link rel='stylesheet' id='style-hero-css' href='blocks/block-hero.css' type='text/css' media='screen' />
         <link rel='stylesheet' id='style-logo-slider-css' href='blocks/block-logo-slider.css' type='text/css' media='screen' />
+        <link rel='stylesheet' id='style-full-content-img-css' href='blocks/block-full-content-img.css' type='text/css' media='screen' />
+        <link rel='stylesheet' id='style-counter-css' href='blocks/block-counter.css' type='text/css' media='screen' />
     </head>
     <body class="home is-cta-sticky">
         <header class="main-header">
@@ -117,7 +120,7 @@
         <div class="bg-overly"></div>
         <main class="main-content-wrapper">
             <section class="html-section hero-section bgnone-section">
-                <div class="containe container-lg">
+                <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-7">
                             <div class="main-title mb-0">
@@ -137,7 +140,7 @@
                 </div>
             </section>
             <section class="html-section logo-slider-section pt-0 pb-md-5">
-                <div class="container container-lg">
+                <div class="container">
                     <h2 class="h5">Leading AI Teams Love & Trust Deepchecks</h2>
                     <div class="logo-sliders logo-mask-slider logo-sliders-sm">
                         <div class="logo-slider auto-slider">
@@ -170,7 +173,7 @@
                 </div>
             </section>        
             <section class="html-section tab-section">
-                <div class="container container-lg">
+                <div class="container">
                     <div class="main-title">
                         <h2>Evaluate and Monitor <br>Your End-to-End LLM Workflow </h2>
                     </div>
@@ -283,11 +286,168 @@
                     </div>
                 </div>
             </section> 
+            <section class="html-section content-img-section bg-lightgray p-0">
+                <div class="container">
+                    <div class="with-border-block">
+                        <div class="main-title text-left">
+                            <h2>Deepchecks End-to-End Agent Evaluation Platform</h2>
+                            <div class="sort-info">
+                                <p>The term “LLM Evaluation” is often associated with isolated techniques or open-source tools, typically centered on LLM-as-a-judge approaches. These methods may support early experimentation, but they do not meet the requirements of production AI, where accuracy, consistency, governance, and ownership are critical. AI teams are left stitching together fragile infrastructure that is hard to trust and even harder to operate at scale.</p>
+                                <p>At Deepchecks, LLM Evaluation is a production-grade platform that unifies evaluation, observability, testing, and monitoring, giving teams the visibility and control needed to trust AI systems in production.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="full-image-block">
+                                    <div class="image-block with-content text-center">
+                                        <img src="uploads/img-agent-evaluation-platform.svg" alt="Agent Evaluation Platform">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="btn btn-primary btn-svg">Learn more<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
+                    </div>
+                </div>
+            </section>
+            <section class="html-section counter-section">
+                <div class="container">
+                    <div class="bg-line-gradient-block">
+                        <div class="main-title mb-4 mb-md-5">
+                            <h2>Why Choose Deepchecks</h2>
+                            <div class="sort-info">
+                                <p>Generative AI introduces a new class of quality problems that cannot be solved with simple rules or unit tests. Assessing whether an output is acceptable often requires expert judgment, deep context, and repeated review. This makes quality assurance slow, inconsistent, and fragile, especially as models, prompts, and workflows evolve.</p>
+                                <p>Deepchecks is built to meet these requirements.</p>
+                            </div>
+                        </div>
+                        <div class="row g-4 icon-content-item">
+                            <div class="col-12 col-md-4 col-lg">
+                                <div class="card-item">
+                                    <div class="card-icon mb-1"><img src="uploads/icon-compare-versions-prompts.svg" alt="Compare versions of prompts"></div>
+                                    <p class="sort-info">Compare versions of prompts, models, agents, & AI systems</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg">
+                                <div class="card-item">
+                                    <div class="card-icon mb-1"><img src="uploads/icon-setup-auto-scoring-pipeline.svg" alt="Set up an auto-scoring pipelin"></div>
+                                    <p class="sort-info">Set up an auto-scoring pipeline, addressing nuanced constraints</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg">
+                                <div class="card-item">
+                                    <div class="card-icon mb-1"><img src="uploads/icon-generate-datasets.svg" alt="Generate datasets"></div>
+                                    <p class="sort-info">Generate datasets and create LLM judges within minutes</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg">
+                                <div class="card-item">
+                                    <div class="card-icon mb-1"><img src="uploads/icon-leverage-auto-scoring.svg" alt="Leverage auto-scoring"></div>
+                                    <p class="sort-info">Leverage auto-scoring for annotations and data slicing & dicing</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg">
+                                <div class="card-item">
+                                    <div class="card-icon mb-1"><img src="uploads/icon-test-apps.svg" alt="Test LLM apps"></div>
+                                    <p class="sort-info">Test LLM apps within the CI/CD and monitor them in production</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="counter-block">
+                        <div class="row icon-content-item g-4">
+                            <div class="col-md-4">
+                                <div class="card-item counter-box" style="background: #ffffff;">
+                                    <h3 class="counter count-number" data-countto="5" data-duration="2500"><span>0</span>x</h3>
+                                    <p class="sort-info">improvement of “time to production” for a new LLM app</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-item counter-box" style="background: #ffffff;">
+                                    <h3 class="counter count-number" data-countto="70" data-duration="2500"><span>0</span>%</h3>
+                                    <p class="sort-info">decrease in hallucinations and low-quality responses</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-item counter-box" style="background: #ffffff;">
+                                    <h3 class="counter count-number" data-countto="15" data-duration="2500"><span>0</span>x</h3>
+                                    <p class="sort-info"># of versions compared before choosing the winner</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-btn text-center mt-5">
+                            <a data-toggle="modal" data-target="#popup-demonov25" href="#book-demo" class="btn btn-primary btn-svg">Book a Demo <span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="html-section with-bg-line content-img-section">
+                <div class="container">
+                    <div class="main-title text-left mb-3 mb-md-5">
+                        <h2 class="h3">Enterprise-Grade Security And Compliance</h2>
+                        <div class="sort-info">Enterprise-grade security and compliance are built into the platform from day one, ensuring AI systems can be evaluated, monitored, and operated safely in production. <br>Deepchecks supports secure access controls, data isolation, and auditability to meet the requirements of regulated and security-conscious organizations.</div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="with-icon-list">
+                                <div class="full-image-block">
+                                    <img src="uploads/img-enterprise-grade-security.svg" alt="End-to-End Platform">
+                                </div>
+                                <ul class="icon-list">
+                                    <li><span><img src="uploads/icon-soc.png" alt="SOC2 Type 2"></span>SOC2 Type 2</li>
+                                    <li><span><img src="uploads/icon-gdpr.png" alt="GDPR"></span>GDPR</li>
+                                    <li><span><img src="uploads/icon-hipaa.png" alt="HIPAA Compliance"></span>HIPAA Compliance</li>
+                                    <li><span><img src="uploads/icon-single-sign-on.png" alt="Single Sign On"></span>Single Sign On</li>
+                                    <li><span><img src="uploads/icon-govcloud.png" alt="AWS GovCloud Supported"></span>AWS GovCloud Supported</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="html-section collapse-section">
+                <div class="container">
+                    <div class="collapse-block">
+                        <div class="collapse-item ">
+                            <button type="button" class="collapse-title"><h3>SaaS</h3></button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Moovit is one of the world’s leading forces in urban mobility. Serving over 1.5 billion users across more than 3,500 cities in 112 countries, the company has transformed how people navigate public transportation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item">
+                            <button type="button" class="collapse-title"><h3>Deepchecks on AWS</h3></button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Moovit is one of the world’s leading forces in urban mobility. Serving over 1.5 billion users across more than 3,500 cities in 112 countries, the company has transformed how people navigate public transportation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item ">
+                            <button type="button" class="collapse-title"><h3>Bare Metal</h3></button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Moovit is one of the world’s leading forces in urban mobility. Serving over 1.5 billion users across more than 3,500 cities in 112 countries, the company has transformed how people navigate public transportation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item ">
+                            <button type="button" class="collapse-title"><h3>Deepchecks AWS Parter Apps</h3></button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Moovit is one of the world’s leading forces in urban mobility. Serving over 1.5 billion users across more than 3,500 cities in 112 countries, the company has transformed how people navigate public transportation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                             
+                </div>
+            </section>
         </main>
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
             <div class="footer-link-section">
-                <div class="container container-lg">
+                <div class="container">
                     <div class="footer-link-block">
                         <div class="row">
                             <div class="col-sm-6 col-md-2 col-lg-1">
@@ -379,24 +539,24 @@
                 </div>
             </div>
             <div class="summary-block">
-                <div class="container container-lg">
+                <div class="container">
                     <div class="title">Ask AI for a summary about Deepchecks</div>
                     <ul class="ai-logo-block">
-                        <li><img src="assets/images/icon-chatgpt.svg" alt="ChatGPT"></li>
-                        <li><img src="assets/images/icon-perplexity-ai.svg" alt="Perplexity AI"></li>
-                        <li><img src="assets/images/icon-claude.svg" alt="Claude"></li>
-                        <li><img src="assets/images/icon-diamond.svg" alt="Diamond"></li>
-                        <li><img src="assets/images/icon-grok.svg" alt="Grok"></li>
+                        <li><img src="assets/images/icon-chatgpt.svg" alt="ChatGPT" title="ChatGPT" data-bs-toggle="tooltip"></li>
+                        <li><img src="assets/images/icon-perplexity-ai.svg" alt="Perplexity AI" title="Perplexity AI" data-bs-toggle="tooltip"></li>
+                        <li><img src="assets/images/icon-claude.svg" alt="Claude" title="Claude" data-bs-toggle="tooltip"></li>
+                        <li><img src="assets/images/icon-diamond.svg" alt="Diamond" title="Diamond" data-bs-toggle="tooltip"></li>
+                        <li><img src="assets/images/icon-grok.svg" alt="Grok" title="Grok" data-bs-toggle="tooltip"></li>
                     </ul>
                 </div>
             </div>
             <div class="site-logo-block">
-                <div class="container container-lg">
+                <div class="container">
                     <div class="logo"><img src="assets/images/img-site-footer-logo.png" alt="Deepchecks"></div>
                 </div>
             </div>
             <div class="footer-copyright-section">
-                <div class="container container-lg">
+                <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <ul id="menu-footer-menu" class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li>

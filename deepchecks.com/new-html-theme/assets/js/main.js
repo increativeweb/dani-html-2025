@@ -742,3 +742,56 @@ function updateHeaderHeight(header) {
     header.style.setProperty('--header-h', `${innerHeight}px`);
     header.style.setProperty('--vh', `${window.innerHeight / 100}px`);
 }
+
+// Collapse
+if (jQuery('.collapse-item').length) {
+    jQuery(".collapse-item .collapse-title").click(function () {
+        if (jQuery(this).closest(".collapse-item").hasClass("is-open")) {
+            jQuery(this).closest(".collapse-item").stop(true,true).removeClass("is-open");
+            jQuery(this).closest(".collapse-item").find(".collapse-body").stop(true,true).hide("fast");
+        } else {
+            jQuery(".collapse-item").removeClass("is-open");
+            jQuery(".collapse-item").find(".collapse-body").stop(true,true).hide();
+            jQuery(this).closest(".collapse-item").stop(true,true).addClass("is-open");
+            jQuery(this).closest(".collapse-item").find(".collapse-body").stop(true,true).slideDown("fast");
+        }
+        return false;
+    });
+}
+
+// Counter
+if (jQuery('.counter').length) {
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Trigger when 50% of the element is visible
+    };
+    // Create a new observer
+    let observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let $this = jQuery(entry.target);
+                var countTo = $this.attr("data-countto");
+                var countDuration = parseInt($this.attr("data-duration"));
+
+                jQuery({ counter: $this.find('span').text() }).animate({
+                    counter: countTo
+                }, {
+                    duration: countDuration,
+                    easing: "linear",
+                    step: function () {
+                        $this.find('span').text(Math.floor(this.counter));
+                    },
+                    complete: function () {
+                        $this.find('span').text(this.counter);
+                    }
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+    // Target each element with the class .counter
+    jQuery('.counter').each(function () {
+        observer.observe(this);
+    });
+}
