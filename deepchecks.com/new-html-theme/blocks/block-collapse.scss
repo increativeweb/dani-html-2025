@@ -1,0 +1,74 @@
+.collapse-section {
+    max-width: 100%;
+    .with-border-block {
+        background: #FBFBFB;
+        border-width: 1px 1px 0px 1px;
+        border-style: solid;
+        border-color: #DEE0E9;
+        &.is-grid {
+            display: flex;
+            & > * {
+                width: 100%;
+                max-width: 50%;
+                flex: 1;
+            }
+        }
+        .main-title {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .collapse-block {
+        .collapse-item {
+            padding: 0;
+            border-width: 1px 0 0px 1px;
+            border-style: solid;
+            border-color: #DEE0E9;
+            &:first-child {
+                border-top: 0;
+            }
+            .collapse-title {
+                background-position: top right;
+                background-repeat: no-repeat;
+                padding: 30px 40px;
+                &::after {
+                    content: none;
+                }
+                h3 {                    
+                    font-size: 50px;
+                    letter-spacing: -0.03em;
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    gap: 36px;
+                }
+            }
+            &:nth-child(4n+1) {
+                .collapse-title {
+                    background-image: url('../assets/images/img-bg-collapse-green.png');
+                }
+            }
+            &:nth-child(4n+2) {
+                .collapse-title {
+                    background-image: url('../assets/images/img-bg-collapse-purple.png');
+                }
+            }
+            &:nth-child(4n+3) {
+                .collapse-title {
+                    background-image: url('../assets/images/img-bg-collapse-orange.png');
+                }
+            }
+            &:nth-child(4n+4) {
+                .collapse-title {
+                    background-image: url('../assets/images/img-bg-collapse-pink.png');
+                }
+            }
+            .collapse-body {
+                margin-top: 0;
+                padding: 40px;
+                background: rgba(235, 222, 255, 0.2) url('../assets/images/img-collapse-body-bg.png') no-repeat top right;
+                border-top: 1px solid #DEE0E9;
+            }
+        }
+    }
+}

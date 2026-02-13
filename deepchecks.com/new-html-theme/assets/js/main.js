@@ -745,15 +745,17 @@ function updateHeaderHeight(header) {
 
 // Collapse
 if (jQuery('.collapse-item').length) {
-    jQuery(".collapse-item .collapse-title").click(function () {
-        if (jQuery(this).closest(".collapse-item").hasClass("is-open")) {
-            jQuery(this).closest(".collapse-item").stop(true,true).removeClass("is-open");
-            jQuery(this).closest(".collapse-item").find(".collapse-body").stop(true,true).hide("fast");
+    jQuery(document).on("click", ".collapse-item .collapse-title", function () {
+        var $this = jQuery(this).closest(".collapse-item");
+
+        if ($this.hasClass("is-open")) {
+            $this.removeClass("is-open");
+            $this.find(".collapse-body").stop(true, true).slideUp(300);
         } else {
-            jQuery(".collapse-item").removeClass("is-open");
-            jQuery(".collapse-item").find(".collapse-body").stop(true,true).hide();
-            jQuery(this).closest(".collapse-item").stop(true,true).addClass("is-open");
-            jQuery(this).closest(".collapse-item").find(".collapse-body").stop(true,true).slideDown("fast");
+            $(".collapse-item").removeClass("is-open");
+            $(".collapse-item").find(".collapse-body").stop(true, true).slideUp(300); 
+            $this.addClass("is-open");
+            $this.find(".collapse-body").stop(true, true).slideDown(300); 
         }
         return false;
     });
