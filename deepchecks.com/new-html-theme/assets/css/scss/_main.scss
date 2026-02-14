@@ -776,7 +776,7 @@ a {
 }
 
 .btn-white {
-    color: #303245 !important;
+    color: #9D60FB !important;
     background-color: $white;
     border: 1px solid $white;
     min-height: 56px;
@@ -807,10 +807,10 @@ a {
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active:focus,
     &:not(:disabled):not(.disabled):active:focus {
-        background-color: transparent !important;
-        color: $white !important;
-        border-color: $white !important;
-        box-shadow: 0px 4px 20px rgba(#000, 0.5) !important;
+        background-color: rgba(#ffffff, 0.95) !important;
+        color: #9D60FB !important;
+        border-color: transparent !important;
+        box-shadow: 0px 4px 20px rgba(147, 86, 241, 0.5) !important;
     }
 
     @media (max-width:991px) {

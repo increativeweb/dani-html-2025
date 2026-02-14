@@ -10,6 +10,39 @@
     @media (max-width: 767px) {
         padding: 30px 0;
     }
+    .footer-cta-block {
+        background: url('../images/img-footer-cta-bg.png') no-repeat top center, linear-gradient(283.45deg, rgba(255, 255, 255, 0) 64.42%, rgba(255, 255, 255, 0.8) 99.73%), linear-gradient(266.46deg, rgba(157, 96, 251, 0) 43.96%, rgba(157, 96, 251, 0.2) 103.01%), linear-gradient(239.05deg, #9D60FB -0.54%, #E582BF 86.6%);
+        border-radius: 30px;
+        padding: 70px 70px 0;
+        color: #fff;
+        margin-bottom: 150px;
+        @media (max-width: 1200px) {
+            padding: 40px 40px 0;
+            margin-bottom: 100px;
+        }
+        @media (max-width: 767px) {
+            padding: 40px 20px 0;
+            margin-bottom: 70px;
+        }
+        .main-title {
+            h2 {
+                font-size: 90px;
+                letter-spacing: -0.02em;
+                margin-bottom: 65px;
+                @media (max-width: 1200px) {
+                    font-size: 70px;
+                    margin-bottom: 45px;
+                }
+                @media (max-width: 992px) {
+                    font-size: 60px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 46px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
     .footer-link-section {
         border-top: 1px solid #303245;
         border-bottom: 1px solid #303245;
