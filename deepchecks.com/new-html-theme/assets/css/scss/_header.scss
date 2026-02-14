@@ -494,9 +494,11 @@
         }
 
         .header-first-block {
-            @include justify-content(center);
+            @include justify-content(flex-start);
         }
-
+        .header-logo {
+            margin-left: 30px;
+        }
         .sidebar-icon {
             display: inline-block;
             cursor: pointer;
@@ -539,10 +541,12 @@
                 // @include flex-wrap(wrap);
                 // @include flex-direction(inherit);
                 // @include justify-content(start);
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
                 margin-left: 5px;
                 width: 100%;
-                display: block;
                 min-width: 100%;
+                align-items: flex-start;
 
                 >li {
                     margin: 0 !important;
@@ -595,14 +599,25 @@
                 @include flexbox();
                 @include align-items(flex-start);
                 @include flex-wrap(wrap);
-                @include flex-direction(inherit);
+                @include flex-direction(row);
                 @include justify-content(start);
+                gap: 20px;
+                margin: 20px 0 30px;
+                .nav-item {
+                    flex: 1;
+                    margin: 0 !important;
+                    .btn {
+                        width: 100%;
+                        justify-content:center;
+                    }
+                }
             }
 
             // min-height: calc(100vh - 56px);
             overflow-y: auto;
             width: 100%;
-            display: block;
+            display: flex;
+            flex-direction: column;
             padding: 100px 15px 15px;
             background-color: $white;
             @include transition(0.4s, ease-in-out);
