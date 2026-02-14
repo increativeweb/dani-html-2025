@@ -383,7 +383,10 @@ a {
     @include inline-flex;
     @include align-items(center);
     @include justify-content(center);
-
+    @media (max-width: 992px) {
+        min-height: 48px;
+        font-size: 16px;
+    }
     img {
         margin-right: 8px;
         margin-bottom: 0px !important;
@@ -412,8 +415,6 @@ a {
     }
 
     @media (max-width:575px) {
-        min-width: 100%;
-        padding: 0 12px;
     }
 
     // &.btn-svg {
@@ -2029,7 +2030,7 @@ img {
 
 .main-content-wrapper {
     flex: 1 1 auto;
-    // padding-top: 80px;
+    padding-top: var(--header-h);
     overflow: hidden;
     // @media(max-width:991px){
     //     padding-top: 56px;

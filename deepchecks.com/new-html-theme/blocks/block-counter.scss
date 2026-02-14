@@ -6,16 +6,31 @@
         padding: 100px 200px 150px;
         border-radius: 30px;
         color: #fff;
+        @media (max-width: 1440px) {
+            padding: 60px 40px 80px;
+        }
+        @media (max-width: 767px) {
+            border-radius: 0px;
+            margin: 0 -15px;
+            padding: 50px 15px 50px;
+        }
         .main-title {
             .sort-info {
                 max-width: 970px;
                 margin: 0 auto;
                 & > * {
                     font-size: 20px;
+                    @media (max-width: 767px) {
+                        font-size: 18px;
+                    }
                 }
             }
         }
         .icon-content-item {
+            margin-bottom: 10px;
+            @media (max-width: 1440px) {
+                margin-bottom: 80px;
+            }
             .card-item {
                 background: transparent;
                 padding: 0;
@@ -36,12 +51,28 @@
     .counter-block {
         max-width: 1170px;
         margin: -140px auto 0;
+        @media (max-width: 1440px) {
+            margin: -140px auto 0;
+        }
+        @media (max-width: 1200px) {
+            margin: -140px 30px 0;
+        }
+        @media (max-width: 767px) {
+            margin: -100px 30px 0;
+        }
         .counter-box {
             box-shadow: 0px 13.7273px 45.7575px 9.1515px rgba(123, 140, 149, 0.25);
+            @media (max-width: 992px) {
+                font-size: 60px;
+                padding: 20px 15px;
+            }          
             .count-number {
                 font-size: 72px;
                 color: #303245;    
-                font-weight: 800;            
+                font-weight: 800;  
+                @media (max-width: 992px) {
+                    font-size: 60px;
+                }          
             }
             .sort-info {
                 color: #303245;

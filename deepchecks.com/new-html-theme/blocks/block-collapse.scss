@@ -7,15 +7,24 @@
         border-color: #DEE0E9;
         &.is-grid {
             display: flex;
+            @media (max-width: 992px) {
+                flex-direction: column;
+            }
             & > * {
                 width: 100%;
                 max-width: 50%;
                 flex: 1;
+                @media (max-width: 992px) {
+                    max-width: 100%;
+                }
             }
         }
         .main-title {
             display: flex;
             align-items: center;
+            h2 {
+                margin-bottom: 0;
+            }
         }
     }
     .collapse-block {
@@ -24,13 +33,24 @@
             border-width: 1px 0 0px 1px;
             border-style: solid;
             border-color: #DEE0E9;
+            @media (max-width: 991px) {
+                border-left: 0;
+            }
             &:first-child {
-                border-top: 0;
+                @media (min-width: 991px) {
+                    border-top: 0;
+                }
             }
             .collapse-title {
                 background-position: top right;
                 background-repeat: no-repeat;
                 padding: 30px 40px;
+                @media (max-width: 1200px) {
+                    padding: 20px 25px;
+                }
+                @media (max-width: 767px) {
+                    padding: 15px;
+                }
                 &::after {
                     content: none;
                 }
@@ -41,6 +61,22 @@
                     display: flex;
                     align-items: center;
                     gap: 36px;
+                    padding-right: 0;
+                    @media (max-width: 1200px) {   
+                        font-size: 30px;
+                        gap: 20px;
+                    }
+                    @media (max-width: 767px) {   
+                        font-size: 24px;
+                    }
+                    .icon {
+                        img {
+                            max-height: 60px;
+                            @media (max-width: 1200px) {  
+                                max-height: 40px;
+                            }
+                        }
+                    }
                 }
             }
             &:nth-child(4n+1) {
@@ -68,6 +104,39 @@
                 padding: 40px;
                 background: rgba(235, 222, 255, 0.2) url('../assets/images/img-collapse-body-bg.png') no-repeat top right;
                 border-top: 1px solid #DEE0E9;
+                @media (max-width: 1200px) {
+                    padding: 20px 25px;
+                }
+                @media (max-width: 767px) {
+                    padding: 15px;
+                }
+                .sort-info {
+                    p {                        
+                        font-weight: 400;
+                        @media (max-width: 992px) {
+                            font-size: 16px;
+                        }
+                    }
+                    ul {
+                        padding-left: 20px;
+                        li {
+                            list-style-type: disc;
+                            font-size: 18px;
+                            &:not(:last-child) {
+                                margin-bottom: 5px;
+                            }
+                            @media (max-width: 992px) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                .action {
+                    margin-top: 24px;
+                    a {
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }

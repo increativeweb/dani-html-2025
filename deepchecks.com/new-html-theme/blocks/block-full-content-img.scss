@@ -6,10 +6,22 @@
         border-style: solid;
         border-color: #DEE0E9;
         padding: 90px 135px 0px;
+        @media (max-width: 1440px) {
+            padding: 60px 40px 0px;
+        }
+        @media (max-width: 767px) {
+            background: url('../assets/images/img-bg-cross-line.png') no-repeat top center, linear-gradient(180.27deg, rgba(#FAEEFC, 1) 0.25%, #fff 28.92%); 
+            padding: 60px 15px 10px;
+            margin: 0 -15px;
+            border-width: 0px;
+        }
         .main-title {
             h2 {
                 font-size: 40px;
                 font-weight: 500;
+                @media (max-width: 767px) {
+                    font-size: 32px;
+                }
             }
             .sort-info {
                 font-size: 20px;
@@ -21,17 +33,37 @@
         margin-top: 50px;
         padding-bottom: 50px;
         text-align: center;
+        @media (max-width: 767px) {
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
     }
     .with-icon-list {
         display: flex;
         align-items: center;
         padding-left: 40px;
+        @media (max-width: 1200px) {
+            padding-left: 0px;
+        }
+        @media (max-width: 992px) {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
         .icon-list {
+            flex: 0 0 auto;
             li {
                 font-size: 20px;
-                font-weight: 700;
+                font-weight: 700;    
+                white-space: nowrap;
+                @media (max-width: 1200px) {
+                    font-size: 16px;
+                }
                 &:not(:last-child) {
                     margin-bottom: 20px;
+                    @media (max-width: 767px) {
+                        margin-bottom: 12px;
+                    }
                 }
                 span {
                     display: inline-block;
@@ -40,6 +72,10 @@
                         width: 40px;
                         height: 40px;
                         flex: none;
+                        @media (max-width: 1200px) {
+                            width: 30px;
+                            height: 30px;
+                        }
                     }
                 }
             }
