@@ -12,27 +12,51 @@
                 color: #655C64;
                 font-weight: 400;
                 font-size: 20px;
-                display: flex;
-                align-items: center;
-                color: #655C64;
                 padding: 9px;
                 border-radius: 30px !important;
                 border: none;
-                gap: 8px;
-                span {
-                    padding: 8px 28px;
-                    display: inline-flex;
+                transition: all 0.3s ease-in-out;
+                font-family: "Plus Jakarta Sans",sans-serif;
+                margin: 0 -9px;
+                span:not(.icon) {
+                    padding: 8px 25px;
+                    display: flex;
                     align-items: center;
+                    gap: 12px;
+                    border-radius: 30px;
+                    transition: all 0.1s ease-in-out;
+                    .icon {
+                        line-height: 0.7;
+                        display: inline-block;
+                        transition: all 0.1s ease-in-out;
+                        img {                            
+                            max-height: 20px;
+                        }
+                    }
                 }
                 &.active {
                     background: linear-gradient(84.3deg, rgba(255, 0, 126, 0.46) 28.49%, rgba(98, 0, 248, 0.46) 98.04%), rgba(157, 96, 251, 0.27);
                     box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.26), inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+                    margin: 0;
                     span:not(.icon) {                        
                         background: rgba(255, 255, 255, 0.22);
                         box-shadow: inset 0px 4px 4px rgba(218, 211, 224, 0.29), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
-                        border-radius: 296px;
+                        color: #FFFFFF;
+                        .icon {
+                            filter: brightness(0) invert(1);
+                        }
                     }
 
+                }
+                &:hover, &:focus {
+                    background: linear-gradient(84.3deg, rgba(255, 0, 126, 0.46) 28.49%, rgba(98, 0, 248, 0.46) 98.04%), rgba(157, 96, 251, 0.27);
+                    box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.26), inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+                    span:not(.icon) {   
+                        color: #FFFFFF;
+                        .icon {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
                 }
             }
         }
