@@ -10,7 +10,7 @@
         padding: 150px 0 100px;
     }
     @media (max-width: 767px) {
-        padding: 100px 0 40px;
+        padding: 130px 0 30px;
         background: url('../assets/images/img-hero-bg-m.png') no-repeat bottom center;
     }
     .main-title {
@@ -64,6 +64,14 @@
         }
         .action {
             margin-top: 32px;
+        }
+    }
+    .image-block {
+        dotlottie-wc {
+            @media (max-width: 575px) {
+                width: 340px !important;        
+                height: 300px !important;
+            }
         }
     }
 }
