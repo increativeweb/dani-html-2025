@@ -3,20 +3,31 @@
     .icw-tab-block {
         .nav-tabs {
             display: flex;
+            flex-wrap: nowrap;
             align-items: flex-start;
+            justify-content: space-between;
             padding: 7px;
             background: linear-gradient(90.31deg, rgba(250, 245, 255, 0.2) 7.88%, rgba(244, 233, 255, 0.2) 110.37%), rgba(255, 255, 255, 0.9);
             box-shadow: 0px 4px 4px rgba(76, 53, 112, 0.34);
             border-radius: 40px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            overflow-x: auto;
+
             .nav-link {
                 width: auto;
                 font-weight: 400;
                 font-size: 20px;
                 border-radius: 30px !important;
                 border: none;
-                transition: background 0.3s ease-in-out;
+                transition: background 0.1s ease-in-out;
                 font-family: "Plus Jakarta Sans",sans-serif;
                 height: 64px;
+                padding: 0;
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                    height: 53px;
+                }
                 span:not(.icon) {
                     display: flex;
                     align-items: center;
@@ -24,12 +35,25 @@
                     border-radius: 30px;
                     color: #655C64;
                     transition: all 0.1s ease-in-out;
-                    .icon {
+                    white-space: nowrap; 
+                    padding: 0 18px;
+                    @media (max-width: 992px) { 
+                        gap: 8px;
+                        padding: 0 15px;
+                    }
+                    .icon {           
+                        height: 20px;
+                        width: 20px;
                         line-height: 0.7;
                         display: inline-block;
                         transition: all 0.1s ease-in-out;
-                        img {                            
-                            max-height: 20px;
+                        img {            
+                            height: 100%;
+                            width: 100%;
+                        }
+                        @media (max-width: 992px) {        
+                            height: 16px;
+                            width: 16px;
                         }
                     }
                 }
@@ -37,11 +61,18 @@
                     padding: 9px;
                     background: linear-gradient(84.3deg, rgba(255, 0, 126, 0.46) 28.49%, rgba(98, 0, 248, 0.46) 98.04%), rgba(157, 96, 251, 0.27);
                     box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.26), inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+                    @media (max-width: 992px) {        
+                        padding: 6px;           
+                    }
                     span:not(.icon) { 
                         padding: 8px 25px;                       
                         background: rgba(255, 255, 255, 0.22);
                         box-shadow: inset 0px 4px 4px rgba(218, 211, 224, 0.29), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
                         color: #FFFFFF !important;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                        @media (max-width: 992px) {        
+                            padding: 8px 20px;           
+                        }
                         .icon {
                             filter: brightness(0) invert(1) !important;
                         }
@@ -64,6 +95,9 @@
             box-shadow: 4px 4px 16px rgba(165, 165, 165, 0.12);
             border-radius: 30px;
             overflow: hidden;
+            @media (max-width: 992px) {  
+                border-radius: 10px;
+            }
             &::before {
                 content: none;
             }
