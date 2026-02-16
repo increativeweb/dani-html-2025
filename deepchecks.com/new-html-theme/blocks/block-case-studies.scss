@@ -1,12 +1,16 @@
 .case-studies-section {
     background: #FBFBFB url('../assets/images/img-bg-square-lg.png') no-repeat center center;
     padding: 60px 0;
+    @media(max-width: 992px) {
+        padding: 30px 0;
+    }
     .main-title {
         h2 {
             letter-spacing: -0.03em;
         }
     }
     .case-studies-slider {
+        margin-bottom: 0;
         @media (min-width: 1200px) {
             margin-left: -15px;
             margin-right: -15px;
@@ -14,6 +18,9 @@
         .slick-list {
             border-radius: 20px;
             margin: 0 -15px;
+            @media(max-width: 992px) {
+                margin: 0 -10px;
+            }
         }
         .slick-track {
             display: flex;
@@ -38,6 +45,10 @@
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     z-index: 1;
+    @media(max-width: 992px) {
+        padding: 25px;
+        margin: 0 10px;
+    }
     &::before {
         content: '';
         background-image: url('../assets/images/img-card-bg.png');
@@ -65,10 +76,19 @@
         gap: 22px;
         flex-direction: column;
         padding: 0;
+        @media(max-width: 992px) {
+            gap: 18px;
+        }
         .action {
             a {
                 transition: all 0.3s ease-in-out;
                 display: inline-block;
+                @media(max-width: 992px) {
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
             }
         }
         .card-title {
@@ -76,10 +96,16 @@
             font-weight: 500;
             color: #303245;
             margin-bottom: 0;
+            @media(max-width: 992px) {
+                font-size: 20px;
+            }
         }
         .sort-info {
             font-size: 18px;
             color: #303245;
+            @media(max-width: 992px) {
+                font-size: 16px;
+            }
         }
     }
     &:hover, &:focus {
