@@ -253,7 +253,7 @@
     .github-btn {
         @include justify-content(space-between);
         transition: none !important;
-        padding: 0 8px 0 15px !important;
+        padding: 0 15px !important;
         .btn-icon {
             max-width: 24px;
             max-height: 24px;
