@@ -25,14 +25,14 @@
         <meta name="msapplication-TileImage" content="uploads/favicon-300x300.png" />
 
         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-
         <link rel='stylesheet' id='style-main-dc-css' href='assets/css/main-dc.css' type='text/css' media='screen' />
         <link rel='stylesheet' id='style-hero-css' href='blocks/block-hero.css' type='text/css' media='screen' />
         <link rel='stylesheet' id='style-logo-slider-css' href='blocks/block-logo-slider.css' type='text/css' media='screen' />
+        <link rel='stylesheet' id='style-tab-css' href='blocks/block-tab.css' type='text/css' media='screen' />
         <link rel='stylesheet' id='style-full-content-img-css' href='blocks/block-full-content-img.css' type='text/css' media='screen' />
         <link rel='stylesheet' id='style-counter-css' href='blocks/block-counter.css' type='text/css' media='screen' />
         <link rel='stylesheet' id='style-collapse-css' href='blocks/block-collapse.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-collapse-css' href='blocks/block-case-studies.css' type='text/css' media='screen' />
+        <link rel='stylesheet' id='style-case-studies-css' href='blocks/block-case-studies.css' type='text/css' media='screen' />
     </head>
     <body class="home is-cta-sticky">
         <header class="main-header">
@@ -134,7 +134,9 @@
                         </div>
                         <div class="col-md-6">
                             <div class="image-block text-center mt-5 mt-md-0">
-                                <img src="uploads/img-hero-layers.svg" alt="Evaluate AI Progress with Know Your Agent">
+                                <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
+                                <lottie-player src="uploads/lottie/hero-2026.json" background="transparent" speed="1" loop autoplay style="width: 580px; height: 476px; margin: 0 auto"></lottie-player>
+                                <!-- <img src="uploads/img-hero-layers.svg" alt="Evaluate AI Progress with Know Your Agent"> -->
                             </div>     
                             <div class="action d-block d-md-none text-center mt-5">
                                 <a href="#" class="btn btn-primary btn-svg">Evaluate Models<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
@@ -176,112 +178,66 @@
                     </div>
                 </div>
             </section>        
-            <section class="html-section tab-section d-none">
+            <section class="html-section tab-section">
                 <div class="container">
-                    <div class="main-title">
-                        <h2>Evaluate and Monitor <br>Your End-to-End LLM Workflow </h2>
-                    </div>
-                    <div class="icw-tab-block style-2">
+                    <div class="icw-tab-block">
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-version-comparison-tab" data-toggle="tab" data-target="#nav-version-comparison" type="button" role="tab" aria-controls="nav-version-comparison" aria-selected="true">Version Comparison</button>
-                            <button class="nav-link" id="nav-ai-assisted-annotations-tab" data-toggle="tab" data-target="#nav-ai-assisted-annotations" type="button" role="tab" aria-controls="nav-ai-assisted-annotations" aria-selected="false">AI-Assisted Annotations</button>
-                            <button class="nav-link" id="nav-evalset-management-tab" data-toggle="tab" data-target="#nav-evalset-management" type="button" role="tab" aria-controls="nav-evalset-management" aria-selected="false">EvalSet Management</button>
-                            <button class="nav-link" id="nav-properties-tab" data-toggle="tab" data-target="#nav-properties" type="button" role="tab" aria-controls="nav-properties" aria-selected="false">Properties</button>
+                            <button class="nav-link active" id="nav-start-immediately-tab" data-toggle="tab" data-target="#nav-start-immediately" type="button" role="tab" aria-controls="nav-start-immediately" aria-selected="true"><span>Start Immediately</span></button>
+                            <button class="nav-link" id="nav-auto-annotations-tab" data-toggle="tab" data-target="#nav-auto-annotations" type="button" role="tab" aria-controls="nav-auto-annotations" aria-selected="false"><span>Auto annotations</button>
+                            <button class="nav-link" id="nav-start-immediatelys-tab" data-toggle="tab" data-target="#nav-start-immediatelys" type="button" role="tab" aria-controls="nav-start-immediatelys" aria-selected="false"><span>Start Immediately</span></button>
+                            <button class="nav-link" id="nav-iterate-quickly-tab" data-toggle="tab" data-target="#nav-iterate-quickly" type="button" role="tab" aria-controls="nav-iterate-quickly" aria-selected="false"><span>Iterate quickly</span></button>
+                            <button class="nav-link" id="nav-gain-insights-tab" data-toggle="tab" data-target="#nav-gain-insights" type="button" role="tab" aria-controls="nav-gain-insights" aria-selected="false"><span>Gain Insights</span></button>
+                            <button class="nav-link" id="nav-agents-tab" data-toggle="tab" data-target="#nav-agents" type="button" role="tab" aria-controls="nav-agents" aria-selected="false"><span>Agents</span></button>
+                            <button class="nav-link" id="nav-production-monitoring-tab" data-toggle="tab" data-target="#nav-production-monitoring" type="button" role="tab" aria-controls="nav-production-monitoring" aria-selected="false"><span>Production Monitoring</span></button>
                         </div>
                         <div class="content-block">
                             <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane show active" id="nav-version-comparison" role="tabpanel" aria-labelledby="nav-version-comparison-tab">                                                    
-                                    <div class="row">
-                                        <div class="col-md-6 order-2 order-md-1">
-                                            <div class="tab-details">
-                                                <h3>Compare Versions of Your LLM Apps</h3>
-                                                <div class="sort-info">
-                                                    <ul>
-                                                        <li>Experiment with different prompts, models, RAG setup, routing mechanism or any other parameters. </li>
-                                                        <li>Get a high-level overview of the performance differences. </li>
-                                                        <li>Find the key differences of between each versions.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 order-2 order-md-1">
-                                            <div class="image-block">
-                                                <div class="logo-img-block">
-                                                    <img src="https://deepchecks.com/wp-content/uploads/2023/07/LLM-Evaluation.svg" alt="Deepchecks For LLM Evaluation">
-                                                </div>
-                                            </div>
+                                <div class="tab-pane show active" id="nav-start-immediately" role="tabpanel" aria-labelledby="nav-start-immediately-tab"> 
+                                    <div class="tab-details">dszf
+                                        <div class="image-block">
+                                            <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="nav-ai-assisted-annotations" role="tabpanel" aria-labelledby="nav-ai-assisted-annotations-tab">                                                    
-                                    <div class="row">
-                                        <div class="col-md-6 order-2 order-md-1">
-                                            <div class="tab-details">
-                                                <h3>Compare Versions of Your LLM Apps</h3>
-                                                <div class="sort-info">
-                                                    <ul>
-                                                        <li>Experiment with different prompts, models, RAG setup, routing mechanism or any other parameters. </li>
-                                                        <li>Get a high-level overview of the performance differences. </li>
-                                                        <li>Find the key differences of between each versions.</li>
-                                                        <li>Experiment with different prompts, models, RAG setup, routing mechanism or any other parameters. </li>
-                                                        <li>Get a high-level overview of the performance differences. </li>
-                                                        <li>Find the key differences of between each versions.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 order-2 order-md-1">
-                                            <div class="image-block">
-                                                <div class="logo-img-block">
-                                                    <img src="https://deepchecks.com/wp-content/uploads/2023/07/LLM-Evaluation.svg" alt="Deepchecks For LLM Evaluation">
-                                                </div>
-                                            </div>
+                                <div class="tab-pane" id="nav-auto-annotations" role="tabpanel" aria-labelledby="nav-auto-annotations-tab">  
+                                    <div class="tab-details">sdfdsf
+                                        <div class="image-block">
+                                            <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="nav-evalset-management" role="tabpanel" aria-labelledby="nav-evalset-management-tab">                                                    
-                                    <div class="row">
-                                        <div class="col-md-6 order-2 order-md-1">
-                                            <div class="tab-details">
-                                                <h3>Compare Versions of Your LLM Apps</h3>
-                                                <div class="sort-info">
-                                                    <ul>
-                                                        <li>Experiment with different prompts, models, RAG setup, routing mechanism or any other parameters. </li>
-                                                        <li>Find the key differences of between each versions.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 order-2 order-md-1">
-                                            <div class="image-block">
-                                                <div class="logo-img-block">
-                                                    <img src="https://deepchecks.com/wp-content/uploads/2023/07/LLM-Evaluation.svg" alt="Deepchecks For LLM Evaluation">
-                                                </div>
-                                            </div>
+                                <div class="tab-pane" id="nav-start-immediatelys" role="tabpanel" aria-labelledby="nav-start-immediatelys-tab">  
+                                    <div class="tab-details">ZAdfs
+                                        <div class="image-block">
+                                            <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="nav-properties" role="tabpanel" aria-labelledby="nav-properties-tab">                                                    
-                                    <div class="row">
-                                        <div class="col-md-6 order-2 order-md-1">
-                                            <div class="tab-details">
-                                                <h3>Compare Versions of Your LLM Apps</h3>
-                                                <div class="sort-info">
-                                                    <ul>
-                                                        <li>Experiment with different prompts, models, RAG setup, routing mechanism or any other parameters. </li>
-                                                        <li>Get a high-level overview of the performance differences. </li>
-                                                        <li>Find the key differences of between each versions.</li>
-                                                        <li>Find the key differences of between each versions.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                <div class="tab-pane" id="nav-iterate-quickly" role="tabpanel" aria-labelledby="nav-iterate-quickly-tab">              
+                                    <div class="tab-details">jl,
+                                        <div class="image-block">
+                                            <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
                                         </div>
-                                        <div class="col-md-6 order-2 order-md-1">
-                                            <div class="image-block">
-                                                <div class="logo-img-block">
-                                                    <img src="https://deepchecks.com/wp-content/uploads/2023/07/LLM-Evaluation.svg" alt="Deepchecks For LLM Evaluation">
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="nav-gain-insights" role="tabpanel" aria-labelledby="nav-gain-insights-tab">              
+                                    <div class="tab-details">nhgj
+                                        <div class="image-block">
+                                            <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="nav-agents" role="tabpanel" aria-labelledby="nav-agents-tab">              
+                                    <div class="tab-details">hkm
+                                        <div class="image-block">
+                                            <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="nav-production-monitoring" role="tabpanel" aria-labelledby="nav-production-monitoring-tab">              
+                                    <div class="tab-details">gh
+                                        <div class="image-block">
+                                            <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
                                         </div>
                                     </div>
                                 </div>
