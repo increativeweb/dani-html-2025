@@ -434,6 +434,37 @@
                         </div>  
                     </div>                           
                 </div>
+                <script>
+                    $(document).ready(function () {
+
+                        const $items = $(".collapse-item");
+                        let index = 0;
+
+                        function openNextItem() {
+
+                            // close all items first
+                            $items.removeClass("is-open");
+                            $items.find(".collapse-body").stop(true, true).slideUp(300);
+
+                            // open current item
+                            const $this = $items.eq(index);
+
+                            $this.addClass("is-open");
+                            $this.find(".collapse-body").stop(true, true).slideDown(300);
+
+                            // move to next item
+                            index = (index + 1) % $items.length;
+                        }
+
+                        // open first immediately
+                        openNextItem();
+
+                        // repeat every 5 seconds
+                        setInterval(openNextItem, 5000);
+
+                    });
+
+                </script>
             </section>            
             <section class="html-section logo-slider-section with-border">
                 <div class="container">
