@@ -109,14 +109,20 @@
             margin-bottom: 20px;
 
             li {
-                padding: 5px 0;
+                padding: 8px 0;
                 @include flexbox();
                 @include flex-wrap(wrap);
-
+                &.footer-title{
+                    font-size: 16px;
+                    color: $white;
+                    font-weight: 400;
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                }
                 &.footer-title>a {
                     font-size: 16px;
                     color: $white;
-                    font-weight: 500;
+                    font-weight: 400;
                     margin-bottom: 15px;
                     text-transform: uppercase;
                 }
@@ -126,7 +132,7 @@
                     color: #ffffff;
                     font-weight: normal;
                     font-size: 14px;
-                    font-weight: 500;
+                    font-weight: 700;
                     position: relative;
                     z-index: 1;
                     @include transition(0.1s, ease-in-out);

@@ -24,6 +24,7 @@
             align-items: center;
             h2 {
                 margin-bottom: 0;
+                max-width: 588px;
             }
         }
     }
@@ -44,7 +45,8 @@
             .collapse-title {
                 background-position: top right;
                 background-repeat: no-repeat;
-                padding: 30px 40px;
+                background-size: cover;
+                padding: 40px;
                 @media (max-width: 1200px) {
                     padding: 20px 25px;
                 }
@@ -60,18 +62,21 @@
                     font-weight: 400;
                     display: flex;
                     align-items: center;
-                    gap: 36px;
+                    gap: 24px;
                     padding-right: 0;
+                    @media (max-width: 1440px) {   
+                        font-size: 40px;
+                        gap: 20px;
+                    }
                     @media (max-width: 1200px) {   
                         font-size: 30px;
-                        gap: 20px;
                     }
                     @media (max-width: 767px) {   
                         font-size: 24px;
                     }
                     .icon {
                         img {
-                            max-height: 60px;
+                            max-height: 70px;
                             @media (max-width: 1200px) {  
                                 max-height: 40px;
                             }
@@ -81,22 +86,22 @@
             }
             &:nth-child(4n+1) {
                 .collapse-title {
-                    background-image: url('../assets/images/img-bg-collapse-green.png');
+                    background-image: url('../assets/images/img-bg-collapse-purple.png');
                 }
             }
             &:nth-child(4n+2) {
                 .collapse-title {
-                    background-image: url('../assets/images/img-bg-collapse-purple.png');
+                    background-image: url('../assets/images/img-bg-collapse-green.png');
                 }
             }
             &:nth-child(4n+3) {
                 .collapse-title {
-                    background-image: url('../assets/images/img-bg-collapse-orange.png');
+                    background-image: url('../assets/images/img-bg-collapse-pink.png');
                 }
             }
             &:nth-child(4n+4) {
                 .collapse-title {
-                    background-image: url('../assets/images/img-bg-collapse-pink.png');
+                    background-image: url('../assets/images/img-bg-collapse-orange.png');
                 }
             }
             .collapse-body {
@@ -118,7 +123,7 @@
                         }
                     }
                     ul {
-                        padding-left: 20px;
+                        padding-left: 24px;
                         li {
                             list-style-type: disc;
                             font-size: 18px;
