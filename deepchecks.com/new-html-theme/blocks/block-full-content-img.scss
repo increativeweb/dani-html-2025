@@ -1,4 +1,4 @@
-.content-img-section {
+.dc-content-img-section {
     .with-border-block {
         background: url('../assets/images/img-bg-cross-line.png') no-repeat top left, linear-gradient(180.27deg, rgba(#FAEEFC, 1) 0.25%, #fff 28.92%); 
         background-size: auto;
@@ -18,18 +18,10 @@
             margin: 0 -15px;
             border-width: 0px;
         }
-        .main-title {
-            h2 {
-                font-size: 40px;
-                font-weight: 500;
-                @media (max-width: 767px) {
-                    font-size: 32px;
-                }
-            }
-            .sort-info {
-                font-size: 20px;
-                color: #303245;
-            }
+    }
+    .main-title {
+        .sort-info {
+            font-weight: 500;
         }
     }
     .action {

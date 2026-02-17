@@ -1,9 +1,16 @@
-.counter-section {
+.dc-counter-section {
     background: #FBFBFB;
     border-top: 1px solid #DEE0E9;
+    padding: 60px 0 80px;
+    @media (max-width: 992px) {
+        padding: 40px 0 60px;
+    }
+    @media (max-width: 767px) {
+        padding: 0px 0 30px;
+    }
     .bg-line-gradient-block {
-        background: url('../assets/images/img-bg-line.png') no-repeat top left, linear-gradient(239.05deg, #9D60FB -0.54%, #E582BF 86.6%);
-        padding: 100px 200px 150px;
+        background: url('../assets/images/img-bg-counter.png') no-repeat top left, linear-gradient(239.05deg, #9D60FB -0.54%, #E582BF 86.6%);
+        padding: 100px 180px 150px;
         border-radius: 30px;
         color: #fff;
         @media (max-width: 1440px) {
@@ -12,12 +19,10 @@
         @media (max-width: 767px) {
             border-radius: 0px;
             margin: 0 -15px;
-            padding: 50px 15px 50px;
+            padding: 30px 15px;
         }
         .main-title {
             .sort-info {
-                max-width: 970px;
-                margin: 0 auto;
                 & > * {
                     font-size: 20px;
                     @media (max-width: 767px) {
@@ -27,6 +32,8 @@
             }
         }
         .icon-content-item {
+            max-width: 1170px;
+            margin: 0 auto;
             margin-bottom: 10px;
             @media (max-width: 1440px) {
                 margin-bottom: 80px;
@@ -78,6 +85,15 @@
                 color: #303245;
                 font-size: 18px;
             }
+        }
+    }
+    .action-btn {
+        padding-top: 120px;
+        @media (max-width: 1200px) {
+            padding-top: 80px;
+        }
+        @media (max-width: 992px) {
+            padding-top: 50px;
         }
     }
 }

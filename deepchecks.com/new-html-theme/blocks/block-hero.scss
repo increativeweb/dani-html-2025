@@ -1,8 +1,8 @@
-.hero-section {
+.dc-hero-section {
     position: relative;
     background: url('../assets/images/img-hero-bg.png') no-repeat bottom center;
-    background-size: cover !important;
-    padding: 280px 0 160px;
+    background-size: cover;
+    padding: 250px 0 150px;
     @media (max-width: 1440px) {
         padding: 200px 0 100px;
     }
@@ -11,7 +11,6 @@
     }
     @media (max-width: 767px) {
         padding: 130px 0 30px;
-        background: url('../assets/images/img-hero-bg-m.png') no-repeat bottom center;
     }
     .main-title {
         text-align: left;
@@ -20,7 +19,7 @@
             font-weight: 500;
             letter-spacing: 0.03em;
             line-height: 1.3;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
             @media (max-width: 1440px) {
                 font-size: 48px;
             }
@@ -56,30 +55,21 @@
             }
         }
         .sort-info {
-            max-width: 645px;
             font-size: 20px;
             @media (max-width: 1200px) {
                 font-size: 18px;
             }
         }
         .action {
-            margin-top: 32px;
+            margin-top: 40px;
         }
     }
     .image-block {
-        dotlottie-wc {
-            @media (max-width: 1200px) {
-                width: 500px !important;        
-                height: 420px !important;
-            }
-            @media (max-width: 992px) {
-                width: 400px !important;        
-                height: 370px !important;
-            }
-            @media (max-width: 575px) {
-                width: 340px !important;        
-                height: 300px !important;
-            }
+        video {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            max-width: 580px;
         }
     }
 }
