@@ -113,6 +113,7 @@ jQuery(document).ready(function ($) {
             dots: false,
             accessibility: false,
             infinite: false,
+            draggable: false,
             responsive: [
                 {
                     breakpoint: 1200,

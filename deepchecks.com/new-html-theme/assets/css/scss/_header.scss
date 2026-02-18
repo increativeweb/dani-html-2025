@@ -26,7 +26,7 @@
                 font-weight: 500;
                 position: relative;
                 color: $white;
-                @include transition(0.3s, ease-in-out);
+                @include transition(0.1s, ease-in-out);
                 .text,
                 .text-nowrap {
                     padding: 0;
@@ -44,7 +44,7 @@
                         background: $white;
                         width: 0;
                         height: 1px;
-                        @include transition(0.3s, ease-in-out);
+                        @include transition(0.1s, ease-in-out);
                     }
                 }
                 .btn-icon {
@@ -53,7 +53,7 @@
                     display: inline-block;
                     opacity: 0;
                     visibility: hidden;
-                    @include transition(0.3s, ease-in-out);
+                    @include transition(0.1s, ease-in-out);
                 }
                 &:hover,
                 &:focus {
@@ -87,7 +87,7 @@
         left: 0;
         right: 0;
         z-index: 10;
-        @include transition(0.3s, ease-in-out);
+        @include transition(0.1s, ease-in-out);
 
         body:not(.home) & {
             background: rgba(255, 255, 255, 0.99);
@@ -110,7 +110,7 @@
                 max-width: 100%;
             }
             @media (min-width: 1200px) {
-                max-width: 1320px;
+                max-width: 1400px;
             }
             @media (min-width: 1441px) {
                 max-width: 1630px;
@@ -167,7 +167,7 @@
         li {
             margin: 0 15px;
             position: relative;
-            @include transition(0.3s, ease-in-out);
+            @include transition(0.1s, ease-in-out);
             @include border-radius(10px);
             background: transparent;
 
@@ -191,7 +191,7 @@
                 font-size: 16px;
                 @include inline-flex;
                 @include align-items(center);
-                @include transition(0.3s, ease-in-out);
+                @include transition(0.1s, ease-in-out);
 
                 &.btn {
                     min-width: auto;
@@ -263,14 +263,27 @@
 
     .sub-menu {
         li {
-            margin: 0 !important;
-            padding: 0 0 8px;
+            margin: 0;
             &:last-child {
-                padding-bottom: 0;
+                a {
+                    margin-bottom: 0;
+                }
             }
 
             a {
-                font-size: 15px;
+                font-size: 20px !important;
+                font-weight: 700;
+                margin-bottom: 20px;
+                line-height: 1;
+                &[rel] {
+                    font-size: 18px !important; 
+                    color: #303245;
+                    font-weight: 500;
+                    letter-spacing: -0.03rem;                    
+                    margin-bottom: 30px;
+                    position: relative;
+                    pointer-events: none;                    
+                }
             }
         }
     }
@@ -294,7 +307,7 @@
             top: 100%;
             left: 0;
             z-index: 1;
-            padding: 1rem;
+            padding: 30px;
             @include transform(translateY(-10px));
             @include border-radius(6px);
             @include box-shadow(0 5px 20px rgba(0,0,0,.2));
@@ -315,84 +328,87 @@
             &.mega-menu {
                 width: 100%;
                 max-width: 1000px;
-                padding: 20px 30px;
                 left: 50%;
                 @include transform(translateX(-50%) translateY(-10px));
                 display: grid;
                 grid-template-columns: 250px auto;
                 background: #ffffff;
+                padding: 0;
                 & > li {
                     border-radius: 0;
-                }
-                & > li:first-child {
-                    border-right: 1.5px solid #DEE0E9;
-                    padding-right: 20px
-                }
-                & > li:last-child {
-                    padding-left: 20px
-                }
-                .menu-title {
-                    font-size: 16px;
-                    font-weight: 500;
-                    color: #303245;
-                    letter-spacing: -0.03em;
-                    margin-bottom: 30px;
-                }
-                .mega-menu-list {
-                    display: flex;
-                    flex-direction: column;
-                    li {
-                        padding-bottom: 20px;
-                        a {
-                            font-size: 18px;
-                            font-weight: 700;
+                    &:first-child {
+                        border-right: 1.5px solid #DEE0E9;                    
+                        padding: 20px;
+                    }
+                    &:last-child {                    
+                        padding: 20px;
+                    }
+                    & > ul.card-list {                        
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px;
+                        li {
+                            &:first-child {
+                                grid-column: 1 / -1;
+                                a {
+                                    margin-bottom: 0;
+                                }
+                            }
                         }
                     }
                 }
-                .menu-card-grid {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                .menu-feature-card {
+                    background: #F9F1F9;
+                    padding: 15px;
+                    border-radius: 15px;
+                    @include flexbox;
+                    @include flex-direction(column);
                     gap: 20px;
-                    .menu-feature-card {
-                        background: #F9F1F9;
-                        padding: 15px;
+                    position: relative;
+                    @include transition(0.1s, ease-in-out);
+                    height: 100%;
+                    .card-img {
                         border-radius: 15px;
-                        @include flexbox;
-                        @include flex-direction(column);
-                        gap: 30px;
-                        position: relative;
-                        @include transition(0.3s, ease-in-out);
-                        .card-img {
+                        overflow: hidden;
+                        img {                                
                             border-radius: 15px;
-                            overflow: hidden;
-                            img {                                
-                                border-radius: 15px;
+                            object-fit: cover;
+                            object-position: center;
+                            width: 100%;
+                        }
+                    }
+                    .card-body {
+                        padding: 0;
+                        .card-title {
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin-bottom: 20px;
+                        }
+                        .sort-info {
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+                    }
+                    .card-footer {
+                        padding: 0;
+                        background: transparent;
+                        border: none;
+                        .btn {
+                            min-height: 46px !important;
+                            position: unset;
+                            &::before {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 1;
+                                content: "";
                             }
                         }
-                        .card-body {
-                            padding: 0;
-                            .card-title {
-                                font-size: 18px;
-                                font-weight: 700;
-                                margin-bottom: 20px;
-                            }
-                            .sort-info {
-                                font-size: 16px;
-                                font-weight: 400;
-                            }
-                        }
-                        .card-footer {
-                            padding: 0;
-                            background: transparent;
-                            border: none;
-                            .btn {
-                                min-height: 46px !important;
-                                position: unset;
-                            }
-                        }
-                        &:hover, &:focus {
-                            box-shadow: 0px 4px 4px rgba(76, 53, 112, 0.34);                            
-                        }
+                    }
+                    &:hover, &:focus {
+                        box-shadow: 0px 4px 4px rgba(76, 53, 112, 0.34);                            
                     }
                 }
             }
@@ -436,7 +452,7 @@
                             height: 10px;
                             margin-left: 8px;
                             display: inline-block;
-                            @include transition(0.3s, ease-in-out);
+                            @include transition(0.1s, ease-in-out);
                             // filter: brightness(100);
                             // -webkit-filter: brightness(100);
                         }
@@ -481,44 +497,19 @@
     @media (min-width: 1400px) {
         .sub-menu.mega-menu {
             max-width: 1200px;
-            padding: 20px 30px;
             grid-template-columns: 280px auto;
             & > li:first-child {
-                padding-right: 40px
+                padding: 30px
             }
             & > li:last-child {
-                padding-left: 40px
+                padding: 30px
             }
-            .menu-title {
-                font-size: 18px;
-                margin-bottom: 40px;
-            }
-            .mega-menu-list {
-                li {
-                    a {
-                        font-size: 20px;
-                    }
+            li {
+                ul.card-list {   
+                    gap: 30px;
                 }
-            }
-            .menu-card-grid {
-                gap: 50px;
-                .menu-feature-card {
-                    padding: 20px;
-                    border-radius: 20px;
-                    .card-img {
-                        border-radius: 20px;
-                        img {                                
-                            border-radius: 20px;
-                        }
-                    }
-                    .card-body {
-                        .card-title {
-                            font-size: 20px;
-                        }
-                        .sort-info {
-                            font-size: 18px;
-                        }
-                    }
+                .menu-feature-card { 
+                    gap: 30px;
                 }
             }
         }

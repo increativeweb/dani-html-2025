@@ -1,10 +1,18 @@
 .dc-collapse-section {
     max-width: 100%;
+    .container {
+        @media (max-width: 1440px) {
+            max-width: 100%;
+        }
+    }
     .with-border-block {
         background: #FBFBFB;
         border-width: 1px 1px 0px 1px;
         border-style: solid;
         border-color: #DEE0E9;
+        @media (max-width: 1440px) {
+            margin: 0 -15px;
+        }
         &.is-grid {
             display: flex;
             @media (max-width: 992px) {
@@ -22,6 +30,17 @@
         .main-title {
             display: flex;
             align-items: center;
+            background-image: url('../assets/images/img-bg-square.png');
+            background-repeat: repeat;
+            background-position: top left;
+            background-size: contain;
+            background-attachment: fixed;
+            margin-bottom: 0;
+            padding: 65px 55px;
+            @media (max-width: 992px) {
+                padding: 40px 15px;
+            }
+
             h2 {
                 margin-bottom: 0;
                 max-width: 588px;
@@ -71,7 +90,7 @@
                     @media (max-width: 1200px) {   
                         font-size: 30px;
                     }
-                    @media (max-width: 767px) {   
+                    @media (max-width: 992px) {   
                         font-size: 24px;
                     }
                     .icon {

@@ -2,12 +2,9 @@
     position: relative;
     background: url('../assets/images/img-hero-bg.png') no-repeat bottom center;
     background-size: cover;
-    padding: 250px 0 150px;
-    @media (max-width: 1440px) {
-        padding: 200px 0 100px;
-    }
-    @media (max-width: 1200px) {
-        padding: 150px 0 100px;
+    padding: 160px 0 50px;
+    @media (max-width: 992px) {
+        padding: 130px 0 50px;
     }
     @media (max-width: 767px) {
         padding: 130px 0 30px;
