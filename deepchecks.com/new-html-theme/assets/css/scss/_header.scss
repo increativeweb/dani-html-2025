@@ -88,8 +88,7 @@
         right: 0;
         z-index: 10;
         @include transition(0.1s, ease-in-out);
-        padding: 0 30px;
-        @media (max-width: 1199px) {
+        @media (max-width: 992px) {
             padding: 0 15px ;
         }
         body:not(.home) & {
@@ -110,9 +109,9 @@
             display: block; 
             padding: 0;          
             @media (min-width: 992px) {
-                padding: 0;
+                padding: 0 30px;
             }
-            @media (min-width: 1440px) {
+           @media (min-width: 1440px) {
                 max-width: 1400px;
             }
             @media (min-width: 1600px) {

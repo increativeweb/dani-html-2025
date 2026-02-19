@@ -3,6 +3,9 @@
     background: url('../assets/images/img-hero-bg.png') no-repeat bottom right;
     background-size: cover;
     padding: 160px 0 50px;
+    @media (max-width: 1200px) {
+        padding: 130px 0 50px;
+    }
     @media (max-width: 992px) {
         padding: 130px 0 50px;
     }
