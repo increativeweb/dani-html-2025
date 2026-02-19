@@ -734,7 +734,7 @@
             max-width: 350px;
             display: flex;
             flex-direction: column;
-            padding: 90px 15px 15px;
+            padding: 110px 15px 15px;
             background-color: $white;
             @include transition(0.4s, ease-in-out);
             @include transform(translateX(-100%));
@@ -760,10 +760,8 @@
 
             ul.navbar-nav-right {
                 margin-left: 0px;
-                flex-wrap: nowrap !important;
-
                 >li {
-                    width: auto;
+                    width: 100%;
 
                     &:last-child {
                         width: 100%;

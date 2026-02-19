@@ -266,6 +266,42 @@
                             </div>
                         </div>
                     </div>
+                    <div class="main">
+                        <div class="slider slider-nav">
+                            <div>
+                            <h3>1</h3>
+                            </div>
+                            <div>
+                            <h3>2</h3>
+                            </div>
+                            <div>
+                            <h3>3</h3>
+                            </div>
+                            <div>
+                            <h3>4</h3>
+                            </div>
+                            <div>
+                            <h3>5</h3>
+                            </div>
+                        </div>
+                        <div class="slider slider-for">
+                            <div>
+                            <h3>1</h3>
+                            </div>
+                            <div>
+                            <h3>2</h3>
+                            </div>
+                            <div>
+                            <h3>3</h3>
+                            </div>
+                            <div>
+                            <h3>4</h3>
+                            </div>
+                            <div>
+                            <h3>5</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section> 
             <section class="dc-content-img-section bg-lightgray">
@@ -1091,6 +1127,25 @@
                         $anchor2.removeAttr('target');
                     }
                 }, 50);
+            });
+        </script>
+
+        <script>
+            jQuery('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav',
+                draggable: false,
+            });
+            jQuery('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: true,
+                focusOnSelect: true,
+                draggable: false,
             });
         </script>
     </body>
