@@ -202,7 +202,7 @@
                     min-height: 56px;
                     @include border-radius(8px);
                     letter-spacing: -0.02em;
-
+                    text-decoration: none !important;
                     @media (max-width:1320px) and (min-width: 1200px) {
                         padding: 0 15px;
                     }
