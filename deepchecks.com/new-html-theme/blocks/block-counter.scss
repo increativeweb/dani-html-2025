@@ -1,13 +1,13 @@
 .dc-counter-section {
     background: #FBFBFB;
     border-top: 1px solid #DEE0E9;
-    padding: 60px 0 80px;
+    padding: 70px 0;
     @media (max-width: 1440px) {
         border: none;
-        padding: 0 0 80px;
+        padding: 0 0 70px;
     }
     @media (max-width: 992px) {
-        padding: 0 0 60px;
+        padding: 0 0 40px;
     }
     @media (max-width: 767px) {
         background: url('../assets/images/img-bg-counter-m.png') no-repeat top left, linear-gradient(239.05deg, #9D60FB -0.54%, #E582BF 86.6%);
@@ -70,6 +70,8 @@
                 }
                 .sort-info {
                     font-size: 18px;
+                    max-width: 300px;
+                    margin: 0 auto;
                 }
             }
         }
@@ -91,6 +93,8 @@
             @media (max-width: 992px) {
                 font-size: 60px;
                 padding: 20px 15px;
+                max-width: 300px;
+                margin: 0 auto;
             }          
             .count-number {
                 font-size: 72px;
@@ -107,15 +111,12 @@
         }
     }
     .action-btn {
-        padding-top: 120px;
-        @media (max-width: 1200px) {
-            padding-top: 80px;
-        }
+        padding-top: 70px;
         @media (max-width: 992px) {
-            padding-top: 45px;
+            padding-top: 40px;
         }
         @media (max-width: 767px) {
-            margin-top: 30px;
+            margin-top: 40px;
         }
     }
 }

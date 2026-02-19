@@ -104,16 +104,15 @@
         padding: 24px 0;
         min-height: 80px;
         >.theme-container {
-            display: block;
-
+            display: block;           
             @media (min-width: 992px) {
-                max-width: 100%;
+                padding: 0 30px;
             }
-            @media (min-width: 1200px) {
+            @media (min-width: 1440px) {
                 max-width: 1400px;
             }
-            @media (min-width: 1441px) {
-                max-width: 1630px;
+            @media (min-width: 1600px) {
+                max-width: 1660px;
             }
         }
 
@@ -566,7 +565,7 @@
             }
         }
         .navbar {
-            padding: 0 15px;
+            padding: 0;
             min-height: 56px !important;
 
             .header-first-block {

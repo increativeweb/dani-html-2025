@@ -1,13 +1,13 @@
 .dc-hero-section {
     position: relative;
-    background: url('../assets/images/img-hero-bg.png') no-repeat bottom center;
+    background: url('../assets/images/img-hero-bg.png') no-repeat bottom right;
     background-size: cover;
     padding: 160px 0 50px;
     @media (max-width: 992px) {
         padding: 130px 0 50px;
     }
     @media (max-width: 767px) {
-        padding: 130px 0 30px;
+        padding: 130px 0 40px;
     }
     .main-title {
         text-align: left;
@@ -62,11 +62,15 @@
         }
     }
     .image-block {
+        margin-top: 20px;
+        @media (max-width: 767px) {
+            margin-top: 40px;
+        }
         video {
             object-fit: cover;
             object-position: center;
             width: 100%;
-            max-width: 580px;
+            max-width: 610px;
         }
     }
 }

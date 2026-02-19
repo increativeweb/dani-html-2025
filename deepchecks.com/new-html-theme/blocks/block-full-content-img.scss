@@ -5,13 +5,13 @@
         border-width: 0px 1px;
         border-style: solid;
         border-color: #DEE0E9;
-        padding: 90px 135px 20px;
+        padding: 70px 135px 20px;
         @media (max-width: 1440px) {
-            padding: 90px 0px 0px;
+            padding: 70px 0px 0px;
             border: none;
         }
         @media (max-width: 992px) {
-            padding: 70px 0px 0px;
+            padding: 40px 0px 0px;
         }
         @media (max-width: 767px) {
             background: url('../assets/images/img-bg-cross-line.png') no-repeat top center, linear-gradient(180.27deg, rgba(#FAEEFC, 1) 0.25%, #fff 28.92%); 
