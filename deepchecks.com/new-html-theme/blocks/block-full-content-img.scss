@@ -44,10 +44,6 @@
     .with-icon-list {
         display: flex;
         align-items: center;
-        padding-left: 40px;
-        @media (max-width: 1200px) {
-            padding-left: 0px;
-        }
         @media (max-width: 992px) {
             flex-direction: column;
             gap: 20px;
@@ -67,7 +63,7 @@
                 }
                 @media (max-width: 767px) {
                     display: inline-flex;
-                    margin-left: 25px;
+                    margin-right: 25px;
                 }
                 &:not(:last-child) {
                     margin-bottom: 20px;
