@@ -5,7 +5,7 @@
         border-width: 0px 1px;
         border-style: solid;
         border-color: #DEE0E9;
-        padding: 90px 135px 0px;
+        padding: 90px 135px 20px;
         @media (max-width: 1440px) {
             padding: 90px 0px 0px;
             border: none;
@@ -37,8 +37,10 @@
     .full-image-block {
         display: block;
         width: 100%;
-        img {
+        img, video {
             width: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
     .with-icon-list {
