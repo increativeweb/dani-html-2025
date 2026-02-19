@@ -162,7 +162,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="image-block text-right">
+                            <div class="image-block text-center text-md-right">
                                 <video class="embed-responsive-item" autoplay="" muted="" loop="" playsinline="" speed="1" controlslist="nodownload" poster="" oncontextmenu="return false;"><source src="uploads/lottie/video-hero-animation.mp4" type="video/mp4"></video>
                                 <!-- <img src="uploads/img-hero-layers.svg" alt="Evaluate AI Progress with Know Your Agent"> -->
                             </div>     
@@ -226,41 +226,46 @@
                                 <a href="#" class="slide-tab-link"><span class="icon"><img src="uploads/icon-production-monitoring.svg" alt="Production Monitoring"></span>Production Monitoring</a>
                             </div>
                         </div>
-                        <div class="slider slider-tab-info">
-                            <div class="slide-tab-info">
-                                <div class="image-block">
-                                    <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                        <div class="slider-wrapper">
+                            <div class="slider slider-tab-info">
+                                <div class="slide-tab-info">
+                                    <div class="image-block">
+                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                    </div>
+                                </div>
+                                <div class="slide-tab-info">
+                                    <div class="image-block">
+                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                    </div>
+                                </div>
+                                <div class="slide-tab-info">
+                                    <div class="image-block">
+                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                    </div>
+                                </div>
+                                <div class="slide-tab-info">
+                                    <div class="image-block">
+                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                    </div>
+                                </div>
+                                <div class="slide-tab-info">
+                                    <div class="image-block">
+                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                    </div>
+                                </div>
+                                <div class="slide-tab-info">
+                                    <div class="image-block">
+                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                    </div>
+                                </div>
+                                <div class="slide-tab-info">
+                                    <div class="image-block">
+                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="slide-tab-info">
-                                <div class="image-block">
-                                    <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
-                                </div>
-                            </div>
-                            <div class="slide-tab-info">
-                                <div class="image-block">
-                                    <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
-                                </div>
-                            </div>
-                            <div class="slide-tab-info">
-                                <div class="image-block">
-                                    <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
-                                </div>
-                            </div>
-                            <div class="slide-tab-info">
-                                <div class="image-block">
-                                    <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
-                                </div>
-                            </div>
-                            <div class="slide-tab-info">
-                                <div class="image-block">
-                                    <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
-                                </div>
-                            </div>
-                            <div class="slide-tab-info">
-                                <div class="image-block">
-                                    <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
-                                </div>
+                            <div class="slider-progress">
+                                <span></span>
                             </div>
                         </div>
                     </div>
@@ -856,7 +861,7 @@
         <style>@media (min-width: 768px) {body #popup-llm .modal-title small {font-size: 14px;}}@media (max-width: 1199px) {body #popup-llm .modal-title small {font-size: 12px;}}@media (max-width: 767px) {body #popup-llm .modal-title small {font-size: 8px;}}</style>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var formtheme-Container = document.getElementById('llm_hubspotFormtheme-Container');
+                var formtheme_Container = document.getElementById('llm_hubspotFormtheme-Container');
                 function initializeHubSpotForm() {
                     if (typeof hbspt !== 'undefined') {
                         hbspt.forms.create({
@@ -898,7 +903,7 @@
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var awsformtheme-Container = document.getElementById('aws_sagemaker_hubspotFormtheme-Container');
+                var awsformtheme_Container = document.getElementById('aws_sagemaker_hubspotFormtheme-Container');
                 function initializeHubSpotForm2() {
                     if (typeof hbspt !== 'undefined') {
                         hbspt.forms.create({
@@ -920,7 +925,7 @@
                     if (typeof hbspt !== 'undefined' && typeof hbspt.forms !== 'undefined' && typeof hbspt.forms[0] !== 'undefined') {
                         hbspt.forms[0].destroy(); 
                     } 
-                    awsformtheme-Container.innerHTML = '';initializeHubSpotForm2();
+                    awsformtheme_Container.innerHTML = '';initializeHubSpotForm2();
                 });
             });
         </script>
@@ -1104,6 +1109,21 @@
                 autoplay: true,
                 autoplaySpeed: 3000,
             });
+            function progressBar() {
+                $(".slider-progress").find("span").removeAttr("style");
+                $(".slider-progress").find("span").removeClass("active");
+                setTimeout(function () {
+                $(".slider-progress")
+                    .find("span")
+                    .css("transition-duration", 3200 / 1000 + "s")
+                    .addClass("active");
+                }, 100);
+            }
+            progressBar();
+             jQuery('.slider-tab-info').on("beforeChange", function (e, slick) {
+                progressBar();
+            });
+
             jQuery('.slider-tab-nav').slick({
                 asNavFor: '.slider-tab-info',
                 focusOnSelect: true,
