@@ -16,13 +16,14 @@
                 padding: 8px 16px; 
             }
             .slick-list {
+                padding: 0 8px;
                 .slick-track {
-                    display: flex;
-                    align-items: center;
+                    // display: flex;
+                    // align-items: center;
                     padding: 9px;
                     @media (min-width: 1600px) {                        
-                        width: 100% !important;
-                        transform: unset !important;
+                        // width: 100% !important;
+                        // transform: unset !important;
                     }
                     @media (max-width: 992px) {
                         padding: 8px; 
@@ -42,6 +43,7 @@
                 white-space: nowrap;
                 border: 1px solid transparent;
                 line-height: 1;
+                cursor: pointer;
                 @media (max-width: 992px) {
                     font-size: 18px;  
                     gap: 8px; 

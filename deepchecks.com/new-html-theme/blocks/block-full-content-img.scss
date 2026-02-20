@@ -12,11 +12,11 @@
         }
         @media (max-width: 992px) {
             padding: 40px 0px 0px;
+            margin: 0 -15px;
         }
         @media (max-width: 767px) {
             background: url('../assets/images/img-bg-cross-line.png') no-repeat top center, linear-gradient(180.27deg, rgba(#FAEEFC, 1) 0.25%, #fff 28.92%); 
             padding: 40px 15px 10px;
-            margin: 0 -15px;
             border-width: 0px;
         }
     }

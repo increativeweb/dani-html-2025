@@ -11,6 +11,9 @@
         border-style: solid;
         border-color: #DEE0E9;
         @media (max-width: 1440px) {
+            margin: 0 -30px;
+        }
+        @media (max-width: 992px) {
             margin: 0 -15px;
         }
         &.is-grid {

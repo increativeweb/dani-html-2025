@@ -205,62 +205,70 @@
                     <div class="tab-slider-block">
                         <div class="slider slider-tab-nav">
                             <div>
-                                <a href="#" class="slide-tab-link"><span class="icon"><img src="uploads/icon-agents.svg" alt="Agents"></span>Agents</a>
+                                <div class="slide-tab-link"><span class="icon"><img src="uploads/icon-agents.svg" alt="Agents"></span>Agents</div>
                             </div>
                             <div>
-                                <a href="#" class="slide-tab-link"><span class="icon"><img src="uploads/icon-start-immediately.svg" alt="Start Immediately"></span>Evaluators</a>
+                                <div class="slide-tab-link"><span class="icon"><img src="uploads/icon-start-immediately.svg" alt="Evaluators"></span>Evaluators</div>
                             </div>
                             <div>
-                                <a href="#" class="slide-tab-link"><span class="icon"><img src="uploads/icon-auto-annotations.svg" alt="Auto annotations"></span>Version Comparison</a>
+                                <div class="slide-tab-link"><span class="icon"><img src="uploads/icon-auto-annotations.svg" alt="Version Comparison"></span>Version Comparison</div>
                             </div>
                             <div>
-                                <a href="#" class="slide-tab-link"><span class="icon"><img src="uploads/icon-start-immediately.svg" alt="Start Immediately"></span>Auto-Scoring</a> 
+                                <div class="slide-tab-link"><span class="icon"><img src="uploads/icon-start-immediately.svg" alt="Auto-Scoring"></span>Auto-Scoring</div> 
                             </div>
                             <div>
-                                <a href="#" class="slide-tab-link"><span class="icon"><img src="uploads/icon-iterate-quickly.svg" alt="Iterate quickly"></span>Datasets</a>
+                                <div class="slide-tab-link"><span class="icon"><img src="uploads/icon-iterate-quickly.svg" alt="Datasets"></span>Datasets</div>
                             </div>
                             <div>
-                                <a href="#" class="slide-tab-link"><span class="icon"><img src="uploads/icon-gain-insights.svg" alt="Gain Insights"></span>Insights</a>
+                                <div class="slide-tab-link"><span class="icon"><img src="uploads/icon-gain-insights.svg" alt="Gain Insights"></span>Insights</div>
                             </div>
                             <div>
-                                <a href="#" class="slide-tab-link"><span class="icon"><img src="uploads/icon-production-monitoring.svg" alt="Production Monitoring"></span>Production Monitoring</a>
+                                <div class="slide-tab-link"><span class="icon"><img src="uploads/icon-production-monitoring.svg" alt="Production Monitoring"></span>Production Monitoring</div>
+                            </div>
+                            <div>
+                                <div class="slide-tab-link"><span class="icon"><img src="uploads/icon-gain-insights.svg" alt="Tracing"></span>Tracing</div>
                             </div>
                         </div>
                         <div class="slider-wrapper">
                             <div class="slider slider-tab-info">
                                 <div class="slide-tab-info">
                                     <div class="image-block">
-                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        <img src="uploads/img-agent.jpg" alt="Agents">
                                     </div>
                                 </div>
                                 <div class="slide-tab-info">
                                     <div class="image-block">
-                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        <img src="uploads/img-swarm-evaluators.jpg" alt="Evaluators">
                                     </div>
                                 </div>
                                 <div class="slide-tab-info">
                                     <div class="image-block">
-                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        <img src="uploads/img-version-comparison.jpg" alt="Version Comparison">
                                     </div>
                                 </div>
                                 <div class="slide-tab-info">
                                     <div class="image-block">
-                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        <img src="uploads/img-auto-scoring.jpg" alt="Auto-Scoring">
                                     </div>
                                 </div>
                                 <div class="slide-tab-info">
                                     <div class="image-block">
-                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        <img src="uploads/img-dataset-management.jpg" alt="Datasets">
                                     </div>
                                 </div>
                                 <div class="slide-tab-info">
                                     <div class="image-block">
-                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        <img src="uploads/img-insights.jpg" alt="Insights">
                                     </div>
                                 </div>
                                 <div class="slide-tab-info">
                                     <div class="image-block">
-                                        <img src="uploads/img-start-immediately.jpg" alt="Start Immediately">
+                                        <img src="uploads/img-production-monitoring.jpg" alt="Production Monitoring">
+                                    </div>
+                                </div>
+                                <div class="slide-tab-info">
+                                    <div class="image-block">
+                                        <img src="uploads/img-tracing.jpg" alt="Tracing">
                                     </div>
                                 </div>
                             </div>
@@ -1099,15 +1107,24 @@
         </script>
 
         <script>
+
+            jQuery('.slider-tab-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-tab-info',
+                focusOnSelect: true,
+                // centerMode: true,
+                centerPadding: "8px",
+                variableWidth: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
             jQuery('.slider-tab-info').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
-                fade: false,
                 asNavFor: '.slider-tab-nav',
-                draggable: true, 
-                autoplay: true,
-                autoplaySpeed: 3000,
             });
             function progressBar() {
                 $(".slider-progress").find("span").removeAttr("style");
@@ -1115,36 +1132,13 @@
                 setTimeout(function () {
                 $(".slider-progress")
                     .find("span")
-                    .css("transition-duration", 3200 / 1000 + "s")
+                    .css("transition-duration", 3000 / 1000 + "s")
                     .addClass("active");
                 }, 100);
             }
             progressBar();
              jQuery('.slider-tab-info').on("beforeChange", function (e, slick) {
                 progressBar();
-            });
-
-            jQuery('.slider-tab-nav').slick({
-                asNavFor: '.slider-tab-info',
-                focusOnSelect: true,
-                draggable: true,
-                swipe: false,
-                variableWidth: true,
-                dots: false,
-                arrows: false,
-		        infinite: false,
-                slidesToShow: 7,
-                responsive: [
-                    {
-                        breakpoint: 1600,
-                        settings: {
-                            slidesToShow: 6,
-		                    infinite: true,                            
-		                    centerMode: true,
-		                    centerPadding: '8px',
-                        }
-                    },
-                ]
             });
         </script>
     </body>
