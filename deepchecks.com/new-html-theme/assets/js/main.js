@@ -119,9 +119,10 @@ jQuery(document).ready(function ($) {
                     breakpoint: 1200,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2,
+                        slidesToScroll: 1,
                         arrows: false,
-                        dots: true
+                        dots: true,                        
+                        variableWidth: true,
                     }
                 },
                 {
@@ -130,7 +131,8 @@ jQuery(document).ready(function ($) {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         arrows: false,
-                        dots: true
+                        dots: true,                    
+                        variableWidth: true,
                     }
                 }
             ]

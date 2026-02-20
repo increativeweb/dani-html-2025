@@ -409,7 +409,7 @@
                 max-width: 1000px;
                 left: 50%;
                 @include transform(translateX(-50%) translateY(-10px));
-                display: grid;
+                display: grid !important;
                 grid-template-columns: 250px auto;
                 background: #ffffff;
                 padding: 0;
@@ -662,6 +662,9 @@
                             height: 18px;
                             transition: all 0.05 ease;
                             z-index: 10;
+                            &.is-active {
+                                @include transform(rotate(180deg))
+                            }
                         }
                     }
                     .sub-menu {
