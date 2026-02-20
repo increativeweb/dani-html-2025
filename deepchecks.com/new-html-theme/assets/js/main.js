@@ -146,7 +146,6 @@ jQuery(document).ready(function ($) {
             accessibility: false,
             infinite: false,
             draggable: false,
-            variableWidth: true,
             responsive: [
                 {
                     breakpoint: 1200,
@@ -154,7 +153,8 @@ jQuery(document).ready(function ($) {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         arrows: false,
-                        dots: true
+                        dots: true,
+                        variableWidth: true,
                     }
                 },
                 {

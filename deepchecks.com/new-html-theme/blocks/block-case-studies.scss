@@ -11,23 +11,18 @@
     }
     .case-studies-slider {
         margin-bottom: 0;
-        @media (min-width: 1200px) {
-            margin-left: -15px;
-            margin-right: -15px;
-        }
         .slick-list {
             border-radius: 20px;
-            margin: 0 -15px;
             @media(max-width: 1200px) {
                 overflow: visible;
-            }
-            @media(max-width: 992px) {
-                margin: 0 -10px;
             }
         }
         .slick-track {
             display: flex;
-
+            margin: 0 -15px;
+            @media(max-width: 992px) {
+                margin: 0 -10px;
+            }
             .slick-slide {
                 height: inherit !important;
             }
