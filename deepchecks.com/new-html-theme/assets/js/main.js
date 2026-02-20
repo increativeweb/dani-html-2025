@@ -111,9 +111,9 @@ jQuery(document).ready(function ($) {
             slidesToShow: 3,
             slidesToScroll: 1,
             dots: false,
-            accessibility: false,
+            accessibility: true,
             infinite: false,
-            draggable: false,
+            draggable: true,
             responsive: [
                 {
                     breakpoint: 1200,
@@ -137,15 +137,15 @@ jQuery(document).ready(function ($) {
                 }
             ]
         });
-    }       
+    } 
     if ($('.home-post-slider').length) {
         $('.home-post-slider').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             dots: false,
-            accessibility: false,
+            accessibility: true,
             infinite: false,
-            draggable: false,
+            draggable: true,
             responsive: [
                 {
                     breakpoint: 1200,
@@ -153,7 +153,7 @@ jQuery(document).ready(function ($) {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         arrows: false,
-                        dots: true,
+                        dots: true,                        
                         variableWidth: true,
                     }
                 },
@@ -163,12 +163,13 @@ jQuery(document).ready(function ($) {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         arrows: false,
-                        dots: true
+                        dots: true,                    
+                        variableWidth: true,
                     }
                 }
             ]
         });
-    }
+    } 
     if ($('.post-slider').length) {
         $('.post-slider').slick({
             slidesToShow: 3,
