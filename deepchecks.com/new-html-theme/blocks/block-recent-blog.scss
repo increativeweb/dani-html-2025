@@ -1,11 +1,14 @@
 .dc-recent-blog-section {
-    padding: 70px 0;
+    margin: 70px 0;
+    border-top: 1px solid #DEE0E9;
+    border-bottom: 1px solid #DEE0E9;
     @media (max-width: 992px) {
-        padding: 0 0;
+        margin: 0 0;
     }
     .blog-wapper {
         background: #fbfbfb;
-        border: 1px solid #DEE0E9;
+        border-right: 1px solid #DEE0E9;
+        border-left: 1px solid #DEE0E9;
         padding: 40px;
         overflow: hidden;
         @media (max-width: 1200px) {
