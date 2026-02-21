@@ -486,7 +486,7 @@
                     </div>
                 </div>
             </section>
-            <!-- <section class="dc-case-studies-section">
+            <section class="dc-case-studies-section">
                 <div class="theme-container">
                     <div class="main-title text-left mb-md-5">
                         <h2 class="h3">Recent Case Studies</h2>
@@ -566,15 +566,15 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <section class="dc-recent-blog-section">
                 <div class="theme-container">
                     <div class="blog-wapper">
                         <div class="main-title text-md-left mb-md-5">
                             <h2 class="h3">Recent Blog Posts</h2>
                         </div>
-                        <ul class="post-classic-slide">
-                            <li class="classic-slide">
+                        <div class="home-post-slider">
+                            <div class="slide-item">
                                 <div class="slide-blog-post">
                                     <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/img-post-top-aiops-tools.jpg" alt="Top 10 AIOps Tools for 2026" /> </a>
                                     <div class="blog-post-inner">
@@ -586,8 +586,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="classic-slide">
+                            </div>
+                            <div class="slide-item">
                                 <div class="slide-blog-post is-img-text-bottom">
                                     <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/img-post-best-llm-security-tools-open-source-frameworks.jpg" alt="Best LLM Security Tools & Open-Source Frameworks in 2026" /> </a>
                                     <div class="blog-post-inner">
@@ -599,8 +599,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="classic-slide">
+                            </div>
+                            <div class="slide-item">
                                 <div class="slide-blog-post is-img-text-bottom">
                                     <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/img-post-llm-training-pipelines.jpg" alt="LLM Training Pipelines: What You Need to Know About Pretraining" /> </a>
                                     <div class="blog-post-inner">
@@ -612,8 +612,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="classic-slide">
+                            </div>
+                            <div class="slide-item">
                                 <div class="slide-blog-post">
                                     <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/img-post-top-aiops-tools.jpg" alt="Top 10 AIOps Tools for 2026" /> </a>
                                     <div class="blog-post-inner">
@@ -625,8 +625,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1191,83 +1191,109 @@
         </script>
 
         <script> 
-            
-            // jQuery('.slider-tab-nav').slick({
-            //     slidesToScroll: 1,
-            //     asNavFor: '.slider-tab-info',
-            //     focusOnSelect: true,
-            //     // centerMode: true,
-            //     centerPadding: "8px",
-            //     variableWidth: true,
-            //     arrows: false,
-            //     autoplay: true,
-            //     autoplaySpeed: 3000
-            // });
-            // jQuery('.slider-tab-info').slick({
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1,
-            //     arrows: false,
-            //     asNavFor: '.slider-tab-nav',
-            // });
-            // function progressBar() {
-            //     $(".slider-progress").find("span").removeAttr("style");
-            //     $(".slider-progress").find("span").removeClass("active");
-            //     setTimeout(function () {
-            //     $(".slider-progress")
-            //         .find("span")
-            //         .css("transition-duration", 3000 / 1000 + "s")
-            //         .addClass("active");
-            //     }, 100);
-            // }
-            // progressBar();
-            //  jQuery('.slider-tab-info').on("beforeChange", function (e, slick) {
-            //     progressBar();
-            // });
-           $(document).ready(function () {
-                var autoplaySpeed = 3000;
-                $('.slider-tab-info').slick({
-                    slidesToShow: 1,
+       
+            if ($('.case-studies-slider').length) {
+                $('.case-studies-slider').slick({
+                    slidesToShow: 3,
                     slidesToScroll: 1,
-                    arrows: false,
-                    fade: false,
-                    infinite: true,
-                    autoplay: true,
-                    autoplaySpeed: autoplaySpeed
+                    dots: false,
+                    accessibility: true,
+                    infinite: false,
+                    draggable: true,
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                dots: true, 
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                dots: true,    
+                            }
+                        }
+                    ]
                 });
+            } 
+            if ($('.home-post-slider').length) {
+                $('.home-post-slider').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: false,
+                    accessibility: true,
+                    infinite: false,
+                    draggable: true,
+                    responsive: [
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                dots: true,       
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                dots: true,       
+                            }
+                        }
+                    ]
+                });
+            }
+            var autoplaySpeed = 3000;
+            $('.slider-tab-info').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: autoplaySpeed
+            });
+            $('.slide-tab-link').removeClass('active');
+            $('.slide-tab-link[data-slide="1"]').addClass('active');
+            $('.slide-tab-link').on('click', function (e) {
+                e.preventDefault();
+                var slideno = $(this).data('slide') - 1;
+                $('.slider-tab-info').slick('slickGoTo', slideno);
+            });
+            $('.slider-tab-info').on('afterChange', function (event, slick, currentSlide) {
+                var activeTab = $('.slide-tab-link[data-slide="' + (currentSlide + 1) + '"]');
                 $('.slide-tab-link').removeClass('active');
-                $('.slide-tab-link[data-slide="1"]').addClass('active');
-                $('.slide-tab-link').on('click', function (e) {
-                    e.preventDefault();
-                    var slideno = $(this).data('slide') - 1;
-                    $('.slider-tab-info').slick('slickGoTo', slideno);
-                });
-                $('.slider-tab-info').on('afterChange', function (event, slick, currentSlide) {
-                    var activeTab = $('.slide-tab-link[data-slide="' + (currentSlide + 1) + '"]');
-                    $('.slide-tab-link').removeClass('active');
-                    activeTab.addClass('active');
-                    // Auto scroll tab into view
-                    var container = $('.slider-tab-nav');
-                    var leftPos = activeTab.position().left + container.scrollLeft();
-                    container.animate({
-                        scrollLeft: leftPos - (container.width() / 2) + (activeTab.outerWidth() / 2)
-                    }, 400);
-                });
-                function progressBar() {
+                activeTab.addClass('active');
+                // Auto scroll tab into view
+                var container = $('.slider-tab-nav');
+                var leftPos = activeTab.position().left + container.scrollLeft();
+                container.animate({
+                    scrollLeft: leftPos - (container.width() / 2) + (activeTab.outerWidth() / 2)
+                }, 400);
+            });
+            function progressBar() {
+                $(".slider-progress span")
+                    .removeClass("active")
+                    .css("transition-duration", "0s");
+
+                setTimeout(function () {
                     $(".slider-progress span")
-                        .removeClass("active")
-                        .css("transition-duration", "0s");
-
-                    setTimeout(function () {
-                        $(".slider-progress span")
-                            .css("transition-duration", autoplaySpeed / 1000 + "s")
-                            .addClass("active");
-                    }, 50);
-                }
+                        .css("transition-duration", autoplaySpeed / 1000 + "s")
+                        .addClass("active");
+                }, 50);
+            }
+            progressBar();
+            $('.slider-tab-info').on("beforeChange", function () {
                 progressBar();
-                $('.slider-tab-info').on("beforeChange", function () {
-                    progressBar();
-                });
-
             });
         </script>
     </body>

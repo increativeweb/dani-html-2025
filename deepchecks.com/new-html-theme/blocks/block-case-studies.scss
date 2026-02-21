@@ -13,16 +13,16 @@
         margin-bottom: 0;
         .slick-list {
             border-radius: 20px;
+            margin: 0 -15px;
             @media(max-width: 1200px) {
                 overflow: visible;
+            }
+            @media(max-width: 992px) {
+                margin: 0 -10px;
             }
         }
         .slick-track {
             display: flex;
-            margin: 0 -15px;
-            @media(max-width: 992px) {
-                margin: 0 -10px;
-            }
             .slick-slide {
                 height: inherit !important;
             }
@@ -43,16 +43,12 @@
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     z-index: 1;
-    @media(max-width: 1200px) {
-        width: 380px;
-    }
     @media(max-width: 992px) {
         padding: 25px;
         margin: 0 10px;
     }
     @media(max-width: 767px) {
         padding: 20px;
-        width: 300px;
     }
     &::before {
         content: '';

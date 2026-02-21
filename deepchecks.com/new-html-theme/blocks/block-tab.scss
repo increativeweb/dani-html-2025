@@ -16,10 +16,21 @@
             align-items: center;
             overflow-x: auto;
             overflow-y: hidden;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            // scrollbar-width: none;
+            // -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
             &::-webkit-scrollbar {
-                display: none;
+                background-color:transparent;
+                width:1px; height: 1px;
+                border-radius:16px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color:rgba(#000, 0.01)
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color:rgba(#000, 0.01);
+                border-radius:16px;
             }
             .slide-tab-link {
                 display: inline-flex;
