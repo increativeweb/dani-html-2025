@@ -16,20 +16,17 @@
             align-items: center;
             overflow-x: auto;
             overflow-y: hidden;
-
-            /* Hide scrollbar - Chrome, Safari */
-            scrollbar-width: none;           /* Firefox */
+            scrollbar-width: none;
             -ms-overflow-style: none;
-            -webkit-overflow-scrolling: touch;
-            &::-webkit-scrollbar { 
-                display: none;  
+            &::-webkit-scrollbar {
+                display: none;
             }
             .slide-tab-link {
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 gap: 11px;
-                padding: 20px 30px;
+                padding: 20px 35px;
                 border-radius: 30px; 
                 font-weight: 400;
                 font-size: 20px;   

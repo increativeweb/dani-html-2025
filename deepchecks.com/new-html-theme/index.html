@@ -566,7 +566,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <section class="dc-recent-blog-section">
                 <div class="theme-container">
                     <div class="blog-wapper">
@@ -629,7 +629,7 @@
                         </ul>
                     </div>
                 </div>
-            </section> -->
+            </section>
         </main>
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
@@ -1224,12 +1224,7 @@
             //     progressBar();
             // });
            $(document).ready(function () {
-
                 var autoplaySpeed = 3000;
-
-                // ==============================
-                // Main Image Slider
-                // ==============================
                 $('.slider-tab-info').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -1239,51 +1234,25 @@
                     autoplay: true,
                     autoplaySpeed: autoplaySpeed
                 });
-
-                // ==============================
-                // Default First Active
-                // ==============================
                 $('.slide-tab-link').removeClass('active');
                 $('.slide-tab-link[data-slide="1"]').addClass('active');
-
-
-                // ==============================
-                // Click Tab → Move Slide
-                // ==============================
                 $('.slide-tab-link').on('click', function (e) {
                     e.preventDefault();
-
                     var slideno = $(this).data('slide') - 1;
-
                     $('.slider-tab-info').slick('slickGoTo', slideno);
                 });
-
-
-                // ==============================
-                // Active Tab + Auto Scroll
-                // ==============================
                 $('.slider-tab-info').on('afterChange', function (event, slick, currentSlide) {
-
                     var activeTab = $('.slide-tab-link[data-slide="' + (currentSlide + 1) + '"]');
-
                     $('.slide-tab-link').removeClass('active');
                     activeTab.addClass('active');
-
                     // Auto scroll tab into view
                     var container = $('.slider-tab-nav');
                     var leftPos = activeTab.position().left + container.scrollLeft();
-
                     container.animate({
                         scrollLeft: leftPos - (container.width() / 2) + (activeTab.outerWidth() / 2)
                     }, 400);
                 });
-
-
-                // ==============================
-                // Progress Bar
-                // ==============================
                 function progressBar() {
-
                     $(".slider-progress span")
                         .removeClass("active")
                         .css("transition-duration", "0s");
@@ -1294,9 +1263,7 @@
                             .addClass("active");
                     }, 50);
                 }
-
                 progressBar();
-
                 $('.slider-tab-info').on("beforeChange", function () {
                     progressBar();
                 });
