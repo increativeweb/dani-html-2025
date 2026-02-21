@@ -12,58 +12,51 @@
             margin-bottom: 20px;
             background: linear-gradient(90.31deg, rgba(250, 245, 255, 0.2) 7.88%, rgba(244, 233, 255, 0.2) 110.37%), rgba(255, 255, 255, 0.9);
             box-shadow: 0px 4px 4px rgba(76, 53, 112, 0.34);
-            .slick-list {
-                padding: 0 9px;
-                .slick-track {
-                    // display: flex;
-                    // align-items: center;
-                    padding: 9px;
-                    @media (min-width: 1600px) {                        
-                        // width: 100% !important;
-                        // transform: unset !important;
-                    }
-                    @media (max-width: 992px) {
-                        padding: 8px; 
-                    }
-                }
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            /* Hide scrollbar - Chrome, Safari */
+            scrollbar-width: none;           /* Firefox */
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar { 
+                display: none;  
             }
             .slide-tab-link {
-                display: flex;
+                display: inline-flex;
                 align-items: center;
+                justify-content: center;
                 gap: 11px;
-                padding: 12px 34px;
+                padding: 20px 30px;
                 border-radius: 30px; 
                 font-weight: 400;
                 font-size: 20px;   
                 position: relative; 
                 color: #655C64;
                 white-space: nowrap;
-                border: 1px solid transparent;
                 line-height: 1;
-                cursor: pointer;
+                z-index: 1;
+                flex: 1;
                 @media (max-width: 992px) {
                     font-size: 18px;  
                     gap: 8px; 
-                    padding: 10px 25px;
+                    padding: 18px 25px;
                 }
                 &::before {
                     content: '';
-                    width: calc(100% + 18px);
-                    height:  calc(100% + 18px);
+                    width: calc(100% - 16px);
+                    height:  calc(100% - 16px);
                     background: transparent;
                     border-radius: 30px;
                     box-shadow: none;
                     display: block;
                     position: absolute;
-                    top: -9px;
-                    left: -9px;
+                    top: 8px;
+                    left: 8px;
                     z-index: -1;
-                    @media (max-width: 992px) {
-                        width: calc(100% + 16px);
-                        height:  calc(100% + 16px);
-                        top: -8px;
-                        left: -8px;
-                    }
+                    border: 1px solid transparent;
                 }           
                 .icon {           
                     height: 20px;
@@ -86,16 +79,14 @@
                         filter: brightness(0);
                     }
                 }
-            }
-            .slick-current {
-                .slide-tab-link { 
-                    background: rgba(255, 255, 255, 0.22);
-                    box-shadow: inset 0px 4px 4px rgba(218, 211, 224, 0.29), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+                &.active { 
+                    background: linear-gradient(84.3deg, rgba(255, 0, 126, 0.46) 28.49%, rgba(98, 0, 248, 0.46) 98.04%), rgba(157, 96, 251, 0.27);
+                    box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.26), inset 0px 2px 4px rgba(0, 0, 0, 0.25);
                     color: #FFFFFF !important;
-                    border-bottom-color: rgba(255, 255, 255, 0.5);
-                    &::before {
-                        background: linear-gradient(84.3deg, rgba(255, 0, 126, 0.46) 28.49%, rgba(98, 0, 248, 0.46) 98.04%), rgba(157, 96, 251, 0.27);
-                        box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.26), inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+                    &::before {                            
+                        background: rgba(255, 255, 255, 0.22);
+                        box-shadow: inset 0px 4px 4px rgba(218, 211, 224, 0.29), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+                        border-bottom-color: rgba(255, 255, 255, 0.5);
                     }
                     .icon {
                         filter: brightness(0) invert(1);

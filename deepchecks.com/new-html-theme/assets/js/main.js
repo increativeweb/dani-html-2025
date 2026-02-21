@@ -106,70 +106,7 @@ jQuery(document).ready(function ($) {
 
     // }
 
-    if ($('.case-studies-slider').length) {
-        $('.case-studies-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: false,
-            accessibility: true,
-            infinite: false,
-            draggable: true,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,                        
-                        variableWidth: true,
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,                    
-                        variableWidth: true,
-                    }
-                }
-            ]
-        });
-    } 
-    if ($('.home-post-slider').length) {
-        $('.home-post-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: false,
-            accessibility: true,
-            infinite: false,
-            draggable: true,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,                        
-                        variableWidth: true,
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true,                    
-                        variableWidth: true,
-                    }
-                }
-            ]
-        });
-    } 
+    
     if ($('.post-slider').length) {
         $('.post-slider').slick({
             slidesToShow: 3,
@@ -559,7 +496,7 @@ jQuery(document).ready(function ($) {
         docsdeepcheckscom_url();
     }, 10);
 
-    if ($('a[href^="#"], .hash-scrol').length) {
+    if (($('a[href^="#"], .hash-scrol').length) && !$('.tab-slider-block > a')) {
         $('a[href^="#"], .hash-scrol').click(function (e) {
             e.preventDefault();
             var target = $(this).attr('href');
