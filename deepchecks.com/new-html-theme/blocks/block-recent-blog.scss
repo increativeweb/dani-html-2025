@@ -9,10 +9,11 @@
         background: #fbfbfb;
         border-right: 1px solid #DEE0E9;
         border-left: 1px solid #DEE0E9;
-        padding: 40px;
+        padding: 70px 100px;
         overflow: hidden;
         @media (max-width: 1200px) {
             padding: 30px;
+            padding: 70px;
         }  
         @media (max-width: 992px) {
             padding: 30px 15px;
@@ -23,13 +24,14 @@
             margin: 0;   
             
             .slick-list {
-                margin: 0 -28px;
-                @media (max-width: 1200px) {
-                    margin: 0 -15px;
-                }
-                @media (max-width: 767px) {
-                    margin: 0 -10px;
-                }
+                overflow: visible;
+                // margin: 0 -28px;
+                // @media (max-width: 1200px) {
+                //     margin: 0 -15px;
+                // }
+                // @media (max-width: 767px) {
+                //     margin: 0 -10px;
+                // }
             }
             .slick-track {
                 display: flex;
@@ -38,12 +40,30 @@
                 }
             }
             .slide-item {
-                margin: 0 28px;
+                padding: 0 28px;
                 @media(max-width: 1200px) {
-                    margin: 0 15px;
+                    padding: 0 15px;
                 }
                 @media(max-width: 767px) {
-                    margin: 0 10px;
+                    padding: 0 10px;
+                }
+                &:first-child {
+                    margin-left: -28px;
+                    @media(max-width: 1200px) {
+                        margin-left: -15px;
+                    }
+                    @media(max-width: 767px) {
+                        margin-left: -10px;
+                    }
+                }
+                &:last-child {
+                    margin-right: -28px;
+                    @media(max-width: 1200px) {
+                        margin-right: -15px;
+                    }
+                    @media(max-width: 767px) {
+                        margin-right: -10px;
+                    }
                 }
             }
         }

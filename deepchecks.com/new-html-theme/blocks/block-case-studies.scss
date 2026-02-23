@@ -13,18 +13,26 @@
         margin-bottom: 0;
         .slick-list {
             border-radius: 20px;
-            margin: 0 -15px;
             @media(max-width: 1200px) {
                 overflow: visible;
-            }
-            @media(max-width: 992px) {
-                margin: 0 -10px;
             }
         }
         .slick-track {
             display: flex;
             .slick-slide {
                 height: inherit !important;
+                &:first-child {
+                    margin-left: -10px;
+                    @media(max-width: 992px) {
+                        margin-left: -10px;
+                    }
+                }
+                &:last-child {
+                    margin-right: -10px;
+                    @media(max-width: 992px) {
+                        margin-right: -10px;
+                    }
+                }
             }
         }
     }
