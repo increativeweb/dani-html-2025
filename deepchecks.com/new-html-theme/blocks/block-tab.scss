@@ -6,31 +6,40 @@
     }
     .tab-slider-block {
         position: relative;
-        .slider-tab-nav {            
-            padding: 8px;            
+        .tab-nav-wrapper {         
             border-radius: 40px;
             margin-bottom: 20px;
             background: linear-gradient(90.31deg, rgba(250, 245, 255, 0.2) 7.88%, rgba(244, 233, 255, 0.2) 110.37%), rgba(255, 255, 255, 0.9);
             box-shadow: 0px 4px 4px rgba(76, 53, 112, 0.34);
+            overflow-y: hidden;
+        }
+        .slider-tab-nav { 
             display: flex;
             align-items: center;
+            flex-wrap: nowrap;
             overflow-x: auto;
-            overflow-y: hidden;
-            // scrollbar-width: none;
-            // -ms-overflow-style: none;
+            overflow-y: hidden;         
+            padding: 8px;     
             -webkit-overflow-scrolling: touch;
             scroll-behavior: smooth;
-            &::-webkit-scrollbar {
-                background-color:transparent;
-                width:1px; height: 1px;
-                border-radius:16px;
+            @media (min-width: 1200px) {
+                &::-webkit-scrollbar {
+                    background-color:transparent;
+                    width: 3px; 
+                    height: 3px;
+                    border-radius:16px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color:rgba(#000, 0.1)
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color:rgba(#000, 0.3);
+                    border-radius:16px;
+                }
             }
-            &::-webkit-scrollbar-track {
-                background-color:rgba(#000, 0.01)
-            }
-            &::-webkit-scrollbar-thumb {
-                background-color:rgba(#000, 0.01);
-                border-radius:16px;
+            @media (max-width: 1200px) {                
+                scrollbar-width: none;
+                -ms-overflow-style: none;
             }
             .slide-tab-link {
                 display: inline-flex;
