@@ -500,6 +500,16 @@ body.qa #site-footer {
             }
         }
     }
+    &.style-2 {
+        .section-title {
+            text-align: center;
+            max-width: 790px;
+            margin: 0 auto;
+            .action {
+                margin-top: 24px;
+            }
+        }
+    }
 }
 .infscr-pager {
     display: flex!important;
