@@ -76,7 +76,8 @@ body.qa #site-footer, body.single-qa {
     background: #DCE6DE;
     border: 0.063rem solid #000000;
     border-radius: 1.25rem;
-    transition: box-shadow 0.2s cubic-bezier(.5, 2.5, .7, .7), all 0.2s ease-in-out;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
     &:not(:last-child) {
         margin-bottom: 1.5rem;
     }
@@ -222,6 +223,19 @@ body.qa #site-footer, body.single-qa {
         .nav-filter-block {    
             overflow: hidden;
             overflow-x: auto;
+            &::-webkit-scrollbar {
+                background-color:transparent;
+                width: 5px; 
+                height: 5px;
+                border-radius:16px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color:rgba(#000, 0.1)
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color:rgba(#000, 0.3);
+                border-radius:16px;
+            }
             @media (min-width: 991px) {
                 max-width: calc(100% - 22rem);
             }        
@@ -232,14 +246,14 @@ body.qa #site-footer, body.single-qa {
                 display: flex;
                 align-items: center;
                 gap: 0.5rem;
-                padding-top: 0.125rem;
+                padding: 0.25rem 0;
                 scroll-behavior: smooth;
                 -webkit-overflow-scrolling: touch;
                 @media (max-width: 992px) {
                     padding-bottom: 0.313rem;
                 }
                 @media (max-width: 767px) {
-                    padding: 0.125rem 0 0.4rem;
+                    padding: 0.25rem 0 0.4rem;
                 }
                 li {
                     @media (max-width: 767px) {
