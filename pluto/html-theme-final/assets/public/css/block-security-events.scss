@@ -33,7 +33,7 @@
                 margin-bottom: 16px;
             }
         }
-        h2{
+        h2 {
             margin-bottom: 1.5rem;
             @media (max-width: 767px) {
                 margin-bottom: 1rem;
@@ -50,7 +50,7 @@
     max-width: 1024px;
     margin: 48px auto 0;
     @media (max-width: 767px) {             
-         margin: 32px auto 0;
+        margin: 32px auto 0;
     }
 }
 .event-card {
@@ -114,7 +114,7 @@
     .card-body {
         display: flex;
         align-items: flex-start;
-        gap: 4.5rem;
+        gap: 3rem;
         @media (max-width: 1200px) {
             gap: 2rem;
         }
