@@ -147,6 +147,7 @@
 					// Only one active per taxonomy
 					var tax = $this.data("filter");
 					$this.closest("ul").find('li.active a[data-filter="' + tax + '"]').parent("li").removeClass("active");
+					$('#q').val('');
 				}
 
 				// Toggle current active
