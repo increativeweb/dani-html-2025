@@ -9,9 +9,11 @@
     }    
     @media (max-width: 1200px) {
         padding-top: 1rem;
+        padding-bottom: 2rem;
     }  
     @media (max-width: 767px) {
         padding-top: 4rem;
+        padding-bottom: 1rem;
     }  
     &::before {
         content: "";
