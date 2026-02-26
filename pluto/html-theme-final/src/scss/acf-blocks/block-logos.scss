@@ -1,0 +1,551 @@
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+@import "../parts/variables";
+@import "../parts/mixin";
+
+.block-logos {
+    padding: 0;
+    background-color: $color-yellow;
+    overflow: hidden;
+    position: relative;
+    // Parallax progress for logos (-1 .. 1), controlled by JS
+    --parallax-progress: 0;
+    margin-top: -1px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 0;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: 0;
+    }
+    &__container {
+        width: 100%;
+        aspect-ratio: 1440 / 656;
+        position: relative;
+        background-color: #FFCCCB;
+    }
+
+    &__title {
+        color: $color-dark;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 35px; /* 350% */
+        text-transform: uppercase;
+        font-family: $font-primary;
+
+        @media (min-width: 420px) {
+            font-size: 14px;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 24px;
+            margin-top: 19px;
+            line-height: 35px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 32px;
+            margin-top: 19px;
+            line-height: 35px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-top: 55px;
+        }
+    }
+    &__oval_first {
+        /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='656' viewBox='0 0 1440 656'%3E%3Cdefs%3E%3C!-- Yellow only OUTSIDE ellipse --%3E%3Cmask id='outside-ellipse'%3E%3Crect width='100%25' height='100%25' fill='white'/%3E%3Cellipse cx='726.435' cy='327.54' rx='790.716' ry='326.79' fill='black'/%3E%3C/mask%3E%3C/defs%3E%3C!-- Yellow background, but punched out where the ellipse is --%3E%3Crect width='100%25' height='100%25' fill='yellow' mask='url(%23outside-ellipse)'/%3E%3C!-- Red ring: ellipse minus inner path (center stays transparent) --%3E%3Cpath fill='red' fill-rule='evenodd' d=' M726.435 0 a790.716 326.79 0 1 0 0 655.08 a790.716 326.79 0 1 0 0 -655.08 Z M726.442 20.4043 C932.088 20.4043 1118.23 54.855 1252.93 110.525 C1320.28 138.361 1374.74 171.487 1412.35 208.233 C1449.95 244.977 1470.67 285.293 1470.67 327.54 C1470.67 369.786 1449.95 410.102 1412.35 446.846 C1374.74 483.592 1320.28 516.719 1252.93 544.555 C1118.23 600.225 932.087 634.675 726.442 634.675 C520.797 634.675 334.656 600.225 199.953 544.555 C132.6 516.719 78.1438 483.592 40.5371 446.846 C2.93297 410.102 -17.7811 369.786 -17.7812 327.54 C-17.7812 285.293 2.93285 244.977 40.5371 208.233 C78.1438 171.487 132.6 138.361 199.953 110.525 C334.656 54.855 520.797 20.4043 726.442 20.4043 Z ' /%3E%3C!-- Ellipse stroke --%3E%3Cellipse cx='726.435' cy='327.54' rx='790.716' ry='326.79' fill='none' stroke='black' stroke-width='1.5' /%3E%3C!-- Inner path stroke --%3E%3Cpath d='M726.442 20.4043C932.088 20.4043 1118.23 54.855 1252.93 110.525C1320.28 138.361 1374.74 171.487 1412.35 208.233C1449.95 244.977 1470.67 285.293 1470.67 327.54C1470.67 369.786 1449.95 410.102 1412.35 446.846C1374.74 483.592 1320.28 516.719 1252.93 544.555C1118.23 600.225 932.087 634.675 726.442 634.675C520.797 634.675 334.656 600.225 199.953 544.555C132.6 516.719 78.1438 483.592 40.5371 446.846C2.93297 410.102 -17.7811 369.786 -17.7812 327.54C-17.7812 285.293 2.93285 244.977 40.5371 208.233C78.1438 171.487 132.6 138.361 199.953 110.525C334.656 54.855 520.797 20.4043 726.442 20.4043Z' fill='none' stroke='black' stroke-width='1.5' /%3E%3C/svg%3E%0A");*/
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='656' viewBox='0 0 1440 656'%3E%3Cdefs%3E%3C!-- Yellow only OUTSIDE ellipse --%3E%3Cmask id='outside-ellipse'%3E%3Crect width='100%25' height='100%25' fill='white'/%3E%3Cellipse cx='726.435' cy='327.54' rx='790.716' ry='326.79' fill='black'/%3E%3C/mask%3E%3C/defs%3E%3C!-- Yellow background, but punched out where the ellipse is --%3E%3Crect width='100%25' height='100%25' fill='%23FFFF78' mask='url(%23outside-ellipse)'/%3E%3C!-- Red ring: ellipse minus inner path (center stays transparent) --%3E%3Cpath fill='%23DCE6E4' fill-rule='evenodd' d=' M726.435 0 a790.716 326.79 0 1 0 0 655.08 a790.716 326.79 0 1 0 0 -655.08 Z M726.442 20.4043 C932.088 20.4043 1118.23 54.855 1252.93 110.525 C1320.28 138.361 1374.74 171.487 1412.35 208.233 C1449.95 244.977 1470.67 285.293 1470.67 327.54 C1470.67 369.786 1449.95 410.102 1412.35 446.846 C1374.74 483.592 1320.28 516.719 1252.93 544.555 C1118.23 600.225 932.087 634.675 726.442 634.675 C520.797 634.675 334.656 600.225 199.953 544.555 C132.6 516.719 78.1438 483.592 40.5371 446.846 C2.93297 410.102 -17.7811 369.786 -17.7812 327.54 C-17.7812 285.293 2.93285 244.977 40.5371 208.233 C78.1438 171.487 132.6 138.361 199.953 110.525 C334.656 54.855 520.797 20.4043 726.442 20.4043 Z ' /%3E%3C!-- Ellipse stroke --%3E%3Cellipse cx='726.435' cy='327.54' rx='790.716' ry='326.79' fill='none' stroke='black' stroke-width='1.5' /%3E%3C!-- Inner path stroke --%3E%3Cpath d='M726.442 20.4043C932.088 20.4043 1118.23 54.855 1252.93 110.525C1320.28 138.361 1374.74 171.487 1412.35 208.233C1449.95 244.977 1470.67 285.293 1470.67 327.54C1470.67 369.786 1449.95 410.102 1412.35 446.846C1374.74 483.592 1320.28 516.719 1252.93 544.555C1118.23 600.225 932.087 634.675 726.442 634.675C520.797 634.675 334.656 600.225 199.953 544.555C132.6 516.719 78.1438 483.592 40.5371 446.846C2.93297 410.102 -17.7811 369.786 -17.7812 327.54C-17.7812 285.293 2.93285 244.977 40.5371 208.233C78.1438 171.487 132.6 138.361 199.953 110.525C334.656 54.855 520.797 20.4043 726.442 20.4043Z' fill='none' stroke='black' stroke-width='1.5' /%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /*&__oval_first {
+        border-radius: 50%;
+        border: 0.5px solid $color-dark;
+        background: #DCE6DE;
+        width: calc(100vw + 130px);
+        height: calc((100vw + 50px) / 2);
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+
+        @include media-breakpoint-up(lg) {
+            top: 60px;
+            width: calc(100vw + 150px);
+        }
+        @include media-breakpoint-up(xl) {
+            top: 23px;
+            max-height: 653px;
+            width: calc(100vw + 151px);
+        }
+    }
+
+    &__oval_second {
+        border-radius: 50%;
+        border: 0.5px solid #000;
+        background: transparent;
+        width: calc(100vw + 105px);
+        height: calc((100vw + 26px) / 2);
+        position: absolute;
+        z-index: 6;
+        top: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-up(lg) {
+            top: 66px;
+        }
+        @include media-breakpoint-up(xl) {
+            top: 42px;
+            max-height: 615px;
+            width: calc(100vw + 57px);
+        }
+    }*/
+
+    &__wrap {
+        position: relative;
+        height: 100%;
+        z-index: 3;
+        overflow: hidden;
+        max-height: 85%;
+        max-width: 1920px;
+        margin: 0 auto;
+        transform: translateY(0);
+        transition: transform 0.1s linear;
+        will-change: transform;
+
+       /* @include media-breakpoint-up(lg) {
+            max-height: 615px;
+        }*/
+    }
+    &__element {
+        position: absolute;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &.element-1 {
+            top: 7%;
+            left: 16%;
+            width: 12%;
+            height: 10%;
+
+            @include media-breakpoint-up(xl) {
+                top: 7%;
+                left: 22%;
+                width: 143px;
+                height: 70px;
+            }
+        }
+        &.element-2 {
+            top: 46%;
+            left: -26px;
+            width: 12%;
+            height: 17%;
+
+            @include media-breakpoint-up(lg) {
+                left: 10px;
+            }
+            @include media-breakpoint-up(xl) {
+                left: 3%;
+                top: 45%;
+                width: 158px;
+                height: 114px;
+            }
+        }
+        &.element-3 {
+            top: 82%;
+            right: 9%;
+            width: 22%;
+            height: 18%;
+
+            @include media-breakpoint-up(xl) {
+                top: 83%;
+                right: 15%;
+                width: 299px;
+                height: 98px;
+            }
+        }
+        &.element-4 {
+            bottom: 16%;
+            right: 1%;
+            width: 13%;
+            height: 19%;
+
+            @include media-breakpoint-up(xl) {
+                bottom: 17%;
+                right: 10%;
+                width: 144px;
+            }
+        }
+        &.element-5 {
+            top: 24%;
+            right: 0;
+            width: 16%;
+            height: 15%;
+
+            @include media-breakpoint-up(xl) {
+                top: 23%;
+                right: 97px;
+                width: 251px;
+                height: 162px;
+            }
+        }
+        &.element-6 {
+            bottom: 9%;
+            left: 20%;
+            width: 4%;
+            height: 13%;
+            max-width: 38px;
+            max-height: 38px;
+
+            @include media-breakpoint-up(xl) {
+                bottom: 11%;
+                left: 26%;
+                max-width: 47px;
+                max-height: 43px;
+            }
+        }
+        &.element-7 {
+            bottom: 17%;
+            left: 33%;
+            width: 3%;
+            height: 3%;
+
+            @include media-breakpoint-up(xl) {
+                bottom: 7%;
+                left: 34.5%;
+                width: 6%;
+                height: 6%;
+            }
+        }
+        &.element-8 {
+            bottom: 30%;
+            left: 27%;
+            width: 5%;
+            height: 5%;
+            @include media-breakpoint-up(xl) {
+                bottom: 24%;
+                left: 31%;
+                width: 4%;
+                height: 4%;
+            }
+        }
+        &.element-9,
+        &.element-10,
+        &.element-11,
+        &.element-12,
+        &.element-13,
+        &.element-14 {
+            border: 0.5px solid $color-dark;
+            border-radius: 100%;
+        }
+        &.element-12,
+        &.element-13,
+        &.element-9 {
+            bottom: 38%;
+            left: 15%;
+            height: 6px;
+            width: 6px;
+
+            @include media-breakpoint-up(lg) {
+                height: 10px;
+                width: 10px;
+            }
+            @include media-breakpoint-up(xl) {
+                height: 17px;
+                width: 17px;
+                bottom: 37.6%;
+                left: 21.5%;
+            }
+        }
+        &.element-10 {
+            height: 9px;
+            width: 9px;
+            top: 38%;
+            left: 24%;
+
+            @include media-breakpoint-up(lg) {
+                height: 19px;
+                width: 19px;
+            }
+            @include media-breakpoint-up(xl) {
+                height: 30px;
+                width: 30px;
+                top: 37.5%;
+                left: 28.5%;
+            }
+        }
+        &.element-11 {
+            background-color: #dce6de;
+            width: 4px;
+            height: 4px;
+            top: 31%;
+            left: 30%;
+
+            @include media-breakpoint-up(lg) {
+                height: 8px;
+                width: 8px;
+            }
+            @include media-breakpoint-up(xl) {
+                height: 12px;
+                width: 12px;
+                top: 30.7%;
+                left: 33.3%;
+            }
+        }
+        &.element-12 {
+            bottom: 13%;
+            left: 52%;
+
+            @include media-breakpoint-up(xl) {
+                bottom: 12.5%;
+                left: 51.5%;
+            }
+        }
+        &.element-13 {
+            bottom: auto;
+            left: auto;
+            top: 30%;
+            right: 36%;
+
+            @include media-breakpoint-up(xl) {
+                top: 30%;
+                right: 39.3%;
+            }
+        }
+        &.element-14 {
+            height: 10px;
+            width: 10px;
+            bottom: 22%;
+            right: 17%;
+
+            @include media-breakpoint-up(xl) {
+                height: 32px;
+                width: 32px;
+                bottom: 21%;
+                right: 23%;
+            }
+        }
+        &.element-15 {
+            top: 43%;
+            left: 44%;
+            width: 4%;
+            height: 6%;
+
+            @include media-breakpoint-up(xl) {
+                top: 46%;
+                left: 44.7%;
+                width: 5%;
+                height: 7%;
+            }
+        }
+        &.element-16 {
+            top: 43%;
+            right: 26%;
+            width: 5%;
+            height: 5%;
+
+            @include media-breakpoint-up(xl) {
+                top: 48%;
+                right: 29%;
+                width: 6%;
+                height: 5%;
+            }
+        }
+        &.element-17 {
+            top: 35%;
+            right: 17%;
+            width: 5%;
+            height: 6%;
+
+            @include media-breakpoint-up(xl) {
+                top: 39%;
+                right: 22%;
+                width: 5%;
+                height: 6%;
+            }
+        }
+        &.element-18 {
+            top: 32%;
+            right: -8%;
+            width: 11%;
+            height: 14%;
+
+            @include media-breakpoint-up(xl) {
+                width: 137.623px;
+                height: 92.462px;
+                right: 28px;
+                top: 48%;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        list-style: none;
+
+        @include media-breakpoint-up(lg) {
+            gap: 32px;
+        }
+
+    }
+
+    &__item {
+        position: absolute;
+        // base factor, can be overridden per item
+        --parallax-factor: 1;
+        transform: translateY(
+            calc(var(--parallax-progress) * 20px * var(--parallax-factor))
+        );
+        transition: transform 0.1s linear;
+
+        &.logo-1 {
+            width: 20%;
+            height: 30%;
+            left: 17%;
+            top: 40%;
+
+            @include media-breakpoint-up(xl) {
+                width: 244px;
+                height: 31%;
+                left: 23%;
+                top: 39%;
+            }
+        }
+        &.logo-2 {
+            width: 12%;
+            height: 43%;
+            left: 51%;
+            top: 34%;
+
+            @include media-breakpoint-up(xl) {
+                width: 144px;
+                height: 45%;
+                left: 50.5%;
+                top: 33%;
+            }
+        }
+        &.logo-3 {
+            width: 12%;
+            height: 25%;
+            left: 36%;
+            bottom: 14%;
+
+            @include media-breakpoint-up(xl) {
+                width: 151px;
+                height: 24%;
+                left: 38.4%;
+                bottom: 14.5%;
+            }
+        }
+        &.logo-4 {
+            width: 16%;
+            height: 22%;
+            right: 21%;
+            bottom: 15%;
+
+            @include media-breakpoint-up(xl) {
+                width: 194px;
+                height: 143px;
+                right: 26%;
+                bottom: 14%;
+            }
+        }
+        &.logo-5 {
+            width: 19%;
+            height: 20%;
+            left: 2%;
+            bottom: 16%;
+
+            @include media-breakpoint-up(xl) {
+                left: 12.7%;
+                bottom: 14%;
+                max-width: 177px;
+                height: 21%;
+            }
+        }
+        &.logo-6 {
+            width: 15%;
+            height: 26%;
+            right: 21%;
+            top: 23%;
+
+            @include media-breakpoint-up(xl) {
+                right: 25%;
+                top: 22%;
+            }
+        }
+        &.logo-7 {
+            width: 17%;
+            height: 24%;
+            left: 4%;
+            top: 24%;
+
+            @include media-breakpoint-up(xl) {
+                max-width: 211px;
+                max-height: 141px;
+                left: 12.4%;
+                top: 24.2%;
+            }
+        }
+        &.logo-8 {
+            width: 17%;
+            height: 12%;
+            right: 8%;
+            top: 51%;
+
+            @include media-breakpoint-up(xl) {
+                width: 199px;
+                height: 12%;
+                right: 16%;
+                top: 51%;
+            }
+        }
+        &.logo-9 {
+            width: 15%;
+            height: 19%;
+            left: 35%;
+            top: 27%;
+
+            @include media-breakpoint-up(xl) {
+                width: 170px;
+                height: 16.1%;
+                left: 37.9%;
+                top: 28.1%;
+            }
+        }
+    }
+
+    &__item:nth-child(2n) {
+        --parallax-factor: -1;
+    }
+
+    &__item:nth-child(3n) {
+        --parallax-factor: 0.5;
+    }
+
+    &__item:nth-child(4n) {
+        --parallax-factor: -0.5;
+    }
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+}

@@ -1,0 +1,86 @@
+.btn {
+    display: flex;
+    height: 45px;
+    padding: 17px 31px;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    gap: 10px;
+
+    border-radius: 100px;
+    border-bottom: 4px solid $color-dark;
+    user-select: none;
+
+    text-align: center;
+    font-family: $font-primary;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+ 
+    transition-property: color, background-color, border-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+
+    @include media-breakpoint-up(lg) {
+        height: 54px;
+
+        text-align: center;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 1.62px;
+    }
+
+    &-big {
+        height: 45px;
+        gap: 10px;
+
+        font-size: 12px;
+        letter-spacing: 1.08px;
+
+        @include media-breakpoint-up(lg) {
+            width: 535px;
+            height: 108px;
+            padding: 31px 56px;
+            gap: 18px;
+            border-radius: 178px;
+
+            font-size: 32px;
+            line-height: 23; /* 70.048% */
+            letter-spacing: 3px;
+        }
+    }
+	
+    &-primary {
+        background-color: $color-white;
+        color: $color-dark;
+    }
+	
+    &-secondary {
+        &_black {
+            background-color: $color-dark;
+            color: $color-white;
+
+            &:hover {
+                background-color: $color-green;
+            }
+
+            a {
+                color: $color-white;
+            }
+        }
+		
+        &_yellow {
+            background-color: $color-dark;
+            color: $color-yellow;
+
+            a {
+                color: $color-yellow;
+            }
+        }
+    }
+}

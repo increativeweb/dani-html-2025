@@ -1,0 +1,215 @@
+.site-footer {
+    border-top: 1px solid $color-dark;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 11px;
+        padding: 18px 0px 13px;
+
+        @include media-breakpoint-up(lg) {
+            gap: 50px;
+            padding: 61px 19px 64px 40px;
+        }
+    }
+
+    &__top-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__bottom-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__menu {
+        margin: 11px auto 0;
+
+        @include media-breakpoint-up(lg) {
+            margin: 18px 0 0;
+        }
+
+        ul {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            @include media-breakpoint-up(lg) {
+                gap: 25px;
+            }
+        }
+
+        a {
+            text-align: center;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px; /* 166.667% */
+            text-transform: capitalize;
+
+            &:hover {
+                color: $color-green;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+                text-decoration: none;
+            }
+        }
+
+        .btn {
+            display: none;
+            border-top: 1px solid $color-dark;
+            border-right: 1px solid $color-dark;
+            border-bottom: 4px solid $color-dark;
+            border-left: 1px solid $color-dark;
+
+            &:hover {
+                background: $color-yellow;
+                color: $color-dark;
+
+                a {
+                    color: $color-dark;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                display: flex;
+            }
+        }
+    }
+
+    &__policies {
+        ul {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            @include media-breakpoint-up(lg) {
+                gap: 22px;
+            }
+        }
+
+        a {
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+            text-transform: capitalize;
+            
+            @include media-breakpoint-up(lg) {
+                font-size: 12px;
+            }
+        }
+
+        span {
+            font-size: 10px;
+            line-height: 20px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        @include media-breakpoint-up(lg) {
+            align-items: start;
+            gap: 50px;
+        }
+    }
+
+    &__logo  {
+        image {
+            height: 40px;
+
+            @include media-breakpoint-up(lg) {
+                height: 56px;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 52px;
+        max-height: 20px;
+
+        @include media-breakpoint-up(lg) {
+            max-height: 28px;
+        }
+
+        a {
+            display: flex;
+
+            &:hover {
+                img {
+                    filter: invert(73%) sepia(14%) saturate(1445%) hue-rotate(111deg) brightness(83%) contrast(105%);
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px; /* 140% */
+
+        @include media-breakpoint-up(lg) {
+            font-size: 14px;
+            line-height: 21px; /* 150% */
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__color {
+        &-yellow {
+            background-color: $color-yellow;
+        }
+
+        &-green {
+            background-color: $color-green;
+        }
+
+        &-red {
+            background-color: $color-red;  
+        }
+    }
+}

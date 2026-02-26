@@ -1,0 +1,43 @@
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+@import "../parts/variables";
+@import "../parts/mixin";
+
+.block-simple-content {
+    padding: 35px 0px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 70px 80px;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 28px;
+        margin: 0 0 .5em;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 72px;
+            line-height: 85px;
+        }
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 0 .5em;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 46px;
+            line-height: 64px;
+            margin: 0 0 .5em;
+        }
+    }
+
+    ul, ol {
+        padding-inline-start: 20px;
+    }
+
+    a {
+        color: $color-green;
+    }
+}
