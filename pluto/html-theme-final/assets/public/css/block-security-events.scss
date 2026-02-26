@@ -19,5 +19,19 @@
             background-size: 100%;    
         }
     }
-
+    .section-title {
+        max-width: 600px;
+        margin: 0 auto;
+        .tag-line {
+            font-weight: 800;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: #FA673A;
+            margin-bottom: 24px;
+            @media (max-width: 767px) {
+                margin-bottom: 16px;
+            }
+        }
+    }
 }
