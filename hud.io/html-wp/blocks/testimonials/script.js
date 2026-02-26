@@ -1,6 +1,6 @@
 if (jQuery('.testimonial-splide').length) {
     const testimonialSlider = new Splide('.testimonial-splide', {
-        type: 'slide',
+        type: 'loop',
         perPage: 3,
         perMove: 1,
         pagination: false,
@@ -18,12 +18,12 @@ if (jQuery('.testimonial-splide').length) {
                 arrows: false,
                 pagination: true,
                 autoWidth: true,
-                padding: '15px'
+                padding: '1rem'
             },
             767: {
                 perPage: 1,
                 focus: 'center',
-                gap: '15px',
+                gap: '1rem',
             }
         }
     });
@@ -46,14 +46,17 @@ if (jQuery('.testimonials-vertical-slider').length) {
         pagination: false,
         updateOnMove: true,
 
-        // classes: {
-        //     pagination: 'splide__pagination is-dark',
-        // },
+        // âœ… Desktop autoplay
+        autoplay: true,
+        interval: 8000,
+        pauseOnHover: true,
+        pauseOnFocus: true,
 
         mediaQuery: 'max',
         breakpoints: {
             767: {
                 pagination: false,
+                autoplay: false,    // âŒ Disable autoplay on mobile
                 arrows: true,
                 direction: 'ltr',
             },

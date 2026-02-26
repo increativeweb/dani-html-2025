@@ -257,12 +257,12 @@
             }
         }
 
-        @media (min-width: 992px) {
-            .splide__slide.is-active .client-logo-block .btn-border-base {
-                // transition: 0.4s ease !important;
-                // animation: icw-bounce-y 1s cubic-bezier(0.25, 1, 0.5, 1);
-            }
-        }
+        // @media (min-width: 992px) {
+        // .splide__slide.is-active .client-logo-block .btn-border-base {
+        // transition: 0.4s ease !important;
+        // animation: icw-bounce-y 1s cubic-bezier(0.25, 1, 0.5, 1);
+        // }
+        // }
 
         .testimonial-card {
             border: none;
@@ -481,6 +481,7 @@
         // overflow: hidden;
     }
 
+    /*
     .btn.btn-pink {
         cursor: pointer;
         min-width: 80px;
@@ -504,7 +505,7 @@
         }
     }
 
-    /*
+   
     .btn.btn-pink {
         --clr-font-main: #fff;
         --btn-bg-1: #5d245d;
@@ -565,15 +566,15 @@
         }
     }
 
-    @keyframes bg-border-animation {
-        0% {
-            background-position: 0% 50%;
-        }
+}
 
-        100% {
-            background-position: 100% 50%;
-        }
+@keyframes bg-border-animation {
+    0% {
+        background-position: 0% 50%;
+    }
 
+    100% {
+        background-position: 100% 50%;
     }
 
 }
