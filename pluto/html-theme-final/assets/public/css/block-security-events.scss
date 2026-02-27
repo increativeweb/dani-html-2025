@@ -13,7 +13,7 @@
     }  
     @media (max-width: 767px) {
         padding-top: 4rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
     }  
     &::before {
         content: "";
@@ -49,6 +49,7 @@
             }
         }
         h2 {
+            font-size: clamp(1.75rem,6.5vw,3.438rem);
             margin-bottom: 1.5rem;
             @media (max-width: 767px) {
                 margin-bottom: 1rem;
@@ -56,7 +57,7 @@
         }
         .sort-info {
             font-weight: 300;
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-size: clamp(1rem, 3.5vw, 1.5rem);
             color: #111013;
         }
     }
