@@ -1,0 +1,217 @@
+.dc-pricing-section {
+    position: relative;
+    background: url('../assets/images/img-pricing-header-bg.jpg') no-repeat top left;
+    background-size: cover;
+    padding-top: 80px !important;
+    padding-bottom: 60px;
+    .main-title {
+        max-width: 900px;
+        margin: 0 auto 50px;
+        h1 {
+            font-size: 48px;
+        }
+    }
+    .icw-tab-block {
+        max-width: 1170px;
+        margin: 0 auto;
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            gap: 8px;
+            border: 2px solid #9D60FB;
+            border-radius: 50px;
+            margin: 0 auto 120px;
+            max-width: max-content;
+            .nav-link {
+                border-radius: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                padding: 18px 42px;
+                font-size: 20px;  
+                font-weight: 400; 
+                position: relative; 
+                white-space: nowrap;
+                line-height: 1.1;
+                flex: 0 0 auto;
+                background: transparent;
+                color: #9D60FB;
+                transition: all 0.2s ease-in-out;
+                border: none;
+                text-shadow: 1px 0px #9D60FB;
+                letter-spacing: 0.01em;
+                .icon {
+                    svg {
+                        path {
+                            fill: #9D60FB;
+                            transition: all 0.2s ease-in-out;
+                        }
+                    }
+                }
+                &::before {
+                    content: '';
+                    width: calc(100% - 16px);
+                    height:  calc(100% - 16px);
+                    background: transparent;
+                    border-radius: 30px;
+                    box-shadow: none;
+                    display: block;
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    border: 1px solid transparent;
+                    transition: all 0.2s ease-in-out;
+                }    
+                &:hover, &:focus {
+                    color: #303245;
+                    text-shadow: 1px 0px #303245;
+                    .icon {
+                        svg {
+                            path {
+                                fill: #303245;
+                            }
+                        }
+                    }
+                }   
+                &.active {
+                    background: linear-gradient(84.3deg, rgba(255, 0, 126, 0.46) 28.49%, rgba(98, 0, 248, 0.46) 98.04%), rgba(157, 96, 251, 0.27);
+                    box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.26), inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+                    color: #FFFFFF !important;
+                    text-shadow: none;
+                    &::before {                            
+                        background: rgba(255, 255, 255, 0.22);
+                        box-shadow: inset 0px 4px 4px rgba(218, 211, 224, 0.29), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+                        border-bottom-color: rgba(255, 255, 255, 0.5);
+                    }
+                    .icon {
+                        svg {
+                            path {
+                                fill: #FFFFFF !important;
+                            }
+                        }
+                    }
+                }  
+            }
+        }
+        .tab-content {
+            .pricing-block {
+                & > .row {
+                    & >:first-child .pricing-box {
+                        border-radius: 30px 0 0 30px;
+                    }
+                    & >:last-child .pricing-box {
+                        border-radius: 0 30px 30px 0
+                    }
+                }
+                .pricing-box {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    padding: 50px 30px 70px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 8px 50px rgba(114, 118, 133, 0.25);
+                    border-radius: 30px;
+                    .pricing-info {
+                        padding-bottom: 36px;
+                        margin-bottom: 36px;
+                        border-bottom: 1px solid rgba(48, 50, 69, .2);
+                        width: 100%;
+                        h2 {
+                            font-size: 36px;
+                            font-weight: 800;
+                            letter-spacing: -0.02em;
+                            margin-bottom: 16px;
+                        }
+                        .sort-info {
+                            min-height: 46px;
+                            margin-bottom: 24px;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 1.3;
+                        }
+                        .action {
+                            .btn {
+                                min-width: 220px;
+                                min-height: 56px;
+                                border-radius: 15px;
+                                font-size: 18px;
+                            }
+                            .dropdown-action-block {
+                                opacity: 0;
+                                visibility: hidden;
+                                transform: translateY(10px);
+                                transition: all 0.3s ease-in-out;
+                                height: 0;
+                                max-width: 100%;
+                                position: relative;
+                                .icw-hubspot-form-shortcode {
+                                    padding: 15px;
+                                    border-radius: 0.25rem !important;
+                                    border: 3px solid #E0CCFF;
+                                    -moz-border-radius: 30px;
+                                    -webkit-border-radius: 30px;
+                                    -webkit-box-shadow: 0px 12px 40px rgba(134, 138, 144, 0.4);
+                                    box-shadow: 0px 12px 40px rgba(134, 138, 144, 0.4);
+                                    background-color: #fff;
+                                    max-width: 570px;
+                                    margin: 0 auto;
+                                }
+                            }
+                            .dropdown-action.active+.dropdown-action-block {
+                                opacity: 1 !important;
+                                visibility: visible !important;
+                                transform: translateY(5px) !important;
+                                z-index: 3;
+                            }
+                        }
+                    }
+                    .list-title {
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 1.3;
+                        margin-bottom: 36px;
+                    }
+                    .ul-check-list {
+                        padding-bottom: 0 !important;
+                        li {
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: #303245;
+                            margin-bottom: 15px;
+                            align-items: flex-start;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            &::before {
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    &.bg-purple {
+                        margin-top: -70px;
+                        border-radius: 30px 30px 0 0;
+                        height: calc(100% + 70px);
+                        color: #fff;
+                        padding-top: 120px;
+                        background: linear-gradient(193.23deg, rgba(251, 96, 233, 0.78) 1.47%, rgba(165, 96, 251, 0.78) 44.95%, rgba(201, 96, 251, 0.78) 94.71%), url('../assets/images/img-pricing-middle-card-bg.png') no-repeat top center;
+                        background-size: cover;
+                        border-radius: 30px 30px 0px 0px;
+                        .pricing-info {
+                            border-color: rgba(255, 255, 255, .2);
+                        }
+                        .list-title, 
+                        .ul-check-list li {
+                            color: #fff;
+                        }
+                        .ul-check-list li::before {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
