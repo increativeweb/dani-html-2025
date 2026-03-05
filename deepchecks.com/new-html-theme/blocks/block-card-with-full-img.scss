@@ -1,6 +1,6 @@
 .dc-card-with-full-img-section {
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: bottom right;
     background-size: cover;
     padding: 70px 0;
     color: #ffffff; 
@@ -11,6 +11,15 @@
         margin-bottom: 70px;
         @media (max-width: 992px) {
             margin-bottom: 40px;  
+        }
+    }
+    .image-block {        
+        border-radius: 20px;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        img {            
+            border-radius: 20px;
         }
     }
     .card-block {

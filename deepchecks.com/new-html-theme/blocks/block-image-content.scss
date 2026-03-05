@@ -1,0 +1,41 @@
+.block-image-content-section {
+    padding: 70px 0;
+    @media (max-width: 992px) {
+        padding: 40px 0;
+    }
+}
+
+.image-content-block {
+    max-width: 1300px;
+    margin: 0 auto;
+    &:not(:last-child) {
+        padding-bottom: 70px;
+    }
+    .image-block {
+        border-radius: 20px;
+        overflow: hidden;
+        img {
+            border-radius: 20px;
+        }
+    }
+    .right-img {
+        text-align: right;
+    }
+    .main-title {
+        @media (min-width: 991px) {
+            max-width: 470px;
+        }
+        h2 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 32px;
+            color: #9D60FB;
+        }
+        .sort-info {
+            p, li {
+                font-size: 20px;
+            }
+        }
+    }
+}

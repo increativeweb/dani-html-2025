@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Evaluation for LLM-Based Apps | Deepchecks</title>
+        <title>Agent Evaluation | Define, Measure &amp; Validate Your Tool-Calling Agents</title>
         <meta name="theme-color" content="#1e0052">
         <meta charset="utf-8">
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -25,17 +25,9 @@
         <meta name="msapplication-TileImage" content="uploads/favicon-300x300.png" />
 
         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-        <link rel='stylesheet' id='style-main-dc-css' href='assets/css/main-dc.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-hero-css' href='blocks/block-hero.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-logo-slider-css' href='blocks/block-logo-slider.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-tab-css' href='blocks/block-tab.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-full-content-img-css' href='blocks/block-full-content-img.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-counter-css' href='blocks/block-counter.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-collapse-css' href='blocks/block-collapse.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-case-studies-css' href='blocks/block-case-studies.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-recent-blog-css' href='blocks/block-recent-blog.css' type='text/css' media='screen' />
     </head>
-    <body class="home is-cta-sticky">
+
+    <body data-rsssl=1 class="page page-id-11849 agent-evaluation">
         <header class="main-header">
             <div class="header-note">
                 <div class="theme-container">
@@ -139,467 +131,519 @@
         </header>
         <div class="bg-overly"></div>
         <main class="main-content-wrapper">
-            <section class="dc-hero-section bgnone-section">
-                <div class="theme-container">
+            <section class="html-section  bgnone-section agent-evaluation-section">
+                <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="main-title mb-0">
-                                <h1>Evaluate AI Progress with <span>Know Your Agent</span></h1>                                    
-                                <div class="sort-info">Deepchecks LLM Evaluation is an enterprise-grade AI testing, observability and monitoring platform that provides visibility, control, and trust across AI systems in production.</div>      
-                                <div class="action d-none d-md-block">
-                                    <a data-toggle="modal" data-target="#popup-llmnov25" href="#" class="btn btn-primary btn-svg">Try Deepchecks<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="image-block text-center text-md-right">
-                                <video class="embed-responsive-item" autoplay="" muted="" loop="" playsinline="" speed="1" controlslist="nodownload" poster="" oncontextmenu="return false;"><source src="uploads/lottie/video-hero-animation.mp4" type="video/mp4"></video>
-                                <!-- <img src="uploads/img-hero-layers.svg" alt="Evaluate AI Progress with Know Your Agent"> -->
-                            </div>     
-                            <div class="action d-block d-md-none text-center mt-4">
-                                <a data-toggle="modal" data-target="#popup-llmnov25" href="#" class="btn btn-primary btn-svg">Try Deepchecks<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="dc-logo-slider-section pt-4 pt-md-0">
-                <div class="theme-container">
-                    <h2 class="h5">Leading AI Teams Love & Trust Deepchecks</h2>
-                    <div class="logo-sliders logo-mask-slider logo-sliders-sm">
-                        <div class="logo-slider auto-slider">
-                            <div class="logo-item"><span><img src="uploads/logo-mit.svg" alt="Massachusetts Institute of Technology" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-anthem.svg" alt="Anthem Inc" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-america-first.svg" alt="America First Credit Union" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-booking.svg" alt="Booking.com" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-wix.svg" alt="Wix" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-aws.svg" alt="Amazon Web Services" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-moovit.svg" alt="Moovit" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-takeda.svg" alt="Takeda Pharmaceutical" /></span></div>        
-                        </div>
-                        <div aria-hidden="true" class="logo-slider auto-slider">
-                            <div class="logo-item"><span><img src="uploads/logo-mit.svg" alt="Massachusetts Institute of Technology" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-anthem.svg" alt="Anthem Inc" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-america-first.svg" alt="America First Credit Union" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-booking.svg" alt="Booking.com" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-wix.svg" alt="Wix" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-aws.svg" alt="Amazon Web Services" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-moovit.svg" alt="Moovit" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-takeda.svg" alt="Takeda Pharmaceutical" /></span></div> 
-                        </div>
-                    </div>
-                </div>
-            </section>        
-            <section class="dc-tab-section" style="background-image: url('assets/images/img-tab-bg.png');">
-                <div class="theme-container">
-                    <div class="tab-slider-block">
-                        <div class="tab-nav-wrapper">
-                            <div class="slider slider-tab-nav">
-                                <a href="#" class="slide-tab-link" data-slide="1"><span class="icon"><img src="uploads/icon-agents.svg" alt="Agents"></span>Agents</a>
-                                <a href="#" class="slide-tab-link" data-slide="2"><span class="icon"><img src="uploads/icon-start-immediately.svg" alt="Evaluators"></span>Evaluators</a>
-                                <a href="#" class="slide-tab-link" data-slide="3"><span class="icon"><img src="uploads/icon-auto-annotations.svg" alt="Version Comparison"></span>Version Comparison</a>
-                                <a href="#" class="slide-tab-link" data-slide="4"><span class="icon"><img src="uploads/icon-start-immediately.svg" alt="Auto-Scoring"></span>Auto-Scoring</a> 
-                                <a href="#" class="slide-tab-link" data-slide="5"><span class="icon"><img src="uploads/icon-iterate-quickly.svg" alt="Datasets"></span>Datasets</a>
-                                <a href="#" class="slide-tab-link" data-slide="6"><span class="icon"><img src="uploads/icon-gain-insights.svg" alt="Gain Insights"></span>Insights</a>
-                                <a href="#" class="slide-tab-link" data-slide="7"><span class="icon"><img src="uploads/icon-production-monitoring.svg" alt="Production Monitoring"></span>Production Monitoring</a>
-                                <a href="#" class="slide-tab-link" data-slide="8"><span class="icon"><img src="uploads/icon-gain-insights.svg" alt="Tracing"></span>Tracing</a>
-                            </div>
-                        </div>
-                        <div class="slider-wrapper">
-                            <div class="slider slider-tab-info">
-                                <div class="slide-tab-info">
-                                    <div class="image-block">
-                                        <img src="uploads/img-agent.jpg" alt="Agents">
-                                    </div>
-                                </div>
-                                <div class="slide-tab-info">
-                                    <div class="image-block">
-                                        <img src="uploads/img-swarm-evaluators.jpg" alt="Evaluators">
-                                    </div>
-                                </div>
-                                <div class="slide-tab-info">
-                                    <div class="image-block">
-                                        <img src="uploads/img-version-comparison.jpg" alt="Version Comparison">
-                                    </div>
-                                </div>
-                                <div class="slide-tab-info">
-                                    <div class="image-block">
-                                        <img src="uploads/img-auto-scoring.jpg" alt="Auto-Scoring">
-                                    </div>
-                                </div>
-                                <div class="slide-tab-info">
-                                    <div class="image-block">
-                                        <img src="uploads/img-dataset-management.jpg" alt="Datasets">
-                                    </div>
-                                </div>
-                                <div class="slide-tab-info">
-                                    <div class="image-block">
-                                        <img src="uploads/img-insights.jpg" alt="Insights">
-                                    </div>
-                                </div>
-                                <div class="slide-tab-info">
-                                    <div class="image-block">
-                                        <img src="uploads/img-production-monitoring.jpg" alt="Production Monitoring">
-                                    </div>
-                                </div>
-                                <div class="slide-tab-info">
-                                    <div class="image-block">
-                                        <img src="uploads/img-tracing.jpg" alt="Tracing">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-progress">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> 
-            <section class="dc-content-img-section bg-lightgray">
-                <div class="theme-container">
-                    <div class="with-border-block">
-                        <div class="main-title text-left">
-                            <h2>Deepchecks LLM Evaluation Platform</h2>
-                            <div class="sort-info">
-                                <p>The term “LLM Evaluation” is often associated with isolated techniques or open-source tools, typically centered on LLM-as-a-judge approaches. These methods may support early experimentation, but they do not meet the requirements of production AI, where accuracy, consistency, governance, and ownership are critical. AI teams are left stitching together fragile infrastructure that is hard to trust and even harder to operate at scale.</p>
-                                <p>At Deepchecks, LLM Evaluation is a production-grade platform that unifies evaluation, observability, testing, and monitoring, giving teams the visibility and control needed to trust AI systems in production.</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="full-image-block">
-                                    <div class="image-block with-content text-center">
-                                        <video class="embed-responsive-item" autoplay="" muted="" loop="" playsinline="" speed="1" controlslist="nodownload" poster="" oncontextmenu="return false;"><source src="uploads/lottie/video-agent-evaluation-platform.mp4" type="video/mp4"></video>
-                                        <!-- <img src="uploads/img-agent-evaluation-platform.svg" alt="Agent Evaluation Platform" class="d-none d-md-block"> -->
-                                        <!-- <img src="uploads/img-agent-evaluation-platform-m.svg" alt="Agent Evaluation Platform" class="d-inline-block d-md-none"> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="action">
-                        <a href="#" class="btn btn-primary btn-svg">Learn more<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
-                    </div>
-                </div>
-            </section>
-            <section class="dc-counter-section">
-                <div class="theme-container">
-                    <div class="bg-line-gradient-block">
-                        <div class="main-title mb-4">
-                            <h2>Why Choose Deepchecks</h2>
-                            <div class="sort-info">
-                                <p>Generative AI introduces a new class of quality problems that cannot be solved with simple rules or unit tests. Assessing whether an output is acceptable often requires expert judgment, deep context, and repeated review. This makes quality assurance slow, inconsistent, and fragile, especially as models, prompts, and workflows evolve.</p>
-                                <p>Deepchecks is built to meet these requirements.</p>
-                            </div>
-                        </div>
-                        <div class="row g-4 icon-content-item">
-                            <div class="col-12 col-md-4 col-lg">
-                                <div class="card-item">
-                                    <div class="card-icon mb-1"><img src="uploads/icon-compare-versions-prompts.svg" alt="Compare versions of prompts"></div>
-                                    <p class="sort-info">Compare versions of prompts, models, agents, & AI systems</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 col-lg">
-                                <div class="card-item">
-                                    <div class="card-icon mb-1"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/icon-setup-auto-scoring-pipeline.svg" alt="Set up an auto-scoring pipelin"></div>
-                                    <p class="sort-info">Set up an auto-scoring pipeline, addressing nuanced constraints</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 col-lg">
-                                <div class="card-item">
-                                    <div class="card-icon mb-1"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/icon-generate-datasets.svg" alt="Generate datasets"></div>
-                                    <p class="sort-info">Generate datasets and create LLM judges within minutes</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 col-lg">
-                                <div class="card-item">
-                                    <div class="card-icon mb-1"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/icon-leverage-auto-scoring.svg" alt="Leverage auto-scoring"></div>
-                                    <p class="sort-info">Leverage auto-scoring for annotations and data slicing & dicing</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 col-lg">
-                                <div class="card-item">
-                                    <div class="card-icon mb-1"><img src="https://www.deepchecks.com/wp-content/uploads/2025/06/icon-test-apps.svg" alt="Test LLM apps"></div>
-                                    <p class="sort-info">Test LLM apps within the CI/CD and monitor them in production</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="counter-block">
-                        <div class="row icon-content-item g-4">
-                            <div class="col-md-4">
-                                <div class="card-item counter-box" style="background: #ffffff;">
-                                    <h3 class="counter count-number" data-countto="5" data-duration="2500"><span>0</span>x</h3>
-                                    <p class="sort-info">improvement of “time to production” for a new LLM app</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card-item counter-box" style="background: #ffffff;">
-                                    <h3 class="counter count-number" data-countto="70" data-duration="2500"><span>0</span>%</h3>
-                                    <p class="sort-info">decrease in hallucinations and low-quality responses</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card-item counter-box" style="background: #ffffff;">
-                                    <h3 class="counter count-number" data-countto="15" data-duration="2500"><span>0</span>x</h3>
-                                    <p class="sort-info"># of versions compared before choosing the winner</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="action-btn text-center">
-                            <a data-toggle="modal" data-target="#popup-demonov25" href="#book-demo" class="btn btn-primary btn-svg">Book a Demo <span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="dc-content-img-section with-bg-line">
-                <div class="theme-container">
-                    <div class="main-title text-left mb-3 mb-md-5">
-                        <h2 class="h3">Enterprise-Grade Security And Compliance</h2>
-                        <div class="sort-info">Enterprise-grade security and compliance are built into the platform from day one, ensuring AI systems can be evaluated, monitored, and operated safely in production. Deepchecks supports secure access controls, data isolation, and auditability to meet the requirements of regulated and security-conscious organizations.</div>
-                    </div>
-                    <div class="row justify-content-center">
                         <div class="col-12">
-                            <div class="with-icon-list">
-                                <div class="full-image-block text-center text-md-left">                                    
-                                    <img src="uploads/img-enterprise-grade-security.svg" alt="End-to-End Platform" class="d-none d-md-block">
-                                    <img src="uploads/img-enterprise-grade-security-m.svg" alt="End-to-End Platform" class="d-block d-md-none mx-auto">
+                            <div class="main-title text-center mb-0">
+                                <div class="tag-line">Agent Evaluation</div>
+                                <h1 class="h1-lg">Define, Measure & Validate <br class="d-none d-xl-block">Your Tool-Calling
+                                    Agents</h1>
+                                <div class="sort-info">Evaluate your tool-using AI agents across multi-step workflows - with
+                                    <br class="d-none d-xl-block">context tracking, version comparison, and auto-scoring.
                                 </div>
-                                <ul class="icon-list">
-                                    <li><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/07/icon-soc.png" alt="SOC2 Type 2"></span>SOC2 Type 2</li>
-                                    <li><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/07/icon-gdpr.png" alt="GDPR"></span>GDPR</li>
-                                    <li><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/07/icon-hipaa.png" alt="HIPAA Compliance"></span>HIPAA Compliance</li>
-                                    <li><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/07/icon-single-sign-on.png" alt="Single Sign On"></span>Single Sign On</li>
-                                    <li><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/07/icon-aws-govcloud.png" alt="AWS GovCloud Supported"></span>AWS GovCloud Supported</li>
-                                </ul>
+                                <div class="action-btn mt-4 d-sm-flex justify-content-center align-items-center"
+                                    style="gap:30px">
+                                    <a href="https://www.deepchecks.com/deepchecks-agent-evaluation-ai-transparency-trust/"
+                                        class="btn btn-primary-outline mb-3 mb-sm-0">How It Works</a>
+                                    <a data-toggle="modal" data-target="#popup-llm" href="#Book-a-Demo"
+                                        class="btn btn-primary btn-svg">Book a Demo<span class="btn-icon"><svg width="17"
+                                                height="12" viewBox="0 0 17 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="play-video-block icw-video-block">
+                                <div class="play-iframe ratio ratio-16x9" data-ext="youtube"
+                                    data-videosrc="https://www.youtube.com/embed/3_CLM_JPC14">
+                                    <img src="/wp-content/uploads/2025/09/video-agent-evaluation-thumb.jpg" class="thumb"
+                                        alt="Agent Evaluation">
+                                    <span class="play-icon"><svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="22" cy="22" r="22" fill="white"></circle>
+                                            <g clip-path="url(#clip0_1998_1653)">
+                                                <path
+                                                    d="M19.2337 30.5112C22.6849 28.577 26.3534 26.3278 30.0292 24.2096C31.7984 23.1897 31.7984 20.8103 30.0292 19.7904C26.3534 17.6722 22.6849 15.423 19.2337 13.4887C17.6005 12.5647 15.4263 13.9886 15.3081 15.9156C15.1004 19.9719 15.1004 24.0281 15.3081 28.0844C15.4263 30.0114 17.6005 31.4352 19.2337 30.5112Z"
+                                                    fill="#9D60FB"></path>
+                                            </g>
+                                        </svg></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-slider-section mt-lg-5 pb-4 pb-lg-5">
+                        <h2 class="h5 mb-2 mb-md-4 text-center" style="color:#303245">Integrations</h2>
+                        <div class="logo-sliders logo-mask-slider logo-sliders-sm"
+                            style="margin-bottom: 0 !important;padding-top: 24px;">
+                            <div class="logo-slider auto-slider">
+                                <div class="logo-item"><span><img
+                                            src="/wp-content/uploads/2025/05/logo-amazon-sagemaker.png"
+                                            alt="Amazon Sagemaker" /></span></div>
+                                <div class="logo-item"><span><img src="/wp-content/uploads/2025/05/logo-crewai.png"
+                                            alt="Crewai" /></span></div>
+                                <div class="logo-item"><span><img src="/wp-content/uploads/2025/05/logo-langchain.svg"
+                                            alt="LangChain" /></span></div>
+                                <div class="logo-item"><span><img src="/wp-content/uploads/2025/05/logo-llamaindex.svg"
+                                            alt="LlamaIndex" /></span></div>
+                                <div class="logo-item"><span><img src="/wp-content/uploads/2025/05/logo-azure.svg"
+                                            alt="Azure" /></span></div>
+                            </div>
+                            <div aria-hidden="true" class="logo-slider auto-slider">
+                                <div class="logo-item"><span><img
+                                            src="/wp-content/uploads/2025/05/logo-amazon-sagemaker.png"
+                                            alt="Amazon Sagemaker" /></span></div>
+                                <div class="logo-item"><span><img src="/wp-content/uploads/2025/05/logo-crewai.png"
+                                            alt="Crewai" /></span></div>
+                                <div class="logo-item"><span><img src="/wp-content/uploads/2025/05/logo-langchain.svg"
+                                            alt="LangChain" /></span></div>
+                                <div class="logo-item"><span><img src="/wp-content/uploads/2025/05/logo-llamaindex.svg"
+                                            alt="LlamaIndex" /></span></div>
+                                <div class="logo-item"><span><img src="/wp-content/uploads/2025/05/logo-azure.svg"
+                                            alt="Azure" /></span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="dc-collapse-section with-title-square-bg">
-                <div class="theme-container">
-                    <div class="with-border-block is-grid">
-                        <div class="main-title text-left">
-                            <h2 class="h3">Multiple Deployment Options to Accommodate Any Data Privacy Constraints</h2>
+            <section class="html-section bgnone-section pt-0">
+                <div class="container">
+                    <div class="image-block text-center mb-3 mb-md-5">
+                        <img src="/wp-content/uploads/2025/05/img-agentic-workflow-diagram.png"
+                            alt="Agentic Workflow Diagram"
+                            style="filter: drop-shadow(58.1371px 81.3639px 80px rgba(82, 91, 100, 0.07)) drop-shadow(37.6814px 52.7359px 46.8519px rgba(82, 91, 100, 0.0531481)) drop-shadow(22.3935px 31.3402px 25.4815px rgba(82, 91, 100, 0.0425185)) drop-shadow(11.6274px 16.2728px 13px rgba(82, 91, 100, 0.035)) drop-shadow(4.73709px 6.62965px 6.51852px rgba(82, 91, 100, 0.0274815)) drop-shadow(1.07661px 1.50674px 3.14815px rgba(82, 91, 100, 0.0168519));border-radius: 20px;width: 100%;max-width: 1050px;border-radius: 20px;">
+                    </div>
+                </div>
+            </section>
+            <section class="html-section  agentic-workflow-section">
+                <div class="container">
+                    <div class="main-title text-center">
+                        <h2>Agentic Workflow</h2>
+                    </div>
+                    <div class="row g-3 g-lg-4 icon-content-item">
+                        <div class="col-md-3">
+                            <div class="card-item with-arrow">
+                                <div class="card-icon"><img src="/wp-content/uploads/2025/05/icon-prompt.svg" alt="Prompt">
+                                </div>
+                                <h3>Prompt</h3>
+                                <p class="sort-info">The user or system <br class="d-none d-xl-block">instruction that kicks
+                                    off an <br class="d-none d-xl-block">agent session</p>
+                            </div>
                         </div>
-                        <div class="collapse-block">
-                            <div class="collapse-item ">
-                                <button type="button" class="collapse-title"><h3><span class="icon"><img src="uploads/icon-saas.svg" alt="SaaS"></span>SaaS</h3></button>
-                                <div class="collapse-body" style="display: none;">
-                                    <div class="card-content">
-                                        <div class="sort-info">
-                                            <p>Our fully managed multi-tenant SaaS offering provides the fastest path to production. Deepchecks handles infrastructure, upgrades, and scaling, so your teams can focus purely on LLM Evaluation.</p>
-                                            <p>Ideal for teams that want minimal operational overhead with enterprise-grade security and reliability.</p>
-                                        </div>
-                                        <div class="action">
-                                            <a  data-toggle="modal" data-target="#popup-llmnov25" href="#" class="btn btn-primary btn-sm btn-svg">Try LLM Evaluation<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
-                                        </div>
-                                    </div>
+                        <div class="col-md-3">
+                            <div class="card-item with-arrow">
+                                <div class="card-icon"><img src="/wp-content/uploads/2025/05/icon-planning.svg"
+                                        alt="Planning"></div>
+                                <h3>Planning</h3>
+                                <p class="sort-info">Agent’s internal reasoning <br class="d-none d-xl-block">step where it
+                                    breaks the <br class="d-none d-xl-block">task into sub-steps</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-item with-arrow">
+                                <div class="card-icon"><img src="/wp-content/uploads/2025/05/icon-tool-call.svg"
+                                        alt="Tool Call"></div>
+                                <h3>Tool Call</h3>
+                                <p class="sort-info mx-auto">LLM issues a function / API <br class="d-none d-xl-block">call
+                                    to retrieve or update <br class="d-none d-xl-block">external data</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-item">
+                                <div class="card-icon"><img src="/wp-content/uploads/2025/05/icon-response.svg"
+                                        alt="Response"></div>
+                                <h3>Response</h3>
+                                <p class="sort-info">LLM uses the tool output <br class="d-none d-xl-block">plus its context
+                                    to generate <br class="d-none d-xl-block">the final results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="html-section ">
+                <div class="container">
+                    <div class="image-content-block">
+                        <div class="row align-items-center g-4 g-md-5">
+                            <div class="col-md-6 order-2 right-img">
+                                <div class="image-block">
+                                    <img src="/wp-content/uploads/2025/05/img-end-to-end-evaluation.jpg"
+                                        alt="End-to-End Evaluation">
                                 </div>
                             </div>
-                            <div class="collapse-item">
-                                <button type="button" class="collapse-title"><h3><span class="icon"><img src="uploads/icon-google-ai.svg" alt="Virtual Private Cloud"></span>Virtual Private Cloud</h3></button>
-                                <div class="collapse-body" style="display: none;">
-                                    <div class="card-content">
+                            <div class="col-md-6 order-1">
+                                <div class="content-block">
+                                    <div class="main-title text-left mb-0">
+                                        <h3>End-to-End Evaluation</h3>
                                         <div class="sort-info">
-                                            <p>Deploy Deepchecks into your own cloud environment on GCP or Azure. This model provides strong network isolation and full control over data flows, while retaining the flexibility and scalability of your existing cloud infrastructure.</p>
-                                        </div>
-                                        <div class="action">
-                                            <a href="https://llmdocs.deepchecks.com/docs/deepchecks-self-hosted-deployments" class="btn btn-primary btn-sm btn-svg">Try LLM Evaluation<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="collapse-item ">
-                                <button type="button" class="collapse-title"><h3><span class="icon"><img src="uploads/icon-bare-metal.svg" alt="Bare Metal"></span>Bare Metal</h3></button>
-                                <div class="collapse-body" style="display: none;">
-                                    <div class="card-content">
-                                        <div class="sort-info">
-                                            <p>For highly regulated industries or environments with strict data residency requirements, Deepchecks can be deployed on your own customer-managed cloud or on-prem servers. This provides maximum control over infrastructure, data access, and compliance, while retaining the full evaluation and monitoring capabilities of the platform.</p>
-                                        </div>
-                                        <div class="action">
-                                            <a href="https://www.deepchecks.com/book-a-demo/" class="btn btn-primary btn-sm btn-svg">Try LLM Evaluation<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="collapse-item ">
-                                <button type="button" class="collapse-title"><h3><span class="icon"><img src="uploads/logo-aws.svg" alt="AWS-Managed"></span>AWS-Managed</h3></button>
-                                <div class="collapse-body" style="display: none;">
-                                    <div class="card-content">
-                                        <div class="sort-info">
-                                            <p>AWS-managed deployment via the Amazon SageMaker Partner AI Apps, enabling LLM evaluation alongside production workloads on AWS with native alignment to Bedrock and SageMaker.</p>
-                                            <ul>
-                                                <li>Reduced Overhead: AWS manages the provisioning, maintenance, scaling and integration with your environment.</li>
-                                                <li>Secure: Deepchecks Partner App on AWS is securely managed by SageMaker teams. In-app data and artifacts do not leave the environment perimeter.</li>
-                                                <li>Seamless Integrations: Direct integrations with Amazon Bedrock and SageMaker AI ensures a smooth user experience, from AI agent building, evaluation, monitoring and optimization.</li>
+                                            <p>Treat a full agent workflow (including agent <br
+                                                    class="d-none d-xl-block">planning, action, and response) as a session,
+                                                not <br class="d-none d-xl-block">just a single interaction.</p>
+                                            <ul class="dots-list no-margin mb-0">
+                                                <li>Auto-scoring by determining when to use <br
+                                                        class="d-none d-xl-block">each evaluation agent</li>
+                                                <li>Create customized evaluation agents</li>
+                                                <li>Supports auto annotations for Agent sessions</li>
+                                                <li>Compare versions of prompts, agents & <br
+                                                        class="d-none d-xl-block">models</li>
                                             </ul>
                                         </div>
-                                        <div class="action">
-                                            <a href="https://www.deepchecks.com/aws/" class="btn btn-primary btn-sm btn-svg">Try LLM Evaluation<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-content-block">
+                        <div class="row align-items-center g-4 g-md-5">
+                            <div class="col-md-6 order-2 order-md-1">
+                                <div class="image-block">
+                                    <img src="/wp-content/uploads/2025/05/img-swarm-evaluation-agents.jpg"
+                                        alt="Swarm of Evaluation Agents">
+                                </div>
+                            </div>
+                            <div class="col-md-6 order-1 order-md-2">
+                                <div class="content-block">
+                                    <div class="main-title text-left mb-0">
+                                        <h3>Swarm of Evaluation <br class="d-none d-xl-block">Agents</h3>
+                                        <div class="sort-info">
+                                            <p>The algorithmic backbone of Deepchecks is a set <br
+                                                    class="d-none d-xl-block">of small language models (SLMs) & multi-step
+                                                <br class="d-none d-xl-block">NLP pipelines, that work together as a swarm
+                                                <br class="d-none d-xl-block">using Mixture of Experts (MoE) techniques to
+                                                <br class="d-none d-xl-block">simulate an intelligent, human, annotator.</p>
+                                            <ul class="dots-list no-margin mb-0">
+                                                <li>Hallucination detection experts</li>
+                                                <li>Planning accuracy evaluators</li>
+                                                <li>Rule-based checks for objective criteria</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>  
-                    </div>                           
-                </div>
-            </section>            
-            <section class="dc-logo-slider-section with-border">
-                <div class="theme-container">
-                    <h2 class="h5">Selected Integrations</h2>
-                    <div class="logo-sliders logo-mask-slider logo-sliders-sm">
-                        <div class="logo-slider auto-slider">
-                            <div class="logo-item"><span><img src="uploads/logo-aws.svg" alt="Aws" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-nvidia.svg" alt="NVIDIA" /></span></div>      
-                            <div class="logo-item"><span><img src="uploads/logo-amazon-sagemaker.svg" alt="Amazon Sagemaker" /></span></div>      
-                            <div class="logo-item"><span><img src="uploads/logo-cloude.svg" alt="Cloude" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-open-ai.svg" alt="Open AI" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-amazon-bedrock.svg" alt="Amazon Bedrock" /></span></div>    
-                            <div class="logo-item"><span><img src="uploads/logo-langchain.svg" alt="LangChain" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-datadog.svg" alt="DataDog" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-langgraph.svg" alt="LangGraph" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-crewai.svg" alt="Crew AI" /></span></div>
-                        </div>
-                        <div aria-hidden="true" class="logo-slider auto-slider">
-                            <div class="logo-item"><span><img src="uploads/logo-aws.svg" alt="Aws" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-nvidia.svg" alt="NVIDIA" /></span></div>      
-                            <div class="logo-item"><span><img src="uploads/logo-amazon-sagemaker.svg" alt="Amazon Sagemaker" /></span></div>      
-                            <div class="logo-item"><span><img src="uploads/logo-cloude.svg" alt="Cloude" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-open-ai.svg" alt="Open AI" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-amazon-bedrock.svg" alt="Amazon Bedrock" /></span></div>    
-                            <div class="logo-item"><span><img src="uploads/logo-langchain.svg" alt="LangChain" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-datadog.svg" alt="DataDog" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-langgraph.svg" alt="LangGraph" /></span></div>
-                            <div class="logo-item"><span><img src="uploads/logo-crewai.svg" alt="Crew AI" /></span></div> 
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="dc-case-studies-section">
-                <div class="theme-container">
-                    <div class="main-title text-left mb-md-5">
-                        <h2 class="h3">Recent Case Studies</h2>
-                    </div>
-                    <div class="case-studies-slider">
-                        <div class="slide-item">
-                            <div class="case-study-card">
-                                <div class="card-img">
-                                    <img src="uploads/logo-moovit.svg" alt="Moovit">
-                                </div>
-                                <div class="card-body">
-                                    <div class="action"><a href="https://www.deepchecks.com/case-study/enhancing-moovit-genai-pipeline-deepchecks/"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.8749 10V26.25C31.8749 26.7473 31.6774 27.2242 31.3258 27.5758C30.9741 27.9275 30.4972 28.125 29.9999 28.125C29.5027 28.125 29.0257 27.9275 28.6741 27.5758C28.3225 27.2242 28.1249 26.7473 28.1249 26.25V14.5312L11.3265 31.3266C10.9743 31.6788 10.4965 31.8767 9.99837 31.8767C9.50023 31.8767 9.02249 31.6788 8.67024 31.3266C8.318 30.9743 8.12012 30.4966 8.12012 29.9984C8.12012 29.5003 8.318 29.0226 8.67024 28.6703L25.4687 11.875H13.7499C13.2527 11.875 12.7757 11.6775 12.4241 11.3258C12.0725 10.9742 11.8749 10.4973 11.8749 10C11.8749 9.50272 12.0725 9.02581 12.4241 8.67417C12.7757 8.32254 13.2527 8.125 13.7499 8.125H29.9999C30.4972 8.125 30.9741 8.32254 31.3258 8.67417C31.6774 9.02581 31.8749 9.50272 31.8749 10Z" fill="#9D60FB"/></svg></a></div>
-                                    <h3 class="card-title">Enhancing Moovit’s Internal GenAI Pipeline with Deepchecks</h3>
-                                    <div class="sort-info">Moovit is one of the world’s leading forces in urban mobility. Serving over 1.5 billion users across more than 3,500 cities in 112 countries, the company has transformed how people navigate public transportation.</div>
+                    <div class="image-content-block pb-0 pb-md-4">
+                        <div class="row align-items-center g-4 g-md-5">
+                            <div class="col-md-6 order-2  right-img">
+                                <div class="image-block">
+                                    <img src="/wp-content/uploads/2025/05/img-compare-agentic-workflows.jpg"
+                                        alt="Compare Agentic Workflows">
                                 </div>
                             </div>
-                        </div>
-                        <div class="slide-item">
-                            <div class="case-study-card">
-                                <div class="card-img">
-                                    <img src="uploads/logo-lovehoney.svg" alt="Lovehoney">
-                                </div>
-                                <div class="card-body">
-                                    <div class="action"><a href="https://www.deepchecks.com/case-study/lovehoney-ai-customer-service-deepchecks-journey/"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.8749 10V26.25C31.8749 26.7473 31.6774 27.2242 31.3258 27.5758C30.9741 27.9275 30.4972 28.125 29.9999 28.125C29.5027 28.125 29.0257 27.9275 28.6741 27.5758C28.3225 27.2242 28.1249 26.7473 28.1249 26.25V14.5312L11.3265 31.3266C10.9743 31.6788 10.4965 31.8767 9.99837 31.8767C9.50023 31.8767 9.02249 31.6788 8.67024 31.3266C8.318 30.9743 8.12012 30.4966 8.12012 29.9984C8.12012 29.5003 8.318 29.0226 8.67024 28.6703L25.4687 11.875H13.7499C13.2527 11.875 12.7757 11.6775 12.4241 11.3258C12.0725 10.9742 11.8749 10.4973 11.8749 10C11.8749 9.50272 12.0725 9.02581 12.4241 8.67417C12.7757 8.32254 13.2527 8.125 13.7499 8.125H29.9999C30.4972 8.125 30.9741 8.32254 31.3258 8.67417C31.6774 9.02581 31.8749 9.50272 31.8749 10Z" fill="#9D60FB"/></svg></a></div>
-                                    <h3 class="card-title">Lovehoney Group’s Journey to AI-Enhanced Customer Service with Deepchecks</h3>
-                                    <div class="sort-info">Moovit is one of the world’s leading forces in urban mobility. Serving over 1.5 billion users across more than 3,500 cities in 112 countries, the company has transformed how people navigate public transportation.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-item">
-                            <div class="case-study-card">
-                                <div class="card-img">
-                                    <img src="uploads/logo-fortune-5o.svg" alt="Fortune 5o">
-                                </div>
-                                <div class="card-body">
-                                    <div class="action"><a href="https://www.deepchecks.com/case-study/deepchecks-evaluation-global-pharma-ai-platform/"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.8749 10V26.25C31.8749 26.7473 31.6774 27.2242 31.3258 27.5758C30.9741 27.9275 30.4972 28.125 29.9999 28.125C29.5027 28.125 29.0257 27.9275 28.6741 27.5758C28.3225 27.2242 28.1249 26.7473 28.1249 26.25V14.5312L11.3265 31.3266C10.9743 31.6788 10.4965 31.8767 9.99837 31.8767C9.50023 31.8767 9.02249 31.6788 8.67024 31.3266C8.318 30.9743 8.12012 30.4966 8.12012 29.9984C8.12012 29.5003 8.318 29.0226 8.67024 28.6703L25.4687 11.875H13.7499C13.2527 11.875 12.7757 11.6775 12.4241 11.3258C12.0725 10.9742 11.8749 10.4973 11.8749 10C11.8749 9.50272 12.0725 9.02581 12.4241 8.67417C12.7757 8.32254 13.2527 8.125 13.7499 8.125H29.9999C30.4972 8.125 30.9741 8.32254 31.3258 8.67417C31.6774 9.02581 31.8749 9.50272 31.8749 10Z" fill="#9D60FB"/></svg></a></div>
-                                    <h3 class="card-title">Deepchecks Powers Evaluation for a Global Pharma’s Internal AI Platform</h3>
-                                    <div class="sort-info">Moovit is one of the world’s leading forces in urban mobility. Serving over 1.5 billion users across more than 3,500 cities in 112 countries, the company has transformed how people navigate public transportation.</div>
+                            <div class="col-md-6 order-1">
+                                <div class="content-block">
+                                    <div class="main-title text-left mb-0">
+                                        <h3>Compare Agentic <br class="d-none d-xl-block">Workflows</h3>
+                                        <div class="sort-info">
+                                            <p>Side-by-side comparisons of different agents, <br
+                                                    class="d-none d-xl-block">models, or configurations.</p>
+                                            <ul class="dots-list no-margin mb-0">
+                                                <li>Head-to-head agent version comparison</li>
+                                                <li>A/B testing of different agent strategies</li>
+                                                <li>Model performance benchmarking</li>
+                                                <li>Configuration effectiveness scoring</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="dc-recent-blog-section">
-                <div class="theme-container">
-                    <div class="blog-wapper">
-                        <div class="main-title text-md-left mb-md-5">
-                            <h2 class="h3">Recent Blog Posts</h2>
+            <section class="html-section  counter-section bg-purple-gradient">
+                <div class="container">
+                    <div class="main-title">
+                        <h2>Deepchecks Agent Evaluation Impact</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <div class="counter-box mt-0">
+                                <h3 class="counter count-number" data-countto="15" data-duration="2500"><span>0</span>x</h3>
+                                <div class="sort-info">Versions <br>Compared</div>
+                            </div>
                         </div>
-                       <div class="home-post-slider">
-                            <div class="slide-item">
-                                <div class="slide-blog-post">
-                                    <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/post-chunking-important-ai-rag-applications.jpg" alt="Why Chunking Is Important for AI and RAG Applications" /> </a>
-                                    <div class="blog-post-inner">
-                                        <div class="post-title"><a href="#" class="stretched-link">Why Chunking Is Important for AI and RAG Applications</a></div>
-                                        <div class="post-date d-flex justify-content-between">February 19, 2026</div>
-                                        <div class="post-meta">
-                                            <div class="author-links"><a class="author-link" href="//www.deepchecks.com/author/philip-tannor/"><span class="user-img"><img alt="Philip Tannor" src="https://secure.gravatar.com/avatar/c98a47afbab4f80e6b47c7c99b1f7a533b15c56f5cf74804a315b5e4f7db352d?s=96&d=mm&r=g"></span>Philip Tannor</a></div>
-                                            <div class="post-time">16 mins</div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="col-6 col-md-3">
+                            <div class="counter-box mt-0">
+                                <h3 class="counter count-number" data-countto="70" data-duration="2500"><span>0</span>%</h3>
+                                <div class="sort-info">Debugging <br>Time Saved</div>
                             </div>
-                            <div class="slide-item">
-                                <div class="slide-blog-post is-img-text-bottom">
-                                    <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/post-improve-llm-evaluation-systems.jpg" alt="How to Improve LLM Evaluation Systems" /> </a>
-                                    <div class="blog-post-inner">
-                                        <div class="post-title"><a href="#" class="stretched-link">How to Improve LLM Evaluation Systems</a></div>
-                                        <div class="post-date d-flex justify-content-between">February 19, 2026</div>                                        
-                                        <div class="post-meta">
-                                            <div class="author-links"><a class="author-link" href="#"><span class="user-img"><img alt="Yaron Friedman" src="uploads/cropped-img-yaron-friedman-96x96.jpg"></span>Yaron Friedman</a></div>
-                                            <div class="post-time">16 mins</div>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="counter-box">
+                                <h3 class="counter count-number" data-countto="5" data-duration="2500"><span>0</span>x</h3>
+                                <div class="sort-info">Faster <br>Iterations</div>
                             </div>
-                            <div class="slide-item">
-                                <div class="slide-blog-post is-img-text-bottom">
-                                    <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/post-start-right-deepchecks-agent-evaluation-out-box.jpg" alt="Start Right with Deepchecks: Agent Evaluation Out-of-the-Box" /> </a>
-                                    <div class="blog-post-inner">
-                                        <div class="post-title"><a href="#" class="stretched-link">Start Right with Deepchecks: Agent Evaluation Out-of-the-Box</a></div>
-                                        <div class="post-date d-flex justify-content-between">February 19, 2026</div>
-                                        <div class="post-meta">
-                                            <div class="author-links"><a class="author-link" href="#"><span class="user-img"><img alt=" Michał Oleszak" src="uploads/avatar.png"></span> Michał Oleszak</a></div>
-                                            <div class="post-time">16 mins</div>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="counter-box">
+                                <h3 class="counter count-number" data-countto="85" data-duration="2500"><span>0</span>%</h3>
+                                <div class="sort-info">Issue Resolution <br>Rate</div>
                             </div>
-                            <div class="slide-item">
-                                <div class="slide-blog-post">
-                                    <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/post-chunking-important-ai-rag-applications.jpg" alt="Why Chunking Is Important for AI and RAG Applications" /> </a>
-                                    <div class="blog-post-inner">
-                                        <div class="post-title"><a href="#" class="stretched-link">Why Chunking Is Important for AI and RAG Applications</a></div>
-                                        <div class="post-date d-flex justify-content-between">February 19, 2026</div>
-                                        <div class="post-meta">
-                                            <div class="author-links"><a class="author-link" href="//www.deepchecks.com/author/philip-tannor/"><span class="user-img"><img alt="Philip Tannor" src="https://secure.gravatar.com/avatar/c98a47afbab4f80e6b47c7c99b1f7a533b15c56f5cf74804a315b5e4f7db352d?s=96&d=mm&r=g"></span>Philip Tannor</a></div>
-                                            <div class="post-time">16 mins</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-item">
-                                <div class="slide-blog-post is-img-text-bottom">
-                                    <a class="post-thumb-img ratio ratio-4x3" href="#" tabindex="-1"><img src="uploads/post-improve-llm-evaluation-systems.jpg" alt="How to Improve LLM Evaluation Systems" /> </a>
-                                    <div class="blog-post-inner">
-                                        <div class="post-title"><a href="#" class="stretched-link">How to Improve LLM Evaluation Systems</a></div>
-                                        <div class="post-date d-flex justify-content-between">February 19, 2026</div>                                        
-                                        <div class="post-meta">
-                                            <div class="author-links"><a class="author-link" href="#"><span class="user-img"><img alt="Yaron Friedman" src="uploads/cropped-img-yaron-friedman-96x96.jpg"></span>Yaron Friedman</a></div>
-                                            <div class="post-time">16 mins</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                       </div>
+                        </div>
                     </div>
                 </div>
-                
+            </section>
+            <section class="blog-section ">
+                <div class="container">
+                    <div class="main-title">
+                        <h2 class="h1-title">Featured Content</h2>
+                    </div>
+                    <div class="post-list home-post-list post-slider">
+                        <div class="blog-item">
+                            <div class="slide-blog-post">
+                                <a class="post-thumb-img" href="/cookbook-rag-chatbot-with-deepchecks-on-aws-sagemaker-ai/"
+                                    tabindex="-1">
+                                    <img src="/wp-content/uploads/2025/04/post-cookbook-rag-chatbot-deepchecks-aws-sagemaker-ai-400x180.jpg"
+                                        class="thumb-img wp-post-image"
+                                        alt="Cookbook: RAG chatbot with Deepchecks on AWS SageMaker AI" decoding="async"
+                                        fetchpriority="high"
+                                        srcset="/wp-content/uploads/2025/04/post-cookbook-rag-chatbot-deepchecks-aws-sagemaker-ai-400x180.jpg 400w, /wp-content/uploads/2025/04/post-cookbook-rag-chatbot-deepchecks-aws-sagemaker-ai-300x135.jpg 300w, /wp-content/uploads/2025/04/post-cookbook-rag-chatbot-deepchecks-aws-sagemaker-ai-768x346.jpg 768w, /wp-content/uploads/2025/04/post-cookbook-rag-chatbot-deepchecks-aws-sagemaker-ai.jpg 800w"
+                                        sizes="(max-width: 400px) 100vw, 400px" /> </a>
+                                <div class="blog-post-inner">
+                                    <div class="post-date d-flex justify-content-between">
+                                        April 07, 2025 <span
+                                            class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg
+                                                class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z"
+                                                    stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            7 mins</span>
+                                    </div>
+                                    <div class="post-title"><a
+                                            href="/cookbook-rag-chatbot-with-deepchecks-on-aws-sagemaker-ai/"
+                                            class="stretched-link">Cookbook: RAG chatbot with Deepchecks on AWS SageMaker
+                                            AI</a></div>
+                                    <div class="post-meta">
+                                        <div class="author-links"><a
+                                                class="author-link d-flex align-items-center position-relative"
+                                                style="z-index:2" href="/author/yaron-friedman/"><img alt="Yaron Friedman"
+                                                    src="https://www.deepchecks.com/wp-content/uploads/2025/10/cropped-img-yaron-friedman-96x96.jpg">
+                                                Yaron Friedman</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="slide-blog-post">
+                                <a class="post-thumb-img" href="/aws-sagemaker-101-essentials-guide/" tabindex="-1">
+                                    <img src="/wp-content/uploads/2025/02/post-aws-sagemaker-the-essentials-aws-sagemaker-400x180.jpg"
+                                        class="thumb-img wp-post-image"
+                                        alt="AWS SageMaker 101: The Essentials of AWS SageMaker" decoding="async"
+                                        srcset="/wp-content/uploads/2025/02/post-aws-sagemaker-the-essentials-aws-sagemaker-400x180.jpg 400w, /wp-content/uploads/2025/02/post-aws-sagemaker-the-essentials-aws-sagemaker-300x135.jpg 300w, /wp-content/uploads/2025/02/post-aws-sagemaker-the-essentials-aws-sagemaker-1024x461.jpg 1024w, /wp-content/uploads/2025/02/post-aws-sagemaker-the-essentials-aws-sagemaker-768x346.jpg 768w, /wp-content/uploads/2025/02/post-aws-sagemaker-the-essentials-aws-sagemaker-1536x691.jpg 1536w, /wp-content/uploads/2025/02/post-aws-sagemaker-the-essentials-aws-sagemaker.jpg 1600w"
+                                        sizes="(max-width: 400px) 100vw, 400px" /> </a>
+                                <div class="blog-post-inner">
+                                    <div class="post-date d-flex justify-content-between">
+                                        March 27, 2025 <span
+                                            class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg
+                                                class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z"
+                                                    stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            9 mins</span>
+                                    </div>
+                                    <div class="post-title"><a href="/aws-sagemaker-101-essentials-guide/"
+                                            class="stretched-link">AWS SageMaker 101: The Essentials of AWS SageMaker</a>
+                                    </div>
+                                    <div class="post-meta">
+                                        <div class="author-links"><a
+                                                class="author-link d-flex align-items-center position-relative"
+                                                style="z-index:2" href="/author/yaron-friedman/"><img alt="Yaron Friedman"
+                                                    src="https://www.deepchecks.com/wp-content/uploads/2025/10/cropped-img-yaron-friedman-96x96.jpg">
+                                                Yaron Friedman</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="slide-blog-post">
+                                <a class="post-thumb-img" href="/aws-deepchecks-partnership-llm-evaluation-data-privacy/"
+                                    tabindex="-1">
+                                    <img src="/wp-content/uploads/2025/11/post-aws-deepchecks-partnership-llm-evaluation-400x180.jpg"
+                                        class="thumb-img wp-post-image" alt="" decoding="async"
+                                        srcset="/wp-content/uploads/2025/11/post-aws-deepchecks-partnership-llm-evaluation-400x180.jpg 400w, /wp-content/uploads/2025/11/post-aws-deepchecks-partnership-llm-evaluation-300x135.jpg 300w, /wp-content/uploads/2025/11/post-aws-deepchecks-partnership-llm-evaluation-768x346.jpg 768w, /wp-content/uploads/2025/11/post-aws-deepchecks-partnership-llm-evaluation.jpg 800w"
+                                        sizes="(max-width: 400px) 100vw, 400px" /> </a>
+                                <div class="blog-post-inner">
+                                    <div class="post-date d-flex justify-content-between">
+                                        December 04, 2024 <span
+                                            class="post-time text-purple d-flex align-items-center font-weight-bolder"><svg
+                                                class="mr-2" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1422 13.1422 16.5 9 16.5C4.85775 16.5 1.5 13.1422 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5C13.1422 1.5 16.5 4.85775 16.5 9Z"
+                                                    stroke="#9D60FB" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            4.5 mins</span>
+                                    </div>
+                                    <div class="post-title"><a
+                                            href="/aws-deepchecks-partnership-llm-evaluation-data-privacy/"
+                                            class="stretched-link">Announcing AWS ❤️ Deepchecks Partnership: LLM Evaluation
+                                            While Maintaining Data Privacy</a></div>
+                                    <div class="post-meta">
+                                        <div class="author-links"><a
+                                                class="author-link d-flex align-items-center position-relative"
+                                                style="z-index:2" href="/author/philip-tannor/"><img alt="Philip Tannor"
+                                                    src="https://secure.gravatar.com/avatar/c98a47afbab4f80e6b47c7c99b1f7a533b15c56f5cf74804a315b5e4f7db352d?s=96&#038;d=mm&#038;r=g">
+                                                Philip Tannor</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="html-section  cta-section bg-purple-gradient pb-0">
+                <div class="container">
+                    <div class="main-title">
+                        <h2>Define, Measure, and Validate <br class="d-none d-md-block">AI Progress</h2>
+                        <div class="action-btn mt-4 d-flex justify-content-center align-items-center" style="gap:30px">
+                            <a data-toggle="modal" data-target="#popup-llm" href="#" class="btn btn-white btn-svg">Try LLM
+                                Evaluation<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11"
+                                            stroke="#9D60FB" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg></span></a>
+                        </div>
+                    </div>
+                    <div class="image-block m-image-full-block">
+                        <img src="/wp-content/uploads/2025/01/img-ai-progress-cta.png" alt="AI Progress">
+                    </div>
+                </div>
             </section>
         </main>
+        <div class="icw-sticky">
+            <div class="container">
+                <div class="speaker-sticky-info">
+                    <span class="close-sticky">×</span>
+                    <h2>
+                        <div class="strip-img"><img src="/wp-content/uploads/2026/02/webinar-philip-yaron.png"
+                                alt="Webinar Event" style="max-height:100px" />
+                            <div class="title"><small>End-to-End Evaluation of Complex AI Agents</span></small><strong>March
+                                    24<sup>th</sup>, 2026 &nbsp;&nbsp; 8:00 AM PST</strong></div>
+                        </div>
+                        <style>
+                            .icw-sticky .strip-img .title {
+                                margin-left: 50px;
+                            }
+
+                            @media(max-width:1200px) {
+                                .icw-sticky .strip-img {
+                                    -ms-flex-wrap: wrap;
+                                    flex-wrap: wrap;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center
+                                }
+
+                                .icw-sticky .strip-img .title {
+                                    margin-left: 0px;
+                                }
+                            }
+                        </style>
+                        <style>
+                            body.postid-9884 .icw-sticky {
+                                display: none !important;
+                            }
+                        </style>
+                    </h2>
+                    <div>
+                        <div id="deadline-message" class="hidden">-</div>
+                        <div id="countdown" class="timer-sticky">
+                            <div class="countdown-number">
+                                <div class="days countdown-time"></div>
+                                <span class="countdown-text">Days</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="hours countdown-time"></div>
+                                <span class="countdown-text">Hours</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="minutes countdown-time"></div>
+                                <span class="countdown-text">Minutes</span>
+                            </div>
+                            <span class="dots">:</span>
+                            <div class="countdown-number">
+                                <div class="seconds countdown-time"></div>
+                                <span class="countdown-text">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div><a href="https://www.linkedin.com/events/evaluateyouraiprogresswithknowy7427801065590472704/"
+                            class="btn btn-primary  text-nowrap btn-md" target="_blank"><img class="btn-icon"
+                                src="/wp-content/uploads/2022/09/linkedin.svg" alt="Register Now" />Register Now</a></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return {
+                    total: t,
+                    days: days,
+                    hours: hours,
+                    minutes: minutes,
+                    seconds: seconds
+                };
+            }
+
+            function initializeClock(id, endtime) {
+                var clock = document.getElementById(id);
+                var daysSpan = clock.querySelector(".days");
+                var hoursSpan = clock.querySelector(".hours");
+                var minutesSpan = clock.querySelector(".minutes");
+                var secondsSpan = clock.querySelector(".seconds");
+
+                function updateClock() {
+                    var t = getTimeRemaining(endtime);
+
+                    if (t.total <= 0) {
+                        document.querySelector(".icw-sticky").className = "d-none";
+                        document.querySelector(".speaker-sticky-info").className = "speaker-sticky-info date-hidden";
+                        document.getElementById("countdown").className = "timer-sticky hidden";
+                        document.getElementById("deadline-message").className = "visible";
+                        clearInterval(timeinterval);
+                        return true;
+                    }
+
+                    daysSpan.innerHTML = t.days;
+                    hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+                    minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+                    secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+                }
+
+                updateClock();
+                var timeinterval = setInterval(updateClock, 1000);
+            }
+
+            var deadline = "March 24, 2026 16:00:05 GMT"; // var deadline = "January 01 2018 00:00:00 GMT+0300"; 
+            // var deadline = new Date(Date.parse(new Date()) + 5 * 1000); // for endless timer
+            initializeClock("countdown", deadline);
+
+            jQuery(document).ready(function ($) {
+                $(".close-sticky").click(function (e) {
+                    $(".icw-sticky").slideUp();
+                    e.stopPropagation();
+                });
+            });
+        </script>
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
             <div class="theme-container">
@@ -1156,113 +1200,6 @@
                         $anchor2.removeAttr('target');
                     }
                 }, 50);
-            });
-        </script>
-
-        <script>        
-            if ($('.case-studies-slider').length) {
-                $('.case-studies-slider').slick({
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    dots: false,
-                    accessibility: true,
-                    infinite: false,
-                    draggable: true,
-                    responsive: [
-                        {
-                            breakpoint: 1200,
-                            settings: {
-                                slidesToShow: 2.1,
-                                slidesToScroll: 1,
-                                arrows: false,
-                                dots: true, 
-                            }
-                        },
-                        {
-                            breakpoint: 767,
-                            settings: {
-                                slidesToShow: 1.2,
-                                slidesToScroll: 1,
-                                arrows: false,
-                                dots: true,    
-                            }
-                        }
-                    ]
-                });
-            } 
-            if ($('.home-post-slider').length) {
-                $('.home-post-slider').slick({
-                    slidesToShow: 3.1,
-                    slidesToScroll: 1,
-                    dots: false,
-                    accessibility: true,
-                    infinite: false,
-                    draggable: true, 
-                    arrows: false,    
-                    responsive: [
-                        {
-                            breakpoint: 1200,
-                            settings: {
-                                slidesToShow: 2.1,
-                                slidesToScroll: 1,
-                                arrows: false,
-                                dots: true,
-                            }
-                        },
-                        {
-                            breakpoint: 767,
-                            settings: {
-                                slidesToShow: 1.2,
-                                slidesToScroll: 1,
-                                arrows: false,
-                                dots: true,       
-                            }
-                        }
-                    ]
-                });
-            }
-            var autoplaySpeed = 3000;
-            $('.slider-tab-info').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                fade: false,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: autoplaySpeed
-            });
-            $('.slide-tab-link').removeClass('active');
-            $('.slide-tab-link[data-slide="1"]').addClass('active');
-            $('.slide-tab-link').on('click', function (e) {
-                e.preventDefault();
-                var slideno = $(this).data('slide') - 1;
-                $('.slider-tab-info').slick('slickGoTo', slideno);
-            });
-            $('.slider-tab-info').on('afterChange', function (event, slick, currentSlide) {
-                var activeTab = $('.slide-tab-link[data-slide="' + (currentSlide + 1) + '"]');
-                $('.slide-tab-link').removeClass('active');
-                activeTab.addClass('active');
-                // Auto scroll tab into view
-                var container = $('.slider-tab-nav');
-                var leftPos = activeTab.position().left + container.scrollLeft();
-                container.animate({
-                    scrollLeft: leftPos - (container.width() / 2) + (activeTab.outerWidth() / 2)
-                }, 400);
-            });
-            function progressBar() {
-                $(".slider-progress span")
-                    .removeClass("active")
-                    .css("transition-duration", "0s");
-
-                setTimeout(function () {
-                    $(".slider-progress span")
-                        .css("transition-duration", autoplaySpeed / 1000 + "s")
-                        .addClass("active");
-                }, 50);
-            }
-            progressBar();
-            $('.slider-tab-info').on("beforeChange", function () {
-                progressBar();
             });
         </script>
     </body>

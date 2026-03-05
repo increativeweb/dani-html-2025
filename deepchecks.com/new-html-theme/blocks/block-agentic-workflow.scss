@@ -1,0 +1,76 @@
+
+.dc-agentic-workflow-section {
+    padding: 70px 0;
+    border-bottom: 1px solid rgba(222, 224, 233, 0.8);
+    @media (max-width: 992px) {
+        padding: 40px;
+    }
+    .workflow-block {
+        padding: 75px 65px 0;
+        position: relative;
+        z-index: 1;
+        max-width: 1440px;
+        margin: 0 auto;
+        &::before {
+            content: '';
+            background: url('../assets/images/img-bg-counter.png') no-repeat top left, linear-gradient(239.05deg, #9D60FB -0.54%, #E582BF 86.6%);
+            border-radius: 30px;
+            width: 100%;
+            height: calc(100% - 40px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .main-title {
+            margin-bottom: 60px;
+            h2 {
+                color: #ffffff;
+            }
+        }
+        .icon-content-item {
+            &.g-40 {
+                margin-right: -44px;
+                margin-left: -44px;
+                & > * {
+                    padding-right: 44px;
+                    padding-left: 44px;
+                }
+            }
+            .card-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 36px 16px;
+                background: #FFFFFF;
+                box-shadow: 0px 13.7273px 45.7575px 9.1515px rgba(123, 140, 149, 0.25);
+                border-radius: 30px;
+                border: none;
+                .card-icon {
+                    margin-bottom: 24px;
+                }
+                h3 {
+                    font-size: 24px;
+                    font-weight: 800;
+                }
+                .sort-info {
+                    font-weight: 500;
+                }
+                &.with-arrow {
+                    &::after {
+                        content: '';
+                        background: url('data:image/svg+xml; utf8,<svg width="62" height="18" viewBox="0 0 62 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M62 8.66028L47 2.38419e-05V17.3205L62 8.66028ZM0 8.66028V10.1603H48.5V8.66028V7.16028H0V8.66028Z" fill="white"/></svg>') no-repeat center center;
+                        background-size: contain;
+                        display: inline-block;
+                        width: 60px;
+                        height: 18px;
+                        position: absolute;
+                        top: calc(50% - 9px);
+                        right: -30px;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}

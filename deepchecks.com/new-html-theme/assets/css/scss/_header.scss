@@ -107,7 +107,7 @@
         //     padding: 0 15px;
         // }
 
-        body:not(.home) & {
+        body:not(.home, .header-fixed) & {
             background: rgba(255, 255, 255, 0.99);
         }
 
