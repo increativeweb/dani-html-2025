@@ -173,10 +173,16 @@
         }
         &.classic-collapse-block {
             margin-top: 70px;
+            @media (max-width: 992px) {
+                margin-top: 30px;
+            }
             .collapse-item {
                 padding: 24px;
                 border: none;
                 border-bottom: 1px solid #E1E1E1;
+                @media (max-width: 992px) {
+                    padding: 15px;
+                }
                 &:first-child {
                     padding-top: 0px;
                 }
@@ -204,12 +210,19 @@
                         transition: all .2s ease-in-out;
                         -webkit-filter: brightness(0);
                         filter: brightness(0);
+                        @media (max-width: 767px) {
+                            width: 16px;
+                            height: 16px;
+                        }
                     }
                     h3 {
                         font-size: 24px;
                         font-weight: 700;
                         margin-bottom: 0;
                         color: #303245;
+                        @media (max-width: 767px) {
+                            font-size: 20px;
+                        }
                     }
                 }
                 .collapse-body {
@@ -218,8 +231,14 @@
                     padding: 0;
                     padding-right: 40px;
                     border: 0;
+                    @media (max-width: 767px) {
+                        padding-right: 0px;
+                    }
                     p {
                         font-size: 20px;
+                        @media (max-width: 767px) {
+                            font-size: 18px;
+                        }
                     }
                 }
                 &.is-open  {
