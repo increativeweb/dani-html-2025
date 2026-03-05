@@ -159,11 +159,17 @@
     }
     .icw-tab-block {
         margin-top: 50px;
+        @media (max-width: 992px) {
+            margin-top: 10px;
+        }
         .content-block {
             .tab-pane {
                 .tab-details {
                     p {
                         font-size: 20px;
+                        @media (max-width: 992px) {
+                            font-size: 18px;
+                        }
                     }
                     h3 {
                         color: #9D60FB;
@@ -172,6 +178,10 @@
                         letter-spacing: -0.03em;
                         display: block;
                         margin-bottom: 32px;
+                        @media (max-width: 992px) {
+                            margin-bottom: 20px;
+                            font-size: 24px;
+                        }
                     }
                     ul {
                         padding-left: 20px;
@@ -182,12 +192,19 @@
                             &:not(:last-child) {
                                 margin-bottom: 20px;
                             }
+                            @media (max-width: 992px) {
+                                font-size: 18px;
+                            }
                         }
                     }
                 }
                 .image-block {
                     @media (min-width: 991px) {
                         text-align: right;
+                    }
+                    @media (max-width: 767px) {
+                        margin-top: 30px;
+                        text-align: center;
                     }
                 }
             }
@@ -225,6 +242,10 @@
                     scrollbar-width: none;
                     -ms-overflow-style: none;
                 }
+                @media (max-width: 767px) {
+                    padding: 5px;
+                    margin-bottom: 30px;
+                }
                 .nav-link {
                     display: inline-flex;
                     align-items: center;
@@ -258,6 +279,12 @@
                         top: 8px;
                         left: 8px;
                         border: 1px solid transparent;
+                        @media (max-width: 767px) {
+                            top: 5px;
+                            left: 5px;
+                            width: calc(100% - 10px);
+                            height:  calc(100% - 10px);
+                        }
                     }
                     &:hover, &:focus {
                         color: #000000;
