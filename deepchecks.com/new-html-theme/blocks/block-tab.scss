@@ -158,8 +158,14 @@
     }
     .main-title {
         margin-bottom: 50px;
+        @media (max-width: 992px) {
+            margin-bottom: 30px;
+        }
         .sort-info {
-            font-size: 20px;
+            font-size: 20px;            
+            @media (max-width: 992px) {
+                font-size: 18px;
+            }
         }
     }
     .icw-tab-block {
@@ -170,6 +176,10 @@
         .content-block {
             .tab-pane {
                 .tab-details {
+                    max-width: 470px;                    
+                    @media (max-width: 992px) {
+                        max-width: 100%;
+                    }
                     p {
                         font-size: 20px;
                         @media (max-width: 992px) {
@@ -187,6 +197,9 @@
                             margin-bottom: 20px;
                             font-size: 24px;
                         }
+                        @media (max-width: 767px) {
+                            font-size: 22px;
+                        }
                     }
                     ul {
                         padding-left: 20px;
@@ -201,9 +214,42 @@
                                 font-size: 18px;
                             }
                         }
+                        &.flow-list {
+                            list-style-type: none;
+                            display: flex;
+                            gap: 4px;
+                            flex-wrap: wrap;
+                            padding-left: 0;
+                            margin-top: 32px;
+                            li {
+                                list-style-type: none;
+                                padding: 5px 12px;
+                                border: 2px solid #E5E5EA;
+                                border-radius: 12px;
+                                font-weight: 600;
+                                font-size: 18px;
+                                color: #303245;
+                                margin-bottom: 0;
+                                &.arrow {
+                                    background: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="rgb(191, 192, 205)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+                                    background-size: 24px;
+                                    width: 48px;
+                                }
+                                @media (max-width: 992px) {
+                                    font-size: 16px;
+                                    &.arrow {
+                                        background-size: 20px;
+                                        width: 40px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
                 .image-block {
+                    img {
+                        border-radius: 20px;
+                    }
                     @media (min-width: 991px) {
                         text-align: right;
                     }
@@ -310,8 +356,15 @@
         &.icw-classic-tab {
             max-width: 1440px;
             background: #F4F5F7;
-            padding: 100px 130px;
+            padding: 70px 100px;
             margin: 0 auto;
+            @media (max-width: 1500px) {
+                padding: 70px 50px;
+            }
+            @media (max-width: 992px) {
+                padding: 40px 15px;
+                margin: 0 -15px;
+            }
             .nav-tabs {
                 display: flex;
                 align-items: center;
@@ -326,6 +379,7 @@
                 border-radius: 23px;
                 margin: 0 auto;
                 margin-bottom: 50px;
+                white-space: nowrap;
                 @media (min-width: 1200px) {
                     &::-webkit-scrollbar {
                         background-color:transparent;
@@ -362,7 +416,7 @@
                     @media (max-width: 992px) {
                         font-size: 18px;  
                         gap: 8px; 
-                        padding: 18px 25px;
+                        padding: 12px 20px;
                     }
                     &:hover, &:focus {
                         color: #9D60FB;

@@ -102,7 +102,7 @@
                 font-size: 72px;  
                 font-weight: 800;  
                 @media (max-width: 992px) {
-                    font-size: 60px;
+                    font-size: 55px;
                 }          
             }
             .sort-info {
@@ -121,8 +121,16 @@
     }
     &.classic-counter-section {
         background: linear-gradient(236.27deg, #C960FB 0%, #9D60FB 98.28%);
+        padding: 70px 0;
+        margin-bottom: 0;
+        @media (max-width: 992px) {
+            padding: 40px 0;
+        }
         .main-title {
             margin-bottom: 70px;
+            @media (max-width: 992px) {
+                margin-bottom: 20px;
+            }
         }
         .counter-block {
             max-width: 1300px;
@@ -132,6 +140,7 @@
                 background: transparent;
                 color: #fff;
                 box-shadow: none;
+                padding: 10px 0;
             }
         }
     }
