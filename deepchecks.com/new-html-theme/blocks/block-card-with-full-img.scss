@@ -1,0 +1,64 @@
+.dc-card-with-full-img-section {
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    padding: 70px 0;
+    color: #ffffff; 
+    @media (max-width: 992px) {
+        padding: 40px 0;   
+    }
+    .main-title {
+        margin-bottom: 70px;
+        @media (max-width: 992px) {
+            margin-bottom: 40px;  
+        }
+    }
+    .card-block {
+        max-width: 825px; 
+        margin: 0 auto 70px;
+        @media (max-width: 992px) {
+            margin: 0 auto 40px;
+        }
+    }
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+        @media (max-width: 767px) {
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+            gap: 10px;
+        }
+        .card-img {
+            margin-bottom: 16px;
+            flex-shrink: unset;
+            width: auto;
+            @media (max-width: 767px) {
+                margin-bottom: 0;
+            }
+            img {
+                width: 48px;
+                height: 48px;
+                flex: none;
+                object-fit: cover;
+                object-position: center;
+                @media (max-width: 767px) {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+        .card-body {
+            padding: 0;
+            .card-title {
+                font-size: 24px;
+                margin-bottom: 0;
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

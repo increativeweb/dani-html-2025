@@ -11,8 +11,15 @@
     .main-title {
         .aws-logo {
             margin-bottom: 45px;
+            @media (max-width: 767px) {
+                margin-bottom: 32px;
+            }
             img {
                 max-width: 340px;
+                width: 100%;
+                @media (max-width: 767px) {
+                    max-width: 200px;
+                }
             }
         }
         h1 {
@@ -26,6 +33,13 @@
             letter-spacing: -0.03em;
             display: block;
             margin-bottom: 40px;
+            @media (max-width: 1200px) {
+                font-size: 56px;
+            }
+            @media (max-width: 767px) {
+                font-size: 36px;
+                margin-bottom: 30px;
+            }
         }
         .sort-info {
             font-weight: 600;
@@ -34,11 +48,22 @@
             text-transform: uppercase;
             color: #303245;
             margin-bottom: 40px;
+            @media (max-width: 767px) {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
         }
         .img-logo {
             margin-bottom: 40px;
+            @media (max-width: 767px) {
+                margin-bottom: 30px;
+            }
             img {
                 max-width: 575px;
+                width: 100%;
+                @media (max-width: 767px) {
+                    max-width: 275px;
+                }
             }
         }
         .action-btn {
@@ -47,6 +72,11 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px 40px;
+            .btn {                
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+            }
         }
     }
 }

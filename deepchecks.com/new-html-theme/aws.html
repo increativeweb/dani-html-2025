@@ -25,17 +25,6 @@
         <meta name="msapplication-TileImage" content="uploads/favicon-300x300.png" />
 
         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-        <link rel='stylesheet' id='style-main-dc-css' href='assets/css/main-dc.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-awe-header-css' href='blocks/block-aws-header.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-logo-slider-css' href='blocks/block-logo-slider.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-card-content-css' href='blocks/block-card-content.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-image-group-css' href='blocks/block-image-group.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-tab-css' href='blocks/block-tab.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-info-card-css' href='blocks/block-info-card.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-counter-css' href='blocks/block-counter.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-collapse-css' href='blocks/block-collapse.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-case-studies-css' href='blocks/block-case-studies.css' type='text/css' media='screen' />
-        <link rel='stylesheet' id='style-recent-blog-css' href='blocks/block-recent-blog.css' type='text/css' media='screen' />
     </head>
     <body class="home is-cta-sticky">
         <header class="main-header">
@@ -141,6 +130,7 @@
         </header>
         <div class="bg-overly"></div>
         <main class="main-content-wrapper">
+            <link rel='stylesheet' id='style-awe-header-css' href='blocks/block-aws-header.css' type='text/css' media='screen' />
             <section class="dc-aws-header-section">
                 <div class="container">
                     <div class="row align-items-center">
@@ -159,6 +149,7 @@
                     </div>
                 </div>
             </section>
+            <link rel='stylesheet' id='style-logo-slider-css' href='blocks/block-logo-slider.css' type='text/css' media='screen' />
             <section class="dc-logo-slider-section">
                 <div class="theme-container">
                     <h2 class="h5">Leading AI Teams Love & Trust Deepchecks</h2>
@@ -186,7 +177,8 @@
                     </div>
                 </div>
             </section>  
-            <section class="dc-card-content-section">
+            <link rel='stylesheet' id='style-card-with-full-img-css' href='blocks/block-card-with-full-img.css' type='text/css' media='screen' />
+            <section class="dc-card-with-full-img-section" style="background-image: url('assets/images/img-dark-bg.jpg');">
                 <div class="container">
                     <div class="main-title text-left text-md-center">
                         <h2>Integrated Experience to <br class="d-none d-xl-block">Define, Measure, and Validate AI Progress</h2>
@@ -229,7 +221,8 @@
                         <img src="uploads/img-ai-progress.svg" alt="AI Progress">
                     </div>
                 </div>
-            </section>      
+            </section>    
+            <link rel='stylesheet' id='style-image-group-css' href='blocks/block-image-group.css' type='text/css' media='screen' />  
             <section class="dc-img-group-section">
                 <div class="theme-container">
                     <div class="main-title">
@@ -249,53 +242,55 @@
                     </div>
                 </div>
             </section>
+            <link rel='stylesheet' id='style-info-card-css' href='blocks/block-info-card.css' type='text/css' media='screen' />
             <section class="dc-card-section">
                 <div class="theme-container">
                     <div class="card-block">
                         <div class="row g-4 g-md-5">
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-lg-4">
                                 <div class="info-card">
                                     <div class="card-img">
                                         <img src="uploads/icon-one-click-purple.svg" alt="Once Click Away">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="card-title">Once Click Away</h3>
-                                        <div class="sort-info">Streamline LLM evaluation with clear, actionable insights to optimize your LLM projects. Effortlessly assess and refine your LLM applications, identify key areas of success and opportunities for improvement. Prepare your LLM applications for production.</div>
+                                        <div class="sort-info">Streamline LLM evaluation with clear, actionable insights to optimize your LLM projects. Effortlessly assess and refine your LLM applications, identify key areas of success and opportunities for improvement, and prepare your LLM applications for production.</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-lg-4">
                                 <div class="info-card is-sm-icon">
                                     <div class="card-img">
                                         <img src="uploads/icon-security-purple.svg" alt="Meets Your Enterprise Security Needs">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="card-title">Meets Your Enterprise Security Needs</h3>
-                                        <div class="sort-info">Ensure enterprise security with built-in governance throughout the entire LLM application lifecycle. Control access to the right data, models, and development artifacts by the right user for the right purpose.</div>
+                                        <div class="sort-info">Ensure enterprise security with built-in governance throughout the entire LLM application lifecycle. Control access to the right data, models, and development artifacts by the right user for the right purpose. </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-lg-4">
                                 <div class="info-card">
                                     <div class="card-img">
                                         <img src="uploads/icon-seemless-experience-purple.svg" alt="Seemless Experience">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="card-title">Seemless Experience</h3>
-                                        <div class="sort-info">Deepchecks' seamless integration with SageMaker AI, a part of the SageMaker Unified Studio, ensures a flawless experience across the entire LLM lifecycle—from proof of concept and beta releases to production monitoring.</div>
+                                        <div class="sort-info">Deepchecks' seamless integration with SageMaker AI, a part of the SageMaker Unified Studio, ensures a flawless experience across the entire LLM lifecycle – from proof of concept and beta releases to production monitoring.</div>
                                     </div>
                                 </div>
                             </div>  
                         </div>
                     </div>
                 </div>
-            </section>   
-            <section class="dc-tab-section dc-icw-tab-section">
+            </section>  
+            <link rel='stylesheet' id='style-tab-css' href='blocks/block-tab.css' type='text/css' media='screen' /> 
+            <section class="dc-tab-section bg-gray" style="background-image: url(assets/images/img-icw-tab-bg.png);">
                 <div class="theme-container">
                     <div class="main-title">
                         <h2>Evaluate and Monitor <br>Your End-to-End LLM Workflow </h2>
                     </div>
-                    <div class="icw-tab-block">
+                    <div class="icw-tab-block icw-morden-tab">
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link" id="nav-version-comparison-tab" data-toggle="tab" data-target="#nav-version-comparison" type="button" role="tab" aria-controls="nav-version-comparison" aria-selected="false">Version Comparison</button>
                             <button class="nav-link" id="nav-ai-assisted-annotations-tab" data-toggle="tab" data-target="#nav-ai-assisted-annotations" type="button" role="tab" aria-controls="nav-ai-assisted-annotations" aria-selected="false">AI-Assisted Annotations</button>
@@ -395,6 +390,76 @@
                     </div>
                 </div>
             </section> 
+            <link rel='stylesheet' id='style-collapse-css' href='blocks/block-collapse.css' type='text/css' media='screen' />
+            <section class="dc-collapse-section">
+                <div class="theme-container">
+                    <div class="main-title">
+                        <h2>Use Cases</h2>
+                    </div>
+                    <div class="collapse-block classic-collapse-block">
+                        <div class="collapse-item is-open">
+                            <button type="button" class="collapse-title">
+                                <h3>Text Generation</h3>
+                            </button>
+                            <div class="collapse-body">
+                                <div class="card-content">
+                                    <p>Evaluate the quality and relevance of generated text, ensuring that outputs are coherent, contextually appropriate, and free of biases.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item">
+                            <button type="button" class="collapse-title">
+                                <h3>Multi-Step AI Agent</h3>
+                            </button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Assess multi-step AI agents on their ability to process and execute complex task sequences effectively. This includes evaluating decision-making processes and the agent's ability to handle dynamic inputs and transitions between tasks.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item ">
+                            <button type="button" class="collapse-title">
+                                <h3>RAG</h3>
+                            </button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Evaluate the integration and effectiveness of retrieval-augmented techniques in enhancing the informational depth and accuracy of language model responses. This involves analyzing how well the model utilizes external data sources to improve output quality.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item ">
+                            <button type="button" class="collapse-title">
+                                <h3>Text Summarization</h3>
+                            </button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Evaluate the capability of models to produce concise, informative summaries from extensive text inputs. This includes analyzing the retention of critical information, clarity, and overall summary coherence.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item ">
+                            <button type="button" class="collapse-title">
+                                <h3>Natural Language to Code</h3>
+                            </button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Evaluate the accuracy and efficiency of converting natural language instructions into executable code, including SQL queries. Focus on the model's ability to understand user intents and translate them into functionally correct and optimized code.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item ">
+                            <button type="button" class="collapse-title">
+                                <h3>Classification</h3>
+                            </button>
+                            <div class="collapse-body" style="display: none;">
+                                <div class="card-content">
+                                    <p>Evaluate the model's sensitivity to nuances and its ability to handle edge cases without human intervention.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <!-- FOOTER SECTION -->
         <footer class="main-footer">
