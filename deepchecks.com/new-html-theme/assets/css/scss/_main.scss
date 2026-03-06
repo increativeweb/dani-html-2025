@@ -563,8 +563,8 @@ a {
     &:not(:disabled):not(.disabled).active:focus,
     &:not(:disabled):not(.disabled):active:focus {
         background-color: transparent;
-        background-image: linear-gradient(261.85deg, #C960FB 0%, #9D60FB 98.28%), linear-gradient(261.85deg, #C960FB 0%, #9D60FB 98.28%);
-        color: $white !important;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), linear-gradient(261.85deg, #C960FB 0%, #9D60FB 98.28%);
+        color: $purple !important;
         border-color: transparent !important;
         box-shadow: 0px 4px 20px rgba(147, 86, 241, 0.5) !important;
     }
@@ -1813,7 +1813,7 @@ img {
 
     h2,
     .h2-title {
-        font-weight: 800;
+        font-weight: 500;
         font-size: 48px;
         margin-bottom: 20px;
         letter-spacing: -0.02em;
@@ -1841,7 +1841,7 @@ img {
 
     .h3 {
         font-size: 36px;
-        font-weight: 800;
+        font-weight: 500;
         margin-bottom: 20px;
         letter-spacing: -0.02em;
 
