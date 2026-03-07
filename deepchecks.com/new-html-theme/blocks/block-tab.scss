@@ -294,7 +294,8 @@
                     -ms-overflow-style: none;
                 }
                 @media (max-width: 767px) {
-                    padding: 5px;
+                    padding: 2px 3px 3px;
+                    gap: 5px;
                     margin-bottom: 30px;
                 }
                 .nav-link {
@@ -314,9 +315,12 @@
                     background: transparent;
                     border: transparent;
                     @media (max-width: 992px) {
-                        font-size: 18px;  
-                        gap: 8px; 
-                        padding: 18px 25px;
+                        padding: 18px 30px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                        padding: 8px 15px;
+                        gap: 5px;
                     }
                     &::before {
                         content: '';
@@ -331,14 +335,32 @@
                         left: 8px;
                         border: 1px solid transparent;
                         @media (max-width: 767px) {
+                            width: calc(100% - 12px);
+                            height: calc(100% - 10px);
                             top: 5px;
-                            left: 5px;
-                            width: calc(100% - 10px);
-                            height:  calc(100% - 10px);
+                            left: 6px;
+                        }
+                    }
+                    .icon {
+                        svg {
+                            @media (max-width: 767px) {
+                                width: 18px;
+                            }
+                            path {
+                                fill: #9D60FB;
+                                transition: all 0.2s ease-in-out;
+                            }
                         }
                     }
                     &:hover, &:focus {
                         color: #000000;
+                        .icon {
+                            svg {
+                                path {
+                                    fill: #303245;
+                                }
+                            }
+                        }
                     }
                     &.active { 
                         background: linear-gradient(84.3deg, rgba(255, 0, 126, 0.46) 28.49%, rgba(98, 0, 248, 0.46) 98.04%), rgba(157, 96, 251, 0.27);
@@ -348,6 +370,13 @@
                             background: rgba(255, 255, 255, 0.22);
                             box-shadow: inset 0px 4px 4px rgba(218, 211, 224, 0.29), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
                             border-bottom-color: rgba(255, 255, 255, 0.5);
+                        }
+                        .icon {
+                            svg {
+                                path {
+                                    fill: #FFFFFF !important;
+                                }
+                            }
                         }
                     }
                 }

@@ -25,7 +25,6 @@
         <meta name="msapplication-TileImage" content="uploads/favicon-300x300.png" />
 
         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-        <link rel='stylesheet' id='style-pricing-css' href='blocks/block-pricing.css' type='text/css' media='screen' />
         <link rel='stylesheet' id='style-recent-blog-css' href='blocks/block-case-studies.css' type='text/css' media='screen' />
     </head>
     <body class="">
@@ -142,12 +141,14 @@
         </header>
         <div class="bg-overly"></div>
         <main class="main-content-wrapper">
-            <section class="dc-pricing-section">
+            <link rel='stylesheet' id='style-tab-css' href='blocks/block-tab.css' type='text/css' media='screen' />
+            <link rel='stylesheet' id='style-pricing-css' href='blocks/block-pricing.css' type='text/css' media='screen' />
+            <section class="dc-pricing-section dc-tab-section">
                 <div class="container">
                     <div class="main-title text-center">
                         <h1>Flexible Pricing Designed to Scale with Your AI Applications</h1>
                     </div>
-                    <div class="icw-tab-block">
+                    <div class="icw-tab-block icw-morden-tab">
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active" id="nav-cloud-hosted-tab" data-toggle="tab" data-target="#nav-cloud-hosted" type="button" role="tab" aria-controls="nav-cloud-hosted" aria-selected="true"><span class="icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 18.4135C27.9985 19.7127 27.4818 20.9584 26.5631 21.8771C25.6444 22.7958 24.3988 23.3126 23.0995 23.314H4.90049C3.60124 23.3126 2.35563 22.7958 1.43693 21.8771C0.51823 20.9584 0.0014619 19.7127 0 18.4135C0 16.172 1.55788 14.2106 3.69551 13.6642C3.7076 12.8105 3.93436 11.9737 4.35489 11.2307C4.77543 10.4877 5.37621 9.86257 6.10186 9.41282C6.82752 8.96308 7.65471 8.70322 8.50719 8.6572C9.35967 8.61118 10.21 8.78048 10.9799 9.14949C11.4545 7.95848 12.2418 6.91764 13.2587 6.13676C14.4871 5.19229 15.9943 4.68254 17.5437 4.68754C18.6348 4.68829 19.7108 4.94183 20.6874 5.42826C21.6641 5.91468 22.5147 6.62076 23.1726 7.49112C23.8305 8.36147 24.2779 9.37243 24.4795 10.4447C24.6811 11.5169 24.6316 12.6213 24.3347 13.6712C25.384 13.9453 26.3128 14.5594 26.9759 15.4174C27.6391 16.2754 27.9992 17.3291 28 18.4135Z" fill="white" /></svg></span>Cloud-Hosted</button>
                             <button class="nav-link" id="nav-privately-hosted-tab" data-toggle="tab" data-target="#nav-privately-hosted" type="button" role="tab" aria-controls="nav-privately-hosted" aria-selected="false"><span class="icon"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.45 3.96878L15.3549 0.17027C14.8113 -0.0567285 14.1878 -0.0567845 13.6443 0.17027L4.54919 3.96878C3.89767 4.24088 3.47971 4.87296 3.48441 5.57906L3.55457 16.1046C3.57558 19.2654 5.1755 22.1731 7.83425 23.8826C14.5294 28.1872 14.1249 27.9987 14.4996 27.9987C14.8742 27.9987 14.4698 28.1872 21.1649 23.8826C21.1649 23.8585 25.4086 21.4954 25.4446 16.1046L25.5148 5.57917C25.5196 4.87307 25.1016 4.24099 24.45 3.96878ZM22.1282 15.6913C22.1133 17.9097 20.9907 19.95 19.125 21.1496C14.69 24.0011 14.8711 23.9542 14.4996 23.9542C14.1253 23.9542 14.303 23.9972 9.87409 21.1496C8.00846 19.95 6.8858 17.9097 6.87106 15.6918L6.82405 8.0794C6.82013 7.48626 7.17152 6.95483 7.71921 6.72604L13.8126 4.18115C14.2492 3.99887 14.75 3.99887 15.1866 4.18115L21.2799 6.72604C21.8278 6.95488 22.1792 7.48632 22.1752 8.07996L22.1282 15.6913Z" fill="white" /><path d="M8.61914 8.29218L8.66475 15.6788C8.67546 17.2883 9.49032 18.7692 10.8445 19.6398L14.5002 21.9903L18.1559 19.6398C18.1559 19.6276 20.3174 18.4241 20.3357 15.6783L20.3813 8.29218L14.5002 5.83594L8.61914 8.29218Z" fill="white" /></svg></span>Privately-Hosted</button>
@@ -234,8 +235,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="nav-privately-hosted" role="tabpanel"
-                                aria-labelledby="nav-privately-hosted-tab">
+                            <div class="tab-pane fade" id="nav-privately-hosted" role="tabpanel" aria-labelledby="nav-privately-hosted-tab">
                                 <div class="tab-details">
                                     <div class="pricing-block">
                                         <div class="row no-gutters justify-content-center">

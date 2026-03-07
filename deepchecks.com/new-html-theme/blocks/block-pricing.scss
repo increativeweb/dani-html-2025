@@ -22,45 +22,19 @@
         max-width: 1170px;
         margin: 0 auto;
         .nav-tabs {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 8px;
-            gap: 8px;
-            border: 2px solid #9D60FB;
-            border-radius: 50px;
-            margin: 0 auto 120px;
+            margin: 0 auto;
+            margin-bottom: 120px !important;
             max-width: max-content;
+            border-radius: 50px !important;
             @media (max-width: 992px) {
-                margin: 0 auto 40px;
+                margin: 0 auto;
+                margin-bottom: 40px !important;
             }
             @media (max-width: 767px) {
-                flex-wrap: nowrap;
-                overflow: hidden;
-                overflow-x: auto;
-                justify-content: flex-start;
                 padding: 2px 3px 3px;
                 gap: 5px;
             }
             .nav-link {
-                border-radius: 50px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                gap: 16px;
-                padding: 18px 42px;
-                font-size: 20px;  
-                font-weight: 400; 
-                position: relative; 
-                white-space: nowrap;
-                line-height: 1.1;
-                flex: 0 0 auto;
-                background: transparent;
-                color: #9D60FB;
-                transition: all 0.2s ease-in-out;
-                border: none;
-                text-shadow: 1px 0px #9D60FB;
-                letter-spacing: 0.01em;
                 @media (max-width: 992px) {
                     padding: 18px 30px;
                 }
@@ -69,66 +43,6 @@
                     padding: 8px 15px;
                     gap: 5px;
                 }
-                .icon {
-                    svg {
-                        @media (max-width: 767px) {
-                            width: 18px;
-                        }
-                        path {
-                            fill: #9D60FB;
-                            transition: all 0.2s ease-in-out;
-                        }
-                    }
-                }
-                &::before {
-                    content: '';
-                    width: calc(100% - 16px);
-                    height:  calc(100% - 16px);
-                    background: transparent;
-                    border-radius: 30px;
-                    box-shadow: none;
-                    display: block;
-                    position: absolute;
-                    top: 8px;
-                    left: 8px;
-                    border: 1px solid transparent;
-                    transition: all 0.2s ease-in-out;
-                    @media (max-width: 767px) {
-                        width: calc(100% - 12px);
-                        height: calc(100% - 10px);
-                        top: 5px;
-                        left: 6px;
-                    }
-                }    
-                &:hover, &:focus {
-                    color: #303245;
-                    text-shadow: 1px 0px #303245;
-                    .icon {
-                        svg {
-                            path {
-                                fill: #303245;
-                            }
-                        }
-                    }
-                }   
-                &.active {
-                    background: linear-gradient(84.3deg, rgba(255, 0, 126, 0.46) 28.49%, rgba(98, 0, 248, 0.46) 98.04%), rgba(157, 96, 251, 0.27);
-                    box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.26), inset 0px 2px 4px rgba(0, 0, 0, 0.25);
-                    color: #FFFFFF !important;
-                    text-shadow: none;
-                    &::before {                            
-                        background: rgba(255, 255, 255, 0.22);
-                        box-shadow: inset 0px 4px 4px rgba(218, 211, 224, 0.29), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
-                        border-bottom-color: rgba(255, 255, 255, 0.5);
-                    }
-                    .icon {
-                        svg {
-                            path {
-                                fill: #FFFFFF !important;
-                            }
-                        }
-                    }
-                }  
             }
         }
         .tab-content {
