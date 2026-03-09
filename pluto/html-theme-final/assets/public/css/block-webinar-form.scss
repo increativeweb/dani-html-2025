@@ -164,6 +164,9 @@
     .theme-btn {
         font-size: 18px;    
         height: 54px;
-        width: 100%;
+        width: auto;
+        @media (max-width: 575px) {
+            width: 100%;
+        }
     }
 }
