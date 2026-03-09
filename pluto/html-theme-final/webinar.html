@@ -122,16 +122,11 @@
                                         </script>
                                     </div>
                                 </div>
-                                <div class="mobile-fixed-action">
-                                    <div class="action">
-                                        <a href="#webinar-form" class="theme-btn btn-dark">REGISTER NOW</a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
             <section class="trusted-logo-section trusted-logo-slider-full">
                 <div class="theme-container">
                     <div class="section-title text-center mb-4 mb-md-5">
@@ -160,7 +155,30 @@
                     </div>
                 </div>
             </section>
-        </div><!-- end of <main> -->
+        </div><!-- end of <main> -->                    
+        <div class="mobile-fixed-action">
+            <div class="action">
+                <a href="#webinar-form" class="theme-btn btn-dark">REGISTER NOW</a>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                function checkFormVisibility() {
+                    const form = document.querySelector(".icw-form-block");
+                    const mobileAction = document.querySelector(".mobile-fixed-action");
+                    if (!form || !mobileAction) return;
+                    const rect = form.getBoundingClientRect();
+                    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                    if (rect.top < windowHeight && rect.bottom > 0) {
+                        mobileAction.classList.add("hide");
+                    } else {
+                        mobileAction.classList.remove("hide");
+                    }
+                }
+                window.addEventListener("scroll", checkFormVisibility);
+                checkFormVisibility(); 
+            });
+        </script>
         <footer id="site-footer" class="site-footer">
             <div class="footer-cta-block">
                 <div class="footer-cta__content">
