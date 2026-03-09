@@ -1,0 +1,112 @@
+.book-webinar-content-section {
+    background-image: url(../images/img-bg-plus-dark-vector.svg);
+    background-position: 50%;
+    background-repeat: repeat;
+    background-size: contain;
+    padding: 112px 0 80px;
+    @media(max-width:992px) {
+        padding: 50px 0;
+    }
+    .content-block {
+        display: grid;
+        gap: 112px;
+        grid-template-columns: repeat(2, 1fr);
+        @media(min-width:1300px) {
+            margin: 0 -1rem
+        }
+        @media(max-width:1200px) { 
+            gap: 50px
+        }
+        @media(max-width:992px) {
+            gap: 30px;
+            grid-template-columns: 100%
+        }
+    }
+    .section-title {
+        .tag-line {
+            font-size: clamp(1rem, 3.5vw, 1.5rem);
+            font-weight: 700;
+            color: #FA673A;
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            font-size: clamp(1.5rem, 4.5vw, 2.625rem);
+            line-height: 1.3;
+        }
+        .date-time {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: clamp(.75rem, 4.5vw, .875rem);
+            font-weight: 600;
+            margin-bottom: 40px;
+            .date, .time {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                .icon {
+                    display: inline-block;
+                    line-height: 0.7;
+                }
+            }
+        }
+        .sort-info {
+            font-size: clamp(.875rem, 4.5vw, 1.25rem);
+        }
+        .meet-team-info {
+            margin-top: 40px;
+            .title {
+                font-size: clamp(.875rem, 4.5vw, 1.25rem);
+                font-weight: 600;
+                margin-bottom: 24px;
+            }
+            .team-user {
+                display: flex;
+                align-items: center;
+                gap: 56px;
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+                .user-img {
+                    width: 132px;
+                    height: 132px;
+                    aspect-ratio: 1 / 1;
+                    background: #FFCBCB;
+                    border: 1px solid #000000;
+                    box-shadow: 4px 4px 0px #000000;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    img {
+                        object-fit: cover;
+                        object-position: center;
+                        border-radius: 8px;
+                    }
+                }
+                .user-info {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    line-height: 1;
+                    .name {
+                        font-size: clamp(.875rem, 4.5vw, 1.25rem);                    
+                        font-weight: 600;
+                    }
+                    .designation {
+                        font-size: clamp(.875rem, 4.5vw, 1.25rem);    
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    .icw-form-block {
+        background: #FDF2D4;
+        border: 1px solid #000000;
+        box-shadow: 8px 8px 0px #000000;
+        border-radius: 16px;
+        padding: 2rem;
+        .form-body {
+            background: transparent;
+        }
+    }
+}
