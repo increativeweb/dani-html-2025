@@ -344,17 +344,15 @@
                 </div>
             </section>
             <link rel='stylesheet' id='style-faqs-css' href='blocks/block-faqs.css' type='text/css' media='screen' />
-            <section class="dc-faqs-section with-border mb-5" style="background-image: url(assets/images/img-collapse-bg.png);">
+            <section  class="dc-faq-section bg-custom img-custom with-border" style="--gs-bg: rgb(255,255,255);background-image:url(/wp-content/uploads/2026/03/img-collapse-bg.png) !important;">
                 <div class="theme-container">
-                    <div class="main-title text-md-left mb-4 mb-md-5">
-                        <h2 class="h3">Frequently Asked Questions</h2>
-                    </div>
-                    <div class="collapse-block morden-collapse-block">
-                        <div class="collapse-item is-open">
-                            <button type="button" class="collapse-title">
-                                <h3>Which plan is right for me?</h3>
-                            </button>
-                            <div class="collapse-body">
+                    <div class="main-title text-left text-md-left mb-4 mb-md-5">
+                        <h2 class="title h3 font-weight-500">Frequently Asked Questions</h2>
+                    </div>    
+                    <div class="faq-block morden-faq-block">
+                        <div class="faq-item">
+                            <button type="button" class="faq-title"><h3>Which plan is right for me?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Deepchecks offers three plans aligned with the maturity of your LLM applications and agentic AI systems:</p>
                                     <p><strong>Basic:</strong> For teams validating LLM app behavior and early-stage AI agents. Suitable for prompt evaluation, single-application setups, and initial production readiness checks with clear usage boundaries.</p>
@@ -364,31 +362,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item">
-                            <button type="button" class="collapse-title">
-                                <h3>Can I upgrade or downgrade my plan?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item">
+                            <button type="button" class="faq-title"><h3>Can I upgrade or downgrade my plan?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>For SaaS deployments, plan upgrades are available at any point during the contract term. You can add additional users or AI applications on all paid plans. Downgrades typically take effect at the next renewal.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>Are user licenses transferable?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item">
+                            <button type="button" class="faq-title"><h3>Are user licenses transferable?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Yes. Seats can be reassigned to different users within your organization. License management is handled through workspace administration and is not tied permanently to a specific individual.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>What is an AI Application?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>What is an AI Application?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>An <strong>AI Application</strong> represents a distinct LLM-powered system or workflow that you evaluate and monitor within Deepchecks. It serves as an independent evaluation unit within the platform, with its own configuration, including metrics, auto-annotation pipelines, and access controls. This structure ensures that different use cases are managed, analyzed, and tracked separately within the same environment.</p>
                                     <p>Examples of AI Applications include customer-facing chatbots, internal AI assistants, RAG pipelines, or multi-agent workflows.</p>
@@ -396,75 +388,62 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>What are DPUs?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>What are DPUs?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>DPUs (Deepchecks Processing Units) are used to measure usage of the Deepchecks SaaS platform. DPUs do not apply to VPC, bare-metal, or self-hosted deployments.</p>
                                     <p>DPUs are consumed by uploading and processing evaluation data, running LLM-based evaluation properties, executing translation for multi-lingual applications, and analysis workloads.</p>
                                     <p>Each plan includes a fixed monthly DPU allocation. Higher-volume usage requires upgrading plans or purchasing additional capacity.</p>
-                                    <p>See documentation here: https://llmdocs.deepchecks.com/docs/get-the-most-out-of-your-dpus</p>
+                                    <p>See documentation here:<br />
+                                    <a href="https://llmdocs.deepchecks.com/docs/get-the-most-out-of-your-dpus" target="_blank" rel="noopener">https://llmdocs.deepchecks.com/docs/get-the-most-out-of-your-dpus</a></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>How do I track my usage?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>How do I track my usage?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Deepchecks provides a usage dashboard that shows your monthly DPU consumption broken down by workload type. This allows you to track usage over time, understand which applications or evaluations consume the most resources, and stay within your plan limits.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>What happens if I exceed my DPU limit?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>What happens if I exceed my DPU limit?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>If you reach your monthly DPU limit, you can purchase additional DPUs at any time during your license term. This allows you to continue running evaluations without interruption as usage grows.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>Does Deepchecks support multi-lingual applications?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>Does Deepchecks support multi-lingual applications?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Yes. Deepchecks supports the evaluation of AI applications and agent workflows across most widely used languages, not limited to English.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>What compliance standards does Deepchecks support?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>What compliance standards does Deepchecks support?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Paid plans include enhanced compliance and security capabilities such as controlled data retention, role-based access control, and auditability.</p>
                                     <p>For specific certifications or compliance documentation (for example, SOC 2 or ISO-aligned controls), these are provided upon request during security and procurement reviews.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>Do I need to bring my own LLM APIs for prompt-based evaluations?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>Do I need to bring my own LLM APIs for prompt-based evaluations?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>No. Deepchecks provides built-in evaluation capabilities powered by its own evaluation infrastructure. Prompt-based properties run using Deepchecks-managed models, so no external API keys or third-party model integrations are required.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>Does Deepchecks support private or self-hosted deployments?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>Does Deepchecks support private or self-hosted deployments?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Yes. Deepchecks supports multiple deployment models, including:</p>
                                     <ul>
@@ -476,31 +455,52 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>How does Deepchecks fit into CI/CD or LLMOps workflows?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>How does Deepchecks fit into CI/CD or LLMOps workflows?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Deepchecks integrates into CI/CD and LLMOps pipelines to support continuous evaluation across development, staging, and production. It can be triggered as part of automated testing, model version comparisons, and production monitoring workflows.</p>
-                                    <p>See documentation here:</p>
-                                    <p>https://llmdocs.deepchecks.com/docs/ci-cd</p>
+                                    <p>See documentation here:<br />
+                                    <a href="https://llmdocs.deepchecks.com/docs/ci-cd" target="_blank" rel="noopener">https://llmdocs.deepchecks.com/docs/ci-cd</a></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
-                                <h3>Is Deepchecks available on AWS Marketplace?</h3>
-                            </button>
-                            <div class="collapse-body" style="display: none;">
+                        <div class="faq-item is-xs-none is-show">
+                            <button type="button" class="faq-title"><h3>Is Deepchecks available on AWS Marketplace?</h3></button>
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Yes. Deepchecks is available on AWS Marketplace in both SaaS and AWS-managed deployment models, enabling procurement through existing AWS contracts and billing workflows.</p>
-                                    <p>See here:</p>
-                                    <p><a href="https://aws.amazon.com/marketplace/pp/prodview-dtmuwnb4ybkeq?sr=0-1&ref_=beagle&applicationId=AWSMPContessa" target="_blank">https://aws.amazon.com/marketplace/pp/prodview-dtmuwnb4ybkeq?sr=0-1&ref_=beagle&applicationId=AWSMPContessa</a></p>
+                                    <p>See here:<br /><a href="https://aws.amazon.com/marketplace/pp/prodview-dtmuwnb4ybkeq?sr=0-1&amp;ref_=beagle&amp;applicationId=AWSMPContessa" target="_blank" rel="noopener">https://aws.amazon.com/marketplace/pp/prodview-dtmuwnb4ybkeq?sr=0-1&amp;ref_=beagle&amp;applicationId=AWSMPContessa</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="action-show-more text-center d-lg-none">
+                        <button type="button" class="btn is-show-all"><span class="is-text">View all</span></button>
+                    </div>            
+                    <script>
+                        if (jQuery('.faq-item').length) {
+                            jQuery(document).on("click", ".faq-item .faq-title", function () {
+                            var $this = jQuery(this).closest(".faq-item");
+                            if ($this.hasClass("is-open")) {
+                                $this.removeClass("is-open");$this.find(".faq-body").stop(true, true).slideUp(300);
+                            } else {
+                                jQuery(".faq-item").removeClass("is-open");
+                                jQuery(".faq-item").find(".faq-body").stop(true, true).slideUp(300); $this.addClass("is-open");
+                                $this.find(".faq-body").stop(true, true).slideDown(300); }
+                            return false;
+                        });}
+                        var isHidden = true;
+                        jQuery('.is-show-all').on('click', function(e) { e.preventDefault();
+                        jQuery('.is-xs-none').toggleClass('is-show');
+                        isHidden = !isHidden;
+                        jQuery(this).find('.is-text').text(isHidden ? "View all" : "Hide all");
+                        if(isHidden){
+                            var offset_target = jQuery(this).parents('.dc-faq-section').offset().top;
+                            jQuery('html, body').animate({ scrollTop: offset_target }, 50);
+                        } 
+                        });
+                    </script>
                 </div>
             </section>
         </main>

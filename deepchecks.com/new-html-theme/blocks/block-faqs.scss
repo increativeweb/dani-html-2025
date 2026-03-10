@@ -1,46 +1,48 @@
-.dc-faqs-section {
+.dc-faq-section {
     max-width: 100%;
-    padding: 70px 0;    
-    background-color: #FBFBFB;
-    border-top: 1px solid #DEE0E9;
-    border-bottom: 1px solid #DEE0E9;
+    padding: 70px 0;
+
     @media (max-width: 992px) {
         padding: 40px 0;
     }
+
     .theme-container {
         @media (max-width: 1440px) {
             max-width: 100%;
         }
     }
-    .collapse-block {
+
+    &.with-border {
+        background-color: #FBFBFB;
+        border-top: 1px solid #DEE0E9;
+        border-bottom: 1px solid #DEE0E9;
+    }
+
+    .faq-block {
         max-width: 100%;
-        margin-top: 70px;
-        @media (max-width: 992px) {
-            margin-top: 30px;
-        }
-        .collapse-item {
-            border: none;
-            border-bottom: 1px solid #E1E1E1;
+
+        .faq-item {
             padding: 0;
+            border-bottom: 1px solid #E1E1E1;
             &:first-child {
-                .collapse-title {  
-                    padding-top: 0px;
+                .faq-title {
+                    h3 {
+                        padding-top: 0;
+                    }
                 }
             }
-            .collapse-title {                    
+            .faq-title {
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
                 text-align: left;
                 cursor: pointer;
                 background: transparent;
                 border: none;
                 width: 100%;
-                padding: 0;
                 border-radius: 0;
-                padding: 24px;
-                @media (max-width: 992px) {
-                    padding: 15px;
-                }
+                padding: 0;
+
+
                 &::after {
                     content: " ";
                     width: 24px;
@@ -55,43 +57,89 @@
                     transition: all .2s ease-in-out;
                     -webkit-filter: brightness(0);
                     filter: brightness(0);
+                    margin-right: 24px;
+
                     @media (max-width: 767px) {
                         width: 16px;
                         height: 16px;
+                        margin-right: 15px;
                     }
                 }
+
                 h3 {
                     font-size: 24px;
                     font-weight: 700;
                     margin-bottom: 0;
                     color: #303245;
+                    padding: 24px;
+
                     @media (max-width: 767px) {
-                        font-size: 20px;
-                    }
-                }
-            }
-            .collapse-body {
-                background: transparent;
-                margin-top: 0px;
-                padding: 0 24px 24px;
-                padding-right: 40px;
-                border: 0;
-                @media (max-width: 767px) {
-                    padding: 15px;
-                    padding-right: 15px;
-                }
-                p {
-                    font-size: 20px;
-                    @media (max-width: 767px) {
+                        padding: 15px;
                         font-size: 18px;
                     }
+
+                    .icon {
+                        img {
+                            max-height: 70px;
+
+                            @media (max-width: 1200px) {
+                                max-height: 40px;
+                            }
+                        }
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    opacity: 0.8;
                 }
             }
-            &.is-open  {
-                .collapse-title {
+
+            .faq-body {
+                background: transparent;
+                margin-top: 0;
+                border: 0;
+
+                .card-content {
+                    padding: 0px 24px 24px;
+                    font-size: 18px;
+                    @media (max-width: 767px) {
+                        padding: 0px 15px 15px;
+                        font-size: 16px;
+                    }
+                }
+
+                ul {
+                    padding-left: 20px;
+
+                    li {
+                        font-weight: 500;
+                        list-style-type: disc;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                    }
+                }
+
+                a {
+                    font-size: 16px;
+                    text-decoration: underline;
+                    text-underline-offset: 4px
+                }
+            }
+
+            &.is-open {
+                .faq-title {
                     h3 {
                         color: #9D60FB;
                     }
+
                     &::after {
                         background: url('data:image/svg+xml; utf8,<svg width="20" height="4" viewBox="0 0 20 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8335 2H18.1668" stroke="rgb(157 96 251)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
                         filter: unset;
@@ -99,28 +147,56 @@
                     }
                 }
             }
+
+
         }
-        &.morden-collapse-block {
+
+       
+        &.morden-faq-block {
             margin-top: 50px;
             background: #FFFFFF;
             box-shadow: 4px 4px 16px rgba(165, 165, 165, 0.12);
             border-radius: 30px;
+
             @media (max-width: 992px) {
                 margin-top: 30px;
                 border-radius: 15px;
             }
-            .collapse-item {
+
+            .faq-item {
                 &:first-child {
-                    .collapse-title {
-                        padding-top: 24px;
-                        @media (max-width: 992px) {
-                            padding-top: 15px;
+                    .faq-title {
+                        h3 {
+                            padding-top: 24px;
+                            @media (max-width: 992px) {
+                                padding-top: 15px;
+                            }
                         }
                     }
                 }
                 &:last-child {
-                    border-bottom: none;
+                    border-bottom: 0;
                 }
+            }
+        }
+    }
+
+
+    @media (max-width: 992px) {
+        .is-show {
+            display: none;
+        }
+
+        .action-show-more {
+            padding-top: 30px;
+
+            .btn {
+                font-size: 11px;
+                font-weight: 600;
+                padding: 0px;
+                min-height: auto;
+                letter-spacing: 1px;
+                text-transform: uppercase;
             }
         }
     }

@@ -57,7 +57,7 @@
                 flex: 0 0 auto;
                 background: transparent;
                 color: #9D60FB;
-                transition: all 0.2s ease-in-out;
+                transition: all 0.02s ease-in-out;
                 border: none;
                 text-shadow: 1px 0px #9D60FB;
                 letter-spacing: 0.01em;
@@ -76,7 +76,7 @@
                         }
                         path {
                             fill: #9D60FB;
-                            transition: all 0.2s ease-in-out;
+                            transition: all 0.02s ease-in-out;
                         }
                     }
                 }
@@ -92,7 +92,7 @@
                     top: 8px;
                     left: 8px;
                     border: 1px solid transparent;
-                    transition: all 0.2s ease-in-out;
+                    transition: all 0.02s ease-in-out;
                     @media (max-width: 767px) {
                         width: calc(100% - 12px);
                         height: calc(100% - 10px);
@@ -208,11 +208,12 @@
                                     right: 0;
                                     display: inline-block;
                                     background-position: center right;
-                                    transition: all 0.3s ease-in-out;
+                                    transition: all 0.02s ease-in-out;
                                 }
                                 &.active {
                                     .arrow-down {
                                         transform: rotate(180deg) translateY(2px);
+                                        filter: brightness(0) invert(1);
                                     }
                                 }
                             }
@@ -220,7 +221,7 @@
                                 opacity: 0;
                                 visibility: hidden;
                                 transform: translateY(10px);
-                                transition: all 0.3s ease-in-out;
+                                transition: all 0.02s ease-in-out;
                                 height: 0;
                                 max-width: 100%;
                                 position: relative;

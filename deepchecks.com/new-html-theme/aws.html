@@ -391,73 +391,96 @@
                 </div>
             </section> 
             <link rel='stylesheet' id='style-faqs-css' href='blocks/block-faqs.css' type='text/css' media='screen' />
-            <section class="dc-faqs-section">
+            <section class="dc-faq-section">
                 <div class="theme-container">
                     <div class="main-title">
-                        <h2>Use Cases</h2>
+                        <h2 class="mb-md-5">Use Cases</h2>
                     </div>
-                    <div class="collapse-block classic-collapse-block">
-                        <div class="collapse-item is-open">
-                            <button type="button" class="collapse-title">
+                    <div class="faq-block">
+                        <div class="faq-item is-open">
+                            <button type="button" class="faq-title">
                                 <h3>Text Generation</h3>
                             </button>
-                            <div class="collapse-body">
+                            <div class="faq-body">
                                 <div class="card-content">
                                     <p>Evaluate the quality and relevance of generated text, ensuring that outputs are coherent, contextually appropriate, and free of biases.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item">
-                            <button type="button" class="collapse-title">
+                        <div class="faq-item">
+                            <button type="button" class="faq-title">
                                 <h3>Multi-Step AI Agent</h3>
                             </button>
-                            <div class="collapse-body" style="display: none;">
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Assess multi-step AI agents on their ability to process and execute complex task sequences effectively. This includes evaluating decision-making processes and the agent's ability to handle dynamic inputs and transitions between tasks.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
+                        <div class="faq-item">
+                            <button type="button" class="faq-title">
                                 <h3>RAG</h3>
                             </button>
-                            <div class="collapse-body" style="display: none;">
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Evaluate the integration and effectiveness of retrieval-augmented techniques in enhancing the informational depth and accuracy of language model responses. This involves analyzing how well the model utilizes external data sources to improve output quality.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
+                        <div class="faq-item">
+                            <button type="button" class="faq-title">
                                 <h3>Text Summarization</h3>
                             </button>
-                            <div class="collapse-body" style="display: none;">
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Evaluate the capability of models to produce concise, informative summaries from extensive text inputs. This includes analyzing the retention of critical information, clarity, and overall summary coherence.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
+                        <div class="faq-item">
+                            <button type="button" class="faq-title">
                                 <h3>Natural Language to Code</h3>
                             </button>
-                            <div class="collapse-body" style="display: none;">
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Evaluate the accuracy and efficiency of converting natural language instructions into executable code, including SQL queries. Focus on the model's ability to understand user intents and translate them into functionally correct and optimized code.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse-item ">
-                            <button type="button" class="collapse-title">
+                        <div class="faq-item">
+                            <button type="button" class="faq-title">
                                 <h3>Classification</h3>
                             </button>
-                            <div class="collapse-body" style="display: none;">
+                            <div class="faq-body" style="display: none;">
                                 <div class="card-content">
                                     <p>Evaluate the model's sensitivity to nuances and its ability to handle edge cases without human intervention.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <script>
+                        if (jQuery('.faq-item').length) {
+                            jQuery(document).on("click", ".faq-item .faq-title", function () {
+                            var $this = jQuery(this).closest(".faq-item");
+                            if ($this.hasClass("is-open")) {
+                                $this.removeClass("is-open");$this.find(".faq-body").stop(true, true).slideUp(300);
+                            } else {
+                                jQuery(".faq-item").removeClass("is-open");
+                                jQuery(".faq-item").find(".faq-body").stop(true, true).slideUp(300); $this.addClass("is-open");
+                                $this.find(".faq-body").stop(true, true).slideDown(300); }
+                            return false;
+                        });}
+                        var isHidden = true;
+                        jQuery('.is-show-all').on('click', function(e) { e.preventDefault();
+                            jQuery('.is-xs-none').toggleClass('is-show');
+                            isHidden = !isHidden;
+                            jQuery(this).find('.is-text').text(isHidden ? "View all" : "Hide all");
+                            if(isHidden){
+                                var offset_target = jQuery(this).parents('.dc-faq-section').offset().top;
+                                jQuery('html, body').animate({ scrollTop: offset_target }, 50);
+                            } 
+                        });
+                    </script>
                 </div>
             </section>
         </main>
