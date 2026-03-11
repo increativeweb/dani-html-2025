@@ -137,11 +137,11 @@
                         <div class="col-12">
                             <div class="main-title text-center mb-0">
                                 <div class="tag-line">Agent Evaluation</div>
-                                <h1>Define, Measure & Validate <br class="d-none d-xl-block">Your Tool-Calling Agents</h1>
-                                <div class="sort-info">Evaluate your tool-using AI agents across multi-step workflows - with <br class="d-none d-xl-block">context tracking, version comparison, and auto-scoring.</div>
+                                <h1>Enterprise-Grade Evaluation for <br class="d-none d-xl-block">Multi-Agent Workflows</h1>
+                                <div class="sort-info">Evaluate and monitor your AI agents across multi-step, autonomous workflows with full context, versioning, and trust.</div>
                                 <div class="action-btn">
                                     <a href="https://www.deepchecks.com/deepchecks-agent-evaluation-ai-transparency-trust/" class="btn btn-primary-outline">How It Works</a>
-                                    <a data-toggle="modal" data-target="#popup-llm" href="#Book-a-Demo"class="btn btn-primary btn-svg">Book a Demo<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
+                                    <a data-toggle="modal" data-target="#popup-llm" href="#Book-a-Demo"class="btn btn-primary btn-svg">Request Access<span class="btn-icon"><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83325 6H15.1666M15.1666 6L10.1666 1M15.1666 6L10.1666 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
                                 </div>
                             </div>
                         </div>
@@ -162,15 +162,17 @@
                     <h2 class="h5">Integrations</h2>
                     <div class="logo-sliders logo-mask-slider logo-sliders-sm">
                         <div class="logo-slider auto-slider">
-                            <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-amazon-sagemaker.png" alt="Amazon Sagemaker" /></span></div>
+                            <div class="logo-item"><span><img src="https://deepchecks.com/wp-content/uploads/2026/03/logo-hugging-face.png" alt="Hugging Face" /></span></div>
                             <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-crewai.png" alt="Crewai" /></span></div>
+                            <div class="logo-item"><span><img src="https://deepchecks.com/wp-content/uploads/2026/02/logo-aws.svg" alt="AWS" /></span></div>
                             <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-langchain.svg" alt="LangChain" /></span></div>
                             <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-llamaindex.svg" alt="LlamaIndex" /></span></div>
                             <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-azure.svg" alt="Azure" /></span></div>    
                         </div>
                         <div aria-hidden="true" class="logo-slider auto-slider">
-                            <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-amazon-sagemaker.png" alt="Amazon Sagemaker" /></span></div>
+                            <div class="logo-item"><span><img src="https://deepchecks.com/wp-content/uploads/2026/03/logo-hugging-face.png" alt="Hugging Face" /></span></div>
                             <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-crewai.png" alt="Crewai" /></span></div>
+                            <div class="logo-item"><span><img src="https://deepchecks.com/wp-content/uploads/2026/02/logo-aws.svg" alt="AWS" /></span></div>
                             <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-langchain.svg" alt="LangChain" /></span></div>
                             <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-llamaindex.svg" alt="LlamaIndex" /></span></div>
                             <div class="logo-item"><span><img src="https://www.deepchecks.com/wp-content/uploads/2025/05/logo-azure.svg" alt="Azure" /></span></div>
@@ -241,12 +243,12 @@
                                     <div class="main-title text-left mb-0">
                                         <h2>End-to-End Evaluation</h2>
                                         <div class="sort-info">
-                                            <p>Treat a full agent workflow (including agent planning, action, and response) as a session, not just a single interaction.</p>
+                                            <p>Treat a full chain of actions (including tool calls, retries, memory writes) as a session, not just a single prompt.</p>
                                             <ul class="dots-list no-margin mb-0">
-                                                <li>Auto-scoring by determining when to use each evaluation agent</li>
-                                                <li>Create customized evaluation agents</li>
-                                                <li>Supports auto annotations for Agent sessions</li>
-                                                <li>Compare versions of prompts, agents &amp; models</li>
+                                                <li>Track entire chains of agent actions</li>
+                                                <li>Visualize tool call patterns and memory usage</li>
+                                                <li>Identify where in the workflow issues occur</li>
+                                                <li>Compare session metrics across multiple runs</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -266,9 +268,10 @@
                                     <div class="main-title text-left mb-0">
                                         <h2>Swarm of Evaluation Agents</h2>
                                         <div class="sort-info">
-                                            <p>The algorithmic backbone of Deepchecks is a set of small language models (SLMs) &amp; multi-step NLP pipelines, that work together as a swarm using Mixture of Experts (MoE) techniques to simulate an intelligent, human, annotator.</p>
+                                            <p>A collection of specialized evaluators routed via a Mixture of Experts architecture.</p>
                                             <ul class="dots-list no-margin mb-0">
                                                 <li>Hallucination detection experts</li>
+                                                <li>Configurable LLM judge agents for subjective evaluation</li>
                                                 <li>Planning accuracy evaluators</li>
                                                 <li>Rule-based checks for objective criteria</li>
                                             </ul>
@@ -288,7 +291,7 @@
                             <div class="col-md-6 order-1">
                                 <div class="content-block">
                                     <div class="main-title text-left mb-0">
-                                        <h2>Compare Agentic Workflows</h2>
+                                        <h2>Compare Agent Versions</h2>
                                         <div class="sort-info">
                                             <p>Side-by-side comparisons of different agents, models, or configurations.</p>
                                             <ul class="dots-list no-margin mb-0">
@@ -315,8 +318,8 @@
                         <div class="row">
                             <div class="col-6 col-md-3">
                                 <div class="counter-box mt-0">
-                                    <h3 class="counter count-number" data-countto="15" data-duration="2500"><span>0</span>x</h3>
-                                    <div class="sort-info">Versions <br>Compared</div>
+                                    <h3 class="counter count-number" data-countto="94" data-duration="2500"><span>0</span>x</h3>
+                                    <div class="sort-info">Accuracy <br>Improvement</div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-3">
