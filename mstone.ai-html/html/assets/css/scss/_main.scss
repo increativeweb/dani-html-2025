@@ -3515,6 +3515,9 @@
     }
     .icon {
         margin-bottom: 24px;
+        img, svg {
+            max-width: 20px;
+        }
     }
     .title {
         font-weight: 500;
