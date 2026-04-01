@@ -8,6 +8,40 @@ body {
 
         h1 {
           line-height: 1;
+
+          .animate {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            top: 7px;
+
+            span {
+              position: relative;
+              display: inline-block;
+              transform: translateY(-120%);
+              animation: letter-fade-in .5s ease-in-out forwards;
+
+              &:nth-child(1) {
+                animation-delay: .25s;
+              }
+
+              &:nth-child(2) {
+                animation-delay: .35s;
+              }
+
+              &:nth-child(3) {
+                animation-delay: .45s;
+              }
+
+              &:nth-child(4) {
+                animation-delay: .55s;
+              }
+
+              &:nth-child(5) {
+                animation-delay: .65s;
+              }
+            }
+          }
         }
       }
     }
@@ -93,11 +127,16 @@ body {
         .progress-content-step .content .image-block img {
           border-radius: 15px;
         }
+
+        .progress-content-step-v2 .content .image-block img {
+          border-radius: 15px;
+        }
       }
     }
 
     .testimonials-section {
       //   background: url("../images/bg-testimonials.png") no-repeat 50% 50% / 700px 750px !important;
+      padding-bottom: 120px;
 
       @media (min-width: 768px) {
         background-size: 100% 100% !important;
@@ -390,6 +429,12 @@ body {
           opacity: 0.2;
           transition: opacity 1.2s 0.2s;
         }
+
+      .progress-content-step-v2:not(:first-child) {
+        .section-title {
+          opacity: 0.2;
+          transition: opacity 1.2s 0.2s;
+        }
       }
 
       .image-block {
@@ -402,6 +447,14 @@ body {
       }
 
       .progress-content-step {
+        &.is-active {
+          .section-title {
+            opacity: 1;
+          }
+        }
+      }
+
+      .progress-content-step-v2 {
         &.is-active {
           .section-title {
             opacity: 1;
@@ -466,6 +519,7 @@ body {
       }
     }
   }
+  }
 
   .footer-logos {
     border-top: 1px solid rgba(255, 255, 255, .1);
@@ -483,12 +537,9 @@ body {
       gap: 30px;
       align-items: center;
 
-      @media (min-width: 768px) {
-        justify-content: flex-end;
-      }
-
       @media (min-width: 992px) {
         gap: 65px;
+        justify-content: space-between;
       }
 
     }
@@ -902,7 +953,7 @@ body {
       }
     }
   }
-}
+
 
 @keyframes spin {
   from {
@@ -912,4 +963,15 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes letter-fade-in {
+  from {
+    transform: translateY(-120%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
 }

@@ -3,7 +3,7 @@ body.single-glossary {
        
         @media (min-width:992px) {
         .mainMenu {
-            /*
+            
             & > li.current_page_parent:not(.menu-item-object-glossary) {
                 > a {
                     // color: #fff;
@@ -12,28 +12,17 @@ body.single-glossary {
                     }
                 }
             }
-            */
+            
             & > li.menu-item-object-glossary > a {
                 color: $primary !important;
             }
-            /*
+            
             .sub-menu {
-                & > li.current_page_parent:not(.menu-item-object-glossary) {
-                    > a {
-                        color: #fff !important;
-                        background: rgba(241, 250, 249, 0.02) !important;
-                        &:hover, &:focus {
-                            color: $primary !important;
-                            background: rgba(241, 250, 249, 0.12) !important;
-                        }
-                    }
-                }
-                & > li.menu-item-object-glossary > a {
-                    color: #3FE0D0 !important;
-                    background: rgba(241, 250, 249, 0.12);
+                     & > li.menu-item-object-glossary > a {
+                    background: $gray50 !important;
+                    color: $dark700 !important;
                 }
             }
-            */
         }
         }
 
