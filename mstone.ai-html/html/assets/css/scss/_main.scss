@@ -3502,3 +3502,35 @@
         }
     }
 }
+
+.book-demo-post {
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 32, 69, 0.15);
+    background: #090A0C url('../images/img-post-book-demo-bg.svg') no-repeat bottom center;
+    color: $white;
+    margin-bottom: 48px;
+    @media (max-width: 992px) {
+        padding: 15px;
+    }
+    .icon {
+        margin-bottom: 24px;
+    }
+    .title {
+        font-weight: 500;
+        font-size: 24px;   
+        margin-bottom: 8px;     
+    }
+    .sort-info {
+        margin-bottom: 24px;
+        font-size: 16px;
+    }
+    .action {
+        margin-top: 24px;
+        .btn {
+            .btn-text {
+                padding: 0px 15px 0 70px;
+            }
+        }
+    }
+}
