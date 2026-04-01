@@ -1714,9 +1714,16 @@ h5,
         @include justify-content(space-between);
 
         @media (max-width: 575px) {
-            @include justify-content(unset);
-            gap: 30px 100px;
-            flex-wrap: wrap;
+            // @include justify-content(unset);
+            // gap: 30px 100px;
+            // flex-wrap: wrap;
+            display: block;
+            column-count: 2;
+            .footer-menu {
+                &:nth-child(3) {
+                    break-inside: avoid;
+                }
+            }
         }
     }
 
@@ -1724,11 +1731,12 @@ h5,
         @media (max-width: 575px) {
             &:last-child {
                 margin-top: 40px;
-                flex-basis: 100%;
+                // flex-basis: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
                 gap: 15px 20px;
+                column-span: all;
             }
         }
 
@@ -1744,7 +1752,6 @@ h5,
             &.menu-title  {
                 margin-bottom: 24px;
                 a {
-                    pointer-events: none;
                     font-weight: 500;
                     font-size: 16px;
                     color: $white;
