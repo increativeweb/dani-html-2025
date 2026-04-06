@@ -7,6 +7,8 @@
   --gray: #5b5b5b;
   --dark-gray: #292b2e;
 
+  --blue: #2B55E6;
+
   --purple: #7654fc;
   --purple-2: #b65aff;
   --purple-3: #aa80fd;
@@ -42,6 +44,27 @@
   font-family: Ppneuemontreal;
   src: url('../fonts/PPNeueMontreal-SemiBold.woff2')format("woff2");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap
+}
+@font-face {
+  font-family: Redaction;
+  src: url('../fonts/Redaction-mL8P5.woff')format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+@font-face {
+  font-family: Redaction Italic;
+  src: url('../fonts/Redaction10Italic-nRYrO.woff')format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap
+}
+@font-face {
+  font-family: Redaction Bold;
+  src: url('../fonts/Redaction20Bold-2ODWX.woff')format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap
 }

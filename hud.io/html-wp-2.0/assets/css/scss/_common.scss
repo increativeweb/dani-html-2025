@@ -69,7 +69,7 @@ body {
         background-size: 110%;
         z-index: -1;
     }
-
+    
     &:not(.home) {
         &::before {
             background-image: url(../images/page-bg.svg);
@@ -1306,6 +1306,10 @@ h5,
     &>* {
         color: var(--text-white) !important;
     }
+}
+
+.bg-blue {
+    background-color: var(--blue) !important;
 }
 
 .bg-lightgray {
