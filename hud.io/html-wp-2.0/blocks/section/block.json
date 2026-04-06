@@ -1,0 +1,35 @@
+{
+    "name": "acf/section",
+    "title": "Section",
+    "description": "A parent block that allows drag & drop of other ACF blocks.",
+    "category": "increativeweb-blocks",
+    "icon": "layout",
+    "keywords": [
+        "section",
+        "container",
+        "acf"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": true,
+        "innerBlocks": true,
+        "jsx": true,
+        "spacing": {
+            "padding": true,
+            "margin": true
+        }
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "_is_preview": "true",
+                "icw_preview": "preview.jpg"
+            }
+        }
+    }
+}

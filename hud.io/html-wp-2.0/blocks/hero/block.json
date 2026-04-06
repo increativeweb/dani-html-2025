@@ -1,0 +1,36 @@
+{
+    "name": "acf/hero",
+    "title": "Hero",
+    "description": "A custom home hero slider block.",
+    "style": "file:./style.css",
+    "viewScript": "file:./script.js",
+    "category": "increativeweb-blocks",
+    "icon": "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M19.667 0C22.0599 0.000175222 23.9998 1.94003 24 4.33301V19.667C23.9998 22.0599 22.0599 23.9998 19.667 24H4.33301C1.94003 23.9998 0.000175222 22.0599 0 19.667V4.33301C0.000175992 1.94003 1.94003 0.000175992 4.33301 0H19.667Z' fill='black'/><path d='M2 12H12' stroke='white'/><path d='M2 9H13' stroke='white'/><path d='M2 6H13' stroke='white'/><path d='M2 15H11' stroke='white'/><path d='M2 18H6' stroke='white'/><path d='M7 18H11' stroke='white'/><rect x='15' y='4' width='7' height='16' rx='1' fill='white'/></svg>",
+    "apiVersion": 2,
+    "keywords": [
+        "hero"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "supports": {
+        "reusable": true,
+        "align": false,
+        "anchor": true,
+        "color": false,
+        "customClassName": false,
+        "html": false,
+        "jsx": true,
+        "mode": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "_is_preview": "true",
+                "icw_preview": "preview.jpg"
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "name": "acf/modern",
+    "title": "Modern",
+    "description": "A custom Modern Media block.",
+    "style": "file:./style.css",
+    "category": "increativeweb-blocks",
+    "icon": "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M19.667 0C22.0599 0.000175222 23.9998 1.94003 24 4.33301V19.667C23.9998 22.0599 22.0599 23.9998 19.667 24H4.33301C1.94003 23.9998 0.000175222 22.0599 0 19.667V4.33301C0.000175992 1.94003 1.94003 0.000175992 4.33301 0H19.667Z' fill='black'/><rect width='8' height='8' rx='1' transform='matrix(-1 0 0 1 21 12)' fill='white'/><rect width='8' height='8' rx='1' transform='matrix(-1 0 0 1 11 12)' fill='white'/><rect width='18' height='6' rx='1' transform='matrix(-1 0 0 1 21 4)' fill='white'/></svg>",
+    "apiVersion": 2,
+    "keywords": [
+        "Modern",
+        "Modern Details"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "supports": {
+        "reusable": true,
+        "align": false,
+        "anchor": true,
+        "color": false,
+        "customClassName": false,
+        "html": false,
+        "jsx": true,
+        "mode": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "_is_preview": "true",
+                "icw_preview": "preview.jpg"
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "name": "acf/logos",
+    "title": "Logos",
+    "description": "A custom Logos block.",
+    "style": "file:./style.css",
+    "viewScript": "file:./script.js",
+    "category": "increativeweb-blocks",
+    "icon": "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M4.09091 0C1.83156 0 0 1.83156 0 4.09091V19.9091C0 22.1685 1.83156 24 4.09091 24H19.9091C22.1685 24 24 22.1685 24 19.9091V4.09091C24 1.83156 22.1685 0 19.9091 0H4.09091Z' fill='black'/><rect width='6' height='4' rx='1' transform='matrix(-1 0 0 1 8 10)' fill='white'/><rect width='6' height='4' rx='1' transform='matrix(-1 0 0 1 15 10)' fill='white'/><rect width='6' height='4' rx='1' transform='matrix(-1 0 0 1 22 10)' fill='white'/></svg>",
+    "apiVersion": 2,
+    "keywords": [
+        "Partners",
+        "Logo List",
+        "Logo Grid"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "supports": {
+        "reusable": true,
+        "align": false,
+        "anchor": true,
+        "color": false,
+        "customClassName": false,
+        "html": false,
+        "jsx": true,
+        "mode": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "_is_preview": "true",
+                "icw_preview": "preview.jpg"
+            }
+        }
+    }
+}
