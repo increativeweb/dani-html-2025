@@ -120,6 +120,19 @@ body ::selection {
     font-weight: 700;
 }
 
+.font-redaction {
+    font-family: $font-redaction;
+}
+.font-redactionItalic {
+    font-family: $font-redactionItalic;
+}
+.font-redactionBold {
+    font-family: $font-redactionBold;
+}
+.font-redaction35 {
+    font-family: $font-redaction35;
+}
+
 
 .h-large {
     // 72px
@@ -739,6 +752,12 @@ img {
     &.btn-pink {
         background-color: #F9BFF9 !important;
         border-color: #F9BFF9 !important;
+        color: var(--text-black) !important;
+
+    }
+    &.btn-orange {
+        background-color: #FF755A !important;
+        border-color: #FF755A !important;
         color: var(--text-black) !important;
 
     }

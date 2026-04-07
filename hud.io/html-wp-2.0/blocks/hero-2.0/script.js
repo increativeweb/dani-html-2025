@@ -33,3 +33,17 @@ if (jQuery('.hero-thumb-slider-20-block').length) {
     main.mount();
     thumbnails.mount();
 }
+window.addEventListener("scroll", function () {
+  const triggerSection = document.querySelector(".hero-thumb-slider-20-block");
+  const targetSection = document.querySelector(".acf-innerblocks-container");
+
+  if (!triggerSection || !targetSection) return;
+
+  const rect = triggerSection.getBoundingClientRect();
+
+  if (rect.top <= 100) {
+    targetSection.classList.add("position-relative");
+  } else {
+    targetSection.classList.remove("position-relative");
+  }
+});

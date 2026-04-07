@@ -23,6 +23,11 @@
   --success-green-light: #ecfdf3;
 }
 
+$font-redaction: Redaction;
+$font-redactionItalic: Redaction Italic;
+$font-redactionBold: Redaction Bold;
+$font-redaction35: Redaction35;
+
 /* Import Fonts */
 @font-face {
   font-family: Ppneuemontreal;
@@ -64,7 +69,12 @@
 @font-face {
   font-family: Redaction Bold;
   src: url('../fonts/Redaction20Bold-2ODWX.woff')format("woff");
-  font-weight: 700;
+  font-style: normal;
+  font-display: swap
+}
+@font-face {
+  font-family: Redaction35;
+  src: url('../fonts/Redaction35-BWXjw.woff')format("woff");
   font-style: normal;
   font-display: swap
 }
