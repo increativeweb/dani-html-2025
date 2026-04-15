@@ -99,3 +99,17 @@
         @include flex-wrap(wrap);
     }
 }
+.trusted-logo-20-section {
+    .logo-item {
+        a { 
+            font-size: 14px;
+            color: #0000FF;
+            .icon-arrow {
+                width: 7px;
+                height: 7px;
+            }
+
+        }
+
+    }
+}

@@ -1,44 +1,48 @@
 @import '../../assets/css/scss/mixins';
 .home-icw-sections {
-    &.with-img {
-        margin-top: -80px;
-        background-image: url('../../assets/images/img-hero-20-bg.jpg');
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-size: 100% 60%;
-    }
     .acf-innerblocks-container {
         position: sticky;
         top: 0;
         z-index: 1;
     }
 }
-.hero-20-section {
-    padding: 160px 0 40px;
+.hero-20-section {    
+    background-color: #F7F4EA;
+    padding-bottom: 6rem;
     .hero-title {
+        margin: 0 auto;
         .title {
-            font-family: Redaction;
-            font-size: 42px;
+            font-family: $font-libre;
+            font-size: 60px;
             margin-bottom: 40px;
-            .font-redactionBold {
-                font-size: 92px;
-                font-weight: 700;
-                color: #FFFFFF;
-                display: block;
-                line-height: 0.95;
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.3;
+            @media (max-width: 767px) {
+                font-size: 30px;
             }
-            .font-redactionItalic {
-                font-size: 92px;
-                color: #FF755A;
-                display: block;
-                line-height: 1.18;
+            i {
+                font-weight: 400;
             }
         }
         .sort-info {
-            font-size: 22px;
-            max-width: 800px;
+            font-weight: 500;
+            font-size: 18px;
+            color: #000000;
+            max-width: 870px;
             margin: 0 auto;
-            color: #DCDCF9;
+            line-height: 1.4;
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
+        }
+        .action {
+            margin-top: 40px;
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(center);
+            @include flex-wrap(wrap);
+            gap: 10px;
         }
     }
 }
@@ -47,13 +51,24 @@
     position: relative;
     .hero-slider-block {
         display: grid;
-        grid-template-columns: 240px auto;
+        grid-template-columns: 264px auto;
         gap: 20px;
+        background-image: url('../../assets/images/img-bg-slider.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 30px;
+        border-radius: 10px;
+        @media (max-width: 992px) {
+            grid-template-columns: 100%;
+            padding: 20px;
+        }
     }
     .hero-info-slider-block {
         background: #242426;
         border: 1px solid #3F3F3F;
-        border-radius: 30px;
+        border-radius: 10px;
+        overflow: hidden;
         .slide-thumb-info {
             display: flex;
             flex-direction: column;
@@ -63,57 +78,101 @@
             border-bottom: 1px solid #3F3F3F;
             min-height: 200px;
             overflow: hidden;
+            @media (max-width: 992px) {
+                padding: 20px;
+                border-bottom: 0;
+                border-right: 1px solid #3F3F3F;
+                min-height: 135px;
+                max-height: 135px;
+            }
             .number {
                 font-weight: 400;
                 font-size: 16px;
-                color: #FC8579;
-                letter-spacing: 3px;
+                color: #FFFFFF;
                 margin-bottom: 10px;
             }
             .title {
-                font-weight: 600;
+                font-weight: 700;
                 font-size: 16px;
                 color: #FFFFFF;
+                @include transition(0.3s, ease-in-out);
             }
             .sort-info {
                 margin-top: 5px;
                 font-weight: 500;
                 font-size: 14px;
                 color: #949494;
+                @include transition(0.3s, ease-in-out);
             }
         }
-        
+        @media (max-width: 992px) {
+            .splide {
+                height: 100%;
+                .splide__track {
+                    height: 100%;
+                }
+                .splide__list { 
+                    display: flex;
+                    align-items: stretch;
+                }
+            }
+        }
         .splide__slide {
             border: none !important;
+            @media (max-width: 992px) {  
+                flex: 0 0 auto;
+                transition: flex-basis 0.45s cubic-bezier(0.4, 0, 0.2, 1); 
+                .title, .sort-info {
+                    display: none;
+                }
+            }
             &.is-active {
+                @media (max-width: 992px) {
+                    .title, .sort-info {
+                        display: block;
+                    }
+                }
                 .slide-thumb-info {
                     background: #16161A;
                 }
             }
             &:first-child {
                 .slide-thumb-info {
-                    border-top-left-radius: 30px;
-                    border-top-right-radius: 30px;
+                    @media (min-width: 991px) {
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+                    @media (max-width: 992px) {
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                    }
                 }
             }
             &:last-child {
                 .slide-thumb-info {
                     border-bottom: none;
-                    border-bottom-left-radius: 30px;
-                    border-bottom-right-radius: 30px;
+                    border-right: none;
+                    @media (min-width: 991px) {
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
+                    @media (max-width: 992px) {
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
                 }
             }
         }
     }
     .hero-img-slider-block {
         padding: 10px;
-        background: #1D1D1F;
+        background: #101012;
         border: 1px solid #3F3F3F;
-        border-radius: 30px;
+        border-radius: 10px;
         .media-block {
             border: 1px solid #3F3F3F;
             filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
-            border-radius: 20px;
+            border-radius: 10px;
             height: 100%;
             img, video {
                 object-position: top left;

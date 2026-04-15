@@ -40,7 +40,7 @@ body {
     // background-color: var(--white);
     background-color: var(--black);
     color: var(--text-white);
-    font-family: 'Ppneuemontreal', Arial, sans-serif;
+    font-family: $font-geist;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
@@ -89,6 +89,12 @@ body {
             }
         }
     }
+    &.bg-lightyellow {
+        background: #F7F4EA;
+        &::before {
+            content: none;
+        }
+    }
 }
 
 body ::selection {
@@ -120,17 +126,11 @@ body ::selection {
     font-weight: 700;
 }
 
-.font-redaction {
-    font-family: $font-redaction;
+.font-geist {
+    font-family: $font-geist;
 }
-.font-redactionItalic {
-    font-family: $font-redactionItalic;
-}
-.font-redactionBold {
-    font-family: $font-redactionBold;
-}
-.font-redaction35 {
-    font-family: $font-redaction35;
+.font-libre {
+    font-family: $font-libre;
 }
 
 
@@ -669,11 +669,11 @@ img {
     @include border-radius(0.5rem);
     border: 0.1rem solid transparent;
     transition: background-color .2s;
-    min-height: 2.75rem;
-    min-width: 6.25rem;
+    min-height: 2.5rem;
+    min-width: 7.5rem;
     font-weight: 500;
     font-size: 1rem;
-    padding: .75rem 1.6rem;
+    padding: 0.5rem 1.4rem;
     line-height: 1;
     gap: 10px;
 
@@ -761,6 +761,21 @@ img {
         color: var(--text-black) !important;
 
     }
+    &.btn-blue {
+        background-color: var(--blue) !important;
+        border-color: var(--blue) !important;
+        color: var(--text-white) !important;
+    }
+    &.btn-outline-blue {
+        background-color: var(--white) !important;
+        border-color: var(--blue) !important;
+        color: var(--blue) !important;
+        &:hover, &:focus {
+            background-color: var(--blue) !important;
+            border-color: var(--blue) !important;
+            color: var(--text-white) !important;
+        }
+    }
 
     &.btn-white {
         color: var(--black) !important;
@@ -813,11 +828,22 @@ img {
             display: inline-block;
         }
 
+        &.btn-link-arrow-blue { 
+            .icon-arrow { 
+                background: url('../images/icons/icon-arrow.svg') no-repeat center center;
+            }
+        }
+
         &:hover,
         &:focus {
             .icon-arrow {
                 @include transform(rotate(45deg));
                 opacity: 0.75;
+            }
+            &.btn-link-arrow-blue { 
+                .icon-arrow { 
+                    @include transform(translateX(3px));
+                }
             }
         }
     }
@@ -1310,6 +1336,9 @@ h5,
 
 .text-purple3 {
     color: var(--purple-3) !important;
+}
+.text-blue {
+    color: var(--blue) !important;
 }
 
 
