@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const slides = thumbnails.Components.Elements.slides;
       const totalSlides = slides.length;
 
-      const smallWidth = 70;
+      const smallWidth = window.innerWidth < 767 ? 40 : 70;
       const container = document.querySelector("#thumb-info-slider");
       const containerWidth = container.offsetWidth;
 
