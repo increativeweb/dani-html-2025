@@ -605,6 +605,9 @@ img {
     }
 }
 
+.container-xl {
+    max-width: 92.25rem;
+}
 .container-xsmall {
     max-width: calc(43.75rem + (1.5rem * 0.5));
 }
@@ -642,6 +645,10 @@ img {
 .g-15 {
     --bs-gutter-y: 30px;
     --bs-gutter-x: 30px;
+}
+.g-20 {
+    --bs-gutter-y: 20px;
+    --bs-gutter-x: 20px;
 }
 
 // Border Radius CSS
@@ -778,7 +785,7 @@ img {
     }
 
     &.btn-white {
-        color: var(--black) !important;
+        color: var(--blue) !important;
         border-color: var(--white) !important;
         background-color: var(--white) !important;
 

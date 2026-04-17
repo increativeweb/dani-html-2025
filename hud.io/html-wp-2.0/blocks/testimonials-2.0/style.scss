@@ -1,0 +1,159 @@
+@import '../../assets/css/scss/mixins';
+
+.theme-section.icw-sections .acf-innerblocks-container {
+    overflow: hidden;
+}
+
+.testimonial-20-section {
+
+    .section-title {
+        .title {
+            font-family: $font-libre;
+            font-size: 3.75rem;
+            color: var(--blue);
+            font-weight: 400;
+            line-height: 1.3;
+            letter-spacing: unset;
+            margin-bottom: 10px;
+            strong {
+                font-weight: 700;
+            }
+            @media (max-width: 992px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 767px) {
+                font-size: 1.75rem;
+            }
+        }
+        .sort-info {
+            font-weight: 500;
+            font-size: 18px;
+            color: #000000;
+            @media (max-width: 992px) {
+                font-size: 1rem;
+            }
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .testimonial-20-splide { 
+        @media (max-width: 1440px) {
+            margin: 0 -12px;
+        }
+        @media (max-width: 992px) {
+            margin: 0 -15px;
+        }
+        height: 100%;
+        .splide__track {
+            height: 100%;
+        }
+        .splide__list { 
+            display: flex;
+            align-items: stretch;
+        }
+        .splide__slide {
+            padding: 0 10px
+        }
+    }
+
+    .testimonial-card {
+        @include flexbox;
+        padding: 10px;
+        gap: 50px;
+        background: #0000FF;
+        @include border-radius(10px);
+        color: #ffffff;
+        width: 100%;
+        height: 100%;
+        @media (max-width: 1200px) {
+            gap: 20px;
+        }
+        @media (max-width: 767px) {
+            @include flex-direction(column);
+        }
+        .card-body {
+            padding: 20px;
+            padding-right: 0;
+            @include flexbox;
+            @include flex-direction(column);
+            @include align-items(flex-start);
+            @media (max-width: 1200px) {
+                padding: 10px;
+            }
+            .client-logo {                
+                margin-bottom: 30px;
+                @media (max-width: 767px) {
+                    margin-bottom: 20px;
+                }
+                img {
+                    max-height: 24px;
+                    @media (max-width: 767px) {
+                        max-height: 32px;
+                    }
+                }
+            }
+            .sort-info {
+                font-weight: 500;
+                font-size: 14px;
+                flex: 1 1 auto;
+                margin-bottom: 15px;
+                @media (max-width: 767px) {
+                    margin-bottom: 20px;
+                    font-size: 1rem;
+                }
+            }
+            .client-info-block {
+                @include flexbox;
+                @include align-items(center);
+                gap: 15px;
+                @media (max-width: 1440px) {
+                    @include flex-wrap(wrap);
+                    @include align-items(flex-start);
+                }
+                @media (max-width: 767px) {
+                    gap: 20px;
+                    @include flex-direction(column);
+                }
+                .user-info {
+                    .name {
+                        font-weight: 700;
+                        font-size: 14px;
+                        margin-bottom: 2px;
+                    }
+                    .user-position {
+                        font-weight: 400;
+                        font-size: 12px;
+                    }
+                }
+                .action {
+                    .btn {
+                        font-size: 14px;
+                        padding: 0.5rem 1rem;
+                    }
+                }
+            }
+        }
+        .card-img {
+            @include border-radius(10px);
+            img {                
+                @include border-radius(10px);
+                height: 100%;
+                max-width: 220px;
+                object-fit: cover;
+                object-position: top center;
+                @media (max-width: 1200px) {
+                    max-width: 180px;
+                }
+                @media (max-width: 767px) {
+                    max-width: 100%;
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+    }
+
+  
+}

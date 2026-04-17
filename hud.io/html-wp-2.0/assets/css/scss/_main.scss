@@ -414,6 +414,25 @@
         }
     }
 }
+.cta-20-section {
+    .section-title.text-center {
+        h2.title {
+            font-family: $font-libre;
+            font-size: 3.75rem;
+            letter-spacing: 0;
+            margin-bottom: 40px;
+            @media (max-width: 992px) {
+                font-size: 3rem !important;
+            }
+            @media (max-width: 767px) {
+                font-size: 1.75rem !important;
+            }
+        }
+    }
+    .video-player-block {
+        max-width: 74.375rem;
+    }
+}
 
 // Content Section
 .content-section {

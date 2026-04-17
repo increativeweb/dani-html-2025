@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth > 991) return;
 
       const slides = thumbnails.Components.Elements.slides;
+      console.log(slides);
+      
       const totalSlides = slides.length;
 
       const smallWidth = window.innerWidth < 767 ? 40 : 70;
@@ -52,14 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
       const activeWidth = containerWidth - totalSmallWidth;
 
       slides.forEach((slide) => {
+        const title = slide.querySelector('.title');
+        const info = slide.querySelector('.sort-info');
+
         if (slide.classList.contains("is-active")) {
-
           slide.style.flexBasis = activeWidth + "px";
-
+          setTimeout(() => {
+            if (title) title.style.display = "block";
+            if (info) info.style.display = "block";
+          }, 300);
         } else {
-
           slide.style.flexBasis = smallWidth + "px";
-
+          setTimeout(() => {
+            if (title) title.style.display = "none";
+            if (info) info.style.display = "none";
+          }, 10);
         }
       });
     }

@@ -1,0 +1,36 @@
+{
+    "name": "acf/testimonials",
+    "title": "Testimonials",
+    "description": "A custom Testimonials block.",
+    "style": "file:./style-v6.css",
+    "viewScript": "file:./script-v2.js",
+    "category": "increativeweb-blocks",
+    "icon": "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M19.667 0C22.0599 0.000175222 23.9998 1.94003 24 4.33301V19.667C23.9998 22.0599 22.0599 23.9998 19.667 24H4.33301C1.94003 23.9998 0.000175222 22.0599 0 19.667V4.33301C0.000175992 1.94003 1.94003 0.000175992 4.33301 0H19.667Z' fill='black'/><rect width='6' height='8' rx='1' transform='matrix(-1 0 0 1 22 10)' fill='white'/><rect width='6' height='8' rx='1' transform='matrix(-1 0 0 1 15 10)' fill='white'/><rect width='6' height='8' rx='1' transform='matrix(-1 0 0 1 8 10)' fill='white'/><path d='M4 4H20' stroke='white'/><path d='M6 7H18' stroke='white'/><path d='M13.8954 20.6545L14.2002 20.3496C14.2002 20.3496 14.0144 20.1638 13.8954 20.0448' stroke='#212529' stroke-width='0.1' stroke-linecap='round' stroke-linejoin='round'/><path d='M10.1046 20.6545L9.7998 20.3496C9.7998 20.3496 9.98559 20.1638 10.1046 20.0448' stroke='#212529' stroke-width='0.1' stroke-linecap='round' stroke-linejoin='round'/></svg>",
+    "apiVersion": 2,
+    "keywords": [
+        "testimonials"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "supports": {
+        "reusable": true,
+        "align": false,
+        "anchor": true,
+        "color": false,
+        "customClassName": false,
+        "html": false,
+        "jsx": true,
+        "mode": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "_is_preview": "true",
+                "icw_preview": "preview.jpg"
+            }
+        }
+    }
+}

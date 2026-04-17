@@ -2,11 +2,20 @@
 
 .info-card-section {
     .section-title {
+        @media (max-width: 992px) {
+            text-align: center;
+        }
         .title {
             font-family: $font-libre;
             font-weight: 700;
-            font-size: 60px;
+            font-size: 3.75rem;
             color: #0000FF;
+            @media (max-width: 992px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 767px) {
+                font-size: 1.75rem;
+            }
             span {
                 text-decoration: line-through;
             }
@@ -15,28 +24,40 @@
     .card-content-block {
         .card-info-content {
             color: #000000;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 400;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
+            @media (max-width: 992px) {
+                text-align: center;
+            }
+            @media (max-width: 767px) {
+                font-size: 0.875rem;
+            }
             strong {
                 font-weight: 700;
             }
         }
     }
     .info-card {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        gap: 20px;
+        @include flexbox;
+        @include align-items(flex-start);
+        @include flex-direction(column);
+        padding: 1.25rem;
+        gap: 1.25rem;
         background: #FFFFFF;
-        border: 1px solid #0000FF;
-        border-radius: 10px;
+        border: 0.063rem solid #0000FF;
+        border-radius: 0.625rem;
         height: 100%;
+        @media (max-width: 767px) {
+            @include flex-direction(row);
+            gap: 1.563rem;
+        }
         .card-img {
+            width: auto;
+            min-width: 2rem;
             img {
-                width: 32px;
-                height: 32px;
+                width: 2rem;
+                height: 2rem;
                 flex: none;
             }
         }
@@ -45,17 +66,25 @@
             color: #0000FF;
             .card-info {
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 1.4;
             }
         }
         &.with-bg {
-            padding: 30px;
+            padding: 1.875rem;
             background: #0000FF;
+            @media (max-width: 992px) and (min-width: 767px) {
+                padding: 1.25rem;
+            }
+            @media (max-width: 767px) {
+                @include flex-direction(column);
+                gap: 1.25rem;
+            }
             .card-img {
+                min-width: 2.5rem;
                 img {
-                    width: 40px;
-                    height: 40px;
+                    width: 2.5rem;
+                    height: 2.5rem;
                     flex: none;
                 }
             }
@@ -63,12 +92,15 @@
                 color: #FFFFFF;
                 .tag-line {
                     font-weight: 400;
-                    font-size: 14px;
+                    font-size: 0.875rem;
                     text-transform: uppercase;
-                    margin-bottom: 10px;
+                    margin-bottom: 0.625rem;
                 }
                 .card-info {
-                    font-size: 22px;
+                    font-size: 1.375rem;
+                    @media (max-width: 992px) {
+                        font-size: 1.125rem;
+                    }
                 }
             }
         }
