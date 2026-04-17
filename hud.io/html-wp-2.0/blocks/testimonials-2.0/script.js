@@ -10,6 +10,10 @@ if (jQuery('.testimonial-20-splide').length) {
         },
         arrows: false,
         pagination: false,
+        autoplay: true,
+        interval: 8000,
+        pauseOnHover: true,
+        pauseOnFocus: true,
         breakpoints: {
             992: {
                 perPage: 1,   
@@ -20,6 +24,7 @@ if (jQuery('.testimonial-20-splide').length) {
             },
             767: {
                 perPage: 2,   
+                autoplay: false, 
                 padding: {
                     left: '30px', 
                     right: '30px',
