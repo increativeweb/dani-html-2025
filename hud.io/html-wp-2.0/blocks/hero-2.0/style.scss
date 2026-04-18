@@ -71,7 +71,7 @@
         background-position: center center;
         padding: 1.875rem;
         border-radius: 0.625rem;
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             grid-template-columns: 100%;
             gap: 1.25rem;
             padding: 1.25rem;
@@ -95,7 +95,7 @@
             border-bottom: 0.063rem solid #3F3F3F;
             min-height: 12.5rem;
             overflow: hidden;
-            @media (max-width: 992px) {
+            @media (max-width: 1200px) {
                 padding: 1.25rem;
                 border-bottom: 0;
                 border-right: 0.063rem solid #3F3F3F;
@@ -136,7 +136,7 @@
                 }
             }
         }
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             .splide {
                 height: 100%;
                 .splide__track {
@@ -150,7 +150,7 @@
         }
         .splide__slide {
             border: none !important;
-            @media (max-width: 992px) {  
+            @media (max-width: 1200px) {  
                 flex: 0 0 auto;
                 transition: flex-basis 0.45s cubic-bezier(0.4, 0, 0.2, 1); 
                 .title, .sort-info {
@@ -158,7 +158,7 @@
                 }
             }
             &.is-active {
-                @media (max-width: 992px) {
+                @media (max-width: 1200px) {
                     .title, .sort-info {
                         display: block;
                     }
@@ -169,11 +169,11 @@
             }
             &:first-child {
                 .slide-thumb-info {
-                    @media (min-width: 991px) {
+                    @media (min-width: 1199px) {
                         border-top-left-radius: 0.625rem;
                         border-top-right-radius: 0.625rem;
                     }
-                    @media (max-width: 992px) {
+                    @media (max-width: 1200px) {
                         border-top-left-radius: 0.625rem;
                         border-bottom-left-radius: 0.625rem;
                     }
@@ -183,11 +183,11 @@
                 .slide-thumb-info {
                     border-bottom: none;
                     border-right: none;
-                    @media (min-width: 991px) {
+                    @media (min-width: 1199px) {
                         border-bottom-left-radius: 0.625rem;
                         border-bottom-right-radius: 0.625rem;
                     }
-                    @media (max-width: 992px) {
+                    @media (max-width: 1200px) {
                         border-top-right-radius: 0.625rem;
                         border-bottom-right-radius: 0.625rem;
                     }
@@ -196,16 +196,17 @@
         }
     }
     .hero-img-slider-block {
-        padding: 0.625rem;
         background: #101012;
-        border: 0.063rem solid #3F3F3F;
         border-radius: 0.625rem;
         .media-block {
             border: 0.063rem solid #3F3F3F;
             border-radius: 0.625rem;
             height: 100%;
             img, video {
+                object-fit: contain;
                 object-position: top left;
+                width: 100%;
+                height: 100%;
             }
         }
         .splide {
