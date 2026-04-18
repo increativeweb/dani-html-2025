@@ -8,7 +8,7 @@ if (jQuery('.testimonial-20-splide').length) {
             left: '50px', 
             right: '50px',
         },
-        arrows: true,
+        arrows: false,
         pagination: true,
         autoplay: true,
         interval: 8000,
