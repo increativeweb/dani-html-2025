@@ -203,7 +203,10 @@
                 background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="rgb(0 0 0)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4 7 4 4 4-4"></path></svg>') no-repeat center center;
             }
         }
-
+        .btn-link-arrow .icon-arrow {
+            -webkit-filter: invert(1);
+            filter: invert(1);
+        }
         .navbar-toggler {
             span {
                 background-color: var(--black);
