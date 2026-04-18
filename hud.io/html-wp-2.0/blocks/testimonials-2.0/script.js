@@ -8,8 +8,8 @@ if (jQuery('.testimonial-20-splide').length) {
             left: '50px', 
             right: '50px',
         },
-        arrows: false,
-        pagination: false,
+        arrows: true,
+        pagination: true,
         autoplay: true,
         interval: 8000,
         pauseOnHover: true,
@@ -26,8 +26,8 @@ if (jQuery('.testimonial-20-splide').length) {
                 perPage: 2,   
                 autoplay: false, 
                 padding: {
-                    left: '30px', 
-                    right: '30px',
+                    left: '40px', 
+                    right: '0px',
                 },  
             },
             575: {

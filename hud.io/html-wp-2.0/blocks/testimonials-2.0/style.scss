@@ -5,7 +5,15 @@
 }
 
 .testimonial-20-section {
-
+    .container {
+        max-width: 91rem;
+        @media (max-width: 1500px) {
+            max-width: 82rem;
+        }
+        @media (max-width: 1200px) {
+            max-width: 60rem;
+        }
+    }
     .section-title {
         .title {
             font-family: $font-libre;
@@ -38,12 +46,9 @@
         }
     }
 
-    .testimonial-20-splide { 
-        @media (max-width: 1440px) {
-            margin: 0 -0.75rem;
-        }
+    .testimonial-20-splide {         
         @media (max-width: 992px) {
-            margin: 0 -0.938rem;
+            margin: 0 -1.25rem;
         }
         height: 100%;
         .splide__track {
@@ -55,6 +60,31 @@
         }
         .splide__slide {
             padding: 0 0.625rem
+        }
+        .splide__pagination {
+            .splide__pagination__page {
+                background: rgba(#0000FF, 0.4);
+                border-color: rgba(#0000FF, 0.4);
+                &.is-active {
+                    background: var(--blue);
+                    border-color: var(--blue);
+                }
+            }
+        }
+        .splide__arrows {
+            .splide__arrow {
+                bottom: auto;
+                top: -40px;
+                background: url('data:image/svg+xml,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.516 1.58984C6.49457 1.58984 1.59006 6.49436 1.59006 12.5157C1.59006 18.5371 6.49457 23.4416 12.516 23.4416C18.5373 23.4416 23.4419 18.5371 23.4419 12.5157C23.4419 6.49436 18.5373 1.58984 12.516 1.58984ZM11.1077 17.6631L9.55382 16.1092L13.1472 12.5157L9.55382 8.92234L11.1077 7.36843L16.255 12.5157L11.1077 17.6631Z" fill="rgb(0, 0, 255)"></path></svg>') no-repeat center center;
+                &--prev {
+                    left: auto;
+                    right: 40px;
+                }
+                &--next {
+                    left: auto;
+                    right: 0;
+                }
+            }
         }
     }
 
@@ -81,6 +111,9 @@
             @include align-items(flex-start);
             @media (max-width: 1200px) {
                 padding: 0.625rem;
+            }
+            @media (max-width: 767px) {
+                padding: 1.25rem;
             }
             .client-logo {                
                 margin-bottom: 1.875rem;
@@ -121,6 +154,7 @@
                         font-weight: 700;
                         font-size: 0.875rem;
                         margin-bottom: 0.125rem;
+                        color: #ffffff;
                     }
                     .user-position {
                         font-weight: 400;

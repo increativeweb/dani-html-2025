@@ -202,6 +202,9 @@ if ($('.media-block video').length) {
         if (window.scrollY <= 1) {
             navbar.classList.remove("navbar--solid");
             applyTheme("dark"); // assume hero is dark unless first section is light
+            if(document.querySelector("body.home-20")) {
+                applyTheme("light");
+            }
             return;
         }
 

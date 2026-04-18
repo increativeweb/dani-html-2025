@@ -157,10 +157,26 @@
     }
 }
 .main-footer-20 {
-    padding-bottom: 30px;
+    padding: 0;
+    padding-bottom: 30px; 
+    @media (max-width: 992px) {
+        padding-bottom: 10px; 
+    }
+    .container {
+        max-width: 91rem;
+        @media (max-width: 1500px) {
+            max-width: 82rem;
+        }
+        @media (max-width: 1200px) {
+            max-width: 60rem;
+        }
+        @media (max-width: 992px) {
+            padding: 0 10px;
+        }
+    }
     .footer-wrapper {
         padding: 200px 30px 30px;
-        background: url('../images/img-footer-bg.png') no-repeat left top;
+        background: url('../images/img-footer-bg.jpg') no-repeat left top;
         @include border-radius(10px);
         @media (max-width: 992px) {
             padding: 70px 30px 30px;
@@ -171,10 +187,11 @@
         }
         .footer-info-block {
             @include flexbox;
-            @include align-items(flex-start);
+            @include align-items(flex-end);
             gap: 50px;
             @media (max-width: 1200px) {
                 @include flex-direction(column);
+                @include align-items(flex-start);
             }
             .footer-logo {
                 margin-bottom: 0;
@@ -211,7 +228,7 @@
                 @include justify-content(space-between);
                 @include flex-wrap(wrap);
                 height: auto;
-                gap: 30px;
+                gap: 1.25rem;
             }
             li {
                 @media (max-width: 575px) {
@@ -232,7 +249,6 @@
                             font-size: 14px;
                             &:hover, &:focus {
                                 color: var(--black);
-                                text-decoration: underline;
                             }
                         }
                     }
@@ -244,8 +260,8 @@
             @include align-items(center);
             border-top: 1px dashed #0000FF;
             gap: 15px;
-            padding-top: 20px;
-            margin-top: 20px;
+            padding-top: 25px;
+            margin-top: 25px;
             @media (max-width: 767px) {
                 @include flex-wrap(wrap);
             }
@@ -255,6 +271,13 @@
                 }
                 .social-list {
                     gap: 8px;
+                    @media (max-width: 767px) {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    li {
+                        line-height: 0.7;
+                    }
                     a {
                         svg {
                             width: 16px;

@@ -586,8 +586,8 @@ img {
 .container {
     @media (max-width: 992px) {
         max-width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
     }
 }
 
@@ -605,9 +605,6 @@ img {
     }
 }
 
-.container-xl {
-    max-width: 92.25rem;
-}
 .container-xsmall {
     max-width: calc(43.75rem + (1.5rem * 0.5));
 }
@@ -615,6 +612,9 @@ img {
 .container-theme {
     max-width: 75.938rem;
     /* 1215px */
+    @media (max-width: 1200px) {
+        max-width: 58rem;
+    }
 }
 
 
@@ -680,7 +680,7 @@ img {
     min-width: 7.5rem;
     font-weight: 500;
     font-size: 1rem;
-    padding: 0.5rem 1.4rem;
+    padding: 0.5rem 1.3rem;
     line-height: 1;
     gap: 10px;
 
@@ -1054,13 +1054,17 @@ img {
             @include box-shadow(0 3px 12px rgba(0, 0, 0, 0.25));
 
             svg {
-                width: 60px;
-                height: 60px;
+                width: 4.75rem;
+                height: 4.75rem;
                 flex: none;
                 @include border-radius(50%);
                 @include transition(0.3s, ease-in-out);
                 @include transform(scale(1));
                 z-index: 2;
+                @media (max-width: 767px) {
+                    width: 3.625rem;
+                    height: 3.625rem;
+                }
             }
 
             &.d-hide {
