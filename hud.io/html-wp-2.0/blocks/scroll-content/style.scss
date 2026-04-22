@@ -55,11 +55,41 @@
 
         .media {
             margin-top: 1.25rem;
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+            border-radius: 10px;
+            .bg-img {
+                position: absolute;
+                inset: 0;
+                overflow: hidden;
+                z-index: -1;   
+                .bg-inner {
+                    position: absolute;
+                    background-image: var(--bg-img);
+                    left: 0;
+                    right: 0;
+                    top: -30%;  
+                    bottom: -30%;
+                    background-size: cover;
+                    background-position: center;
+                    will-change: transform;
+                }
+            }
 
             img {
-                border-radius: 0.625;
+                border-radius: 0.625rem;
                 width: 100%;
                 height: auto;
+            }
+        }
+        &:first-child {
+            .media {
+                img {
+                    margin-left: -22px;
+                    max-width: calc(100% + 25px) !important;
+                    width: auto !important;
+                }
             }
         }
     }
