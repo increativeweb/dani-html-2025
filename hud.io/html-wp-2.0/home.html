@@ -40,8 +40,6 @@
     <link rel='stylesheet' href='blocks/info-card/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='blocks/process/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='blocks/testimonials-2.0/style.css' type='text/css' media='all' />
-
-    <meta name="generator" content="WP Rocket 3.21.0.1" data-wpr-features="wpr_lazyload_images wpr_desktop" />
 </head>
 
 <body class="home home-20 page bg-lightyellow light">
@@ -71,8 +69,8 @@
     </header>
     <main id="main-content" class="main-content-wrapper">
         
-        <div data-theme="light" class="theme-section icw-sections home-icw-sections p-0 gs-is-light is-light">
-            <div data-rocket-location-hash="c9dc1e3e57a10b55e55c46dc5c1d5228" class="acf-innerblocks-container bg-transprent">
+        <div data-theme="light" class="theme-section icw-sections home-icw-sections icw-hero-sticky-section pt-0 pb-medium gs-is-light is-light">
+            <div class="acf-innerblocks-container bg-transprent">
                 <section data-theme="light" class="theme-section hero-section hero-20-section m-pb-medium gs-is-dark is-dark">
                     <div class="container">
                         <div class="row g-xl-5">
@@ -92,7 +90,7 @@
                     </div>
                 </section>
                 <section data-theme="dark" class="theme-section trusted-logo-section trusted-logo-20-section pt-0 pb-0 gs-is-dark trusted-logo-slider-full">
-                    <div data-rocket-location-hash="c2b2a1461d8b94e639cd80a05325878c" class="container">
+                    <div class="container">
                         <div class="section-title text-left mb-0"></div>
                         <div class="splide splide-js logo-slider slide-mask" data-desktop-perpage="7" data-autoscroll="1">
                             <div class="splide__track">
@@ -166,98 +164,144 @@
                     </div>
                 </section>
             </div>
-            <section class="theme-section hero-thumb-slider-20-block is-light pt-medium">
-                <div class="container">
-                    <div class="hero-slider-block">
-                        <div class="hero-info-slider-block">
-                            <div class="splide" id="thumb-info-slider">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide">
-                                            <div class="slide-thumb-info">
-                                                <div class="info">
-                                                    <div class="number">[1]</div>
-                                                    <h2 class="title">Install in 10 seconds</h2>
-                                                    <div class="sort-info">One line, one time. <br>No configuration or maintenance</div>
-                                                </div>
+        </div>
+        <section class="theme-section hero-thumb-slider-20-block pt-0 is-light">
+            <div class="container">
+                <div class="hero-slider-block">
+                    <div class="hero-info-slider-block">
+                        <div class="splide" id="thumb-info-slider">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="slide-thumb-info">
+                                            <div class="info">
+                                                <div class="number">[1]</div>
+                                                <h2 class="title">Install in 10 seconds</h2>
+                                                <div class="sort-info">One line, one time. <br>No configuration or maintenance</div>
                                             </div>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <div class="slide-thumb-info">
-                                                <div class="info">
-                                                    <div class="number">[2]</div>
-                                                    <h2 class="title">Detect code-level issues</h2>
-                                                    <div class="sort-info">Alerts with the specific root cause in the code</div>
-                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="slide-thumb-info">
+                                            <div class="info">
+                                                <div class="number">[2]</div>
+                                                <h2 class="title">Detect code-level issues</h2>
+                                                <div class="sort-info">Alerts with the specific root cause in the code</div>
                                             </div>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <div class="slide-thumb-info">
-                                                <div class="info">
-                                                    <div class="number">[3]</div>
-                                                    <h2 class="title">Deep forensic context</h2>
-                                                    <div class="sort-info">For the exact case that happened. <br>Ready for AI consumption.</div>
-                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="slide-thumb-info">
+                                            <div class="info">
+                                                <div class="number">[3]</div>
+                                                <h2 class="title">Deep forensic context</h2>
+                                                <div class="sort-info">For the exact case that happened. <br>Ready for AI consumption.</div>
                                             </div>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <div class="slide-thumb-info">
-                                                <div class="info">
-                                                    <div class="number">[4]</div>
-                                                    <h2 class="title">Auto-generated fixes</h2>
-                                                    <div class="sort-info">Impact and risk analysis → safe PR</div>
-                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="slide-thumb-info">
+                                            <div class="info">
+                                                <div class="number">[4]</div>
+                                                <h2 class="title">Auto-generated fixes</h2>
+                                                <div class="sort-info">Impact and risk analysis → safe PR</div>
                                             </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="hero-img-slider-block">
-                            <div class="splide" id="hero-img-slider">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide" data-splide-html-video="uploads/video-quickly-solve-production-issues-with-ai.mp4">
-                                            <div class="media-block">
-                                                <!-- <lottie-player class="is-hover-play" src="uploads/lottie/data-3.json" background="transparent" speed="2"></lottie-player> -->
-                                                <video muted="" playsinline="" poster="uploads/video-quickly-solve-production-issues-with-ai-poster.jpg" controlslist="nodownload" oncontextmenu="return false;">
-                                                    <source src="uploads/video-quickly-solve-production-issues-with-ai.mp4" type="video/mp4">
-                                                    Sorry, your browser doesn't support embedded videos.
-                                                </video>
-                                            </div>
-                                        </li>
-                                        <li class="splide__slide" data-splide-html-video="uploads/video-automatic-production-issue.mp4">
-                                            <div class="media-block">
-                                                <video muted="" playsinline="" poster="uploads/video-automatic-production-issue-poster.jpg" controlslist="nodownload" oncontextmenu="return false;">
-                                                    <source src="uploads/video-automatic-production-issue.mp4" type="video/mp4">
-                                                    Sorry, your browser doesn't support embedded videos.
-                                                </video>
-                                            </div>
-                                        </li>
-                                        <li class="splide__slide" data-splide-html-video="uploads/video-understand-code-behavior.mp4">
-                                            <div class="media-block">
-                                                <video muted="" playsinline="" poster="uploads/video-understand-code-behavior-poster.jpg" controlslist="nodownload" oncontextmenu="return false;">
-                                                    <source src="uploads/video-understand-code-behavior.mp4" type="video/mp4">
-                                                    Sorry, your browser doesn't support embedded videos.
-                                                </video>
-                                            </div>
-                                        </li>
-                                        <li class="splide__slide" data-splide-html-video="uploads/video-automatic-production-issue.mp4">
-                                            <div class="media-block">
-                                                <video muted="" playsinline="" poster="uploads/video-automatic-production-issue-poster.jpg" controlslist="nodownload" oncontextmenu="return false;">
-                                                    <source src="uploads/video-automatic-production-issue.mp4" type="video/mp4">
-                                                    Sorry, your browser doesn't support embedded videos.
-                                                </video>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class="hero-img-slider-block">
+                        <div class="splide" id="hero-img-slider">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide" data-splide-html-video="uploads/video-quickly-solve-production-issues-with-ai.mp4">
+                                        <div class="media-block">
+                                            <!-- <lottie-player class="is-hover-play" src="uploads/lottie/data-3.json" background="transparent" speed="2"></lottie-player> -->
+                                            <video muted="" playsinline="" poster="uploads/video-quickly-solve-production-issues-with-ai-poster.jpg" controlslist="nodownload" oncontextmenu="return false;">
+                                                <source src="uploads/video-install-seconds.mp4" type="video/mp4">
+                                                Sorry, your browser doesn't support embedded videos.
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide" data-splide-html-video="uploads/video-automatic-production-issue.mp4">
+                                        <div class="media-block">
+                                            <video muted="" playsinline="" poster="uploads/video-automatic-production-issue-poster.jpg" controlslist="nodownload" oncontextmenu="return false;">
+                                                <source src="uploads/video-detect-code-level-issues.mp4" type="video/mp4">
+                                                Sorry, your browser doesn't support embedded videos.
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide" data-splide-html-video="uploads/video-understand-code-behavior.mp4">
+                                        <div class="media-block">
+                                            <video muted="" playsinline="" poster="uploads/video-understand-code-behavior-poster.jpg" controlslist="nodownload" oncontextmenu="return false;">
+                                                <source src="uploads/video-deep-forensic-context.mp4" type="video/mp4">
+                                                Sorry, your browser doesn't support embedded videos.
+                                            </video>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide" data-splide-html-video="uploads/video-automatic-production-issue.mp4">
+                                        <div class="media-block">
+                                            <video muted="" playsinline="" poster="uploads/video-automatic-production-issue-poster.jpg" controlslist="nodownload" oncontextmenu="return false;">
+                                                <source src="uploads/video-auto-generated-fixes.mp4" type="video/mp4">
+                                                Sorry, your browser doesn't support embedded videos.
+                                            </video>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        <link rel='stylesheet' href='blocks/scroll-content/style.css' type='text/css' media='all' />
+        <section data-theme="light" class="theme-section scroll-content-sticky-section bg-lightyellow default gs-is-light is-light sections-container-theme">       
+            <div class="container">
+                <div class="row g-4 gx-35 row-gap">
+                    <div class="col-title col-md-6 col-lg-6">
+                <div class="section-title text-left"><div class="tag-line">Why Hud?</div><h2 class="title ">Observability was built for humans. Runtime intelligence was built for <span class="text-blue text-nowrap">coding agents.</span></h2><div class="sort-info"><p class="d-flex align-items-center"><span class="text-nowrap">Hud’s Solution</span> <svg class="ms-4 d-none d-md-block" width="330" height="15" viewBox="0 0 330 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M329.707 8.07112C330.098 7.6806 330.098 7.04743 329.707 6.65691L323.343 0.292946C322.953 -0.0975785 322.319 -0.0975785 321.929 0.292946C321.538 0.68347 321.538 1.31664 321.929 1.70716L327.586 7.36401L321.929 13.0209C321.538 13.4114 321.538 14.0446 321.929 14.4351C322.319 14.8256 322.953 14.8256 323.343 14.4351L329.707 8.07112ZM0 7.36401V8.36401H329V7.36401V6.36401H0V7.36401Z" fill="black"></path>
+            </svg></p>
+            </div></div>		</div>
+                    <div class="col-info col-md-6 col-lg-6">
+                        <div class="scroll-content">
+                            <div class="scroll-content-block">
+                                <h3>Hud runs with the entire codebase</h3>
+                                <div class="sort-info">
+                                    Runs with the entire codebase in production, no configuration needed
+                                </div>
+                                <div class="media">
+                                    <img decoding="async" src="http://hud.local/wp-content/uploads/2026/04/img-hud-sends-context-agents.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="scroll-content-block">
+                                <h3>Hud runs with the entire codebase</h3>
+                                <div class="sort-info">
+                                    Runs with the entire codebase in production, no configuration needed
+                                </div>
+                                <div class="media">
+                                    <img decoding="async" src="http://hud.local/wp-content/uploads/2026/04/img-hud-sends-context-agents.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="scroll-content-block">
+                                <h3>Hud runs with the entire codebase</h3>
+                                <div class="sort-info">
+                                    Runs with the entire codebase in production, no configuration needed
+                                </div>
+                                <div class="media">
+                                    <img decoding="async" src="http://hud.local/wp-content/uploads/2026/04/img-hud-sends-context-agents.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                </div>  
+            </div>
+        </section>
 
         <section data-theme="light" class="theme-section morden-card-20-section default gs-is-light m-pt-15">
             <div class="container container-theme">
@@ -425,7 +469,7 @@
 
 
         <div data-theme="dark" class="theme-section icw-sections bg-black p-medium default pb-0 m-pb-15 m-p-15 gs-is-dark is-dark">
-            <div data-rocket-location-hash="c9dc1e3e57a10b55e55c46dc5c1d5228" class="acf-innerblocks-container">
+            <div class="acf-innerblocks-container">
                 <section data-theme="dark" class="theme-section cta-section cta-20-section pt-medium pb-0 m-pb-0 bg-black gs-is-dark is-dark">
                     <div class="container">
                         <div class="section-title mb-0 text-center">
@@ -454,7 +498,7 @@
         </div>
       
         <section data-theme="light" class="theme-section testimonial-20-section is-light">
-            <div data-rocket-location-hash="f117ee89930d3a249ddbfc02370ddefa" class="container container-xl">
+            <div class="container">
                 <div class="section-title text-center">
                     <h2 class="title ">Trusted by engineers. <br><strong>Human & artificial alike.</strong></h2>
                     <div class="sort-info">
@@ -668,7 +712,7 @@
         </section>
     </main>
     <footer class="main-footer main-footer-20">
-        <div data-rocket-location-hash="edb07686462572100a308ec661510d5c" class="container container-xl">
+        <div class="container">
             <div class="footer-wrapper">
                 <div class="row align-items-end">
                     <div class="col-md-5 col-lg-6">
@@ -720,7 +764,7 @@
             </div>
         </div>
     </footer>
-    <div data-rocket-location-hash="68d5cdfcb16f971b8817cbdeceb22c6a" class="design-by d-none"><a href="https://increativeweb.com" target="_blank" rel="noopener">Website Design & Development <strong>InCreativeWeb.com</strong></a></div>
+    <div class="design-by d-none"><a href="https://increativeweb.com" target="_blank" rel="noopener">Website Design & Development <strong>InCreativeWeb.com</strong></a></div>
     <span class="icw-progress-goto"><svg class="progress-circle svg-content" width="40" height="40" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.119, 307.919; stroke-dashoffset: 307.919;"></path></svg></span>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" id="bootstrap-js"></script>
     <script type="text/javascript" src="assets/js/splide.min.js" id="splide-js"></script>

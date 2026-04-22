@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 activeVideo.muted = true;
                 activeVideo.play().catch(() => {});
 
-                // 👉 जब video खत्म हो → next slide
+                
                 activeVideo.onended = function () {
                 main.go('>');
                 };
@@ -128,16 +128,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 window.addEventListener("scroll", function () {
-  const triggerSection = document.querySelector(".hero-thumb-slider-20-block");
-  const targetSection = document.querySelector(".acf-innerblocks-container");
+    const triggerSection = document.querySelector(".hero-thumb-slider-20-block");
+    const targetSection = document.querySelector(".icw-hero-sticky-section");
 
-  if (!triggerSection || !targetSection) return;
+    if (!triggerSection || !targetSection) return;
 
-  const rect = triggerSection.getBoundingClientRect();
+    const rect = triggerSection.getBoundingClientRect();
 
-  if (rect.top <= 100) {
-    targetSection.classList.add("position-relative");
-  } else {
-    targetSection.classList.remove("position-relative");
-  }
+    if (rect.top <= 100) {
+        targetSection.classList.add("position-relative");
+    } else {
+        targetSection.classList.remove("position-relative");
+    }
 });

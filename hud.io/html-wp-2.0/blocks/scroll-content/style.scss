@@ -1,0 +1,66 @@
+@import '../../assets/css/scss/mixins';
+
+.scroll-content-sticky-section {
+
+    .section-title {
+        @media (min-width: 768px) {
+            position: sticky;
+            top: 7.5rem;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 3.125rem;
+        }
+
+        .title {
+            margin-bottom: 1.251rem;
+
+            @media (max-width: 767px) {
+                margin-bottom: 3.125rem;
+            }
+        }
+
+    }
+
+    .scroll-content {
+        @include flexbox;
+        @include align-items(flex-start);
+        @include flex-direction(column);
+        gap: 3.125rem;
+
+        .scroll-content-block {
+            width: 100%;
+        }
+    }
+
+    .scroll-content-block {
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.625rem;
+
+            @media (max-width: 767px) {
+                font-size: 1.125rem;
+            }
+        }
+
+        .sort-info {
+            font-weight: 500;
+            font-size: 1.125rem;
+
+            @media (max-width: 992px) {
+                font-size: 0.875rem;
+            }
+        }
+
+        .media {
+            margin-top: 1.25rem;
+
+            img {
+                border-radius: 0.625;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
