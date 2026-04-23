@@ -256,3 +256,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     items.forEach(item => observer.observe(item));
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".bg-animate-inner");
+    if (!elements.length) return;
+    const states = new Map();
+
+    elements.forEach(el => {
+        states.set(el, { current: 0, target: 0 });
+    });
+
+    function update() {
+        elements.forEach(el => {
+            const rect = el.parentElement.getBoundingClientRect();
+            const state = states.get(el);
+            const speed = 0.2;
+
+            // 🎯 Center-based offset
+            const center = window.innerHeight / 2;
+            const offset = rect.top + rect.height / 2 - center;
+            state.target = offset * speed;
+
+            // 🎯 Smooth interpolation
+            state.current += (state.target - state.current) * 0.08;
+            el.style.transform = `translateY(${state.current}px)`;
+        });
+        requestAnimationFrame(update);
+    }
+    update();
+
+});

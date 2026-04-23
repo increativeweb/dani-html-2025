@@ -2744,3 +2744,22 @@ body #cookiescript_injected {
         max-width: 300px;
     }
 }
+
+// Background Animation
+.bg-animate-img {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;   
+    .bg-animate-inner {
+        position: absolute;
+        background-image: var(--bg-img);
+        left: 0;
+        right: 0;
+        top: -30%;  
+        bottom: -30%;
+        background-size: cover;
+        background-position: center;
+        will-change: transform;
+    }
+}

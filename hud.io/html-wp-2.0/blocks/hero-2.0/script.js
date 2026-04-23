@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             breakpoints: {
                 1200: {
-                direction: "ltr",
-                autoWidth: true,
-                height: "auto",
+                    direction: "ltr",
+                    autoWidth: true,
+                    height: "auto",
                 },
             },
         });
