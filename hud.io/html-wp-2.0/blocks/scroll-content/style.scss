@@ -59,7 +59,9 @@
             overflow: hidden;
             padding: 30px;
             border-radius: 10px;           
-
+            @media (max-width: 992px) {
+                padding: 20px;
+            }
             img {
                 border-radius: 0.625rem;
                 width: 100%;
@@ -71,7 +73,11 @@
                 img {
                     margin-left: -22px;
                     max-width: calc(100% + 25px) !important;
-                    width: auto !important;
+                    width: auto !important;           
+                    @media (max-width: 992px) {
+                        margin-left: -15px;
+                        max-width: calc(100% + 15px) !important;
+                    }
                 }
             }
         }
