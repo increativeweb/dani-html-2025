@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
         elements.forEach(el => {
             const rect = el.parentElement.getBoundingClientRect();
             const state = states.get(el);
-            const speed = 0.2;
+            const speed = 0.3;
 
             // 🎯 Center-based offset
             const center = window.innerHeight / 2;

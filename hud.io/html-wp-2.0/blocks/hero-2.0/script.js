@@ -135,9 +135,79 @@ window.addEventListener("scroll", function () {
 
     const rect = triggerSection.getBoundingClientRect();
 
-    if (rect.top <= 100) {
+    if (rect.top <= 0) {
         targetSection.classList.add("position-relative");
     } else {
         targetSection.classList.remove("position-relative");
     }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const section   = document.querySelector(".hero-thumb-slider-20-block");
+  const heroBlock = document.querySelector(".hero-slider-block");
+  const bgWrap    = document.querySelector(".bg-animate-img");
+  const bgInner   = document.querySelector(".bg-animate-inner");
+
+  if (!section || !heroBlock || !bgWrap || !bgInner) return;
+
+  let currentY = 0;
+
+  function animateScene() {
+
+    const rect = section.getBoundingClientRect();
+    const vh   = window.innerHeight;
+
+    /* ===============================
+       PROGRESS (ENTER TO 30% TOP)
+    =============================== */
+    let progress = (vh - rect.top) / (vh - vh * 0.30);
+    progress = Math.max(0, Math.min(progress, 1));
+
+
+    /* ===============================
+       PARALLAX BG
+    =============================== */
+    const center = vh / 2;
+    const offset = rect.top + rect.height / 2 - center;
+
+    const targetY = offset * 0.20;
+    currentY += (targetY - currentY) * 0.08;
+
+    bgInner.style.transform = `translateY(${currentY}px)`;
+
+
+    /* ===============================
+       DEFAULT WIDTH = hero-slider-block
+       THEN FULL VIEWPORT WIDTH
+    =============================== */
+
+    const heroWidth = heroBlock.offsetWidth;
+    const screenWidth = window.innerWidth;
+
+    const width = heroWidth + ((screenWidth - heroWidth) * progress);
+
+    const height = 80 + (20 * progress); // 80vh → 100vh
+
+
+    bgWrap.style.width = width + "px";
+    bgWrap.style.height = height + "vh";
+
+
+    /* ===============================
+       PADDING TOP/BOTTOM
+    =============================== */
+    const paddingY = 100 * progress;
+
+    heroBlock.style.paddingTop = paddingY + "px";
+    heroBlock.style.paddingBottom = paddingY + "px";
+
+
+    requestAnimationFrame(animateScene);
+  }
+
+  animateScene();
+
 });

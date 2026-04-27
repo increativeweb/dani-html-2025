@@ -1402,6 +1402,9 @@ h5,
         color: var(--text-white) !important;
     }
 }
+.bg-lightyellow {
+    background-color: #F7F4EA !important;
+}
 
 .bg-gradient {
     /* Fallback solid color */
@@ -2756,8 +2759,8 @@ body #cookiescript_injected {
         background-image: var(--bg-img);
         left: 0;
         right: 0;
-        top: -30%;  
-        bottom: -30%;
+        top: -50%;  
+        bottom: -50%;
         background-size: cover;
         background-position: center;
         will-change: transform;
