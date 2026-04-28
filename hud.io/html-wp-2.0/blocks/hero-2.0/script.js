@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }, 300);
 
             } else {
-
                 slide.style.flexBasis = smallWidth + "px";
 
                 setTimeout(() => {
