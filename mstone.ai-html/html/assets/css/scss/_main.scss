@@ -3537,3 +3537,100 @@
         }
     }
 }
+
+.main-section.info-card-section {
+    .section-title {
+        @include flexbox;
+        @include align-items(flex-start);
+        gap: 78px;
+        margin-bottom: 50px;
+        @media (max-width: 992px) {
+            @include flex-direction(column);
+            gap: 0px;
+        }
+        .left-content {
+            width: 100%;
+            max-width: 490px;
+        }
+        h2 {
+            font-size: 52px;
+            font-weight: 500;
+            @media (max-width: 992px) {
+                font-size: 38px;
+            }
+        }
+        .sort-info {
+            font-size: 20px;
+            font-weight: 400;
+            @media (max-width: 992px) {
+                font-size: 16px;
+            }
+            p {
+                color: rgba(200, 208, 217, 1) !important;
+                margin-bottom: 12px;
+            }
+            strong {
+                font-weight: 500;
+                color: $white !important;
+            }
+        }
+    }
+    .info-card {
+        @include flexbox;
+        @include flex-direction(column);
+        gap: 24px;
+        height: 100%;
+        padding: 40px;
+        background: linear-gradient(360deg, rgba(36, 42, 51, 0.9) 0%, rgba(14, 15, 20, 0.9) 2.4%, rgba(14, 15, 20, 0.9) 96.48%, rgba(65, 73, 85, 0.9) 100%);
+        border: 1.5px solid #20252B;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 9px 2px rgba(9, 10, 12, 0.1), inset 0px 2px 4px rgba(127, 135, 153, 0.5);
+        border-radius: 28px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url('../images/img-info-card-bg.svg') no-repeat bottom center;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            @media (max-width: 992px) {
+                left: auto;
+                right: -40%;
+            }
+        }
+        .card-icon {
+            margin-bottom: 0;
+            img {
+                width: 48px;
+                height: 48px;
+                flex: none;
+            }
+        }
+        .card-body {
+            padding: 0;
+            h3 {
+                font-weight: 500;
+                font-size: 24px;
+                color: #FFFFFF;
+                margin-bottom: 24px;
+                @media (max-width: 992px) {
+                    font-size: 20px;
+                }
+            }
+            .card-info {
+                font-weight: 400;
+                font-size: 18px;
+                color: #C8D0D9;
+                max-width: 450px;
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
