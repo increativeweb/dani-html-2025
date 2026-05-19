@@ -3672,3 +3672,112 @@
         }
     }
 }
+
+.product-cta-section {
+    position: relative;
+    .cta-content-block {
+        position: relative;
+        padding: 100px;
+        border-radius: 24px;
+        background-color: #020204;
+        overflow: hidden;
+        @media (max-width: 1200px) {
+            padding: 70px;
+        }
+        @media (max-width: 767px) {
+            padding: 50px 24px 235px;
+        }
+        &::before {
+            content: '';
+            background-image: url('../images/img-product-cta-bg.svg');
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            @media (max-width: 767px) {
+                background-image: url('../images/img-product-cta-bg-m.svg');
+                background-position: top left;
+                background-size: auto;
+                bottom: auto;
+                top: 0;
+            }
+        }
+        .section-title {
+            max-width: 550px;
+            position: relative;
+            z-index: 3;
+            @media (max-width: 1200px) {
+                max-width: 450px;
+            }
+            @media (max-width: 767px) {
+                max-width: 100%;
+                text-align: center;
+            }
+            .title {
+                color: $white;
+                font-size: 64px;
+                line-height: 1;
+                @media (max-width: 1200px) {
+                    font-size: 50px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 44px;
+                }
+            }
+            .sort-info {
+                font-weight: 400;
+                font-size: 18px;
+                color: #EBEDF0;
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+            }
+            .action {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 16px;
+                @media (max-width: 767px) {
+                    justify-content: center;
+                }
+            }
+        }
+        .cta-video-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1000px;
+            height: 100%;
+            @media (max-width: 1200px) {
+                width: 800px;
+                right: -10%;
+            }
+            @media (max-width: 992px) {
+                width: 700px;
+                right: -15%;
+            }
+            @media (max-width: 767px) {
+                width: 100%;
+                height: 300px;
+                right: 20%;
+                top: auto;
+                bottom: -5%;
+            }
+            video {
+                pointer-events: none;
+                -o-object-fit: cover;
+                object-fit: cover;
+                object-position: center;
+                height: 100%;
+                width: 115%;
+                @media (max-width: 767px) {
+                    width: 150%;
+                }
+            }
+        }
+    }
+}
