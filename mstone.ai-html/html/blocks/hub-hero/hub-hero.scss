@@ -1,0 +1,79 @@
+.hub-hero-section {
+    background: #010103;
+    padding: 200px 0 120px;
+    .page-title {
+        max-width: 575px;
+        .title {
+            font-weight: 500;
+            font-size: 64px;
+            color: #ffffff;
+            line-height: 1;
+            margin-bottom: 32px;
+            span {
+                color: #87BFF3;
+                display: block;
+            }
+        }
+        .sort-info {
+            font-weight: 400;
+            font-size: 18px;
+            color: #C8D0D9;
+            max-width: 500px;
+        }
+        .action {
+            margin-top: 64px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+    }
+    .image-block {
+        position: relative;
+        .main-img {
+            position: relative;
+            z-index: 1;
+            max-width: 605px;
+            img {
+                width: 100%;
+                &::before {
+                    content: '';
+                    background: linear-gradient(0deg, rgba(160, 179, 201, 0.19), rgba(160, 179, 201, 0.19)), rgba(255, 255, 255, 0.01);
+                    backdrop-filter: blur(17.2px);
+                    border-radius: 24px;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        .helper-images {
+            .helper-image {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                flex: none;
+                display: inline-block;
+                z-index: 2;
+                &-1 {
+                    top: 205px;
+                    left: -97px;
+                }
+                &-2 {
+                    top: 87px;
+                    left: -35px;
+                }
+                &-3 {
+                    bottom: 95px;
+                    right: -57px;
+                    z-index: 0;
+                }
+                &-4 {
+                    bottom: -46px;
+                    right: 146px;
+                }
+            }
+        }
+    }
+}
