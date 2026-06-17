@@ -77,4 +77,102 @@
             }
         }
     }
+    .security-cta-block {
+        padding: 8px;
+        background: linear-gradient(0deg, rgba(160, 179, 201, 0.19), rgba(160, 179, 201, 0.19)), rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(17.2px);
+        border-radius: 24px;
+        margin-top: 24px;
+        .cta-content {
+            background: #111419 url(../../assets/images/img-security-cta-bg.png) no-repeat top left;
+            background-size: cover;
+            padding: 32px 40px;
+            border-radius: 16px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            @media (max-width: 992px) {  
+                flex-wrap: wrap;
+            }
+            @media (max-width: 767px) {  
+                padding: 24px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 16px;
+                padding: 1px;
+                background: linear-gradient(60deg, #12d3dd 0%, #12d3dd 26%, #0a7277 43%, #0a7277 66%, #12d3dd 91%);
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                pointer-events: none;
+                opacity: 0.6;
+            }
+        }
+        .cta-title-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            @media (max-width: 767px) {
+                gap: 15px;
+            }
+            .cta-img {
+                img {
+                    min-width: 64px;
+                    height: 64px;
+                    flex: none;
+                    @media (max-width: 767px) {
+                        min-width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+            .cta-info {
+                h3 {
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: #FFFFFF;
+                    margin-bottom: 8px;                    
+                    @media (max-width: 992px) {  
+                        font-size: 20px;
+                    }
+                }
+                .sort-info {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    @media (max-width: 767px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .cta-action {
+            margin-left: auto;
+            @media (max-width: 992px) {  
+                margin-left: 88px;
+            }
+            @media (max-width: 767px) {  
+                margin-left: 65px;
+            }
+            .btn {
+                min-height: 48px;
+                border-radius: 12px;
+                .btn-text {
+                    padding: 0 20px;
+                }
+                &.btn-primary {
+                    border: 2px solid transparent;
+                    &:hover, &:focus {
+                        border-color: #0371EE;
+                        background: #090A0C;
+                    }
+                }
+            }
+        }
+    }
 }
