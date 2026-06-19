@@ -1,0 +1,74 @@
+<svg width="100%" height="100%" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="opacity:0.9">
+	<style>
+		@keyframes dashFlow{from{stroke-dashoffset:60}to{stroke-dashoffset:0}}
+		@keyframes dashFlowSlow{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+		@keyframes ringPulse{0%,100%{r:22px;opacity:0.35}50%{r:30px;opacity:0}}
+		@keyframes ringPulse2{0%,100%{r:18px;opacity:0.3}50%{r:28px;opacity:0}}
+		@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+		@keyframes floatY2{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+		@keyframes floatY3{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+		.node-cc{animation:floatY 7s ease-in-out infinite}
+		.node-cu{animation:floatY2 8.5s ease-in-out infinite}
+		.node-cp{animation:floatY 9s ease-in-out infinite 1s}
+		.node-dv{animation:floatY3 7.5s ease-in-out infinite 0.5s}
+		.node-cx{animation:floatY2 8s ease-in-out infinite 2s}
+	</style>
+    <defs>
+        <radialGradient id="ngB" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"></stop><stop offset="100%" stop-color="#3B82F6" stop-opacity="0"></stop></radialGradient>
+        <radialGradient id="ngP" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.22"></stop><stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"></stop></radialGradient>
+        <radialGradient id="ngC" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#06B6D4" stop-opacity="0.22"></stop><stop offset="100%" stop-color="#06B6D4" stop-opacity="0"></stop></radialGradient>
+        <radialGradient id="ngG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#10B981" stop-opacity="0.22"></stop><stop offset="100%" stop-color="#10B981" stop-opacity="0"></stop></radialGradient>
+        <filter id="b4"><feGaussianBlur stdDeviation="4"></feGaussianBlur></filter>
+    </defs>
+    <line x1="210" y1="175" x2="680" y2="420" stroke="#3B82F6" stroke-width="1" stroke-dasharray="6 5" style="animation:dashFlow 3s linear infinite;opacity:0.3"></line>
+    <line x1="1230" y1="155" x2="760" y2="400" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="6 5" style="animation:dashFlow 3.5s linear infinite 0.4s;opacity:0.28"></line>
+    <line x1="110" y1="470" x2="660" y2="450" stroke="#06B6D4" stroke-width="1" stroke-dasharray="6 5" style="animation:dashFlowSlow 4s linear infinite 0.8s;opacity:0.25"></line>
+    <line x1="1330" y1="410" x2="780" y2="450" stroke="#10B981" stroke-width="1" stroke-dasharray="6 5" style="animation:dashFlow 3.2s linear infinite 1.2s;opacity:0.28"></line>
+    <line x1="285" y1="760" x2="690" y2="490" stroke="#F59E0B" stroke-width="1" stroke-dasharray="6 5" style="animation:dashFlowSlow 4.5s linear infinite 0.6s;opacity:0.22"></line>
+    <g class="node-cc" style="transform-origin:210px 175px">
+        <circle cx="210" cy="175" r="52" fill="url(#ngB)" filter="url(#b4)"></circle>
+        <circle cx="210" cy="175" r="28" fill="rgba(30,58,138,0.55)" stroke="#3B82F6" stroke-width="1.5"></circle>
+        <circle cx="210" cy="175" r="38" fill="none" stroke="#3B82F6" stroke-width="0.75" stroke-dasharray="3 3" style="animation:ringPulse 3s ease-in-out infinite;transform-origin:210px 175px;transform-box:fill-box"></circle>
+        <text x="210" y="171" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" font-weight="700" fill="#93C5FD">Claude</text>
+        <text x="210" y="184" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" font-weight="700" fill="#93C5FD">Code</text>
+        <rect x="176" y="212" width="68" height="20" rx="10" fill="rgba(16,185,129,0.18)" stroke="rgba(16,185,129,0.4)" stroke-width="1"></rect>
+        <text x="210" y="226" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#34D399">Expand</text>
+    </g>
+    <g class="node-cu" style="transform-origin:1230px 155px">
+        <circle cx="1230" cy="155" r="52" fill="url(#ngP)" filter="url(#b4)"></circle>
+        <circle cx="1230" cy="155" r="28" fill="rgba(46,16,101,0.55)" stroke="#8B5CF6" stroke-width="1.5"></circle>
+        <circle cx="1230" cy="155" r="38" fill="none" stroke="#8B5CF6" stroke-width="0.75" stroke-dasharray="3 3" style="animation:ringPulse2 3.8s ease-in-out infinite 0.6s;transform-origin:1230px 155px;transform-box:fill-box"></circle>
+        <text x="1230" y="159" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#C4B5FD">Cursor</text>
+        <rect x="1192" y="192" width="76" height="20" rx="10" fill="rgba(59,130,246,0.18)" stroke="rgba(59,130,246,0.4)" stroke-width="1"></rect>
+        <text x="1230" y="206" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#60A5FA">Monitor</text>
+    </g>
+    <g class="node-cp" style="transform-origin:110px 470px">
+        <circle cx="110" cy="470" r="48" fill="url(#ngC)" filter="url(#b4)"></circle>
+        <circle cx="110" cy="470" r="26" fill="rgba(7,52,70,0.55)" stroke="#06B6D4" stroke-width="1.5"></circle>
+        <circle cx="110" cy="470" r="36" fill="none" stroke="#06B6D4" stroke-width="0.75" stroke-dasharray="3 3" style="animation:ringPulse 4.2s ease-in-out infinite 1s;transform-origin:110px 470px;transform-box:fill-box"></circle>
+        <text x="110" y="474" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#67E8F9">Copilot</text>
+        <rect x="72" y="505" width="76" height="20" rx="10" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.35)" stroke-width="1"></rect>
+        <text x="110" y="519" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#60A5FA">Monitor</text>
+    </g>
+    <g class="node-dv" style="transform-origin:1330px 410px">
+        <circle cx="1330" cy="410" r="48" fill="url(#ngG)" filter="url(#b4)"></circle>
+        <circle cx="1330" cy="410" r="26" fill="rgba(6,44,29,0.55)" stroke="#10B981" stroke-width="1.5"></circle>
+        <circle cx="1330" cy="410" r="36" fill="none" stroke="#10B981" stroke-width="0.75" stroke-dasharray="3 3" style="animation:ringPulse2 3.5s ease-in-out infinite 1.4s;transform-origin:1330px 410px;transform-box:fill-box"></circle>
+        <text x="1330" y="414" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#6EE7B7">Devin</text>
+        <rect x="1283" y="445" width="94" height="20" rx="10" fill="rgba(245,158,11,0.16)" stroke="rgba(245,158,11,0.36)" stroke-width="1"></rect>
+        <text x="1330" y="459" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#FBBF24">Require review</text>
+    </g>
+    <g class="node-cx" style="transform-origin:285px 760px">
+        <circle cx="285" cy="760" r="44" fill="rgba(120,80,0,0.15)" filter="url(#b4)"></circle>
+        <circle cx="285" cy="760" r="24" fill="rgba(69,40,0,0.55)" stroke="#F59E0B" stroke-width="1.5"></circle>
+        <circle cx="285" cy="760" r="34" fill="none" stroke="#F59E0B" stroke-width="0.75" stroke-dasharray="3 3" style="animation:ringPulse 5s ease-in-out infinite 0.8s;transform-origin:285px 760px;transform-box:fill-box"></circle>
+        <text x="285" y="764" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#FCD34D">Codex</text>
+        <rect x="246" y="793" width="78" height="20" rx="10" fill="rgba(239,68,68,0.16)" stroke="rgba(239,68,68,0.36)" stroke-width="1"></rect>
+        <text x="285" y="807" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#F87171">Restrict</text>
+    </g>
+    <circle cx="720" cy="450" r="90" fill="none" stroke="rgba(59,130,246,0.06)" stroke-width="1"></circle>
+    <circle cx="720" cy="450" r="52" fill="rgba(59,130,246,0.05)" stroke="rgba(59,130,246,0.18)" stroke-width="1.5"></circle>
+    <circle cx="720" cy="450" r="64" fill="none" stroke="rgba(59,130,246,0.08)" stroke-width="1" stroke-dasharray="4 4" style="animation:dashFlowSlow 12s linear infinite"></circle>
+    <text x="720" y="447" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" letter-spacing="0.08em" fill="rgba(241,245,249,0.2)">MILESTONE</text>
+    <text x="720" y="463" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="rgba(59,130,246,0.35)">governance layer</text>
+</svg>

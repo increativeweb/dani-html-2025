@@ -576,6 +576,31 @@ img {
             }
         }
     }
+    &.btn-primary-only {
+        background: #3B82F6;
+        color: #fff;
+        border-radius: 9px;
+        .btn-text {
+            padding: 10px 24px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        &:hover, &:focus {
+            background:#2563EB;
+        }
+    }
+    &.btn-outline-gray-only {
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(241, 245, 249, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 9px;
+        .btn-text {
+            padding: 10px 24px;
+        }
+        &:hover, &:focus {
+            background:rgba(255,255,255,0.09)
+        }
+    }
 }
 
 .btn-link {
