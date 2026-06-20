@@ -104,7 +104,6 @@
             font-size: clamp(16px, 4vw, 18px);
             line-height: 1.75;
             color: #475569;
-            margin: 0 auto 36px;
             max-width: 560px;
             @media (max-width: 767px) {
                 margin: 0 auto 25px;
@@ -124,6 +123,11 @@
                 border-radius: 100px;
                 background: #eff6ff;
                 display: inline-block;
+            }
+        }
+        &.text-center {
+            .sort-info {
+                margin: 0 auto 36px;
             }
         }
     }
