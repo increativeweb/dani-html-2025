@@ -86,6 +86,16 @@
         padding: 0;
         border: none;
     }
+    .video-bg-block {
+        #particle-animation {
+            // background: linear-gradient(180deg, #1b37c5, #28211a);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 @keyframes pulseDot {
     0%, 100% {
