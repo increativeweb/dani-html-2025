@@ -82,11 +82,11 @@
                 <a href="#scroll-bottom-section" class="scroll-bottom"><svg width="22" height="34" viewBox="0 0 22 34" fill="none"><rect x="1.5" y="1.5" width="19" height="31" rx="9.5" stroke="rgba(241,245,249,0.6)" stroke-width="1.5"></rect><circle cx="11" cy="10" r="3" fill="rgba(241,245,249,0.6)"></circle></svg></a>
             </section>
             <link rel='stylesheet' id='icw-agent-content-css' href='blocks/agent-content/style.css' type='text/css' media='all' /> 
-            <section class="main-section agent-content-section" id="scroll-bottom-section">
+            <section class="main-section agent-content-section section-title-mw-578 bg-light" id="scroll-bottom-section">
                 <div class="container">
                     <div class="row g-80 align-items-center">
                         <div class="col-lg-6">
-                            <div class="image-block">
+                            <div class="image-block with-shadow">
                                 <img src="upload/img-governance-diagram.png" alt="">
                             </div>                    
                         </div>
@@ -108,7 +108,7 @@
                 </div>
             </section>
             <link rel='stylesheet' id='icw-agent-card-css' href='blocks/agent-card/style.css' type='text/css' media='all' /> 
-            <section class="main-section agent-card-section is-light">
+            <section class="main-section agent-card-section bg-darkblack is-light">
                 <div class="container">
                     <div class="section-title text-center">
                         <div class="tag-line">Agent Governance</div>
@@ -117,7 +117,7 @@
                     </div>
                     <div class="card-grid">
                         <div class="icon-card">
-                            <div class="card-icon is-blue">
+                            <div class="card-icon">
                                 <img src="upload/icon-rate.svg" alt="Contribution Rate">
                             </div>
                             <div class="card-body">
@@ -150,6 +150,92 @@
                             <div class="card-body">
                                 <h3 class="card-title">Recommended Posture</h3>
                                 <div class="card-info">Expand, monitor, or restrict</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section section-title-mw-700  bg-light is-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <div class="tag-line">The Operating Model</div>
+                                <h2 class="title">Turn governance into<br>an operating system.</h2>
+                                <div class="sort-info">Move from passive monitoring to active control — see what to scale, what needs guardrails, and what to pause.</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="image-block text-center">
+                                <img src="upload/img-operating-model-loop.svg" alt="Turn governance into an operating system">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section section-title-mw-700 bg-darkblack is-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <div class="tag-line">Policy Matrix</div>
+                                <h2 class="title">Set the right control for every agent workflow.</h2>
+                                <div class="sort-info">Not every workflow needs the same control. Apply governance by real engineering signals — not blanket rules.</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Agent workflow</th>
+                                            <th>Risk</th>
+                                            <th>Milestone signal</th>
+                                            <th>Governance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Boilerplate generation</strong></td>
+                                            <td><span class="risk risk-low">Low</span></td>
+                                            <td><small>High survival · low review</small></td>
+                                            <td>Allow broad usage</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Test creation</strong></td>
+                                            <td><span class="risk risk-low-med">Low-med</span></td>
+                                            <td><small>Improves coverage · low rework</small></td>
+                                            <td>Expand with monitoring</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Bug fixes</strong></td>
+                                            <td><span class="risk risk-medium">Medium</span></td>
+                                            <td><small>Faster cycle · mixed rework</small></td>
+                                            <td>Require reviewer validation</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Refactoring</strong></td>
+                                            <td><span class="risk risk-med-high">Med-high</span></td>
+                                            <td><small>Larger PRs · architectural</small></td>
+                                            <td>Require senior review</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Security-sensitive code</strong></td>
+                                            <td><span class="risk risk-high">High</span></td>
+                                            <td><small>Sensitive · high-risk repo</small></td>
+                                            <td>Restrict or require approval</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Legacy core changes</strong></td>
+                                            <td><span class="risk risk-high">High</span></td>
+                                            <td><small>High rework / revert rate</small></td>
+                                            <td>Limit autonomy · guardrails</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="content-bottom">
+                                <div class="info">Sample governance signals · product UI</div>
                             </div>
                         </div>
                     </div>
