@@ -1,8 +1,14 @@
 .agent-content-section {
     position: relative;
-    overflow: hidden;
     &.bg-light {
         background-color: #f4f9ff !important;
+    }
+    &.is-sticky-img {
+        .image-block {
+            position: sticky;
+            top: 100px;
+            z-index: 2;
+        }
     }
     .g-80 {
         --bs-gutter-x: 80px;
@@ -23,7 +29,6 @@
     }
     .image-block {
         border-radius: 18px;
-        overflow: hidden;
         &.with-shadow {
             box-shadow: 0 10px 44px rgba(59, 130, 246, 0.14);
         }
