@@ -4,6 +4,21 @@
     height: 100vh;
     min-height: 700px;
     overflow: hidden;
+    &.is-bg-glow {
+        background: linear-gradient(180deg, #1B37C5 0%, #28211A 100%);
+        z-index: 1;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: radial-gradient(60% 60% at 50% 50%, rgba(3, 4, 9, 0) 25%, rgba(3, 4, 9, 0.6) 65%, #030409 100%);
+            z-index: -1;
+        }
+    }
     @media (max-width: 992px) {
         padding: 150px 0 60px; 
         min-height: 600px;       
@@ -87,6 +102,9 @@
         border: none;
     }
     .video-bg-block {
+        img {
+            background: transparent;
+        }
         #particle-animation {
             // background: linear-gradient(180deg, #1b37c5, #28211a);
             position: absolute;
