@@ -556,7 +556,11 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="table-block">
-                                <svg width="650" height="261" viewBox="0 0 650 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <style>
+                                    .progress-bar-fill {transform-box: fill-box;transform-origin: left center;transform: scaleX(0);transition: transform 1.4s ease;}
+                                    .progress-bar-fill.animate {transform: scaleX(1);}
+                                </style>
+                                <svg class="progress-svg" width="650" height="261" viewBox="0 0 650 261" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M633.5 0.5H16.5C7.66344 0.5 0.5 7.66344 0.5 16.5V244.5C0.5 253.337 7.66344 260.5 16.5 260.5H633.5C642.337 260.5 649.5 253.337 649.5 244.5V16.5C649.5 7.66344 642.337 0.5 633.5 0.5Z" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.07"/>
                                     <text fill="#F1F5F9" fill-opacity="0.22" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="20.5" y="28.1364">#</tspan></text>
                                     <text fill="#F1F5F9" fill-opacity="0.22" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="62.5" y="28.1364">AGENT</tspan></text>
@@ -589,8 +593,8 @@
                                     <path d="M72.5 138.5H58.5C55.1863 138.5 52.5 141.186 52.5 144.5V158.5C52.5 161.814 55.1863 164.5 58.5 164.5H72.5C75.8137 164.5 78.5 161.814 78.5 158.5V144.5C78.5 141.186 75.8137 138.5 72.5 138.5Z" fill="#8B5CF6" fill-opacity="0.14"/>
                                     <text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="8.5" font-weight="bold" letter-spacing="0em"><tspan x="59.2039" y="155.091">CU</tspan></text>
                                     <text fill="#F1F5F9" fill-opacity="0.85" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="90.5" y="155.227">Cursor</tspan></text>
-                                    <path d="M369 148.5H222C221.172 148.5 220.5 149.172 220.5 150C220.5 150.828 221.172 151.5 222 151.5H369C369.828 151.5 370.5 150.828 370.5 150C370.5 149.172 369.828 148.5 369 148.5Z" fill="white" fill-opacity="0.08"/>
-                                    <path d="M295.5 148.5H222C221.172 148.5 220.5 149.172 220.5 150C220.5 150.828 221.172 151.5 222 151.5H295.5C296.328 151.5 297 150.828 297 150C297 149.172 296.328 148.5 295.5 148.5Z" fill="#8B5CF6"/>
+                                    <path class="progress-bar-track" d="M369 148.5H222C221.172 148.5 220.5 149.172 220.5 150C220.5 150.828 221.172 151.5 222 151.5H369C369.828 151.5 370.5 150.828 370.5 150C370.5 149.172 369.828 148.5 369 148.5Z" fill="white" fill-opacity="0.08"/>
+                                    <path class="progress-bar-fill" d="M295.5 148.5H222C221.172 148.5 220.5 149.172 220.5 150C220.5 150.828 221.172 151.5 222 151.5H295.5C296.328 151.5 297 150.828 297 150C297 149.172 296.328 148.5 295.5 148.5Z" fill="#8B5CF6"/>
                                     <text fill="#F1F5F9" fill-opacity="0.45" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" letter-spacing="0em"><tspan x="378.5" y="153">1,456</tspan></text>
                                     <text fill="#F1F5F9" fill-opacity="0.7" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="457.437" y="155.227">81%</tspan></text>
                                     <text fill="#3B82F6" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="612.15" y="155.091">76</tspan></text>
@@ -599,8 +603,8 @@
                                     <path d="M72.5 181.5H58.5C55.1863 181.5 52.5 184.186 52.5 187.5V201.5C52.5 204.814 55.1863 207.5 58.5 207.5H72.5C75.8137 207.5 78.5 204.814 78.5 201.5V187.5C78.5 184.186 75.8137 181.5 72.5 181.5Z" fill="#10B981" fill-opacity="0.14"/>
                                     <text fill="#10B981" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="8.5" font-weight="bold" letter-spacing="0em"><tspan x="59.4031" y="198.091">DV</tspan></text>
                                     <text fill="#F1F5F9" fill-opacity="0.85" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="90.5" y="198.227">Devin</tspan></text>
-                                    <path d="M369 191.5H222C221.172 191.5 220.5 192.172 220.5 193C220.5 193.828 221.172 194.5 222 194.5H369C369.828 194.5 370.5 193.828 370.5 193C370.5 192.172 369.828 191.5 369 191.5Z" fill="white" fill-opacity="0.08"/>
-                                    <path d="M265.5 191.5H222C221.172 191.5 220.5 192.172 220.5 193C220.5 193.828 221.172 194.5 222 194.5H265.5C266.328 194.5 267 193.828 267 193C267 192.172 266.328 191.5 265.5 191.5Z" fill="#10B981"/>
+                                    <path class="progress-bar-track" d="M369 191.5H222C221.172 191.5 220.5 192.172 220.5 193C220.5 193.828 221.172 194.5 222 194.5H369C369.828 194.5 370.5 193.828 370.5 193C370.5 192.172 369.828 191.5 369 191.5Z" fill="white" fill-opacity="0.08"/>
+                                    <path class="progress-bar-fill" d="M265.5 191.5H222C221.172 191.5 220.5 192.172 220.5 193C220.5 193.828 221.172 194.5 222 194.5H265.5C266.328 194.5 267 193.828 267 193C267 192.172 266.328 191.5 265.5 191.5Z" fill="#10B981"/>
                                     <text fill="#F1F5F9" fill-opacity="0.45" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" letter-spacing="0em"><tspan x="378.5" y="196">892</tspan></text>
                                     <text fill="#F1F5F9" fill-opacity="0.7" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="456.872" y="198.227">73%</tspan></text>
                                     <text fill="#F59E0B" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="613.408" y="198.091">61</tspan></text>
@@ -609,8 +613,8 @@
                                     <path d="M72.5 224.5H58.5C55.1863 224.5 52.5 227.186 52.5 230.5V244.5C52.5 247.814 55.1863 250.5 58.5 250.5H72.5C75.8137 250.5 78.5 247.814 78.5 244.5V230.5C78.5 227.186 75.8137 224.5 72.5 224.5Z" fill="#F59E0B" fill-opacity="0.14"/>
                                     <text fill="#F59E0B" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="8.5" font-weight="bold" letter-spacing="0em"><tspan x="59.3325" y="241.091">CX</tspan></text>
                                     <text fill="#F1F5F9" fill-opacity="0.85" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="90.5" y="241.227">Codex</tspan></text>
-                                    <path d="M369 234.5H222C221.172 234.5 220.5 235.172 220.5 236C220.5 236.828 221.172 237.5 222 237.5H369C369.828 237.5 370.5 236.828 370.5 236C370.5 235.172 369.828 234.5 369 234.5Z" fill="white" fill-opacity="0.08"/>
-                                    <path d="M253.5 234.5H222C221.172 234.5 220.5 235.172 220.5 236C220.5 236.828 221.172 237.5 222 237.5H253.5C254.328 237.5 255 236.828 255 236C255 235.172 254.328 234.5 253.5 234.5Z" fill="#F59E0B"/>
+                                    <path class="progress-bar-track" d="M369 234.5H222C221.172 234.5 220.5 235.172 220.5 236C220.5 236.828 221.172 237.5 222 237.5H369C369.828 237.5 370.5 236.828 370.5 236C370.5 235.172 369.828 234.5 369 234.5Z" fill="white" fill-opacity="0.08"/>
+                                    <path class="progress-bar-fill" d="M253.5 234.5H222C221.172 234.5 220.5 235.172 220.5 236C220.5 236.828 221.172 237.5 222 237.5H253.5C254.328 237.5 255 236.828 255 236C255 235.172 254.328 234.5 253.5 234.5Z" fill="#F59E0B"/>
                                     <text fill="#F1F5F9" fill-opacity="0.45" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" letter-spacing="0em"><tspan x="378.5" y="239">654</tspan></text>
                                     <text fill="#F1F5F9" fill-opacity="0.7" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="456.332" y="241.227">69%</tspan></text>
                                     <text fill="#EF4444" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="611.686" y="241.091">47</tspan></text>
@@ -621,6 +625,10 @@
                                     </linearGradient>
                                     </defs>
                                 </svg>
+                                <script>
+                                    const observer = new IntersectionObserver((entries) => {entries.forEach(entry => {if (entry.isIntersecting) {entry.target.querySelectorAll('.progress-bar-fill').forEach(bar => bar.classList.add('animate'));observer.unobserve(entry.target);}});}, {threshold: 0.3});
+                                    document.querySelectorAll('.progress-svg').forEach(svg => {observer.observe(svg);});
+                                </script>
                             </div>
                         </div>
                     </div>
