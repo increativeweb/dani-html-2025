@@ -302,60 +302,142 @@
                         </div>
                         <div class="col-12">
                             <div data-anim="true" data-r="tablescroll" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; overflow: hidden; opacity: 1; transform: translateY(0px); transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);">
-      <!-- toolbar -->
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06)">
-        <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:9px;background:rgba(255,255,255,0.02);flex:1;min-width:180px;max-width:300px">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex:none;opacity:0.5"><circle cx="6" cy="6" r="4.5" stroke="rgba(241,245,249,0.6)" stroke-width="1.3"></circle><path d="M9.5 9.5L13 13" stroke="rgba(241,245,249,0.6)" stroke-width="1.3" stroke-linecap="round"></path></svg>
-          <span style="font-size:13px;color:rgba(241,245,249,0.4)">Search agents…</span>
-        </div>
-        <span style="font-size:12.5px;font-weight:500;color:#93C5FD;padding:7px 13px;border:1px solid rgba(59,130,246,0.3);border-radius:8px;background:rgba(59,130,246,0.08);display:inline-flex;align-items:center;gap:7px">Risk <svg width="9" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 3.5L9 1" stroke="#93C5FD" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-        <span style="font-size:12.5px;font-weight:500;color:rgba(241,245,249,0.6);padding:7px 13px;border:1px solid rgba(255,255,255,0.09);border-radius:8px;display:inline-flex;align-items:center;gap:7px">Status <svg width="9" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 3.5L9 1" stroke="rgba(241,245,249,0.5)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-        <span style="font-size:12.5px;font-weight:500;color:rgba(241,245,249,0.6);padding:7px 13px;border:1px solid rgba(255,255,255,0.09);border-radius:8px;display:inline-flex;align-items:center;gap:7px">Owner <svg width="9" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 3.5L9 1" stroke="rgba(241,245,249,0.5)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-        <div style="margin-left:auto;display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:#10B981;animation:pulseDot 1.8s ease infinite"></div><span style="font-size:12px;color:rgba(241,245,249,0.42)">47 agents · live</span></div>
-      </div>
-      <!-- header -->
-      <div data-r="tablerow" style="display:grid;grid-template-columns:2.4fr 1fr 1.1fr 1.15fr;gap:14px;padding:13px 22px;border-bottom:1px solid rgba(255,255,255,0.06)">
-        <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,245,249,0.28)">Agent</span>
-        <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,245,249,0.28)">Owner</span>
-        <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,245,249,0.28)">Risk</span>
-        <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,245,249,0.28)">Status</span>
-      </div>
-      <!-- rows -->
-      <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); align-items: center; transition: background 0.2s; cursor: default; opacity: 1; background: transparent;">
-        <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(59,130,246,0.14);border:1px solid rgba(59,130,246,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#60A5FA;flex:none">BF</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Backend Fix Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Bug fixes · Backend repos</div></div></div>
-        <span style="font-size:13px;color:rgba(241,245,249,0.62)">Platform Eng</span>
-        <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#F59E0B"></span><span style="width:4px;height:10px;border-radius:1px;background:#F59E0B"></span><span style="width:4px;height:13px;border-radius:1px;background:rgba(255,255,255,0.12)"></span></div><span style="font-size:12.5px;font-weight:600;color:#FBBF24">Medium</span></div>
-        <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);font-size:11.5px;font-weight:600;color:#34D399">Approved</span>
-      </div>
-      <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); align-items: center; transition: background 0.2s; cursor: default; opacity: 1; background: transparent;">
-        <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(6,182,212,0.14);border:1px solid rgba(6,182,212,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#22D3EE;flex:none">RS</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Review Summary Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PR review · All repos</div></div></div>
-        <span style="font-size:13px;color:rgba(241,245,249,0.62)">DevEx</span>
-        <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#10B981"></span><span style="width:4px;height:10px;border-radius:1px;background:rgba(255,255,255,0.12)"></span><span style="width:4px;height:13px;border-radius:1px;background:rgba(255,255,255,0.12)"></span></div><span style="font-size:12.5px;font-weight:600;color:#34D399">Low</span></div>
-        <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);font-size:11.5px;font-weight:600;color:#60A5FA">Monitored</span>
-      </div>
-      <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); align-items: center; transition: background 0.2s; cursor: default; opacity: 1; background: transparent;">
-        <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(239,68,68,0.14);border:1px solid rgba(239,68,68,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#F87171;flex:none">LR</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Legacy Refactor Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Refactoring · Legacy core</div></div></div>
-        <span style="font-size:13px;color:rgba(241,245,249,0.62)">Core Eng</span>
-        <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#EF4444"></span><span style="width:4px;height:10px;border-radius:1px;background:#EF4444"></span><span style="width:4px;height:13px;border-radius:1px;background:#EF4444"></span></div><span style="font-size:12.5px;font-weight:600;color:#F87171">High</span></div>
-        <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);font-size:11.5px;font-weight:600;color:#F87171">Restricted</span>
-      </div>
-      <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); align-items: center; transition: background 0.2s; cursor: default; background: transparent; opacity: 1;">
-        <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(245,158,11,0.14);border:1px solid rgba(245,158,11,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#FBBF24;flex:none">SP</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Security Patch Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Security fixes · Sensitive repos</div></div></div>
-        <span style="font-size:13px;color:rgba(241,245,249,0.62)">AppSec</span>
-        <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#EF4444"></span><span style="width:4px;height:10px;border-radius:1px;background:#EF4444"></span><span style="width:4px;height:13px;border-radius:1px;background:#EF4444"></span></div><span style="font-size:12.5px;font-weight:600;color:#F87171">High</span></div>
-        <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);font-size:11.5px;font-weight:600;color:#FBBF24">Requires approval</span>
-      </div>
-      <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; align-items: center; transition: background 0.2s; cursor: default; opacity: 1; background: transparent;">
-        <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(139,92,246,0.14);border:1px solid rgba(139,92,246,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#A78BFA;flex:none">TG</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Test Gen Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Test creation · Service repos</div></div></div>
-        <span style="font-size:13px;color:rgba(241,245,249,0.62)">QA Platform</span>
-        <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#10B981"></span><span style="width:4px;height:10px;border-radius:1px;background:rgba(255,255,255,0.12)"></span><span style="width:4px;height:13px;border-radius:1px;background:rgba(255,255,255,0.12)"></span></div><span style="font-size:12.5px;font-weight:600;color:#34D399">Low</span></div>
-        <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);font-size:11.5px;font-weight:600;color:#34D399">Scale</span>
-      </div>
-    </div>
+                                <!-- toolbar -->
+                                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06)">
+                                    <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:9px;background:rgba(255,255,255,0.02);flex:1;min-width:180px;max-width:300px">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex:none;opacity:0.5"><circle cx="6" cy="6" r="4.5" stroke="rgba(241,245,249,0.6)" stroke-width="1.3"></circle><path d="M9.5 9.5L13 13" stroke="rgba(241,245,249,0.6)" stroke-width="1.3" stroke-linecap="round"></path></svg>
+                                    <span style="font-size:13px;color:rgba(241,245,249,0.4)">Search agents…</span>
+                                    </div>
+                                    <span style="font-size:12.5px;font-weight:500;color:#93C5FD;padding:7px 13px;border:1px solid rgba(59,130,246,0.3);border-radius:8px;background:rgba(59,130,246,0.08);display:inline-flex;align-items:center;gap:7px">Risk <svg width="9" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 3.5L9 1" stroke="#93C5FD" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                                    <span style="font-size:12.5px;font-weight:500;color:rgba(241,245,249,0.6);padding:7px 13px;border:1px solid rgba(255,255,255,0.09);border-radius:8px;display:inline-flex;align-items:center;gap:7px">Status <svg width="9" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 3.5L9 1" stroke="rgba(241,245,249,0.5)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                                    <span style="font-size:12.5px;font-weight:500;color:rgba(241,245,249,0.6);padding:7px 13px;border:1px solid rgba(255,255,255,0.09);border-radius:8px;display:inline-flex;align-items:center;gap:7px">Owner <svg width="9" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 3.5L9 1" stroke="rgba(241,245,249,0.5)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                                    <div style="margin-left:auto;display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:#10B981;animation:pulseDot 1.8s ease infinite"></div><span style="font-size:12px;color:rgba(241,245,249,0.42)">47 agents · live</span></div>
+                                </div>
+                                <!-- header -->
+                                <div data-r="tablerow" style="display:grid;grid-template-columns:2.4fr 1fr 1.1fr 1.15fr;gap:14px;padding:13px 22px;border-bottom:1px solid rgba(255,255,255,0.06)">
+                                    <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,245,249,0.28)">Agent</span>
+                                    <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,245,249,0.28)">Owner</span>
+                                    <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,245,249,0.28)">Risk</span>
+                                    <span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(241,245,249,0.28)">Status</span>
+                                </div>
+                                <!-- rows -->
+                                <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); align-items: center; transition: background 0.2s; cursor: default; opacity: 1; background: transparent;">
+                                    <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(59,130,246,0.14);border:1px solid rgba(59,130,246,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#60A5FA;flex:none">BF</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Backend Fix Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Bug fixes · Backend repos</div></div></div>
+                                    <span style="font-size:13px;color:rgba(241,245,249,0.62)">Platform Eng</span>
+                                    <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#F59E0B"></span><span style="width:4px;height:10px;border-radius:1px;background:#F59E0B"></span><span style="width:4px;height:13px;border-radius:1px;background:rgba(255,255,255,0.12)"></span></div><span style="font-size:12.5px;font-weight:600;color:#FBBF24">Medium</span></div>
+                                    <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);font-size:11.5px;font-weight:600;color:#34D399">Approved</span>
+                                </div>
+                                <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); align-items: center; transition: background 0.2s; cursor: default; opacity: 1; background: transparent;">
+                                    <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(6,182,212,0.14);border:1px solid rgba(6,182,212,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#22D3EE;flex:none">RS</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Review Summary Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PR review · All repos</div></div></div>
+                                    <span style="font-size:13px;color:rgba(241,245,249,0.62)">DevEx</span>
+                                    <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#10B981"></span><span style="width:4px;height:10px;border-radius:1px;background:rgba(255,255,255,0.12)"></span><span style="width:4px;height:13px;border-radius:1px;background:rgba(255,255,255,0.12)"></span></div><span style="font-size:12.5px;font-weight:600;color:#34D399">Low</span></div>
+                                    <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);font-size:11.5px;font-weight:600;color:#60A5FA">Monitored</span>
+                                </div>
+                                <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); align-items: center; transition: background 0.2s; cursor: default; opacity: 1; background: transparent;">
+                                    <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(239,68,68,0.14);border:1px solid rgba(239,68,68,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#F87171;flex:none">LR</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Legacy Refactor Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Refactoring · Legacy core</div></div></div>
+                                    <span style="font-size:13px;color:rgba(241,245,249,0.62)">Core Eng</span>
+                                    <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#EF4444"></span><span style="width:4px;height:10px;border-radius:1px;background:#EF4444"></span><span style="width:4px;height:13px;border-radius:1px;background:#EF4444"></span></div><span style="font-size:12.5px;font-weight:600;color:#F87171">High</span></div>
+                                    <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);font-size:11.5px;font-weight:600;color:#F87171">Restricted</span>
+                                </div>
+                                <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); align-items: center; transition: background 0.2s; cursor: default; background: transparent; opacity: 1;">
+                                    <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(245,158,11,0.14);border:1px solid rgba(245,158,11,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#FBBF24;flex:none">SP</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Security Patch Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Security fixes · Sensitive repos</div></div></div>
+                                    <span style="font-size:13px;color:rgba(241,245,249,0.62)">AppSec</span>
+                                    <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#EF4444"></span><span style="width:4px;height:10px;border-radius:1px;background:#EF4444"></span><span style="width:4px;height:13px;border-radius:1px;background:#EF4444"></span></div><span style="font-size:12.5px;font-weight:600;color:#F87171">High</span></div>
+                                    <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);font-size:11.5px;font-weight:600;color:#FBBF24">Requires approval</span>
+                                </div>
+                                <div data-reg-row="true" data-r="tablerow" style="display: grid; grid-template-columns: 2.4fr 1fr 1.1fr 1.15fr; gap: 14px; padding: 15px 22px; align-items: center; transition: background 0.2s; cursor: default; opacity: 1; background: transparent;">
+                                    <div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="width:34px;height:34px;border-radius:8px;background:rgba(139,92,246,0.14);border:1px solid rgba(139,92,246,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#A78BFA;flex:none">TG</span><div style="min-width:0"><div style="font-size:14px;font-weight:600;color:#F1F5F9;line-height:1.3">Test Gen Agent</div><div style="font-size:11.5px;color:rgba(241,245,249,0.4);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Test creation · Service repos</div></div></div>
+                                    <span style="font-size:13px;color:rgba(241,245,249,0.62)">QA Platform</span>
+                                    <div style="display:flex;align-items:center;gap:9px"><div style="display:flex;align-items:flex-end;gap:2.5px"><span style="width:4px;height:7px;border-radius:1px;background:#10B981"></span><span style="width:4px;height:10px;border-radius:1px;background:rgba(255,255,255,0.12)"></span><span style="width:4px;height:13px;border-radius:1px;background:rgba(255,255,255,0.12)"></span></div><span style="font-size:12.5px;font-weight:600;color:#34D399">Low</span></div>
+                                    <span style="display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:5px 11px;border-radius:100px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);font-size:11.5px;font-weight:600;color:#34D399">Scale</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <link rel='stylesheet' id='icw-agent-card-css' href='blocks/agent-card/style.css' type='text/css' media='all' /> 
+            <section class="main-section agent-content-section bg-none bg-custom is-dark section-title-mw-800" style="--gs-bg: rgb(244,249,255);">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 col-lg-6">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">The Registry</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">A system of record for agentic development.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">A live inventory of every AI agent, connected to real code, spend, quality, and governance.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div data-anim="true" style="background: rgb(255, 255, 255); border: 1px solid rgb(219, 234, 254); border-radius: 18px; overflow: hidden; box-shadow: rgba(59, 130, 246, 0.1) 0px 4px 32px; opacity: 1; transform: translateY(0px); transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);">
+                                <div style="display:flex;align-items:center;gap:14px;padding:24px 28px;border-bottom:1px solid #EFF6FF">
+                                    <span style="width:44px;height:44px;border-radius:11px;background:rgba(59,130,246,0.12);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#2563EB;flex:none">BF</span>
+                                    <div style="flex:1"><div style="font-size:18px;font-weight:700;color:#0F172A;letter-spacing:-0.02em">Backend Fix Agent</div><div style="font-size:13px;color:#64748B;margin-top:2px">Claude Code · Platform Engineering</div></div>
+                                    <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:100px;background:#ECFDF5;border:1px solid #A7F3D0;font-size:12px;font-weight:600;color:#059669"><span style="width:7px;height:7px;border-radius:50%;background:#10B981;animation:pulseDot 2s ease infinite"></span>Approved</span>
+                                </div>
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#EFF6FF">
+                                    <div style="background:#fff;padding:18px 28px"><div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#94A3B8;margin-bottom:7px">Owner</div><div style="font-size:14px;font-weight:600;color:#0F172A">Platform Engineering</div></div>
+                                    <div style="background:#fff;padding:18px 28px"><div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#94A3B8;margin-bottom:7px">Autonomy</div><div style="font-size:14px;font-weight:600;color:#0F172A">Opens PRs · human approval</div></div>
+                                    <div style="background:#fff;padding:18px 28px"><div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#94A3B8;margin-bottom:7px">Purpose</div><div style="font-size:14px;font-weight:600;color:#0F172A">Bug fixes &amp; small backend changes</div></div>
+                                    <div style="background:#fff;padding:18px 28px"><div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#94A3B8;margin-bottom:7px">Access</div><div style="font-size:14px;font-weight:600;color:#0F172A">Backend services · non sensitive</div></div>
+                                </div>
+                                <div style="padding:22px 28px;border-top:1px solid #EFF6FF;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+                                    <div>
+                                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#94A3B8">Risk Level</span><span style="font-size:12px;font-weight:600;color:#D97706">Medium</span></div>
+                                    <div style="height:6px;background:#EFF6FF;border-radius:3px;overflow:hidden"><div data-bar="55" style="height: 100%; width: 55%; background: linear-gradient(90deg, rgb(245, 158, 11), rgb(251, 191, 36)); border-radius: 3px; transition: width 1.1s cubic-bezier(0.16, 1, 0.3, 1);"></div></div>
+                                    <div style="margin-top:14px;display:flex;align-items:center;gap:8px"><span style="font-size:12px;color:#64748B">Review policy</span><span style="font-size:12px;font-weight:600;color:#0F172A">Reviewer validation required</span></div>
+                                    </div>
+                                    <div>
+                                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><span style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#94A3B8">Quality · code survival</span><span style="font-size:12px;font-weight:600;color:#059669">Stable</span></div>
+                                    <svg width="100%" height="34" viewBox="0 0 160 34" preserveAspectRatio="none" style="display:block"><polyline data-spark="true" points="0,26 20,22 40,24 60,18 80,20 100,14 120,16 140,11 160,12" fill="none" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="120" stroke-dashoffset="120"></polyline></svg>
+                                    <div style="margin-top:8px;display:flex;align-items:center;gap:8px"><span style="font-size:12px;color:#64748B">Spend</span><span style="font-size:12px;font-weight:600;color:#0F172A">Within expected range</span></div>
+                                    </div>
+                                </div>
+                                <div style="padding:18px 28px;border-top:1px solid #EFF6FF;background:#F8FBFF;display:flex;align-items:center;gap:12px">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex:none"><circle cx="9" cy="9" r="7.25" stroke="#10B981" stroke-width="1.4"></circle><path d="M6 9l2 2 4-4.5" stroke="#10B981" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    <div><span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-right:8px">Recommendation</span><span style="font-size:14px;font-weight:600;color:#0F172A">Safe to expand to adjacent services</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                function initSparks() {
+                    if (this.reduced) {
+                        document.querySelectorAll('[data-spark]').forEach(p => { p.style.strokeDashoffset = '0'; });
+                        return;
+                    }
+                    const obs = new IntersectionObserver((entries) => {
+                        entries.forEach(e => {
+                            if (!e.isIntersecting) return;
+                            e.target.querySelectorAll('[data-spark]').forEach(p => {
+                                p.style.transition = 'stroke-dashoffset 1.4s ease';
+                                p.style.strokeDashoffset = '0';
+                            });
+                            obs.unobserve(e.target);
+                        });
+                    }, {threshold: 0.3 });
+                    document.querySelectorAll('section').forEach(s => { if (s.querySelector('[data-spark]')) obs.observe(s); });
+                }
+                const sparkSections = document.querySelectorAll('[data-spark]');
+                if (sparkSections.length) {
+                    const observer = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                initSparks();
+
+                                observer.disconnect(); // run once for all
+                            }
+                        });
+                    }, {
+                        threshold: 0.3
+                    });
+
+                    sparkSections.forEach(section => {
+                        observer.observe(section);
+                    });
+                }
+            </script>
         </main>
         <footer class="main-footer">
             <div class="container">
