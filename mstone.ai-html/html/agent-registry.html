@@ -12,10 +12,11 @@
         <meta name='robots' content='noindex, nofollow' />
 
         <!-- This site is optimized with the Yoast SEO plugin v23.8 - https://yoast.com/wordpress/plugins/seo/ -->
-        <title>Agent Governance Handover - milestone, Ltd.</title>
+        <title>Agent Registry - milestone, Ltd.</title>
         
         <link rel='stylesheet' id='icw-glightbox-css' href='assets/css/glightbox.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />           
+        <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />   
+        <link rel="stylesheet" id="icw-wow-css" href="assets/css/animate.css" media="all">        
         <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
         <script type="text/javascript" src="assets/js/splide.min.js" id="icw-splide-js"></script>
 
@@ -64,575 +65,128 @@
         </header>
         <main class="main-content-wrapper">
             <link rel='stylesheet' id='icw-agent-hero-css' href='blocks/agent-hero/style.css' type='text/css' media='all' /> 
-            <section class="main-section agent-hero-section">
+            <section class="main-section agent-hero-section bg-none bg-custom is-bg-light-glow is-dark" style="--gs-bg: rgb(40,33,26);">
                 <div class="container">
-                    <div class="hero-title">
-                        <div class="tag-line"><span class="dot"></span></soan><span>AI Agent Governance</span></div>
-                        <h1 class="title">Scale AI agents without losing control.</h1>
-                        <div class="sort-info">Govern agentic development by code impact, review depth, quality, and spend — and decide where to expand, monitor, or restrict.</div>
-                        <div class="action">
-                            <a href="#" class="btn btn-primary-only btn-md"><span class="btn-text">Book Demo</span></a>
-                            <a href="#" class="btn btn-outline-gray-only btn-md"><span class="btn-text">See Agent Observability →</span></a>
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="hero-title text-center">
+                                <div class="tag-line wow fadeInUp"><span class="dot"></span><span>AI Agent Registry</span></div>
+                                <h1 class="title wow fadeInUp" data-wow-delay="150ms">Know every agent <br class="d-none d-lg-block">in your engineering org.</h1>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="300ms">
+                                    <p>AI agents are spreading faster than teams can track them. Milestone gives leaders one registry of every agent, owner, access, cost, and governance status.</p>
+                                </div>
+                                <div class="action wow fadeInUp" data-wow-delay="450ms">
+                                    <a href="/book-a-demo/" class="btn btn-primary-only btn-md" target="_self">Book a Demo </a>
+                                    <a href="#go" class="btn btn-outline-gray-only btn-md" target="_self">Explore Agent Governance →</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="hero-bottom-content">
+                        
+                    </div>
+                </div>        
                 <div class="video-bg-block">
-                    <img src="upload/img-agent-hero-bg.svg" alt="">
-                    <canvas id="particle-animation"></canvas>
-                </div>
-                <a href="#scroll-bottom-section" class="scroll-bottom"><svg width="22" height="34" viewBox="0 0 22 34" fill="none"><rect x="1.5" y="1.5" width="19" height="31" rx="9.5" stroke="rgba(241,245,249,0.6)" stroke-width="1.5"></rect><circle cx="11" cy="10" r="3" fill="rgba(241,245,249,0.6)"></circle></svg></a>
+                    <canvas id="particle-animation" class="single-dot"></canvas>
+                </div>    
+                <a href="#go" class="scroll-target"><svg width="22" height="34" viewBox="0 0 22 34" fill="none"><rect x="1.5" y="1.5" width="19" height="31" rx="9.5" stroke="rgba(241,245,249,0.6)" stroke-width="1.5"></rect><circle cx="11" cy="10" r="3" fill="rgba(241,245,249,0.6)"></circle></svg></a>
             </section>
             <script type="text/javascript" src="blocks/agent-hero/script.js" id="icw-agent-hero-js"></script>
             <link rel='stylesheet' id='icw-agent-content-css' href='blocks/agent-content/style.css' type='text/css' media='all' /> 
-            <section class="main-section agent-content-section is-sticky-img section-title-mw-578 bg-light" id="scroll-bottom-section">
-                <div class="container">
-                    <div class="row g-80">
-                        <div class="col-lg-6">
-                            <div class="image-block with-shadow">
-                                <img src="upload/img-governance-diagram.png" alt="">
-                            </div>                    
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="section-title mb-0">
-                                <div class="tag-line">The Governance Gap</div>
-                                <h2 class="title">Let agents move fast.<span>Keep engineering in control.</span></h2>
-                                <div class="text-highlight">Activity is easy to generate.<span>Control over where it lands is not.</span></div>
-                                <div class="sort-info">Agents already commit, open PRs, and reshape your codebase. Without governance, adoption becomes unmanaged automation — with no view of where agents add risk or where human judgment must stay in the loop.</div>
-                                <div class="tags-list">
-                                    <span class="tag">Invisible autonomy</span>
-                                    <span class="tag">Weak review discipline</span>
-                                    <span class="tag">Spend drift</span>
-                                    <span class="tag">Quality debt</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <link rel='stylesheet' id='icw-agent-card-css' href='blocks/agent-card/style.css' type='text/css' media='all' /> 
-            <section class="main-section agent-card-section bg-darkblack is-light">
-                <div class="container">
-                    <div class="section-title text-center">
-                        <div class="tag-line">Agent Governance</div>
-                        <h2 class="title">See which agents to scale,<br class="d-none d-lg-block">and which to hold back.</h2>
-                        <div class="sort-info">Rank every agent by contribution, acceptance, and impact — each with a recommended posture grounded in real engineering signals.</div>
-                    </div>
-                    <div class="card-grid">
-                        <div class="icon-card">
-                            <div class="card-icon">
-                                <img src="upload/icon-rate.svg" alt="Contribution Rate">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">Contribution Rate</h3>
-                                <div class="card-info">Share of work each agent ships</div>
-                            </div>
-                        </div>
-                        <div class="icon-card">
-                            <div class="card-icon">
-                                <img src="upload/icon-acceptance-rate.svg" alt="Acceptance Rate">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">Acceptance Rate</h3>
-                                <div class="card-info">How much of the output is kept</div>
-                            </div>
-                        </div>
-                        <div class="icon-card">
-                            <div class="card-icon">
-                                <img src="upload/icon-autonomy-level.svg" alt="Autonomy Level">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">Autonomy Level</h3>
-                                <div class="card-info">How much runs unsupervised</div>
-                            </div>
-                        </div>
-                        <div class="icon-card">
-                            <div class="card-icon">
-                                <img src="upload/icon-recommended-posture.svg" alt="Recommended Posture">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">Recommended Posture</h3>
-                                <div class="card-info">Expand, monitor, or restrict</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="main-section agent-content-section section-title-mw-700  bg-light is-dark">
+            <section class="main-section agent-content-section bg-dark is-light pt-0">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-title text-center">
-                                <div class="tag-line">The Operating Model</div>
-                                <h2 class="title">Turn governance into <br class="d-none d-lg-block">an operating system.</h2>
-                                <div class="sort-info">Move from passive monitoring to active control — see what to scale, what needs guardrails, and what to pause.</div>
+                                <div class="tag-line"></div>
+                                <h2 class="title"></h2>
+                                <div class="sort-info"></div>
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <div class="image-block text-center">
-                                <img src="upload/img-operating-model-loop.svg" alt="Turn governance into an operating system">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="main-section agent-content-section section-title-mw-700 bg-darkblack is-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-title text-center">
-                                <div class="tag-line">Policy Matrix</div>
-                                <h2 class="title">Set the right control for every agent workflow.</h2>
-                                <div class="sort-info">Not every workflow needs the same control. Apply governance by real engineering signals — not blanket rules.</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Agent workflow</th>
-                                            <th>Risk</th>
-                                            <th>Milestone signal</th>
-                                            <th>Governance</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Boilerplate generation</strong></td>
-                                            <td><span class="risk risk-low">Low</span></td>
-                                            <td><small>High survival · low review</small></td>
-                                            <td>Allow broad usage</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Test creation</strong></td>
-                                            <td><span class="risk risk-low-med">Low-med</span></td>
-                                            <td><small>Improves coverage · low rework</small></td>
-                                            <td>Expand with monitoring</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Bug fixes</strong></td>
-                                            <td><span class="risk risk-medium">Medium</span></td>
-                                            <td><small>Faster cycle · mixed rework</small></td>
-                                            <td>Require reviewer validation</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Refactoring</strong></td>
-                                            <td><span class="risk risk-med-high">Med-high</span></td>
-                                            <td><small>Larger PRs · architectural</small></td>
-                                            <td>Require senior review</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Security-sensitive code</strong></td>
-                                            <td><span class="risk risk-high">High</span></td>
-                                            <td><small>Sensitive · high-risk repo</small></td>
-                                            <td>Restrict or require approval</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Legacy core changes</strong></td>
-                                            <td><span class="risk risk-high">High</span></td>
-                                            <td><small>High rework / revert rate</small></td>
-                                            <td>Limit autonomy · guardrails</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="content-bottom">
-                                <div class="info">Sample governance signals · product UI</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <link rel='stylesheet' id='icw-agent-counter-css' href='blocks/agent-counter/style.css' type='text/css' media='all' /> 
-            <section class="main-section agent-counter-section section-title-mw-700 bg-light is-dark">
-                <div class="container">
-                    <div class="section-title text-center">
-                        <div class="tag-line">Spend Governance</div>
-                        <h2 class="title">Connect agent spend to <br class="d-none d-lg-block">real engineering output. </h2>
-                        <div class="sort-info">Tie licenses, tokens, and autonomous runs to the output they produce — and govern with confidence.</div>
-                    </div>
-                    <div class="card-grid">
-                        <div class="counter-card">
-                            <div class="card-body">
-                                <div class="card-title">Cost / merged PR</div>
-                                <h3 class="counter count-number" data-countto="38.9" data-duration="2500">$<span>0</span></h3>
-                                <div class="card-info">22% lower QoQ</div>
-                            </div>
-                        </div>
-                        <div class="counter-card">
-                            <div class="card-body">
-                                <div class="card-title">Spend / developer</div>
-                                <h3 class="counter count-number" data-countto="117" data-duration="2500">$<span>0</span></h3>
-                                <div class="card-info">412 active seats</div>
-                            </div>
-                        </div>
-                        <div class="counter-card">
-                            <div class="card-body">
-                                <div class="card-title">Reclaimable / mo</div>
-                                <h3 class="counter count-number" data-countto="3240" data-duration="2500">$<span>0</span></h3>
-                                <div class="card-info">41 idle seats flagged</div>
-                            </div>
-                        </div>
-                        <div class="counter-card">
-                            <div class="card-body">
-                                <div class="card-title">Return on AI spend</div>
-                                <h3 class="counter count-number" data-countto="3.4" data-duration="2500"><span>0</span><small>×</small></h3>
-                                <div class="card-info">value returned / dollar</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-bottom">
-                        <div class="info">Sample dashboard metrics · product UI</div>
-                    </div>
-                </div>
-            </section>
-            <link rel='stylesheet' id='icw-agent-review-css' href='blocks/agent-review/style.css' type='text/css' media='all' /> 
-            <section class="main-section agent-review-section section-title-mw-700 bg-darkblack is-light">
-                <div class="container">
-                    <div class="row g-80 align-items-center">
-                        <div class="col-lg-6">
-                            <div class="section-title">
-                                <div class="tag-line">Review Governance</div>
-                                <h2 class="title">Keep humans in control where judgment matters.</h2>
-                                <div class="sort-info">Track whether senior engineers are genuinely reviewing agent work — where review load is rising and where agent PRs need extra correction.</div> 
-                            </div>                               
-                            <div class="review-counter-block">                           
-                                <div class="card-grid">
-                                    <div class="counter-card">
-                                        <div class="card-body">
-                                            <h3 class="counter count-number" data-countto="14" data-duration="2500">-<span>0</span>%</h3>
-                                            <div class="card-info">Review depth · agent PRs</div>
-                                        </div>
+                            <div class="wow fadeInUp" data-wow-delay="150ms" style="background:linear-gradient(180deg,rgba(13,18,34,0.92),rgba(7,10,20,0.92));border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(2,8,24,0.9),0 0 0 1px rgba(59,130,246,0.04)">
+                                <!-- cockpit header -->
+                                <div style="display:flex;align-items:center;gap:12px;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,0.06)">
+                                    <svg width="18" height="15" viewBox="0 0 63 51" fill="none"><path d="M20.7449 8.61306V50.6084H5.29505V19.8131L0 18.5633V3.71509L20.7449 8.61306Z" fill="#3B82F6"></path><path d="M41.7745 4.96484V50.6084H26.3246V8.61303L41.7745 4.96484Z" fill="#60A5FA"></path><path d="M62.803 0V50.6084H47.3531V3.64819L62.803 0Z" fill="#93C5FD"></path></svg>
+                                    <span style="font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:rgba(241,245,249,0.6);white-space:nowrap">Agent Registry · System of Record</span>
+                                    <div style="margin-left:auto;display:flex;align-items:center;gap:7px"><div style="width:6px;height:6px;border-radius:50%;background:#10B981;animation:pulseDot 1.6s ease infinite"></div><span style="font-size:11px;color:rgba(241,245,249,0.4)">live · sample data</span></div>
+                                </div>
+                                <!-- sample KPI strip -->
+                                <div data-counter-section="true" data-r="kpi" style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.06)">
+                                    <div style="background:#0a0e1a;padding:18px 16px"><div style="display:flex;align-items:baseline;gap:3px"><span data-count="47" style="font-size:30px;font-weight:700;letter-spacing:-0.03em;color:#F1F5F9;line-height:1">0</span></div><div style="font-size:11.5px;color:rgba(241,245,249,0.45);margin-top:6px">active agents detected</div></div>
+                                    <div style="background:#0a0e1a;padding:18px 16px"><div style="display:flex;align-items:baseline;gap:1px"><span data-count="82" style="font-size:30px;font-weight:700;letter-spacing:-0.03em;color:#3B82F6;line-height:1">0</span><span style="font-size:18px;font-weight:600;color:#3B82F6">%</span></div><div style="font-size:11.5px;color:rgba(241,245,249,0.45);margin-top:6px">assigned a team owner</div></div>
+                                    <div style="background:#0a0e1a;padding:18px 16px"><div style="display:flex;align-items:baseline;gap:3px"><span data-count="6" style="font-size:30px;font-weight:700;letter-spacing:-0.03em;color:#EF4444;line-height:1">0</span></div><div style="font-size:11.5px;color:rgba(241,245,249,0.45);margin-top:6px">touch sensitive repos</div></div>
+                                    <div style="background:#0a0e1a;padding:18px 16px"><div style="display:flex;align-items:baseline;gap:3px"><span data-count="11" style="font-size:30px;font-weight:700;letter-spacing:-0.03em;color:#F59E0B;line-height:1">0</span></div><div style="font-size:11.5px;color:rgba(241,245,249,0.45);margin-top:6px">require review policy</div></div>
+                                    <div style="background:#0a0e1a;padding:18px 16px"><div style="display:flex;align-items:baseline;gap:3px"><span data-count="4" style="font-size:30px;font-weight:700;letter-spacing:-0.03em;color:#8B5CF6;line-height:1">0</span></div><div style="font-size:11.5px;color:rgba(241,245,249,0.45);margin-top:6px">above cost band</div></div>
+                                </div>
+                                <!-- cockpit flow -->
+                                <div style="padding:26px 22px 28px">
+                                    <!-- intake row -->
+                                    <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:center;margin-bottom:6px">
+                                        <span style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(241,245,249,0.3);margin-right:6px">Detected</span>
+                                        <span style="padding:6px 12px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);border-radius:8px;font-size:12px;font-weight:600;color:#93C5FD">Cursor</span>
+                                        <span style="padding:6px 12px;background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.25);border-radius:8px;font-size:12px;font-weight:600;color:#67E8F9">Copilot</span>
+                                        <span style="padding:6px 12px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);border-radius:8px;font-size:12px;font-weight:600;color:#93C5FD">Claude Code</span>
+                                        <span style="padding:6px 12px;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:8px;font-size:12px;font-weight:600;color:#FBBF24">Codex</span>
+                                        <span style="padding:6px 12px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);border-radius:8px;font-size:12px;font-weight:600;color:#34D399">Devin</span>
+                                        <span style="padding:6px 12px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.25);border-radius:8px;font-size:12px;font-weight:600;color:#A78BFA">Qodo</span>
+                                        <span style="padding:6px 12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:8px;font-size:12px;font-weight:600;color:rgba(241,245,249,0.7)">Internal Agents</span>
                                     </div>
-                                    <div class="counter-card">
-                                        <div class="card-body">
-                                            <h3 class="counter count-number" data-countto="38" data-duration="2500"><span>0</span>%</h3>
-                                            <div class="card-info">Senior involvement</div>
+                                    <!-- trails -->
+                                    <svg width="100%" height="38" viewBox="0 0 1100 38" data-r="trail" preserveAspectRatio="none" style="display:block">
+                                        <line x1="160" y1="0" x2="200" y2="38" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 5" style="animation:trailDown 1.4s linear infinite;opacity:0.45"></line>
+                                        <line x1="320" y1="0" x2="360" y2="38" stroke="#06B6D4" stroke-width="1" stroke-dasharray="5 5" style="animation:trailDown 1.7s linear infinite 0.2s;opacity:0.4"></line>
+                                        <line x1="500" y1="0" x2="500" y2="38" stroke="#93C5FD" stroke-width="1" stroke-dasharray="5 5" style="animation:trailDown 1.5s linear infinite 0.1s;opacity:0.45"></line>
+                                        <line x1="680" y1="0" x2="640" y2="38" stroke="#F59E0B" stroke-width="1" stroke-dasharray="5 5" style="animation:trailDown 1.8s linear infinite 0.35s;opacity:0.35"></line>
+                                        <line x1="820" y1="0" x2="760" y2="38" stroke="#10B981" stroke-width="1" stroke-dasharray="5 5" style="animation:trailDown 1.6s linear infinite 0.25s;opacity:0.4"></line>
+                                        <line x1="940" y1="0" x2="900" y2="38" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="5 5" style="animation:trailDown 1.9s linear infinite 0.15s;opacity:0.35"></line>
+                                    </svg>
+                                    <!-- registry layers -->
+                                    <div data-r="layers" style="position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:4px 0">
+                                        <div style="background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.18);border-radius:12px;padding:16px 16px 14px">
+                                            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#60A5FA;margin-bottom:12px">01 · Identity</div>
+                                            <div style="font-size:13px;font-weight:600;color:#F1F5F9;margin-bottom:8px">Backend Fix Agent</div>
+                                            <div style="display:flex;flex-direction:column;gap:5px;font-size:11.5px;color:rgba(241,245,249,0.5)"><span>Type · Code agent</span><span>Vendor · Claude Code</span><span>Purpose · Bug fixes</span></div>
                                         </div>
+                                        <div style="background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.18);border-radius:12px;padding:16px 16px 14px">
+                                            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#22D3EE;margin-bottom:12px">02 · Ownership</div>
+                                            <div style="font-size:13px;font-weight:600;color:#F1F5F9;margin-bottom:8px">Platform Engineering</div>
+                                            <div style="display:flex;flex-direction:column;gap:5px;font-size:11.5px;color:rgba(241,245,249,0.5)"><span>Owner · J. Okafor</span><span>Team · Platform</span><span>Escalation · On call</span></div>
+                                        </div>
+                                        <div style="background:rgba(139,92,246,0.05);border:1px solid rgba(139,92,246,0.18);border-radius:12px;padding:16px 16px 14px">
+                                            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#A78BFA;margin-bottom:12px">03 · Permissions</div>
+                                            <div style="font-size:13px;font-weight:600;color:#F1F5F9;margin-bottom:8px">Scoped access</div>
+                                            <div style="display:flex;flex-direction:column;gap:5px;font-size:11.5px;color:rgba(241,245,249,0.5)"><span>Repos · Backend services</span><span>APIs · Internal only</span><span>Sensitive · None</span></div>
+                                        </div>
+                                        <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.18);border-radius:12px;padding:16px 16px 14px">
+                                            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#34D399;margin-bottom:12px">04 · Status</div>
+                                            <div style="position:relative;height:22px;margin-bottom:10px">
+                                            <span style="position:absolute;inset:0;display:inline-flex;align-items:center;gap:6px;animation:regOut 5s ease infinite"><span style="width:7px;height:7px;border-radius:50%;background:#F59E0B"></span><span style="font-size:13px;font-weight:600;color:#FBBF24">Unregistered</span></span>
+                                            <span style="position:absolute;inset:0;display:inline-flex;align-items:center;gap:6px;animation:regIn 5s ease infinite"><span style="width:7px;height:7px;border-radius:50%;background:#10B981"></span><span style="font-size:13px;font-weight:600;color:#34D399">Approved</span></span>
+                                            </div>
+                                            <div style="display:flex;flex-direction:column;gap:5px;font-size:11.5px;color:rgba(241,245,249,0.5)"><span>Risk · Medium</span><span>Review · Required</span><span>Cost · In band</span></div>
+                                        </div>
+                                        <!-- scan line -->
+                                        <div id="ar-scan" data-r="scan" style="position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,rgba(96,165,250,0.9),transparent);box-shadow:0 0 12px rgba(96,165,250,0.6);animation:scanY 4s ease-in-out infinite;--scan:150px;pointer-events:none"></div>
                                     </div>
-                                    <div class="counter-card">
-                                        <div class="card-body">
-                                            <h3 class="counter count-number" data-countto="21" data-duration="2500"><span>0</span>%</h3>
-                                            <div class="card-info">Post-review changes</div>
-                                        </div>
-                                    </div>
-                                    <div class="counter-card">
-                                        <div class="card-body">
-                                            <h3 class="counter count-number" data-countto="86" data-duration="2500"><span>0</span>%</h3>
-                                            <div class="card-info">Code survival · 30d</div>
-                                        </div>
+                                    <!-- downstream connectors -->
+                                    <svg width="100%" height="30" viewBox="0 0 1100 30" data-r="trail" preserveAspectRatio="none" style="display:block;margin-top:4px">
+                                        <line x1="200" y1="0" x2="220" y2="30" stroke="rgba(255,255,255,0.18)" stroke-width="1" stroke-dasharray="4 4" style="animation:dashFlowSlow 4s linear infinite"></line>
+                                        <line x1="460" y1="0" x2="470" y2="30" stroke="rgba(255,255,255,0.18)" stroke-width="1" stroke-dasharray="4 4" style="animation:dashFlowSlow 4.4s linear infinite 0.3s"></line>
+                                        <line x1="640" y1="0" x2="630" y2="30" stroke="rgba(255,255,255,0.18)" stroke-width="1" stroke-dasharray="4 4" style="animation:dashFlowSlow 4.2s linear infinite 0.5s"></line>
+                                        <line x1="900" y1="0" x2="880" y2="30" stroke="rgba(255,255,255,0.18)" stroke-width="1" stroke-dasharray="4 4" style="animation:dashFlowSlow 4.6s linear infinite 0.2s"></line>
+                                    </svg>
+                                    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px" data-r="down4">
+                                        <div style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:10px"><span style="width:7px;height:7px;border-radius:50%;background:#3B82F6"></span><span style="font-size:12px;font-weight:600;color:rgba(241,245,249,0.75)">Observability</span></div>
+                                        <div style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:10px"><span style="width:7px;height:7px;border-radius:50%;background:#10B981"></span><span style="font-size:12px;font-weight:600;color:rgba(241,245,249,0.75)">Governance</span></div>
+                                        <div style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:10px"><span style="width:7px;height:7px;border-radius:50%;background:#8B5CF6"></span><span style="font-size:12px;font-weight:600;color:rgba(241,245,249,0.75)">Spend</span></div>
+                                        <div style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:10px"><span style="width:7px;height:7px;border-radius:50%;background:#06B6D4"></span><span style="font-size:12px;font-weight:600;color:rgba(241,245,249,0.75)">Quality</span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="step-block">
-                                <div class="title">Agent PR · Governed Lifecycle</div>
-                                <ul class="steps-list">
-                                    <li><strong>Agent Contribution</strong>Agent pushes code; Milestone tags repo, workflow & risk</li>
-                                    <li><strong>Policy Check</strong>High-risk path → senior approval required before merge</li>
-                                    <li><strong>Human Review</strong>Senior engineer reviews; depth tracked, not rubber-stamped</li>
-                                    <li><strong>Merged & Tracked</strong>Ships with attribution; survival & rework monitored</li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="main-section agent-content-section section-title-mw-700 is-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="section-title">
-                                <div class="tag-line">THE CHALLENGE</div>
-                                <h2 class="title">AI activity is everywhere. Impact is harder to see.</h2>
-                                <div class="sort-info">As AI agents flood your repositories with commits, pull requests, and code changes, the signal gets buried in the noise. Teams can't tell what's actually moving the needle.</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="activity-card">
-                                <div class="activity-table-wrapper">
-                                    <div class="activity-table-header">
-                                        <div><svg width="38" height="10" viewBox="0 0 38 10" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="10" height="10" rx="5" fill="#EF4444"/><rect x="28" width="10" height="10" rx="5" fill="#10B981"/><rect x="14" width="10" height="10" rx="5" fill="#F59E0B"/></svg></div>
-                                        <div>LIVE ACTIVITY FEED</div>
-                                        <div><span class="dot"></span>Live</div>
-                                    </div>
-                                    <div class="activity-lists">
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-blue">CC</div>
-                                            <div class="info">
-                                                <span class="activity-title">claude-code → api-service PR #4821 merged</span>
-                                                <span class="activity-count">just now · +3,247 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-purple">CU</div>
-                                            <div class="info">
-                                                <span class="activity-title">cursor-agent → frontend  47 files modified</span>
-                                                <span class="activity-count">1m ago · 1,203 changes</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-cyan">CP</div>
-                                            <div class="info">
-                                                <span class="activity-title">copilot → backend  31 suggestions accepted</span>
-                                                <span class="activity-count">1m ago · +892 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-green">DV</div>
-                                            <div class="info">
-                                                <span class="activity-title">devin → ml-pipeline  PR #891 opened</span>
-                                                <span class="activity-count">2m ago · +2,103 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-blue">CC</div>
-                                            <div class="info">
-                                                <span class="activity-title">claude-code → auth  commit bc27e1f</span>
-                                                <span class="activity-count">2m ago · +145 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-purple">CU</div>
-                                            <div class="info">
-                                                <span class="activity-title">cursor-agent → database  schema updated</span>
-                                                <span class="activity-count">3m ago · 12 tables modified</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-yellow">CX</div>
-                                            <div class="info">
-                                                <span class="activity-title">codex → mobile  89 files modified</span>
-                                                <span class="activity-count">3m ago · +4,521 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-cyan">CP</div>
-                                            <div class="info">
-                                                <span class="activity-title">copilot → api  PR #4822 opened</span>
-                                                <span class="activity-count">4m ago · +892 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-blue">CC</div>
-                                            <div class="info">
-                                                <span class="activity-title">claude-code → api-service PR #4821 merged</span>
-                                                <span class="activity-count">just now · +3,247 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-purple">CU</div>
-                                            <div class="info">
-                                                <span class="activity-title">cursor-agent → frontend  47 files modified</span>
-                                                <span class="activity-count">1m ago · 1,203 changes</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-cyan">CP</div>
-                                            <div class="info">
-                                                <span class="activity-title">copilot → backend  31 suggestions accepted</span>
-                                                <span class="activity-count">1m ago · +892 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-green">DV</div>
-                                            <div class="info">
-                                                <span class="activity-title">devin → ml-pipeline  PR #891 opened</span>
-                                                <span class="activity-count">2m ago · +2,103 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-blue">CC</div>
-                                            <div class="info">
-                                                <span class="activity-title">claude-code → auth  commit bc27e1f</span>
-                                                <span class="activity-count">2m ago · +145 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-purple">CU</div>
-                                            <div class="info">
-                                                <span class="activity-title">cursor-agent → database  schema updated</span>
-                                                <span class="activity-count">3m ago · 12 tables modified</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-yellow">CX</div>
-                                            <div class="info">
-                                                <span class="activity-title">codex → mobile  89 files modified</span>
-                                                <span class="activity-count">3m ago · +4,521 lines</span>
-                                            </div>
-                                        </div>
-                                        <div class="activity-item">
-                                            <div class="activity-badge badge-cyan">CP</div>
-                                            <div class="info">
-                                                <span class="activity-title">copilot → api  PR #4822 opened</span>
-                                                <span class="activity-count">4m ago · +892 lines</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <style>.activity-card{max-height:480px;width:100%;overflow:hidden;border:1px solid #DBEAFE;border-radius:16px;-webkit-box-shadow:0 1px 3px rgba(59,130,246,0.08),0 10px 28px rgba(59,130,246,0.07);box-shadow:0 1px 3px rgba(59,130,246,0.08),0 10px 28px rgba(59,130,246,0.07);position:relative}.activity-card::before{content:'';width:100%;height:150px;display:block;background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(240,246,255,0)), to(#f0f6ff));background-image:linear-gradient(180deg, rgba(240,246,255,0) 0%, #f0f6ff 100%);position:absolute;bottom:0;left:0;z-index:2}.activity-card .activity-table-wrapper .activity-table-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:20px 15px;border-bottom:1px solid #EFF6FF;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#94A3B8;gap:20px;line-height:1;z-index:2;position:relative;background-color:#ffffff}.activity-card .activity-table-wrapper .activity-table-header div{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:10px}.activity-card .activity-table-wrapper .activity-table-header div .dot{width:3px;height:3px;background:#EF4444;border-radius:50%;-webkit-animation:pulseDot 2s ease infinite;animation:pulseDot 2s ease infinite}.activity-card .activity-table-wrapper .activity-table-header div:last-child{margin-left:auto;text-transform:capitalize}.activity-card .activity-table-wrapper .activity-lists{-webkit-animation:actScroll 12s linear infinite;animation:actScroll 12s linear infinite;z-index:1;position:relative;padding:0 15px}.activity-card .activity-table-wrapper .activity-lists .activity-item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #eff6ff}.activity-card .activity-table-wrapper .activity-lists .activity-item .activity-badge{width:24px;height:24px;border-radius:6px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-negative:0;flex-shrink:0;font-size:8px;font-weight:700}.activity-card .activity-table-wrapper .activity-lists .activity-item .activity-badge.badge-blue{background:rgba(59,130,246,0.15);color:#3b82f6}.activity-card .activity-table-wrapper .activity-lists .activity-item .activity-badge.badge-purple{background:rgba(139,92,246,0.15);color:#8b5cf6}.activity-card .activity-table-wrapper .activity-lists .activity-item .activity-badge.badge-cyan{background:rgba(6,182,212,0.15);color:#06b6d4}.activity-card .activity-table-wrapper .activity-lists .activity-item .activity-badge.badge-green{background:rgba(16,185,129,0.15);color:#10b981}.activity-card .activity-table-wrapper .activity-lists .activity-item .activity-badge.badge-yellow{background:rgba(245,158,11,0.15);color:#f59e0b}.activity-card .activity-table-wrapper .activity-lists .activity-item .info{line-height:1}.activity-card .activity-table-wrapper .activity-lists .activity-item .info .activity-title{font-size:12px;color:#1e293b;display:block}.activity-card .activity-table-wrapper .activity-lists .activity-item .info .activity-count{font-size:11px;color:#94a3b8;white-space:nowrap}@-webkit-keyframes pulseDot{0%, 100%{-webkit-transform:scale(1);transform:scale(1);opacity:0.6}50%{-webkit-transform:scale(1.6);transform:scale(1.6);opacity:1}}@keyframes pulseDot{0%, 100%{-webkit-transform:scale(1);transform:scale(1);opacity:0.6}50%{-webkit-transform:scale(1.6);transform:scale(1.6);opacity:1}}@-webkit-keyframes actScroll{from{-webkit-transform:translateY(0);transform:translateY(0)}to{-webkit-transform:translateY(-50%);transform:translateY(-50%)}}@keyframes actScroll{from{-webkit-transform:translateY(0);transform:translateY(0)}to{-webkit-transform:translateY(-50%);transform:translateY(-50%)}}</style>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="main-section agent-content-section section-title-mw-700 bg-darkblack is-light" id="eco-system">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="section-title">
-                                <div class="tag-line">Policy Matrix</div>
-                                <h2 class="title">Set the right control for every agent workflow.</h2>
-                                <div class="sort-info">Not every workflow needs the same control. Apply governance by real engineering signals — not blanket rules.</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <svg viewBox="0 0 480 480" width="460" height="460" style="overflow:visible" id="ecoSvg">
-                                <line class="el" x1="240" y1="240" x2="240" y2="60" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="345" y2="94" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="411" y2="184" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="411" y2="296" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="345" y2="386" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="240" y2="420" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="135" y2="386" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="69" y2="296" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="69" y2="184" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <line class="el" x1="240" y1="240" x2="135" y2="94" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 4" style="opacity:0"></line>
-                                <circle cx="240" cy="240" r="44" fill="rgba(59,130,246,0.08)" stroke="#3B82F6" stroke-width="1.5"></circle>
-                                <circle cx="240" cy="240" r="52" fill="none" stroke="rgba(59,130,246,0.15)" stroke-width="1" stroke-dasharray="3 3"></circle>
-                                <text x="240" y="236" text-anchor="middle" fill="#F1F5F9" font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="0.05em">MILESTONE</text>
-                                <text x="240" y="251" text-anchor="middle" fill="rgba(241,245,249,0.6)" font-family="Inter, sans-serif" font-size="9">governance</text>
-                                <g><circle cx="240" cy="60" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></circle><text x="240" y="58" text-anchor="middle" fill="rgba(241,245,249,0.7)" font-family="Inter, sans-serif" font-size="9" font-weight="600">GitHub</text><text x="240" y="69" text-anchor="middle" fill="rgba(241,245,249,0.35)" font-family="Inter, sans-serif" font-size="7.5">git host</text></g>
-                                <g><circle cx="345" cy="94" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></circle><text x="345" y="92" text-anchor="middle" fill="rgba(241,245,249,0.7)" font-family="Inter, sans-serif" font-size="9" font-weight="600">GitLab</text><text x="345" y="103" text-anchor="middle" fill="rgba(241,245,249,0.35)" font-family="Inter, sans-serif" font-size="7.5">git host</text></g>
-                                <g><circle cx="411" cy="184" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></circle><text x="411" y="182" text-anchor="middle" fill="rgba(241,245,249,0.7)" font-family="Inter, sans-serif" font-size="9" font-weight="600">Bitbucket</text><text x="411" y="193" text-anchor="middle" fill="rgba(241,245,249,0.35)" font-family="Inter, sans-serif" font-size="7.5">git host</text></g>
-                                <g><circle cx="411" cy="296" r="28" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.25)" stroke-width="1"></circle><text x="411" y="293" text-anchor="middle" fill="rgba(96,165,250,0.9)" font-family="Inter, sans-serif" font-size="8.5" font-weight="600">Claude</text><text x="411" y="304" text-anchor="middle" fill="rgba(96,165,250,0.5)" font-family="Inter, sans-serif" font-size="7.5">agent</text></g>
-                                <g><circle cx="345" cy="386" r="28" fill="rgba(139,92,246,0.06)" stroke="rgba(139,92,246,0.25)" stroke-width="1"></circle><text x="345" y="384" text-anchor="middle" fill="rgba(167,139,250,0.9)" font-family="Inter, sans-serif" font-size="9" font-weight="600">Cursor</text><text x="345" y="395" text-anchor="middle" fill="rgba(167,139,250,0.5)" font-family="Inter, sans-serif" font-size="7.5">agent</text></g>
-                                <g><circle cx="240" cy="420" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></circle><text x="240" y="418" text-anchor="middle" fill="rgba(241,245,249,0.7)" font-family="Inter, sans-serif" font-size="9" font-weight="600">Copilot</text><text x="240" y="429" text-anchor="middle" fill="rgba(241,245,249,0.35)" font-family="Inter, sans-serif" font-size="7.5">agent</text></g>
-                                <g><circle cx="135" cy="386" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></circle><text x="135" y="384" text-anchor="middle" fill="rgba(241,245,249,0.7)" font-family="Inter, sans-serif" font-size="9" font-weight="600">Jira</text><text x="135" y="395" text-anchor="middle" fill="rgba(241,245,249,0.35)" font-family="Inter, sans-serif" font-size="7.5">project</text></g>
-                                <g><circle cx="69" cy="296" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></circle><text x="69" y="294" text-anchor="middle" fill="rgba(241,245,249,0.7)" font-family="Inter, sans-serif" font-size="9" font-weight="600">Linear</text><text x="69" y="305" text-anchor="middle" fill="rgba(241,245,249,0.35)" font-family="Inter, sans-serif" font-size="7.5">project</text></g>
-                                <g><circle cx="69" cy="184" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></circle><text x="69" y="182" text-anchor="middle" fill="rgba(241,245,249,0.7)" font-family="Inter, sans-serif" font-size="9" font-weight="600">Slack</text><text x="69" y="193" text-anchor="middle" fill="rgba(241,245,249,0.35)" font-family="Inter, sans-serif" font-size="7.5">comms</text></g>
-                                <g><circle cx="135" cy="94" r="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></circle><text x="135" y="92" text-anchor="middle" fill="rgba(241,245,249,0.7)" font-family="Inter, sans-serif" font-size="9" font-weight="600">Datadog</text><text x="135" y="103" text-anchor="middle" fill="rgba(241,245,249,0.35)" font-family="Inter, sans-serif" font-size="7.5">monitor</text></g>
-                            </svg>
-                            <script>    
-                                function playEco(){
-                                    const lines=document.querySelectorAll('#ecoSvg line.el');
-                                    lines.forEach((l,i)=>setTimeout(()=>l.style.opacity='0.3',i*90+30));
-                                }
-                                const ecoSection = document.getElementById('eco-system');
-                                let ecoPlayed = false;
-
-                                const observerEcoSystem = new IntersectionObserver((entries) => {
-                                    entries.forEach(entry => {
-                                        if (!entry.isIntersecting || ecoPlayed) return;
-
-                                        const rect = entry.target.getBoundingClientRect();
-
-                                        if (rect.top <= window.innerHeight * 0.3) {
-                                            ecoPlayed = true;
-                                            playEco();
-                                            observerEcoSystem.unobserve(entry.target);
-                                        }
-                                    });
-                                }, {
-                                    threshold: 0
-                                });
-                                observerEcoSystem.observe(ecoSection);
-                            </script>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="main-section agent-content-section section-title-mw-700 bg-darkblack is-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="section-title">
-                                <div class="tag-line">Policy Matrix</div>
-                                <h2 class="title">Set the right control for every agent workflow.</h2>
-                                <div class="sort-info">Not every workflow needs the same control. Apply governance by real engineering signals — not blanket rules.</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="table-block">
-                                <style>
-                                    .progress-bar-fill {transform-box: fill-box;transform-origin: left center;transform: scaleX(0);transition: transform 1.4s ease;}
-                                    .progress-bar-fill.animate {transform: scaleX(1);}
-                                </style>
-                                <svg class="progress-svg" width="650" height="261" viewBox="0 0 650 261" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M633.5 0.5H16.5C7.66344 0.5 0.5 7.66344 0.5 16.5V244.5C0.5 253.337 7.66344 260.5 16.5 260.5H633.5C642.337 260.5 649.5 253.337 649.5 244.5V16.5C649.5 7.66344 642.337 0.5 633.5 0.5Z" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.07"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.22" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="20.5" y="28.1364">#</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.22" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="62.5" y="28.1364">AGENT</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.22" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="360.5" y="28.1364">CONTRIBUTIONS</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.22" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="445.344" y="28.1364">ACC.</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.22" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="594.92" y="28.1364">SCORE</tspan></text>
-                                    <path d="M0.5 42.5H649.5" stroke="white" stroke-opacity="0.06"/>
-                                    <path d="M649.5 42.5H0.5V85.5H649.5V42.5Z" fill="#3B82F6" fill-opacity="0.05"/>
-                                    <text fill="#3B82F6" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="12" font-weight="bold" letter-spacing="0em"><tspan x="20.5" y="69.3636">1</tspan></text>
-                                    <path d="M72.5 52.5H58.5C55.1863 52.5 52.5 55.1863 52.5 58.5V72.5C52.5 75.8137 55.1863 78.5 58.5 78.5H72.5C75.8137 78.5 78.5 75.8137 78.5 72.5V58.5C78.5 55.1863 75.8137 52.5 72.5 52.5Z" fill="#3B82F6" fill-opacity="0.18"/>
-                                    <text fill="#60A5FA" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="8.5" font-weight="bold" letter-spacing="0em"><tspan x="59.1084" y="69.0909">CC</tspan></text>
-                                    <text fill="#F1F5F9" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="90.5" y="69.2273">Claude Code</tspan></text>
-                                    <path class="progress-bar-track" d="M369 62.5H222C221.172 62.5 220.5 63.1716 220.5 64C220.5 64.8284 221.172 65.5 222 65.5H369C369.828 65.5 370.5 64.8284 370.5 64C370.5 63.1716 369.828 62.5 369 62.5Z" fill="white" fill-opacity="0.08"/>
-                                    <path class="progress-bar-fill" d="M369 62.5H222C221.172 62.5 220.5 63.1716 220.5 64C220.5 64.8284 221.172 65.5 222 65.5H369C369.828 65.5 370.5 64.8284 370.5 64C370.5 63.1716 369.828 62.5 369 62.5Z" fill="url(#paint0_linear_4585_2347)"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.45" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" letter-spacing="0em"><tspan x="378.5" y="67">2,847</tspan></text>
-                                    <text fill="#F1F5F9" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="456.218" y="69.2273">94%</tspan></text>
-                                    <text fill="#10B981" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="611.002" y="69.0909">98</tspan></text>
-                                    <path d="M0.5 85.5H649.5" stroke="white" stroke-opacity="0.04"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.28" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="12" font-weight="bold" letter-spacing="0em"><tspan x="20.5" y="112.364">2</tspan></text>
-                                    <path d="M72.5 95.5H58.5C55.1863 95.5 52.5 98.1863 52.5 101.5V115.5C52.5 118.814 55.1863 121.5 58.5 121.5H72.5C75.8137 121.5 78.5 118.814 78.5 115.5V101.5C78.5 98.1863 75.8137 95.5 72.5 95.5Z" fill="#06B6D4" fill-opacity="0.14"/>
-                                    <text fill="#06B6D4" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="8.5" font-weight="bold" letter-spacing="0em"><tspan x="59.5525" y="112.091">CP</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.85" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="90.5" y="112.227">Copilot</tspan></text>
-                                    <path class="progress-bar-track" d="M369 105.5H222C221.172 105.5 220.5 106.172 220.5 107C220.5 107.828 221.172 108.5 222 108.5H369C369.828 108.5 370.5 107.828 370.5 107C370.5 106.172 369.828 105.5 369 105.5Z" fill="white" fill-opacity="0.08"/>
-                                    <path class="progress-bar-fill" d="M319.5 105.5H222C221.172 105.5 220.5 106.172 220.5 107C220.5 107.828 221.172 108.5 222 108.5H319.5C320.328 108.5 321 107.828 321 107C321 106.172 320.328 105.5 319.5 105.5Z" fill="#06B6D4"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.45" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" letter-spacing="0em"><tspan x="378.5" y="110">1,923</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.7" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="456.751" y="112.227">87%</tspan></text>
-                                    <text fill="#3B82F6" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="610.756" y="112.091">84</tspan></text>
-                                    <path d="M0.5 128.5H649.5" stroke="white" stroke-opacity="0.04"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.28" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="12" font-weight="bold" letter-spacing="0em"><tspan x="20.5" y="155.364">3</tspan></text>
-                                    <path d="M72.5 138.5H58.5C55.1863 138.5 52.5 141.186 52.5 144.5V158.5C52.5 161.814 55.1863 164.5 58.5 164.5H72.5C75.8137 164.5 78.5 161.814 78.5 158.5V144.5C78.5 141.186 75.8137 138.5 72.5 138.5Z" fill="#8B5CF6" fill-opacity="0.14"/>
-                                    <text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="8.5" font-weight="bold" letter-spacing="0em"><tspan x="59.2039" y="155.091">CU</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.85" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="90.5" y="155.227">Cursor</tspan></text>
-                                    <path class="progress-bar-track" d="M369 148.5H222C221.172 148.5 220.5 149.172 220.5 150C220.5 150.828 221.172 151.5 222 151.5H369C369.828 151.5 370.5 150.828 370.5 150C370.5 149.172 369.828 148.5 369 148.5Z" fill="white" fill-opacity="0.08"/>
-                                    <path class="progress-bar-fill" d="M295.5 148.5H222C221.172 148.5 220.5 149.172 220.5 150C220.5 150.828 221.172 151.5 222 151.5H295.5C296.328 151.5 297 150.828 297 150C297 149.172 296.328 148.5 295.5 148.5Z" fill="#8B5CF6"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.45" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" letter-spacing="0em"><tspan x="378.5" y="153">1,456</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.7" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="457.437" y="155.227">81%</tspan></text>
-                                    <text fill="#3B82F6" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="612.15" y="155.091">76</tspan></text>
-                                    <path d="M0.5 171.5H649.5" stroke="white" stroke-opacity="0.04"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.28" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="12" font-weight="bold" letter-spacing="0em"><tspan x="20.5" y="198.364">4</tspan></text>
-                                    <path d="M72.5 181.5H58.5C55.1863 181.5 52.5 184.186 52.5 187.5V201.5C52.5 204.814 55.1863 207.5 58.5 207.5H72.5C75.8137 207.5 78.5 204.814 78.5 201.5V187.5C78.5 184.186 75.8137 181.5 72.5 181.5Z" fill="#10B981" fill-opacity="0.14"/>
-                                    <text fill="#10B981" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="8.5" font-weight="bold" letter-spacing="0em"><tspan x="59.4031" y="198.091">DV</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.85" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="90.5" y="198.227">Devin</tspan></text>
-                                    <path class="progress-bar-track" d="M369 191.5H222C221.172 191.5 220.5 192.172 220.5 193C220.5 193.828 221.172 194.5 222 194.5H369C369.828 194.5 370.5 193.828 370.5 193C370.5 192.172 369.828 191.5 369 191.5Z" fill="white" fill-opacity="0.08"/>
-                                    <path class="progress-bar-fill" d="M265.5 191.5H222C221.172 191.5 220.5 192.172 220.5 193C220.5 193.828 221.172 194.5 222 194.5H265.5C266.328 194.5 267 193.828 267 193C267 192.172 266.328 191.5 265.5 191.5Z" fill="#10B981"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.45" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" letter-spacing="0em"><tspan x="378.5" y="196">892</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.7" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="456.872" y="198.227">73%</tspan></text>
-                                    <text fill="#F59E0B" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="613.408" y="198.091">61</tspan></text>
-                                    <path d="M0.5 214.5H649.5" stroke="white" stroke-opacity="0.04"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.28" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="12" font-weight="bold" letter-spacing="0em"><tspan x="20.5" y="241.364">5</tspan></text>
-                                    <path d="M72.5 224.5H58.5C55.1863 224.5 52.5 227.186 52.5 230.5V244.5C52.5 247.814 55.1863 250.5 58.5 250.5H72.5C75.8137 250.5 78.5 247.814 78.5 244.5V230.5C78.5 227.186 75.8137 224.5 72.5 224.5Z" fill="#F59E0B" fill-opacity="0.14"/>
-                                    <text fill="#F59E0B" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="8.5" font-weight="bold" letter-spacing="0em"><tspan x="59.3325" y="241.091">CX</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.85" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="90.5" y="241.227">Codex</tspan></text>
-                                    <path class="progress-bar-track" d="M369 234.5H222C221.172 234.5 220.5 235.172 220.5 236C220.5 236.828 221.172 237.5 222 237.5H369C369.828 237.5 370.5 236.828 370.5 236C370.5 235.172 369.828 234.5 369 234.5Z" fill="white" fill-opacity="0.08"/>
-                                    <path class="progress-bar-fill" d="M253.5 234.5H222C221.172 234.5 220.5 235.172 220.5 236C220.5 236.828 221.172 237.5 222 237.5H253.5C254.328 237.5 255 236.828 255 236C255 235.172 254.328 234.5 253.5 234.5Z" fill="#F59E0B"/>
-                                    <text fill="#F1F5F9" fill-opacity="0.45" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" letter-spacing="0em"><tspan x="378.5" y="239">654</tspan></text>
-                                    <text fill="#F1F5F9" fill-opacity="0.7" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="13" font-weight="bold" letter-spacing="0em"><tspan x="456.332" y="241.227">69%</tspan></text>
-                                    <text fill="#EF4444" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="611.686" y="241.091">47</tspan></text>
-                                    <defs>
-                                    <linearGradient id="paint0_linear_4585_2347" x1="220.5" y1="62.5" x2="370.5" y2="62.5" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#3B82F6"/>
-                                    <stop offset="1" stop-color="#60A5FA"/>
-                                    </linearGradient>
-                                    </defs>
-                                </svg>
-                                <script>
-                                    const observer = new IntersectionObserver((entries) => {entries.forEach(entry => {if (entry.isIntersecting) {entry.target.querySelectorAll('.progress-bar-fill').forEach(bar => bar.classList.add('animate'));observer.unobserve(entry.target);}});}, {threshold: 0.3});
-                                    document.querySelectorAll('.progress-svg').forEach(svg => {observer.observe(svg);});
-                                </script>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>    
             </section>
         </main>
         <footer class="main-footer">
@@ -689,6 +243,7 @@
         <script type="text/javascript" src="assets/js/bootstrap.min.js" id="icw-bootstrap-bundle-js"></script>
         <script type="text/javascript" src="assets/js/lozad.min.js" id="icw-lozad-js"></script>
         <script type="text/javascript" src="assets/js/glightbox.min.js" id="icw-glightbox-js"></script>
+        <script type="text/javascript" src="assets/js/wow.min.js" id="icw-wow-js"></script>
         <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>       
                             
         

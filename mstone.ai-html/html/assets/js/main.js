@@ -3,7 +3,7 @@
 /*-----------------------------------------------------------------------------------*/
 var $ = jQuery.noConflict();
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     $('[data-bs-toggle="tooltip"]').tooltip();
 
     $('.navbar-toggler').on('click', function (e) {
@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
     if ($('li.menu-item-has-children').length) {
         $("li.menu-item-has-children > a").after('<i class="arrow"></i>');
     }
-    $('li.menu-item-has-children .arrow').on('click',function(event){
+    $('li.menu-item-has-children .arrow').on('click', function (event) {
         event.preventDefault();
         $(this).toggleClass('is-active');
         $(this).parent().find('.sub-menu').first().toggle(300);
@@ -181,7 +181,7 @@ jQuery(document).ready(function($) {
     if ($('.collapse-item').length) {
         $(document).on("click", ".collapse-item .collapse-title", function () {
             var $this = $(this).closest(".collapse-item");
-            
+
             if ($this.hasClass("is-open")) {
                 $this.removeClass("is-open");
                 $this.find(".collapse-body").stop(true, true).slideUp(300); // Slide up with a smooth animation (300ms)
@@ -190,7 +190,7 @@ jQuery(document).ready(function($) {
                 $(".collapse-item").find(".collapse-body").stop(true, true).slideUp(300); // Slide up other items smoothly
                 $this.addClass("is-open");
                 $this.find(".collapse-body").stop(true, true).slideDown(300); // Slide down with a smooth animation (300ms)
-                
+
                 // var collapsetop = $this.find(".collapse-title");
                 // $('html, body').animate({
                 //     scrollTop: collapsetop.offset().top - 115
@@ -199,7 +199,7 @@ jQuery(document).ready(function($) {
             return false;
         });
     }
-    
+
 
     // Hero Lottie animations
     const heroLottieContainers = document.querySelectorAll(".hero-slider-block .lottie-container");
@@ -237,11 +237,11 @@ jQuery(document).ready(function($) {
 
     // Step Progress Section
     if ($('.progress-section').length) {
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             updateProgressBars();
         });
     }
-    
+
     // Step Progress Section
     if ($('.progress-section').length) {
         $('.progress-section').on('scroll', updateProgressBars);
@@ -250,44 +250,44 @@ jQuery(document).ready(function($) {
     if ($(".icw-progress-goto").length > 0) {
         var progressPath = document.querySelector('.icw-progress-goto path');
         var pathLength = progressPath.getTotalLength();
-    
+
         progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
         progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
         progressPath.style.strokeDashoffset = pathLength;
         progressPath.getBoundingClientRect();
         progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    
-        var updateProgress = function() {
+
+        var updateProgress = function () {
             var scroll = $(window).scrollTop();
             var height = $(document).height() - $(window).height();
             var progress = pathLength - (scroll * pathLength / height);
             progressPath.style.strokeDashoffset = progress;
         }
-    
+
         updateProgress();
         $(window).scroll(updateProgress);
-    
+
         var offset = 200;
         var duration = 550;
-    
-        jQuery(window).on('scroll', function() {
-            if(jQuery(this).scrollTop() > offset) {
+
+        jQuery(window).on('scroll', function () {
+            if (jQuery(this).scrollTop() > offset) {
                 jQuery('.icw-progress-goto').addClass('active-progress');
             } else {
                 jQuery('.icw-progress-goto').removeClass('active-progress');
             }
         });
-    
-        jQuery('.icw-progress-goto').on('click', function(event) {
+
+        jQuery('.icw-progress-goto').on('click', function (event) {
             event.preventDefault();
-            jQuery('html, body').animate({scrollTop: 0}, duration);
+            jQuery('html, body').animate({ scrollTop: 0 }, duration);
             return false;
         });
     }
 
     const $logoBlock = $('.site-logo-block');
     if ($logoBlock.length) {
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             const logoBlockTop = $logoBlock.offset().top;
             const windowBottom = $(window).scrollTop() + $(window).height();
 
@@ -297,15 +297,15 @@ jQuery(document).ready(function($) {
     }
 
 
-    if ($('.play-iframe').length){
-        $('.play-iframe').click(function(ev){	
-            videourl = $(this).data('videosrc')+"?api=1&autoplay=1&muted=1&rel=0&enablejsapi=1";
-            if($(this).data('ext') == 'mp4'){
-                video = '<div class="video-wrap ratio ratio-16x9"><video class="embed-responsive-item w-100" controls autoplay playsinline controlsList="nodownload" oncontextmenu="return false;"><source src="'+videourl+'" type="video/mp4"></video></div>';
+    if ($('.play-iframe').length) {
+        $('.play-iframe').click(function (ev) {
+            videourl = $(this).data('videosrc') + "?api=1&autoplay=1&muted=1&rel=0&enablejsapi=1";
+            if ($(this).data('ext') == 'mp4') {
+                video = '<div class="video-wrap ratio ratio-16x9"><video class="embed-responsive-item w-100" controls autoplay playsinline controlsList="nodownload" oncontextmenu="return false;"><source src="' + videourl + '" type="video/mp4"></video></div>';
             } else {
-                video = '<div class="video-wrap ratio ratio-16x9"><iframe class="embed-responsive-item play-in_iframe" allow="autoplay" src="'+videourl+'" controls="0" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe></div>';
+                video = '<div class="video-wrap ratio ratio-16x9"><iframe class="embed-responsive-item play-in_iframe" allow="autoplay" src="' + videourl + '" controls="0" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe></div>';
             }
-            
+
             $(this).parents('.play-video-block').html(video);
             ev.preventDefault();
         });
@@ -324,25 +324,25 @@ function updateProgressBars() {
         var sectionHeight = $(this).outerHeight();
         var sectionBottom = sectionTop + sectionHeight;
         var progressBarId = $(this).attr('id'); // Target progress bar by ID
-        
+
         // var sectionAnimateContentTop = $(this).offset().top - $(window).height() / 1;
         // var sectionAnimateContentBottom = sectionAnimateContentTop + sectionHeight;
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             // Animate progress bar height to 100%
             $('.image-block').find('.progress-content-img:not(.image-static)').removeClass('is-active');
 
             $('[data-progress-id="' + progressBarId + '"]').css('height', '100%');
             $('.image-block').find('[data-id="' + progressBarId + '"]').addClass('is-active');
-        // } else if (scrollPosition >= sectionAnimateContentTop && scrollPosition < sectionAnimateContentBottom) {
+            // } else if (scrollPosition >= sectionAnimateContentTop && scrollPosition < sectionAnimateContentBottom) {
             $('.progress-content-wrapper').find('.progress-content-step').removeClass('is-active');
             $('.progress-content-wrapper').find('[id="' + progressBarId + '"]').addClass('is-active');
-            
+
         } else if (scrollPosition <= sectionTop) {
             // Reset progress bar height when section is not in view
             $('[data-progress-id="' + progressBarId + '"]').css('height', '0');
-            
-        } 
+
+        }
     });
 }
 
@@ -355,7 +355,7 @@ function updateProgressBars() {
 
 // Splide Slider
 if ($('.splide:not(.splide-js)').length) {
-    $('.splide:not(.splide-js)').each(function() {
+    $('.splide:not(.splide-js)').each(function () {
         new Splide(this).mount();
         $(this).addClass('icw_splide-with-data'); // Mark as initialized
     });
@@ -407,67 +407,66 @@ if ($('.counter').length) {
 
     // Target each element with the class .counter
     $('.counter').each(function () {
-        observer.observe(this);    
+        observer.observe(this);
     });
-    
-}
 
+}
 if ($('.thumbnail-slider-block').length) {
-    var main = new Splide( '.use-case-splide-slider', {
-        type      : 'fade',
-        rewind    : true,
+    var main = new Splide('.use-case-splide-slider', {
+        type: 'fade',
+        rewind: true,
         pagination: false,
-        arrows    : false,
-    } );
-    
-    var thumbnails = new Splide( '.useCase-thumbnail-splide-slider', {       
-        gap         : 8,
-        rewind      : true,
-        pagination  : false,
-        arrows  : false,
+        arrows: false,
+    });
+
+    var thumbnails = new Splide('.useCase-thumbnail-splide-slider', {
+        gap: 8,
+        rewind: true,
+        pagination: false,
+        arrows: false,
         isNavigation: true,
         autoWidth: true,
-    } );
-    
-    main.sync( thumbnails );
+    });
+
+    main.sync(thumbnails);
     main.mount();
     thumbnails.mount();
 }
 
 function animateCircle() {
-	const lottieContainers = document.querySelectorAll(".metrics-section .image-block-lottie");
+    const lottieContainers = document.querySelectorAll(".metrics-section .image-block-lottie");
 
-	if (!lottieContainers.length) { return; }
+    if (!lottieContainers.length) { return; }
 
-	lottieContainers.forEach((item) => {
-		const url = item.getAttribute("data-src");
+    lottieContainers.forEach((item) => {
+        const url = item.getAttribute("data-src");
 
-		lottie.loadAnimation({
-			container: item,
-			renderer: 'svg',
-			loop: true,
-			autoplay: true,
-			path: url,
-		});
-	});
+        lottie.loadAnimation({
+            container: item,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: url,
+        });
+    });
 }
 
 function animateCount(element, start, end, duration) {
-	const stepTime = Math.abs(Math.floor(duration / (end - start)));
-	let current = start;
-	const increment = end > start ? 1 : -1;
+    const stepTime = Math.abs(Math.floor(duration / (end - start)));
+    let current = start;
+    const increment = end > start ? 1 : -1;
 
-	const timer = setInterval(() => {
-		current += increment;
-		element.textContent = current + "%";
-		if (current === end) {
-			clearInterval(timer);
-		}
-	}, stepTime);
+    const timer = setInterval(() => {
+        current += increment;
+        element.textContent = current + "%";
+        if (current === end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
 }
 
 function initAnimateCount() {
-	const section = document.querySelector(".metrics-section");
+    const section = document.querySelector(".metrics-section");
     const countElements = document.querySelectorAll(".count");
 
     if (!section) { return; }
@@ -529,7 +528,7 @@ function initBenefitsSections() {
         const scrollbarThumbSegments = scrollbarThumb ? scrollbarThumb.querySelector('.benefits-section-alt__scrollbar-thumb-segments') : null;
         let currentIndex = 0;
         const slideProgress = new Map();
-        // Przechowuj pozycję scrollTop w momencie aktywacji każdego slajdu
+        // Przechowuj pozycjÄ™ scrollTop w momencie aktywacji kaÅ¼dego slajdu
         const slideActivationScrollTop = new Map();
         let autoplayTimer = null;
         let hasIntersected = false;
@@ -624,18 +623,18 @@ function initBenefitsSections() {
 
             const previousIndex = currentIndex;
             currentIndex = index;
-            
+
             if (isScrollVariant && previousIndex !== index) {
                 const currentScrollTop = window.scrollY || window.pageYOffset;
                 const goingBackward = index < previousIndex;
-                
+
                 if (goingBackward) {
                     const slide = slides[index];
                     if (slide) {
                         const slideHeight = slide.offsetHeight || slide.getBoundingClientRect().height;
                         const windowHeight = window.innerHeight;
-                        const scrollableHeight = Math.max(slideHeight - windowHeight, slideHeight * 0.5);                       
-        
+                        const scrollableHeight = Math.max(slideHeight - windowHeight, slideHeight * 0.5);
+
                         slideActivationScrollTop.set(index, currentScrollTop - scrollableHeight);
                         slideProgress.set(index, 1);
                     } else {
@@ -807,7 +806,7 @@ function initBenefitsSections() {
             if (isScrollMode() && slides.length > 0) {
                 const vh90 = window.innerHeight * 0.9;
                 const baseHeight = Math.min(Math.max(window.innerHeight * 0.6, vh90), 1100);
-                
+
                 slides.forEach((slide) => {
                     slide.style.height = `${baseHeight}px`;
                     slide.style.minHeight = `${baseHeight}px`;
@@ -846,18 +845,18 @@ function initBenefitsSections() {
             const sectionRect = section.getBoundingClientRect();
             const windowHeight = window.innerHeight;
             const isSectionVisible = sectionRect.bottom > 0 && sectionRect.top < windowHeight;
-            
+
             if (isSectionVisible && display && currentIndex === 0) {
                 const currentScrollTop = window.scrollY || window.pageYOffset;
                 const existingActivationTop = slideActivationScrollTop.get(0);
-                
+
                 if (existingActivationTop === undefined) {
                     const scrollContainer = section.querySelector('[data-benefits-scroll]');
-                    
+
                     if (scrollContainer) {
                         const containerRect = scrollContainer.getBoundingClientRect();
                         const containerAbsoluteTop = containerRect.top + currentScrollTop;
-                        
+
                         let stickyTopValue = 80;
                         try {
                             const computedTop = getComputedStyle(display).top;
@@ -872,9 +871,9 @@ function initBenefitsSections() {
                         } catch (e) {
                             stickyTopValue = Math.max(80, (windowHeight - 520) / 2);
                         }
-                        
+
                         const stickyActivationScrollTop = containerAbsoluteTop - stickyTopValue;
-                        
+
                         slideActivationScrollTop.set(0, stickyActivationScrollTop);
                         slideProgress.set(0, 0);
                     }
@@ -905,13 +904,13 @@ function initBenefitsSections() {
             }
 
             const currentScrollTop = window.scrollY || window.pageYOffset;
-            
+
             for (let i = 0; i <= currentIndex; i++) {
                 if (!slides[i]) continue;
-                
+
                 const slide = slides[i];
                 const activationScrollTop = slideActivationScrollTop.get(i);
-                
+
                 if (activationScrollTop === undefined) {
                     if (i === currentIndex) {
                         slideActivationScrollTop.set(i, currentScrollTop);
@@ -922,28 +921,28 @@ function initBenefitsSections() {
                     }
                 } else {
                     const scrollDelta = currentScrollTop - activationScrollTop;
-                    
+
                     const slideHeight = slide.offsetHeight || slide.getBoundingClientRect().height;
 
                     const scrollableHeight = Math.max(slideHeight - windowHeight, slideHeight * 0.5);
-                    
+
                     let progress = scrollDelta / scrollableHeight;
-                    
+
                     progress = Math.min(1, Math.max(0, progress));
-                    
+
                     slideProgress.set(i, progress);
                 }
             }
-            
+
             for (let i = currentIndex + 1; i < slides.length; i++) {
                 slideProgress.set(i, 0);
                 slideActivationScrollTop.delete(i);
             }
-            
+
             thumbSegments.forEach((segment, index) => {
                 const progress = slideProgress.get(index) || 0;
                 const previousProgress = parseFloat(segment.style.transform.replace('scaleY(', '').replace(')', '')) || 0;
-                
+
                 if (index < currentIndex) {
                     segment.classList.add('is-active');
                     segment.style.transform = 'scaleY(1)';
@@ -951,13 +950,13 @@ function initBenefitsSections() {
                     segment.style.transition = '';
                 } else if (index === currentIndex) {
                     const clampedProgress = Math.max(0, Math.min(1, progress));
-                    
+
                     if (clampedProgress < previousProgress) {
                         segment.style.transition = 'none';
                     } else {
                         segment.style.transition = '';
                     }
-                    
+
                     if (clampedProgress > 0) {
                         segment.classList.add('is-active');
                         segment.style.transform = `scaleY(${clampedProgress})`;
@@ -1012,7 +1011,7 @@ function initBenefitsSections() {
 
         if (videoElement) {
             videoElement.addEventListener('loadeddata', () => {
-                videoElement.play().catch(() => {});
+                videoElement.play().catch(() => { });
             });
         }
 
@@ -1239,79 +1238,79 @@ function initBenefitsSections() {
 
 function initSidebarNav() {
     const sidebarNav = document.querySelector('[data-sidebar-nav]');
-    
+
     if (!sidebarNav) return;
-    
+
     const navItems = sidebarNav.querySelectorAll('[data-sidebar-nav-item]');
     const contentElement = document.querySelector('[data-post-content]');
-    
+
     if (!navItems.length || !contentElement) return;
-    
+
     const headingIds = Array.from(navItems).map(item => {
         const href = item.getAttribute('href');
         return href.startsWith('#') ? href.substring(1) : href;
     });
-    
+
     const headings = Array.from(contentElement.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(heading => {
         const id = heading.getAttribute('id');
         return id && headingIds.includes(id);
     });
-    
+
     if (!headings.length) return;
-    
+
     function updateActiveNavItem() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const offset = 112;
-        
+
         let activeHeading = null;
-        
+
         for (let i = headings.length - 1; i >= 0; i--) {
             const heading = headings[i];
             const rect = heading.getBoundingClientRect();
-            
+
             // Check if heading is in the viewport with offset consideration
             if (rect.top <= offset) {
                 activeHeading = heading;
                 break;
             }
         }
-        
+
         navItems.forEach(item => {
             item.classList.remove('-active');
         });
-        
+
         if (activeHeading) {
             const activeId = activeHeading.getAttribute('id');
             const activeNavItem = Array.from(navItems).find(item => {
                 const href = item.getAttribute('href');
                 return href === `#${activeId}` || href === activeId;
             });
-            
+
             if (activeNavItem) {
                 activeNavItem.classList.add('-active');
             }
         }
     }
-    
+
     window.addEventListener('scroll', updateActiveNavItem);
-    
+
     updateActiveNavItem();
-    
+
     navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const href = this.getAttribute('href');
             const targetId = href.startsWith('#') ? href.substring(1) : href;
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 const offset = 112;
                 const targetPosition = targetElement.offsetTop - offset;
-                
+
                 const newUrl = window.location.pathname + '#' + targetId;
                 window.history.pushState({}, '', newUrl);
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -1322,8 +1321,16 @@ function initSidebarNav() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	animateCircle();
-	initAnimateCount();
+    animateCircle();
+    initAnimateCount();
     initBenefitsSections();
     initSidebarNav();
 });
+
+/* WOW Animation - Init */
+try {
+    new WOW().init();
+
+} catch (e) {
+    //
+};

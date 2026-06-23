@@ -34,8 +34,9 @@
         } 
         ctx.globalAlpha = 1; 
         nodes.forEach(n => { 
+            const dotMultiplier = canvas.classList.contains('single-dot') ? 1 : 5;
             ctx.beginPath(); 
-            ctx.arc(n.x, n.y, n.r * 5, 0, Math.PI * 2); 
+            ctx.arc(n.x, n.y, n.r * dotMultiplier, 0, Math.PI * 2);
             ctx.fillStyle = n.col + '35'; 
             ctx.fill(); 
             ctx.beginPath(); 
