@@ -382,10 +382,10 @@ if ($('.counter').length) {
                     duration: countDuration,
                     easing: "linear",
                     step: function () {
-                        $this.find('span').text(Math.floor(this.counter));
+                        $this.find('span').text(Math.floor(this.counter).toLocaleString());
                     },
                     complete: function () {
-                        $this.find('span').text(this.counter);
+                        $this.find('span').text(parseInt(countTo).toLocaleString());
                     }
                 });
                 observer.unobserve(entry.target);
