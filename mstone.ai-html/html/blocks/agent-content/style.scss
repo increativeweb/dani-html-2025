@@ -202,9 +202,3 @@
     //     }
     // }
 }
-@keyframes dashFlow{from{stroke-dashoffset:60}to{stroke-dashoffset:0}}
-@keyframes dashFlowSlow{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
-@keyframes trailDown{from{stroke-dashoffset:48}to{stroke-dashoffset:0}}
-@keyframes scanY{0%{transform:translateY(-6px);opacity:0}8%{opacity:0.9}92%{opacity:0.9}100%{transform:translateY(var(--scan,300px));opacity:0}}
-@keyframes regOut{0%,38%{opacity:1}48%,100%{opacity:0}}
-@keyframes regIn{0%,38%{opacity:0}48%,100%{opacity:1}}

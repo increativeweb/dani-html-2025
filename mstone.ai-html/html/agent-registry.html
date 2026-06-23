@@ -184,9 +184,109 @@
                                     </div>
                                 </div>
                             </div>
+                            <style>
+                                @keyframes dashFlow{from{stroke-dashoffset:60}to{stroke-dashoffset:0}}
+                                @keyframes dashFlowSlow{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+                                @keyframes trailDown{from{stroke-dashoffset:48}to{stroke-dashoffset:0}}
+                                @keyframes scanY{0%{transform:translateY(-6px);opacity:0}8%{opacity:0.9}92%{opacity:0.9}100%{transform:translateY(var(--scan,300px));opacity:0}}
+                                @keyframes regOut{0%,38%{opacity:1}48%,100%{opacity:0}}
+                                @keyframes regIn{0%,38%{opacity:0}48%,100%{opacity:1}}
+                            </style>
                         </div>
                     </div>
                 </div>    
+            </section>
+            <link rel='stylesheet' id='icw-agent-card-css' href='blocks/agent-card/style.css' type='text/css' media='all' /> 
+            <section class="main-section agent-card-section bg-none bg-custom is-dark section-title-mw-800" style="--gs-bg: rgb(244,249,255);">
+                <div class="container">
+                    <div class="ai-section-title">
+                        <div class="tag-line wow fadeInUp" data-wow-delay="150ms">The Challenge</div>
+                        <h2 class="title wow fadeInUp" data-wow-delay="300ms">Agents are multiplying. <br class="d-none d-md-block">Ownership is not.</h2>
+                        <div class="sort-info wow fadeInUp" data-wow-delay="450ms">Teams adopt copilots and code agents faster than anyone can track. Soon no one knows which agents exist, who owns them, or what they can touch.</div>
+                    </div>
+                    <div class="card-grid">
+                        <div class="icon-card wow fadeInUp" data-wow-delay="150ms">
+                            <div class="card-icon">
+                                <img src="upload/icon-unknown-agents.svg" alt="Unknown agents">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Unknown agents</h3>
+                                <div class="card-info">Agents appear across tools and teams with no single source of truth.</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="300ms">
+                            <div class="card-icon">
+                                <img src="upload/icon-unclear-ownership.svg" alt="Unclear ownership">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Unclear ownership </h3>
+                                <div class="card-info">When an agent changes code, someone needs to be accountable.</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="450ms">
+                            <div class="card-icon">
+                                <img src="upload/icon-permission-sprawl.svg" alt="Permission sprawl">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Permission sprawl</h3>
+                                <div class="card-info">Agents reach repos, APIs, and workflows without consistent oversight.</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="600ms"
+                            style="visibility: visible; animation-delay: 600ms; animation-name: fadeInUp;">
+                            <div class="card-icon">
+                                <img src="upload/icon-governance-gaps.svg" alt="Governance gaps">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Governance gaps</h3>
+                                <div class="card-info">Policy is hard to enforce on agents no one has registered.</div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <style>.agent-card-section.is-dark .card-grid .icon-card {box-shadow: 0 1px 3px rgba(59, 130, 246, 0.07), 0 8px 22px rgba(59, 130, 246, 0.05);}</style>
+                </div>
+            </section>
+            <style>.main-section.section-title-mw-400 .section-title, .main-section.section-title-mw-400 .ai-section-title {max-width: 450px;}</style>
+            <section class="main-section agent-content-section section-title-mw-400 bg-dark is-light">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 col-lg-6">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">The Registry</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">A system of record for agentic development.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">A live inventory of every AI agent, connected to real code, spend, quality, and governance.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden">
+                                <div class="wow fadeInUp" data-wow-delay="150ms" data-stagger="true" style="background:#06070F;padding:24px;transition:background 0.25s" style-hover="background:rgba(255,255,255,0.025)">
+                                    <div style="display:flex;align-items:center;gap:11px;margin-bottom:11px"><span style="width:32px;height:32px;border-radius:9px;background:rgba(59,130,246,0.12);display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 19 19" fill="none"><circle cx="9.5" cy="6.5" r="3" stroke="#60A5FA" stroke-width="1.5"></circle><path d="M4 16c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"></path></svg></span><h3 style="font-size:15px;font-weight:600;color:#F1F5F9;margin:0;letter-spacing:-0.01em;white-space:nowrap">Agent Identity</h3></div>
+                                    <p style="font-size:12.5px;line-height:1.5;color:rgba(241,245,249,0.45);margin:0">Name, type, vendor, model, and purpose</p>
+                                </div>
+                                <div class="wow fadeInUp" data-wow-delay="300ms" data-stagger="true" style="background:#06070F;padding:24px;transition:background 0.25s" style-hover="background:rgba(255,255,255,0.025)">
+                                    <div style="display:flex;align-items:center;gap:11px;margin-bottom:11px"><span style="width:32px;height:32px;border-radius:9px;background:rgba(6,182,212,0.12);display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 19 19" fill="none"><path d="M9.5 2.5 15 5v4c0 4-2.5 6-5.5 7.5C6.5 15 4 13 4 9V5l5.5-2.5Z" stroke="#22D3EE" stroke-width="1.5" stroke-linejoin="round"></path></svg></span><h3 style="font-size:15px;font-weight:600;color:#F1F5F9;margin:0;letter-spacing:-0.01em;white-space:nowrap">Ownership</h3></div>
+                                    <p style="font-size:12.5px;line-height:1.5;color:rgba(241,245,249,0.45);margin:0">Owner, team, and escalation path</p>
+                                </div>
+                                <div class="wow fadeInUp" data-wow-delay="450ms" data-stagger="true" style="background:#06070F;padding:24px;transition:background 0.25s" style-hover="background:rgba(255,255,255,0.025)">
+                                    <div style="display:flex;align-items:center;gap:11px;margin-bottom:11px"><span style="width:32px;height:32px;border-radius:9px;background:rgba(139,92,246,0.12);display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 19 19" fill="none"><rect x="4" y="8.5" width="11" height="7" rx="1.5" stroke="#A78BFA" stroke-width="1.5"></rect><path d="M6.5 8.5v-2a3 3 0 0 1 6 0v2" stroke="#A78BFA" stroke-width="1.5" stroke-linecap="round"></path></svg></span><h3 style="font-size:15px;font-weight:600;color:#F1F5F9;margin:0;letter-spacing:-0.01em;white-space:nowrap">Access Scope</h3></div>
+                                    <p style="font-size:12.5px;line-height:1.5;color:rgba(241,245,249,0.45);margin:0">Repos, APIs, systems, sensitive areas</p>
+                                </div>
+                                <div class="wow fadeInUp" data-wow-delay="600ms" data-stagger="true" style="background:#06070F;padding:24px;transition:background 0.25s" style-hover="background:rgba(255,255,255,0.025)">
+                                    <div style="display:flex;align-items:center;gap:11px;margin-bottom:11px"><span style="width:32px;height:32px;border-radius:9px;background:rgba(16,185,129,0.12);display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 19 19" fill="none"><circle cx="9.5" cy="9.5" r="7" stroke="#34D399" stroke-width="1.5"></circle><path d="M6.5 9.5l2 2 4-4.5" stroke="#34D399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><h3 style="font-size:15px;font-weight:600;color:#F1F5F9;margin:0;letter-spacing:-0.01em;white-space:nowrap">Governance Status</h3></div>
+                                    <p style="font-size:12.5px;line-height:1.5;color:rgba(241,245,249,0.45);margin:0">Approved, monitored, restricted, retired</p>
+                                </div>
+                                <div class="wow fadeInUp" data-wow-delay="750ms" data-stagger="true" style="background:#06070F;padding:24px;transition:background 0.25s" style-hover="background:rgba(255,255,255,0.025)">
+                                    <div style="display:flex;align-items:center;gap:11px;margin-bottom:11px"><span style="width:32px;height:32px;border-radius:9px;background:rgba(239,68,68,0.12);display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 19 19" fill="none"><path d="M9.5 2.5 16 14.5H3L9.5 2.5Z" stroke="#F87171" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9.5 7.5v3.5M9.5 13h.01" stroke="#F87171" stroke-width="1.5" stroke-linecap="round"></path></svg></span><h3 style="font-size:15px;font-weight:600;color:#F1F5F9;margin:0;letter-spacing:-0.01em;white-space:nowrap">Risk Profile</h3></div>
+                                    <p style="font-size:12.5px;line-height:1.5;color:rgba(241,245,249,0.45);margin:0">From access, autonomy, and review</p>
+                                </div>
+                                <div class="wow fadeInUp" data-wow-delay="900ms" data-stagger="true" style="background:#06070F;padding:24px;transition:background 0.25s" style-hover="background:rgba(255,255,255,0.025)">
+                                    <div style="display:flex;align-items:center;gap:11px;margin-bottom:11px"><span style="width:32px;height:32px;border-radius:9px;background:rgba(245,158,11,0.12);display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 19 19" fill="none"><path d="M3 13l4-4 3 2.5L16 5" stroke="#FBBF24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><h3 style="font-size:15px;font-weight:600;color:#F1F5F9;margin:0;letter-spacing:-0.01em;white-space:nowrap">Spend Profile</h3></div>
+                                    <p style="font-size:12.5px;line-height:1.5;color:rgba(241,245,249,0.45);margin:0">Cost by model, workflow, and repo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="main-footer">
