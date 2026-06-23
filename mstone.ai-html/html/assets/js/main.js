@@ -373,19 +373,31 @@ if ($('.counter').length) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 let $this = $(entry.target);
-                var countTo = $this.attr("data-countto");
-                var countDuration = parseInt($this.attr("data-duration"));
-                
+                var countTo = parseFloat($this.data('countto'));
+                var countDuration = parseInt($this.data('duration')) || 2500;
+
                 $({ counter: $this.find('span').text() }).animate({
                     counter: countTo
                 }, {
                     duration: countDuration,
                     easing: "linear",
                     step: function () {
-                        $this.find('span').text(Math.floor(this.counter).toLocaleString());
+                        let value;
+                        if (countTo % 1 !== 0) {
+                            value = Number(this.counter).toFixed(1);
+                        } else {
+                            value = Math.floor(Number(this.counter)).toLocaleString('en-US');
+                        }
+                        $this.find('span').text(value);
                     },
                     complete: function () {
-                        $this.find('span').text(parseInt(countTo).toLocaleString());
+                        let value;
+                        if (countTo % 1 !== 0) {
+                            value = Number(countTo).toFixed(1);
+                        } else {
+                            value = Number(countTo).toLocaleString('en-US');
+                        }
+                        $this.find('span').text(value);
                     }
                 });
                 observer.unobserve(entry.target);
