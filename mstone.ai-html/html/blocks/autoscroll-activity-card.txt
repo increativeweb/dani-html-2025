@@ -1,0 +1,132 @@
+.activity-card {
+    max-height: 480px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #DBEAFE;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(59, 130, 246, 0.08), 0 10px 28px rgba(59, 130, 246, 0.07);   
+    position: relative; 
+    &::before {
+        content: '';
+        width: 100%;
+        height: 150px;
+        display: block;
+        background-image: linear-gradient(180deg, rgba(240, 246, 255, 0) 0%, rgba(240, 246, 255, 01) 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+    }
+    .activity-table-wrapper {
+        .activity-table-header {
+            display: flex;
+            align-items: center;
+            padding: 20px 15px;
+            border-bottom: 1px solid #EFF6FF;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #94A3B8;
+            gap: 20px;
+            line-height: 1;
+            z-index: 2;
+            position: relative;
+            background-color: #ffffff;
+            div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .dot {
+                    width: 3px;
+                    height: 3px;
+                    background: #EF4444;
+                    border-radius: 50%;
+                    animation: pulseDot 2s ease infinite;
+                }
+                &:last-child {
+                    margin-left: auto;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .activity-lists {
+            animation: actScroll 12s linear infinite;
+            z-index: 1;
+            position: relative;
+            padding: 0 15px;
+            .activity-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                padding: 10px 0;
+                border-bottom: 1px solid #eff6ff;
+                .activity-badge {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    font-size: 8px;
+                    font-weight: 700;
+                    /* Badge Colors */
+                    &.badge-blue {
+                        background: rgba(59, 130, 246, 0.15);
+                        color: #3b82f6;
+                    }
+
+                    &.badge-purple {
+                        background: rgba(139, 92, 246, 0.15);
+                        color: #8b5cf6;
+                    }
+
+                    &.badge-cyan {
+                        background: rgba(6, 182, 212, 0.15);
+                        color: #06b6d4;
+                    }
+
+                    &.badge-green {
+                        background: rgba(16, 185, 129, 0.15);
+                        color: #10b981;
+                    }
+
+                    &.badge-yellow {
+                        background: rgba(245, 158, 11, 0.15);
+                        color: #f59e0b;
+                    }
+                }
+                .info {
+                    line-height: 1;
+                    .activity-title {
+                        font-size: 12px;
+                        color: #1e293b;
+                        display: block;
+                    }
+                    .activity-count {
+                        font-size: 11px;
+                        color: #94a3b8;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes pulseDot {
+    0%, 100% {
+        transform: scale(1); opacity: 0.6
+    } 
+    50% {
+        transform: scale(1.6); opacity: 1
+    }
+}
+@keyframes actScroll{
+    from{
+        transform: translateY(0)
+    }
+    to {
+        transform:translateY(-50%)
+    }
+}

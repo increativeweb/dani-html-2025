@@ -1,5 +1,4 @@
 .agent-hero-section {
-    padding: 0 !important;
     background-color: #030409;
     position: relative;
     min-height: 100vh;
@@ -16,20 +15,25 @@
         min-height: calc(100vh - 74px);
     }
 
+    @media (min-width: 992px) {
+        padding: 0 !important;
+    }
+
     @media (min-width: 1640px) {
         max-height: 900px;
     }
 
     @media (max-width: 992px) {
-        padding: 150px 0 60px;
+        padding: 60px 0 60px;
         min-height: 600px;
         height: auto;
     }
 
     @media (max-width: 767px) {
         flex-direction: column;
+        min-height: 500px;
         height: auto;
-        padding: 100px 0 60px;
+        padding: 60px 0 60px !important;
     }
 
     &.is-bg-glow {
@@ -55,30 +59,6 @@
         }
 
     }
-    &.is-bg-light-glow {
-        background: linear-gradient(180deg,#020818 0%,#040711 48%,#06070F 100%);
-        z-index: 1;
-
-        &::before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: radial-gradient(ellipse 70% 55% at 50% 12%,rgba(59,130,246,0.14),transparent 60%);
-            z-index: -1
-        }
-
-        .video-bg-block img,
-        .video-bg-block video {
-            background: transparent !important;
-        }        
-        .video-bg-block #particle-animation {
-            opacity: 0.55;
-        }
-    }
 
     .container {
         height: 100%;
@@ -95,7 +75,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding: 30px 0px;
+        padding: 40px 0px 80px;
 
         &.text-center {
             align-items: center;
@@ -192,10 +172,15 @@
         padding: 0;
         border: none;
         transition: all .2 ease-in-out;
+        z-index: 99;
 
         &:hover,
         &:focus {
             opacity: 1;
+
+            circle {
+                fill: #60a5fa;
+            }
         }
     }
 
@@ -217,6 +202,7 @@
 }
 
 @keyframes pulseDot {
+
     0%,
     100% {
         transform: scale(1);
@@ -230,6 +216,7 @@
 }
 
 @keyframes scrollMouse {
+
     0%,
     100% {
         transform: translateX(-50%) translateY(0)

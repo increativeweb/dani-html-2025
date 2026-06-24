@@ -67,8 +67,7 @@
         <text x="285" y="807" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#F87171">Restrict</text>
     </g>
     <circle cx="720" cy="450" r="90" fill="none" stroke="rgba(59,130,246,0.06)" stroke-width="1"></circle>
-    <circle cx="720" cy="450" r="52" fill="rgba(59,130,246,0.05)" stroke="rgba(59,130,246,0.18)" stroke-width="1.5"></circle>
+    <circle cx="720" cy="450" r="52" fill="rgba(59,130,246,0.05)" stroke="rgba(59,130,246,0.08)" stroke-width="1.5"></circle>
     <circle cx="720" cy="450" r="64" fill="none" stroke="rgba(59,130,246,0.08)" stroke-width="1" stroke-dasharray="4 4" style="animation:dashFlowSlow 12s linear infinite"></circle>
-    <text x="720" y="447" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" letter-spacing="0.08em" fill="rgba(241,245,249,0.2)">MILESTONE</text>
-    <text x="720" y="463" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="rgba(59,130,246,0.35)">governance layer</text>
+
 </svg>

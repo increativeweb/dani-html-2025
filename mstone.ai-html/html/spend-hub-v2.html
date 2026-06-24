@@ -144,6 +144,41 @@
                         <div style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:7px 13px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px"><span style="width:6px;height:6px;border-radius:50%;background:#34D399; "></span><span style="font-size:11.5px;color:rgba(241,245,249,0.55)">Sourced from 1,240 PRs · live connector data · April 2026</span></div>
                     </div>
                     </div>
+                    <div class="grid">
+                    <!-- LEFT: search panel -->
+                    <div class="panel">
+                        <form id="q-form">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            <input id="q-input" type="text" autocomplete="off" placeholder="Do you have a question?">
+                            <button id="q-submit" type="submit" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+                        </form>
+                        <div id="q-meta">Popular questions</div>
+                        <div id="q-results"><!-- rows rendered by question-search.js --></div>
+                    </div>
+
+                    <!-- RIGHT: answer card -->
+                    <div class="answer">
+                        <div class="glow"></div>
+                        <div class="ins">
+                            <svg width="22" height="18" viewBox="0 0 63 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.7449 8.61306V50.6084H5.29505V19.8131L0 18.5633V3.71509L20.7449 8.61306Z" fill="white"/><path d="M41.7745 4.96484V50.6084H26.3246V8.61303L41.7745 4.96484Z" fill="white"/><path d="M62.803 0V50.6084H47.3531V3.64819L62.803 0Z" fill="white"/></svg>
+                            <span>Milestone Insights</span>
+                        </div>
+
+                        <div id="ans-normal">
+                        <p id="ans-q" style="font-size:13px;color:rgba(241,245,249,0.5);font-weight:500;margin:0">What is our cost per AI-assisted PR?</p>
+                        <div style="display:flex;align-items:baseline;gap:16px;margin-top:18px"><span id="ans-value" style="font-family:'Inter',sans-serif;font-size:clamp(40px,5vw,60px);font-weight:700;letter-spacing:-0.04em;line-height:1.04;color:#F1F5F9">$38.90</span><span id="ans-delta" style="font-size:14px;font-weight:600;color:#34D399">▼ 22% QoQ</span></div>
+                        <p id="ans-desc" style="font-size:15px;line-height:1.7;color:rgba(241,245,249,0.55);margin:20px 0 0;max-width:440px">Across 1,240 AI-assisted PRs in April. Down from $49.80 in Q4 as adoption rose faster than spend.</p>
+                        <div style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:7px 13px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px"><span style="width:6px;height:6px;border-radius:50%;background:#34D399"></span><span id="ans-source" data-period="April 2026" style="font-size:11.5px;color:rgba(241,245,249,0.55)">Sourced from 1,240 PRs · live connector data · April 2026</span></div>
+                        </div>
+
+                        <div id="ans-fallback" style="display:none">
+                        <p style="font-size:13px;color:rgba(241,245,249,0.5);font-weight:500;margin:0">No saved answer for <span id="fb-q" style="color:#F1F5F9">that question</span></p>
+                        <p style="font-size:18px;line-height:1.6;color:rgba(241,245,249,0.82);font-weight:500;margin:18px 0 0;max-width:440px">Spend Hub can answer this live against your own data.</p>
+                        <p style="font-size:14.5px;line-height:1.7;color:rgba(241,245,249,0.55);margin:12px 0 0;max-width:440px">For answers to all your questions, book a live demo and we'll run it on your connected tools.</p>
+                        <a href="https://milestone.ai/spend-hub" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:#3B82F6;color:#fff;text-decoration:none;padding:12px 22px;border-radius:9px;font-weight:600;font-size:14px">Book a live demo →</a>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </section>
             <script type="text/javascript" src="blocks/agent-faqs/script.js" id="icw-agent-faqs-js"></script>
@@ -305,6 +340,238 @@
         const progressSections = document.querySelectorAll('.progress-animation-section');
         if(progressSections.length) {const observer = new IntersectionObserver((entries, observer) => {entries.forEach(entry => {if (entry.isIntersecting) {playBars(entry.target);observer.unobserve(entry.target);}});}, {threshold: 0.3});progressSections.forEach(progressSection => {observer.observe(progressSection);});}
         </script>
+        <script id="bank" type="application/json">
+        {
+        "period": "April 2026",
+        "featured": [0, 1, 2, 3, 4],
+        "questions": [
+            { "q": "What is our cost per AI-assisted PR?", "value": "$38.90", "delta": "▼ 22% QoQ", "deltaColor": "#34D399", "desc": "Across 1,240 AI-assisted PRs in April. Down from $49.80 in Q4 as adoption rose faster than spend.", "source": "1,240 PRs · live connector data", "kw": "cost per pr pull request assisted efficiency price expensive" },
+            { "q": "Which teams get the most from Copilot?", "value": "Platform", "delta": "71% utilization", "deltaColor": "#60A5FA", "desc": "Platform leads Copilot value with 71% utilization across 42 seats and the highest AI-assisted PR rate.", "source": "seat activity", "kw": "team teams copilot github best leader department group most value usage" },
+            { "q": "Are we paying for idle seats?", "value": "$3,240/mo", "delta": "41 idle seats", "deltaColor": "#FBBF24", "desc": "41 seats had no AI activity in 30 days across 4 teams — reclaimable at the next renewal.", "source": "30-day activity window", "kw": "idle unused waste wasted wasting wasteful seats licenses reclaim inactive dormant paying overpaying" },
+            { "q": "Did Cursor pay for itself last quarter?", "value": "Yes · 2.9×", "delta": "return on spend", "deltaColor": "#34D399", "desc": "Cursor returned an estimated $43.2k in measured value against $14.9k of spend last quarter.", "source": "Q1 2026 · measured value", "kw": "cursor pay worth justify quarter itself" },
+            { "q": "Where is AI spend growing fastest?", "value": "Copilot +27%", "delta": "month over month", "deltaColor": "#34D399", "desc": "GitHub Copilot is the fastest-growing line at +27% MoM as Platform-team adoption scales.", "source": "month-over-month spend", "kw": "growing fastest growth trend increase rising spend mom accelerating" },
+            { "q": "What is our total AI spend?", "value": "$48,200/mo", "delta": null, "deltaColor": null, "desc": "Across Claude Code, Cursor, GitHub Copilot and Codex — 412 seats in April.", "source": "4 connected sources", "kw": "total spend overall sum budget monthly all tools cost" },
+            { "q": "What is our blended cost per seat?", "value": "$117", "delta": "per month", "deltaColor": null, "desc": "Total AI spend divided across 412 active seats.", "source": "April 2026", "kw": "cost per seat blended average user license developer head" },
+            { "q": "What is our overall return on AI spend?", "value": "3.4×", "delta": "▲ 0.6× vs Q4", "deltaColor": "#34D399", "desc": "Every $1 of AI spend returns $3.4 in measured engineering value.", "source": "value model", "kw": "roi return overall ratio value per dollar payback worth" },
+            { "q": "How much are we saving each month?", "value": "$115,800/mo", "delta": "net savings", "deltaColor": "#34D399", "desc": "Value returned minus total AI spend each month.", "source": "April 2026", "kw": "savings save net monthly profit benefit" },
+            { "q": "What value does AI return each month?", "value": "$164,000/mo", "delta": "est. value", "deltaColor": "#34D399", "desc": "Review time saved, faster delivery and retained focus, valued at your loaded cost rate.", "source": "value model", "kw": "value returned benefit worth output gain total return back" },
+            { "q": "How much review time have we saved?", "value": "$114,400", "delta": "880 hours", "deltaColor": "#34D399", "desc": "880 review hours saved by AI-assisted workflows, valued at your engineering cost rate.", "source": "880 hrs · April 2026", "kw": "review time saved hours code review effort" },
+            { "q": "How many active developers do we have?", "value": "412", "delta": "active devs", "deltaColor": null, "desc": "Active developers across 214 synced repositories.", "source": "live connector data", "kw": "developers devs engineers headcount seats people active users team size" },
+            { "q": "How many AI-assisted PRs this month?", "value": "1,240", "delta": "in April", "deltaColor": null, "desc": "1,240 pull requests were AI-assisted this period across all tools.", "source": "April 2026", "kw": "pr prs pull requests assisted count number volume" },
+            { "q": "How much did AI improve cycle time?", "value": "−18%", "delta": "cycle-time delta", "deltaColor": "#34D399", "desc": "Median cycle time fell 18% on AI-assisted work versus baseline.", "source": "vs non-AI baseline", "kw": "cycle time speed faster delivery velocity lead time improve" },
+            { "q": "Which tool costs the most?", "value": "Claude Code", "delta": "$18,400/mo", "deltaColor": "#60A5FA", "desc": "Claude Code is the largest line at $18,400/mo across 230 seats.", "source": "April 2026", "kw": "expensive most costs biggest largest tool spend top claude highest" },
+            { "q": "How many lines were AI-authored?", "value": "312k", "delta": "in April", "deltaColor": null, "desc": "312k lines were AI-authored this period across all tools.", "source": "April 2026", "kw": "lines code authored written loc generated volume" }
+        ]
+        }
+    </script>
+    <script>
+        /*
+ * Spend Hub — Question Search
+ * ---------------------------------------------------------------------------
+ * Framework-agnostic. No dependencies. Turns the "Do you have a question?"
+ * input into a live search over a Q&A bank, updating an answer card, with a
+ * "book a live demo" fallback when nothing matches.
+ *
+ * USAGE
+ *   const data = await fetch('questions-bank.json').then(r => r.json());
+ *   mountQuestionSearch({ root: document, bank: data.questions,
+ *                         featured: data.featured, period: data.period });
+ *
+ * The `root` element (or document) must contain elements with these ids:
+ *   #q-input      <input>   the search field
+ *   #q-form       <form>    (optional) wraps the input; Enter submits
+ *   #q-meta       element   small label above the list ("Popular questions" / "N matching answers" / "No match found")
+ *   #q-results    element   container the result rows are rendered into
+ *   #ans-normal   element   wraps the answer-card content (q/value/delta/desc/source)
+ *   #ans-fallback element   the "book a live demo" block (hidden by default)
+ *   #ans-q        element   answer question text
+ *   #ans-value    element   the big metric
+ *   #ans-delta    element   the delta pill (hidden when an entry has no delta)
+ *   #ans-desc     element   the explanation paragraph
+ *   #ans-source   element   the source-pill text (carries data-period; ' · <period>' appended)
+ *   #fb-q         element   (optional) inside #ans-fallback; echoes the unmatched query
+ *
+ * Result rows get class "q-row" and inline styles (selected vs default). Add a
+ * .q-row:hover rule in CSS for the hover state.
+ *
+ * See QuestionSearch.README.md for the full DOM/markup contract and styling tokens.
+ */
+(function (global) {
+  'use strict';
+
+  // Words ignored when matching, so "what is our ROI?" keys on "roi".
+  var STOP = ('the a an is are our we my of for to in on how much many what which ' +
+    'do does did was were that this from with at by your their them they as not no ' +
+    'can could should would will i you it me s t').split(' ');
+  var STOPSET = {};
+  STOP.forEach(function (w) { STOPSET[w] = true; });
+
+  function norm(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+  function tokens(s) {
+    return norm(s).split(' ').filter(function (w) { return w.length >= 3 && !STOPSET[w]; });
+  }
+
+  function mountQuestionSearch(opts) {
+    opts = opts || {};
+    var root = opts.root || document;
+    var bank = opts.bank || [];
+    var featured = opts.featured || bank.map(function (_, i) { return i; }).slice(0, 5);
+    var $ = function (id) { return (root.getElementById ? root : document).getElementById(id); };
+
+    var input = $('q-input');
+    var form = $('q-form');
+    var results = $('q-results');
+    var meta = $('q-meta');
+    var ansNormal = $('ans-normal');
+    var ansFallback = $('ans-fallback');
+    var elQ = $('ans-q');
+    var elV = $('ans-value');
+    var elD = $('ans-delta');
+    var elDesc = $('ans-desc');
+    var elSrc = $('ans-source');
+    var fbQ = $('fb-q');
+    if (!input || !results || !ansNormal) return;
+
+    var period = opts.period || (elSrc && elSrc.dataset && elSrc.dataset.period) || '';
+    var selected = featured[0] || 0;
+
+    function showAnswer(e) {
+      ansFallback.style.display = 'none';
+      ansNormal.style.display = '';
+      elQ.textContent = e.q;
+      elV.textContent = e.value;
+      if (e.delta) {
+        elD.style.display = '';
+        elD.textContent = e.delta;
+        elD.style.color = e.deltaColor || '#34D399';
+      } else {
+        elD.style.display = 'none';
+      }
+      elDesc.textContent = e.desc;
+      elSrc.textContent = 'Sourced from ' + e.source +
+        (period && e.source !== period ? ' \u00b7 ' + period : '');
+    }
+
+    function showFallback(q) {
+      ansNormal.style.display = 'none';
+      ansFallback.style.display = '';
+      if (fbQ) fbQ.textContent = q ? ('\u201c' + q + '\u201d') : 'that question';
+    }
+
+    function rowHTML(e, idx, sel) {
+      return '<div class="q-row" data-idx="' + idx + '" style="display:flex;align-items:center;' +
+        'gap:11px;padding:14px 16px;border-radius:11px;' +
+        (sel ? 'background:#EFF6FF;border:1px solid #BFDBFE;' : 'border:1px solid transparent;') + '">' +
+        '<span style="color:' + (sel ? '#3B82F6' : '#CBD5E1') + ';font-weight:700">\u203a</span>' +
+        '<span style="font-size:14px;' + (sel ? 'font-weight:600;color:#0F172A' : 'color:#475569') + '">' +
+        e.q + '</span></div>';
+    }
+
+    function render(list, sel) {
+      results.innerHTML = list.map(function (i) { return rowHTML(bank[i], i, i === sel); }).join('');
+      Array.prototype.forEach.call(results.querySelectorAll('.q-row'), function (r) {
+        r.addEventListener('click', function () {
+          selected = parseInt(r.dataset.idx, 10);
+          showAnswer(bank[selected]);
+          render(list, selected);
+        });
+      });
+    }
+
+    // word match with light stemming: exact, or 4+ char prefix either direction
+    // (so "wasting" matches "waste", "developers" matches "developer", etc.)
+    function hit(words, t) {
+      return words.some(function (w) {
+        return w === t || (t.length >= 4 && (w.indexOf(t) === 0 || t.indexOf(w) === 0));
+      });
+    }
+
+    function search(q) {
+      var qt = tokens(q);
+      if (!qt.length) return featured.slice();
+      return bank.map(function (e, i) {
+        var qWords = norm(e.q).split(' ');
+        var kWords = norm(e.kw || '').split(' ');
+        var s = 0;
+        qt.forEach(function (t) {
+          if (hit(qWords, t)) s += 2;        // question-text match weighted higher
+          else if (hit(kWords, t)) s += 1;   // keyword/synonym match
+        });
+        return { i: i, s: s };
+      }).filter(function (x) { return x.s > 0; })
+        .sort(function (a, b) { return b.s - a.s; })
+        .slice(0, 6)
+        .map(function (x) { return x.i; });
+    }
+
+    function update() {
+      var q = input.value.trim();
+      if (!q) {
+        meta.textContent = 'Popular questions';
+        render(featured, selected);
+        showAnswer(bank[selected]);
+        return;
+      }
+      var list = search(q);
+      if (!list.length) {
+        meta.textContent = 'No match found';
+        results.innerHTML = '';
+        showFallback(q);
+        return;
+      }
+      meta.textContent = list.length + ' matching answer' + (list.length > 1 ? 's' : '');
+      selected = list[0];
+      render(list, selected);
+      showAnswer(bank[selected]);
+    }
+
+    input.addEventListener('input', update);
+    if (form) form.addEventListener('submit', function (ev) { ev.preventDefault(); update(); });
+    render(featured, selected);
+  }
+
+  global.mountQuestionSearch = mountQuestionSearch;
+  if (typeof module !== 'undefined' && module.exports) module.exports = { mountQuestionSearch: mountQuestionSearch };
+})(typeof window !== 'undefined' ? window : this);
+    </script>
+    <script>
+  var data = JSON.parse(document.getElementById('bank').textContent);
+  mountQuestionSearch({ root: document, bank: data.questions, featured: data.featured, period: data.period });
+</script>
+    <style>
+      .section {
+    position: relative; overflow: hidden; background: #F4F9FF;
+    padding: 90px 0; min-height: 100vh;
+  }
+  .section::before { content:""; position:absolute; inset:0; background-image:radial-gradient(rgba(59,130,246,0.07) 1px,transparent 1px); background-size:36px 36px; pointer-events:none; }
+  .section::after { content:""; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent); }
+  .wrap { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+  .head { text-align: center; margin-bottom: 48px; }
+  .overline { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #2563EB; margin: 0 0 16px; }
+  .head h2 { margin: 0 auto 16px; font-size: clamp(30px,4.5vw,48px); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; color: #0F172A; max-width: 720px; }
+  .head p { font-size: 17px; line-height: 1.7; color: #475569; max-width: 560px; margin: 0 auto; }
+
+  .grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 24px; align-items: stretch; }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+
+  /* ----- left: search panel ----- */
+  .panel { background: #fff; border: 1px solid #DBEAFE; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 3px rgba(59,130,246,0.07), 0 8px 20px rgba(59,130,246,0.05); }
+  #q-form { display: flex; align-items: center; gap: 11px; padding: 12px 14px; border: 1px solid #DBEAFE; border-radius: 11px; background: #F8FAFF; }
+  #q-input { flex: 1; min-width: 0; border: none; background: transparent; outline: none; font-family: 'Inter', sans-serif; font-size: 13.5px; color: #0F172A; }
+  #q-input::placeholder { color: #94A3B8; }
+  #q-submit { width: 28px; height: 28px; border: none; border-radius: 8px; background: #3B82F6; display: inline-flex; align-items: center; justify-content: center; flex: none; cursor: pointer; padding: 0; }
+  #q-meta { font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8; }
+  #q-results { display: flex; flex-direction: column; gap: 6px; }
+  .q-row { cursor: pointer; transition: background .15s, border-color .15s; }
+  .q-row:hover { background: #F8FAFF; }
+
+  /* ----- right: answer card (dark) ----- */
+  .answer { background: #0B1220; border: 1px solid #1E293B; border-radius: 16px; padding: 36px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+  .answer .glow { position: absolute; top: -40px; right: -40px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(59,130,246,0.12), transparent); pointer-events: none; }
+  .ins { display: flex; align-items: center; gap: 9px; margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .ins span { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; color: #F1F5F9; }
+</style>
     </body>
 
 </html>

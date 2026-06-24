@@ -164,7 +164,7 @@
         // }
     }
 
-    &.bg-dark {
+    &.is-light {
         .tags-list {
             display: flex;
             flex-wrap: wrap;
@@ -190,6 +190,7 @@
             }
         }
     }
+
     // &.is-light {
     //     .section-title {
     //         .sort-info {
