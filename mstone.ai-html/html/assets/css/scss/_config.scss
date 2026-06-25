@@ -1,32 +1,35 @@
 @font-face {
   font-family: 'GeneralSans';
   src: url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
-       url('../fonts/GeneralSans-Regular.woff') format('woff'),
-       url('../fonts/GeneralSans-Regular.ttf') format('truetype');
+    url('../fonts/GeneralSans-Regular.woff') format('woff'),
+    url('../fonts/GeneralSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'GeneralSans';
   src: url('../fonts/GeneralSans-Medium.woff2') format('woff2'),
-       url('../fonts/GeneralSans-Medium.woff') format('woff'),
-       url('../fonts/GeneralSans-Medium.ttf') format('truetype');
+    url('../fonts/GeneralSans-Medium.woff') format('woff'),
+    url('../fonts/GeneralSans-Medium.ttf') format('truetype');
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'GeneralSans';
   src: url('../fonts/GeneralSans-Semibold.woff2') format('woff2'),
-       url('../fonts/GeneralSans-Semibold.woff') format('woff'),
-       url('../fonts/GeneralSans-Semibold.ttf') format('truetype');
+    url('../fonts/GeneralSans-Semibold.woff') format('woff'),
+    url('../fonts/GeneralSans-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
+
 /* Variables */
-$bodyfont: 'GeneralSans'; 
+$bodyfont: 'GeneralSans'; // 'Inter', sans-serif 
 $bodyfontsize: 18px;
 $bodyfontcolor: #3E4751;
 $bodybg: #111419;
@@ -37,7 +40,7 @@ $primary: #0371EE;
 $skyblue: #87BFF3;
 $bottlegreen: #12D3DD;
 
-$dark: #090A0C;
+$dark: #030409;
 $dark800: #111419;
 $dark700: #181C21;
 $dark300: #65717F;
@@ -60,11 +63,13 @@ $font-jetbrains: "JetBrains Mono", monospace;
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
 }
+
 @mixin box-shadow($box-shadow) {
   -moz-box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 }
+
 @mixin box-shadow-all($bs-t, $bs-r, $bs-b, $bs-l, $box-shadow-all-color) {
   box-shadow: $bs-t $bs-r $bs-b $bs-l $box-shadow-all-color;
   -webkit-box-shadow: $bs-t $bs-r $bs-b $bs-l $box-shadow-all-color;
@@ -78,18 +83,21 @@ $font-jetbrains: "JetBrains Mono", monospace;
   -o-transition: all $duration $ease;
   transition: all $duration $ease;
 }
+
 @mixin transitionValue($value, $duration, $ease) {
   -webkit-transition: $value $duration $ease;
   -moz-transition: $value $duration $ease;
   -o-transition: $value $duration $ease;
   transition: $value $duration $ease;
 }
+
 @mixin opacity($value) {
   -moz-opacity: $value;
   -khtml-opacity: $value;
   -webkit-opacity: $value;
   opacity: $value;
 }
+
 @mixin transform($value) {
   -moz-transform: $value;
   -webkit-transform: $value;
@@ -113,6 +121,7 @@ $font-jetbrains: "JetBrains Mono", monospace;
   display: -webkit-flex;
   display: flex;
 }
+
 @mixin inline-flex {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -120,6 +129,7 @@ $font-jetbrains: "JetBrains Mono", monospace;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+
 @mixin justify-content($justify) {
   -webkit-justify-content: $justify;
   -moz-justify-content: $justify;
@@ -127,6 +137,7 @@ $font-jetbrains: "JetBrains Mono", monospace;
   justify-content: $justify;
   -ms-flex-pack: $justify;
 }
+
 @mixin align-items($align) {
   -webkit-align-items: $align;
   -moz-align-items: $align;
@@ -134,24 +145,28 @@ $font-jetbrains: "JetBrains Mono", monospace;
   -ms-flex-align: $align;
   align-items: $align;
 }
+
 @mixin flex-direction($direction) {
   -webkit-flex-direction: $direction;
   -moz-flex-direction: $direction;
   -ms-flex-direction: $direction;
   flex-direction: $direction;
 }
+
 @mixin flex-wrap($wrap) {
   -webkit-flex-wrap: $wrap;
   -moz-flex-wrap: $wrap;
   -ms-flex-wrap: $wrap;
   flex-wrap: $wrap;
 }
+
 @mixin flex-flow($flow) {
   -webkit-flex-flow: $flow;
   -moz-flex-flow: $flow;
   -ms-flex-flow: $flow;
   flex-flow: $flow;
 }
+
 // Display Order
 @mixin order($val) {
   -webkit-box-ordinal-group: $val;
