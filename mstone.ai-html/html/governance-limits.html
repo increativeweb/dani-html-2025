@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta name="theme-color" content="#0f8ed6">
+        <meta charset="utf-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="preconnect" href="fonts.googleapis.com">
+        <link rel="preconnect" href="fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+        <meta name='robots' content='noindex, nofollow' />
+
+        <!-- This site is optimized with the Yoast SEO plugin v23.8 - https://yoast.com/wordpress/plugins/seo/ -->
+        <title>Governance and Limits - milestone, Ltd.</title>
+        
+        <link rel='stylesheet' id='icw-glightbox-css' href='assets/css/glightbox.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />   
+        <link rel="stylesheet" id="icw-wow-css" href="assets/css/animate.css" media="all">        
+        <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+        <script type="text/javascript" src="assets/js/splide.min.js" id="icw-splide-js"></script>
+
+        <link rel="icon" href="https://new.mstone.ai/wp-content/uploads/2024/10/favicon-150x150.png" sizes="32x32" />
+        <link rel="icon" href="https://new.mstone.ai/wp-content/uploads/2024/10/favicon-300x300.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="https://new.mstone.ai/wp-content/uploads/2024/10/favicon-300x300.png" />
+        <meta name="msapplication-TileImage" content="https://new.mstone.ai/wp-content/uploads/2024/10/favicon-300x300.png" />       
+        <style>
+            body .agent-hero-section .hero-title .tag-line {background: rgba(18, 211, 221, 0.06);border: 1px solid rgba(18, 211, 221, 0.3);color: rgb(127, 227, 234);}
+            body .agent-hero-section .hero-title .tag-line .dot {background: rgb(18, 211, 221);}
+            body .main-section.agent-content-section.custom-gradient-bg, body .main-section.agent-card-section.custom-gradient-bg {background: linear-gradient(rgb(243, 247, 252), rgb(229, 237, 247)) !important;}
+            body .main-section.agent-content-section.custom-gradient-bg-2, body .main-section.agent-card-section.custom-gradient-bg-2 {background: linear-gradient(rgb(234, 241, 250), rgb(243, 247, 252)) !important;}
+            body .main-section.agent-content-section.with-border, body .main-section.agent-card-section.with-border {border-top: 1px solid rgba(11, 19, 32, 0.1) !important;}
+            .agent-cta-section .footer-note {animation: none !important;}
+            body .agent-cta-section .ai-section-title .tag-line > div {margin: 0px auto 100px !important;}
+            .agent-card-section.sm-icon-card-section .card-grid .icon-card .card-icon {width: 26px;height: 26px;}  
+            [class*="scp"]:hover {transform: translateX(6px);}
+            [class*="card-scp"]:hover {transform: translateY(-5px);}
+            .bg-theme-dark .ai-section-title .tag-line {color: rgb(18, 211, 221) !important;}
+            .agent-card-section.is-dark .card-grid .icon-card {border: 1px solid rgba(12, 19, 34, 0.09);}
+            @keyframes msFlow{0%{left:2%;opacity:0}10%{opacity:1}82%{opacity:1}100%{left:90%;opacity:0}}
+            @keyframes msPause{0%{left:2%;opacity:0}14%{opacity:1}55%{left:48%;opacity:1}70%{left:50%;opacity:1}100%{left:50%;opacity:.9}}
+            @keyframes msPulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+            @keyframes msMeter{0%{width:0}100%{width:72%}}
+            @keyframes msMeterTeam{0%{width:0}}
+            @keyframes msRise{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
+            @keyframes msSlack{0%{opacity:0;transform:translateY(22px) scale(.96)}100%{opacity:1;transform:translateY(0) scale(1)}}
+            @keyframes msFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+            @keyframes msGlow{0%,100%{box-shadow:0 0 0 1px rgba(18,211,221,.25),0 0 42px rgba(18,211,221,.18)}50%{box-shadow:0 0 0 1px rgba(18,211,221,.5),0 0 70px rgba(18,211,221,.34)}}
+            @keyframes msBlink{0%,100%{opacity:1}50%{opacity:.25}}
+            @keyframes msSweep{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+            @keyframes msConverge{0%{stroke-dashoffset:240;opacity:.2}100%{stroke-dashoffset:0;opacity:1}}
+            @media (prefers-reduced-motion:reduce){*{animation-duration:.001s!important;animation-iteration-count:1!important}}
+            @media (max-width:1024px){
+            .nav-links{display:none!important}
+            .rg-split{grid-template-columns:1fr!important;gap:44px!important}
+            .rg-dash{grid-template-columns:1fr!important}
+            .rg-diff{grid-template-columns:1fr!important}
+            .rg-3{grid-template-columns:repeat(2,1fr)!important}
+            .rg-4{grid-template-columns:repeat(2,1fr)!important}
+            .rg-pvis{grid-template-columns:1fr!important}
+            }
+            @media (max-width:680px){
+            .rg-2,.rg-3,.rg-4,.rg-q,.rg-din{grid-template-columns:1fr!important}
+            .rg-foot{grid-template-columns:repeat(2,1fr)!important}
+            .sec{padding-left:20px!important;padding-right:20px!important}
+            .floaty{position:static!important;margin-top:14px!important;width:auto!important}
+            }
+            @media (max-width: 767px) {
+            body .agent-cta-section .ai-section-title .tag-line > div {margin: 0px auto 70px !important;}
+            .agent-cta-section .ai-section-title .tag-line .logo-position {margin-top: -112px !important;}
+            .agent-cta-section .ai-section-title .tag-line .logo-img {width: 50px !important; height: 50px !important;}
+            .agent-hero-section .hero-title {padding: 40px 0px !important;}
+            }
+            @media (max-width: 575px) {
+            body .agent-cta-section .ai-section-title .tag-line > div {margin: 0px auto 40px !important;}
+            .agent-cta-section .ai-section-title .tag-line .logo-position {margin-top: -80px !important;}
+            .agent-cta-section .ai-section-title .tag-line .logo-img {width: 40px !important; height: 40px !important;}
+            }
+        </style>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">     
+                    <a class="navbar-brand" href="https://mstone.ai/" title="Milestone | Unlocking R&amp;D Black Box" rel="home"><img src="assets/images/logo.svg" alt="Milestone"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul id="menu-main-menu" class="navbar-nav mainMenu">
+                            <li class="current-menu-item"><a href="https://mstone.ai/product/" aria-current="page">Product</a></li>
+                            <li><a href="https://mstone.ai/faq/">FAQ</a></li>
+                            <li class="menu-item-has-children"><a href="https://mstone.ai/resources/">Resources</a><i class="arrow"></i>
+                                <ul class="sub-menu">
+                                    <li class="menu-item-object-post"><a href="https://mstone.ai/blog/">Blog</a></li>
+                                    <li><a target="_blank" href="/docs">Docs</a></li>
+                                    <li class="menu-item-object-glossary"><a href="https://mstone.ai/glossary/">Glossary</a></li>
+                                    <li class="menu-item-object-resource"><a href="https://mstone.ai/resources/">Webinars</a></li>
+                                    <li><a href="https://mstone.ai/tools-wizard/">AI Tools Wizard</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Company</a><i class="arrow"></i>
+                                <ul class="sub-menu">
+                                    <li><a href="https://mstone.ai/about-us/">About Us</a></li>
+                                    <li><a href="https://mstone.ai/careers/">Careers</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://mstone.ai/contact/">Contact Us</a></li>
+                        </ul> 
+                        <div class="navbar__buttons">
+                            <div class="nav-right"><a href="https://mstone.ai/roi-engineering-efficiency-calculator/" class="btn btn-white btn-md" target="_self"><span class="arrow-icon"></span><span class="btn-text">Estimate ROI</span> </a></div>
+                            <div class="nav-right"><a href="/book-a-demo/" class="btn btn-primary btn-md" target="_self"><span class="arrow-icon"></span><span class="btn-text">Book a demo</span> </a></div>                            
+                        </div>
+                    </div>                                        
+                </nav>
+            </div>
+        </header>
+        <main id="main-content" class="main-content-wrapper">
+            <link rel='stylesheet' id='icw-agent-hero-css' href='blocks/agent-hero/style.css' type='text/css' media='all' /> 
+            <section class="main-section agent-hero-section bg-none is-dark section-title-mw-600 is-shape ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-6">
+                            <div class="hero-title text-left">
+                                <div class="tag-line wow fadeInUp"><span class="dot"></span><span>Governance and Limits</span></div>
+                                <h1 class="title wow fadeInUp h2" data-wow-delay="150ms">Control AI spend <br class="d-none d-lg-block">before it gets <br class="d-none d-lg-block">out of control.</h1>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="300ms">
+                                    <p>One operating view of AI limits, approved usage, spend alerts, <br class="d-none d-lg-block">and cost saving practices across every contributor, team, tool, <br class="d-none d-lg-block">agent, and model.</p>
+                                </div>
+                                <div class="action wow fadeInUp" data-wow-delay="450ms">
+                                    <a href="https://mstoneaidev.wpenginepowered.com/book-a-demo/" class="btn btn-primary-only btn-md" target="_self">Get a demo </a>
+                                    <a href="#go" class="btn btn-outline-gray-only btn-md" target="_self">Explore Spend Hub → </a>
+                                </div>
+                                <div class="action-note wow fadeInUp" data-wow-delay="600ms">
+                                    <div style="margin-top: 42px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(101, 113, 127);">Governs spend across</span>
+                                        <div style="display: flex; align-items: center; gap: 16px;">
+                                            <img src="upload/icon-codex.svg" alt="Codex" style="height: 21px; width: 21px; border-radius: 5px;">
+                                            <img src="upload/icon-cursor.svg" alt="Cursor" style="height: 21px; width: 21px; border-radius: 5px; opacity: 0.92;">
+                                            <img src="upload/icon-github-copilot.svg" alt="GitHub Copilot" style="height: 21px; width: 21px; filter: invert(1) brightness(1.4);">
+                                            <img src="upload/icon-claude.svg" alt="Claude Code" style="height: 22px; width: 22px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>  
+                        <div class="col-12 col-lg-6">
+                            <div class="hero-img" style="position: relative; z-index: 2;">
+                                <div style="position: relative; border-radius: 24px; padding: 22px; background: linear-gradient(rgba(20, 26, 33, 0.92), rgba(11, 14, 18, 0.94)); border: 1px solid rgba(255, 255, 255, 0.09); box-shadow: rgba(0, 0, 0, 0.6) 0px 40px 110px, rgba(255, 255, 255, 0.06) 0px 1px 0px inset;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <span style="width: 9px; height: 9px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 12px; animation: 2.2s ease-in-out 0s infinite normal none running msPulse;"></span>
+                                            <span style="font-weight: 600; font-size: 14.5px; color: rgb(255, 255, 255); letter-spacing: -0.01em;">AI Spend Control Center</span>
+                                        </div>
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(101, 113, 127); padding: 4px 9px; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 6px;">Live</span>
+                                    </div>        
+                                    <div style="display: flex; gap: 12px; align-items: stretch; padding: 14px; border-radius: 16px; background: rgba(9, 10, 12, 0.55); border: 1px solid rgba(255, 255, 255, 0.06);">
+                                        <div style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column; gap: 11px;"><div style="display: flex; align-items: center; gap: 9px;"><div style="flex-shrink: 0; width: 92px; display: flex; align-items: center; gap: 7px; font-size: 11px; color: rgb(200, 208, 217); font-weight: 500;"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 8px; flex-shrink: 0;"></span>Contributors</div><div style="position: relative; flex: 1 1 0%; height: 18px;"><div style="position: absolute; top: 50%; left: 0px; right: 0px; height: 1px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));"></div><div style="position: absolute; top: 2px; bottom: 2px; left: 50%; width: 2px; border-radius: 2px; background: rgba(18, 211, 221, 0.55); box-shadow: rgba(18, 211, 221, 0.5) 0px 0px 8px;"></div><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 11px; animation: 5.5s linear 0s infinite normal none running msFlow;"></span><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 11px; animation: 5.5s linear 1.83s infinite normal none running msFlow;"></span><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 11px; animation: 5.5s linear 3.67s infinite normal none running msFlow;"></span></div><span style="flex-shrink: 0; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.04em; color: rgb(18, 211, 221); width: 56px; text-align: right;">Approved</span></div><div style="display: flex; align-items: center; gap: 9px;"><div style="flex-shrink: 0; width: 92px; display: flex; align-items: center; gap: 7px; font-size: 11px; color: rgb(200, 208, 217); font-weight: 500;"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px; flex-shrink: 0;"></span>Tools and models</div><div style="position: relative; flex: 1 1 0%; height: 18px;"><div style="position: absolute; top: 50%; left: 0px; right: 0px; height: 1px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));"></div><div style="position: absolute; top: 2px; bottom: 2px; left: 50%; width: 2px; border-radius: 2px; background: rgba(18, 211, 221, 0.55); box-shadow: rgba(18, 211, 221, 0.5) 0px 0px 8px;"></div><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 11px; animation: 4.9s linear 0s infinite normal none running msFlow;"></span><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 11px; animation: 4.9s linear 1.23s infinite normal none running msFlow;"></span><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 11px; animation: 4.9s linear 2.45s infinite normal none running msFlow;"></span><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 11px; animation: 4.9s linear 3.68s infinite normal none running msFlow;"></span></div><span style="flex-shrink: 0; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.04em; color: rgb(18, 211, 221); width: 56px; text-align: right;">Approved</span></div><div style="display: flex; align-items: center; gap: 9px;"><div style="flex-shrink: 0; width: 92px; display: flex; align-items: center; gap: 7px; font-size: 11px; color: rgb(200, 208, 217); font-weight: 500;"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(245, 165, 36); box-shadow: rgb(245, 165, 36) 0px 0px 8px; flex-shrink: 0;"></span>Agent runs</div><div style="position: relative; flex: 1 1 0%; height: 18px;"><div style="position: absolute; top: 50%; left: 0px; right: 0px; height: 1px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));"></div><div style="position: absolute; top: 2px; bottom: 2px; left: 50%; width: 2px; border-radius: 2px; background: rgba(245, 165, 36, 0.7); box-shadow: rgba(245, 165, 36, 0.6) 0px 0px 8px;"></div><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(245, 165, 36); box-shadow: rgb(245, 165, 36) 0px 0px 11px; animation: 5.9s linear 0s infinite normal none running msPause;"></span><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(245, 165, 36); box-shadow: rgb(245, 165, 36) 0px 0px 11px; animation: 5.9s linear 2.95s infinite normal none running msPause;"></span></div><span style="flex-shrink: 0; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.04em; color: rgb(245, 165, 36); width: 56px; text-align: right;">Paused</span></div><div style="display: flex; align-items: center; gap: 9px;"><div style="flex-shrink: 0; width: 92px; display: flex; align-items: center; gap: 7px; font-size: 11px; color: rgb(200, 208, 217); font-weight: 500;"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(3, 113, 238); box-shadow: rgb(3, 113, 238) 0px 0px 8px; flex-shrink: 0;"></span>Workflows</div><div style="position: relative; flex: 1 1 0%; height: 18px;"><div style="position: absolute; top: 50%; left: 0px; right: 0px; height: 1px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));"></div><div style="position: absolute; top: 2px; bottom: 2px; left: 50%; width: 2px; border-radius: 2px; background: rgba(18, 211, 221, 0.55); box-shadow: rgba(18, 211, 221, 0.5) 0px 0px 8px;"></div><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(3, 113, 238); box-shadow: rgb(3, 113, 238) 0px 0px 11px; animation: 5.2s linear 0s infinite normal none running msFlow;"></span><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(3, 113, 238); box-shadow: rgb(3, 113, 238) 0px 0px 11px; animation: 5.2s linear 1.73s infinite normal none running msFlow;"></span><span style="position: absolute; top: 50%; margin-top: -3.5px; width: 7px; height: 7px; border-radius: 999px; background: rgb(3, 113, 238); box-shadow: rgb(3, 113, 238) 0px 0px 11px; animation: 5.2s linear 3.47s infinite normal none running msFlow;"></span></div><span style="flex-shrink: 0; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.04em; color: rgb(18, 211, 221); width: 56px; text-align: right;">Approved</span></div></div>
+                                        <div style="width: 96px; flex-shrink: 0; border-radius: 14px; border: 1px solid rgba(18, 211, 221, 0.3); background: linear-gradient(rgba(3, 113, 238, 0.16), rgba(18, 211, 221, 0.05)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; padding: 12px 8px; animation: 3.4s ease-in-out 0s infinite normal none running msGlow;">
+                                            <img src="upload/icon-mston-white.svg" alt="Milestone" style="height: 26px; width: auto;">
+                                            <span style="font-size: 10.5px; line-height: 1.3; text-align: center; color: rgb(200, 208, 217); font-weight: 500;">Milestone control layer</span>
+                                        </div>
+                                    </div>       
+                                    <div style="margin-top: 14px; padding: 18px; border-radius: 16px; background: rgba(9, 10, 12, 0.55); border: 1px solid rgba(255, 255, 255, 0.06);">
+                                        <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                                            <span style="font-size: 13px; color: rgb(137, 150, 164); font-weight: 500;">Company AI spend status</span>
+                                            <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(137, 150, 164);">June</span>
+                                        </div>
+                                        <div style="display: flex; align-items: flex-end; gap: 10px; margin-top: 8px;">
+                                            <span style="font-size: 34px; font-weight: 600; color: rgb(255, 255, 255); letter-spacing: -0.02em;">72%</span>
+                                            <span style="font-size: 13px; color: rgb(137, 150, 164); padding-bottom: 7px;">of monthly limit used</span>
+                                        </div>
+                                        <div style="margin-top: 11px; height: 9px; border-radius: 999px; background: rgba(255, 255, 255, 0.07); overflow: hidden;">
+                                            <div style="height: 100%; border-radius: 999px; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); width: 72%; animation: 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running msMeter; box-shadow: rgba(18, 211, 221, 0.5) 0px 0px 14px;"></div>
+                                        </div>
+                                        <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                            <div style="display: flex; align-items: center; gap: 9px; padding: 9px 11px; border-radius: 10px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05);">
+                                            <span style="width: 8px; height: 8px; border-radius: 2px; background: rgb(52, 211, 153); flex-shrink: 0;"></span>
+                                            <span style="font-size: 12.5px; color: rgb(200, 208, 217);"><b style="color: rgb(255, 255, 255); font-weight: 600;">14</b> teams within policy</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 9px; padding: 9px 11px; border-radius: 10px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05);">
+                                            <span style="width: 8px; height: 8px; border-radius: 2px; background: rgb(245, 165, 36); flex-shrink: 0;"></span>
+                                            <span style="font-size: 12.5px; color: rgb(200, 208, 217);"><b style="color: rgb(255, 255, 255); font-weight: 600;">3</b> teams approaching limit</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 9px; padding: 9px 11px; border-radius: 10px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05);">
+                                            <span style="width: 8px; height: 8px; border-radius: 2px; background: rgb(135, 191, 243); flex-shrink: 0;"></span>
+                                            <span style="font-size: 12.5px; color: rgb(200, 208, 217);"><b style="color: rgb(255, 255, 255); font-weight: 600;">6</b> contributors require review</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 9px; padding: 9px 11px; border-radius: 10px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05);">
+                                            <span style="width: 8px; height: 8px; border-radius: 2px; background: rgb(248, 113, 113); flex-shrink: 0;"></span>
+                                            <span style="font-size: 12.5px; color: rgb(200, 208, 217);"><b style="color: rgb(255, 255, 255); font-weight: 600;">2</b> agents paused by policy</span>
+                                            </div>
+                                        </div>
+                                        <div style="margin-top: 11px; display: flex; align-items: center; justify-content: space-between; padding: 11px 13px; border-radius: 10px; background: linear-gradient(90deg, rgba(18, 211, 221, 0.1), rgba(3, 113, 238, 0.06)); border: 1px solid rgba(18, 211, 221, 0.22);">
+                                            <span style="font-size: 12.5px; color: rgb(200, 208, 217);"><b style="color: rgb(255, 255, 255); font-weight: 600;">12</b> cost saving recommendations</span>
+                                            <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(18, 211, 221); font-weight: 600;">+$18,400 projected</span>
+                                        </div>
+                                    </div>
+                                </div>      
+                                <div class="floaty" style="position: absolute; left: -34px; bottom: -30px; width: 268px; padding: 14px; border-radius: 14px; background: linear-gradient(rgb(24, 28, 33), rgb(17, 20, 25)); border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: rgba(0, 0, 0, 0.6) 0px 26px 60px; animation: 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.9s 1 normal both running msSlack;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 9px;">
+                                        <span style="width: 18px; height: 18px; border-radius: 5px; color: #ffffff; background: rgb(74, 21, 75); display: flex; align-items: center; justify-content: center; font-size: 11px;">#</span>
+                                        <span style="font-size: 12px; font-weight: 600; color: rgb(255, 255, 255);">spend-alerts</span>
+                                        <span style="margin-left: auto; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; color: rgb(245, 165, 36); padding: 2px 7px; border-radius: 5px; background: rgba(245, 165, 36, 0.14);">Action needed</span>
+                                    </div>
+                                    <div style="font-size: 12.5px; line-height: 1.5; color: rgb(200, 208, 217);"><b style="color: rgb(255, 255, 255);">AI spend alert.</b> Platform team is projected to exceed its monthly AI budget in 6 days.</div>
+                                </div>
+                            </div>
+                        </div>                                                              
+                    </div>                                                
+                </div>
+                <div class="video-bg-block">
+                    <div aria-hidden="true" style="position: absolute;inset: 0px;pointer-events: none;background-image: linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);background-size: 66px 66px;mask-image: radial-gradient(120% 90% at 70% 0%, rgb(0, 0, 0) 30%, transparent 78%);"></div>
+                    <div aria-hidden="true" style="position: absolute;top: -340px;right: -200px;width: 920px;height: 920px;border-radius: 50%;background: radial-gradient(circle, rgba(3, 113, 238, 0.26), transparent 62%);filter: blur(20px);pointer-events: none;"></div>
+                    <div aria-hidden="true" style="position: absolute; top: 120px; left: -260px; width: 680px; height: 680px; border-radius: 50%; background: radial-gradient(circle, rgba(18, 211, 221, 0.14), transparent 62%); filter: blur(20px); pointer-events: none;"></div>
+                </div>
+                <a href="#go" class="scroll-target"><svg width="22" height="34" viewBox="0 0 22 34" fill="none"><rect x="1.5" y="1.5" width="19" height="31" rx="9.5" fill="#000000d8" stroke="rgba(241,245,249,0.8)" stroke-width="1.5"></rect><circle cx="11" cy="10" r="3" fill="rgba(241,245,249,0.8)"></circle></svg></a>
+            </section>         
+            <link rel='stylesheet' id='icw-agent-content-css' href='blocks/agent-content/style.css' type='text/css' media='all' /> 
+            <section class="main-section agent-content-section bg-theme-dark is-light section-row-center is-shape  is-text-image">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 col-lg-6">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms" style="visibility: visible; animation-delay: 150ms; animation-name: fadeInUp;">The problem</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">AI spend does not <br class="d-none d-lg-block">explode in one place. It <br class="d-none d-lg-block">leaks across every team.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms" style="visibility: visible; animation-delay: 450ms; animation-name: fadeInUp;">
+                                    <p>AI starts as enablement. Then usage quietly expands.</p>
+                                    <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 11px;">
+                                        <div style="display: flex; align-items: center; gap: 12px; font-size: 15.5px; color: rgb(200, 208, 217);"><span style="width: 5px; height: 5px; border-radius: 50%; background: rgb(101, 113, 127); flex-shrink: 0;"></span>More assistants per developer.</div>
+                                        <div style="display: flex; align-items: center; gap: 12px; font-size: 15.5px; color: rgb(200, 208, 217);"><span style="width: 5px; height: 5px; border-radius: 50%; background: rgb(101, 113, 127); flex-shrink: 0;"></span>Agents running longer tasks.</div>
+                                        <div style="display: flex; align-items: center; gap: 12px; font-size: 15.5px; color: rgb(200, 208, 217);"><span style="width: 5px; height: 5px; border-radius: 50%; background: rgb(101, 113, 127); flex-shrink: 0;"></span>Premium models on simple work.</div>
+                                        <div style="display: flex; align-items: center; gap: 12px; font-size: 15.5px; color: rgb(200, 208, 217);"><span style="width: 5px; height: 5px; border-radius: 50%; background: rgb(101, 113, 127); flex-shrink: 0;"></span>No clear limits, and a late invoice.</div>
+                                    </div>
+                                    <p style="margin: 22px 0px 0px; font-size: 17.5px; line-height: 1.62; color: rgb(176, 186, 198);">AI starts as enablement. Then usage quietly expands.</p>
+                                    <p style="margin: 16px 0px 0px; font-size: 17.5px; line-height: 1.6; color: rgb(3, 113, 238); font-weight: 600;">Without governance, adoption becomes unmanaged spend.</p>
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp col-lg-6" style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="rg-pvis" style="position: relative; display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: center;">
+                                <div style="position: relative; height: 320px; border-radius: 18px; border: 1px dashed rgba(248, 113, 113, 0.28); background: rgba(248, 113, 113, 0.03); padding: 14px; overflow: hidden;">
+                                    <span style="position: absolute; top: 12px; left: 14px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(248, 113, 113);">Unmanaged</span>
+                                    <div style="position: absolute; top: 46px; left: 16px; transform: rotate(-5deg); padding: 8px 11px; border-radius: 9px; background: rgb(24, 28, 33); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 11px; color: rgb(176, 186, 198);">Contributor usage</div>
+                                    <div style="position: absolute; top: 104px; left: 96px; transform: rotate(4deg); padding: 8px 11px; border-radius: 9px; background: rgb(24, 28, 33); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 11px; color: rgb(176, 186, 198);">Team budget?</div>
+                                    <div style="position: absolute; top: 62px; right: 18px; transform: rotate(6deg); padding: 8px 11px; border-radius: 9px; background: rgb(24, 28, 33); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 11px; color: rgb(176, 186, 198);">Agent runs</div>
+                                    <div style="position: absolute; top: 158px; left: 24px; transform: rotate(3deg); padding: 8px 11px; border-radius: 9px; background: rgb(24, 28, 33); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 11px; color: rgb(176, 186, 198);">Tool spend</div>
+                                    <div style="position: absolute; top: 150px; right: 14px; transform: rotate(-6deg); padding: 8px 11px; border-radius: 9px; background: rgb(24, 28, 33); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 11px; color: rgb(176, 186, 198);">Unclear ownership</div>
+                                    <div style="position: absolute; bottom: 18px; left: 30px; transform: rotate(-3deg); padding: 8px 11px; border-radius: 9px; background: rgba(248, 113, 113, 0.12); border: 1px solid rgba(248, 113, 113, 0.34); font-size: 11px; color: rgb(252, 165, 165);">Late invoice</div>
+                                    <div style="position: absolute; bottom: 48px; right: 24px; transform: rotate(5deg); padding: 8px 11px; border-radius: 9px; background: rgb(24, 28, 33); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 11px; color: rgb(176, 186, 198);">Premium model calls</div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                                    <img decoding="async" src="upload/icon-mston-white.svg" alt="Milestone" style="height: 20px; width: auto; opacity: 0.9;">
+                                    <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 18px; color: rgb(18, 211, 221);">→</span>
+                                </div>
+                                <div style="position: relative; height: 320px; border-radius: 18px; border: 1px solid rgba(18, 211, 221, 0.3); background: linear-gradient(rgba(3, 113, 238, 0.08), rgba(9, 10, 12, 0.6)); padding: 16px; box-shadow: rgba(3, 113, 238, 0.14) 0px 0px 50px;">
+                                    <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(18, 211, 221);">Governed overview</span>
+                                    <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); font-size: 12px; color: rgb(200, 208, 217);">Contributor caps<span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(52, 211, 153);"></span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); font-size: 12px; color: rgb(200, 208, 217);">Team budgets<span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(52, 211, 153);"></span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); font-size: 12px; color: rgb(200, 208, 217);">Tool and model limits<span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(52, 211, 153);"></span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); font-size: 12px; color: rgb(200, 208, 217);">Agent governance<span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(245, 165, 36);"></span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.06); font-size: 12px; color: rgb(200, 208, 217);">Alerts and forecasts<span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(52, 211, 153);"></span></div>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-theme-dark is-light is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">Governance overview</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">One place to monitor every AI limit.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p style="max-width: 760px">Company limits, team budgets, tool usage, agent activity, alerts, and savings, all in one governance layer.</p>
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <div style="margin-top: 44px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.09); background: linear-gradient(rgba(20, 26, 33, 0.7), rgba(11, 14, 18, 0.85)); box-shadow: rgba(0, 0, 0, 0.5) 0px 40px 100px; overflow: hidden;">
+                                <div style="display: flex; align-items: center; gap: 14px; padding: 18px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.07); background: rgba(9, 10, 12, 0.5);">
+                                    <span style="display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: rgb(255, 255, 255);"><img src="upload/icon-mston-white.svg" style="height: 16px; width: auto;">AI Governance Overview</span>
+                                    <div style="margin-left: auto; display: flex; gap: 8px;">
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(200, 208, 217); padding: 6px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">This month</span>
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(101, 113, 127); padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.06);">All teams</span>
+                                    </div>
+                                </div>
+                                <div class="rg-dash" style="padding: 22px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 18px;">          
+                                    <div style="display: flex; flex-direction: column; gap: 18px;">
+                                        <div class="rg-din" style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px;">
+                                            <div style="padding: 20px; border-radius: 16px; background: linear-gradient(160deg, rgba(3, 113, 238, 0.16), rgba(9, 10, 12, 0.4)); border: 1px solid rgba(3, 113, 238, 0.26);">
+                                                <div style="font-size: 13px; color: rgb(137, 150, 164); font-weight: 500;">Company AI budget</div>
+                                                <div style="display: flex; align-items: flex-end; gap: 8px; margin-top: 8px;"><span style="font-size: 38px; font-weight: 600; color: rgb(255, 255, 255); letter-spacing: -0.02em;">72%</span><span style="font-size: 12.5px; color: rgb(137, 150, 164); padding-bottom: 8px;">used</span></div>
+                                                <div style="margin-top: 10px; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden;"><div style="height: 100%; width: 72%; border-radius: 999px; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); animation: 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running msMeter;"></div></div>
+                                                <div style="margin-top: 12px; font-size: 12.5px; color: rgb(52, 211, 153); display: flex; align-items: center; gap: 7px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(52, 211, 153);"></span>Projected to finish month within limit</div>
+                                            </div>
+                                            <div style="padding: 20px; border-radius: 16px; background: linear-gradient(165deg, rgba(135, 191, 243, 0.1), rgba(3, 113, 238, 0.03)); border: 1px solid rgba(135, 191, 243, 0.16);">
+                                                <div style="font-size: 13px; color: rgb(137, 150, 164); font-weight: 500;">Forecasted overrun</div>
+                                                <div style="display: flex; align-items: flex-end; gap: 8px; margin-top: 8px;"><span style="font-size: 34px; font-weight: 600; color: rgb(245, 165, 36); letter-spacing: -0.02em;">3</span><span style="font-size: 12.5px; color: rgb(137, 150, 164); padding-bottom: 7px;">teams at risk</span></div>
+                                                <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 9px;">
+                                                <div style="display: flex; align-items: center; gap: 9px;"><span style="font-size: 11.5px; color: rgb(200, 208, 217); width: 62px;">Platform</span><div style="flex: 1 1 0%; height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.07); overflow: hidden;"><div style="height: 100%; width: 94%; background: rgb(248, 113, 113); border-radius: 999px;"></div></div></div>
+                                                <div style="display: flex; align-items: center; gap: 9px;"><span style="font-size: 11.5px; color: rgb(200, 208, 217); width: 62px;">Growth</span><div style="flex: 1 1 0%; height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.07); overflow: hidden;"><div style="height: 100%; width: 81%; background: rgb(245, 165, 36); border-radius: 999px;"></div></div></div>
+                                                <div style="display: flex; align-items: center; gap: 9px;"><span style="font-size: 11.5px; color: rgb(200, 208, 217); width: 62px;">Mobile</span><div style="flex: 1 1 0%; height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.07); overflow: hidden;"><div style="height: 100%; width: 58%; background: rgb(52, 211, 153); border-radius: 999px;"></div></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 20px; border-radius: 16px; background: linear-gradient(165deg, rgba(135, 191, 243, 0.1), rgba(3, 113, 238, 0.03)); border: 1px solid rgba(135, 191, 243, 0.16);">
+                                            <div style="display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 13px; color: rgb(137, 150, 164); font-weight: 500;">Tool spend by vendor</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(101, 113, 127);">$ this month</span></div>
+                                            <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 13px;">
+                                                <div style="display: flex; align-items: center; gap: 12px;"><img src="upload/icon-claude.svg" style="height: 18px; width: 18px;"><span style="font-size: 12.5px; color: rgb(200, 208, 217); width: 110px;">Claude Code</span><div style="flex: 1 1 0%; height: 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); overflow: hidden;"><div style="height: 100%; width: 88%; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border-radius: 999px;"></div></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(255, 255, 255); width: 54px; text-align: right;">$24,100</span></div>
+                                                <div style="display: flex; align-items: center; gap: 12px;"><img src="upload/icon-codex.svg" style="height: 18px; width: 18px; border-radius: 4px;"><span style="font-size: 12.5px; color: rgb(200, 208, 217); width: 110px;">Codex</span><div style="flex: 1 1 0%; height: 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); overflow: hidden;"><div style="height: 100%; width: 64%; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border-radius: 999px;"></div></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(255, 255, 255); width: 54px; text-align: right;">$17,600</span></div>
+                                                <div style="display: flex; align-items: center; gap: 12px;"><img src="upload/icon-cursor.svg" style="height: 18px; width: 18px; border-radius: 4px;"><span style="font-size: 12.5px; color: rgb(200, 208, 217); width: 110px;">Cursor</span><div style="flex: 1 1 0%; height: 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); overflow: hidden;"><div style="height: 100%; width: 49%; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border-radius: 999px;"></div></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(255, 255, 255); width: 54px; text-align: right;">$12,950</span></div>
+                                                <div style="display: flex; align-items: center; gap: 12px;"><img src="upload/icon-github-copilot.svg" style="height: 18px; width: 18px; filter: invert(1) brightness(1.4);"><span style="font-size: 12.5px; color: rgb(200, 208, 217); width: 110px;">GitHub Copilot</span><div style="flex: 1 1 0%; height: 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); overflow: hidden;"><div style="height: 100%; width: 37%; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border-radius: 999px;"></div></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(255, 255, 255); width: 54px; text-align: right;">$9,480</span></div>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(101, 113, 127); padding-left: 2px;">Alerts and recommendations</div>
+                                        <div style="padding: 14px; border-radius: 13px; background: rgba(135, 191, 243, 0.06); border: 1px solid rgba(135, 191, 243, 0.22);">
+                                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(135, 191, 243);"></span><span style="font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255);">Contributor review needed</span></div>
+                                            <div style="font-size: 12.5px; line-height: 1.5; color: rgb(176, 186, 198);">6 contributors are above expected usage for their role.</div>
+                                        </div>
+                                        <div style="padding: 14px; border-radius: 13px; background: rgba(245, 165, 36, 0.06); border: 1px solid rgba(245, 165, 36, 0.22);">
+                                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(245, 165, 36);"></span><span style="font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255);">Agent loop detected</span></div>
+                                            <div style="font-size: 12.5px; line-height: 1.5; color: rgb(176, 186, 198);">Billing agent repeated similar tasks 18 times in one session.</div>
+                                        </div>
+                                        <div style="padding: 14px; border-radius: 13px; background: rgba(245, 165, 36, 0.06); border: 1px solid rgba(245, 165, 36, 0.22);">
+                                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(245, 165, 36);"></span><span style="font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255);">Premium model overuse</span></div>
+                                            <div style="font-size: 12.5px; line-height: 1.5; color: rgb(176, 186, 198);">32 percent of premium model calls were used for routine code generation.</div>
+                                        </div>
+                                        <div style="padding: 14px; border-radius: 13px; background: rgba(248, 113, 113, 0.06); border: 1px solid rgba(248, 113, 113, 0.22);">
+                                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(248, 113, 113);"></span><span style="font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255);">Slack alert sent</span></div>
+                                            <div style="font-size: 12.5px; line-height: 1.5; color: rgb(176, 186, 198);">Platform team is projected to exceed monthly AI budget in 6 days.</div>
+                                        </div>
+                                        <div style="padding: 14px; border-radius: 13px; background: rgba(52, 211, 153, 0.07); border: 1px solid rgba(52, 211, 153, 0.26);">
+                                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(52, 211, 153);"></span><span style="font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255);">Savings opportunity</span></div>
+                                            <div style="font-size: 12.5px; line-height: 1.5; color: rgb(176, 186, 198);">Move routine refactor tasks to standard model and save $9,200 this month.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>             
+                        </div>
+                    </div>
+                </div>
+            </section> 
+            <section class="main-section agent-content-section bg-none custom-gradient-bg is-dark is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">Questions you can answer</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">Ask the questions vendor <br class="d-none d-lg-block">dashboards cannot answer.</h2>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp">
+                            <div id="question-box" style="max-width:880px;border-radius:18px;background:linear-gradient(180deg,#13171C,#0B0E12);border:1px solid rgba(11,40,80,.18);box-shadow:0 30px 70px rgba(15,40,80,.30);overflow:hidden">
+                                <div style="display:flex;align-items:center;gap:8px;padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.25)">
+                                    <span style="width:11px;height:11px;border-radius:50%;background:#F87171"></span>
+                                    <span style="width:11px;height:11px;border-radius:50%;background:#F5A524"></span>
+                                    <span style="width:11px;height:11px;border-radius:50%;background:#34D399"></span>
+                                    <span style="margin-left: 8px; display: flex; align-items: center; gap: 7px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(101, 113, 127);"><img decoding="async" src="upload/icon-mston-white.svg" style="height: 11px; width: auto; opacity: 0.7;">governance query</span>
+                                    <span style="margin-left:auto;font-family:'JetBrains Mono',monospace; font-size:11.5px;color:#8996A4" id="qCounter"></span>
+                                </div>
+                                <div id="qLine" style="padding:38px 30px;min-height:104px;display:flex;align-items:center;font-size:25px;line-height:1.4;color:#fff;font-weight:500; display: flex; align-items: center; gap: 15px; animation: 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both running msRise;"></div>
+                                <div id="qDots" style="display:flex;gap:6px;padding:0 30px 22px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-theme-dark is-light section-title-mw-800 is-shape  is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">Limits and policies</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">Set limits and monitor <br class="d-none d-lg-block">every dollar against them.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p>Define limits by contributor, team, tool, model, agent, and workflow. Then watch spend against them in one place, with alerts before a threshold is crossed.</p>
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp">
+                            <div class="rg-3" style="margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+    <div class="pcard" data-key="contributor" data-hue="135,191,243" style="padding: 24px; border-radius: 18px; transition: border-color 0.35s, box-shadow 0.35s, background 0.35s; background: linear-gradient(165deg, rgba(135, 191, 243, 0.14), rgba(3, 113, 238, 0.05)); border: 1px solid rgba(135, 191, 243, 0.34); box-shadow: rgba(2, 10, 28, 0.4) 0px 12px 34px, rgba(135, 191, 243, 0.12) 0px 0px 34px;">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="picon" style="width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1); background: rgba(135, 191, 243, 0.16); border: 1px solid rgba(135, 191, 243, 0.5); color: rgb(135, 191, 243); box-shadow: rgba(135, 191, 243, 0.4) 0px 0px 20px, rgba(135, 191, 243, 0.12) 0px 0px 12px inset;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20a8 8 0 0 1 16 0"></path><circle cx="12" cy="20" r="1"></circle><path d="M12 20 15 9"></path><path d="M12 4v1.5M4.8 6.8l1 1M19.2 6.8l-1 1"></path></svg></div>
+            <div class="toggle ptrack" data-key="contributor" role="switch" tabindex="0" aria-checked="true" style="width: 40px; height: 23px; border-radius: 999px; flex-shrink: 0; cursor: pointer; transition: 0.25s; position: relative; display: inline-block; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border: 1px solid rgba(18, 211, 221, 0.55);"><span class="pknob" style="position: absolute; top: 2px; left: 2px; width: 17px; height: 17px; border-radius: 50%; background: rgb(255, 255, 255); transition: 0.25s; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px; transform: translateX(17px);"></span></div>
+        </div>
+        <h3 style="margin:18px 0 0;font-size:18px;font-weight:600;color:#fff">Contributor caps</h3>
+        <p style="margin:9px 0 0;font-size:14.5px;line-height:1.55;color:#8996A4">Set expected usage by role, team, seniority, or function and watch who runs past it.</p>
+        <div style="margin-top:16px;display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:#65717F"><span>Monitoring <b class="pstatus" data-key="contributor" style="font-weight:500">active</b></span><span style="color:#12D3DD">cap 2.4k / day</span></div>
+    </div>
+    <div class="pcard" data-key="team" data-hue="95,163,245" style="padding: 24px; border-radius: 18px; transition: border-color 0.35s, box-shadow 0.35s, background 0.35s; background: linear-gradient(165deg, rgba(95, 163, 245, 0.14), rgba(3, 113, 238, 0.05)); border: 1px solid rgba(95, 163, 245, 0.34); box-shadow: rgba(2, 10, 28, 0.4) 0px 12px 34px, rgba(95, 163, 245, 0.12) 0px 0px 34px;">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="picon" style="width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1); background: rgba(95, 163, 245, 0.16); border: 1px solid rgba(95, 163, 245, 0.5); color: rgb(95, 163, 245); box-shadow: rgba(95, 163, 245, 0.4) 0px 0px 20px, rgba(95, 163, 245, 0.12) 0px 0px 12px inset;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"></circle><path d="M3.5 19c0-3 2.4-5 5.5-5s5.5 2 5.5 5"></path><path d="M16 5.6a2.7 2.7 0 0 1 0 5.2"></path><path d="M17.4 19c0-2-.7-3.6-1.9-4.6"></path></svg></div>
+            <div class="toggle ptrack" data-key="team" role="switch" tabindex="0" aria-checked="true" style="width: 40px; height: 23px; border-radius: 999px; flex-shrink: 0; cursor: pointer; transition: 0.25s; position: relative; display: inline-block; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border: 1px solid rgba(18, 211, 221, 0.55);"><span class="pknob" style="position: absolute; top: 2px; left: 2px; width: 17px; height: 17px; border-radius: 50%; background: rgb(255, 255, 255); transition: 0.25s; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px; transform: translateX(17px);"></span></div>
+        </div>
+        <h3 style="margin:18px 0 0;font-size:18px;font-weight:600;color:#fff">Team budgets</h3>
+        <p style="margin:9px 0 0;font-size:14.5px;line-height:1.55;color:#8996A4">Set a budget per team, then track spend against it and forecast who is likely to exceed.</p>
+        <div style="margin-top:16px;height:6px;border-radius:999px;background:rgba(255,255,255,.07);overflow:hidden"><div style="height:100%;width:68%;border-radius:999px;background:linear-gradient(90deg,#0371EE,#12D3DD)"></div></div>
+    </div>
+    <div class="pcard" data-key="tool" data-hue="18,211,221" style="padding: 24px; border-radius: 18px; transition: border-color 0.35s, box-shadow 0.35s, background 0.35s; background: linear-gradient(165deg, rgba(18, 211, 221, 0.14), rgba(3, 113, 238, 0.05)); border: 1px solid rgba(18, 211, 221, 0.34); box-shadow: rgba(2, 10, 28, 0.4) 0px 12px 34px, rgba(18, 211, 221, 0.12) 0px 0px 34px;">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;gap:6px;align-items:center;height:42px"><img decoding="async" src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-claude.svg" alt="Claude" style="height:20px;width:20px"><img decoding="async" src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-codex.svg" alt="Codex" style="height:20px;width:20px;border-radius:4px"><img decoding="async" src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-cursor.svg" alt="Cursor" style="height:20px;width:20px;border-radius:4px"></div>
+            <div class="toggle ptrack" data-key="tool" role="switch" tabindex="0" aria-checked="true" style="width: 40px; height: 23px; border-radius: 999px; flex-shrink: 0; cursor: pointer; transition: 0.25s; position: relative; display: inline-block; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border: 1px solid rgba(18, 211, 221, 0.55);"><span class="pknob" style="position: absolute; top: 2px; left: 2px; width: 17px; height: 17px; border-radius: 50%; background: rgb(255, 255, 255); transition: 0.25s; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px; transform: translateX(17px);"></span></div>
+        </div>
+        <h3 style="margin:18px 0 0;font-size:18px;font-weight:600;color:#fff">Tool limits</h3>
+        <p style="margin:9px 0 0;font-size:14.5px;line-height:1.55;color:#8996A4">Monitor spend across every AI tool against one set of limits.</p>
+        <div style="margin-top:16px;display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:#65717F"><span>6 tools tracked</span><span style="color:#12D3DD">Monitoring <b class="pstatus" data-key="tool" style="font-weight:500">active</b></span></div>
+    </div>
+    <div class="pcard" data-key="model" data-hue="18,211,221" style="padding: 24px; border-radius: 18px; transition: border-color 0.35s, box-shadow 0.35s, background 0.35s; background: linear-gradient(165deg, rgba(135, 191, 243, 0.05), rgba(255, 255, 255, 0.01)); border: 1px solid rgba(255, 255, 255, 0.07); box-shadow: rgba(2, 10, 28, 0.28) 0px 10px 24px;">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="picon" style="width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1); background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.09); color: rgb(91, 102, 115); box-shadow: none; opacity: 0.75;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 7.5 12 12 4 7.5z"></path><path d="M4 12l8 4.5 8-4.5"></path><path d="M4 16.5 12 21l8-4.5"></path></svg></div>
+            <div class="toggle ptrack" data-key="model" role="switch" tabindex="0" aria-checked="false" style="width: 40px; height: 23px; border-radius: 999px; flex-shrink: 0; cursor: pointer; transition: 0.25s; position: relative; display: inline-block; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.16);"><span class="pknob" style="position: absolute; top: 2px; left: 2px; width: 17px; height: 17px; border-radius: 50%; background: rgb(255, 255, 255); transition: 0.25s; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px; transform: translateX(0px);"></span></div>
+        </div>
+        <h3 style="margin:18px 0 0;font-size:18px;font-weight:600;color:#fff">Model guidance</h3>
+        <p style="margin:9px 0 0;font-size:14.5px;line-height:1.55;color:#8996A4">See when premium models are used for routine work and guide teams to the right tier.</p>
+        <div style="margin-top:16px;display:flex;gap:7px"><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#C8D0D9;padding:4px 9px;border-radius:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">Standard</span><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#12D3DD;padding:4px 9px;border-radius:6px;background:rgba(18,211,221,.08);border:1px solid rgba(18,211,221,.26)">Premium flagged</span></div>
+    </div>
+    <div class="pcard" data-key="agent" data-hue="245,165,36" style="padding: 24px; border-radius: 18px; transition: border-color 0.35s, box-shadow 0.35s, background 0.35s; background: linear-gradient(165deg, rgba(245, 165, 36, 0.14), rgba(3, 113, 238, 0.05)); border: 1px solid rgba(245, 165, 36, 0.34); box-shadow: rgba(2, 10, 28, 0.4) 0px 12px 34px, rgba(245, 165, 36, 0.12) 0px 0px 34px;">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="picon" style="width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1); background: rgba(245, 165, 36, 0.16); border: 1px solid rgba(245, 165, 36, 0.5); color: rgb(245, 165, 36); box-shadow: rgba(245, 165, 36, 0.4) 0px 0px 20px, rgba(245, 165, 36, 0.12) 0px 0px 12px inset;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5.5V10h-4.5"></path><path d="M18.4 10a7 7 0 1 0 .3 4.6"></path><circle cx="12" cy="12" r="1.6"></circle></svg></div>
+            <div class="toggle ptrack" data-key="agent" role="switch" tabindex="0" aria-checked="true" style="width: 40px; height: 23px; border-radius: 999px; flex-shrink: 0; cursor: pointer; transition: 0.25s; position: relative; display: inline-block; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border: 1px solid rgba(18, 211, 221, 0.55);"><span class="pknob" style="position: absolute; top: 2px; left: 2px; width: 17px; height: 17px; border-radius: 50%; background: rgb(255, 255, 255); transition: 0.25s; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px; transform: translateX(17px);"></span></div>
+        </div>
+        <h3 style="margin:18px 0 0;font-size:18px;font-weight:600;color:#fff">Agent monitoring</h3>
+        <p style="margin:9px 0 0;font-size:14.5px;line-height:1.55;color:#8996A4">Spot long tasks, repeated attempts, and expensive loops before they add up.</p>
+        <div style="margin-top:16px;display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:#65717F"><span>Loop alerts <b class="pstatus" data-key="agent" style="font-weight:500">active</b></span><span style="color:#F5A524">2 flagged</span></div>
+    </div>
+    <div class="pcard" data-key="skills" data-hue="52,211,153" style="padding: 24px; border-radius: 18px; transition: border-color 0.35s, box-shadow 0.35s, background 0.35s; background: linear-gradient(165deg, rgba(52, 211, 153, 0.14), rgba(3, 113, 238, 0.05)); border: 1px solid rgba(52, 211, 153, 0.34); box-shadow: rgba(2, 10, 28, 0.4) 0px 12px 34px, rgba(52, 211, 153, 0.12) 0px 0px 34px;">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="picon" style="width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1); background: rgba(52, 211, 153, 0.16); border: 1px solid rgba(52, 211, 153, 0.5); color: rgb(52, 211, 153); box-shadow: rgba(52, 211, 153, 0.4) 0px 0px 20px, rgba(52, 211, 153, 0.12) 0px 0px 12px inset;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v5c0 4.4-3 7.6-7 8.9C8 18.6 5 15.4 5 11V6z"></path><path d="M9 11.5 11.2 13.7 15.2 9.4"></path></svg></div>
+            <div class="toggle skills" data-key="tool" role="switch" tabindex="0" aria-checked="true" style="width: 40px; height: 23px; border-radius: 999px; flex-shrink: 0; cursor: pointer; transition: 0.25s; position: relative; display: inline-block; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); border: 1px solid rgba(18, 211, 221, 0.55);"><span class="pknob" style="position: absolute; top: 2px; left: 2px; width: 17px; height: 17px; border-radius: 50%; background: rgb(255, 255, 255); transition: 0.25s; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px; transform: translateX(17px);"></span></div>
+        </div>
+        <h3 style="margin:18px 0 0;font-size:18px;font-weight:600;color:#fff">Approved skills and features</h3>
+        <p style="margin:9px 0 0;font-size:14.5px;line-height:1.55;color:#8996A4">See when usage falls outside approved skills, features, and workflows.</p>
+        <div style="margin-top:16px;display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:#65717F"><span>Tracking <b class="pstatus" data-key="skills" style="font-weight:500">active</b></span><span style="color:#34D399">42 approved</span></div>
+    </div>
+</div>                
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-theme-dark is-light is-text-image">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 col-lg-6">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">Alerts and Slack workflow</div>
+                                <h2 class="title wow fadeInUp h3" data-wow-delay="300ms">Alert the right owner before <br class="d-none d-lg-block">spend becomes a surprise.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p>Alerts reach Slack and other channels the moment a team, tool, agent, or contributor approaches a limit or moves outside policy.</p>
+                                    <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; max-width: 520px;">
+                                        <span style="font-size: 13px; color: rgb(200, 208, 217); padding: 8px 14px; border-radius: 999px; background: rgba(135, 191, 243, 0.09); border: 1px solid rgba(135, 191, 243, 0.2);">Team projected to exceed AI budget</span><br>
+                                        <span style="font-size: 13px; color: rgb(200, 208, 217); padding: 8px 14px; border-radius: 999px; background: rgba(135, 191, 243, 0.09); border: 1px solid rgba(135, 191, 243, 0.2);">Contributor above expected usage</span><br>
+                                        <span style="font-size: 13px; color: rgb(200, 208, 217); padding: 8px 14px; border-radius: 999px; background: rgba(135, 191, 243, 0.09); border: 1px solid rgba(135, 191, 243, 0.2);">Agent loop detected</span><br>
+                                        <span style="font-size: 13px; color: rgb(200, 208, 217); padding: 8px 14px; border-radius: 999px; background: rgba(135, 191, 243, 0.09); border: 1px solid rgba(135, 191, 243, 0.2);">Premium model overuse</span><br>
+                                        <span style="font-size: 13px; color: rgb(200, 208, 217); padding: 8px 14px; border-radius: 999px; background: rgba(135, 191, 243, 0.09); border: 1px solid rgba(135, 191, 243, 0.2);">Unapproved skill used</span><br>
+                                        <span style="font-size: 13px; color: rgb(200, 208, 217); padding: 8px 14px; border-radius: 999px; background: rgba(135, 191, 243, 0.09); border: 1px solid rgba(135, 191, 243, 0.2);">Forecasted monthly overrun</span>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp col-lg-6" style="visibility: visible; animation-name: fadeInUp;">
+                            <div style="border-radius: 18px; background: linear-gradient(rgb(27, 32, 38), rgb(18, 22, 27)); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: rgba(0, 0, 0, 0.55) 0px 36px 90px; overflow: hidden;">
+                                <div style="display: flex; align-items: center; gap: 9px; padding: 14px 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.07); background: rgba(0, 0, 0, 0.2);">
+                                    <span style="width: 22px; height: 22px; border-radius: 6px; background: rgb(74, 21, 75); display: flex; align-items: center; justify-content: center; color: rgb(255, 255, 255); font-size: 13px;">#</span>
+                                    <span style="font-size: 13.5px; font-weight: 600; color: rgb(255, 255, 255);">spend-alerts</span>
+                                    <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(101, 113, 127);">Milestone</span>
+                                    <span style="margin-left: auto; width: 8px; height: 8px; border-radius: 50%; background: rgb(52, 211, 153); box-shadow: rgb(52, 211, 153) 0px 0px 9px; animation: 2.2s ease-in-out 0s infinite normal none running msPulse;"></span>
+                                </div>
+                                <div style="padding: 18px;">
+                                    <div style="display: flex; gap: 12px;">
+                                        <div style="width: 36px; height: 36px; border-radius: 9px; background: linear-gradient(135deg, rgb(3, 113, 238), rgb(18, 211, 221)); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img decoding="async" src="upload/icon-mston-white.svg" style="height: 15px; width: auto;"></div>
+                                        <div style="flex: 1 1 0%;">
+                                            <div style="display: flex; align-items: center; gap: 9px;"><span style="font-size: 13.5px; font-weight: 600; color: rgb(255, 255, 255);">Milestone</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; color: rgb(137, 150, 164); padding: 1px 6px; border-radius: 4px; background: rgba(255, 255, 255, 0.07);">APP</span><span style="font-size: 11px; color: rgb(101, 113, 127);">9:24 AM</span></div>
+                                            <div style="margin-top: 10px; border-radius: 12px; border-width: 1px 1px 1px 3px; border-style: solid; border-color: rgba(245, 165, 36, 0.3) rgba(245, 165, 36, 0.3) rgba(245, 165, 36, 0.3) rgb(245, 165, 36); border-image: initial; background: rgba(245, 165, 36, 0.05); padding: 14px;">
+                                                <div style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 14px;">⚠</span><span style="font-size: 14px; font-weight: 600; color: rgb(255, 255, 255);">AI spend alert</span></div>
+                                                <p style="margin: 9px 0px 0px; font-size: 13.5px; line-height: 1.55; color: rgb(200, 208, 217);">Platform team is projected to exceed its monthly AI budget in 6 days.</p>
+                                                <div style="margin-top: 13px;">
+                                                    <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(101, 113, 127);">Budget used</span>
+                                                    <div style="margin-top: 7px; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden;">
+                                                        <div style="height: 100%; width: 94%; border-radius: 999px; background: linear-gradient(90deg, rgb(245, 165, 36), rgb(248, 113, 113)); animation: 1.8s ease-in-out 0s infinite normal none running msBlink;"></div>
+                                                    </div>
+                                                </div>
+                                                <div style="margin-top: 14px; padding-top: 13px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
+                                                    <div style="font-size: 12px; font-weight: 600; color: rgb(255, 255, 255); margin-bottom: 5px;">Recommended action</div>
+                                                    <div style="font-size: 12.5px; line-height: 1.5; color: rgb(176, 186, 198);">Review agent usage and move routine refactor tasks to standard model.</div>
+                                                </div>
+                                                <div style="margin-top: 14px; display: flex; gap: 9px;">
+                                                    <span style="font-size: 12px; font-weight: 600; color: rgb(255, 255, 255); padding: 8px 16px; border-radius: 8px; background: linear-gradient(rgb(26, 130, 255), rgb(3, 113, 238));">Review usage</span>
+                                                    <span style="font-size: 12px; font-weight: 600; color: rgb(200, 208, 217); padding: 8px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.14);">Adjust limit</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-card-section bg-none custom-gradient-bg is-dark section-title-mw-680 is-shape ">
+                <div class="container">
+                    <div class="ai-section-title text-left">
+                        <div class="tag-line wow fadeInUp" data-wow-delay="150ms">Cost saving practices</div>
+                        <h2 class="title wow fadeInUp h3" data-wow-delay="300ms">Encourage smarter AI usage, <br class="d-none d-lg-block">not less AI usage.</h2>
+                        <div class="sort-info wow fadeInUp" data-wow-delay="450ms"><p>Reduce unnecessary spend without slowing teams down. The goal is not to block AI, but to guide smarter practice.</p></div>
+                    </div>                    
+                    <div class="card-grid">
+                        <div class="icon-card wow fadeInUp" data-wow-delay="150ms">
+                            <div class="card-icon"><img src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-use-standard-model.svg" alt="&lt;small&gt;Use standard model for routine work&lt;/small&gt;"></div>
+                            <div class="card-body">
+                                <h3 class="card-title"><small>Use standard model for routine work</small></h3>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="300ms">
+                            <div class="card-icon"><img src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-reserve-premium-model.svg" alt="&lt;small&gt;Reserve premium model for complex tasks&lt;/small&gt;"></div>
+                            <div class="card-body">
+                                <h3 class="card-title"><small>Reserve premium model for complex tasks</small></h3>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="450ms">
+                            <div class="card-icon"><img src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-limit-repeated-agent.svg" alt="&lt;small&gt;Limit repeated agent loops&lt;/small&gt;"></div>
+                            <div class="card-body">
+                                <h3 class="card-title"><small>Limit repeated agent loops</small></h3>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="600ms">
+                            <div class="card-icon"><img src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-reuse-approved-skills.svg" alt="&lt;small&gt;Reuse approved skills instead of repeating work&lt;/small&gt;"></div>
+                            <div class="card-body">                            
+                                <h3 class="card-title"><small>Reuse approved skills instead of repeating work</small></h3>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="750ms">
+                            <div class="card-icon"><img src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-move-simple-refactors.svg" alt="&lt;small&gt;Move simple refactors to lower cost tools&lt;/small&gt;"></div>
+                            <div class="card-body">
+                                <h3 class="card-title"><small>Move simple refactors to lower cost tools</small></h3>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="900ms">
+                            <div class="card-icon"><img src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-review-high-cost.svg" alt="&lt;small&gt;Review high cost, low impact sessions&lt;/small&gt;"></div>
+                            <div class="card-body">
+                                <h3 class="card-title"><small>Review high cost, low impact sessions</small></h3>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="1050ms">
+                            <div class="card-icon"><img src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-coach-contributors.svg" alt="&lt;small&gt;Coach contributors with unusual usage&lt;/small&gt;"></div>
+                            <div class="card-body">
+                                <h3 class="card-title"><small>Coach contributors with unusual usage</small></h3>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="1200ms">
+                            <div class="card-icon"><img src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-adjust-limits-using-output.svg" alt="&lt;small&gt;Adjust limits using output and quality data&lt;/small&gt;"></div>
+                            <div class="card-body">
+                                <h3 class="card-title"><small>Adjust limits using output and quality data</small></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-theme-dark is-light section-row-center is-shape  is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp anim" data-wow-delay="150ms">What you manage</div>
+                                <h2 class="title wow fadeInUp h3 anim" data-wow-delay="300ms">Govern AI spend where the work <br class="d-none d-lg-block">actually happens.</h2>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp anim">
+                            <div class="rg-3" style="44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start;">
+                            <div class="accordion-card" style="border-radius: 20px; background: linear-gradient(165deg, rgba(135, 191, 243, 0.12), rgba(3, 113, 238, 0.043)); border: 1px solid rgba(135, 191, 243, 0.2); box-shadow: rgba(2, 10, 28, 0.35) 0px 12px 30px; overflow: hidden;">
+                            <div class="accordion-head" style="display: flex; align-items: center; gap: 12px; padding: 22px 24px; cursor: pointer; user-select: none; border-bottom: 1px solid transparent; transition: border-color 0.3s;">
+                                <div style="width: 38px; height: 38px; border-radius: 11px; background: rgba(3, 113, 238, 0.16); border: 1px solid rgba(3, 113, 238, 0.3); display: flex; align-items: center; justify-content: center; color: rgb(95, 163, 245); font-size: 17px; flex-shrink: 0;">◫</div>
+                                <div>
+                                    <div style="font-size: 16px; font-weight: 600; color: rgb(255, 255, 255);">Limits and budgets</div>
+                                    <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(101, 113, 127); margin-top: 2px;">Set the boundaries</div>
+                                </div>
+                                <span class="accordion-chevron" style="margin-left: auto; flex-shrink: 0; font-size: 20px; line-height: 1; color: rgb(154, 166, 178); transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1); transform: rotate(0deg);"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M11.3327 0.66626L5.99935 5.99959L0.666016 0.66626" stroke="rgb(154, 166, 178)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                            <div class="accordion-body" style="max-height: 0px; opacity: 0; padding: 0px 24px; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s, padding 0.4s;">
+                                <div style="padding: 15px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Company wide limit overview</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">A single view of AI spend limits across the organization.</div></div>
+                                <div style="padding: 15px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Contributor caps</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Boundaries for every contributor by role, team, or function.</div></div>
+                                <div style="padding: 15px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Team budgets</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Track team usage and catch overrun risk before month end.</div></div>
+                                <div style="padding: 15px 0px 0px;"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Workflow level controls</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Apply policy to the development cycle, not just invoices.</div></div>
+                            </div>
+                            </div>
+                            <div class="accordion-card" style="border-radius: 20px; background: linear-gradient(165deg, rgba(135, 191, 243, 0.12), rgba(3, 113, 238, 0.043)); border: 1px solid rgba(135, 191, 243, 0.2); box-shadow: rgba(2, 10, 28, 0.35) 0px 12px 30px; overflow: hidden;">
+                            <div class="accordion-head" style="display: flex; align-items: center; gap: 12px; padding: 22px 24px; cursor: pointer; user-select: none; border-bottom: 1px solid transparent; transition: border-color 0.3s;">
+                                <div style="width: 38px; height: 38px; border-radius: 11px; background: rgba(18, 211, 221, 0.14); border: 1px solid rgba(18, 211, 221, 0.3); display: flex; align-items: center; justify-content: center; color: rgb(18, 211, 221); font-size: 17px; flex-shrink: 0;">◈</div>
+                                <div>
+                                    <div style="font-size: 16px; font-weight: 600; color: rgb(255, 255, 255);">Tools, models and agents</div>
+                                    <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(101, 113, 127); margin-top: 2px;">Govern the usage</div>
+                                </div>
+                                <span class="accordion-chevron" style="margin-left: auto; flex-shrink: 0; font-size: 20px; line-height: 1; color: rgb(154, 166, 178); transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1); transform: rotate(0deg);"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M11.3327 0.66626L5.99935 5.99959L0.666016 0.66626" stroke="rgb(154, 166, 178)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                            <div class="accordion-body" style="max-height: 0px; opacity: 0; padding: 0px 24px; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s, padding 0.4s;">
+                                <div style="padding: 15px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Tool cost management</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Track and manage spend across every AI solution in one place.</div></div>
+                                <div style="padding: 15px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Model governance</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Guide teams to the right model tier for each type of work.</div></div>
+                                <div style="padding: 15px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Agent governance</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Visibility into agent cost, repetition, and approval status.</div></div>
+                                <div style="padding: 15px 0px 0px;"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Approved usage policies</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Clear approved tools, models, skills, and features.</div></div>
+                            </div>
+                            </div>
+                            <div class="accordion-card" style="border-radius: 20px; background: linear-gradient(160deg, rgba(3, 113, 238, 0.1), rgba(255, 255, 255, 0.01)); border: 1px solid rgba(18, 211, 221, 0.26); overflow: hidden; box-shadow: rgba(3, 113, 238, 0.1) 0px 0px 50px;">
+                            <div class="accordion-head" style="display: flex; align-items: center; gap: 12px; padding: 22px 24px; cursor: pointer; user-select: none; border-bottom: 1px solid transparent; transition: border-color 0.3s;">
+                                <div style="width: 38px; height: 38px; border-radius: 11px; background: rgba(52, 211, 153, 0.14); border: 1px solid rgba(52, 211, 153, 0.3); display: flex; align-items: center; justify-content: center; color: rgb(52, 211, 153); font-size: 17px; flex-shrink: 0;">◔</div>
+                                <div>
+                                    <div style="font-size: 16px; font-weight: 600; color: rgb(255, 255, 255);">Alerts and savings</div>
+                                    <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(101, 113, 127); margin-top: 2px;">Act before overspend</div>
+                                </div>
+                                <span class="accordion-chevron" style="margin-left: auto; flex-shrink: 0; font-size: 20px; line-height: 1; color: rgb(154, 166, 178); transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1); transform: rotate(0deg);"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M11.3327 0.66626L5.99935 5.99959L0.666016 0.66626" stroke="rgb(154, 166, 178)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                            <div class="accordion-body" style="max-height: 0px; height: 100%; opacity: 0; padding: 0px 24px; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s, padding 0.4s;">
+                                <div style="padding: 15px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Slack alerts</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Spend alerts and approvals routed to the right owners.</div></div>
+                                <div style="padding: 15px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Forecasted overrun alerts</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Catch likely overruns before the month ends.</div></div>
+                                <div style="padding: 15px 0px 0px;"><div style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255);">Spend saving recommendations</div><div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: rgb(137, 150, 164);">Practical actions to use AI more efficiently.</div></div>
+                            </div>
+                            </div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-theme-dark is-light section-row-center section-title-mw-800 is-shape  is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">Core difference</div>
+                                <h2 class="title wow fadeInUp h3" data-wow-delay="300ms">Vendor controls limit the tool. <br class="d-none d-lg-block">Milestone governs the work.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms"><p>AI vendors can show usage inside their own product. Milestone shows how AI usage behaves across the company and across the development cycle.</p></div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp ">
+                            <div style="display: flex; justify-content: center;">
+                                <div style="position: relative; width: 100%; max-width: 1000px; border-radius: 24px; border: 1px solid rgba(18, 211, 221, 0.28); background: linear-gradient(160deg, rgba(3, 113, 238, 0.12), rgba(9, 10, 12, 0.55)); box-shadow: rgba(3, 113, 238, 0.15) 0px 0px 70px;">
+                                    <div style="display: flex; align-items: center; gap: 13px; padding: 24px 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                                        <div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, rgb(3, 113, 238), rgb(18, 211, 221)); display: flex; align-items: center; justify-content: center; box-shadow: rgba(18, 211, 221, 0.4) 0px 0px 24px; flex-shrink: 0;"><img decoding="async" src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-mston-white.svg" style="height: 18px; width: auto;"></div>
+                                        <div>
+                                            <div style="font-size: 17px; font-weight: 600; color: rgb(255, 255, 255); letter-spacing: -0.01em;">Milestone governance layer</div>
+                                            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(101, 113, 127); margin-top: 3px;">One layer across every AI tool</div>
+                                        </div>
+                                        <span style="margin-left: auto; display: flex; align-items: center; gap: 7px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(18, 211, 221); padding: 6px 11px; border: 1px solid rgba(18, 211, 221, 0.3); border-radius: 8px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 9px; animation: 2.2s ease-in-out 0s infinite normal none running msPulse;"></span>Live</span>
+                                    </div>
+                                    <div class="rg-3" style="padding: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px;">
+                                        <div>
+                                            <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 16px;">
+                                                <span style="width: 8px; height: 8px; border-radius: 2px; background: rgb(18, 211, 221); box-shadow: rgba(18, 211, 221, 0.6) 0px 0px 9px;"></span>
+                                                <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(18, 211, 221);">Visibility</span>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 13px;">
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(18, 211, 221); font-size: 13px; margin-top: 1px;">✓</span>Company wide governance</div>
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(18, 211, 221); font-size: 13px; margin-top: 1px;">✓</span>Team budgets and spend</div>
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(18, 211, 221); font-size: 13px; margin-top: 1px;">✓</span>Usage in the development cycle</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 16px;">
+                                                <span style="width: 8px; height: 8px; border-radius: 2px; background: rgb(95, 163, 245); box-shadow: rgba(95, 163, 245, 0.6) 0px 0px 9px;"></span>
+                                                <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(95, 163, 245);">Control</span>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 13px;">
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(95, 163, 245); font-size: 13px; margin-top: 1px;">✓</span>Contributor caps</div>
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(95, 163, 245); font-size: 13px; margin-top: 1px;">✓</span>Agent behavior</div>
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(95, 163, 245); font-size: 13px; margin-top: 1px;">✓</span>Approved skills and features</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 16px;">
+                                                <span style="width: 8px; height: 8px; border-radius: 2px; background: rgb(52, 211, 153); box-shadow: rgba(52, 211, 153, 0.6) 0px 0px 9px;"></span>
+                                                <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(52, 211, 153);">Action</span>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 13px;">
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(52, 211, 153); font-size: 13px; margin-top: 1px;">✓</span>Slack alerts</div>
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(52, 211, 153); font-size: 13px; margin-top: 1px;">✓</span>Forecasted overrun</div>
+                                                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.4; color: rgb(200, 208, 217);"><span style="color: rgb(52, 211, 153); font-size: 13px; margin-top: 1px;">✓</span>Cost saving recommendations</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-none custom-gradient-bg is-dark section-row-center is-shape  is-text-image">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 col-lg-6">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">The philosophy</div>
+                                <h2 class="title wow fadeInUp h3" data-wow-delay="300ms">Guardrails that help AI <br class="d-none d-lg-block">scale.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p style="max-width: 480px;">AI governance should not feel like a brake. The best governance gives teams clarity.</p>
+                                    <p style="max-width: 480px;margin: 18px 0px 0px; font-size: 17.5px; line-height: 1.6; color: rgb(31, 42, 56); ">Milestone helps companies scale AI adoption with the financial discipline required for enterprise deployment.</p>
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp col-lg-6">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                <div style="padding: 16px 18px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.06) 0px 5px 16px; font-size: 14.5px; color: rgb(31, 42, 56);">Which tools to use.</div>
+                                <div style="padding: 16px 18px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.06) 0px 5px 16px; font-size: 14.5px; color: rgb(31, 42, 56);">Which models to choose.</div>
+                                <div style="padding: 16px 18px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.06) 0px 5px 16px; font-size: 14.5px; color: rgb(31, 42, 56);">Which agents are approved.</div>
+                                <div style="padding: 16px 18px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.06) 0px 5px 16px; font-size: 14.5px; color: rgb(31, 42, 56);">Which limits apply.</div>
+                                <div style="padding: 16px 18px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.06) 0px 5px 16px; font-size: 14.5px; color: rgb(31, 42, 56);">Which practices save money.</div>
+                                <div style="padding: 16px 18px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.06) 0px 5px 16px; font-size: 14.5px; color: rgb(31, 42, 56);">When to ask for approval.</div>
+                                <div style="padding: 16px 18px; border-radius: 13px; background: linear-gradient(135deg, rgb(3, 113, 238), rgb(18, 211, 221)); border: 1px solid transparent; box-shadow: rgba(3, 113, 238, 0.28) 0px 10px 24px; font-size: 14.5px; font-weight: 600; color: rgb(255, 255, 255); grid-column: span 2;">When to change behavior.</div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-none is-dark section-row-center custom-gradient-bg-2 with-border is-shape  is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">By stakeholder</div>
+                                <h2 class="title wow fadeInUp h3" data-wow-delay="300ms">Built for every leader responsible for <br class="d-none d-lg-block">AI spend control.</h2>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp ">
+                            <div class="rg-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;">
+                                <div style="padding: 26px; border-radius: 18px; background: linear-gradient(160deg, rgb(3, 113, 238), rgb(10, 91, 208)); border: 1px solid rgba(3, 113, 238, 0.4); box-shadow: rgba(3, 113, 238, 0.28) 0px 16px 34px;"><div style="width: 42px; height: 42px; border-radius: 11px; background: rgba(255, 255, 255, 0.18); display: flex; align-items: center; justify-content: center; color: rgb(255, 255, 255); font-size: 19px; margin-bottom: 16px;">◎</div><h3 style="margin: 0px; font-size: 19px; font-weight: 600; color: rgb(255, 255, 255);">CTOs and VPs of Engineering</h3><p style="margin: 11px 0px 0px; font-size: 15px; line-height: 1.58; color: rgba(255, 255, 255, 0.9);">Scale AI adoption across the organization while keeping spend visible, approved, and controlled.</p></div>
+                                <div style="padding: 26px; border-radius: 18px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.08) 0px 10px 26px;"><div style="width: 42px; height: 42px; border-radius: 11px; background: rgba(43, 108, 176, 0.1); display: flex; align-items: center; justify-content: center; color: rgb(43, 108, 176); font-size: 19px; margin-bottom: 16px;">◫</div><h3 style="margin: 0px; font-size: 19px; font-weight: 600; color: rgb(11, 19, 32);">Engineering Managers</h3><p style="margin: 11px 0px 0px; font-size: 15px; line-height: 1.58; color: rgb(70, 86, 107);">See how each team uses AI and which practices cut cost without slowing delivery.</p></div>
+                                <div style="padding: 26px; border-radius: 18px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.08) 0px 10px 26px;"><div style="width: 42px; height: 42px; border-radius: 11px; background: rgba(11, 140, 149, 0.1); display: flex; align-items: center; justify-content: center; color: rgb(11, 140, 149); font-size: 19px; margin-bottom: 16px;">◈</div><h3 style="margin: 0px; font-size: 19px; font-weight: 600; color: rgb(11, 19, 32);">AI Platform Leaders</h3><p style="margin: 11px 0px 0px; font-size: 15px; line-height: 1.58; color: rgb(70, 86, 107);">Manage approved tools, models, agents, skills, and usage policies across the engineering organization.</p></div>
+                            </div>
+                            <div class="rg-2" style="margin-top: 18px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
+                                <div style="padding: 26px; border-radius: 18px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.08) 0px 10px 26px;"><div style="width: 42px; height: 42px; border-radius: 11px; background: rgba(16, 159, 110, 0.1); display: flex; align-items: center; justify-content: center; color: rgb(14, 159, 110); font-size: 19px; margin-bottom: 16px;">⊞</div><h3 style="margin: 0px; font-size: 19px; font-weight: 600; color: rgb(11, 19, 32);">Finance and Operations</h3><p style="margin: 11px 0px 0px; font-size: 15px; line-height: 1.58; color: rgb(70, 86, 107);">Move from surprise invoices to proactive AI budget control, alerts, forecasts, and savings recommendations.</p></div>
+                                <div style="padding: 26px; border-radius: 18px; background: rgb(255, 255, 255); border: 1px solid rgba(11, 40, 80, 0.1); box-shadow: rgba(15, 40, 80, 0.08) 0px 10px 26px;"><div style="width: 42px; height: 42px; border-radius: 11px; background: rgba(180, 83, 9, 0.1); display: flex; align-items: center; justify-content: center; color: rgb(180, 83, 9); font-size: 19px; margin-bottom: 16px;">◔</div><h3 style="margin: 0px; font-size: 19px; font-weight: 600; color: rgb(11, 19, 32);">Product Leaders</h3><p style="margin: 11px 0px 0px; font-size: 15px; line-height: 1.58; color: rgb(70, 86, 107);">Understand whether AI spend is supporting strategic work or spreading into low value activity.</p></div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </section>            
+            <link rel='stylesheet' id='icw-agent-cta-css' href='blocks/agent-cta/style.css' type='text/css' media='all' /> 
+            <section class="main-section agent-cta-section bg-theme-dark position-relative is-light">
+                <div class="container">
+                    <div class="ai-section-title mb-0 text-center">
+                        <div class="tag-line wow fadeInUp" data-wow-delay="150ms">
+                            <div style="margin: 0px auto; margin-bottom: 100px; max-width: 640px;">
+                                <svg viewBox="0 0 640 220" aria-hidden="true" style="width: 100%; height: auto;"><g stroke="url(#msg)" stroke-width="1.4" fill="none" opacity=".85"><path d="M40 20 C 220 20, 240 110, 320 110" style="stroke-dasharray: 300; animation: 2.6s linear 0s infinite normal none running msConverge;"></path><path d="M40 64 C 220 64, 250 110, 320 110" style="stroke-dasharray: 300; animation: 2.6s linear 0.3s infinite normal none running msConverge;"></path><path d="M40 108 C 200 108, 250 110, 320 110" style="stroke-dasharray: 300; animation: 2.6s linear 0.6s infinite normal none running msConverge;"></path><path d="M40 152 C 220 152, 250 110, 320 110" style="stroke-dasharray: 300; animation: 2.6s linear 0.9s infinite normal none running msConverge;"></path><path d="M40 196 C 220 196, 240 110, 320 110" style="stroke-dasharray: 300; animation: 2.6s linear 1.2s infinite normal none running msConverge;"></path><path d="M600 30 C 440 30, 400 110, 320 110" style="stroke-dasharray: 300; animation: 2.6s linear 0.15s infinite normal none running msConverge;"></path><path d="M600 110 C 460 110, 400 110, 320 110" style="stroke-dasharray: 300; animation: 2.6s linear 0.75s infinite normal none running msConverge;"></path><path d="M600 190 C 440 190, 400 110, 320 110" style="stroke-dasharray: 300; animation: 2.6s linear 1.05s infinite normal none running msConverge;"></path></g><defs><linearGradient id="msg" x1="0" y1="0" x2="640" y2="0"><stop offset="0" stop-color="#0371EE"></stop><stop offset="1" stop-color="#12D3DD"></stop></linearGradient></defs><circle cx="320" cy="110" r="34" fill="#0B0E12" stroke="#12D3DD" stroke-width="1.5"></circle></svg>
+                                <div class="logo-position" style="position: relative; margin-top: -140px; margin-bottom: 90px; display: flex; justify-content: center;">
+                                    <div class="logo-img" style="width: 60px; height: 60px; border-radius: 15px; background: linear-gradient(135deg, rgb(3, 113, 238), rgb(18, 211, 221)); display: flex; align-items: center; justify-content: center; box-shadow: rgba(18, 211, 221, 0.5) 0px 0px 40px;"><img decoding="async" src="https://mstoneaidev.wpenginepowered.com/wp-content/uploads/2026/06/icon-mston-white.svg" style="height: 24px; width: auto;"></div>
+                                </div> 
+                            </div>
+                        </div>                                
+                        <h2 class="title wow fadeInUp h2" data-wow-delay="300ms">AI spend needs governance <br class="d-none d-lg-block">before it needs another invoice.</h2>
+                        <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                            <p>Define limits, detect waste, approve the right usage, and scale AI adoption with financial control.</p>
+                        </div>
+                        <div class="action wow fadeInUp" data-wow-delay="600ms">
+                            <a href="https://mstoneaidev.wpenginepowered.com/book-a-demo/" class="btn btn-primary-only btn-md" target="_self">Get a demo </a>
+                            <a href="#go" class="btn btn-outline-gray-only btn-md" target="_self">Explore Spend Hub → </a>
+                        </div>
+                        <div class="footer-note wow fadeInUp" data-wow-delay="750ms">
+                            <div aria-hidden="true" style="position: absolute; bottom: -260px; left: 50%; transform: translateX(-50%); max-width: 100%; width: 1000px; height: 760px; border-radius: 50%; background: radial-gradient(circle, rgba(3, 113, 238, 0.24), transparent 60%); filter: blur(20px); pointer-events: none;"></div>
+                        </div>
+                    </div>    
+                </div>
+            </section>
+        </main>
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-xl-6">
+                        <a href="index.html" class="footer-logo" rel="home"><img  src="assets/images/logo.svg" alt="milestone, Ltd. | Unlocking R&amp;D Black Box"></a>
+                        <ul class="social-list social-media-icons ">
+                            <li class="icon-animation"><a title="LinkedIn" data-bs-toggle="tooltip" href="https://www.linkedin.com/company/milestoneai" target="_blank"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.91321 14.9887H1.04798V5.52096H4.03778V14.9887H3.91321ZM2.54288 4.27521C1.54628 4.27521 0.798828 3.40319 0.798828 2.53116C0.798828 1.53456 1.54628 0.787109 2.54288 0.787109C3.53948 0.787109 4.28693 1.53456 4.28693 2.53116C4.16236 3.40319 3.41491 4.27521 2.54288 4.27521ZM15.0004 14.9887H12.0106V10.3794C12.0106 9.25822 12.0106 7.88789 10.5157 7.88789C9.02079 7.88789 8.77164 9.13364 8.77164 10.3794V15.1132H5.78183V5.52096H8.64706V6.76671C9.02079 6.01926 10.0174 5.27181 11.3877 5.27181C14.3775 5.27181 14.8758 7.26501 14.8758 9.75652V14.9887H15.0004Z" fill="white" /></svg></a></li>
+                            <li class="icon-animation"><a title="Twitter" data-bs-toggle="tooltip" href="https://x.com/mstone_ai" target="_blank"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.22852 10.1013L2.93802 15.0003H0.561523L6.11852 8.65234L7.22852 10.1013Z" fill="white" /><path d="M8.52539 5.494L12.4539 1H14.8289L9.62539 6.951L8.52539 5.494Z" fill="white" /><path d="M15.7439 15H10.9644L0.255859 1H5.15636L15.7439 15ZM11.6199 13.5785H12.9359L4.44136 2.347H3.02936L11.6199 13.5785Z" fill="white" /> </svg></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-7 col-xl-6">
+                        <div class="footer-menu-block">
+                            <ul id="menu-footer-menu" class="footer-menu">
+                                <li><a href="product.html">Product</a></li>
+                                <li><a href="use-cases.html">Use Cases</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                            <ul id="menu-footer-menu-right" class="footer-menu">
+                                <li class="menu-item-object-glossary"><a href="glossary.html">Glossary</a></li>
+                                <li class="current-menu-item"><a href="blog.html" aria-current="page">Blog</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                            </ul>
+                            <ul class="footer-menu text-md-end">
+                                <li><a href="contact.html" class="btn btn-dark btn-md" target="_self"><span class="arrow-icon"></span><span class="btn-text">Contact Us</span> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1">
+                            <div class="copyright-text">&copy; 2024 <span>milestone, Ltd.</span> <span class="text-nowrap">All rights reserved.</span></div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <ul id="menu-footer-inline" class="footer-menu-inline">
+                                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                                <li><a rel="privacy-policy" href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="#">Cookie Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-logo-block text-center">
+                <img src="assets/images/footer-full-logo.svg" alt="milestone, Ltd.">
+            </div>
+        </footer>
+        <div class="design-by d-none"><a href="https://increativeweb.com" target="_blank" rel="noopener">Website Design & Development <strong>InCreativeWeb.com</strong></a></div>
+        <span class="icw-progress-goto"><svg class="progress-circle svg-content" width="40" height="40" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.119, 307.919; stroke-dashoffset: 307.919;"></path></svg></span>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" id="icw-bootstrap-bundle-js"></script>
+        <script type="text/javascript" src="assets/js/lozad.min.js" id="icw-lozad-js"></script>
+        <script type="text/javascript" src="assets/js/glightbox.min.js" id="icw-glightbox-js"></script>
+        <script type="text/javascript" src="assets/js/wow.min.js" id="icw-wow-js"></script>
+        <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>       
+        <script>
+            const questions = [
+                'Which contributors are close to their AI limits?',
+                'Which teams are projected to exceed budget this month?',
+                'Which tools create the most spend without clear delivery impact?',
+                'Which agents are running expensive loops?',
+                'Which premium model usage could move to a lower cost model?',
+                'Which Slack alerts require action today?',
+                'Which skills or features are used outside approved policy?',
+                'Which teams are using AI efficiently?',
+                'Where can we reduce AI spend without reducing output?',
+                'Which governance policy saved the most money this month?'
+            ];
+            let qi = 0;let timer;
+            const qLine = document.getElementById('qLine');
+            const qCounter = document.getElementById('qCounter');
+            const qDots = document.getElementById('qDots');
+            const box = document.getElementById('question-box');
+            function renderQuestion() {
+                qLine.style.animation = 'none';qLine.offsetHeight;qLine.style.animation = 'msRise 1s cubic-bezier(.22,1,.36,1) both';
+                qLine.innerHTML = `<span style="color:#12D3DD;">&gt;</span><span>${questions[qi]}<span style="display:inline-block;width:10px;height:23px;margin-left:5px;vertical-align:-4px;border-radius:1px;background:#12D3DD;box-shadow:0 0 10px #12D3DD;animation:1.05s steps(1) infinite msBlink;"></span></span>`;
+                qCounter.textContent = `${String(qi + 1).padStart(2, '0')} / ${String(questions.length).padStart(2, '0')}`;
+                renderDots();
+            }
+            function renderDots() {
+                qDots.innerHTML = '';
+                questions.forEach((_, i) => {const dot = document.createElement('span');
+                    dot.style.height = '4px';dot.style.borderRadius = '2px';dot.style.cursor = 'pointer';dot.style.transition = 'flex .45s ease';dot.style.flex = i === qi ? '0 0 28px' : '0 0 9px';dot.style.background = i === qi ? '#12D3DD' : 'rgba(255,255,255,.14)';dot.style.boxShadow = i === qi ? '0 0 9px rgba(18,211,221,.6)' : 'none';
+                    dot.addEventListener('click', () => {qi = i;renderQuestion();restartTimer();});
+                    qDots.appendChild(dot);
+                });
+            }
+            function startQuestions() {
+                clearInterval(timer);
+                timer = setInterval(() => {qi = (qi + 1) % questions.length;renderQuestion();}, 3600);
+            }
+            function restartTimer() {clearInterval(timer);startQuestions();}
+            box.addEventListener('mouseenter', () => {clearInterval(timer);});
+            box.addEventListener('mouseleave', () => {startQuestions();});
+            renderQuestion();
+            startQuestions();
+            document.addEventListener("DOMContentLoaded", function () {
+                // const policies = { contributor: true, team: true, tool: true, model: false, agent: true, skills: true };
+                // function updateToggle(key) {
+                //     const toggle = document.querySelector(`.toggle[data-key="${key}"]`);
+                //     if (!toggle) return;
+                //     const knob = toggle.querySelector(".knob");
+                //     const status = document.querySelector(`.status[data-key="${key}"]`);
+                //     const on = policies[key];
+                //     if (on) {
+                //         toggle.style.background = "linear-gradient(90deg,#0371EE,#12D3DD)";
+                //         toggle.style.border = "1px solid rgba(18,211,221,.55)";
+                //         knob.style.transform = "translateX(17px)"; 
+                //         if (status) status.innerText = "active";
+                //     } else {
+                //         toggle.style.background = "rgba(255,255,255,.12)";
+                //         toggle.style.border = "1px solid rgba(255,255,255,.16)";
+                //         knob.style.transform = "translateX(0)";
+                //         if (status) status.innerText = "off";
+                //     }
+                // }
+                // document.querySelectorAll(".toggle").forEach((toggle) => {
+                //     const key = toggle.dataset.key;
+                //     toggle.addEventListener("click", () => {policies[key] = !policies[key];updateToggle(key);});
+                //     updateToggle(key);
+                // });
+                const cards = document.querySelectorAll('.accordion-card');
+                cards.forEach(card => {
+                    const head = card.querySelector('.accordion-head');
+                    const body = card.querySelector('.accordion-body');
+                    const chevron = card.querySelector('.accordion-chevron');                    
+                    if (body.style.maxHeight && body.style.maxHeight !== '0px') {card.classList.add('open');}
+                    head.addEventListener('click', function () {
+                        const isOpen = card.classList.contains('open');
+                        card.classList.toggle('open');
+                        if (isOpen) {
+                            body.style.maxHeight = '0px';body.style.opacity = '0';body.style.padding = '0 24px';chevron.style.transform = 'rotate(0deg)';
+                            head.style.borderBottom ='1px solid transparent';
+                        } else {
+                            body.style.maxHeight = '460px';body.style.opacity = '1';body.style.padding = '2px 24px 20px';
+                            chevron.style.transform ='rotate(180deg)';
+                            head.style.borderBottom ='1px solid rgba(255,255,255,.07)';
+                        }
+                    });
+                });
+            });
+(function(){
+  var defaults = { contributor:true, team:true, tool:true, model:false, agent:true, skills:true };
+
+  function paint(card, on){
+    var h = card.getAttribute('data-hue');
+    card.style.padding = '24px';
+    card.style.borderRadius = '18px';
+    card.style.transition = 'border-color .35s ease,box-shadow .35s ease,background .35s ease';
+    card.style.background = on
+      ? 'linear-gradient(165deg,rgba('+h+',.14),rgba(3,113,238,.05))'
+      : 'linear-gradient(165deg,rgba(135,191,243,.05),rgba(255,255,255,.01))';
+    card.style.border = '1px solid ' + (on ? 'rgba('+h+',.34)' : 'rgba(255,255,255,.07)');
+    card.style.boxShadow = on
+      ? '0 12px 34px rgba(2,10,28,.4),0 0 34px rgba('+h+',.12)'
+      : '0 10px 24px rgba(2,10,28,.28)';
+
+    var icon = card.querySelector('.picon');
+    if(icon){
+      icon.style.cssText = 'width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;transition:all .35s cubic-bezier(.22,1,.36,1);' +
+        (on
+          ? 'background:rgba('+h+',.16);border:1px solid rgba('+h+',.5);color:rgb('+h+');box-shadow:0 0 20px rgba('+h+',.4),inset 0 0 12px rgba('+h+',.12)'
+          : 'background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);color:#5b6673;box-shadow:none;opacity:.75');
+    }
+
+    var track = card.querySelector('.ptrack');
+    track.style.cssText = 'width:40px;height:23px;border-radius:999px;flex-shrink:0;cursor:pointer;transition:all .25s ease;position:relative;display:inline-block;background:' +
+      (on ? 'linear-gradient(90deg,#0371EE,#12D3DD)' : 'rgba(255,255,255,.12)') +
+      ';border:1px solid ' + (on ? 'rgba(18,211,221,.55)' : 'rgba(255,255,255,.16)');
+    track.setAttribute('aria-checked', on ? 'true' : 'false');
+    var knob = card.querySelector('.pknob');
+    knob.style.cssText = 'position:absolute;top:2px;left:2px;width:17px;height:17px;border-radius:50%;background:#fff;transition:all .25s ease;box-shadow:0 1px 4px rgba(0,0,0,.5);transform:translateX(' + (on ? '17px' : '0px') + ')';
+
+    var st = card.querySelector('.pstatus');
+    if(st) st.textContent = on ? 'active' : 'off';
+  }
+
+  document.querySelectorAll('.pcard').forEach(function(card){
+    var key = card.getAttribute('data-key');
+    var on = !!defaults[key];
+    paint(card, on);
+    var track = card.querySelector('.ptrack');
+    function toggle(){ on = !on; paint(card, on); }
+    track.addEventListener('click', toggle);
+    track.addEventListener('keydown', function(e){ if(e.key===' '||e.key==='Enter'){ e.preventDefault(); toggle(); }});
+  });
+})();
+
+        </script>
+    </body>
+
+</html>

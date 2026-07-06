@@ -558,7 +558,326 @@
                         </div>
                     </div>
                 </div>
-            </section>     
+            </section>  
+            <section class="main-section agent-content-section bg-theme-dark is-light is-text-image">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 col-lg-6">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms"><b style="font-weight: 600;color: rgb(251, 191, 36) !important;">Autonomous agents</b></div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">When agents run on their <br class="d-none d-lg-block">own, watch the loops.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p style="max-width: 450px;">Some work runs with no developer in the seat. Milestone tracks these task agents on their own, so runs, retries, and loops never become hidden cost.</p>
+                                    <div class="tags-list" style="max-width: 530px;">
+                                        <span class="tag">Background runs</span><br>
+                                        <span class="tag">Retry loops</span><br>
+                                        <span class="tag">Approval gates</span>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp col-lg-6">
+                            <div data-anim="true" data-delay="120" style="background: linear-gradient(rgba(96, 165, 250, 0.12), rgba(96, 165, 250, 0.03)); border: 1px solid rgba(96, 165, 250, 0.28); border-radius: 18px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.5) 0px 30px 70px, rgba(37, 99, 235, 0.18) 0px 0px 60px; opacity: 1; transform: translateY(0px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                                    <span style="font-size: 13px; font-weight: 600; color: rgb(241, 245, 249);">Autonomous task agents</span>
+                                    <span style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 100px;">
+                                        <span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(245, 158, 11); animation: 1.6s ease 0s infinite normal none running pulseDot;"></span>
+                                        <span style="font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(251, 191, 36);">running</span>
+                                    </span>
+                                </div>
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px;">
+                                    <div style="padding: 13px; background: rgba(255, 255, 255, 0.024); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 11px;">
+                                        <div style="font-size: 10px; color: rgba(241, 245, 249, 0.72); margin-bottom: 5px;">Runs</div>
+                                        <div style="font-size: 19px; font-weight: 700; color: rgb(241, 245, 249);">142</div>
+                                    </div>
+                                    <div style="padding: 13px; background: rgba(255, 255, 255, 0.024); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 11px;">
+                                        <div style="font-size: 10px; color: rgba(241, 245, 249, 0.72); margin-bottom: 5px;">Avg retries</div>
+                                        <div style="font-size: 19px; font-weight: 700; color: rgb(251, 191, 36);">2.3</div>
+                                    </div>
+                                    <div style="padding: 13px; background: rgba(255, 255, 255, 0.024); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 11px;">
+                                        <div style="font-size: 10px; color: rgba(241, 245, 249, 0.72); margin-bottom: 5px;">Needs approval</div>
+                                        <div style="font-size: 19px; font-weight: 700; color: rgb(245, 158, 11);">6</div>
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 9px;">
+                                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 10px;">
+                                        <span style="flex: 1 1 0%; font-size: 13px; font-weight: 500; color: rgba(241, 245, 249, 0.85);">nightly refactor</span>
+                                        <span style="font-size: 11px; color: rgb(251, 191, 36);">4 retries</span>
+                                        <span style="font-size: 11px; color: rgba(241, 245, 249, 0.66);">$42</span>
+                                        <span style="font-size: 10.5px; font-weight: 600; color: rgb(251, 191, 36); background: rgba(245, 158, 11, 0.14); padding: 3px 9px; border-radius: 6px;">review</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: linear-gradient(rgba(96, 165, 250, 0.13), rgba(96, 165, 250, 0.035)); border: 1px solid rgba(96, 165, 250, 0.3); box-shadow: rgba(37, 99, 235, 0.2) 0px 16px 44px; border-radius: 10px;">
+                                        <span style="flex: 1 1 0%; font-size: 13px; font-weight: 500; color: rgba(241, 245, 249, 0.85);">dependency upgrade</span>
+                                        <span style="font-size: 11px; color: rgba(241, 245, 249, 0.74);">1 run</span>
+                                        <span style="font-size: 11px; color: rgba(241, 245, 249, 0.66);">$8</span>
+                                        <span style="font-size: 10.5px; font-weight: 600; color: rgb(52, 211, 153); background: rgba(16, 185, 129, 0.14); padding: 3px 9px; border-radius: 6px;">ok</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: linear-gradient(rgba(96, 165, 250, 0.13), rgba(96, 165, 250, 0.035)); border: 1px solid rgba(96, 165, 250, 0.3); box-shadow: rgba(37, 99, 235, 0.2) 0px 16px 44px; border-radius: 10px;">
+                                        <span style="flex: 1 1 0%; font-size: 13px; font-weight: 500; color: rgba(241, 245, 249, 0.85);">test backfill</span>
+                                        <span style="font-size: 11px; color: rgba(241, 245, 249, 0.74);">2 retries</span>
+                                        <span style="font-size: 11px; color: rgba(241, 245, 249, 0.66);">$19</span>
+                                        <span style="font-size: 10.5px; font-weight: 600; color: rgb(52, 211, 153); background: rgba(16, 185, 129, 0.14); padding: 3px 9px; border-radius: 6px;">ok</span>
+                                    </div>
+                                </div>
+                            </div>           
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-theme-dark is-light section-title-mw-800 is-shape  is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-center">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">Why Milestone</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">Milestone connects AI data to your code and to every feature.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p style="max-width: 600px;">Usage data alone cannot tell you what a feature cost. Milestone joins AI activity to Git history and ties both to the features your teams ship.</p>
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp">
+                            <div data-anim="true" style="background: linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));border: 1px solid rgba(255, 255, 255, 0.08);border-radius: 22px;padding: 30px;box-shadow: rgba(0, 0, 0, 0.5) 0px 40px 90px;">
+                                <div class="flow-row" style="display: flex; align-items: stretch; gap: 0px;">
+                                    <div style="flex: 1 1 0%; min-width: 0px; background: linear-gradient(rgba(6, 182, 212, 0.1), rgba(6, 182, 212, 0.03)); border: 1px solid rgba(34, 211, 238, 0.26); border-radius: 16px; padding: 24px; box-shadow: rgba(6, 182, 212, 0.12) 0px 14px 36px;">
+                                        <div style="display: flex; align-items: center; gap: 11px; margin-bottom: 18px;">
+                                            <span style="width: 40px; height: 40px; border-radius: 11px; background: rgba(34, 211, 238, 0.14); display: flex; align-items: center; justify-content: center;"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"><ellipse cx="9.5" cy="4.5" rx="6" ry="2.4" stroke="#22D3EE" stroke-width="1.5"></ellipse><path d="M3.5 4.5v10c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4v-10" stroke="#22D3EE" stroke-width="1.5"></path><path d="M3.5 9.5c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4" stroke="#22D3EE" stroke-width="1.5"></path></svg></span>
+                                            <div>
+                                                <div style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(34, 211, 238);">AI data</div>
+                                                <div style="font-size: 16px; font-weight: 700; color: rgb(241, 245, 249); letter-spacing: -0.01em;">Cursor and Claude Code</div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; gap: 9px;">
+                                            <div style="font-size: 13px; color: rgba(241, 245, 249, 0.86); padding: 9px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 9px;">Tool usage and accepts</div>
+                                            <div style="font-size: 13px; color: rgba(241, 245, 249, 0.86); padding: 9px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 9px;">Tokens and model cost</div>
+                                            <div style="font-size: 13px; color: rgba(241, 245, 249, 0.86); padding: 9px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 9px;">AI generated changes</div>
+                                        </div>
+                                    </div>
+                                    <div class="flow-conn" style="width: 64px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto;">
+                                        <div style="position: relative; width: 100%; height: 2px; background: linear-gradient(90deg, rgba(34, 211, 238, 0.5), rgba(96, 165, 250, 0.5));">
+                                            <div class="fx fx-flow" style="position: absolute; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: rgb(96, 165, 250); box-shadow: rgba(96, 165, 250, 0.8) 0px 0px 10px 2px; animation-play-state: running;">
+                                            </div>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="position: absolute; right: -4px; top: 50%; transform: translateY(-50%); color: rgb(96, 165, 250);"><path d="M3 7h7M7 4l3 3-3 3" stroke="rgb(96, 165, 250)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div style="flex: 1 1 0%; min-width: 0px; background: linear-gradient(rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.03)); border: 1px solid rgba(96, 165, 250, 0.28); border-radius: 16px; padding: 24px; box-shadow: rgba(37, 99, 235, 0.14) 0px 14px 36px;">
+                                        <div style="display: flex; align-items: center; gap: 11px; margin-bottom: 18px;"><span style="width: 40px; height: 40px; border-radius: 11px; background: rgba(96, 165, 250, 0.14); display: flex; align-items: center; justify-content: center;"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"><circle cx="5" cy="4.5" r="2.2" stroke="#60A5FA" stroke-width="1.5"></circle><circle cx="5" cy="14.5" r="2.2" stroke="#60A5FA" stroke-width="1.5"></circle><circle cx="14" cy="9.5" r="2.2" stroke="#60A5FA" stroke-width="1.5"></circle><path d="M5 6.7v5.6M7 5.2c4 .6 5 2 5 4" stroke="#60A5FA" stroke-width="1.5"></path></svg></span>
+                                            <div>
+                                                <div style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(96, 165, 250);">Git code</div>
+                                                <div style="font-size: 16px; font-weight: 700; color: rgb(241, 245, 249); letter-spacing: -0.01em;">Commits and reviews</div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; gap: 9px;">
+                                            <div style="font-size: 13px; color: rgba(241, 245, 249, 0.86); padding: 9px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 9px;">Commits and pull requests</div>
+                                            <div style="font-size: 13px; color: rgba(241, 245, 249, 0.86); padding: 9px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 9px;">Review and rework</div>
+                                            <div style="font-size: 13px; color: rgba(241, 245, 249, 0.86); padding: 9px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 9px;">Post release fixes</div>
+                                        </div>
+                                    </div>
+                                    <div class="flow-conn" style="width: 64px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto;">
+                                        <div style="position: relative; width: 100%; height: 2px; background: linear-gradient(90deg, rgba(96, 165, 250, 0.5), rgba(52, 211, 153, 0.5));">
+                                            <div class="fx fx-flow" style="position: absolute; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: rgb(52, 211, 153); box-shadow: rgba(52, 211, 153, 0.8) 0px 0px 10px 2px; animation-delay: 1.2s; animation-play-state: running;"></div>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="position: absolute; right: -4px; top: 50%; transform: translateY(-50%); color: rgb(52, 211, 153);"><path d="M3 7h7M7 4l3 3-3 3" stroke="rgb(52, 211, 153)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div style="flex: 1 1 0%; min-width: 0px; background: linear-gradient(rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.03)); border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 16px; padding: 24px; box-shadow: rgba(16, 185, 129, 0.16) 0px 14px 36px;">
+                                        <div style="display: flex; align-items: center; gap: 11px; margin-bottom: 18px;"><span style="width: 40px; height: 40px; border-radius: 11px; background: rgba(52, 211, 153, 0.14); display: flex; align-items: center; justify-content: center;"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"><rect x="3" y="3" width="13" height="13" rx="2.5" stroke="#34D399" stroke-width="1.5"></rect><path d="M6 10l2.4-2.8 2.2 1.7L14 5.5" stroke="#34D399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                                            <div>
+                                                <div style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(52, 211, 153);">Features</div>
+                                                <div style="font-size: 16px; font-weight: 700; color: rgb(241, 245, 249); letter-spacing: -0.01em;">Cost and value</div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; gap: 9px;">
+                                            <div style="font-size: 13px; color: rgba(241, 245, 249, 0.86); padding: 9px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 9px;">Cost per feature</div>
+                                            <div style="font-size: 13px; color: rgba(241, 245, 249, 0.86); padding: 9px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 9px;">Value delivered</div>
+                                            <div style="font-size: 13px; color: rgb(110, 231, 183); font-weight: 500; padding: 9px 12px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.24); border-radius: 9px;">Spend efficiency</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 22px; padding: 18px 22px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(16, 185, 129, 0.06)); border: 1px solid rgba(96, 165, 250, 0.22); border-radius: 14px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                                    <svg width="20" height="16" viewBox="0 0 63 51" fill="none" style="flex: 0 0 auto;"><path d="M20.7449 8.61306V50.6084H5.29505V19.8131L0 18.5633V3.71509L20.7449 8.61306Z" fill="#60A5FA"></path><path d="M41.7745 4.96484V50.6084H26.3246V8.61303L41.7745 4.96484Z" fill="#60A5FA"></path><path d="M62.803 0V50.6084H47.3531V3.64819L62.803 0Z" fill="#60A5FA"></path></svg>
+                                    <span style="font-size: 15px; color: rgba(241, 245, 249, 0.9); font-weight: 500;">Only by connecting all three can you answer the question vendors cannot: <span style="color: rgb(241, 245, 249); font-weight: 700;">how much did this feature cost?</span></span>
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
+                </div>
+            </section>   
+            <section class="main-section agent-content-section bg-none is-dark section-title-mw-700 is-shape  is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">Built for</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">Built for the shift to human and agent engineering.</h2>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp">
+                            <div data-roles="" class="split-grid" data-anim="true" style="display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 40px; align-items: stretch;">
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <div data-role-item="" data-idx="0" style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 13px; border: 1px solid transparent; cursor: pointer; transition: background 0.25s, border-color 0.25s, box-shadow 0.25s; box-shadow: none;">
+                                        <span data-role-chip="" style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 11px; background: rgb(239, 246, 255); display: flex; align-items: center; justify-content: center; transition: background 0.25s;"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"><path d="M3 16V8l6.5-4 6.5 4v8" stroke="#3B82F6" stroke-width="1.6" stroke-linejoin="round"></path><path d="M7 16v-4h5v4" stroke="#3B82F6" stroke-width="1.6" stroke-linejoin="round"></path></svg></span>
+                                        <span style="flex: 1 1 0%; font-size: 16px; font-weight: 600; color: rgb(15, 23, 42); letter-spacing: -0.01em;">CTOs and VPs</span>
+                                        <svg data-role-arrow="" width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: 0 0 auto; opacity: 0; transition: opacity 0.25s, transform 0.25s; color: rgb(59, 130, 246); transform: translateX(-4px);"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    </div>
+                                    <div data-role-item="" data-idx="1" style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 13px; border: 1px solid transparent; cursor: pointer; transition: background 0.25s, border-color 0.25s, box-shadow 0.25s; box-shadow: none;">
+                                        <span data-role-chip="" style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 11px; background: rgb(236, 254, 255); display: flex; align-items: center; justify-content: center; transition: background 0.25s;"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"><circle cx="6.5" cy="6.5" r="2.6" stroke="#06B6D4" stroke-width="1.6"></circle><circle cx="13" cy="11.5" r="2.6" stroke="#06B6D4" stroke-width="1.6"></circle><path d="M3 16c0-2.2 1.6-3.4 3.5-3.4M10.3 6.5H12" stroke="#06B6D4" stroke-width="1.6" stroke-linecap="round"></path></svg></span>
+                                        <span style="flex: 1 1 0%; font-size: 16px; font-weight: 600; color: rgb(15, 23, 42); letter-spacing: -0.01em;">Engineering Managers</span>
+                                        <svg data-role-arrow="" width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: 0 0 auto; opacity: 0; transition: opacity 0.25s, transform 0.25s; color: rgb(59, 130, 246); transform: translateX(-4px);"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    </div>
+                                    <div data-role-item="" data-idx="2" style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 13px; border: 1px solid transparent; cursor: pointer; transition: background 0.25s, border-color 0.25s, box-shadow 0.25s; box-shadow: none;">
+                                        <span data-role-chip="" style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 11px; background: rgb(245, 243, 255); display: flex; align-items: center; justify-content: center; transition: background 0.25s;"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"><rect x="3" y="3" width="5.5" height="5.5" rx="1.2" stroke="#8B5CF6" stroke-width="1.6"></rect><rect x="10.5" y="3" width="5.5" height="5.5" rx="1.2" stroke="#8B5CF6" stroke-width="1.6"></rect><rect x="3" y="10.5" width="5.5" height="5.5" rx="1.2" stroke="#8B5CF6" stroke-width="1.6"></rect><rect x="10.5" y="10.5" width="5.5" height="5.5" rx="1.2" stroke="#8B5CF6" stroke-width="1.6"></rect></svg></span>
+                                        <span style="flex: 1 1 0%; font-size: 16px; font-weight: 600; color: rgb(15, 23, 42); letter-spacing: -0.01em;">AI Platform Leaders</span>
+                                        <svg data-role-arrow="" width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: 0 0 auto; opacity: 0; transition: opacity 0.25s, transform 0.25s; color: rgb(59, 130, 246); transform: translateX(-4px);"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    </div>
+                                    <div data-role-item="" data-idx="3" style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 13px; border: 1px solid transparent; cursor: pointer; transition: background 0.25s, border-color 0.25s, box-shadow 0.25s; box-shadow: none;">
+                                        <span data-role-chip="" style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 11px; background: rgb(236, 253, 245); display: flex; align-items: center; justify-content: center; transition: background 0.25s;"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"><path d="M9.5 2v15M6 5h5.2a2.1 2.1 0 010 4.3H7a2.1 2.1 0 000 4.3h5.5" stroke="#10B981" stroke-width="1.6" stroke-linecap="round"></path></svg></span>
+                                        <span style="flex: 1 1 0%; font-size: 16px; font-weight: 600; color: rgb(15, 23, 42); letter-spacing: -0.01em;">Finance and Ops</span>
+                                        <svg data-role-arrow="" width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: 0 0 auto; opacity: 0; transition: opacity 0.25s, transform 0.25s; color: rgb(59, 130, 246); transform: translateX(-4px);"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    </div>
+                                    <div data-role-item="" data-idx="4" style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 13px; border: 1px solid rgb(219, 234, 254); cursor: pointer; transition: background 0.25s, border-color 0.25s, box-shadow 0.25s; box-shadow: rgba(59, 130, 246, 0.1) 0px 6px 20px; background: rgb(255, 255, 255);">
+                                        <span data-role-chip="" style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 11px; background: rgb(255, 251, 235); display: flex; align-items: center; justify-content: center; transition: background 0.25s;"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"><rect x="3" y="3" width="13" height="13" rx="2" stroke="#F59E0B" stroke-width="1.6"></rect><path d="M6 11.5l2.2-2.6 2 1.6 2.8-3.6" stroke="#F59E0B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                                        <span style="flex: 1 1 0%; font-size: 16px; font-weight: 600; color: rgb(15, 23, 42); letter-spacing: -0.01em;">Product Leaders</span>
+                                        <svg data-role-arrow="" width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: 0 0 auto; opacity: 1; transition: opacity 0.25s, transform 0.25s; color: rgb(59, 130, 246); transform: translateX(2px);"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    </div>
+                                </div>
+                                <div style="position: relative; min-height: 380px;">
+                                    <div data-role-panel="" data-idx="0" style="position: absolute; inset: 0px; background: rgb(255, 255, 255); border: 1px solid rgb(219, 234, 254); border-radius: 18px; padding: 34px; box-shadow: rgba(59, 130, 246, 0.1) 0px 14px 40px; display: flex; flex-direction: column; opacity: 0; transform: translateY(10px); transition: opacity 0.45s, transform 0.45s; pointer-events: none;">
+                                        <div>
+                                            <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(59, 130, 246); margin-bottom: 10px;">CTOs and VPs of Engineering</div>
+                                            <div style="font-size: 23px; font-weight: 700; color: rgb(15, 23, 42); letter-spacing: -0.02em; line-height: 1.2;">Are you AI driven, or just AI assisted?</div>
+                                        </div>
+                                        <div style="flex: 1 1 0%; display: flex; align-items: center; justify-content: center; padding: 10px 0px;">
+                                            <div style="width: 100%; max-width: 300px;">
+                                                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px;">
+                                                    <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(100, 116, 139);">AI coverage</span>
+                                                    <span style="font-size: 10px; color: rgb(100, 116, 139);">share of work touched by AI</span>
+                                                </div>
+                                                <div style="display: flex; flex-direction: column; gap: 13px;">
+                                                    <div>
+                                                        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                                            <span style="font-size: 12px; color: rgb(71, 85, 105); font-weight: 500;">Coding</span>
+                                                            <span style="font-size: 12px; color: rgb(15, 23, 42); font-weight: 700;">64%</span>
+                                                        </div>
+                                                        <div style="height: 9px; background: rgb(241, 245, 249); border-radius: 100px; overflow: hidden;">
+                                                            <div class="rc-hbar" style="height: 100%; width: 64%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(59, 130, 246)); border-radius: 100px; transform: scaleX(0); transform-origin: left center; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                                            <span style="font-size: 12px; color: rgb(71, 85, 105); font-weight: 500;">Review</span>
+                                                            <span style="font-size: 12px; color: rgb(15, 23, 42); font-weight: 700;">29%</span>
+                                                        </div>
+                                                        <div style="height: 9px; background: rgb(241, 245, 249); border-radius: 100px; overflow: hidden;">
+                                                            <div class="rc-hbar" style="height: 100%; width: 29%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(59, 130, 246)); border-radius: 100px; transform: scaleX(0); transform-origin: left center; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                                            <span style="font-size: 12px; color: rgb(71, 85, 105); font-weight: 500;">Testing</span>
+                                                            <span style="font-size: 12px; color: rgb(15, 23, 42); font-weight: 700;">71%</span>
+                                                        </div>
+                                                        <div style="height: 9px; background: rgb(241, 245, 249); border-radius: 100px; overflow: hidden;">
+                                                            <div class="rc-hbar" style="height: 100%; width: 71%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(59, 130, 246)); border-radius: 100px; transform: scaleX(0); transform-origin: left center; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(30, 64, 175); padding: 8px 14px; background: rgb(239, 246, 255); border: 1px solid rgb(191, 219, 254); border-radius: 9px;">AI coverage by activity</span>
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(30, 64, 175); padding: 8px 14px; background: rgb(239, 246, 255); border: 1px solid rgb(191, 219, 254); border-radius: 9px;">Driven vs assisted</span>
+                                        </div>
+                                    </div>
+                                    <div data-role-panel="" data-idx="1" style="position: absolute; inset: 0px; background: rgb(255, 255, 255); border: 1px solid rgb(219, 234, 254); border-radius: 18px; padding: 34px; box-shadow: rgba(59, 130, 246, 0.1) 0px 14px 40px; display: flex; flex-direction: column; opacity: 0; transform: translateY(10px); transition: opacity 0.45s, transform 0.45s; pointer-events: none;">
+                                        <div>
+                                            <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(8, 145, 178); margin-bottom: 10px;">Engineering Managers</div>
+                                            <div style="font-size: 23px; font-weight: 700; color: rgb(15, 23, 42); letter-spacing: -0.02em; line-height: 1.2;">Protect team focus and review load.</div>
+                                        </div>
+                                        <div style="flex: 1 1 0%; display: flex; align-items: center; justify-content: center; padding: 10px 0px;">
+                                            <svg viewBox="0 0 300 150" style="width: 100%; max-width: 320px;"><defs><linearGradient id="areaCyan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#06B6D4" stop-opacity="0.22"></stop><stop offset="1" stop-color="#06B6D4" stop-opacity="0"></stop></linearGradient></defs><line x1="8" y1="130" x2="292" y2="130" stroke="#E2E8F0" stroke-width="1"></line><path class="rc-fade" d="M12 118 L70 104 L128 112 L186 80 L244 66 L288 36 L288 130 L12 130 Z" fill="url(#areaCyan)" style="opacity: 0; transition: opacity 0.7s 0.3s;"></path><path class="rc-draw" data-len="300" d="M12 118 L70 104 L128 112 L186 80 L244 66 L288 36" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="300" style="stroke-dashoffset: 300; transition: stroke-dashoffset 1s;"></path><circle class="rc-fade" cx="288" cy="36" r="4.5" fill="#06B6D4" style="opacity: 0; transition: opacity 0.6s 0.7s;"></circle></svg>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(14, 116, 144); padding: 8px 14px; background: rgb(236, 254, 255); border: 1px solid rgb(165, 243, 252); border-radius: 9px;">Review load</span>
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(14, 116, 144); padding: 8px 14px; background: rgb(236, 254, 255); border: 1px solid rgb(165, 243, 252); border-radius: 9px;">Delivery speed</span>
+                                        </div>
+                                    </div>
+                                    <div data-role-panel="" data-idx="2"
+                                        style="position: absolute; inset: 0px; background: rgb(255, 255, 255); border: 1px solid rgb(219, 234, 254); border-radius: 18px; padding: 34px; box-shadow: rgba(59, 130, 246, 0.1) 0px 14px 40px; display: flex; flex-direction: column; opacity: 0; transform: translateY(10px); transition: opacity 0.45s, transform 0.45s; pointer-events: none;">
+                                        <div>
+                                            <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(124, 58, 237); margin-bottom: 10px;">AI Platform Leaders</div>
+                                            <div style="font-size: 23px; font-weight: 700; color: rgb(15, 23, 42); letter-spacing: -0.02em; line-height: 1.2;">Decide what to scale and what to govern.</div>
+                                        </div>
+                                        <div style="flex: 1 1 0%; display: flex; align-items: center; justify-content: center; padding: 10px 0px;">
+                                            <div style="width: 100%; max-width: 280px; display: flex; justify-content: center; gap: 50px; align-items: flex-end;">
+                                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                                    <div style="font-size: 17px; font-weight: 700; color: rgb(5, 150, 105); margin-bottom: 8px;">72%</div>
+                                                    <div class="rc-bar" style="width: 62px; height: 118px; background: linear-gradient(rgb(110, 231, 183), rgb(16, 185, 129)); border-radius: 9px 9px 0px 0px; transform: scaleY(0); transform-origin: center bottom; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"></div>
+                                                    <div style="font-size: 12.5px; font-weight: 600; color: rgb(71, 85, 105); margin-top: 11px;">Expand</div>
+                                                </div>
+                                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                                    <div style="font-size: 17px; font-weight: 700; color: rgb(217, 119, 6); margin-bottom: 8px;">28%</div>
+                                                    <div class="rc-bar" style="width: 62px; height: 50px; background: linear-gradient(rgb(251, 191, 36), rgb(245, 158, 11)); border-radius: 9px 9px 0px 0px; transform: scaleY(0); transform-origin: center bottom; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"></div>
+                                                    <div style="font-size: 12.5px; font-weight: 600; color: rgb(71, 85, 105); margin-top: 11px;">Manage</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(109, 40, 217); padding: 8px 14px; background: rgb(245, 243, 255); border: 1px solid rgb(221, 214, 254); border-radius: 9px;">Workflow policy</span>
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(109, 40, 217); padding: 8px 14px; background: rgb(245, 243, 255); border: 1px solid rgb(221, 214, 254); border-radius: 9px;">Expansion zones</span>
+                                        </div>
+                                    </div>
+                                    <div data-role-panel="" data-idx="3" style="position: absolute; inset: 0px; background: rgb(255, 255, 255); border: 1px solid rgb(219, 234, 254); border-radius: 18px; padding: 34px; box-shadow: rgba(59, 130, 246, 0.1) 0px 14px 40px; display: flex; flex-direction: column; opacity: 0; transform: translateY(10px); transition: opacity 0.45s, transform 0.45s; pointer-events: none;">
+                                        <div>
+                                            <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(5, 150, 105); margin-bottom: 10px;">Finance and Operations</div>
+                                            <div style="font-size: 23px; font-weight: 700; color: rgb(15, 23, 42); letter-spacing: -0.02em; line-height: 1.2;">Tie AI spend to delivery and value.</div>
+                                        </div>
+                                        <div style="flex: 1 1 0%; display: flex; align-items: center; justify-content: center; padding: 10px 0px;">
+                                            <svg viewBox="0 0 300 168" style="width: 100%; max-width: 300px;"><path d="M44 150 A106 106 0 0 1 256 150" fill="none" stroke="#EFF3FA" stroke-width="18" stroke-linecap="round"></path><path class="rc-draw" data-len="260" d="M44 150 A106 106 0 0 1 256 150" fill="none" stroke="#10B981" stroke-width="18" stroke-linecap="round" stroke-dasharray="260 333" style="stroke-dashoffset: 260; transition: stroke-dashoffset 1s cubic-bezier(0.16, 1, 0.3, 1);"></path><text x="150" y="132" text-anchor="middle" font-size="36" font-weight="700" fill="#0F172A">3.2×</text><text x="150" y="156" text-anchor="middle" font-size="12" fill="#94A3B8">value per dollar</text></svg>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(4, 120, 87); padding: 8px 14px; background: rgb(236, 253, 245); border: 1px solid rgb(167, 243, 208); border-radius: 9px;">Cost per feature</span>
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(4, 120, 87); padding: 8px 14px; background: rgb(236, 253, 245); border: 1px solid rgb(167, 243, 208); border-radius: 9px;">Measurable ROI</span>
+                                        </div>
+                                    </div>
+                                    <div data-role-panel="" data-idx="4" style="position: absolute; inset: 0px; background: rgb(255, 255, 255); border: 1px solid rgb(219, 234, 254); border-radius: 18px; padding: 34px; box-shadow: rgba(59, 130, 246, 0.1) 0px 14px 40px; display: flex; flex-direction: column; opacity: 1; transform: translateY(0px); transition: opacity 0.45s, transform 0.45s; pointer-events: auto;">
+                                        <div>
+                                            <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(217, 119, 6); margin-bottom: 10px;">Product Leaders</div>
+                                            <div style="font-size: 23px; font-weight: 700; color: rgb(15, 23, 42); letter-spacing: -0.02em; line-height: 1.2;">See the investment behind every feature.</div>
+                                        </div>
+                                        <div style="flex: 1 1 0%; display: flex; align-items: center; justify-content: center; padding: 10px 0px;">
+                                            <div style="width: 100%; max-width: 290px; display: flex; flex-direction: column; gap: 15px;">
+                                                <div>
+                                                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;"><span style="font-size: 12px; color: rgb(71, 85, 105); font-weight: 500;">Checkout</span><span style="font-size: 12px; color: rgb(15, 23, 42); font-weight: 700;">84%</span></div>
+                                                    <div style="height: 10px; background: rgb(241, 245, 249); border-radius: 100px; overflow: hidden;">
+                                                        <div class="rc-hbar" style="height: 100%; width: 84%; background: linear-gradient(90deg, rgb(251, 191, 36), rgb(245, 158, 11)); border-radius: 100px; transform: scaleX(1); transform-origin: left center; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;"><span style="font-size: 12px; color: rgb(71, 85, 105); font-weight: 500;">Search</span><span style="font-size: 12px; color: rgb(15, 23, 42); font-weight: 700;">61%</span></div>
+                                                    <div style="height: 10px; background: rgb(241, 245, 249); border-radius: 100px; overflow: hidden;">
+                                                        <div class="rc-hbar" style="height: 100%; width: 61%; background: linear-gradient(90deg, rgb(251, 191, 36), rgb(245, 158, 11)); border-radius: 100px; transform: scaleX(1); transform-origin: left center; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;"><span style="font-size: 12px; color: rgb(71, 85, 105); font-weight: 500;">Billing</span><span style="font-size: 12px; color: rgb(15, 23, 42); font-weight: 700;">43%</span></div>
+                                                    <div style="height: 10px; background: rgb(241, 245, 249); border-radius: 100px; overflow: hidden;">
+                                                        <div class="rc-hbar" style="height: 100%; width: 43%; background: linear-gradient(90deg, rgb(251, 191, 36), rgb(245, 158, 11)); border-radius: 100px; transform: scaleX(1); transform-origin: left center; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(180, 83, 9); padding: 8px 14px; background: rgb(255, 251, 235); border: 1px solid rgb(253, 230, 138); border-radius: 9px;">Feature spend</span>
+                                            <span style="font-size: 12.5px; font-weight: 500; color: rgb(180, 83, 9); padding: 8px 14px; background: rgb(255, 251, 235); border: 1px solid rgb(253, 230, 138); border-radius: 9px;">Roadmap value</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>               
+                        </div>
+                    </div>
+                </div>
+            </section>
             <link rel='stylesheet' id='icw-agent-cta-css' href='blocks/agent-cta/style.css' type='text/css' media='all' /> 
             <section class="main-section agent-cta-section bg-theme-dark is-light">
                 <div class="container">
@@ -632,96 +951,96 @@
         <script type="text/javascript" src="assets/js/wow.min.js" id="icw-wow-js"></script>
         <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>       
         <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    initAccordion();
-                    initBars();
-                    initRoles();
+            document.addEventListener("DOMContentLoaded", () => {
+                initAccordion();
+                initBars();
+                initRoles();
+            });
+            function initAccordion() {
+                const items = Array.from(document.querySelectorAll('[data-acc-item]'));
+                if (!items.length) return;
+                const setOpen = (item, yes) => {
+                    const body = item.querySelector('[data-acc-body]');	
+                    const chev = item.querySelector('[data-acc-chev]');
+                    body.style.maxHeight = yes ? body.scrollHeight + 'px' : '0px';
+                    chev.style.transform = yes ? 'rotate(180deg)' : 'rotate(0deg)';
+                    item.style.background = yes ? 'rgba(59,130,246,0.03)' : '';
+                    item.dataset.open = yes ? '1' : '0';
+                };
+                items.forEach((item, idx) => {
+                    const header = item.querySelector('[data-acc-header]');
+                    header.addEventListener('click', () => {
+                        const willOpen = item.dataset.open !== '1';
+                        items.forEach(o => { if (o !== item) setOpen(o, false); });
+                    setOpen(item, willOpen);
+                    });
+                    setOpen(item, idx === 0);
                 });
-                function initAccordion() {
-                    const items = Array.from(document.querySelectorAll('[data-acc-item]'));
-                    if (!items.length) return;
-                    const setOpen = (item, yes) => {
-                        const body = item.querySelector('[data-acc-body]');	
-                        const chev = item.querySelector('[data-acc-chev]');
-                        body.style.maxHeight = yes ? body.scrollHeight + 'px' : '0px';
-                        chev.style.transform = yes ? 'rotate(180deg)' : 'rotate(0deg)';
-                        item.style.background = yes ? 'rgba(59,130,246,0.03)' : '';
-                        item.dataset.open = yes ? '1' : '0';
-                    };
-                    items.forEach((item, idx) => {
-                        const header = item.querySelector('[data-acc-header]');
-                        header.addEventListener('click', () => {
-                            const willOpen = item.dataset.open !== '1';
-                            items.forEach(o => { if (o !== item) setOpen(o, false); });
-                        setOpen(item, willOpen);
+                this._accItems = items;
+                this._onAccResize = () => {
+                    items.forEach(item => { if (item.dataset.open === '1') { const b = item.querySelector('[data-acc-body]'); b.style.maxHeight = b.scrollHeight + 'px'; } });
+                };
+                window.addEventListener('resize', this._onAccResize);
+                setTimeout(this._onAccResize, 350);
+            }                
+            function initBars() {
+                const obs = new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        if (!e.isIntersecting) return;
+                        e.target.querySelectorAll('[data-bar]').forEach((bar, i) => {
+                            setTimeout(() => { bar.style.transition = 'width 1.1s cubic-bezier(0.16,1,0.3,1)'; bar.style.width = bar.dataset.bar + '%'; }, i * 90 + 250);
                         });
-                        setOpen(item, idx === 0);
+                        obs.unobserve(e.target);
                     });
-                    this._accItems = items;
-                    this._onAccResize = () => {
-                        items.forEach(item => { if (item.dataset.open === '1') { const b = item.querySelector('[data-acc-body]'); b.style.maxHeight = b.scrollHeight + 'px'; } });
-                    };
-                    window.addEventListener('resize', this._onAccResize);
-                    setTimeout(this._onAccResize, 350);
-                }                
-                function initBars() {
-                    const obs = new IntersectionObserver((entries) => {
-                        entries.forEach(e => {
-                            if (!e.isIntersecting) return;
-                            e.target.querySelectorAll('[data-bar]').forEach((bar, i) => {
-                                setTimeout(() => { bar.style.transition = 'width 1.1s cubic-bezier(0.16,1,0.3,1)'; bar.style.width = bar.dataset.bar + '%'; }, i * 90 + 250);
-                            });
-                            obs.unobserve(e.target);
-                        });
-                    }, {threshold: 0.2 });
-                    document.querySelectorAll('[data-bars]').forEach(el => {
-                        el.querySelectorAll('[data-bar]').forEach(b => { b.style.width = '0'; });
-                        obs.observe(el);
-                    });
-                }
-                function initRoles() {
-                    const items = Array.from(document.querySelectorAll('[data-role-item]'));
-                    const panels = Array.from(document.querySelectorAll('[data-role-panel]'));
-                    if (!items.length || !panels.length) return;
-                    const select = (idx) => {
-                        items.forEach(it => {
-                            const on = it.dataset.idx === String(idx);
-                            it.style.background = on ? '#fff' : '';
-                            it.style.borderColor = on ? '#DBEAFE' : 'transparent';
-                            it.style.boxShadow = on ? '0 6px 20px rgba(59,130,246,0.10)' : 'none';
-                            const arrow = it.querySelector('[data-role-arrow]');
-                            if (arrow) { arrow.style.opacity = on ? '1' : '0'; arrow.style.transform = on ? 'translateX(2px)' : 'translateX(-4px)'; }
-                        });
-                        panels.forEach(p => {
-                            const on = p.dataset.idx === String(idx);
-                            p.style.opacity = on ? '1' : '0';
-                            p.style.transform = on ? 'translateY(0)' : 'translateY(10px)';
-                            p.style.pointerEvents = on ? 'auto' : 'none';
-                            const vb = p.querySelectorAll('.rc-bar');
-                            const hb = p.querySelectorAll('.rc-hbar');
-                            const dr = p.querySelectorAll('.rc-draw');
-                            const fd = p.querySelectorAll('.rc-fade');
-                            if (on) {
-                                vb.forEach((b, i) => setTimeout(() => { b.style.transform = 'scaleY(1)'; }, 140 + i * 80));
-                                hb.forEach((b, i) => setTimeout(() => {b.style.transform = 'scaleX(1)'; }, 160 + i * 110));
-                                dr.forEach((b, i) => setTimeout(() => {b.style.strokeDashoffset = '0'; }, 180 + i * 150));
-                                fd.forEach(b => {b.style.opacity = '1'; });
-                            } else {
-                                vb.forEach(b => { b.style.transform = 'scaleY(0)'; });
-                                hb.forEach(b => {b.style.transform = 'scaleX(0)'; });
-                                dr.forEach(b => {b.style.strokeDashoffset = b.dataset.len; });
-                                fd.forEach(b => {b.style.opacity = '0'; });
-                            }
-                        });
-                    };
+                }, {threshold: 0.2 });
+                document.querySelectorAll('[data-bars]').forEach(el => {
+                    el.querySelectorAll('[data-bar]').forEach(b => { b.style.width = '0'; });
+                    obs.observe(el);
+                });
+            }
+            function initRoles() {
+                const items = Array.from(document.querySelectorAll('[data-role-item]'));
+                const panels = Array.from(document.querySelectorAll('[data-role-panel]'));
+                if (!items.length || !panels.length) return;
+                const select = (idx) => {
                     items.forEach(it => {
-                        const idx = it.dataset.idx;
-                        it.addEventListener('mouseenter', () => select(idx));
-                        it.addEventListener('click', () => select(idx));
+                        const on = it.dataset.idx === String(idx);
+                        it.style.background = on ? '#fff' : '';
+                        it.style.borderColor = on ? '#DBEAFE' : 'transparent';
+                        it.style.boxShadow = on ? '0 6px 20px rgba(59,130,246,0.10)' : 'none';
+                        const arrow = it.querySelector('[data-role-arrow]');
+                        if (arrow) { arrow.style.opacity = on ? '1' : '0'; arrow.style.transform = on ? 'translateX(2px)' : 'translateX(-4px)'; }
                     });
-                    select(0);
-                }
-                function renderVals() { return { }; }
+                    panels.forEach(p => {
+                        const on = p.dataset.idx === String(idx);
+                        p.style.opacity = on ? '1' : '0';
+                        p.style.transform = on ? 'translateY(0)' : 'translateY(10px)';
+                        p.style.pointerEvents = on ? 'auto' : 'none';
+                        const vb = p.querySelectorAll('.rc-bar');
+                        const hb = p.querySelectorAll('.rc-hbar');
+                        const dr = p.querySelectorAll('.rc-draw');
+                        const fd = p.querySelectorAll('.rc-fade');
+                        if (on) {
+                            vb.forEach((b, i) => setTimeout(() => { b.style.transform = 'scaleY(1)'; }, 140 + i * 80));
+                            hb.forEach((b, i) => setTimeout(() => {b.style.transform = 'scaleX(1)'; }, 160 + i * 110));
+                            dr.forEach((b, i) => setTimeout(() => {b.style.strokeDashoffset = '0'; }, 180 + i * 150));
+                            fd.forEach(b => {b.style.opacity = '1'; });
+                        } else {
+                            vb.forEach(b => { b.style.transform = 'scaleY(0)'; });
+                            hb.forEach(b => {b.style.transform = 'scaleX(0)'; });
+                            dr.forEach(b => {b.style.strokeDashoffset = b.dataset.len; });
+                            fd.forEach(b => {b.style.opacity = '0'; });
+                        }
+                    });
+                };
+                items.forEach(it => {
+                    const idx = it.dataset.idx;
+                    it.addEventListener('mouseenter', () => select(idx));
+                    it.addEventListener('click', () => select(idx));
+                });
+                select(0);
+            }
+            function renderVals() { return { }; }
         </script>
     </body>
 

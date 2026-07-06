@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta name="theme-color" content="#0f8ed6">
+        <meta charset="utf-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="preconnect" href="fonts.googleapis.com">
+        <link rel="preconnect" href="fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+        <meta name='robots' content='noindex, nofollow' />
+
+        <!-- This site is optimized with the Yoast SEO plugin v23.8 - https://yoast.com/wordpress/plugins/seo/ -->
+        <title>Feature Spend Attribution - milestone, Ltd.</title>
+        
+        <link rel='stylesheet' id='icw-glightbox-css' href='assets/css/glightbox.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='icw-main-css' href='assets/css/main.css' type='text/css' media='all' />   
+        <link rel="stylesheet" id="icw-wow-css" href="assets/css/animate.css" media="all">        
+        <script type="text/javascript" src="assets/js/jquery.min.js" id="jquery-core-js"></script>
+        <script type="text/javascript" src="assets/js/splide.min.js" id="icw-splide-js"></script>
+
+        <link rel="icon" href="https://new.mstone.ai/wp-content/uploads/2024/10/favicon-150x150.png" sizes="32x32" />
+        <link rel="icon" href="https://new.mstone.ai/wp-content/uploads/2024/10/favicon-300x300.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="https://new.mstone.ai/wp-content/uploads/2024/10/favicon-300x300.png" />
+        <meta name="msapplication-TileImage" content="https://new.mstone.ai/wp-content/uploads/2024/10/favicon-300x300.png" />       
+        <style>
+            .agent-hero-section .hero-title .tag-line {background: rgba(18, 211, 221, 0.06);border: 1px solid rgba(18, 211, 221, 0.3);color: rgb(127, 227, 234);}
+            .agent-hero-section .hero-title .tag-line .dot {background: rgb(18, 211, 221);}
+            body .main-section.agent-content-section.custom-gradient-bg {background: linear-gradient(rgba(3, 113, 238, 0.04) 1px, transparent 1px) 0% 0% / 52px 52px, linear-gradient(90deg, rgba(3, 113, 238, 0.04) 1px, transparent 1px) rgb(238, 242, 248) !important;}
+            body .main-section.agent-card-section.custom-gradient-bg-2 {background: linear-gradient(rgba(3, 113, 238, 0.04) 1px, transparent 1px) 0% 0% / 52px 52px, linear-gradient(90deg, rgba(3, 113, 238, 0.04) 1px, transparent 1px) rgb(238, 242, 248) !important;}
+            .agent-cta-section .footer-note {animation: none !important;}
+            .agent-card-section.sm-icon-card-section .card-grid .icon-card .card-icon {width: 26px;height: 26px;}  
+            [class*="scp"]:hover {transform: translateX(6px);}
+            [class*="card-scp"]:hover {transform: translateY(-5px);}
+            .bg-theme-dark .ai-section-title .tag-line {color: rgb(18, 211, 221) !important;}
+            .agent-card-section.is-dark .card-grid .icon-card {border: 1px solid rgba(12, 19, 34, 0.09);}
+            @keyframes orbit{from{offset-distance:0%}to{offset-distance:100%}}
+            @keyframes flowDash{to{stroke-dashoffset:-26}}
+            @keyframes flowDashSlow{to{stroke-dashoffset:-40}}
+            @keyframes glowPulse{0%,100%{opacity:.18}50%{opacity:.6}}
+            @keyframes softPulse{0%,100%{opacity:.55;transform:scale(.95)}50%{opacity:1;transform:scale(1.12)}}
+            @keyframes dotTravel{0%{offset-distance:0%;opacity:0}8%{opacity:1}92%{opacity:1}100%{offset-distance:100%;opacity:0}}
+            @keyframes growBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+            @keyframes flowDashRev{to{stroke-dashoffset:26}}
+            [data-diffgrid]{display:grid;grid-template-columns:152px 36px 1fr 36px 178px;gap:16px;align-items:stretch;margin-top:24px}
+            @media(max-width:820px){[data-diffgrid]{grid-template-columns:1fr;gap:14px}[data-diffconn]{display:none!important}}
+            [data-cycle-mobile]{display:none}
+            @media(max-width:720px){
+                [data-cycle-desktop]{display:none!important}
+                [data-cycle-mobile]{display:flex!important}
+            }
+        </style>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">     
+                    <a class="navbar-brand" href="https://mstone.ai/" title="Milestone | Unlocking R&amp;D Black Box" rel="home"><img src="assets/images/logo.svg" alt="Milestone"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul id="menu-main-menu" class="navbar-nav mainMenu">
+                            <li class="current-menu-item"><a href="https://mstone.ai/product/" aria-current="page">Product</a></li>
+                            <li><a href="https://mstone.ai/faq/">FAQ</a></li>
+                            <li class="menu-item-has-children"><a href="https://mstone.ai/resources/">Resources</a><i class="arrow"></i>
+                                <ul class="sub-menu">
+                                    <li class="menu-item-object-post"><a href="https://mstone.ai/blog/">Blog</a></li>
+                                    <li><a target="_blank" href="/docs">Docs</a></li>
+                                    <li class="menu-item-object-glossary"><a href="https://mstone.ai/glossary/">Glossary</a></li>
+                                    <li class="menu-item-object-resource"><a href="https://mstone.ai/resources/">Webinars</a></li>
+                                    <li><a href="https://mstone.ai/tools-wizard/">AI Tools Wizard</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Company</a><i class="arrow"></i>
+                                <ul class="sub-menu">
+                                    <li><a href="https://mstone.ai/about-us/">About Us</a></li>
+                                    <li><a href="https://mstone.ai/careers/">Careers</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://mstone.ai/contact/">Contact Us</a></li>
+                        </ul> 
+                        <div class="navbar__buttons">
+                            <div class="nav-right"><a href="https://mstone.ai/roi-engineering-efficiency-calculator/" class="btn btn-white btn-md" target="_self"><span class="arrow-icon"></span><span class="btn-text">Estimate ROI</span> </a></div>
+                            <div class="nav-right"><a href="/book-a-demo/" class="btn btn-primary btn-md" target="_self"><span class="arrow-icon"></span><span class="btn-text">Book a demo</span> </a></div>                            
+                        </div>
+                    </div>                                        
+                </nav>
+            </div>
+        </header>
+        <main id="main-content" class="main-content-wrapper">
+            <link rel='stylesheet' id='icw-agent-hero-css' href='blocks/agent-hero/style.css' type='text/css' media='all' /> 
+            <section class="main-section agent-hero-section bg-none is-dark section-title-mw-600 is-shape ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-6">
+                            <div class="hero-title text-left">
+                                <div class="tag-line wow fadeInUp"><span class="dot"></span><span>FEATURE SPEND ATTRIBUTION</span></div>
+                                <h1 class="title wow fadeInUp h2" data-wow-delay="150ms">Control the true cost <br class="d-none d-lg-block">of every initiative <br class="d-none d-lg-block">at each stage.</h1>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="300ms">
+                                    <p>Connect AI spend to the full delivery cycle. See where it <br class="d-none d-lg-block">happens, what it supports, and where it hides cost.</p>
+                                </div>
+                                <div class="action wow fadeInUp" data-wow-delay="450ms">
+                                    <a href="https://mstoneaidev.wpenginepowered.com/book-a-demo/" class="btn btn-primary-only btn-md" target="_self">Get a demo </a>
+                                    <a href="#go" class="btn btn-outline-gray-only btn-md" target="_self">Explore Spend Hub → </a>
+                                </div>
+                                <div class="action-note wow fadeInUp" data-wow-delay="600ms">
+                                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 38px;">
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.16em; color: rgb(124, 136, 150);">CONNECTS</span>
+                                        <span style="color: rgb(154, 167, 180); font-size: 13px;">AI tools</span><span style="color: rgb(62, 71, 81);">/</span>
+                                        <span style="color: rgb(154, 167, 180); font-size: 13px;">Git</span><span style="color: rgb(62, 71, 81);">/</span>
+                                        <span style="color: rgb(154, 167, 180); font-size: 13px;">Project management</span><span style="color: rgb(62, 71, 81);">/</span>
+                                        <span style="color: rgb(154, 167, 180); font-size: 13px;">HR</span><span style="color: rgb(62, 71, 81);">/</span>
+                                        <span style="color: rgb(154, 167, 180); font-size: 13px;">Delivery</span>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>  
+                        <div class="col-12 col-lg-6">
+                            <div style="position: relative; width: 100%;">
+                                <div data-cycle-desktop="" style="position: relative; display: flex; justify-content: center;">
+                                    <div style="position: absolute; width: 440px; height: 440px; border-radius: 50%; background: radial-gradient(circle, rgba(3, 113, 238, 0.18), transparent 65%); filter: blur(10px);"></div>
+                                    <div style="position: relative; width: 100%; display: flex; justify-content: center; height: 500px;">
+                                        <div data-scale="500" style="position: relative; width: 500px; height: 500px; transform-origin: center top; flex: 0 0 auto; transform: scale(1);">
+                                            <svg viewBox="0 0 500 500" width="500" height="500" style="position: absolute; inset: 0px; overflow: visible;">
+                                                <defs><radialGradient id="halo"><stop offset="0" stop-color="#12D3DD" stop-opacity=".55"></stop><stop offset="1" stop-color="#12D3DD" stop-opacity="0"></stop></radialGradient></defs>
+                                                <circle cx="250" cy="250" r="200" fill="none" stroke="rgba(135,191,243,.14)" stroke-width="1"></circle>
+                                                <circle cx="250" cy="250" r="200" fill="none" stroke="rgba(18,211,221,.4)" stroke-width="1.5" stroke-dasharray="2 12" style="animation: 4s linear 0s infinite normal none running flowDashSlow;"></circle>
+                                                <g stroke="#4f86b3" stroke-width="1.3" stroke-opacity=".55" stroke-dasharray="4 9" style="animation: 1.4s linear 0s infinite normal none running flowDash;">
+                                                    <line x1="250" y1="50" x2="250" y2="250"></line><line x1="423" y1="150" x2="250" y2="250"></line><line x1="423" y1="350" x2="250" y2="250"></line><line x1="250" y1="450" x2="250" y2="250"></line><line x1="77" y1="350" x2="250" y2="250"></line><line x1="77" y1="150" x2="250" y2="250"></line>
+                                                </g>
+                                                <circle cx="250" cy="50" r="20" fill="url(#halo)" style="animation: 3s ease-in-out 0s infinite normal none running glowPulse;"></circle>
+                                                <circle cx="423" cy="150" r="20" fill="url(#halo)" style="animation: 3s ease-in-out 0.5s infinite normal none running glowPulse;"></circle>
+                                                <circle cx="423" cy="350" r="20" fill="url(#halo)" style="animation: 3s ease-in-out 1s infinite normal none running glowPulse;"></circle>
+                                                <circle cx="250" cy="450" r="20" fill="url(#halo)" style="animation: 3s ease-in-out 1.5s infinite normal none running glowPulse;"></circle>
+                                                <circle cx="77" cy="350" r="20" fill="url(#halo)" style="animation: 3s ease-in-out 2s infinite normal none running glowPulse;"></circle>
+                                                <circle cx="77" cy="150" r="20" fill="url(#halo)" style="animation: 3s ease-in-out 2.5s infinite normal none running glowPulse;"></circle>
+                                            </svg>
+                                            <div style="position: absolute; width: 10px; height: 10px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgba(18, 211, 221, 0.85) 0px 0px 14px 3px; offset-path: path(&quot;M 250 50 A 200 200 0 1 1 250 450 A 200 200 0 1 1 250 50&quot;); animation: 9s linear 0s infinite normal none running orbit;"></div>
+                                            <div style="position: absolute; width: 8px; height: 8px; border-radius: 50%; background: rgb(135, 191, 243); box-shadow: rgba(135, 191, 243, 0.8) 0px 0px 12px 3px; offset-path: path(&quot;M 250 50 A 200 200 0 1 1 250 450 A 200 200 0 1 1 250 50&quot;); animation: 9s linear -3s infinite normal none running orbit;"></div>
+                                            <div style="position: absolute; width: 9px; height: 9px; border-radius: 50%; background: rgb(166, 224, 249); box-shadow: rgba(166, 224, 249, 0.8) 0px 0px 12px 3px; offset-path: path(&quot;M 250 50 A 200 200 0 1 1 250 450 A 200 200 0 1 1 250 50&quot;); animation: 9s linear -6s infinite normal none running orbit;"></div>
+                                            <div style="position: absolute; width: 7px; height: 7px; border-radius: 50%; background: rgb(44, 197, 138); box-shadow: rgba(44, 197, 138, 0.7) 0px 0px 12px 3px; offset-path: path(&quot;M 250 50 A 200 200 0 1 1 250 450 A 200 200 0 1 1 250 50&quot;); animation: 13s linear -2s infinite normal none running orbit;"></div>
+                                            <div style="position: absolute; width: 6px; height: 6px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgba(18, 211, 221, 0.9) 0px 0px 10px 2px; offset-path: path(&quot;M 250 50 L 250 250&quot;); animation: 3.2s ease-in -0.4s infinite normal none running dotTravel;"></div>
+                                            <div style="position: absolute; width: 6px; height: 6px; border-radius: 50%; background: rgb(135, 191, 243); box-shadow: rgba(135, 191, 243, 0.9) 0px 0px 10px 2px; offset-path: path(&quot;M 423 150 L 250 250&quot;); animation: 3.2s ease-in -1.6s infinite normal none running dotTravel;"></div>
+                                            <div style="position: absolute; width: 6px; height: 6px; border-radius: 50%; background: rgb(166, 224, 249); box-shadow: rgba(166, 224, 249, 0.9) 0px 0px 10px 2px; offset-path: path(&quot;M 77 350 L 250 250&quot;); animation: 3.2s ease-in -2.4s infinite normal none running dotTravel;"></div>
+                                            <div style="position: absolute; left: 250px; top: 50px; transform: translate(-50%, -50%); z-index: 5;">
+                                                <div class="hero-img-card" tabindex="0" style="outline: none; cursor: pointer; min-width: 130px; padding: 10px 13px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.95), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(135, 191, 243, 0.16); box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;" data-ob="rgba(0, 0, 0, 0.5) 0px 8px 24px" data-obc="rgba(135, 191, 243, 0.16)">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 8px;"></span>
+                                                        <span style="font-weight: 600; font-size: 13.5px; color: rgb(255, 255, 255);">Planning</span>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: space-between; gap: 14px; margin-top: 5px;">
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; color: rgb(135, 148, 162);">Effort</span>
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(166, 224, 249);">$1,240</span>
+                                                    </div>
+                                                    <div data-detail style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.35s, opacity 0.3s, margin-top 0.3s; font-size: 10.5px; color: rgb(154, 167, 180); line-height: 1.5; margin-top: 0px;">Epics, tickets, ownership</div>
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; left: 423px; top: 150px; transform: translate(-50%, -50%); z-index: 5;">
+                                                <div class="hero-img-card" tabindex="0" style="outline: none; cursor: pointer; min-width: 130px; padding: 10px 13px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.95), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(135, 191, 243, 0.16); box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;" data-ob="rgba(0, 0, 0, 0.5) 0px 8px 24px" data-obc="rgba(135, 191, 243, 0.16)">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span>
+                                                        <span style="font-weight: 600; font-size: 13.5px; color: rgb(255, 255, 255);">AI work</span>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: space-between; gap: 14px; margin-top: 5px;">
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; color: rgb(135, 148, 162);">Tokens</span>
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(166, 224, 249);">$3,180</span>
+                                                    </div>
+                                                    <div data-detail style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.35s, opacity 0.3s, margin-top 0.3s; font-size: 10.5px; color: rgb(154, 167, 180); line-height: 1.5; margin-top: 0px;">Tokens, model calls, prompts</div>
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; left: 423px; top: 350px; transform: translate(-50%, -50%); z-index: 5;">
+                                                <div class="hero-img-card" tabindex="0" style="outline: none; cursor: pointer; min-width: 130px; padding: 10px 13px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.95), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(135, 191, 243, 0.16); box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;" data-ob="rgba(0, 0, 0, 0.5) 0px 8px 24px" data-obc="rgba(135, 191, 243, 0.16)">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(3, 113, 238); box-shadow: rgb(3, 113, 238) 0px 0px 8px;"></span>
+                                                        <span style="font-weight: 600; font-size: 13.5px; color: rgb(255, 255, 255);">Code</span>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: space-between; gap: 14px; margin-top: 5px;">
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; color: rgb(135, 148, 162);">Agent runs</span>
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(166, 224, 249);">$1,860</span>
+                                                    </div>
+                                                    <div data-detail style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.35s, opacity 0.3s, margin-top 0.3s; font-size: 10.5px; color: rgb(154, 167, 180); line-height: 1.5; margin-top: 0px;">Agent runs, coding sessions</div>
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; left: 250px; top: 450px; transform: translate(-50%, -50%); z-index: 5;" >
+                                                <div class="hero-img-card" tabindex="0" style="outline: none; cursor: pointer; min-width: 130px; padding: 10px 13px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.95), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(135, 191, 243, 0.16); box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 8px;"></span>
+                                                        <span style="font-weight: 600; font-size: 13.5px; color: rgb(255, 255, 255);">Review</span>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: space-between; gap: 14px; margin-top: 5px;">
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; color: rgb(135, 148, 162);">Review</span>
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(166, 224, 249);">$980</span>
+                                                    </div>
+                                                    <div data-detail style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.35s, opacity 0.3s, margin-top 0.3s; font-size: 10.5px; color: rgb(154, 167, 180); line-height: 1.5;">Human review, rework</div>
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; left: 77px; top: 350px; transform: translate(-50%, -50%); z-index: 5;">
+                                                <div class="hero-img-card" tabindex="0" style="outline: none; cursor: pointer; min-width: 130px; padding: 10px 13px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.95), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(135, 191, 243, 0.16); box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;"
+                                                    data-ob="rgba(0, 0, 0, 0.5) 0px 8px 24px" data-obc="rgba(135, 191, 243, 0.16)">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(44, 197, 138); box-shadow: rgb(44, 197, 138) 0px 0px 8px;"></span>
+                                                        <span style="font-weight: 600; font-size: 13.5px; color: rgb(255, 255, 255);">Deploy</span>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: space-between; gap: 14px; margin-top: 5px;">
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; color: rgb(135, 148, 162);">Tools</span>
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(166, 224, 249);">$420</span>
+                                                    </div>
+                                                    <div data-detail style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.35s, opacity 0.3s, margin-top 0.3s; font-size: 10.5px; color: rgb(154, 167, 180); line-height: 1.5; margin-top: 0px;">Tool usage, deploy activity</div>
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; left: 77px; top: 150px; transform: translate(-50%, -50%); z-index: 5;">
+                                                <div class="hero-img-card" tabindex="0" style="outline: none; cursor: pointer; min-width: 130px; padding: 10px 13px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.95), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(135, 191, 243, 0.16); box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;" data-ob="rgba(0, 0, 0, 0.5) 0px 8px 24px" data-obc="rgba(135, 191, 243, 0.16)">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(166, 224, 249); box-shadow: rgb(166, 224, 249) 0px 0px 8px;"></span>
+                                                        <span style="font-weight: 600; font-size: 13.5px; color: rgb(255, 255, 255);">Post release</span>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: space-between; gap: 14px; margin-top: 5px;">
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; color: rgb(135, 148, 162);">Upkeep</span>
+                                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(166, 224, 249);">$740</span>
+                                                    </div>
+                                                    <div data-detail style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.35s, opacity 0.3s, margin-top 0.3s; font-size: 10.5px; color: rgb(154, 167, 180); line-height: 1.5; margin-top: 0px;">Maintenance, quality fixes</div>
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; left: 250px; top: 250px; transform: translate(-50%, -50%); width: 248px; z-index: 8; padding: 18px; border-radius: 18px; background: linear-gradient(170deg, rgba(20, 28, 38, 0.97), rgba(10, 13, 17, 0.98)); border: 1px solid rgba(135, 191, 243, 0.28); box-shadow: rgba(0, 0, 0, 0.65) 0px 24px 60px, rgba(255, 255, 255, 0.05) 0px 1px 0px inset;">
+                                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                                    <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.16em; color: rgb(18, 211, 221);">FEATURE SPEND PROFILE</span>
+                                                    <span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(44, 197, 138); box-shadow: rgb(44, 197, 138) 0px 0px 8px; animation: 2s ease-in-out 0s infinite normal none running softPulse;"></span>
+                                                </div>
+                                                <div style="margin-top: 8px; font-size: 17px; font-weight: 600; color: rgb(255, 255, 255);">Checkout Redesign</div>
+                                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px;">
+                                                    <div>
+                                                        <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.08em; color: rgb(124, 136, 150);">AI SPEND</div>
+                                                        <div data-countup="8420" data-pre="$" style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255);">$8,420</div>
+                                                    </div>
+                                                    <div>
+                                                        <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.08em; color: rgb(124, 136, 150);">HUMAN EFFORT</div>
+                                                        <div data-countup="184" data-suf=" hrs" style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255);">184 hrs</div>
+                                                    </div>
+                                                    <div>
+                                                        <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.08em; color: rgb(124, 136, 150);">AGENT ACTIVITY</div>
+                                                        <div data-countup="37" data-suf=" runs" style="font-size: 15px; font-weight: 600; color: rgb(232, 238, 245);">37 runs</div>
+                                                    </div>
+                                                    <div>
+                                                        <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.08em; color: rgb(124, 136, 150);">AI CONTRIBUTION</div>
+                                                        <div data-countup="31" data-suf="%" style="font-size: 15px; font-weight: 600; color: rgb(135, 191, 243);">31%</div>
+                                                    </div>
+                                                </div>
+                                                <div style="display: flex; gap: 8px; margin-top: 13px;">
+                                                    <div style="flex: 1 1 0%; padding: 7px 9px; border-radius: 9px; background: rgba(255, 177, 66, 0.1); border: 1px solid rgba(255, 177, 66, 0.22);">
+                                                        <div style="font-size: 9px; color: rgb(154, 167, 180);">Review rework</div>
+                                                        <div style="font-size: 12px; font-weight: 600; color: rgb(255, 177, 66);">▲ 18%</div>
+                                                    </div>
+                                                    <div style="flex: 1 1 0%; padding: 7px 9px; border-radius: 9px; background: rgba(44, 197, 138, 0.1); border: 1px solid rgba(44, 197, 138, 0.22);">
+                                                        <div style="font-size: 9px; color: rgb(154, 167, 180);">Efficiency</div>
+                                                        <div style="font-size: 12px; font-weight: 600; color: rgb(44, 197, 138);">Improving</div>
+                                                    </div>
+                                                </div>
+                                                <div style="margin-top: 12px; padding-top: 11px; border-top: 1px solid rgba(135, 191, 243, 0.12);">
+                                                    <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 8.5px; letter-spacing: 0.12em; color: rgb(124, 136, 150);">RECOMMENDED ACTION</div>
+                                                    <div style="margin-top: 3px; font-size: 11.5px; line-height: 1.4; color: rgb(200, 208, 217);">Tighten agent usage in backend review</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                                <div data-cycle-mobile="" style="flex-direction: column; gap: 9px;">
+                                    <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.2em; color: rgb(127, 227, 234); margin-bottom: 2px;">AI SPEND CYCLE</div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 15px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.92), rgba(13, 16, 20, 0.92)); border: 1px solid rgba(135, 191, 243, 0.16);">
+                                        <div style="display: flex; align-items: center; gap: 9px;">
+                                            <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 8px;"></span>
+                                            <span style="font-weight: 600; font-size: 14px; color: rgb(255, 255, 255);">Planning</span>
+                                        </div>
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(166, 224, 249);">$1,240</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 15px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.92), rgba(13, 16, 20, 0.92)); border: 1px solid rgba(135, 191, 243, 0.16);">
+                                        <div style="display: flex; align-items: center; gap: 9px;">
+                                            <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span>
+                                            <span style="font-weight: 600; font-size: 14px; color: rgb(255, 255, 255);">AI work</span>
+                                        </div>
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(166, 224, 249);">$3,180</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 15px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.92), rgba(13, 16, 20, 0.92)); border: 1px solid rgba(135, 191, 243, 0.16);">
+                                        <div style="display: flex; align-items: center; gap: 9px;">
+                                            <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(3, 113, 238); box-shadow: rgb(3, 113, 238) 0px 0px 8px;"></span>
+                                            <span style="font-weight: 600; font-size: 14px; color: rgb(255, 255, 255);">Code</span>
+                                        </div>
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(166, 224, 249);">$1,860</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 15px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.92), rgba(13, 16, 20, 0.92)); border: 1px solid rgba(135, 191, 243, 0.16);">
+                                        <div style="display: flex; align-items: center; gap: 9px;">
+                                            <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 8px;"></span>
+                                            <span style="font-weight: 600; font-size: 14px; color: rgb(255, 255, 255);">Review</span>
+                                        </div>
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(166, 224, 249);">$980</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 15px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.92), rgba(13, 16, 20, 0.92)); border: 1px solid rgba(135, 191, 243, 0.16);">
+                                        <div style="display: flex; align-items: center; gap: 9px;">
+                                            <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(44, 197, 138); box-shadow: rgb(44, 197, 138) 0px 0px 8px;"></span>
+                                            <span style="font-weight: 600; font-size: 14px; color: rgb(255, 255, 255);">Deploy</span>
+                                        </div>
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(166, 224, 249);">$420</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 15px; border-radius: 13px; background: linear-gradient(rgba(24, 28, 33, 0.92), rgba(13, 16, 20, 0.92)); border: 1px solid rgba(135, 191, 243, 0.16);">
+                                        <div style="display: flex; align-items: center; gap: 9px;">
+                                            <span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(166, 224, 249); box-shadow: rgb(166, 224, 249) 0px 0px 8px;"></span>
+                                            <span style="font-weight: 600; font-size: 14px; color: rgb(255, 255, 255);">Post release</span>
+                                        </div>
+                                        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(166, 224, 249);">$740</span>
+                                    </div>
+                                    <div style="margin-top: 6px; padding: 18px; border-radius: 16px; background: linear-gradient(170deg, rgba(20, 28, 38, 0.97), rgba(10, 13, 17, 0.98)); border: 1px solid rgba(18, 211, 221, 0.3); box-shadow: rgba(0, 0, 0, 0.5) 0px 18px 44px;">
+                                        <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.16em; color: rgb(18, 211, 221);">FEATURE SPEND PROFILE</div>
+                                        <div style="margin-top: 6px; font-size: 18px; font-weight: 600; color: rgb(255, 255, 255);">Checkout Redesign</div>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px;">
+                                            <div>
+                                                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; color: rgb(124, 136, 150);">AI SPEND</div>
+                                                <div style="font-size: 20px; font-weight: 600; color: rgb(255, 255, 255);">$8,420</div>
+                                            </div>
+                                            <div>
+                                                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; color: rgb(124, 136, 150);">AI CONTRIBUTION</div>
+                                                <div style="font-size: 20px; font-weight: 600; color: rgb(135, 191, 243);">31%</div>
+                                            </div>
+                                        </div>
+                                        <div style="margin-top: 12px; font-size: 12px; color: rgb(200, 208, 217); line-height: 1.45;">
+                                            <span style="color: rgb(124, 136, 150);">Action</span> &nbsp;Tighten agent usage in backend review
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                              
+                    </div>                                                
+                </div>
+                <div class="video-bg-block">
+                    <canvas id="particle-animation" class="opacity-50" width="1914" height="640"></canvas>
+                    <div style="position: absolute; top: -260px; left: 50%; transform: translateX(-50%); width: 1100px; height: 700px; background: radial-gradient(rgba(3, 113, 238, 0.2), rgba(18, 211, 221, 0.06) 40%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+                </div>
+                <a href="#go" class="scroll-target"><svg width="22" height="34" viewBox="0 0 22 34" fill="none"><rect x="1.5" y="1.5" width="19" height="31" rx="9.5" fill="#000000d8" stroke="rgba(241,245,249,0.8)" stroke-width="1.5"></rect><circle cx="11" cy="10" r="3" fill="rgba(241,245,249,0.8)"></circle></svg></a>
+            </section>
+            <script type="text/javascript" src="blocks/agent-hero/script.js" id="icw-agent-hero-js"></script>            
+            <link rel='stylesheet' id='icw-agent-content-css' href='blocks/agent-content/style.css' type='text/css' media='all' /> 
+            <section class="main-section agent-content-section bg-none custom-gradient-bg is-dark is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">THE GAP</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">AI spend grows inside the cycle. Most <br class="d-none d-lg-block">teams see it only after the invoice.</h2>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px, 4vw, 56px); align-items: start;">
+                                <div data-reveal="" style="opacity: 1; transform: none; transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s;">
+                                    <p style="font-size: 17px; line-height: 1.6; color: rgb(62, 75, 89); margin: 0px;">AI cost spreads across the cycle, and beyond it, on the tools used by sales, support, and operations. Every team sees a different slice.</p>
+                                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px;">
+                                        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(3, 113, 238); min-width: 88px;">Finance</span><span style="font-size: 15px; color: rgb(43, 57, 71);">sees invoices.</span></div>
+                                        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(10, 166, 174); min-width: 88px;">AI teams</span><span style="font-size: 15px; color: rgb(43, 57, 71);">see usage dashboards.</span></div>
+                                        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(62, 123, 196); min-width: 88px;">Engineering</span><span style="font-size: 15px; color: rgb(43, 57, 71);">sees tickets and pull requests.</span></div>
+                                        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(14, 138, 85); min-width: 88px;">Product</span><span style="font-size: 15px; color: rgb(43, 57, 71);">sees shipped features.</span>
+                                        </div>
+                                        <div style="display: flex; gap: 12px; align-items: baseline;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(138, 87, 196); min-width: 88px;">Business teams</span><span style="font-size: 15px; color: rgb(43, 57, 71);">run AI tools of their own.</span></div>
+                                    </div>
+                                    <p style="font-size: 16px; line-height: 1.6; color: rgb(62, 75, 89); margin: 24px 0px 0px;">No one sees the full picture. Milestone connects every AI spend, in engineering and beyond, to the work and the outcome.</p>
+                                    <p style="font-size: 18px; font-weight: 600; color: rgb(12, 19, 34); margin: 16px 0px 0px;">Milestone closes that gap.</p>
+                                </div>
+                                <div data-reveal="" style="opacity: 1; transform: none; transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;">
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                                        <div style="padding: 14px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px dashed rgba(120, 130, 142, 0.4); box-shadow: rgba(12, 19, 34, 0.06) 0px 1px 3px; transform: rotate(-1.4deg);">
+                                            <div style="font-size: 11px; color: rgb(90, 103, 118); margin-bottom: 9px;">Finance invoice</div>
+                                            <div style="height: 6px; border-radius: 4px; background: rgba(120, 130, 142, 0.28); margin-bottom: 6px;"></div>
+                                            <div style="height: 6px; width: 70%; border-radius: 4px; background: rgba(120, 130, 142, 0.18);"></div>
+                                        </div>
+                                        <div style="padding: 14px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px dashed rgba(120, 130, 142, 0.4); box-shadow: rgba(12, 19, 34, 0.06) 0px 1px 3px; transform: rotate(1.2deg);">
+                                            <div style="font-size: 11px; color: rgb(90, 103, 118); margin-bottom: 9px;">AI tool seats and usage</div>
+                                            <div style="height: 6px; border-radius: 4px; background: rgba(10, 166, 174, 0.32); margin-bottom: 6px;"></div>
+                                            <div style="height: 6px; width: 55%; border-radius: 4px; background: rgba(10, 166, 174, 0.18);"></div>
+                                        </div>
+                                        <div style="padding: 14px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px dashed rgba(120, 130, 142, 0.4); box-shadow: rgba(12, 19, 34, 0.06) 0px 1px 3px; transform: rotate(1.6deg);">
+                                            <div style="font-size: 11px; color: rgb(90, 103, 118); margin-bottom: 9px;">Tickets and pull requests</div>
+                                            <div style="height: 6px; border-radius: 4px; background: rgba(3, 113, 238, 0.3); margin-bottom: 6px;"></div>
+                                            <div style="height: 6px; width: 80%; border-radius: 4px; background: rgba(3, 113, 238, 0.16);"></div>
+                                        </div>
+                                        <div style="padding: 14px; border-radius: 13px; background: rgb(255, 255, 255); border: 1px dashed rgba(120, 130, 142, 0.4); box-shadow: rgba(12, 19, 34, 0.06) 0px 1px 3px; transform: rotate(-1.1deg);">
+                                            <div style="font-size: 11px; color: rgb(90, 103, 118); margin-bottom: 9px;">Product roadmap</div>
+                                            <div style="height: 6px; border-radius: 4px; background: rgba(14, 138, 85, 0.3); margin-bottom: 6px;"></div>
+                                            <div style="height: 6px; width: 60%; border-radius: 4px; background: rgba(14, 138, 85, 0.16);"></div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; justify-content: center; margin: 14px 0px;"><svg width="2" height="26" viewBox="0 0 2 26"><line x1="1" y1="0" x2="1" y2="26" stroke="rgba(3,113,238,.5)" stroke-width="1.5" stroke-dasharray="3 4" style="animation: 1s linear 0s infinite normal none running flowDash;"></line></svg></div>
+                                    <div style="padding: 18px; border-radius: 15px; background: linear-gradient(150deg, rgb(12, 35, 64), rgb(10, 26, 48)); border: 1px solid rgba(18, 211, 221, 0.3); box-shadow: rgba(3, 113, 238, 0.22) 0px 16px 40px;">
+                                        <div style="display: flex; align-items: center; gap: 9px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 10px;"></span><span style="font-weight: 600; font-size: 15px; color: rgb(255, 255, 255);">AI Spend Cycle Overview</span></div>
+                                        <div style="display: flex; gap: 6px; margin-top: 13px;">
+                                            <div style="flex: 1 1 0%; height: 30px; border-radius: 7px; background: rgba(135, 191, 243, 0.22);"></div>
+                                            <div style="flex: 1 1 0%; height: 30px; border-radius: 7px; background: rgba(18, 211, 221, 0.28);"></div>
+                                            <div style="flex: 1 1 0%; height: 30px; border-radius: 7px; background: rgba(3, 113, 238, 0.34);"></div>
+                                            <div style="flex: 1 1 0%; height: 30px; border-radius: 7px; background: rgba(135, 191, 243, 0.22);"></div>
+                                            <div style="flex: 1 1 0%; height: 30px; border-radius: 7px; background: rgba(44, 197, 138, 0.22);"></div>
+                                            <div style="flex: 1 1 0%; height: 30px; border-radius: 7px; background: rgba(166, 224, 249, 0.22);"></div>
+                                        </div>
+                                        <div style="font-size: 12.5px; color: rgb(166, 186, 205); margin-top: 11px;">One connected view of spend, work, and outcomes.</div>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </section>                     
+            <section class="main-section agent-content-section bg-theme-dark is-light is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-center">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">CYCLE OVERVIEW DATA</div>
+                                <h2 class="title wow fadeInUp " data-wow-delay="300ms">The full cost cycle, connected.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p style="max-width: 720px">Milestone connects every part of the production cycle into one view of spend, activity, and outcomes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 wow fadeInUp ">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 52px); align-items: center;">
+                                <div data-reveal="" style="opacity: 1; transform: none; transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s; display: flex; flex-direction: column; gap: 13px;">
+                                    <div class="scp3" style="padding: 16px 18px; border-radius: 14px; background: rgba(28, 35, 46, 0.88); border: 1px solid rgba(135, 191, 243, 0.28); box-shadow: rgba(3, 113, 238, 0.16) 0px 6px 28px; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;"><div style="display: flex; align-items: center; gap: 9px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(135, 191, 243);"></span><span style="font-weight: 600; font-size: 15.5px; color: rgb(255, 255, 255);">Planning data</span></div><div style="font-size: 13px; color: rgb(201, 211, 222); margin-top: 9px; line-height: 1.55;">Epics, tickets, roadmap, product areas, ownership</div></div>
+                                    <div class="scp4" style="padding: 16px 18px; border-radius: 14px; background: rgba(28, 35, 46, 0.88); border: 1px solid rgba(135, 191, 243, 0.28); box-shadow: rgba(3, 113, 238, 0.16) 0px 6px 28px; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;"><div style="display: flex; align-items: center; gap: 9px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(18, 211, 221);"></span><span style="font-weight: 600; font-size: 15.5px; color: rgb(255, 255, 255);">AI usage data</span></div><div style="font-size: 13px; color: rgb(201, 211, 222); margin-top: 9px; line-height: 1.55;">Tokens, prompts, model calls, agent runs, seats, tools</div></div>
+                                    <div class="scp5" style="padding: 16px 18px; border-radius: 14px; background: rgba(28, 35, 46, 0.88); border: 1px solid rgba(135, 191, 243, 0.28); box-shadow: rgba(3, 113, 238, 0.16) 0px 6px 28px; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;"><div style="display: flex; align-items: center; gap: 9px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(3, 113, 238);"></span><span style="font-weight: 600; font-size: 15.5px; color: rgb(255, 255, 255);">Git data</span></div><div style="font-size: 13px; color: rgb(201, 211, 222); margin-top: 9px; line-height: 1.55;">Branches, commits, pull requests, reviews, merges, rework</div></div>
+                                    <div class="scp6" style="padding: 16px 18px; border-radius: 14px; background: rgba(28, 35, 46, 0.88); border: 1px solid rgba(135, 191, 243, 0.28); box-shadow: rgba(3, 113, 238, 0.16) 0px 6px 28px; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;"><div style="display: flex; align-items: center; gap: 9px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(166, 224, 249);"></span><span style="font-weight: 600; font-size: 15.5px; color: rgb(255, 255, 255);">Team data</span></div><div style="font-size: 13px; color: rgb(201, 211, 222); margin-top: 9px; line-height: 1.55;">Human effort, allocation, seniority mix, capacity</div></div>
+                                    <div class="scp7" style="padding: 16px 18px; border-radius: 14px; background: rgba(28, 35, 46, 0.88); border: 1px solid rgba(135, 191, 243, 0.28); box-shadow: rgba(3, 113, 238, 0.16) 0px 6px 28px; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;"><div style="display: flex; align-items: center; gap: 9px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(44, 197, 138);"></span><span style="font-weight: 600; font-size: 15.5px; color: rgb(255, 255, 255);">Delivery data</span></div><div style="font-size: 13px; color: rgb(201, 211, 222); margin-top: 9px; line-height: 1.55;">Cycle time, review time, deploys, quality fixes, upkeep</div></div>
+                                </div>
+                                <div data-reveal="" style="opacity: 1; transform: none; transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s; display: flex; justify-content: center; align-items: center;">
+                                    <div style="position: relative; width: 100%; display: flex; justify-content: center; height: 410px;">
+                                        <div style="position: relative; width: 340px; height: 340px; transform-origin: center top; flex: 0 0 auto; transform: scale(1.2);">
+                                            <div style="position: absolute; inset: 30px; border-radius: 50%; background: radial-gradient(circle, rgba(3, 113, 238, 0.3), transparent 65%);"></div>
+                                            <svg viewBox="0 0 340 340" width="340" height="340" style="position: absolute; inset: 0px; overflow: visible;">
+                                            <circle cx="170" cy="170" r="120" fill="none" stroke="rgba(135,191,243,.32)" stroke-width="1.3"></circle>
+                                            <circle cx="170" cy="170" r="120" fill="none" stroke="rgba(18,211,221,.75)" stroke-width="1.8" stroke-dasharray="2 14" style="animation: 5s linear 0s infinite normal none running flowDashSlow;"></circle>
+                                            <circle cx="170" cy="170" r="155" fill="none" stroke="rgba(135,191,243,.16)" stroke-width="1" stroke-dasharray="1 7"></circle>
+                                            </svg>
+                                            <div style="position: absolute; left: 170px; top: 50px; transform: translate(-50%, -50%); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(234, 241, 248); padding: 6px 11px; border-radius: 9px; background: rgba(30, 38, 50, 0.96); border: 1px solid rgba(135, 191, 243, 0.45); box-shadow: rgba(18, 211, 221, 0.18) 0px 0px 18px;">Planning</div>
+                                            <div style="position: absolute; left: 274px; top: 110px; transform: translate(-50%, -50%); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(234, 241, 248); padding: 6px 11px; border-radius: 9px; background: rgba(30, 38, 50, 0.96); border: 1px solid rgba(135, 191, 243, 0.45); box-shadow: rgba(18, 211, 221, 0.18) 0px 0px 18px;">AI work</div>
+                                            <div style="position: absolute; left: 274px; top: 230px; transform: translate(-50%, -50%); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(234, 241, 248); padding: 6px 11px; border-radius: 9px; background: rgba(30, 38, 50, 0.96); border: 1px solid rgba(135, 191, 243, 0.45); box-shadow: rgba(18, 211, 221, 0.18) 0px 0px 18px;">Code</div>
+                                            <div style="position: absolute; left: 170px; top: 290px; transform: translate(-50%, -50%); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(234, 241, 248); padding: 6px 11px; border-radius: 9px; background: rgba(30, 38, 50, 0.96); border: 1px solid rgba(135, 191, 243, 0.45); box-shadow: rgba(18, 211, 221, 0.18) 0px 0px 18px;">Review</div>
+                                            <div style="position: absolute; left: 66px; top: 230px; transform: translate(-50%, -50%); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(234, 241, 248); padding: 6px 11px; border-radius: 9px; background: rgba(30, 38, 50, 0.96); border: 1px solid rgba(135, 191, 243, 0.45); box-shadow: rgba(18, 211, 221, 0.18) 0px 0px 18px;">Deploy</div>
+                                            <div style="position: absolute; left: 66px; top: 110px; transform: translate(-50%, -50%); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(234, 241, 248); padding: 6px 11px; border-radius: 9px; background: rgba(30, 38, 50, 0.96); border: 1px solid rgba(135, 191, 243, 0.45); box-shadow: rgba(18, 211, 221, 0.18) 0px 0px 18px;">Post release</div>
+                                            <div style="position: absolute; left: 170px; top: 170px; transform: translate(-50%, -50%); width: 124px; text-align: center; padding: 18px 12px; border-radius: 14px; background: linear-gradient(160deg, rgba(26, 38, 52, 0.98), rgba(13, 18, 26, 0.98)); border: 1px solid rgba(18, 211, 221, 0.55); box-shadow: rgba(0, 0, 0, 0.55) 0px 16px 40px, rgba(18, 211, 221, 0.3) 0px 0px 34px;"><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.14em; color: rgb(43, 227, 237);">MILESTONE</div><div style="font-size: 14.5px; font-weight: 600; color: rgb(255, 255, 255); margin-top: 6px; line-height: 1.25;">Operating view</div></div>
+                                            <div style="position: absolute; width: 9px; height: 9px; border-radius: 50%; background: rgb(43, 227, 237); box-shadow: rgba(18, 211, 221, 0.95) 0px 0px 16px 3px; offset-path: path(&quot;M 170 50 A 120 120 0 1 1 170 290 A 120 120 0 1 1 170 50&quot;); animation: 8s linear 0s infinite normal none running orbit;"></div>
+                                            <div style="position: absolute; width: 8px; height: 8px; border-radius: 50%; background: rgb(166, 224, 249); box-shadow: rgba(135, 191, 243, 0.95) 0px 0px 14px 3px; offset-path: path(&quot;M 170 50 A 120 120 0 1 1 170 290 A 120 120 0 1 1 170 50&quot;); animation: 8s linear -4s infinite normal none running orbit;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-none is-dark is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">SPEND PROFILE BY DISCIPLINE</div>
+                                <h2 class="title wow fadeInUp" data-wow-delay="300ms">AI spend is no longer <br class="d-none d-lg-block"> just engineering spend.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p style="max-width: 740px;">Milestone profiles AI cost across every discipline in modern delivery, from product and design to code, analysis, QA, and agents.</p>
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="col-12 wow fadeInUp">
+                            <div data-reveal="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 18px;">      
+                                <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 16px 22px; border-radius: 14px; background: rgb(255, 255, 255); border: 1px solid rgba(12, 19, 34, 0.09); box-shadow: rgba(12, 19, 34, 0.05) 0px 1px 3px;">
+                                    <span style="font-size: 13.5px; color: rgb(62, 75, 89); font-weight: 500;">Every profile measured across</span>
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(3, 113, 238);"></span>Spend</span>
+                                        <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(10, 166, 174);"></span>Usage</span>
+                                        <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(14, 138, 85);"></span>Output</span>
+                                        <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(62, 123, 196);"></span>Quality</span>
+                                        <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(163, 95, 12);"></span>Risk</span>
+                                        <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(3, 113, 238);"></span>ROI</span>
+                                    </div>
+                                </div>      
+                                <div tabindex="0" class="card-scp" style="outline: none; padding: 22px; border-radius: 16px; background: rgb(255, 255, 255); border: 1px solid rgba(12, 19, 34, 0.09); box-shadow: rgba(12, 19, 34, 0.05) 0px 1px 3px; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+                                    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;">
+                                        <div style="display: flex; align-items: center; gap: 11px;"><div style="width: 40px; height: 40px; border-radius: 11px; background: rgba(3, 113, 238, 0.08); border: 1px solid rgba(3, 113, 238, 0.16); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0371EE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4"></path></svg></div><div style="font-size: 17px; font-weight: 600; color: rgb(12, 19, 34);">Engineering</div></div>
+                                        <span style="flex: 0 0 auto; padding: 6px 11px; border-radius: 100px; background: rgba(180, 105, 14, 0.1); border: 1px solid rgba(180, 105, 14, 0.28); font-size: 11.5px; font-weight: 600; color: rgb(163, 95, 12);">Needs control</span>
+                                    </div>
+                                    <p style="font-size: 13.5px; color: rgb(76, 90, 104); line-height: 1.5; margin: 14px 0px 0px;">Code generation, reviews, tests, refactors, PR support.</p>
+                                    <div style="display: flex; gap: 24px; margin-top: 18px;">
+                                        <div><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SPEND</div><div style="font-size: 24px; font-weight: 600; color: rgb(12, 19, 34); margin-top: 2px;">$11.2k</div></div>
+                                        <div><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SHARE</div><div style="font-size: 24px; font-weight: 600; color: rgb(3, 113, 238); margin-top: 2px;">38%</div></div>
+                                    </div>
+                                    <div style="height: 7px; border-radius: 5px; background: rgb(231, 237, 244); margin-top: 14px; overflow: hidden;"><div style="height: 100%; width: 38%; border-radius: 5px; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); transform-origin: left center; animation: 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0s 1 normal both running growBar;"></div></div>
+                                    <div style="display: flex; align-items: center; gap: 16px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(12, 19, 34, 0.07); font-size: 12px; color: rgb(90, 103, 118);"><span style="display: inline-flex; align-items: center; gap: 5px;">Output <span style="color: rgb(14, 138, 85); font-weight: 700;">↑</span></span><span style="display: inline-flex; align-items: center; gap: 5px;">Quality <span style="color: rgb(122, 134, 148); font-weight: 700;">→</span></span><span style="display: inline-flex; align-items: center; gap: 6px;">Risk <span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(163, 95, 12); display: inline-block;"></span></span></div>
+                                </div>     
+                                <div tabindex="0" class="card-scp" style="outline: none; padding: 22px; border-radius: 16px; background: rgb(255, 255, 255); border: 1px solid rgba(12, 19, 34, 0.09); box-shadow: rgba(12, 19, 34, 0.05) 0px 1px 3px; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+                                    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;">
+                                        <div style="display: flex; align-items: center; gap: 11px;"><div style="width: 40px; height: 40px; border-radius: 11px; background: rgba(3, 113, 238, 0.08); border: 1px solid rgba(3, 113, 238, 0.16); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0371EE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"></rect><path d="M9 9h6M9 13h6M9 17h4"></path></svg></div><div style="font-size: 17px; font-weight: 600; color: rgb(12, 19, 34);">Product</div></div>
+                                        <span style="flex: 0 0 auto; padding: 6px 11px; border-radius: 100px; background: rgba(14, 138, 85, 0.1); border: 1px solid rgba(14, 138, 85, 0.28); font-size: 11.5px; font-weight: 600; color: rgb(14, 138, 85);">Creating value</span>
+                                    </div>
+                                    <p style="font-size: 13.5px; color: rgb(76, 90, 104); line-height: 1.5; margin: 14px 0px 0px;">Specs, discovery, requirements, prioritization, roadmap.</p>
+                                    <div style="display: flex; gap: 24px; margin-top: 18px;">
+                                        <div><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SPEND</div><div style="font-size: 24px; font-weight: 600; color: rgb(12, 19, 34); margin-top: 2px;">$3.4k</div></div>
+                                        <div><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SHARE</div><div style="font-size: 24px; font-weight: 600; color: rgb(3, 113, 238); margin-top: 2px;">24%</div></div>
+                                    </div>
+                                    <div style="height: 7px; border-radius: 5px; background: rgb(231, 237, 244); margin-top: 14px; overflow: hidden;"><div style="height: 100%; width: 24%; border-radius: 5px; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); transform-origin: left center; animation: 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0s 1 normal both running growBar;"></div></div>
+                                    <div style="display: flex; align-items: center; gap: 16px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(12, 19, 34, 0.07); font-size: 12px; color: rgb(90, 103, 118);"><span style="display: inline-flex; align-items: center; gap: 5px;">Output <span style="color: rgb(14, 138, 85); font-weight: 700;">↑</span></span><span style="display: inline-flex; align-items: center; gap: 5px;">Quality <span style="color: rgb(14, 138, 85); font-weight: 700;">↑</span></span><span style="display: inline-flex; align-items: center; gap: 6px;">Risk <span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(14, 138, 85); display: inline-block;"></span></span></div>
+                                </div>      
+                                <div tabindex="0" class="card-scp" style="outline: none; padding: 22px; border-radius: 16px; background: rgb(255, 255, 255); border: 1px solid rgba(12, 19, 34, 0.09); box-shadow: rgba(12, 19, 34, 0.05) 0px 1px 3px; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+                                    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;">
+                                        <div style="display: flex; align-items: center; gap: 11px;"><div style="width: 40px; height: 40px; border-radius: 11px; background: rgba(3, 113, 238, 0.08); border: 1px solid rgba(3, 113, 238, 0.16); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0371EE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1L19 8l-3-3L5 16l-1 4z"></path><path d="M14 7l3 3"></path></svg></div><div style="font-size: 17px; font-weight: 600; color: rgb(12, 19, 34);">Design</div></div>
+                                        <span style="flex: 0 0 auto; padding: 6px 11px; border-radius: 100px; background: rgba(3, 113, 238, 0.1); border: 1px solid rgba(3, 113, 238, 0.28); font-size: 11.5px; font-weight: 600; color: rgb(3, 113, 238);">Safe to expand</span>
+                                    </div>
+                                    <p style="font-size: 13.5px; color: rgb(76, 90, 104); line-height: 1.5; margin: 14px 0px 0px;">UX exploration, prototypes, content, design reviews.</p>
+                                    <div style="display: flex; gap: 24px; margin-top: 18px;">
+                                        <div><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SPEND</div><div style="font-size: 24px; font-weight: 600; color: rgb(12, 19, 34); margin-top: 2px;">$2.1k</div></div>
+                                        <div><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SHARE</div><div style="font-size: 24px; font-weight: 600; color: rgb(3, 113, 238); margin-top: 2px;">19%</div></div>
+                                    </div>
+                                    <div style="height: 7px; border-radius: 5px; background: rgb(231, 237, 244); margin-top: 14px; overflow: hidden;"><div style="height: 100%; width: 19%; border-radius: 5px; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); transform-origin: left center; animation: 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0s 1 normal both running growBar;"></div></div>
+                                    <div style="display: flex; align-items: center; gap: 16px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(12, 19, 34, 0.07); font-size: 12px; color: rgb(90, 103, 118);"><span style="display: inline-flex; align-items: center; gap: 5px;">Output <span style="color: rgb(14, 138, 85); font-weight: 700;">↑</span></span><span style="display: inline-flex; align-items: center; gap: 5px;">Quality <span style="color: rgb(14, 138, 85); font-weight: 700;">↑</span></span><span style="display: inline-flex; align-items: center; gap: 6px;">Risk <span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(14, 138, 85); display: inline-block;"></span></span></div>
+                                </div>      
+                                <div tabindex="0" class="card-scp" style="outline: none; padding: 22px; border-radius: 16px; background: rgb(255, 255, 255); border: 1px solid rgba(12, 19, 34, 0.09); box-shadow: rgba(12, 19, 34, 0.05) 0px 1px 3px; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+                                    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;">
+                                        <div style="display: flex; align-items: center; gap: 11px;"><div style="width: 40px; height: 40px; border-radius: 11px; background: rgba(3, 113, 238, 0.08); border: 1px solid rgba(3, 113, 238, 0.16); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0371EE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V11M10 20V5M15 20V9M20 20V14"></path></svg></div><div style="font-size: 17px; font-weight: 600; color: rgb(12, 19, 34);">Data &amp; analysis</div></div>
+                                        <span style="flex: 0 0 auto; padding: 6px 11px; border-radius: 100px; background: rgba(14, 138, 85, 0.1); border: 1px solid rgba(14, 138, 85, 0.28); font-size: 11.5px; font-weight: 600; color: rgb(14, 138, 85);">Creating value</span>
+                                    </div>
+                                    <p style="font-size: 13.5px; color: rgb(76, 90, 104); line-height: 1.5; margin: 14px 0px 0px;">Dashboards, queries, insights, reporting, analysis.</p>
+                                    <div style="display: flex; gap: 24px; margin-top: 18px;">
+                                        <div><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SPEND</div><div style="font-size: 24px; font-weight: 600; color: rgb(12, 19, 34); margin-top: 2px;">$4.6k</div></div>
+                                        <div><div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SHARE</div><div style="font-size: 24px; font-weight: 600; color: rgb(3, 113, 238); margin-top: 2px;">41%</div></div>
+                                    </div>
+                                    <div style="height: 7px; border-radius: 5px; background: rgb(231, 237, 244); margin-top: 14px; overflow: hidden;"><div data-dc-tpl="436" style="height: 100%; width: 41%; border-radius: 5px; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); transform-origin: left center; animation: 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0s 1 normal both running growBar;"></div></div>
+                                    <div data-dc-tpl="437" style="display: flex; align-items: center; gap: 16px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(12, 19, 34, 0.07); font-size: 12px; color: rgb(90, 103, 118);"><span data-dc-tpl="438" style="display: inline-flex; align-items: center; gap: 5px;">Output <span data-dc-tpl="439" style="color: rgb(14, 138, 85); font-weight: 700;">↑</span></span><span data-dc-tpl="440" style="display: inline-flex; align-items: center; gap: 5px;">Quality <span data-dc-tpl="441" style="color: rgb(122, 134, 148); font-weight: 700;">→</span></span><span data-dc-tpl="442" style="display: inline-flex; align-items: center; gap: 6px;">Risk <span data-dc-tpl="443" style="width: 7px; height: 7px; border-radius: 50%; background: rgb(14, 138, 85); display: inline-block;"></span></span></div>
+                                </div>      
+                                <div data-dc-tpl="444" tabindex="0" class="card-scp" style="outline: none; padding: 22px; border-radius: 16px; background: rgb(255, 255, 255); border: 1px solid rgba(12, 19, 34, 0.09); box-shadow: rgba(12, 19, 34, 0.05) 0px 1px 3px; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+                                    <div data-dc-tpl="445" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;">
+                                        <div data-dc-tpl="446" style="display: flex; align-items: center; gap: 11px;"><div data-dc-tpl="447" style="width: 40px; height: 40px; border-radius: 11px; background: rgba(3, 113, 238, 0.08); border: 1px solid rgba(3, 113, 238, 0.16); display: flex; align-items: center; justify-content: center;"><svg data-dc-tpl="448" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0371EE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="449" d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z"></path><path data-dc-tpl="450" d="M9 12l2 2 4-4"></path></svg></div><div data-dc-tpl="451" style="font-size: 17px; font-weight: 600; color: rgb(12, 19, 34);">QA &amp; DevOps</div></div>
+                                        <span data-dc-tpl="452" style="flex: 0 0 auto; padding: 6px 11px; border-radius: 100px; background: rgba(180, 105, 14, 0.1); border: 1px solid rgba(180, 105, 14, 0.28); font-size: 11.5px; font-weight: 600; color: rgb(163, 95, 12);">Needs control</span>
+                                    </div>
+                                    <p data-dc-tpl="453" style="font-size: 13.5px; color: rgb(76, 90, 104); line-height: 1.5; margin: 14px 0px 0px;">Test creation, release support, debugging, infra workflows.</p>
+                                    <div data-dc-tpl="454" style="display: flex; gap: 24px; margin-top: 18px;">
+                                        <div data-dc-tpl="455"><div data-dc-tpl="456" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SPEND</div><div data-dc-tpl="457" style="font-size: 24px; font-weight: 600; color: rgb(12, 19, 34); margin-top: 2px;">$3.9k</div></div>
+                                        <div data-dc-tpl="458"><div data-dc-tpl="459" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SHARE</div><div data-dc-tpl="460" style="font-size: 24px; font-weight: 600; color: rgb(3, 113, 238); margin-top: 2px;">33%</div></div>
+                                    </div>
+                                    <div data-dc-tpl="461" style="height: 7px; border-radius: 5px; background: rgb(231, 237, 244); margin-top: 14px; overflow: hidden;"><div data-dc-tpl="462" style="height: 100%; width: 33%; border-radius: 5px; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); transform-origin: left center; animation: 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0s 1 normal both running growBar;"></div></div>
+                                    <div data-dc-tpl="463" style="display: flex; align-items: center; gap: 16px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(12, 19, 34, 0.07); font-size: 12px; color: rgb(90, 103, 118);"><span data-dc-tpl="464" style="display: inline-flex; align-items: center; gap: 5px;">Output <span data-dc-tpl="465" style="color: rgb(14, 138, 85); font-weight: 700;">↑</span></span><span data-dc-tpl="466" style="display: inline-flex; align-items: center; gap: 5px;">Quality <span data-dc-tpl="467" style="color: rgb(122, 134, 148); font-weight: 700;">→</span></span><span data-dc-tpl="468" style="display: inline-flex; align-items: center; gap: 6px;">Risk <span data-dc-tpl="469" style="width: 7px; height: 7px; border-radius: 50%; background: rgb(163, 95, 12); display: inline-block;"></span></span></div>
+                                </div>      
+                                <div data-dc-tpl="470" tabindex="0" class="card-scp" style="outline: none; padding: 22px; border-radius: 16px; background: rgb(255, 255, 255); border: 1px solid rgba(3, 113, 238, 0.18); box-shadow: rgba(12, 19, 34, 0.05) 0px 1px 3px; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+                                    <div data-dc-tpl="471" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;">
+                                        <div data-dc-tpl="472" style="display: flex; align-items: center; gap: 11px;"><div data-dc-tpl="473" style="width: 40px; height: 40px; border-radius: 11px; background: rgba(18, 211, 221, 0.1); border: 1px solid rgba(18, 211, 221, 0.28); display: flex; align-items: center; justify-content: center;"><svg data-dc-tpl="474" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0AA6AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path data-dc-tpl="475" d="M12 4l1.6 4.9L18.5 10l-4.9 1.1L12 16l-1.6-4.9L5.5 10l4.9-1.1z"></path></svg></div><div data-dc-tpl="476" style="font-size: 17px; font-weight: 600; color: rgb(12, 19, 34);">Agents</div></div>
+                                        <span data-dc-tpl="477" style="flex: 0 0 auto; padding: 6px 11px; border-radius: 100px; background: rgba(3, 113, 238, 0.1); border: 1px solid rgba(3, 113, 238, 0.28); font-size: 11.5px; font-weight: 600; color: rgb(3, 113, 238);">Safe to expand</span>
+                                    </div>
+                                    <p data-dc-tpl="478" style="font-size: 13.5px; color: rgb(76, 90, 104); line-height: 1.5; margin: 14px 0px 0px;">Autonomous tasks, PR creation, code changes, background runs.</p>
+                                    <div data-dc-tpl="479" style="display: flex; gap: 24px; margin-top: 18px;">
+                                        <div data-dc-tpl="480"><div data-dc-tpl="481" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SPEND</div><div data-dc-tpl="482" style="font-size: 24px; font-weight: 600; color: rgb(12, 19, 34); margin-top: 2px;">$6.8k</div></div>
+                                        <div data-dc-tpl="483"><div data-dc-tpl="484" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.06em; color: rgb(122, 134, 148);">AI SHARE</div><div data-dc-tpl="485" style="font-size: 24px; font-weight: 600; color: rgb(3, 113, 238); margin-top: 2px;">57%</div></div>
+                                    </div>
+                                    <div data-dc-tpl="486" style="height: 7px; border-radius: 5px; background: rgb(231, 237, 244); margin-top: 14px; overflow: hidden;"><div data-dc-tpl="487" style="height: 100%; width: 57%; border-radius: 5px; background: linear-gradient(90deg, rgb(3, 113, 238), rgb(18, 211, 221)); transform-origin: left center; animation: 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0s 1 normal both running growBar;"></div></div>
+                                    <div data-dc-tpl="488" style="display: flex; align-items: center; gap: 16px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(12, 19, 34, 0.07); font-size: 12px; color: rgb(90, 103, 118);"><span data-dc-tpl="489" style="display: inline-flex; align-items: center; gap: 5px;">Output <span data-dc-tpl="490" style="color: rgb(14, 138, 85); font-weight: 700;">↑</span></span><span data-dc-tpl="491" style="display: inline-flex; align-items: center; gap: 5px;">Quality <span data-dc-tpl="492" style="color: rgb(122, 134, 148); font-weight: 700;">→</span></span><span data-dc-tpl="493" style="display: inline-flex; align-items: center; gap: 6px;">Risk <span data-dc-tpl="494" style="width: 7px; height: 7px; border-radius: 50%; background: rgb(163, 95, 12); display: inline-block;"></span></span></div>
+                                </div>      
+                                <div data-dc-tpl="495" style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; padding: 24px 28px; border-radius: 16px; background: linear-gradient(150deg, rgb(12, 35, 64), rgb(10, 26, 48)); border: 1px solid rgba(18, 211, 221, 0.3); box-shadow: rgba(3, 113, 238, 0.18) 0px 16px 40px;">
+                                    <div data-dc-tpl="496" style="font-size: 16px; color: rgb(232, 238, 245); line-height: 1.5; max-width: 560px;">One spend profile across human and AI work, so leaders can control cost, prove ROI, and scale AI where it pays off.</div>
+                                    <div data-dc-tpl="497" style="display: flex; gap: 30px;">
+                                        <div data-dc-tpl="498"><div data-dc-tpl="499" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.1em; color: rgb(18, 211, 221);">TOTAL AI SPEND</div><div data-dc-tpl="500" data-countup="32000" data-pre="$" style="font-size: 26px; font-weight: 600; color: rgb(255, 255, 255); margin-top: 3px;">$32,000</div></div>
+                                        <div data-dc-tpl="501"><div data-dc-tpl="502" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.1em; color: rgb(18, 211, 221);">AVG AI SHARE</div><div data-dc-tpl="503" data-countup="35" data-suf="%" style="font-size: 26px; font-weight: 600; color: rgb(255, 255, 255); margin-top: 3px;">35%</div></div>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-content-section bg-theme-dark is-light is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">AI SPEND INSIGHTS</div>
+                                <h2 class="title wow fadeInUp " data-wow-delay="300ms">Ask better spend questions.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p style="max-width: 720px">Milestone does not just report spend. It shows leaders where to act.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 wow fadeInUp ">
+                            <div data-reveal="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px;">
+                                <div class="card-scp" style="position: relative; padding: 22px; border-radius: 16px; background: linear-gradient(165deg, rgba(24, 28, 33, 0.9), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(255, 177, 66, 0.22); box-shadow: rgba(0, 0, 0, 0.4) 0px 16px 40px; transition: transform 0.3s, box-shadow 0.3s;">
+                                    <div style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 11px; border-radius: 100px; background: rgba(255, 177, 66, 0.12); border: 1px solid rgba(255, 177, 66, 0.3);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(255, 177, 66); box-shadow: rgb(255, 177, 66) 0px 0px 8px; animation: 1.8s ease-in-out 0s infinite normal none running softPulse;"></span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.1em; color: rgb(255, 177, 66);">SPEND SPIKE</span></div>
+                                    <div style="font-size: 17px; font-weight: 600; color: rgb(255, 255, 255); margin-top: 16px; line-height: 1.3;">Spend spike detected</div>
+                                    <p style="font-size: 14px; color: rgb(194, 204, 214); line-height: 1.5; margin: 10px 0px 0px;">Agent cost rose during review for Billing features.</p>
+                                    <svg viewBox="0 0 200 44" width="100%" height="44" style="margin-top: 16px;"><polyline points="0,34 30,30 60,32 90,24 120,26 150,14 180,8 200,4" fill="none" stroke="#FFB142" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline><circle cx="200" cy="4" r="3.5" fill="#FFB142"></circle></svg>
+                                </div>
+                                <div class="card-scp" style="position: relative; padding: 22px; border-radius: 16px; background: linear-gradient(165deg, rgba(24, 28, 33, 0.9), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(135, 191, 243, 0.2); box-shadow: rgba(0, 0, 0, 0.4) 0px 16px 40px; transition: transform 0.3s, box-shadow 0.3s;">
+                                    <div style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 11px; border-radius: 100px; background: rgba(135, 191, 243, 0.12); border: 1px solid rgba(135, 191, 243, 0.3);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(135, 191, 243); box-shadow: rgb(135, 191, 243) 0px 0px 8px;"></span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.1em; color: rgb(135, 191, 243);">HIDDEN REWORK</span></div>
+                                    <div style="font-size: 17px; font-weight: 600; color: rgb(255, 255, 255); margin-top: 16px; line-height: 1.3;">Hidden rework detected</div>
+                                    <p style="font-size: 14px; color: rgb(194, 204, 214); line-height: 1.5; margin: 10px 0px 0px;">AI backend changes cut coding time but raised review effort.</p>
+                                    <div style="display: flex; gap: 10px; margin-top: 16px;"><div style="flex: 1 1 0%;"><div style="font-size: 10px; color: rgb(124, 136, 150);">Coding time</div><div style="height: 6px; border-radius: 4px; background: rgba(44, 197, 138, 0.45); margin-top: 5px;"></div><div style="font-size: 11px; color: rgb(44, 197, 138); margin-top: 4px;">down</div></div><div style="flex: 1 1 0%;"><div style="font-size: 10px; color: rgb(124, 136, 150);">Review effort</div><div style="height: 6px; border-radius: 4px; background: rgba(255, 177, 66, 0.55); margin-top: 5px;"></div><div style="font-size: 11px; color: rgb(255, 177, 66); margin-top: 4px;">up</div></div></div>
+                                </div>
+                                <div class="card-scp" style="position: relative; padding: 22px; border-radius: 16px; background: linear-gradient(165deg, rgba(24, 28, 33, 0.9), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(44, 197, 138, 0.22); box-shadow: rgba(0, 0, 0, 0.4) 0px 16px 40px; transition: transform 0.3s, box-shadow 0.3s;">
+                                    <div style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 11px; border-radius: 100px; background: rgba(44, 197, 138, 0.12); border: 1px solid rgba(44, 197, 138, 0.3);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(44, 197, 138); box-shadow: rgb(44, 197, 138) 0px 0px 8px;"></span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.1em; color: rgb(44, 197, 138);">POSITIVE ROI</span></div>
+                                    <div style="font-size: 17px; font-weight: 600; color: rgb(255, 255, 255); margin-top: 16px; line-height: 1.3;">Positive ROI signal</div>
+                                    <p style="font-size: 14px; color: rgb(194, 204, 214); line-height: 1.5; margin: 10px 0px 0px;">Onboarding used more AI and shipped faster with no quality drop.</p>
+                                    <svg viewBox="0 0 200 44" width="100%" height="44" style="margin-top: 16px;"><polyline points="0,30 30,32 60,24 90,26 120,18 150,16 180,10 200,6" fill="none" stroke="#2CC58A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline><circle cx="200" cy="6" r="3.5" fill="#2CC58A"></circle></svg>
+                                </div>
+                                <div class="card-scp" style="position: relative; padding: 22px; border-radius: 16px; background: linear-gradient(165deg, rgba(24, 28, 33, 0.9), rgba(13, 16, 20, 0.95)); border: 1px solid rgba(18, 211, 221, 0.22); box-shadow: rgba(0, 0, 0, 0.4) 0px 16px 40px; transition: transform 0.3s, box-shadow 0.3s;">
+                                    <div style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 11px; border-radius: 100px; background: rgba(18, 211, 221, 0.12); border: 1px solid rgba(18, 211, 221, 0.3);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.1em; color: rgb(18, 211, 221);">SCALE SIGNAL</span></div>
+                                    <div style="font-size: 17px; font-weight: 600; color: rgb(255, 255, 255); margin-top: 16px; line-height: 1.3;">Scale signal found</div>
+                                    <p style="font-size: 14px; color: rgb(194, 204, 214); line-height: 1.5; margin: 10px 0px 0px;">AI sped up onboarding delivery with no rise in post release fixes.</p>
+                                    <svg viewBox="0 0 200 44" width="100%" height="44" style="margin-top: 16px;"><polyline points="0,32 30,28 60,30 90,22 120,20 150,12 180,12 200,7" fill="none" stroke="#12D3DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline><circle cx="200" cy="7" r="3.5" fill="#12D3DD"></circle></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+            <link rel='stylesheet' id='icw-agent-card-css' href='blocks/agent-card/style.css' type='text/css' media='all' />
+            <section class="main-section agent-card-section bg-none custom-gradient-bg-2 is-dark">
+                <div class="container">
+                    <div class="ai-section-title text-left">
+                        <div class="tag-line wow fadeInUp" data-wow-delay="150ms">WHAT YOU MANAGE</div>
+                        <h2 class="title wow fadeInUp" data-wow-delay="300ms">Manage AI spend where work <br class="d-none d-lg-block">happens.</h2>
+                        <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                            <p>Every view of cost, across humans, agents, teams, features, and outcomes.</p>
+                            <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 16px 22px; border-radius: 14px; background: rgb(255, 255, 255); border: 1px solid rgba(12, 19, 34, 0.09); box-shadow: rgba(12, 19, 34, 0.05) 0px 1px 3px;margin-top: 40px;">
+                                <span style="font-size: 13.5px; color: rgb(62, 75, 89); font-weight: 500;">Every view scored on</span>
+                                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                    <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(3, 113, 238);"></span>Spend</span><br><span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(10, 166, 174);"></span>Usage</span><br><span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(14, 138, 85);"></span>ROI</span><br><span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(62, 123, 196);"></span>Quality</span><br><span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(163, 95, 12);"></span>Risk</span><br><span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px; background: rgb(238, 243, 250); font-size: 12.5px; color: rgb(36, 49, 64);"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(138, 87, 196);"></span>Control</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="card-grid">
+                        <div class="icon-card wow fadeInUp" data-wow-delay="150ms">
+                            <div class="card-icon"><img src="upload/icon-by-stage.svg" alt="By stage"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">By stage</h3>
+                                <div class="card-info">Planning, coding, review, test, deploy</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="300ms">
+                            <div class="card-icon"><img src="upload/icon-by-feature.svg" alt="By feature"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">By feature</h3>
+                                <div class="card-info">Cost per shipped capability</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="450ms">
+                            <div class="card-icon"><img src="upload/icon-by-product-area.svg" alt="By product area"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">By product area</h3>
+                                <div class="card-info">Spend mapped to business lines</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="600ms">
+                            <div class="card-icon"><img src="upload/icon-by-team.svg" alt="By team"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">By team</h3>
+                                <div class="card-info">Compare usage and efficiency</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="750ms">
+                            <div class="card-icon"><img src="upload/icon-by-discipline.svg" alt="By discipline"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">By discipline</h3>
+                                <div class="card-info">Engineering, product, design, data, QA</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="900ms">
+                            <div class="card-icon"><img src="upload/icon-by-agent.svg" alt="By agent"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">By agent</h3>
+                                <div class="card-info">Track autonomous work and loops</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="1050ms">
+                            <div class="card-icon"><img src="upload/icon-by-outcome.svg" alt="By outcome"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">By outcome</h3>
+                                <div class="card-info">Speed, quality, rework, effort saved</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="1200ms">
+                            <div class="card-icon"><img src="upload/icon-post-release.svg" alt="Post release"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Post release</h3>
+                                <div class="card-info">Bugs, fixes, regressions, follow up work</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>                  
+            <section class="main-section agent-content-section bg-theme-dark is-light is-full">
+                <div class="container">
+                    <div class="row g-80">
+                        <div class="col-12 ">
+                            <div class="ai-section-title pb-0 text-left">
+                                <div class="tag-line wow fadeInUp" data-wow-delay="150ms">THE DIFFERENCE</div>
+                                <h2 class="title wow fadeInUp " data-wow-delay="300ms">Milestone shows what <br class="d-none d-lg-block">AI spend changed.</h2>
+                                <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                                    <p style="max-width: 820px">Vendor tools stop at usage. Milestone connects AI spend to the delivery cycle, revealing where it improved speed, where it created rework, and where leaders should expand, limit, or redirect AI.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 wow fadeInUp ">
+                            <div data-reveal="" style="position: relative; margin-top: 44px; padding: clamp(22px, 3vw, 34px); border-radius: 22px; background: linear-gradient(165deg, rgba(20, 28, 38, 0.92), rgba(11, 14, 19, 0.97)); border: 1px solid rgba(18, 211, 221, 0.3); box-shadow: rgba(3, 113, 238, 0.2) 0px 30px 70px, rgba(255, 255, 255, 0.05) 0px 1px 0px inset;">
+                                <div style="position: absolute; top: -100px; right: -20px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(18, 211, 221, 0.16), transparent 65%); pointer-events: none;"></div>
+                                <div style="position: absolute; bottom: -90px; left: -50px; width: 260px; height: 260px; background: radial-gradient(circle, rgba(3, 113, 238, 0.16), transparent 65%); pointer-events: none;"></div>
+                                <div style="position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 24px; height: 24px; border-radius: 7px; background: linear-gradient(150deg, rgb(166, 224, 249), rgb(3, 113, 238)); display: flex; align-items: center; justify-content: center;"><svg width="11" height="9" viewBox="0 0 63 51"><path d="M20.74 8.61V50.6H5.29V19.81L0 18.56V3.71L20.74 8.61Z" fill="#fff"></path><path d="M41.77 4.96V50.6H26.32V8.61L41.77 4.96Z" fill="#fff"></path><path d="M62.8 0V50.6H47.35V3.64L62.8 0Z" fill="#fff"></path></svg></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.16em; color: rgb(18, 211, 221);">MILESTONE OPERATING VIEW</span></div>
+                                    <span style="display: flex; align-items: center; gap: 7px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.1em; color: rgb(124, 136, 150);">AI USAGE IN&nbsp;&nbsp;→&nbsp;&nbsp;DECISIONS OUT<span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(44, 197, 138); box-shadow: rgb(44, 197, 138) 0px 0px 8px; animation: 2s ease-in-out 0s infinite normal none running softPulse; margin-left: 4px;"></span></span>
+                                </div>
+                                <div data-diffgrid="">        
+                                    <div style="display: flex; flex-direction: column; justify-content: center; gap: 8px;">
+                                        <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.14em; color: rgb(124, 136, 150); margin-bottom: 2px;">USAGE IN</div>
+                                        <div style="padding: 9px 11px; border-radius: 9px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(135, 191, 243, 0.1); font-size: 12px; color: rgb(148, 161, 176); text-align: center;">Prompts</div>
+                                        <div style="padding: 9px 11px; border-radius: 9px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(135, 191, 243, 0.1); font-size: 12px; color: rgb(148, 161, 176); text-align: center;">Agent runs</div>
+                                        <div style="padding: 9px 11px; border-radius: 9px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(135, 191, 243, 0.1); font-size: 12px; color: rgb(148, 161, 176); text-align: center;">Sessions</div>
+                                        <div style="padding: 9px 11px; border-radius: 9px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(135, 191, 243, 0.1); font-size: 12px; color: rgb(148, 161, 176); text-align: center;">Model calls</div>
+                                    </div>        
+                                    <div data-diffconn="" style="display: flex; align-items: center; justify-content: center;">
+                                        <svg width="36" height="130" style="overflow: visible;"><g stroke="#12D3DD" stroke-opacity=".55" stroke-width="1.4" stroke-dasharray="3 5" style="animation: 1.2s linear 0s infinite normal none running flowDashRev;"><path d="M0 24 C20 24 18 65 36 65" fill="none"></path><path d="M0 65 L36 65" fill="none"></path><path d="M0 106 C20 106 18 65 36 65" fill="none"></path></g><circle cx="36" cy="65" r="3" fill="#12D3DD"></circle></svg>
+                                    </div>        
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 11px; background: rgba(135, 191, 243, 0.05); border: 1px solid rgba(135, 191, 243, 0.12);"><div style="display: flex; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span><span style="font-size: 14px; color: rgb(232, 238, 245);">Spend location</span></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(135, 191, 243);">Review stage</span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 11px; background: rgba(135, 191, 243, 0.05); border: 1px solid rgba(135, 191, 243, 0.12);"><div style="display: flex; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span><span style="font-size: 14px; color: rgb(232, 238, 245);">Feature impact</span></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(135, 191, 243);">Checkout</span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 11px; background: rgba(135, 191, 243, 0.05); border: 1px solid rgba(135, 191, 243, 0.12);"><div style="display: flex; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span><span style="font-size: 14px; color: rgb(232, 238, 245);">Team and agent use</span></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(135, 191, 243);">3 teams · 5 agents</span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 11px; background: rgba(135, 191, 243, 0.05); border: 1px solid rgba(135, 191, 243, 0.12);"><div style="display: flex; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span><span style="font-size: 14px; color: rgb(232, 238, 245);">Human effort saved</span></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(44, 197, 138);">184 hrs ↑</span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 11px; background: rgba(135, 191, 243, 0.05); border: 1px solid rgba(135, 191, 243, 0.12);"><div style="display: flex; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span><span style="font-size: 14px; color: rgb(232, 238, 245);">Quality and rework</span></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(255, 177, 66);">rework ▲ 18%</span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 11px; background: rgba(135, 191, 243, 0.05); border: 1px solid rgba(135, 191, 243, 0.12);"><div style="display: flex; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(18, 211, 221); box-shadow: rgb(18, 211, 221) 0px 0px 8px;"></span><span style="font-size: 14px; color: rgb(232, 238, 245);">Post release cost</span></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(135, 191, 243);">$740</span></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 11px; background: rgba(18, 211, 221, 0.1); border: 1px solid rgba(18, 211, 221, 0.3);"><div style="display: flex; align-items: center; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: rgb(43, 227, 237); box-shadow: rgb(43, 227, 237) 0px 0px 10px; animation: 2s ease-in-out 0s infinite normal none running softPulse;"></span><span style="font-size: 14px; color: rgb(255, 255, 255); font-weight: 600;">Next best action</span></div><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(255, 255, 255);">Tighten agent review</span></div>
+                                    </div>        
+                                    <div data-diffconn="" style="display: flex; align-items: center; justify-content: center;">
+                                        <svg width="36" height="130" style="overflow: visible;"><g stroke="#12D3DD" stroke-opacity=".55" stroke-width="1.4" stroke-dasharray="3 5" style="animation: 1.2s linear 0s infinite normal none running flowDashRev;"><path d="M0 65 C18 65 16 24 36 24" fill="none"></path><path d="M0 65 L36 65" fill="none"></path><path d="M0 65 C18 65 16 106 36 106" fill="none"></path></g><circle cx="0" cy="65" r="3" fill="#12D3DD"></circle></svg>
+                                    </div>        
+                                    <div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+                                        <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.14em; color: rgb(124, 136, 150); margin-bottom: 2px;">DECISIONS OUT</div>
+                                        <div style="display: flex; align-items: center; gap: 9px; padding: 13px 15px; border-radius: 12px; background: rgba(14, 138, 85, 0.14); border: 1px solid rgba(44, 197, 138, 0.4);"><span style="color: rgb(44, 197, 138); font-weight: 700; font-size: 15px;">↑</span><span style="font-size: 14.5px; font-weight: 600; color: rgb(255, 255, 255);">Expand</span></div>
+                                        <div style="display: flex; align-items: center; gap: 9px; padding: 13px 15px; border-radius: 12px; background: rgba(255, 177, 66, 0.14); border: 1px solid rgba(255, 177, 66, 0.4);"><span style="color: rgb(255, 177, 66); font-weight: 700; font-size: 14px;">◎</span><span style="font-size: 14.5px; font-weight: 600; color: rgb(255, 255, 255);">Control</span></div>
+                                        <div style="display: flex; align-items: center; gap: 9px; padding: 13px 15px; border-radius: 12px; background: rgba(3, 113, 238, 0.16); border: 1px solid rgba(3, 113, 238, 0.45);"><span style="color: rgb(90, 160, 245); font-weight: 700; font-size: 15px;">⇄</span><span style="font-size: 14.5px; font-weight: 600; color: rgb(255, 255, 255);">Redirect</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section agent-card-section bg-none bg-custom  sm-icon-card-section is-dark" style="--gs-bg: rgb(244 246 250);">
+                <div class="container">
+                    <div class="ai-section-title text-left">
+                        <div class="tag-line wow fadeInUp" data-wow-delay="150ms">WHO IT IS FOR</div>
+                        <h2 class="title wow fadeInUp" data-wow-delay="300ms">Built for every leader who <br class="d-none d-lg-block">owns AI spend and value.</h2>
+                    </div>                    
+                    <div class="card-grid">
+                        <div class="icon-card wow fadeInUp" data-wow-delay="150ms">
+                            <div class="card-icon"><img src="upload/icon-ctos-vps.svg" alt="CTOs and VPs of Engineering"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">CTOs and VPs of Engineering</h3>
+                                <div class="card-info">Control AI spend across the org and prove where AI improves delivery, quality, and efficiency.</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="300ms">
+                            <div class="card-icon"><img src="upload/icon-engineering-managers.svg" alt="Engineering Managers"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Engineering Managers</h3>
+                                <div class="card-info">See how AI spend affects team delivery, review load, rework, and throughput.</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="450ms">
+                            <div class="card-icon"><img src="upload/icon-finance-operations.svg" alt="Finance and Operations"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Finance and Operations</h3>
+                                <div class="card-info">Move from vendor invoices to feature cost evidence. Know where budget goes and what it produced.</div>
+                            </div>
+                        </div>
+                        <div class="icon-card wow fadeInUp" data-wow-delay="600ms">
+                            <div class="card-icon"><img src="upload/icon-product-leaders.svg" alt="Product Leaders"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Product Leaders</h3>
+                                <div class="card-info">See the true AI and engineering cost behind roadmap items and shipped features.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <link rel='stylesheet' id='icw-agent-cta-css' href='blocks/agent-cta/style.css' type='text/css' media='all' /> 
+            <section class="main-section agent-cta-section bg-theme-dark position-relative is-light">
+                <div class="container">
+                    <div class="ai-section-title mb-0 text-center">
+                        <div class="tag-line wow fadeInUp" data-wow-delay="150ms">
+                            <div data-reveal="" style="margin-bottom: 44px; opacity: 1; transform: none;"><svg viewBox="0 0 520 200" width="100%" style="max-width: 520px; overflow: visible;"><defs><linearGradient id="stream" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#87BFF3" stop-opacity="0"></stop><stop offset="1" stop-color="#12D3DD" stop-opacity=".9"></stop></linearGradient></defs><path d="M0,28 C160,28 200,100 260,100" fill="none" stroke="url(#stream)" stroke-width="1.6" stroke-dasharray="5 7" style="animation: 1.4s linear 0s infinite normal none running flowDash;"></path><path d="M0,64 C160,64 200,100 260,100" fill="none" stroke="url(#stream)" stroke-width="1.6" stroke-dasharray="5 7" style="animation: 1.4s linear 0.2s infinite normal none running flowDash;"></path><path d="M0,100 L260,100" fill="none" stroke="url(#stream)" stroke-width="1.6" stroke-dasharray="5 7" style="animation: 1.4s linear 0.4s infinite normal none running flowDash;"></path><path d="M0,136 C160,136 200,100 260,100" fill="none" stroke="url(#stream)" stroke-width="1.6" stroke-dasharray="5 7" style="animation: 1.4s linear 0.6s infinite normal none running flowDash;"></path><path d="M0,172 C160,172 200,100 260,100" fill="none" stroke="url(#stream)" stroke-width="1.6" stroke-dasharray="5 7" style="animation: 1.4s linear 0.8s infinite normal none running flowDash;"></path><text x="2" y="24" fill="#7C8896" font-family="'JetBrains Mono',monospace" font-size="9">AI tools</text><text x="2" y="60" fill="#7C8896" font-family="'JetBrains Mono',monospace" font-size="9">Git</text><text x="2" y="96" fill="#7C8896" font-family="'JetBrains Mono',monospace" font-size="9">Project management</text><text x="2" y="132" fill="#7C8896" font-family="'JetBrains Mono',monospace" font-size="9">HR</text><text x="2" y="168" fill="#7C8896" font-family="'JetBrains Mono',monospace" font-size="9">Delivery systems</text><circle cx="260" cy="100" r="14" fill="rgba(18,211,221,.15)" stroke="#12D3DD" stroke-width="1.5"></circle><circle cx="260" cy="100" r="5" fill="#12D3DD" style="animation: 2s ease-in-out 0s infinite normal none running softPulse;"></circle><line x1="274" y1="100" x2="430" y2="100" stroke="#12D3DD" stroke-width="2" stroke-dasharray="6 6" style="animation: 1s linear 0s infinite normal none running flowDash;"></line><text x="438" y="96" fill="#A6E0F9" font-family="'JetBrains Mono',monospace" font-size="9">Cycle</text><text x="438" y="108" fill="#A6E0F9" font-family="'JetBrains Mono',monospace" font-size="9">overview</text></svg></div>
+                        </div>
+                        <h2 class="title wow fadeInUp h2" data-wow-delay="300ms">AI spend needs cycle visibility.</h2>
+                        <div class="sort-info wow fadeInUp" data-wow-delay="450ms">
+                            <p>Milestone connects AI spend to the full delivery cycle, so leaders can cut waste, prove ROI, and scale AI where it creates value.</p>
+                        </div>
+                        <div class="action wow fadeInUp" data-wow-delay="600ms">
+                            <a href="https://mstoneaidev.wpenginepowered.com/book-a-demo/" class="btn btn-primary-only btn-md" target="_self">Get a demo </a>
+                            <a href="#go" class="btn btn-outline-gray-only btn-md" target="_self">Explore Spend Hub → </a>
+                        </div>
+                        <div class="footer-note wow fadeInUp" data-wow-delay="750ms">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; width: 1000px; height: 600px; background: radial-gradient(rgba(3, 113, 238, 0.2), rgba(18, 211, 221, 0.05) 45%, transparent 70%); pointer-events: none;"></div>
+                        </div>
+                    </div>    
+                </div>
+            </section>
+        </main>
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-xl-6">
+                        <a href="index.html" class="footer-logo" rel="home"><img  src="assets/images/logo.svg" alt="milestone, Ltd. | Unlocking R&amp;D Black Box"></a>
+                        <ul class="social-list social-media-icons ">
+                            <li class="icon-animation"><a title="LinkedIn" data-bs-toggle="tooltip" href="https://www.linkedin.com/company/milestoneai" target="_blank"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.91321 14.9887H1.04798V5.52096H4.03778V14.9887H3.91321ZM2.54288 4.27521C1.54628 4.27521 0.798828 3.40319 0.798828 2.53116C0.798828 1.53456 1.54628 0.787109 2.54288 0.787109C3.53948 0.787109 4.28693 1.53456 4.28693 2.53116C4.16236 3.40319 3.41491 4.27521 2.54288 4.27521ZM15.0004 14.9887H12.0106V10.3794C12.0106 9.25822 12.0106 7.88789 10.5157 7.88789C9.02079 7.88789 8.77164 9.13364 8.77164 10.3794V15.1132H5.78183V5.52096H8.64706V6.76671C9.02079 6.01926 10.0174 5.27181 11.3877 5.27181C14.3775 5.27181 14.8758 7.26501 14.8758 9.75652V14.9887H15.0004Z" fill="white" /></svg></a></li>
+                            <li class="icon-animation"><a title="Twitter" data-bs-toggle="tooltip" href="https://x.com/mstone_ai" target="_blank"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.22852 10.1013L2.93802 15.0003H0.561523L6.11852 8.65234L7.22852 10.1013Z" fill="white" /><path d="M8.52539 5.494L12.4539 1H14.8289L9.62539 6.951L8.52539 5.494Z" fill="white" /><path d="M15.7439 15H10.9644L0.255859 1H5.15636L15.7439 15ZM11.6199 13.5785H12.9359L4.44136 2.347H3.02936L11.6199 13.5785Z" fill="white" /> </svg></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-7 col-xl-6">
+                        <div class="footer-menu-block">
+                            <ul id="menu-footer-menu" class="footer-menu">
+                                <li><a href="product.html">Product</a></li>
+                                <li><a href="use-cases.html">Use Cases</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                            <ul id="menu-footer-menu-right" class="footer-menu">
+                                <li class="menu-item-object-glossary"><a href="glossary.html">Glossary</a></li>
+                                <li class="current-menu-item"><a href="blog.html" aria-current="page">Blog</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                            </ul>
+                            <ul class="footer-menu text-md-end">
+                                <li><a href="contact.html" class="btn btn-dark btn-md" target="_self"><span class="arrow-icon"></span><span class="btn-text">Contact Us</span> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1">
+                            <div class="copyright-text">&copy; 2024 <span>milestone, Ltd.</span> <span class="text-nowrap">All rights reserved.</span></div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <ul id="menu-footer-inline" class="footer-menu-inline">
+                                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                                <li><a rel="privacy-policy" href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="#">Cookie Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-logo-block text-center">
+                <img src="assets/images/footer-full-logo.svg" alt="milestone, Ltd.">
+            </div>
+        </footer>
+        <div class="design-by d-none"><a href="https://increativeweb.com" target="_blank" rel="noopener">Website Design & Development <strong>InCreativeWeb.com</strong></a></div>
+        <span class="icw-progress-goto"><svg class="progress-circle svg-content" width="40" height="40" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.119, 307.919; stroke-dashoffset: 307.919;"></path></svg></span>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" id="icw-bootstrap-bundle-js"></script>
+        <script type="text/javascript" src="assets/js/lozad.min.js" id="icw-lozad-js"></script>
+        <script type="text/javascript" src="assets/js/glightbox.min.js" id="icw-glightbox-js"></script>
+        <script type="text/javascript" src="assets/js/wow.min.js" id="icw-wow-js"></script>
+        <script type="text/javascript" src="assets/js/main.js" id="icw-main-js"></script>       
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                observe();
+                scaleStages();
+                renderVals();
+                setTimeout(scaleStages, 300);
+                window.addEventListener('resize', () => {
+                    scaleStages();
+                });
+            });
+            function scaleStages() {
+                document.querySelectorAll('[data-scale]').forEach(stage => {
+                    if (stage.offsetParent === null) return;
+                    const wrap = stage.parentElement;
+                    const nat = parseFloat(stage.getAttribute('data-scale'));
+                    const w = wrap.clientWidth;
+                    if (!w || !nat) return;
+                    const s = Math.min(1, w / nat);
+                    stage.style.transform = `scale(${s})`;
+                    wrap.style.height = `${nat * s}px`;
+                });
+            }
+            function observe() {
+                const io = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        const el = entry.target;
+                        if (el.hasAttribute('data-reveal')) {el.style.opacity = '1';el.style.transform = 'none';}
+                        if (el.hasAttribute('data-countup') && !el._counted) {el._counted = true;count(el);}
+                        io.unobserve(el);
+                    });
+                }, {
+                    threshold: 0.18,
+                    rootMargin: '0px 0px -8% 0px'
+                });
+                document.querySelectorAll('[data-reveal],[data-countup]').forEach(el => io.observe(el));
+                setTimeout(() => {
+                    document.querySelectorAll('[data-reveal]').forEach(el => {
+                        if (getComputedStyle(el).opacity === '0') {el.style.opacity = '1';el.style.transform = 'none';}
+                    });
+                    document.querySelectorAll('[data-countup]').forEach(el => {
+                        if (!el._counted) {el._counted = true;count(el);}
+                    });
+                }, 4000);
+            }
+            function count(el) {
+                const target = parseFloat(el.getAttribute('data-countup'));
+                if (isNaN(target)) return;
+                const dur = 1500;
+                const pre = el.getAttribute('data-pre') || '';
+                const suf = el.getAttribute('data-suf') || '';
+                const start = performance.now();
+                const step = t => {
+                    let p = Math.min(1, (t - start) / dur);
+                    p = 1 - Math.pow(1 - p, 3);
+                    const v = Math.round(target * p);
+                    el.textContent = pre + v.toLocaleString('en-US') + suf;
+                    if (p < 1) {requestAnimationFrame(step);}
+                };
+                requestAnimationFrame(step);
+            }
+            function renderVals() {
+                return {
+                    expand(e) {
+                        const c = e.currentTarget;
+                        if (c.dataset.ob === undefined) {c.dataset.ob = c.style.boxShadow;c.dataset.obc = c.style.borderColor;}
+                        const d = c.querySelector('[data-detail]');
+                        if (d) {d.style.maxHeight = '90px';d.style.opacity = '1';d.style.marginTop = '8px';}
+                        c.style.borderColor = 'rgba(3,113,238,.55)';
+                        c.style.boxShadow = '0 12px 30px rgba(3,113,238,.18)';
+                    },
+                    collapse(e) {
+                        const c = e.currentTarget;
+                        const d = c.querySelector('[data-detail]');
+                        if (d) {d.style.maxHeight = '0';d.style.opacity = '0';d.style.marginTop = '0';}
+                        if (c.dataset.obc !== undefined) {c.style.borderColor = c.dataset.obc;}
+                        if (c.dataset.ob !== undefined) {c.style.boxShadow = c.dataset.ob;}
+                    }
+                };
+            }
+            const vals = renderVals();
+            document.querySelectorAll('.hero-img-card').forEach(card => {
+                card.addEventListener('mouseenter', vals.expand);
+                card.addEventListener('mouseleave', vals.collapse);
+            });
+        </script>
+    </body>
+
+</html>
